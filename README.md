@@ -1,4 +1,4 @@
-# IAK Design
+# IAK Design Studio
 
 템플릿 URL + 자연어 기능 요청 → IAK 규칙을 적용한 화면 → 로컬 브라우저 확인.
 
@@ -61,7 +61,7 @@ npm run install:skill
 
 ## 디자인 원본과 업데이트 경계
 
-공식 IAK 색상·글꼴·컴포넌트는 아직 미등록입니다. 사이트 팔레트와 예제는 임시 스타일입니다. 승인된 원본을 실제로 확인해 design-system.json의 tokens/components와 sources에 등록하세요. Figma를 자동 동기화하는 MCP는 포함하지 않았습니다.
+기존 IAK 사이트에서 확인한 다크·오렌지 색상과 버튼·카드 패턴을 적용했습니다. 출처와 추가 조정값은 `src/references/iak-site-style.md`에 기록했습니다. 공식 Figma 전체 및 별도 브랜드 서체는 아직 검증하지 않았습니다. 승인된 원본을 실제로 확인해 design-system.json의 tokens/components와 sources에 등록하세요. Figma를 자동 동기화하는 MCP는 포함하지 않았습니다.
 
 GitHub의 main 변경 → Actions 빌드·배포 → 사용자가 같은 설치 명령 재실행 순서로 갱신됩니다. 이미 만든 프로젝트 코드는 스킬 재설치만으로 자동 수정되지 않습니다. 별도로 AI에 적용을 요청해야 합니다.
 

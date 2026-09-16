@@ -36,7 +36,7 @@ function card(t) {
   return `<a class="template-card" href="templates/${t.id}/"><div class="thumb ${t.type}">${thumbnail(t)}</div><div class="card-title"><h3>${esc(t.name)}</h3><span class="tag">${esc(t.category)} · 초안</span></div><p>${esc(t.description)}</p></a>`;
 }
 const note =
-  '<div class="bottom-note"><span>IAK Design · 실험하고, 만들고, 발전시키는 디자인 도구.</span><span>Starter library / 2026</span></div>';
+  '<div class="bottom-note"><span>IAK Design Studio · 실험하고, 만들고, 발전시키는 디자인 도구.</span><span>Starter library / 2026</span></div>';
 const header = (eyebrow, title, lead) =>
   `<div class="crumb">IAK / ${eyebrow}</div><span class="eyebrow">${eyebrow}</span><h1 class="page-title">${title}</h1><p class="lead">${lead}</p>`;
 function overview() {
@@ -83,7 +83,7 @@ function start() {
       "선택한 디자인을, 실제 화면으로.",
       "스킬을 설치하고 템플릿 URL과 원하는 기능을 Codex에 전달하세요.",
     ) +
-    `<section class="panel"><h2>01 · 스킬 설치와 업데이트</h2><p>${data.siteUrl ? "Codex 터미널에 복사해 실행하세요. Node.js 20 이상과 curl이 필요합니다." : "로컬 저장소 폴더에서 아래 명령을 실행하세요. GitHub Pages 배포 시 다른 컴퓨터에서도 쓸 수 있는 원격 명령으로 바뀝니다."}</p><pre id="command">${esc(data.command)}</pre><button class="button primary" id="copyCommand">명령 복사</button><p>같은 명령으로 최신 SKILL.md를 설치합니다. 실패하면 기존 파일을 유지합니다.</p></section><div class="two-col"><section class="panel"><h2>02 · 원하는 작업 입력</h2><form id="promptForm"><label for="templateUrl">템플릿 URL</label><input type="url" id="templateUrl" required placeholder="https://…"><label for="features">만들 화면과 기능</label><textarea id="features" required placeholder="이 템플릿과 유사하게 이벤트 결제 페이지를 만들어줘. 티켓 선택과 할인 코드를 넣어줘."></textarea><button class="button primary" style="margin-top:15px">요청문 만들기</button></form></section><section class="panel"><h2>03 · Codex에 붙여넣기</h2><pre id="prompt">템플릿 URL과 기능을 입력하면 요청문이 만들어집니다.</pre><button class="button" id="copyPrompt" disabled>요청문 복사</button><p>요청문을 Codex 작업 입력창에 붙여넣으세요. 이 사이트가 AI를 자동 호출하지는 않습니다.</p></section></div><div class="callout">공식 IAK 디자인 원본은 아직 미등록입니다. 현재는 작업 흐름과 초안 템플릿을 사용할 수 있습니다.</div>`;
+    `<section class="panel"><h2>01 · 스킬 설치와 업데이트</h2><p>${data.siteUrl ? "Codex 터미널에 복사해 실행하세요. Node.js 20 이상과 curl이 필요합니다." : "로컬 저장소 폴더에서 아래 명령을 실행하세요. GitHub Pages 배포 시 다른 컴퓨터에서도 쓸 수 있는 원격 명령으로 바뀝니다."}</p><pre id="command">${esc(data.command)}</pre><button class="button primary" id="copyCommand">명령 복사</button><p>같은 명령으로 최신 SKILL.md를 설치합니다. 실패하면 기존 파일을 유지합니다.</p></section><div class="two-col"><section class="panel"><h2>02 · 원하는 작업 입력</h2><form id="promptForm"><label for="templateUrl">템플릿 URL</label><input type="url" id="templateUrl" required placeholder="https://…"><label for="features">만들 화면과 기능</label><textarea id="features" required placeholder="이 템플릿과 유사하게 이벤트 결제 페이지를 만들어줘. 티켓 선택과 할인 코드를 넣어줘."></textarea><button class="button primary" style="margin-top:15px">요청문 만들기</button></form></section><section class="panel"><h2>03 · Codex에 붙여넣기</h2><pre id="prompt">템플릿 URL과 기능을 입력하면 요청문이 만들어집니다.</pre><button class="button" id="copyPrompt" disabled>요청문 복사</button><p>요청문을 Codex 작업 입력창에 붙여넣으세요. 이 사이트가 AI를 자동 호출하지는 않습니다.</p></section></div><div class="callout">기존 IAK 사이트에서 확인한 다크·오렌지 스타일을 적용했습니다. 전체 공식 디자인 시스템과의 대조는 별도 원본 연결 후 진행합니다.</div>`;
   document.querySelector("#copyCommand").onclick = () => copy(data.command);
   const form = document.querySelector("#promptForm");
   form.oninput = () => (document.querySelector("#copyPrompt").disabled = true);
@@ -111,11 +111,11 @@ function foundations() {
       "함께 사용하는 디자인 기준.",
       "프로젝트에 적용할 공식 규칙과 라이브러리의 실험값을 구분합니다.",
     ) +
-    `<div class="callout">현재 상태: 공식 원본 연결 대기 · 겜오마 및 원티드의 값을 IAK 공식 값으로 가져오지 않았습니다.</div><section class="panel"><h2>등록된 IAK 토큰</h2>${Object.keys(data.design.tokens).length ? `<pre>${esc(JSON.stringify(data.design.tokens, null, 2))}</pre>` : "<p>아직 등록된 토큰이 없습니다. 원본 Figma 또는 디자인 문서를 확인한 후 등록합니다.</p>"}</section><section class="panel"><h2>라이브러리 화면의 임시 팔레트</h2><p>현재 사이트와 초안 예제에만 사용하는 색상입니다.</p><div class="token-grid">${[
-      ["Ink", "#1b2520"],
-      ["Forest", "#223c30"],
-      ["Lime", "#d6ef91"],
-      ["Paper", "#f5f6f2"],
+    `<div class="callout">적용 출처: 기존 IAK 사이트 소스 · 다크 표면, 오렌지 강조, 텍스트 위계와 버튼 패턴.</div><section class="panel"><h2>기존 IAK 사이트에서 확인한 토큰</h2>${Object.keys(data.design.tokens).length ? `<pre>${esc(JSON.stringify(data.design.tokens, null, 2))}</pre>` : "<p>아직 등록된 토큰이 없습니다. 원본 Figma 또는 디자인 문서를 확인한 후 등록합니다.</p>"}</section><section class="panel"><h2>적용된 IAK 사이트 팔레트</h2><p>기존 사이트의 값을 현재 라이브러리와 초안 예제에 연결했습니다.</p><div class="token-grid">${[
+      ["Text", "#f2f3f5"],
+      ["Accent", "#ffa726"],
+      ["Surface", "#141416"],
+      ["Background", "#0a0a0c"],
     ]
       .map(
         ([n, c]) =>

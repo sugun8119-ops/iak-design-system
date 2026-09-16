@@ -40,6 +40,6 @@ description: Build local UI using IAK rules and user-selected template URLs; ref
 
 ## 소스와 설치
 
-디자인 데이터는 [data/design-system.json](data/design-system.json)에 있다. 현재 공식 토큰은 미등록이다.
+디자인 데이터는 [data/design-system.json](data/design-system.json)에 있다. 기존 IAK 사이트에서 추출한 색상·버튼·카드 기준이 등록되어 있다. 전체 공식 Figma 검증과 구분한다.
 템플릿 레이아웃은 [data/templates.json](data/templates.json)에 있다. 예제는 초안으로 구분한다.
 이 저장소에서 `npm run install:skill`을 실행하면 빌드된 스킬이 설치된다. GitHub Pages 배포 사이트의 시작하기에서는 다른 컴퓨터용 설치 명령을 제공한다. 같은 명령으로 최신 배포본을 갱신한다.
