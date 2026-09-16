@@ -1,0 +1,21 @@
+import {test} from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs/promises';
+import {JSDOM} from 'jsdom';
+const source = new URL('../src/template-previews/sales-portfolio/index.html', import.meta.url);
+test('sales request validates blanks and email, confirms demo only, and clears stale result', async () => {
+  const html = await fs.readFile(source, 'utf8');
+  const dom = new JSDOM(html, {runScripts:'outside-only', url:'https://example.test/templates/sales-portfolio/preview/'});
+  const {window:w}=dom;const d=w.document;
+  w.eval(await fs.readFile(new URL('contact.js',source),'utf8'));
+  const form=d.querySelector('#request-form');const result=d.querySelector('#request-result');
+  const submit=()=>form.dispatchEvent(new w.Event('submit',{bubbles:true,cancelable:true}));
+  form.elements.name.value='   ';form.elements.email.value='bad';form.elements.message.value='Brief';submit();assert.equal(result.hidden,true);assert.equal(form.checkValidity(),false);
+  form.elements.name.value='Test';form.elements.name.dispatchEvent(new w.Event('input',{bubbles:true}));
+  form.elements.email.value='test@example.com';form.elements.message.value='   ';submit();assert.equal(result.hidden,true);
+  form.elements.message.value='Renew our landing';form.elements.message.dispatchEvent(new w.Event('input',{bubbles:true}));submit();
+  assert.equal(result.hidden,false);assert.match(result.textContent,/실제 문의는 전송되지/);assert.equal(d.activeElement,result);
+  assert.equal(form.elements.message.value,'Renew our landing');
+  form.elements.message.dispatchEvent(new w.Event('input',{bubbles:true}));assert.equal(result.hidden,true);
+  dom.window.close();
+});

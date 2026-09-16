@@ -1,0 +1,12 @@
+.request-section{border-top:1px solid var(--border-default);background:var(--bg-elevated)}
+.request-form{display:grid;gap:12px;max-width:680px}
+.request-form label{font:var(--text-body-strong);margin-top:8px}
+.request-form input,.request-form select,.request-form textarea{width:100%;min-width:0;border:1px solid var(--border-default);border-radius:8px;background:var(--bg-field);color:var(--fg-primary);padding:12px;font:inherit}
+.request-form textarea{resize:vertical}
+.request-form button{justify-self:start;margin-top:12px}
+.request-form :focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+#request-result{padding:16px;border-radius:8px;background:var(--bg-card);line-height:1.6}
+[hidden]{display:none!important}
+html{scroll-padding-top:110px}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+@media(max-width:639px){header .bar{flex-wrap:wrap;gap:8px}.brand{white-space:nowrap}header nav{display:flex;order:3;flex-basis:100%;margin:0;overflow-x:auto}header nav a{white-space:nowrap}.hero h1{font-size:36px}footer .bar{flex-wrap:wrap}}

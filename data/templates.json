@@ -63,5 +63,44 @@
       ]
     },
     "features": "프로젝트 관리 화면을 만들어줘. 검색, 상태 필터, 정렬, 생성, 이름 변경, 복제, 보관과 복원을 넣어줘."
+  },
+  {
+    "id": "sales-portfolio",
+    "name": "Sales Portfolio",
+    "category": "랜딩",
+    "description": "UI/UX 스튜디오 세일즈 포트폴리오. 문제 진단, 네 가지 균등 패키지, 케이스 흐름, 파트너 모집, CTA로 구성된 다크·오렌지 단일 페이지.",
+    "type": "custom",
+    "status": "draft",
+    "sources": [
+      "src/library/claude/ui_kits/iak-sales/index.html",
+      "https://sugun8119-ops.github.io/iak-design-system/library/claude/ui_kits/iak-sales/"
+    ],
+    "layout": {
+      "desktop": "최대 1200px 너비, 스티키 헤더(브랜드 + 4링크 내비 + CTA 버튼), 6개 섹션 수직 스택. 패키지 4열 그리드, 문제 3열 그리드.",
+      "mobile": "375px에서는 메뉴 링크를 숨기지 않고 헤더의 다음 행에 배치. 제목 36px, 패키지 한 열. 600–1000px는 패키지 두 열.",
+      "sections": [
+        "헤더 내비게이션",
+        "Hero — 소개 및 CTA",
+        "Problems — 문제 진단 (6카드)",
+        "Packages — 균등 4패키지",
+        "Case Study Template — 8단계 흐름",
+        "Partners — 파트너 모집",
+        "CTA Band",
+        "Footer",
+        "데모 프로젝트 문의 폼"
+      ]
+    },
+    "features": "이 템플릿으로 IAK 스튜디오 프로젝트 문의 페이지를 만들어줘. 네 패키지와 원본 순서를 유지하고 패키지 선택, 이름·이메일·프로젝트 설명 검증, 데모 확인 결과를 넣어줘. 실제 전송이나 저장은 하지 마.",
+    "acceptance": [
+      "원본 6개 섹션 순서(Hero → Problems → Packages → Case → Partners → CTA) 유지",
+      "패키지 A/B/C/D 네 카드가 동등하게 강조되고 데스크톱 4열 / 태블릿(≤1000px) 2열 / 모바일(≤599px) 1열 표시",
+      "375px 뷰포트에서 헤더 가로 넘침 없음",
+      "Iconify CDN 없이 로컬 SVG 인라인으로 아이콘 렌더링",
+      "CTA 버튼 anchor href 원본 동작(#cta, #case, # 등) 유지",
+      "dist/templates/sales-portfolio/preview/ 경로에서 CSS·폰트 상대경로 정상 로드",
+      "모든 요청 CTA가 문의 폼으로 연결됨",
+      "공백·잘못된 이메일 거부 및 오류 후 입력 유지",
+      "결과에도 실제 전송·저장 없는 데모임을 표시"
+    ]
   }
 ]

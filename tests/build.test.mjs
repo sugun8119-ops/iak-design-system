@@ -40,6 +40,7 @@ test("Pages build uses repository subpath, generates AI template routes and supp
     const dist = path.join(temp, "dist");
     const author=JSON.parse(await fs.readFile(path.join(dist,'templates/author-test/template.json'),'utf8'));
     assert.deepEqual(author.lessons.map(x=>x.id),['author-rule']);
+    assert.equal(author.preview,'preview/index.html');
     assert.match(await fs.readFile(path.join(dist,'templates/author-test/preview/index.html'),'utf8'),/Local author preview/);
     for(const name of ['iak-add-template','iak-refine-template']){
       const metadata=JSON.parse(await fs.readFile(path.join(dist,'skills',name,'registry.json'),'utf8'));

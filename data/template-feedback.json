@@ -9,5 +9,18 @@
     "status": "verified",
     "verification": "2026-09-16 수정본 브라우저 확인: 1440px에서 약 685/527px 두 열, 375px에서 328px 단일 열. 생성본 검수 기록에 원본과 수정본을 구분함.",
     "regressionTests": []
+  },
+  {
+    "id": "sales-request-and-mobile",
+    "templateId": "sales-portfolio",
+    "expected": "모바일 메뉴 접근 유지, 문의 CTA가 검증 가능한 데모 폼으로 연결",
+    "actual": "원본 하단 CTA가 #로 연결되고 첫 생성은 모바일 메뉴를 숨김",
+    "rule": "모바일 메뉴 링크를 별도 행에 유지한다. 375px 패키지는 1열, 태블릿 2열, 데스크톱 4열을 유지한다. 요청 CTA는 이름·이메일·설명을 검증하는 폼으로 연결하고, 완료 시에도 전송·저장하지 않은 데모임을 표시한다.",
+    "evidence": "https://sugun8119-ops.github.io/iak-design-system/developer/sales-workflow-verification.md",
+    "status": "verified",
+    "verification": "저장소 31개 테스트 통과. 브라우저에서 1440px 4열(276px), 800px 2열, 375px 1열(312px)과 가로 넘침 없음 확인. 메뉴 flex 표시 및 36px 제목 확인. 정상 폼 제출의 데모 안내와 결과 포커스 확인.",
+    "regressionTests": [
+      "tests/sales-template.test.mjs"
+    ]
   }
 ]
