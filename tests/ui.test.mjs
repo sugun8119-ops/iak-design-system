@@ -62,3 +62,23 @@ test('Table controlled sort requests changes without changing rows until the par
  let requested;const props={caption:'Controlled',rows:[{id:'a',n:12},{id:'b',n:3}],columns:[{id:'n',header:'Count',cell:r=>r.n,sortValue:r=>r.n}],rowKey:r=>r.id,sort:null,onSortChange:s=>requested=s};
  const {rerender}=render(h(UI.Table,props));fireEvent.click(screen.getByRole('button',{name:'Count 정렬'}));assert.deepEqual(requested,{columnId:'n',direction:'ascending'});assert.equal(document.querySelector('tbody td').textContent,'12');rerender(h(UI.Table,{...props,sort:requested}));assert.equal(document.querySelector('tbody td').textContent,'3');
 });
+
+test('Pagination clamps boundaries and emits requested page',()=>{
+ const requests=[];const {rerender}=render(h(UI.Pagination,{page:1,pageCount:4,onPageChange:p=>requests.push(p)}));assert.equal(screen.getByRole('button',{name:'이전'}).disabled,true);fireEvent.click(screen.getByRole('button',{name:'다음'}));assert.deepEqual(requests,[2]);rerender(h(UI.Pagination,{page:4,pageCount:4,onPageChange:p=>requests.push(p)}));assert.equal(screen.getByRole('button',{name:'다음'}).disabled,true);fireEvent.click(screen.getByRole('button',{name:'첫 페이지'}));assert.deepEqual(requests,[2,1]);
+});
+test('Table paginates after sorting, resets for page size, and clamps after filtering',async()=>{
+ const rows=Array.from({length:25},(_,i)=>({id:String(i),n:i}));const props={caption:'Paged',rows,columns:[{id:'n',header:'Number',cell:r=>r.n,sortValue:r=>r.n}],rowKey:r=>r.id,pagination:{pageSize:10}};const {rerender}=render(h(UI.Table,props));
+ assert.equal(document.querySelectorAll('tbody tr').length,10);fireEvent.click(screen.getByRole('button',{name:'다음'}));assert.equal(document.querySelector('tbody td').textContent,'10');assert.equal(document.querySelector('tbody tr').getAttribute('aria-rowindex'),'12');
+ fireEvent.click(screen.getByRole('button',{name:'Number 정렬'}));await waitFor(()=>assert.equal(document.querySelector('tbody td').textContent,'0'));
+ fireEvent.click(screen.getByRole('button',{name:'마지막 페이지'}));assert.equal(document.querySelectorAll('tbody tr').length,5);rerender(h(UI.Table,{...props,rows:rows.slice(0,4)}));await waitFor(()=>assert.equal(document.querySelector('tbody td').textContent,'0'));
+ rerender(h(UI.Table,{...props,pagination:{pageSize:5}}));assert.equal(document.querySelectorAll('tbody tr').length,5);
+});
+test('Virtual table bounds DOM size, publishes logical indices and preserves the focused row',()=>{
+ const rows=Array.from({length:10000},(_,i)=>({id:String(i),n:i}));render(h(UI.Table,{caption:'Virtual',rows,columns:[{id:'n',header:'Number',cell:r=>h('button',{},String(r.n))}],rowKey:r=>r.id,virtualization:{height:300,rowHeight:50,overscan:2}}));
+ const table=screen.getByRole('table');assert.equal(table.getAttribute('aria-rowcount'),'10001');assert.ok(document.querySelectorAll('tbody tr:not([aria-hidden])').length<20);
+ const first=screen.getByRole('button',{name:'0',exact:true});first.focus();const region=screen.getByRole('region');fireEvent.scroll(region,{target:{scrollTop:5000}});
+ assert.equal(document.activeElement,first);assert.ok(document.querySelectorAll('tbody tr:not([aria-hidden])').length<20);const indices=[...document.querySelectorAll('tbody tr[aria-rowindex]')].map(e=>Number(e.getAttribute('aria-rowindex')));assert.ok(indices.some(n=>n>90));assert.deepEqual(indices,[...indices].sort((a,b)=>a-b));
+});
+test('Controlled pagination waits for parent state and pagination takes precedence over virtualization',()=>{
+ let page;const rows=Array.from({length:30},(_,i)=>({id:String(i),n:i}));const props={caption:'Controlled pages',rows,columns:[{id:'n',header:'N',cell:r=>r.n}],rowKey:r=>r.id,pagination:{pageSize:10,page:1,onPageChange:p=>page=p},virtualization:{height:200}};const {rerender}=render(h(UI.Table,props));fireEvent.click(screen.getByRole('button',{name:'다음'}));assert.equal(page,2);assert.equal(document.querySelector('tbody td').textContent,'0');rerender(h(UI.Table,{...props,pagination:{...props.pagination,page}}));assert.equal(document.querySelector('tbody td').textContent,'10');assert.equal(document.querySelector('.iak-table-virtual'),null);
+});

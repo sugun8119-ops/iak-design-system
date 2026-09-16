@@ -1,4 +1,4 @@
-## IAK React 0.6 구현 기준
+## IAK React 0.7 구현 기준
 
 디자인 외형은 IAK 원본을 유지한다. Wanted는 컴포넌트 범주·문서 구성 참고이며 색상이나 폰트 출처가 아니다.
 
@@ -7,6 +7,9 @@
 - Dialog/Menu의 동작은 Radix Primitives를 사용한다. ref 전달이 가능한 실제 버튼을 trigger로 제공한다. onOpenChange와 open은 함께 사용한다. Dialog initialFocusRef는 모달 내부 요소를 가리킨다.
 - Table: 반경 24px, 셀 padding 12×16px, card-alt 헤더, subtle 행 구분선, 숫자 tabular 설정. 헤더 색은 가독성을 위해 fg-secondary. caption과 고유 rowKey/column.id를 제공한다. cell 안에 필요한 실제 버튼을 넣고 행 전체를 가짜 버튼으로 만들지 않는다.
 - Table 정렬은 클라이언트 배열 복사본에 적용하며 원본을 변경하지 않는다. sort를 제어하면 onSortChange에서 새 상태를 반영한다. null은 마지막에 배치한다.
-- 로딩·오류·빈 결과를 명시적으로 전달한다. 데이터 API, 페이지네이션, 가상화, 서버 정렬, AlertDialog, 중첩 메뉴는 포함하지 않는다.
+- 로딩·오류·빈 결과를 명시적으로 전달한다. 페이지 탐색은 전체 rows를 정렬한 뒤 잘라서 보여 준다. 가상 스크롤은 고정 높이 행에만 사용하며, pagination과 함께 설정하면 pagination이 우선한다. 데이터 API, 서버 정렬, AlertDialog, 중첩 메뉴는 포함하지 않는다.
 
 React 18과 기본 키보드 동작을 검증한 Preview다. 모든 브라우저·스크린리더 지원을 인증했다고 표현하지 않는다. 원본 Claude 자료의 테스트 결과를 새 라이브러리 검증으로 재사용하지 않는다.
+
+- 가상 모드는 height/rowHeight/overscan을 설정한다. 화면 근처 행과 포커스를 가진 행만 DOM에 유지한다. 스크롤 영역에 포커스를 두고 Home/End로 처음과 끝으로 이동할 수 있다. 행의 전체 개수와 논리적 위치를 aria-rowcount/aria-rowindex로 전달한다.
+- 긴 텍스트·가변 높이·보조 기술의 전체 탐색에는 페이지 방식을 제공한다. 가상 모드를 기본값으로 강제하지 않는다. 실제 스크린리더 조합 검증은 아직 미수행이다.

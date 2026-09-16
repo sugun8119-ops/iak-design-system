@@ -616,7 +616,7 @@
   {
     "name": "Table",
     "group": "Contents",
-    "description": "의미 있는 HTML 테이블과 숫자·문자 정렬, 로딩·오류·빈 결과 상태.",
+    "description": "정렬·페이지네이션·고정 높이 가상 스크롤을 지원하는 IAK 테이블.",
     "props": [
       {
         "name": "caption",
@@ -665,6 +665,18 @@
         "type": "number",
         "default": "560",
         "description": "모바일은 표 내부에서 가로 스크롤"
+      },
+      {
+        "name": "pagination",
+        "type": "TablePagination",
+        "default": "—",
+        "description": "pageSize, 선택 page(1부터 시작), onPageChange. 정렬·페이지 크기 변경 시 1페이지로 이동."
+      },
+      {
+        "name": "virtualization",
+        "type": "TableVirtualization",
+        "default": "—",
+        "description": "height 400, rowHeight 56, overscan 4. opt-in 고정 높이 행. pagination과 함께 주면 pagination이 우선."
       }
     ],
     "accessibility": [
@@ -672,12 +684,52 @@
       "헤더 버튼은 Enter/Space로 정렬합니다. 로딩과 오류 중 정렬은 비활성입니다.",
       "스크롤 영역에 Tab으로 진입하고 가로 방향키로 이동할 수 있습니다.",
       "행 전체를 가짜 버튼으로 만들지 않습니다. 작업은 cell에 Button/Menu를 넣으세요.",
-      "클라이언트 정렬이며 페이지네이션·가상화·서버 정렬은 포함하지 않습니다. null 값은 양방향 모두 마지막입니다."
+      "페이지 탐색으로 전체 내용을 읽을 수 있습니다. 가상 모드는 화면 근처 행만 DOM에 유지하며 aria-rowcount/aria-rowindex를 제공합니다.",
+      "가상 모드의 긴 셀은 잘릴 수 있습니다. 가변 높이/전체 텍스트/보조 기술 탐색에는 페이지 방식을 제공하세요.",
+      "가상 스크롤 중 포커스를 가진 행은 DOM에 보존합니다. 실제 스크린리더 조합별 검증은 아직 수행하지 않았습니다.",
+      "모든 rows를 로컬에 제공하는 클라이언트 방식입니다. 서버 페이지네이션은 별도 구현이 필요합니다.",
+      "가상 스크롤 영역 자체에 포커스가 있을 때 Home/End로 처음·끝으로 이동합니다."
     ],
-    "example": "<Table caption=\"프로젝트 목록\" rows={[{id:\"1\",name:\"브랜드 리뉴얼\",count:12},{id:\"2\",name:\"이벤트 페이지\",count:3}]} rowKey={row => row.id} columns={[{id:\"name\",header:\"프로젝트\",cell:row=>row.name,sortValue:row=>row.name},{id:\"count\",header:\"작업 수\",cell:row=>row.count,sortValue:row=>row.count,align:\"right\"}]} />",
+    "example": "<Table pagination={{pageSize:10}} caption=\"프로젝트 목록\" rows={[{id:\"1\",name:\"브랜드 리뉴얼\",count:12},{id:\"2\",name:\"이벤트 페이지\",count:3}]} rowKey={row => row.id} columns={[{id:\"name\",header:\"프로젝트\",cell:row=>row.name,sortValue:row=>row.name},{id:\"count\",header:\"작업 수\",cell:row=>row.count,sortValue:row=>row.count,align:\"right\"}]} />",
     "import": "import { Table } from '@iak-design/ui';",
     "status": "preview",
-    "source": "packages/ui/src/composites.tsx",
+    "source": "packages/ui/src/table.tsx",
+    "designSource": "library/guide.md",
+    "virtualExample": "<Table virtualization={{height:400,rowHeight:56,overscan:4}} caption=\"프로젝트 목록\" rows={[{id:\"1\",name:\"브랜드 리뉴얼\",count:12},{id:\"2\",name:\"이벤트 페이지\",count:3}]} rowKey={row => row.id} columns={[{id:\"name\",header:\"프로젝트\",cell:row=>row.name,sortValue:row=>row.name},{id:\"count\",header:\"작업 수\",cell:row=>row.count,sortValue:row=>row.count,align:\"right\"}]} />"
+  },
+  {
+    "name": "Pagination",
+    "group": "Navigation",
+    "description": "IAK 버튼 스타일의 첫·이전·다음·마지막 페이지 탐색.",
+    "props": [
+      {
+        "name": "page / pageCount",
+        "type": "number",
+        "default": "필수",
+        "description": "1부터 시작하는 현재 페이지와 전체 페이지 수"
+      },
+      {
+        "name": "onPageChange",
+        "type": "(page: number) => void",
+        "default": "필수",
+        "description": "부모에서 page 상태를 갱신하세요."
+      },
+      {
+        "name": "disabled / label",
+        "type": "boolean / string",
+        "default": "false / 페이지 탐색",
+        "description": "로딩 등 비활성화와 탐색 영역 이름"
+      }
+    ],
+    "accessibility": [
+      "native button을 사용하고 첫·마지막 경계에서는 이동 버튼을 비활성화합니다.",
+      "현재 페이지에 aria-current를 표시합니다. 복수 페이지 탐색 영역은 서로 다른 label을 지정하세요."
+    ],
+    "example": "<Pagination page={page} pageCount={12} onPageChange={setPage} />",
+    "import": "import { Pagination } from '@iak-design/ui';",
+    "preamble": "const [page, setPage] = React.useState(1);",
+    "status": "preview",
+    "source": "packages/ui/src/table.tsx",
     "designSource": "library/guide.md"
   }
 ]

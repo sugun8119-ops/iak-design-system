@@ -40,9 +40,9 @@
       "area": "React 컴포넌트",
       "wanted": "설치 가능한 컴포넌트 패키지와 다양한 UI 범주",
       "before": "HTML 미리보기와 일부 JSX 조각",
-      "now": "IAK 컴포넌트 13종: 기본 10종 + Dialog/Menu/Table, TypeScript 및 설치 패키지",
+      "now": "IAK 컴포넌트 14종 + 테이블 페이지 탐색·고정 높이 가상 스크롤",
       "status": "부분 구현",
-      "remaining": "DatePicker, Toast 관리, Table 페이지네이션·가상화, AlertDialog, 서브메뉴 등"
+      "remaining": "DatePicker, Toast 관리, 서버 데이터 연동, AlertDialog, 서브메뉴 등"
     },
     {
       "area": "컴포넌트 문서",
@@ -50,7 +50,7 @@
       "before": "원본 HTML과 문서 파일 링크",
       "now": "props 표, 실제 React 플레이그라운드, 코드 복사, 접근성 메모",
       "status": "구현",
-      "remaining": "13개 구현 범위에 한정"
+      "remaining": "14개 구현 범위에 한정"
     },
     {
       "area": "디자인 토큰",
@@ -88,7 +88,7 @@
       "area": "접근성·검증",
       "wanted": "표준화된 컴포넌트·상태·구성 패턴",
       "before": "원본 시각 상태 중심",
-      "now": "기본 동작 테스트 + Radix 기반 모달·메뉴 포커스 관리 + 표 정렬/상태 테스트",
+      "now": "키보드·포커스·정렬·페이지 경계 테스트, 가상 행 개수/논리 인덱스/포커스 보존 검사",
       "status": "부분 구현",
       "remaining": "전체 브라우저·스크린리더 감사, 중첩 복합 위젯 검증"
     },
