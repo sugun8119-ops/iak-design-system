@@ -674,7 +674,7 @@ footer {
     gap: 18px;
   }
   .brand-sub {
-    display: none;
+    display: inline;
   }
   main {
     padding: 30px 26px;
@@ -832,4 +832,11 @@ footer {
   * {
     transition: none !important;
   }
+}
+
+@media (max-width: 500px) {
+  .top { gap: 10px; padding-inline: 16px; }
+  .brand { gap: 7px; font-size: 20px; }
+  .brand-sub { font-size: 12px; margin-left: 0; }
+  .version { font-size: 9px; padding: 4px 7px; }
 }
