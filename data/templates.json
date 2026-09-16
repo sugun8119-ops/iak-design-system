@@ -72,7 +72,6 @@
     "type": "custom",
     "status": "draft",
     "sources": [
-      "src/library/claude/ui_kits/iak-sales/index.html",
       "https://sugun8119-ops.github.io/iak-design-system/library/claude/ui_kits/iak-sales/"
     ],
     "layout": {
@@ -86,8 +85,8 @@
         "Case Study Template — 8단계 흐름",
         "Partners — 파트너 모집",
         "CTA Band",
-        "Footer",
-        "데모 프로젝트 문의 폼"
+        "데모 프로젝트 문의 폼",
+        "Footer"
       ]
     },
     "features": "이 템플릿으로 IAK 스튜디오 프로젝트 문의 페이지를 만들어줘. 네 패키지와 원본 순서를 유지하고 패키지 선택, 이름·이메일·프로젝트 설명 검증, 데모 확인 결과를 넣어줘. 실제 전송이나 저장은 하지 마.",
@@ -96,7 +95,7 @@
       "패키지 A/B/C/D 네 카드가 동등하게 강조되고 데스크톱 4열 / 태블릿(≤1000px) 2열 / 모바일(≤599px) 1열 표시",
       "375px 뷰포트에서 헤더 가로 넘침 없음",
       "Iconify CDN 없이 로컬 SVG 인라인으로 아이콘 렌더링",
-      "dist/templates/sales-portfolio/preview/ 경로에서 CSS·폰트 상대경로 정상 로드",
+      "공개 미리보기 URL에서 CSS·폰트 상대경로 정상 로드",
       "모든 요청 CTA가 문의 폼으로 연결됨",
       "공백·잘못된 이메일 거부 및 오류 후 입력 유지",
       "결과에도 실제 전송·저장 없는 데모임을 표시",

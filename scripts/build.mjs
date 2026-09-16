@@ -137,7 +137,7 @@ for (const t of templates) {
       {
         ...t,
         designSystem: "../../SKILL.md",
-        ...(t.type === "custom" ? {preview: "preview/index.html"} : {}),
+        ...(t.type === "custom" ? {preview: base ? `${base}templates/${t.id}/preview/index.html` : "preview/index.html"} : {}),
         lessons: feedback.filter(f=>f.templateId===t.id&&f.status==="verified").map(({id,rule,evidence,verification,regressionTests})=>({id,rule,evidence,verification,regressionTests})),
         status: "Draft starter, not an approved brand specification",
       },
