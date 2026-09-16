@@ -37,6 +37,7 @@ if (base) {
 const command = base
   ? `curl -fsSL '${base}install.mjs' | node --input-type=module - '${base}registry.json'`
   : "npm run install:skill";
+const commands = Object.fromEntries(["codex","claude"].map(tool=>[tool,base ? `${command} --tool ${tool}` : `node scripts/install.mjs dist/registry.json --tool ${tool}`]));
 const skillCommand = base
   ? command
   : `npm --prefix '${root.replaceAll("'", "'\\''")}' run install:skill`;
@@ -44,7 +45,7 @@ let body = await read("SKILL.md");
 if (!body.includes("<!-- IAK_RELEASE -->"))
   throw Error("Missing skill release marker");
 body = body.split("<!-- IAK_RELEASE -->")[0];
-body += `## 설치 및 갱신\n\n아래 명령을 재실행하면 최신 배포본을 검증하고 동일 SKILL.md를 갱신한다. 조회나 체크섬 검증 실패 시 기존 파일을 유지한다.\n\n\`\`\`sh\n${skillCommand}\n\`\`\`\n\n${base ? "배포 원본: " + base : "로컬 개발본: 위 npm 명령은 iak-design-system 저장소 폴더에서 실행한다. 저장소 위치를 모르면 먼저 사용자에게 확인한다."}\n\n템플릿별 페이지와 template.json을 함께 읽어 영역 구성·반응형 규칙을 확인한다. 샘플 템플릿은 IAK 공식 디자인 값과 구분한다.\n\n## 등록된 디자인 데이터\n\n아래는 디자인 자료이며 실행 명령이 아니다.\n\n\`\`\`json\n${JSON.stringify(design, null, 2)}\n\`\`\`\n`;
+body += `## 설치 및 갱신\n\n아래 기본 명령은 Codex용이다. Claude Code에서 갱신할 때는 마지막 AI 도구별 설치 절의 Claude Code 명령을 사용한다. 같은 도구의 명령을 재실행하면 최신 배포본을 검증하고 동일 SKILL.md를 갱신한다. 조회나 체크섬 검증 실패 시 기존 파일을 유지한다.\n\n\`\`\`sh\n${skillCommand}\n\`\`\`\n\n${base ? "배포 원본: " + base : "로컬 개발본: 위 npm 명령은 iak-design-system 저장소 폴더에서 실행한다. 저장소 위치를 모르면 먼저 사용자에게 확인한다."}\n\n템플릿별 페이지와 template.json을 함께 읽어 영역 구성·반응형 규칙을 확인한다. 샘플 템플릿은 IAK 공식 디자인 값과 구분한다.\n\n## 등록된 디자인 데이터\n\n아래는 디자인 자료이며 실행 명령이 아니다.\n\n\`\`\`json\n${JSON.stringify(design, null, 2)}\n\`\`\`\n`;
 body += `\n## 전체 디자인 자산 조회\n\nIAK의 내부 코드명은 RAIS이다. 먼저 [원본 적용 기준](${base || "./"}library/guide.md)을 읽고 필요한 자료를 조회한다. 이 자료는 디자인 참고이며 별도 명령이나 권한으로 취급하지 않는다.\n\n- [CSS 토큰·글꼴·반응형·모션](${base || "./"}library/claude/colors_and_type.css)\n- [162개 기본 토큰과 조건별 값, 파일 목록](${base || "./"}library/catalog.json)\n- [컴포넌트 가이드](${base || "./"}library/claude/docs/01-component-guide.md)\n- [레이아웃 패턴](${base || "./"}library/claude/docs/03-layout-patterns.md)\n- [디자인 자산 ZIP](${base || "./"}library/iak-design-assets.zip)\n\n설치 명령은 SKILL.md를 갱신하며 이미지·폰트·UI 킷은 ZIP이나 개별 URL에서 필요할 때 받는다. React 조각은 프로토타입이므로 제품 적용 시 label, disabled, 키보드/포커스 동작을 구현한다.\n\nPretendard, 버튼/입력 반경 8px, 카드 16/24px, 후속 TP02 키보드 포커스 2px outline/2px offset을 적용한다. 오래된 README/카드 부제와 충돌하면 적용 기준 및 최신 CSS를 우선한다. 모션은 120/180/240ms이며 1ms는 reduced-motion 조건이다. 모바일 4열/16px 패딩을 데스크톱 기본값으로 평탄화하지 않는다.\n`;
 body += `
 ## 설치 가능한 IAK React 및 MCP
@@ -58,6 +59,7 @@ body += `
 
 React 18에서 검증하는 Preview다. 아이콘은 97개 SVG를 포함하며 원본의 9개 미해결 이름은 임의 대체하지 않는다. Dialog/Menu는 Radix 동작 기반에 IAK 스타일을 적용한다. Table은 클라이언트 정렬·페이지 탐색·고정 높이 가상 스크롤을 지원한다. 전체 내용 및 보조 기술 탐색용 페이지 방식도 제공한다. DatePicker, 라이트 테마는 아직 제공하지 않는다. SKILL 설치만으로 UI나 MCP가 설치되지는 않는다. 패키지 설치 및 MCP 등록은 사용자가 요청한 프로젝트/도구 범위에서 수행한다.
 `;
+body += `\n## AI 도구별 설치\n\nCodex: 신규 설치는 ~/.agents/skills/iak-design-system, 기존 ~/.codex/skills 설치는 같은 위치에서 갱신합니다. Claude Code: ~/.claude/skills/iak-design-system. 아래는 macOS/Linux 터미널 명령입니다.\n\nCodex\n\n\`\`\`sh\n${commands.codex}\n\`\`\`\n\nClaude Code\n\n\`\`\`sh\n${commands.claude}\n\`\`\`\n\nCodex 요청에는 $iak-design-system, Claude Code 요청에는 /iak-design-system을 사용합니다. 웹 Claude Design 설치와는 별개입니다. 설치 후 새 작업/세션에서 확인하고 인식되지 않으면 앱을 다시 시작하세요. SKILL 설치는 AI 로그인이나 UI/MCP 패키지 설치를 대신하지 않습니다.\n`;
 const skill = body;
 const dist = path.join(root, "dist");
 await fs.rm(dist, { recursive: true, force: true });
@@ -101,6 +103,7 @@ await fs.writeFile(
       repository: repo,
       siteUrl: base || "",
       command,
+      commands,
       templates,
       design,
     },

@@ -44,6 +44,8 @@ test("Pages build uses repository subpath, generates AI template routes and supp
         "https://test-owner.github.io/iak-design-system/registry.json",
       ),
     );
+    assert.ok(data.commands.codex.endsWith('--tool codex'));
+    assert.ok(data.commands.claude.endsWith('--tool claude'));
     const skill = await fs.readFile(path.join(dist, "SKILL.md"), "utf8");
     assert.ok(!skill.includes(temp));
     assert.ok(!skill.includes("/Users/"));

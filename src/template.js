@@ -1,3 +1,4 @@
+import {makePrompt} from './install-options.js';
 const $ = (s) => document.querySelector(s);
 let timer;
 function notify(s) {
@@ -41,13 +42,14 @@ try {
   $("#request").oninput = () => {
     $("#copyGenerated").hidden = true;
   };
+  $('#aiTool').onchange=()=>{$('#generated').hidden=true;$('#copyGenerated').hidden=true;};
   $("#makePrompt").onclick = () => {
     const f = $("#request").value.trim();
     if (!f) {
       notify("필요한 기능을 입력해 주세요.");
       return;
     }
-    const prompt = `$iak-design-system\n\n템플릿: ${location.href.split("#")[0]}\nAI용 설명: ${new URL("template.json", location.href).href}\n\n${f}\n\n위 템플릿을 실제로 확인하고 유사한 레이아웃으로 구현해줘. 초안 스타일은 IAK 공식 토큰과 구분해줘. 주요 기능과 모바일 화면을 검증한 뒤 127.0.0.1에서만 실행하고 브라우저를 열어줘.`;
+    const prompt = makePrompt($('#aiTool').value,location.href.split('#')[0],f);
     $("#generated").textContent = prompt;
     $("#generated").hidden = false;
     $("#copyGenerated").hidden = false;

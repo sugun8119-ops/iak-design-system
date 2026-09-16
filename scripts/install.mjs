@@ -3,18 +3,20 @@ import path from "node:path";
 import os from "node:os";
 import crypto from "node:crypto";
 // Standalone: usable as a local file or curl | node --input-type=module - <registry-url>.
-const args = process.argv.slice(2);
-const source = args.shift();
-let target = path.join(
-  process.env.CODEX_HOME || path.join(os.homedir(), ".codex"),
-  "skills",
-  "iak-design-system",
-);
-if (args.length === 2 && args[0] === "--target") target = path.resolve(args[1]);
-else if (args.length)
-  throw Error(
-    "Usage: node install.mjs <registry.json path or HTTPS URL> [--target directory]",
-  );
+import {existsSync} from 'node:fs';
+import {pathToFileURL} from 'node:url';
+export function resolveTarget(args,{home=os.homedir(),codexHome=process.env.CODEX_HOME,exists=existsSync,cwd=process.cwd()}={}) {
+ let tool='codex',target; const seen=new Set();
+ for(let i=0;i<args.length;i+=2){const flag=args[i],value=args[i+1];if(!['--tool','--target'].includes(flag)||!value||value.startsWith('--')||seen.has(flag))throw Error('Usage: install.mjs <registry> [--tool codex|claude] [--target directory]');seen.add(flag);if(flag==='--tool')tool=value;else target=value;}
+ if(!['codex','claude'].includes(tool))throw Error('Unknown tool: '+tool);
+ if(target)return path.resolve(cwd,target);
+ if(tool==='claude')return path.join(home,'.claude','skills','iak-design-system');
+ const legacy=path.join(codexHome||path.join(home,'.codex'),'skills','iak-design-system');
+ // Keep existing users on the same file; fresh installs follow current Codex docs.
+ return exists(path.join(legacy,'SKILL.md'))?legacy:path.join(home,'.agents','skills','iak-design-system');
+}
+async function install(){
+const args=process.argv.slice(2),source=args.shift();
 let tmp;
 async function read(location) {
   if (/^https:\/\//.test(location)) {
@@ -32,6 +34,7 @@ async function read(location) {
   return fs.readFile(location, "utf8");
 }
 try {
+  const target=resolveTarget(args);
   if (!source) throw Error("registry.json 경로나 HTTPS URL이 필요합니다.");
   const registry = JSON.parse(await read(source));
   if (
@@ -83,3 +86,6 @@ try {
   console.error("설치 실패 — 기존 SKILL.md 유지: " + e.message);
   process.exitCode = 1;
 }
+
+}
+if(process.argv[1]==='-'||(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href))await install();

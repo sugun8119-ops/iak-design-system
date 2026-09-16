@@ -90,3 +90,20 @@ test("different skills are not overwritten", async () => {
     await fs.rm(temp, { recursive: true, force: true });
   }
 });
+
+test('AI tool destinations respect fresh Codex, existing legacy and Claude isolation',async()=>{
+ const {resolveTarget}=await import('../scripts/install.mjs');const base={home:'/test/user',cwd:'/test/project',codexHome:undefined,exists:()=>false};
+ assert.equal(resolveTarget([],base),'/test/user/.agents/skills/iak-design-system');
+ assert.equal(resolveTarget(['--tool','claude'],base),'/test/user/.claude/skills/iak-design-system');
+ assert.equal(resolveTarget(['--tool','codex'],{...base,exists:p=>p==='/test/user/.codex/skills/iak-design-system/SKILL.md'}),'/test/user/.codex/skills/iak-design-system');
+ assert.equal(resolveTarget(['--tool','codex'],{...base,codexHome:'/custom/codex',exists:()=>true}),'/custom/codex/skills/iak-design-system');
+ assert.equal(resolveTarget(['--tool','claude','--target','local'],base),'/test/project/local');
+ for(const flags of [['--tool','other'],['--tool'],['--target'],['--tool','claude','--tool','codex'],['--invalid','x']])assert.throws(()=>resolveTarget(flags,base));
+});
+test('tool-specific prompts preserve URLs and use the correct invocation',async()=>{
+ const {makePrompt}=await import('../src/install-options.js');const url='https://example.com/templates/event/';
+ assert.ok(makePrompt('codex',url,'결제 화면').startsWith('$iak-design-system'));
+ assert.ok(makePrompt('claude',url,'결제 화면').startsWith('/iak-design-system'));
+ assert.ok(makePrompt('claude',url,'결제 화면').includes(url));
+ assert.throws(()=>makePrompt('claude','javascript:alert(1)','test'));assert.throws(()=>makePrompt('codex',url,' '));
+});

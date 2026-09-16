@@ -124,3 +124,11 @@ ToastProvider/useToast를 추가했습니다. IAK 원본의 360px 폭·16px 패�
 
 ## v0.9 — AlertDialog
 IAK 모달·버튼 토큰을 재사용하는 Radix Alert Dialog 기반 확인 UI. 취소 기본 포커스, 비동기 완료 후 닫기, 실패 재시도, 중복 실행 차단을 제공합니다. 처리 중 요청 타임아웃은 앱에서 설정하세요.
+
+## v0.10 — AI 도구별 설치 안내
+
+시작하기와 템플릿 요청문에서 Codex / Claude Code를 선택합니다. 설치 스크립트는 `--tool codex|claude`를 지원하고 `--target` 명시 경로도 유지합니다. Codex 신규 설치는 `~/.agents/skills`를 사용하며 기존 `.codex/skills` 설치는 같은 위치에서 갱신합니다. Claude Code는 `~/.claude/skills`에 설치합니다. UI/MCP 패키지 버전은 0.9.0을 유지합니다.
+
+2026-09-16 검증: 자동 테스트 27개, Claude Code 2.1.185 새 세션에서 프로젝트 스킬 발견 및 `/iak-design-system` 호출 후 원본 폰트·강조색 응답 확인. Claude 웹 Design 설치와는 별개이며, 다른 AI에서 전체 화면 생성 재현은 아직 남았습니다.
+
+공식 기준: [Codex skills](https://learn.chatgpt.com/docs/build-skills), [Claude Code skills](https://code.claude.com/docs/en/skills).
