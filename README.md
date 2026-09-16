@@ -31,7 +31,9 @@ git remote add origin https://github.com/OWNER/iak-design-system.git
 git push -u origin main
 ```
 
-GitHub Settings → Pages → Build and deployment → Source: **GitHub Actions**를 선택하고 Actions의 **Deploy Pages**를 실행합니다. 공개 사이트를 원한다면 저장소 가시성과 GitHub 플랜의 Pages 지원 범위를 확인하세요. 현재 산출물에는 원격 저장소가 설정되어 있지 않습니다.
+GitHub Settings → Pages → Build and deployment → Source: **GitHub Actions**를 선택하고 Actions의 **Deploy Pages**를 실행합니다. 공개 사이트를 원한다면 저장소 가시성과 GitHub 플랜의 Pages 지원 범위를 확인하세요. 원격 저장소: https://github.com/sugun8119-ops/iak-design-system
+
+사이트: https://sugun8119-ops.github.io/iak-design-system/
 
 [GitHub Pages 공식 배포 문서](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages)를 참고했습니다.
 
