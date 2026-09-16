@@ -129,6 +129,12 @@ IAK 모달·버튼 토큰을 재사용하는 Radix Alert Dialog 기반 확인 UI
 
 시작하기와 템플릿 요청문에서 Codex / Claude Code를 선택합니다. 설치 스크립트는 `--tool codex|claude`를 지원하고 `--target` 명시 경로도 유지합니다. Codex 신규 설치는 `~/.agents/skills`를 사용하며 기존 `.codex/skills` 설치는 같은 위치에서 갱신합니다. Claude Code는 `~/.claude/skills`에 설치합니다. UI/MCP 패키지 버전은 0.9.0을 유지합니다.
 
-2026-09-16 검증: 자동 테스트 27개, Claude Code 2.1.185 새 세션에서 프로젝트 스킬 발견 및 `/iak-design-system` 호출 후 원본 폰트·강조색 응답 확인. Claude 웹 Design 설치와는 별개이며, 다른 AI에서 전체 화면 생성 재현은 아직 남았습니다.
+2026-09-16 검증: 자동 테스트 27개, Claude Code 2.1.185 새 세션에서 프로젝트 스킬 발견 및 `/iak-design-system` 호출 후 원본 폰트·강조색 응답 확인. Claude 웹 Design 설치와는 별개이며, 당시에는 전체 화면 생성 재현을 수행하지 않았습니다. 이후 결과는 아래 v0.11 기록을 참고하세요.
 
 공식 기준: [Codex skills](https://learn.chatgpt.com/docs/build-skills), [Claude Code skills](https://code.claude.com/docs/en/skills).
+
+## v0.11 — 재현 결과를 반영한 완료 기준
+
+IAK 디자인과 UI/MCP 0.9.0은 유지하고 사이트·스킬만 갱신합니다. 실제 패키지·로컬 폰트 사용, 폼의 보조 Enter 동작, 오류·결과 포커스, 데모 결과 문구, 템플릿 동작 기준과 검증 근거를 명시했습니다.
+
+새 Claude Code 세션에서 생성한 별도 결제 예제는 검수·수정 후 테스트 22개와 빌드, 1440px/375px 브라우저 검증을 통과했습니다. 이는 수정 전 자동 완성이나 라이브러리 전체 React 19 호환성을 보증하지 않습니다. 수정된 v0.11 스킬로 새 앱을 생성하는 재검증은 아직 수행하지 않았습니다. [상세 검증 기록](src/verification.md).
