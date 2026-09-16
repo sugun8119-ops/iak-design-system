@@ -28,6 +28,7 @@ const copy = async (text) => {
 const lines =
   '<div class="mini-line"></div><div class="mini-line"></div><div class="mini-line" style="width:65%"></div>';
 function thumbnail(t) {
+  if (t.type === "custom") return `<div class="mini"><div class="mini-top"><b>IAK DESIGN STUDIO</b><span>CUSTOM TEMPLATE</span></div><div class="mini-title">${esc(t.name)}</div><p>${esc(t.category)}</p><div class="mini-cta">Open preview →</div></div>`;
   if (t.type === "checkout")
     return `<div class="mini"><div class="mini-top"><b>IAK SESSIONS</b><span>2026 · SEOUL</span></div><div class="mini-title">Design, together.</div><div class="mini-body"><div>${lines}<div class="mini-line"></div>${lines}</div><div class="mini-panel">Order summary${lines}<div class="mini-cta">티켓 예약하기 →</div></div></div></div>`;
   if (t.type === "landing")
