@@ -33,3 +33,7 @@ Use `pagination={{pageSize:25}}` for complete content and optional controlled `p
 Wrap the application in ToastProvider and call useToast inside it. notify returns an ID (or undefined for an empty title or full queue); dismiss(id) and dismissAll remove active/queued notifications. Same IDs are deduplicated until dismissal. The queue holds at most 50 entries and renders 3 at once. Default duration is 5000ms; 0 means manual dismissal. Positive durations have a 1000ms minimum. Pending messages only start their timer when displayed.
 
 Polite announcements are the default. Use assertive priority sparingly. Hover, focus and window blur pause dismissal. Users can press F8 to navigate notifications. Actions require altText and must also be available through a durable UI; do not require users to act before a toast expires. Screen-reader combinations still require validation.
+
+
+## v0.9 — AlertDialog
+IAK 모달·버튼 토큰을 재사용하는 Radix Alert Dialog 기반 확인 UI. 취소 기본 포커스, 비동기 완료 후 닫기, 실패 재시도, 중복 실행 차단을 제공합니다. 처리 중 요청 타임아웃은 앱에서 설정하세요.

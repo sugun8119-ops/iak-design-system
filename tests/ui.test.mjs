@@ -106,3 +106,24 @@ test('Toast timer pauses for keyboard focus and resumes on leaving',async()=>{
 test('Toast rejects blank messages and bounds the queue without evicting existing entries',()=>{
  const results=[];function Capacity(){const {notify}=UI.useToast();return h('button',{onClick:()=>{results.push(notify({title:' '}));for(let i=0;i<51;i++)results.push(notify({title:`Message ${i}`,duration:0}))}},'Fill')};render(h(UI.ToastProvider,{},h(Capacity)));fireEvent.click(screen.getByRole('button',{name:'Fill'}));assert.equal(results[0],undefined);assert.ok(results[50]);assert.equal(results[51],undefined);assert.equal(document.querySelectorAll('[data-toast-id]').length,3);assert.ok(document.querySelector('.iak-toast-title').textContent.includes('Message 0'));
 });
+
+test('AlertDialog focuses cancel, traps focus, ignores outside and restores trigger',async()=>{
+ const user=(await import('@testing-library/user-event')).default.setup();let count=0;
+ render(h(UI.AlertDialog,{trigger:h(UI.Button,{},'Remove'),title:'Delete project?',description:'Cannot undo',confirmLabel:'Delete',onConfirm:()=>{count++}}));
+ await user.click(screen.getByRole('button',{name:'Remove'}));const dialog=screen.getByRole('alertdialog',{name:'Delete project?'});
+ assert.equal(document.activeElement,screen.getByRole('button',{name:'취소'}));assert.equal(document.getElementById(dialog.getAttribute('aria-describedby')).textContent,'Cannot undo');
+ await user.tab({shift:true});assert.equal(document.activeElement,screen.getByRole('button',{name:'Delete'}));await user.tab();assert.equal(document.activeElement,screen.getByRole('button',{name:'취소'}));
+ fireEvent.pointerDown(document.querySelector('.iak-dialog-overlay'));assert.ok(screen.getByRole('alertdialog'));
+ await user.keyboard('{Escape}');await waitFor(()=>assert.equal(screen.queryByRole('alertdialog')===null,true));assert.equal(count,0);await waitFor(()=>assert.equal(document.activeElement===screen.getByRole('button',{name:'Remove'}),true));
+});
+test('AlertDialog awaits success and prevents repeated execution or Escape during pending',async()=>{
+ const user=(await import('@testing-library/user-event')).default.setup();let done,count=0;const promise=new Promise(resolve=>done=resolve);
+ render(h(UI.AlertDialog,{trigger:h(UI.Button,{},'Open confirm'),title:'Confirm',description:'Wait for success',onConfirm:()=>{count++;return promise}}));await user.click(screen.getByRole('button',{name:'Open confirm'}));await user.click(screen.getByRole('button',{name:'확인',exact:true}));
+ assert.equal(screen.getByRole('button',{name:'취소'}).disabled,true);fireEvent.click(screen.getByRole('button',{name:'확인',exact:true}));await user.keyboard('{Escape}');assert.ok(screen.getByRole('alertdialog'));assert.equal(count,1);done();await waitFor(()=>assert.equal(screen.queryByRole('alertdialog')===null,true));
+});
+test('AlertDialog failure retains dialog, permits retry and resets on cancel',async()=>{
+ const user=(await import('@testing-library/user-event')).default.setup();let count=0;
+ render(h(UI.AlertDialog,{trigger:h(UI.Button,{},'Open retry'),title:'Retry',description:'Failure demo',errorMessage:'Try again',onConfirm:()=>{if(++count===1)throw Error('private server detail')}}));
+ await user.click(screen.getByRole('button',{name:'Open retry'}));await user.click(screen.getByRole('button',{name:'확인',exact:true}));assert.equal((await screen.findByRole('alert')).textContent,'Try again');assert.equal(screen.getByRole('button',{name:'확인',exact:true}).disabled,false);await user.click(screen.getByRole('button',{name:'확인',exact:true}));await waitFor(()=>assert.equal(screen.queryByRole('alertdialog')===null,true));assert.equal(count,2);
+ await user.click(screen.getByRole('button',{name:'Open retry'}));assert.equal(screen.queryByRole('alert'),null);await user.keyboard('{Enter}');await waitFor(()=>assert.equal(screen.queryByRole('alertdialog')===null,true));assert.equal(count,2);
+});

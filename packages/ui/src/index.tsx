@@ -39,3 +39,6 @@ export {Table,Pagination} from './table';
 export type {TableProps,TableColumn,TableSort,TablePagination,TableVirtualization,PaginationProps} from './table';
 export {ToastProvider,useToast} from './toast';
 export type {ToastOptions,ToastTone,ToastApi,ToastProviderProps} from './toast';
+
+export {AlertDialog} from './alert-dialog';
+export type {AlertDialogProps} from './alert-dialog';

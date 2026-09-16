@@ -49,9 +49,9 @@ body += `\n## 전체 디자인 자산 조회\n\nIAK의 내부 코드명은 RAIS�
 body += `
 ## 설치 가능한 IAK React 및 MCP
 
-제품 UI에는 먼저 [React API 문서](${base || "./"}developer/components.json)의 Button, TextField, Textarea, Select, Checkbox, Switch, Badge, Card, Skeleton, Icon, Dialog, Menu, Table, Pagination, Toast(ToastProvider/useToast)를 검토한다. IAK 자체 구현이며 Montage 패키지는 아니다.
+제품 UI에는 먼저 [React API 문서](${base || "./"}developer/components.json)의 Button, TextField, Textarea, Select, Checkbox, Switch, Badge, Card, Skeleton, Icon, Dialog, Menu, Table, Pagination, Toast(ToastProvider/useToast), AlertDialog를 검토한다. IAK 자체 구현이며 Montage 패키지는 아니다.
 
-- UI: npm install ${base || "./"}developer/releases/iak-design-ui-0.8.0.tgz
+- UI: npm install ${base || "./"}developer/releases/iak-design-ui-0.9.0.tgz
 - CSS: @iak-design/ui/tokens.css 다음 @iak-design/ui/styles.css를 import한다.
 - [실행 예제 및 설치 안내](${base || "./"}developer/)
 - [지원 범위와 미구현 목록](${base || "./"}developer/comparison.json)

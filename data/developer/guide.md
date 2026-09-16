@@ -16,3 +16,7 @@ React 18과 기본 키보드 동작을 검증한 Preview다. 모든 브라우저
 
 - Toast는 원본 360px 폭, 16px 패딩, 12px 반경, 36×36 사각 아이콘 영역/8px 반경을 따른다. latest CSS shadow-toast를 사용한다. 화면당 3개, 대기 포함 최대 50개를 유지하고 초과 시 notify가 undefined를 반환한다. 같은 ID는 중복 추가하지 않는다.
 - useToast는 ToastProvider 내부에서만 호출한다. 기본 알림은 polite, 필요한 경우만 assertive. 타이머는 hover/포커스/창 blur에서 일시 정지한다. 필수 응답·중요 오류는 본문에도 제공하고 토스트 안 작업은 다른 경로로도 접근 가능해야 한다.
+
+
+## v0.9 — AlertDialog
+IAK 모달·버튼 토큰을 재사용하는 Radix Alert Dialog 기반 확인 UI. 취소 기본 포커스, 비동기 완료 후 닫기, 실패 재시도, 중복 실행 차단을 제공합니다. 처리 중 요청 타임아웃은 앱에서 설정하세요.

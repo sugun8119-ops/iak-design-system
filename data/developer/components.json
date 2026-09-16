@@ -798,5 +798,57 @@
     "status": "preview",
     "source": "packages/ui/src/toast.tsx",
     "designSource": "library/claude/docs/01-component-guide.md"
+  },
+  {
+    "name": "AlertDialog",
+    "group": "Presentation",
+    "description": "중요한 작업을 실행하기 전 명시적으로 확인하는 대화상자.",
+    "props": [
+      {
+        "name": "trigger",
+        "type": "ReactElement",
+        "default": "필수",
+        "description": "ref를 전달하는 버튼"
+      },
+      {
+        "name": "title / description",
+        "type": "string",
+        "default": "필수",
+        "description": "작업과 결과를 명확히 설명"
+      },
+      {
+        "name": "onConfirm",
+        "type": "() => void | Promise<void>",
+        "default": "필수",
+        "description": "성공하면 닫기, 실패하면 오류 표시 후 재시도 가능"
+      },
+      {
+        "name": "confirmLabel / cancelLabel",
+        "type": "string",
+        "default": "확인 / 취소",
+        "description": "삭제·보관처럼 구체적인 작업명 권장"
+      },
+      {
+        "name": "danger",
+        "type": "boolean",
+        "default": "false",
+        "description": "위험한 작업의 IAK danger 버튼"
+      },
+      {
+        "name": "errorMessage",
+        "type": "string",
+        "default": "기본 오류 안내",
+        "description": "실패 시 사용자에게 보여줄 안전한 설명"
+      }
+    ],
+    "accessibility": [
+      "열릴 때 취소에 포커스. Tab은 모달 안에서 순환하고 닫히면 실행 버튼으로 복귀합니다.",
+      "바깥 클릭으로 닫히지 않습니다. 처리 중에는 중복 실행·취소·Escape를 막습니다.",
+      "Promise가 성공해야 닫히고 실패하면 오류를 알립니다. 요청에는 애플리케이션에서 타임아웃을 설정하세요.",
+      "내부 상태로 열림을 관리합니다. 서버 요청 취소·권한 검증·실제 스크린리더 조합 검증은 제공하지 않습니다."
+    ],
+    "source": "packages/ui/src/alert-dialog.tsx",
+    "import": "import { AlertDialog, Button } from '@iak-design/ui';",
+    "example": "<AlertDialog trigger={<Button>보관</Button>} title=\"프로젝트를 보관할까요?\" description=\"보관함에서 다시 복원할 수 있습니다. 이 예제는 실제 데이터를 변경하지 않습니다.\" confirmLabel=\"보관\" onConfirm={() => console.info(\"데모 보관\")} />"
   }
 ]
