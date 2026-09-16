@@ -63,6 +63,18 @@ const dist = path.join(root, "dist");
 await fs.rm(dist, { recursive: true, force: true });
 await fs.mkdir(dist, { recursive: true });
 await fs.cp(path.join(root, "src"), dist, { recursive: true });
+// Content-addressed assets prevent a browser from mixing releases.
+const developerIndex = path.join(dist, 'developer/index.html');
+let developerHtml = await fs.readFile(developerIndex, 'utf8');
+for (const name of ['app.js', 'ui.css', 'developer.css']) {
+  const content = await fs.readFile(path.join(dist, 'developer', name));
+  const hash = crypto.createHash('sha256').update(content).digest('hex').slice(0, 12);
+  const extension = path.extname(name);
+  const versioned = name.slice(0, -extension.length) + '.' + hash + extension;
+  await fs.writeFile(path.join(dist, 'developer', versioned), content);
+  developerHtml = developerHtml.replaceAll('"' + name + '"', '"' + versioned + '"');
+}
+await fs.writeFile(developerIndex, developerHtml);
 await fs.copyFile(
   path.join(root, "scripts/install.mjs"),
   path.join(dist, "install.mjs"),

@@ -30,6 +30,12 @@ test("Pages build uses repository subpath, generates AI template routes and supp
     );
     assert.equal(built.status, 0, built.stderr);
     const dist = path.join(temp, "dist");
+    const html = await fs.readFile(path.join(dist, 'developer/index.html'), 'utf8');
+    for (const name of ['app', 'ui', 'developer']) {
+      const reference = html.match(new RegExp(name + '\\.[a-f0-9]{12}\\.(?:js|css)'))?.[0];
+      assert.ok(reference, 'Missing content-addressed ' + name);
+      assert.ok((await fs.stat(path.join(dist, 'developer', reference))).size > 0);
+    }
     const data = JSON.parse(
       await fs.readFile(path.join(dist, "site-data.json")),
     );
