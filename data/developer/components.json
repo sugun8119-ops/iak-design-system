@@ -485,5 +485,199 @@
     "import": "import { Icon } from '@iak-design/ui';",
     "source": "packages/ui/src/index.tsx",
     "designSource": "library/claude/docs/01-component-guide.md"
+  },
+  {
+    "name": "Dialog",
+    "group": "Presentation",
+    "description": "IAK 토큰으로 꾸민 모달. 제목·설명과 포커스 이동·복귀를 지원합니다.",
+    "props": [
+      {
+        "name": "trigger",
+        "type": "ReactElement",
+        "default": "필수",
+        "description": "ref와 이벤트를 전달하는 Button 또는 native button"
+      },
+      {
+        "name": "title",
+        "type": "string",
+        "default": "필수",
+        "description": "화면에 표시하고 접근 가능한 이름으로 사용"
+      },
+      {
+        "name": "description",
+        "type": "string",
+        "default": "—",
+        "description": "선택 설명"
+      },
+      {
+        "name": "children / footer",
+        "type": "ReactNode",
+        "default": "필수 / —",
+        "description": "본문과 하단 작업"
+      },
+      {
+        "name": "open / defaultOpen",
+        "type": "boolean",
+        "default": "비제어 닫힘",
+        "description": "open은 onOpenChange와 함께 사용"
+      },
+      {
+        "name": "onOpenChange",
+        "type": "(open: boolean) => void",
+        "default": "—",
+        "description": "열기·닫기 상태 변경"
+      },
+      {
+        "name": "initialFocusRef",
+        "type": "RefObject<HTMLElement>",
+        "default": "첫 포커스 요소",
+        "description": "열릴 때 입력 또는 취소 버튼 등으로 이동"
+      },
+      {
+        "name": "closeOnOutside",
+        "type": "boolean",
+        "default": "false",
+        "description": "바깥 클릭으로 닫을지 결정. Esc와 닫기 버튼은 항상 제공"
+      },
+      {
+        "name": "closeLabel",
+        "type": "string",
+        "default": "닫기",
+        "description": "닫기 버튼 이름"
+      },
+      {
+        "name": "size",
+        "type": "'sm' | 'md' | 'lg'",
+        "default": "md",
+        "description": "원본 모달 폭 480 / 640 / 880px. 모바일 여백 16px"
+      }
+    ],
+    "accessibility": [
+      "Radix Dialog가 모달 포커스 유지, 배경 상호작용 차단, Esc 닫기와 트리거 포커스 복귀를 처리합니다.",
+      "본문이 길면 모달 내부에서 스크롤합니다. 모바일 좌우 여백은 16px입니다.",
+      "트리거는 키보드로 접근할 수 있는 버튼이어야 하며 ref를 전달해야 합니다.",
+      "비동기 저장은 제품에서 관리합니다. 파괴적 확인 전용 AlertDialog는 별도 범위입니다."
+    ],
+    "example": "<Dialog trigger={<Button>프로젝트 안내</Button>} title=\"프로젝트 안내\" description=\"IAK 규칙을 적용합니다.\"><p>프로젝트 설정을 확인하세요.</p></Dialog>",
+    "import": "import { Dialog, Button } from '@iak-design/ui';",
+    "status": "preview",
+    "source": "packages/ui/src/composites.tsx",
+    "designSource": "library/guide.md"
+  },
+  {
+    "name": "Menu",
+    "group": "Presentation",
+    "description": "작업 선택용 드롭다운 메뉴. 방향키 탐색과 비활성 항목을 지원합니다.",
+    "props": [
+      {
+        "name": "trigger",
+        "type": "ReactElement",
+        "default": "필수",
+        "description": "ref를 전달하는 Button 또는 native button"
+      },
+      {
+        "name": "label",
+        "type": "string",
+        "default": "필수",
+        "description": "메뉴의 접근 가능한 이름"
+      },
+      {
+        "name": "items",
+        "type": "MenuItem[]",
+        "default": "필수",
+        "description": "고유 id, label, onSelect 및 disabled/danger/separatorBefore"
+      },
+      {
+        "name": "align",
+        "type": "'start' | 'center' | 'end'",
+        "default": "end",
+        "description": "트리거 기준 정렬. 화면 가장자리에서는 위치 보정"
+      },
+      {
+        "name": "open / onOpenChange",
+        "type": "boolean / callback",
+        "default": "비제어",
+        "description": "필요하면 외부에서 열림 상태 관리"
+      }
+    ],
+    "accessibility": [
+      "Enter/Space/아래 화살표로 열고 방향키·Home·End·문자 검색으로 탐색합니다.",
+      "Esc는 닫고 트리거로 복귀합니다. Tab은 메뉴를 닫습니다.",
+      "비활성 항목은 선택과 키보드 탐색에서 제외합니다.",
+      "Radix DropdownMenu의 위치 보정과 포커스 동작을 사용하며 IAK 외형을 유지합니다.",
+      "작업 메뉴입니다. 일반 사이트 내비게이션이나 서브메뉴는 제공하지 않습니다."
+    ],
+    "example": "<Menu trigger={<Button variant=\"secondary\">프로젝트 작업</Button>} label=\"프로젝트 작업\" items={[{ id: \"rename\", label: \"이름 변경\", onSelect: () => alert(\"이름 변경 선택\") }, { id: \"archive\", label: \"보관\", danger: true, separatorBefore: true, onSelect: () => alert(\"보관 선택\") }]} />",
+    "import": "import { Menu, Button } from '@iak-design/ui';",
+    "status": "preview",
+    "source": "packages/ui/src/composites.tsx",
+    "designSource": "library/guide.md"
+  },
+  {
+    "name": "Table",
+    "group": "Contents",
+    "description": "의미 있는 HTML 테이블과 숫자·문자 정렬, 로딩·오류·빈 결과 상태.",
+    "props": [
+      {
+        "name": "caption",
+        "type": "string",
+        "default": "필수",
+        "description": "표 제목과 스크롤 영역의 이름"
+      },
+      {
+        "name": "columns",
+        "type": "TableColumn<T>[]",
+        "default": "필수",
+        "description": "고유 id, header, cell(row), 선택 sortValue(row), align"
+      },
+      {
+        "name": "rows / rowKey",
+        "type": "T[] / (row) => string",
+        "default": "필수",
+        "description": "원본 데이터와 고유 행 키"
+      },
+      {
+        "name": "sort / defaultSort",
+        "type": "TableSort | null / TableSort",
+        "default": "정렬 없음",
+        "description": "columnId와 ascending/descending. null은 제어형 정렬 없음"
+      },
+      {
+        "name": "onSortChange",
+        "type": "(sort: TableSort) => void",
+        "default": "—",
+        "description": "제어형 sort 사용 시 상태를 갱신해야 합니다."
+      },
+      {
+        "name": "loading / error",
+        "type": "boolean / string",
+        "default": "false / —",
+        "description": "로딩이 우선. 오류 문자열 또는 빈 결과 표시"
+      },
+      {
+        "name": "emptyMessage / loadingMessage",
+        "type": "string",
+        "default": "기본 안내 문구",
+        "description": "상태 문구 변경"
+      },
+      {
+        "name": "minWidth",
+        "type": "number",
+        "default": "560",
+        "description": "모바일은 표 내부에서 가로 스크롤"
+      }
+    ],
+    "accessibility": [
+      "caption, scope=col, aria-sort로 제목·열·정렬 방향을 전달합니다.",
+      "헤더 버튼은 Enter/Space로 정렬합니다. 로딩과 오류 중 정렬은 비활성입니다.",
+      "스크롤 영역에 Tab으로 진입하고 가로 방향키로 이동할 수 있습니다.",
+      "행 전체를 가짜 버튼으로 만들지 않습니다. 작업은 cell에 Button/Menu를 넣으세요.",
+      "클라이언트 정렬이며 페이지네이션·가상화·서버 정렬은 포함하지 않습니다. null 값은 양방향 모두 마지막입니다."
+    ],
+    "example": "<Table caption=\"프로젝트 목록\" rows={[{id:\"1\",name:\"브랜드 리뉴얼\",count:12},{id:\"2\",name:\"이벤트 페이지\",count:3}]} rowKey={row => row.id} columns={[{id:\"name\",header:\"프로젝트\",cell:row=>row.name,sortValue:row=>row.name},{id:\"count\",header:\"작업 수\",cell:row=>row.count,sortValue:row=>row.count,align:\"right\"}]} />",
+    "import": "import { Table } from '@iak-design/ui';",
+    "status": "preview",
+    "source": "packages/ui/src/composites.tsx",
+    "designSource": "library/guide.md"
   }
 ]

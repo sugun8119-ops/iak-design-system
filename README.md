@@ -100,3 +100,11 @@ Review the source diff and `src/library/guide.md` before committing and pushing.
 검증: React 18의 입력/폼/로딩/접근성 속성 동작, SDK stdio MCP 통신, 원본 보존, Pages 하위 경로 빌드, 스킬 갱신 테스트. React 19, 스크린리더 전체 감사, 복합 위젯, 라이트 테마, Next.js 전용 통합은 아직 미검증 또는 미구현입니다.
 
 원티드 공식 문서와 공개 저장소를 비교 기준으로 삼았으며 이번 작업에서 Montage MCP 실시간 호출은 확인하지 못했습니다. IAK 구현은 Wanted 패키지와 별개입니다.
+
+## 0.6 복합 컴포넌트
+
+IAK 디자인을 유지한 Dialog, Menu, Table을 추가했습니다. Dialog는 원본의 480/640/880px 폭, 16px 반경, card-alt/overlay 토큰을 사용합니다. 원본 shadow-floating은 최신 CSS에 정의되지 않아 shadow-soft로 연결했습니다. Table은 24px 컨테이너 반경, 12×16px 셀 간격을 사용하고 muted 헤더는 가독성을 위해 fg-secondary로 적용합니다. Menu 외형은 기존 IAK 표면·테두리·8px 반경으로 구성한 신규 어댑터입니다.
+
+Dialog/Menu 동작은 MIT 라이선스의 Radix Primitives 의존성을 사용합니다. Table은 native HTML 기반 IAK 구현입니다. API 문서와 플레이그라운드, MCP get_component에서도 세 컴포넌트를 조회할 수 있습니다. npm registry 정식 발행은 아니며 0.6.0 설치 파일로 제공합니다.
+
+검증 범위: React 18, 모달 열기·포커스 유지·복귀·Esc·입력 저장, 메뉴 비활성 항목 건너뛰기·선택·Esc, 테이블 숫자 정렬·제어형 상태·원본 배열 보존·로딩·빈 결과·오류. 모든 스크린리더/브라우저 지원을 인증한 것은 아닙니다. Table 페이지네이션·가상화·서버 정렬, DatePicker, Toast 관리, 중첩 메뉴는 후속 범위입니다.

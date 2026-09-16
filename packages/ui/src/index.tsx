@@ -32,3 +32,5 @@ export type CardProps=Omit<React.HTMLAttributes<HTMLElement>,'title'>&{title?:st
 export function Card({title,footer,children,className,...props}:CardProps){const id=React.useId();return <section {...props} aria-labelledby={title?id:props['aria-labelledby']} className={cx('iak-card',className)}>{title&&<h2 id={id}>{title}</h2>}<div>{children}</div>{footer&&<footer>{footer}</footer>}</section>}
 export type SkeletonProps=React.HTMLAttributes<HTMLSpanElement>&{width?:string|number;height?:string|number;circle?:boolean};
 export function Skeleton({width='100%',height=20,circle=false,style,className,...props}:SkeletonProps){return <span {...props} aria-hidden="true" className={cx('iak-skeleton',className)} style={{width,height,borderRadius:circle?'50%':undefined,...style}}/>}
+export {Dialog,Menu,Table} from './composites';
+export type {DialogProps,MenuProps,MenuItem,TableProps,TableColumn,TableSort} from './composites';

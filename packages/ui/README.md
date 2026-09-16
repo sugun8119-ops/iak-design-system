@@ -19,3 +19,9 @@ Components: Button, TextField, Textarea, Select, Checkbox, Switch, Badge, Card, 
 This is a preview release distributed as an npm-compatible tarball through GitHub Pages, **not a published npm registry package**. Complex components (Dialog/Menu/DatePicker/Table/Toast manager), light theme, framework adapters and full assistive-technology certification remain out of scope for this release.
 
 IAK asset ownership is unchanged. Pretendard and icon-license files are distributed in `dist/`. See icon-licenses.json for upstream authors, licenses and links. Never claim these are original IAK icon artwork.
+
+## Composite components (0.6)
+
+Dialog and Menu use Radix Primitives for behavior and IAK tokens for appearance. Radix packages are installed as runtime dependencies; React and React DOM remain peer dependencies. Use a native button or a ref-forwarding IAK Button as trigger. Dialog supports controlled open/onOpenChange, size sm/md/lg, initialFocusRef, and closeOnOutside (default false). Escape and the close button always remain available.
+
+Table uses caption, column headers and aria-sort, client-side immutable sorting, loading/error/empty states, and a keyboard-focusable horizontal scroll region. Supply unique column ids and row keys. Controlled sort requires updating sort in onSortChange. Pagination, virtualization and remote sorting are not implemented. See the shipped component catalog and developer playground for complete props/examples.

@@ -2,10 +2,11 @@ import {test,afterEach} from 'node:test';
 import assert from 'node:assert/strict';
 import {JSDOM} from 'jsdom';
 const dom=new JSDOM('<!doctype html><html><body></body></html>',{url:'http://localhost'});
-for(const key of ['window','document','HTMLElement','HTMLInputElement','Node','MutationObserver'])globalThis[key]=dom.window[key];
+for(const key of ['window','document','HTMLElement','HTMLInputElement','Node','MutationObserver','CustomEvent','NodeFilter','HTMLButtonElement','Element'])globalThis[key]=dom.window[key];
 Object.defineProperty(globalThis,'navigator',{value:dom.window.navigator,configurable:true});
 const React=await import('react');
-const {render,screen,fireEvent,cleanup}=await import('@testing-library/react');
+globalThis.getComputedStyle=dom.window.getComputedStyle.bind(dom.window);
+const {render,screen,fireEvent,cleanup,waitFor}=await import('@testing-library/react');
 const UI=await import('../packages/ui/dist/index.js');
 const h=React.createElement;
 afterEach(cleanup);
@@ -26,4 +27,38 @@ test('switch and checkbox expose state and honor native disabled',()=>{
 test('SVG labels, decorative skeletons and invalid icon names',()=>{
  const {container}=render(h('div',{},h(UI.Icon,{name:'eva:checkmark-fill',label:'Done'}),h(UI.Skeleton,{}),h(UI.Icon,{name:'__proto__'})));
  assert.equal(screen.getByRole('img',{name:'Done'}).tagName.toLowerCase(),'svg');assert.equal(container.querySelectorAll('svg').length,1);assert.equal(container.querySelector('.iak-skeleton').getAttribute('aria-hidden'),'true');
+});
+
+test('Dialog exposes title, focuses the requested input and returns focus after Escape',async()=>{
+ const user=(await import('@testing-library/user-event')).default.setup();
+ const ref=React.createRef();
+ render(h(UI.Dialog,{trigger:h(UI.Button,{},'Open dialog'),title:'Edit project',description:'Change the name',initialFocusRef:ref},h(UI.TextField,{label:'Project',ref})));
+ await user.click(screen.getByRole('button',{name:'Open dialog'}));
+ const dialog=await screen.findByRole('dialog',{name:'Edit project'});
+ assert.equal(document.activeElement,screen.getByLabelText('Project'));
+ assert.equal(document.getElementById(dialog.getAttribute('aria-describedby')).textContent,'Change the name');
+ await user.tab();assert.equal(document.activeElement,screen.getByRole('button',{name:'닫기'}));
+ await user.keyboard('{Escape}');
+ await waitFor(()=>assert.equal(screen.queryByRole('dialog'),null));
+ await waitFor(()=>assert.equal(document.activeElement,screen.getByRole('button',{name:'Open dialog'})));
+});
+test('Menu skips disabled items, runs the selected action and restores trigger focus',async()=>{
+ const user=(await import('@testing-library/user-event')).default.setup();let chosen='';
+ render(h(UI.Menu,{trigger:h(UI.Button,{},'Actions'),label:'Project actions',items:[{id:'one',label:'Rename',onSelect:()=>chosen='rename'},{id:'two',label:'Disabled',disabled:true,onSelect:()=>chosen='disabled'},{id:'three',label:'Archive',onSelect:()=>chosen='archive'}]}));
+ screen.getByRole('button',{name:'Actions'}).focus();await user.keyboard('{ArrowDown}');
+ await screen.findByRole('menu');assert.equal(document.activeElement.textContent,'Rename');await user.keyboard('{ArrowDown}');assert.equal(document.activeElement.textContent,'Archive');await user.keyboard('{Enter}');
+ assert.equal(chosen,'archive');await waitFor(()=>assert.equal(screen.queryByRole('menu'),null));await waitFor(()=>assert.equal(document.activeElement,screen.getByRole('button',{name:'Actions'})));
+});
+test('Table numeric sorting is immutable and communicates sort/loading/empty/error states',()=>{
+ const rows=[{id:'a',n:12},{id:'b',n:3},{id:'c',n:null}];const columns=[{id:'n',header:'Count',cell:r=>r.n??'Missing',sortValue:r=>r.n}];const props={caption:'Projects',rows,columns,rowKey:r=>r.id};
+ const {rerender}=render(h(UI.Table,props));const values=()=>[...document.querySelectorAll('tbody td')].map(x=>x.textContent);
+ fireEvent.click(screen.getByRole('button',{name:'Count 정렬'}));assert.deepEqual(values(),['3','12','Missing']);assert.equal(screen.getByRole('columnheader').getAttribute('aria-sort'),'ascending');
+ fireEvent.click(screen.getByRole('button',{name:'Count 정렬'}));assert.deepEqual(values(),['12','3','Missing']);assert.deepEqual(rows.map(r=>r.id),['a','b','c']);
+ rerender(h(UI.Table,{...props,loading:true}));assert.equal(screen.getByRole('table').getAttribute('aria-busy'),'true');assert.equal(screen.getByRole('button',{name:'Count 정렬'}).disabled,true);
+ rerender(h(UI.Table,{...props,rows:[]}));assert.equal(screen.getByRole('status').textContent,'표시할 항목이 없습니다.');
+ rerender(h(UI.Table,{...props,error:'Failed'}));assert.equal(screen.getByRole('status').textContent,'Failed');
+});
+test('Table controlled sort requests changes without changing rows until the parent updates',()=>{
+ let requested;const props={caption:'Controlled',rows:[{id:'a',n:12},{id:'b',n:3}],columns:[{id:'n',header:'Count',cell:r=>r.n,sortValue:r=>r.n}],rowKey:r=>r.id,sort:null,onSortChange:s=>requested=s};
+ const {rerender}=render(h(UI.Table,props));fireEvent.click(screen.getByRole('button',{name:'Count 정렬'}));assert.deepEqual(requested,{columnId:'n',direction:'ascending'});assert.equal(document.querySelector('tbody td').textContent,'12');rerender(h(UI.Table,{...props,sort:requested}));assert.equal(document.querySelector('tbody td').textContent,'3');
 });

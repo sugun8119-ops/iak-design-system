@@ -1,0 +1,16 @@
+import React,{useRef,useState} from 'react';
+import {Button,TextField,Dialog,Menu,Table,Select,Checkbox,Badge} from '../../packages/ui/src/index';
+import type {DialogProps,TableColumn} from '../../packages/ui/src/index';
+export function DialogExample(){
+ const [open,setOpen]=useState(false),[name,setName]=useState('브랜드 리뉴얼'),[saved,setSaved]=useState('브랜드 리뉴얼'),[error,setError]=useState(''),[size,setSize]=useState<DialogProps['size']>('md'),[outside,setOutside]=useState(false);
+ const input=useRef<HTMLInputElement>(null);
+ return <><div className="controls"><Select label="모달 크기" value={size} onChange={e=>setSize(e.target.value as DialogProps['size'])}><option value="sm">Small · 480px</option><option value="md">Medium · 640px</option><option value="lg">Large · 880px</option></Select><Checkbox label="바깥 클릭으로 닫기" checked={outside} onChange={e=>setOutside(e.target.checked)}/></div><div className="composite-demo"><Dialog trigger={<Button>이름 변경 모달 열기</Button>} title="프로젝트 이름 변경" description="프로젝트 이름을 입력한 뒤 저장하세요." size={size} open={open} onOpenChange={v=>{setOpen(v);if(v){setName(saved);setError('')}}} initialFocusRef={input} closeOnOutside={outside} footer={<><Button variant="secondary" onClick={()=>setOpen(false)}>취소</Button><Button type="submit" form="dialog-example-form">저장</Button></>}><form id="dialog-example-form" onSubmit={e=>{e.preventDefault();if(!name.trim()){setError('이름을 입력해 주세요.');input.current?.focus();return}setSaved(name.trim());setOpen(false)}}><TextField ref={input} label="새 프로젝트 이름" value={name} maxLength={40} onChange={e=>setName(e.target.value)} error={error}/></form></Dialog><p role="status">저장된 이름: {saved}</p></div></>;
+}
+export function MenuExample(){
+ const [message,setMessage]=useState('작업을 선택하세요.');
+ return <><Menu trigger={<Button variant="secondary">프로젝트 작업 열기</Button>} label="프로젝트 작업" items={[{id:'rename',label:'이름 변경',onSelect:()=>setMessage('이름 변경을 선택했습니다.')},{id:'duplicate',label:'복제',onSelect:()=>setMessage('복제를 선택했습니다.')},{id:'share',label:'공유 · 준비 중',disabled:true,onSelect:()=>setMessage('선택되면 안 되는 항목')},{id:'archive',label:'보관',danger:true,separatorBefore:true,onSelect:()=>setMessage('보관을 선택했습니다. 실제 데이터는 변경하지 않습니다.')}]} /><p role="status">{message}</p></>;
+}
+type Project={id:string;name:string;count:number;status:string};
+const rows:Project[]=[{id:'1',name:'브랜드 리뉴얼',count:12,status:'진행 중'},{id:'2',name:'이벤트 결제 페이지',count:3,status:'완료'},{id:'3',name:'IAK 디자인 시스템',count:24,status:'진행 중'}];
+const columns:TableColumn<Project>[]=[{id:'name',header:'프로젝트',cell:r=>r.name,sortValue:r=>r.name},{id:'status',header:'상태',cell:r=><Badge tone={r.status==='완료'?'success':'info'}>{r.status}</Badge>,sortValue:r=>r.status},{id:'count',header:'작업 수',cell:r=>r.count,sortValue:r=>r.count,align:'right'}];
+export function TableExample(){const [state,setState]=useState('default');return <><Select label="테이블 상태" value={state} onChange={e=>setState(e.target.value)}><option value="default">기본</option><option value="loading">로딩</option><option value="empty">빈 결과</option><option value="error">오류</option></Select><div className="composite-demo"><Table caption="프로젝트 목록" rows={state==='empty'?[]:rows} columns={columns} rowKey={r=>r.id} loading={state==='loading'} error={state==='error'?'프로젝트를 불러오지 못했습니다. 다시 시도하세요.':undefined}/></div></>}
