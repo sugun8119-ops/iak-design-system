@@ -36,7 +36,7 @@ function card(t) {
   return `<a class="template-card" href="templates/${t.id}/"><div class="thumb ${t.type}">${thumbnail(t)}</div><div class="card-title"><h3>${esc(t.name)}</h3><span class="tag">${esc(t.category)} · 초안</span></div><p>${esc(t.description)}</p></a>`;
 }
 const note =
-  '<div class="bottom-note"><span>IAK Design Studio · 실험하고, 만들고, 발전시키는 디자인 도구.</span><span>Starter library / 2026</span></div>';
+  '<div class="bottom-note"><span>IAK Design · 실험하고, 만들고, 발전시키는 디자인 도구.</span><span>Starter library / 2026</span></div>';
 const header = (eyebrow, title, lead) =>
   `<div class="crumb">IAK / ${eyebrow}</div><span class="eyebrow">${eyebrow}</span><h1 class="page-title">${title}</h1><p class="lead">${lead}</p>`;
 function overview() {

@@ -1,4 +1,4 @@
-# IAK Design Studio
+# IAK Design
 
 템플릿 URL + 자연어 기능 요청 → IAK 규칙을 적용한 화면 → 로컬 브라우저 확인.
 
