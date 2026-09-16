@@ -21,7 +21,7 @@ const definitions=[
  ['getting_started','Read installation instructions and remaining gaps',object({})],
 ];
 const tools=definitions.map(([name,description,inputSchema])=>({name,description,inputSchema,annotations:{readOnlyHint:true,destructiveHint:false,openWorldHint:false}}));
-const server=new Server({name:'iak-design-system',version:'0.7.0'},{capabilities:{tools:{}}});
+const server=new Server({name:'iak-design-system',version:'0.8.0'},{capabilities:{tools:{}}});
 server.setRequestHandler(ListToolsRequestSchema,async()=>({tools}));
 server.setRequestHandler(CallToolRequestSchema,async req=>{
  try {
@@ -33,7 +33,7 @@ server.setRequestHandler(CallToolRequestSchema,async req=>{
   const filter=items=>items.filter(x=>JSON.stringify(x).toLowerCase().includes(q));
   let result;
   switch(name){
-   case 'health_check':result={version:'0.7.0',components:components.length,tokens:Object.keys(catalog.tokens).length,icons:Object.keys(icons.icons).length,transport:'stdio',readOnly:true};break;
+   case 'health_check':result={version:'0.8.0',components:components.length,tokens:Object.keys(catalog.tokens).length,icons:Object.keys(icons.icons).length,transport:'stdio',readOnly:true};break;
    case 'list_components':result=filter(components.map(({name,group,status,description})=>({name,group,status,description})));break;
    case 'get_component':result=components.find(x=>x.name===args.name);if(!result)throw Error('Component not found');break;
    case 'list_tokens':result={defaults:Object.fromEntries(filter(Object.entries(catalog.tokens))),contextOverrides:catalog.contextOverrides};break;
@@ -42,7 +42,7 @@ server.setRequestHandler(CallToolRequestSchema,async req=>{
    case 'list_assets':result=filter(catalog.files);break;
    case 'list_templates':result=filter(catalog.cards.filter(x=>x.group.startsWith('UI Kit')));break;
    case 'iak_coding_guidelines':result=guide;break;
-   case 'getting_started':result={docs:'https://sugun8119-ops.github.io/iak-design-system/developer/',uiInstall:'npm install https://sugun8119-ops.github.io/iak-design-system/developer/releases/iak-design-ui-0.7.0.tgz',status:'Preview tarball, not npm registry publication',comparison};break;
+   case 'getting_started':result={docs:'https://sugun8119-ops.github.io/iak-design-system/developer/',uiInstall:'npm install https://sugun8119-ops.github.io/iak-design-system/developer/releases/iak-design-ui-0.8.0.tgz',status:'Preview tarball, not npm registry publication',comparison};break;
   }
   return {content:[{type:'text',text:typeof result==='string'?result:JSON.stringify(result,null,2)}]};
  }catch(error){return {isError:true,content:[{type:'text',text:error.message}]};}

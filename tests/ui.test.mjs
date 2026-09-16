@@ -1,9 +1,14 @@
 import {test,afterEach} from 'node:test';
 import assert from 'node:assert/strict';
 import {JSDOM} from 'jsdom';
-const dom=new JSDOM('<!doctype html><html><body></body></html>',{url:'http://localhost'});
+const dom=new JSDOM('<!doctype html><html><body></body></html>',{url:'http://localhost',pretendToBeVisual:true});
 for(const key of ['window','document','HTMLElement','HTMLInputElement','Node','MutationObserver','CustomEvent','NodeFilter','HTMLButtonElement','Element'])globalThis[key]=dom.window[key];
 Object.defineProperty(globalThis,'navigator',{value:dom.window.navigator,configurable:true});
+// jsdom does not implement browser pointer capture; swipe gestures are browser-only checks.
+const captures=new WeakMap();
+dom.window.Element.prototype.setPointerCapture=function(id){captures.set(this,id)};
+dom.window.Element.prototype.hasPointerCapture=function(id){return captures.get(this)===id};
+dom.window.Element.prototype.releasePointerCapture=function(){captures.delete(this)};
 const React=await import('react');
 globalThis.getComputedStyle=dom.window.getComputedStyle.bind(dom.window);
 const {render,screen,fireEvent,cleanup,waitFor}=await import('@testing-library/react');
@@ -81,4 +86,23 @@ test('Virtual table bounds DOM size, publishes logical indices and preserves the
 });
 test('Controlled pagination waits for parent state and pagination takes precedence over virtualization',()=>{
  let page;const rows=Array.from({length:30},(_,i)=>({id:String(i),n:i}));const props={caption:'Controlled pages',rows,columns:[{id:'n',header:'N',cell:r=>r.n}],rowKey:r=>r.id,pagination:{pageSize:10,page:1,onPageChange:p=>page=p},virtualization:{height:200}};const {rerender}=render(h(UI.Table,props));fireEvent.click(screen.getByRole('button',{name:'다음'}));assert.equal(page,2);assert.equal(document.querySelector('tbody td').textContent,'0');rerender(h(UI.Table,{...props,pagination:{...props.pagination,page}}));assert.equal(document.querySelector('tbody td').textContent,'10');assert.equal(document.querySelector('.iak-table-virtual'),null);
+});
+
+function ToastHarness({onResult=()=>{}}={}){const api=UI.useToast();return h('div',{},h('button',{onClick:()=>onResult(api.notify({id:'same',title:'Saved',description:'Changes applied',tone:'success',duration:0}))},'Notify'),h('button',{onClick:()=>{for(let n=1;n<=5;n++)api.notify({id:`q-${n}`,title:`Queue ${n}`,duration:0})}},'Queue'),h('button',{onClick:api.dismissAll},'Clear'),h('button',{onClick:()=>api.notify({title:'Automatic',duration:1000})},'Timed'),h('button',{onClick:()=>api.notify({title:'Action',duration:0,action:{label:'Undo',altText:'Use project history to undo later',onClick:()=>onResult('undone')}})},'Action example'))}
+test('Toast deduplicates IDs without moving focus and dismisses explicitly',async()=>{
+ const user=(await import('@testing-library/user-event')).default.setup();render(h(UI.ToastProvider,{},h(ToastHarness)));
+ const trigger=screen.getByRole('button',{name:'Notify'});await user.click(trigger);await user.click(trigger);assert.equal(document.querySelectorAll('[data-toast-id]').length,1);assert.equal(document.activeElement,trigger);assert.equal(document.querySelector('.iak-toast-icon').querySelector('svg').getAttribute('aria-hidden'),'true');await user.click(screen.getByRole('button',{name:'Saved 알림 닫기'}));await waitFor(()=>assert.equal(document.querySelectorAll('[data-toast-id]').length,0));
+});
+test('Toast queue shows three, promotes waiting messages and clears everything',async()=>{
+ const user=(await import('@testing-library/user-event')).default.setup();render(h(UI.ToastProvider,{},h(ToastHarness)));await user.click(screen.getByRole('button',{name:'Queue'}));assert.equal(document.querySelectorAll('[data-toast-id]').length,3);assert.equal(document.querySelector('[data-toast-id="q-4"]'),null);await user.click(screen.getByRole('button',{name:'Queue 1 알림 닫기'}));await waitFor(()=>assert.ok(document.querySelector('[data-toast-id="q-4"]')));await user.click(screen.getByRole('button',{name:'Clear'}));assert.equal(document.querySelectorAll('[data-toast-id]').length,0);
+});
+test('Toast auto closes and actions execute once',async()=>{
+ const user=(await import('@testing-library/user-event')).default.setup();let count=0;render(h(UI.ToastProvider,{},h(ToastHarness,{onResult:r=>{if(r==='undone')count++}})));await user.click(screen.getByRole('button',{name:'Timed'}));assert.ok(document.querySelector('[data-toast-id]'));await waitFor(()=>assert.equal(document.querySelector('[data-toast-id]')===null,true),{timeout:2500});await user.click(screen.getByRole('button',{name:'Action example'}));await user.click(screen.getByRole('button',{name:'Undo'}));assert.equal(count,1);await waitFor(()=>assert.equal(document.querySelector('[data-toast-id]')===null,true));
+});
+test('Toast timer pauses for keyboard focus and resumes on leaving',async()=>{
+ const user=(await import('@testing-library/user-event')).default.setup();render(h(UI.ToastProvider,{},h(ToastHarness)));await user.click(screen.getByRole('button',{name:'Timed'}));fireEvent.keyDown(document,{key:'F8',code:'F8'});assert.ok(document.activeElement.closest('.iak-toast-viewport'));
+ await new Promise(resolve=>setTimeout(resolve,1100));assert.ok(document.querySelector('[data-toast-id]'));screen.getByRole('button',{name:'Action example'}).focus();await waitFor(()=>assert.equal(document.querySelector('[data-toast-id]')===null,true),{timeout:2000});
+});
+test('Toast rejects blank messages and bounds the queue without evicting existing entries',()=>{
+ const results=[];function Capacity(){const {notify}=UI.useToast();return h('button',{onClick:()=>{results.push(notify({title:' '}));for(let i=0;i<51;i++)results.push(notify({title:`Message ${i}`,duration:0}))}},'Fill')};render(h(UI.ToastProvider,{},h(Capacity)));fireEvent.click(screen.getByRole('button',{name:'Fill'}));assert.equal(results[0],undefined);assert.ok(results[50]);assert.equal(results[51],undefined);assert.equal(document.querySelectorAll('[data-toast-id]').length,3);assert.ok(document.querySelector('.iak-toast-title').textContent.includes('Message 0'));
 });

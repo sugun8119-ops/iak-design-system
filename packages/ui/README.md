@@ -28,3 +28,8 @@ Table uses caption, column headers and aria-sort, client-side immutable sorting,
 
 ### Table navigation (0.7)
 Use `pagination={{pageSize:25}}` for complete content and optional controlled `page` (1-based) / `onPageChange`. Use `virtualization={{height:400,rowHeight:56,overscan:4}}` only for fixed-height cells. Pagination wins when both are supplied. Provide a paginated alternative for full text and assistive technology navigation. Virtualization clips long content, retains focused rows, and exposes logical row indices. All data must already exist in the `rows` array; this is not a remote-data adapter.
+
+### Toast notifications (0.8)
+Wrap the application in ToastProvider and call useToast inside it. notify returns an ID (or undefined for an empty title or full queue); dismiss(id) and dismissAll remove active/queued notifications. Same IDs are deduplicated until dismissal. The queue holds at most 50 entries and renders 3 at once. Default duration is 5000ms; 0 means manual dismissal. Positive durations have a 1000ms minimum. Pending messages only start their timer when displayed.
+
+Polite announcements are the default. Use assertive priority sparingly. Hover, focus and window blur pause dismissal. Users can press F8 to navigate notifications. Actions require altText and must also be available through a durable UI; do not require users to act before a toast expires. Screen-reader combinations still require validation.

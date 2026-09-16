@@ -731,5 +731,72 @@
     "status": "preview",
     "source": "packages/ui/src/table.tsx",
     "designSource": "library/guide.md"
+  },
+  {
+    "name": "Toast",
+    "group": "Feedback",
+    "description": "IAK 토스트 알림 관리: 성공·주의·오류·안내, 대기열과 중복 방지.",
+    "props": [
+      {
+        "name": "ToastProvider",
+        "type": "children, duration?, label?",
+        "default": "5000ms / 알림",
+        "description": "앱 루트에 한 번 설치. 동시에 3개, 대기 포함 최대 50개."
+      },
+      {
+        "name": "useToast().notify",
+        "type": "(ToastOptions) => string | undefined",
+        "default": "—",
+        "description": "title 필수. 공백 제목·용량 초과는 undefined 반환. 같은 id는 기존 알림 유지."
+      },
+      {
+        "name": "title / description / tone",
+        "type": "string / string / ToastTone",
+        "default": "필수 / — / info",
+        "description": "success, warning, error, info. 색상과 함께 의미를 전달합니다."
+      },
+      {
+        "name": "duration",
+        "type": "number",
+        "default": "Provider 값",
+        "description": "밀리초. 0은 수동 닫기, 양수는 최소 1000ms."
+      },
+      {
+        "name": "id",
+        "type": "string",
+        "default": "자동 생성",
+        "description": "같은 ID가 표시 또는 대기 중이면 재추가하지 않습니다."
+      },
+      {
+        "name": "priority",
+        "type": "'polite' | 'assertive'",
+        "default": "polite",
+        "description": "assertive는 즉시 알려야 하는 중요한 알림에만 사용."
+      },
+      {
+        "name": "action",
+        "type": "{label, altText, onClick}",
+        "default": "—",
+        "description": "선택적 보조 작업. 반드시 다른 화면에서도 작업할 수 있어야 합니다."
+      },
+      {
+        "name": "dismiss / dismissAll",
+        "type": "(id: string) => void / () => void",
+        "default": "—",
+        "description": "특정 알림 또는 대기열까지 전체 닫기"
+      }
+    ],
+    "accessibility": [
+      "Radix Toast의 안내 영역을 사용합니다. 알림이 나타나도 현재 입력 포커스를 가져가지 않습니다.",
+      "F8로 알림 영역에 이동하고 Esc 또는 닫기 버튼으로 닫습니다. 단축키 안내를 사용자에게 제공하세요.",
+      "포인터 hover·포커스·창 비활성 상태에서 자동 닫힘이 멈춥니다.",
+      "사용자 응답이 필수인 작업은 모달이나 본문에 표시하세요. 토스트만으로 필수 오류/행동을 전달하지 않습니다.",
+      "실제 스크린리더 조합 검증은 아직 미수행입니다. 대기열은 메모리 전용이며 새로고침 시 사라집니다."
+    ],
+    "example": "function SaveButton() {\n  const { notify } = useToast();\n  return <Button onClick={() => notify({ id: \"save\", title: \"저장했습니다.\", tone: \"success\" })}>알림 예제</Button>;\n}\n\nexport default function Example() {\n  return <ToastProvider><SaveButton /></ToastProvider>;\n}",
+    "import": "import { ToastProvider, useToast, Button } from '@iak-design/ui';",
+    "status": "preview",
+    "source": "packages/ui/src/toast.tsx",
+    "designSource": "library/claude/docs/01-component-guide.md"
   }
 ]

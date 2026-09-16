@@ -49,14 +49,14 @@ body += `\n## 전체 디자인 자산 조회\n\nIAK의 내부 코드명은 RAIS�
 body += `
 ## 설치 가능한 IAK React 및 MCP
 
-제품 UI에는 먼저 [React API 문서](${base || "./"}developer/components.json)의 Button, TextField, Textarea, Select, Checkbox, Switch, Badge, Card, Skeleton, Icon, Dialog, Menu, Table, Pagination을 검토한다. IAK 자체 구현이며 Montage 패키지는 아니다.
+제품 UI에는 먼저 [React API 문서](${base || "./"}developer/components.json)의 Button, TextField, Textarea, Select, Checkbox, Switch, Badge, Card, Skeleton, Icon, Dialog, Menu, Table, Pagination, Toast(ToastProvider/useToast)를 검토한다. IAK 자체 구현이며 Montage 패키지는 아니다.
 
-- UI: npm install ${base || "./"}developer/releases/iak-design-ui-0.7.0.tgz
+- UI: npm install ${base || "./"}developer/releases/iak-design-ui-0.8.0.tgz
 - CSS: @iak-design/ui/tokens.css 다음 @iak-design/ui/styles.css를 import한다.
 - [실행 예제 및 설치 안내](${base || "./"}developer/)
 - [지원 범위와 미구현 목록](${base || "./"}developer/comparison.json)
 
-React 18에서 검증하는 Preview다. 아이콘은 97개 SVG를 포함하며 원본의 9개 미해결 이름은 임의 대체하지 않는다. Dialog/Menu는 Radix 동작 기반에 IAK 스타일을 적용한다. Table은 클라이언트 정렬·페이지 탐색·고정 높이 가상 스크롤을 지원한다. 전체 내용 및 보조 기술 탐색용 페이지 방식도 제공한다. DatePicker, Toast 관리, 라이트 테마는 아직 제공하지 않는다. SKILL 설치만으로 UI나 MCP가 설치되지는 않는다. 패키지 설치 및 MCP 등록은 사용자가 요청한 프로젝트/도구 범위에서 수행한다.
+React 18에서 검증하는 Preview다. 아이콘은 97개 SVG를 포함하며 원본의 9개 미해결 이름은 임의 대체하지 않는다. Dialog/Menu는 Radix 동작 기반에 IAK 스타일을 적용한다. Table은 클라이언트 정렬·페이지 탐색·고정 높이 가상 스크롤을 지원한다. 전체 내용 및 보조 기술 탐색용 페이지 방식도 제공한다. DatePicker, 라이트 테마는 아직 제공하지 않는다. SKILL 설치만으로 UI나 MCP가 설치되지는 않는다. 패키지 설치 및 MCP 등록은 사용자가 요청한 프로젝트/도구 범위에서 수행한다.
 `;
 const skill = body;
 const dist = path.join(root, "dist");

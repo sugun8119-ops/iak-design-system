@@ -9,9 +9,9 @@ test('packaged stdio MCP exposes real data and rejects invalid lookups',async()=
  await client.connect(new StdioClientTransport({command:process.execPath,args:[fileURLToPath(new URL('../packages/mcp/src/index.mjs',import.meta.url))]}));
  assert.equal((await client.listTools()).tools.length,10);
  const call=async(name,args={})=>client.callTool({name,arguments:args});
- const health=JSON.parse((await call('health_check')).content[0].text);assert.equal(health.components,14);assert.equal(health.icons,97);assert.equal(health.tokens,162);
+ const health=JSON.parse((await call('health_check')).content[0].text);assert.equal(health.components,15);assert.equal(health.icons,97);assert.equal(health.tokens,162);
  assert.equal(JSON.parse((await call('get_component',{name:'Button'})).content[0].text).name,'Button');
- for(const name of ['Dialog','Menu','Table','Pagination'])assert.equal(JSON.parse((await call('get_component',{name})).content[0].text).name,name);
+ for(const name of ['Dialog','Menu','Table','Pagination','Toast'])assert.equal(JSON.parse((await call('get_component',{name})).content[0].text).name,name);
  const tokens=JSON.parse((await call('list_tokens')).content[0].text);assert.ok(tokens.contextOverrides.length>0);
  const icons=JSON.parse((await call('list_icons')).content[0].text);assert.equal(icons.unresolved.length,9);
  assert.equal((await call('get_icon',{name:'__proto__'})).isError,true);
