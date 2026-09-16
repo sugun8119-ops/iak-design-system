@@ -134,7 +134,7 @@ function render() {
   window.scrollTo(0, 0);
 }
 try {
-  const r = await fetch("site-data.json");
+  const r = await fetch("site-data.json", {cache:"no-cache"});
   if (!r.ok) throw Error();
   data = await r.json();
   render();
