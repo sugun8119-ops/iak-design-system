@@ -10,6 +10,7 @@ const developer=at('src/developer');
 await fs.mkdir(developer,{recursive:true});
 const releases=path.join(developer,'releases');
 await fs.mkdir(releases,{recursive:true});
+await fs.cp(at('releases'),releases,{recursive:true});
 const out=at('packages/ui/dist');
 await fs.rm(out,{recursive:true,force:true});await fs.mkdir(out,{recursive:true});
 await build({entryPoints:[at('packages/ui/src/index.tsx')],outfile:path.join(out,'index.js'),bundle:true,platform:'neutral',format:'esm',external:['react','react/jsx-runtime','react-dom','@radix-ui/*'],jsx:'automatic',banner:{js:'"use client";'},logLevel:'warning'});

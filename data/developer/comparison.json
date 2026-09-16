@@ -84,17 +84,17 @@
       "area": "배포·업데이트",
       "wanted": "패키지별 버전·프레임워크 통합·마이그레이션 도구",
       "before": "GitHub Pages와 SKILL.md 갱신",
-      "now": "버전이 있는 UI/MCP tarball·lockfile·CI·변경 기록",
+      "now": "UI/MCP 버전별 tarball, 이전 0.9.0 파일 보존, 체크섬, 소비자 CI를 통과해야 배포",
       "status": "부분 구현",
-      "remaining": "npm registry 정식 발행·자동 버전 정책·codemod 미구현"
+      "remaining": "npm registry 정식 발행·codemod 미구현"
     },
     {
       "area": "접근성·검증",
       "wanted": "표준화된 컴포넌트·상태·구성 패턴",
       "before": "원본 시각 상태 중심",
-      "now": "키보드·포커스·정렬·페이지 경계 테스트, 가상 행 개수/논리 인덱스/포커스 보존 검사",
+      "now": "키보드·포커스·정렬·페이지 경계 테스트, 가상 행 개수/논리 인덱스/포커스 보존 검사; React 18/19 × Linux/Windows/macOS 패키지 소비자 CI",
       "status": "부분 구현",
-      "remaining": "전체 브라우저·스크린리더 감사, 중첩 복합 위젯 검증"
+      "remaining": "실제 브라우저·스크린리더 감사 및 중첩 복합 위젯 검증"
     },
     {
       "area": "플랫폼·개발 유틸리티",

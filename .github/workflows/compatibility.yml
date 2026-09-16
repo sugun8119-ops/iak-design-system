@@ -1,0 +1,48 @@
+name: Package compatibility
+on:
+  workflow_call:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci
+      - run: npm run build:tooling
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ui-package
+          path: src/developer/releases/iak-design-ui-0.9.1.tgz
+  consumer:
+    needs: package
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        react: [18, 19]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - uses: actions/download-artifact@v4
+        with:
+          name: ui-package
+          path: work/release
+      - run: npm ci
+      - name: Install tarball and selected React version
+        shell: bash
+        run: npm install --no-save --package-lock=false ./work/release/iak-design-ui-*.tgz react@${{ matrix.react }} react-dom@${{ matrix.react }} @types/react@${{ matrix.react }} @types/react-dom@${{ matrix.react }}
+      - name: Verify packed assets and runtime behavior
+        run: node --test tests/consumer/package.test.mjs tests/ui.test.mjs
+        env:
+          IAK_UI_PACKAGE: '@iak-design/ui'
+      - name: Check consumer TypeScript contract
+        run: npx tsc --noEmit --strict --skipLibCheck --jsx react-jsx --module ESNext --moduleResolution bundler --target ES2022 tests/consumer/contracts.tsx

@@ -12,7 +12,7 @@ dom.window.Element.prototype.releasePointerCapture=function(){captures.delete(th
 const React=await import('react');
 globalThis.getComputedStyle=dom.window.getComputedStyle.bind(dom.window);
 const {render,screen,fireEvent,cleanup,waitFor}=await import('@testing-library/react');
-const UI=await import('../packages/ui/dist/index.js');
+const UI=await import(process.env.IAK_UI_PACKAGE || '../packages/ui/dist/index.js');
 const h=React.createElement;
 afterEach(cleanup);
 test('loading and disabled buttons suppress activation, retain name, and do not submit by default',()=>{

@@ -138,3 +138,9 @@ IAK 모달·버튼 토큰을 재사용하는 Radix Alert Dialog 기반 확인 UI
 IAK 디자인과 UI/MCP 0.9.0은 유지하고 사이트·스킬만 갱신합니다. 실제 패키지·로컬 폰트 사용, 폼의 보조 Enter 동작, 오류·결과 포커스, 데모 결과 문구, 템플릿 동작 기준과 검증 근거를 명시했습니다.
 
 새 Claude Code 세션에서 생성한 별도 결제 예제는 검수·수정 후 테스트 22개와 빌드, 1440px/375px 브라우저 검증을 통과했습니다. 이는 수정 전 자동 완성이나 라이브러리 전체 React 19 호환성을 보증하지 않습니다. 이후 Codex가 v0.11로 Project Workspace 예제를 구현·검수해 6개 테스트 및 빌드, 데스크톱/모바일 동작을 확인했습니다. 이후 새 Claude v0.11 세션에서 별도 프로젝트 앱을 생성했습니다. 최초 14개 테스트 통과 후 검수에서 발견한 보관함·포커스·Esc 문제를 수정해 최종 17개 테스트와 빌드를 통과했습니다. Chrome·앱 내 브라우저에서 수정본을 재확인했고 기존 Codex 예제는 Safari 핵심 동작도 확인했습니다. [상세 검증 기록](src/verification.md).
+
+## v0.12 · 여러 제품에서 쓰기 위한 호환성 기반
+
+UI/MCP 0.9.1, 사이트/스킬 0.12.0입니다. React 19 소비자에서 발견한 Dialog의 nullable initialFocusRef 타입 오류를 수정했습니다. 실제 tarball의 React 18/19 사용 예제를 Linux·Windows·macOS Node 22 CI에서 검사하고 Pages 배포를 차단하는 관문을 추가했습니다. 실제 브라우저/VoiceOver/NVDA 감사와는 별개입니다.
+
+이전 UI/MCP 0.9.0 공개 tarball을 체크섬과 함께 보존합니다. [릴리스·마이그레이션 정책](src/developer/release-policy.md)을 참고하세요. 디자인 자산과 토큰은 유지합니다. DatePicker, 중첩 메뉴, 라이트 테마, Next.js 전용 통합은 후속 범위입니다.

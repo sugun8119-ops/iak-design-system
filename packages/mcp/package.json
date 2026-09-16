@@ -1,6 +1,6 @@
 {
   "name": "@iak-design/mcp",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "type": "module",
   "description": "Read-only local MCP for IAK design assets and components",
   "bin": {

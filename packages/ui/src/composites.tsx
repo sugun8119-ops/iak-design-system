@@ -13,7 +13,7 @@ export interface DialogProps {
   open?: boolean;
   defaultOpen?: boolean;
   onOpenChange?: (open: boolean) => void;
-  initialFocusRef?: React.RefObject<HTMLElement>;
+  initialFocusRef?: React.RefObject<HTMLElement | null>;
   closeOnOutside?: boolean;
   closeLabel?: string;
   size?: 'sm'|'md'|'lg';

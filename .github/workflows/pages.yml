@@ -11,7 +11,10 @@ concurrency:
   group: pages
   cancel-in-progress: true
 jobs:
+  compatibility:
+    uses: ./.github/workflows/compatibility.yml
   build:
+    needs: compatibility
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6

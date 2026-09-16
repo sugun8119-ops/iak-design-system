@@ -10,7 +10,7 @@ const root = fileURLToPath(new URL("../", import.meta.url));
 test("Pages build uses repository subpath, generates AI template routes and supports piped installer", async () => {
   const temp = await fs.mkdtemp(path.join(os.tmpdir(), "iak-build-"));
   try {
-    for (const dir of ["src", "data", "scripts", "packages"])
+    for (const dir of ["src", "data", "scripts", "packages", "releases"])
       await fs.cp(path.join(root, dir), path.join(temp, dir), {
         recursive: true,
       });
