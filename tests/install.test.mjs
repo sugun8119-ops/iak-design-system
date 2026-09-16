@@ -107,3 +107,17 @@ test('tool-specific prompts preserve URLs and use the correct invocation',async(
  assert.ok(makePrompt('claude',url,'결제 화면').includes(url));
  assert.throws(()=>makePrompt('claude','javascript:alert(1)','test'));assert.throws(()=>makePrompt('codex',url,' '));
 });
+
+test('operator skills install into independent named destinations',async()=>{
+ const temp=await fs.mkdtemp(path.join(os.tmpdir(),'iak-operators-'));
+ try{
+  for(const name of ['iak-add-template','iak-refine-template']){
+   const content=`---\nname: ${name}\ndescription: Workflow\n---\nUse the repository.`;
+   const registry=path.join(temp,name+'.json');await fs.writeFile(path.join(temp,'SKILL.md'),content);
+   await fs.writeFile(registry,JSON.stringify({name,version:'0.13.0',file:'SKILL.md',sha256:crypto.createHash('sha256').update(content).digest('hex')}));
+   const target=path.join(temp,name);
+   const result=spawnSync(process.execPath,[path.join(root,'scripts/install.mjs'),registry,'--target',target],{encoding:'utf8'});assert.equal(result.status,0,result.stderr);
+   assert.equal(await fs.readFile(path.join(target,'SKILL.md'),'utf8'),content);
+  }
+ }finally{await fs.rm(temp,{recursive:true,force:true})}
+});

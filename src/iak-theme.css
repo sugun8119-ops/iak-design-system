@@ -19,3 +19,6 @@ body,input,textarea,select,button{font-family:var(--font-ui)}
 .source-main{max-width:1600px;margin:auto;padding:24px}.source-view .preview-bar{display:flex;flex-wrap:wrap;gap:16px}.source-frame-wrap{border:1px solid var(--line);border-radius:16px;overflow:hidden;margin:24px 0;background:var(--bg-elevated)}#sourceFrame{display:block;width:100%;height:720px;border:0}.source-main .sample-row{margin-top:16px}.source-callout{margin-top:24px}pre{overflow:auto;max-width:100%}main{min-width:0}
 @media(max-width:1000px){.asset-cards{grid-template-columns:repeat(2,minmax(0,1fr))}.icon-names{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:640px){.library-stats{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.library-stats>div{padding:16px}.asset-cards,.icon-names{grid-template-columns:1fr}.brand-proof{flex-direction:column;align-items:stretch}.brand-proof img{width:100%}.source-main{padding:16px}.token-table th,.token-table td{padding:12px 8px}.token-table{font-size:12px}.asset-files a{flex-direction:column;gap:4px}}
+
+/* Honor conditional controls despite button display styles. */
+[hidden] { display: none !important; }

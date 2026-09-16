@@ -50,7 +50,7 @@ npm run install:skill
 
 공개 사이트에서는 시작하기에 표시되는 원격 명령을 실행합니다. 설치기는 레지스트리와 SKILL.md를 새로 내려받고 SHA-256 무결성을 확인한 후 동일 파일을 원자적으로 교체합니다. 이전 파일은 SKILL.md.bak으로 보존합니다. 조회·검증 실패 시 기존 파일을 유지합니다. 체크섬은 파일 일치 검사이며 게시자 서명을 대신하지 않습니다.
 
-기본 설치 위치는 `$CODEX_HOME/skills/iak-design-system/SKILL.md` 또는 `~/.codex/skills/iak-design-system/SKILL.md`입니다. Node.js 20 이상이 필요하고 원격 한 줄 명령에는 curl도 필요합니다. 새 작업에서 `$iak-design-system`으로 사용합니다. 스킬이 자동으로 AI를 호출하지는 않습니다.
+새 Codex 설치 위치는 `~/.agents/skills/iak-design-system/SKILL.md`이며, 기존 Codex 설치가 있으면 해당 경로를 유지합니다. Claude는 `~/.claude/skills/iak-design-system/SKILL.md`에 설치합니다. Node.js 20 이상이 필요하고 원격 한 줄 명령에는 curl도 필요합니다. 새 작업에서 `$iak-design-system`으로 사용합니다. 스킬이 자동으로 AI를 호출하지는 않습니다.
 
 ## 템플릿
 
@@ -144,3 +144,12 @@ IAK 디자인과 UI/MCP 0.9.0은 유지하고 사이트·스킬만 갱신합니�
 UI/MCP 0.9.1, 사이트/스킬 0.12.0입니다. React 19 소비자에서 발견한 Dialog의 nullable initialFocusRef 타입 오류를 수정했습니다. 실제 tarball의 React 18/19 사용 예제를 Linux·Windows·macOS Node 22 CI에서 검사하고 Pages 배포를 차단하는 관문을 추가했습니다. 실제 브라우저/VoiceOver/NVDA 감사와는 별개입니다.
 
 이전 UI/MCP 0.9.0 공개 tarball을 체크섬과 함께 보존합니다. [릴리스·마이그레이션 정책](src/developer/release-policy.md)을 참고하세요. 디자인 자산과 토큰은 유지합니다. DatePicker, 중첩 메뉴, 라이트 테마, Next.js 전용 통합은 후속 범위입니다.
+
+## 내가 만든 디자인으로 템플릿 운영
+
+사이트의 **템플릿 운영** 메뉴에서 Codex 또는 Claude용 운영 스킬 설치 명령과 요청문을 복사합니다. 같은 설치 명령을 다시 실행하면 최신 버전으로 갱신합니다.
+
+- `iak-add-template`: 디자인 링크·파일 → 실제 미리보기 구현 → 등록 또는 기존 URL 유지 업데이트 → 로컬 검수.
+- `iak-refine-template`: 재현 문제 확인 → 해당 범위 수정 → 검증한 개선 규칙을 템플릿 JSON에 반영.
+
+등록 CLI와 입력 형식은 [템플릿 운영 가이드](src/developer/template-workflow.md)를 참고하세요. 커스텀 템플릿은 제작자가 검토한 정적 HTML·CSS·JavaScript를 등록합니다. 템플릿 수와 디자인 자산은 제작자가 직접 늘릴 수 있으며, 이 작업 흐름이 전체 컴포넌트 라이브러리를 자동 생성하지는 않습니다.

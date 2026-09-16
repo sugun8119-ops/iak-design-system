@@ -1,4 +1,5 @@
 import "./build-tooling.mjs";
+import {validateTemplate,validateFeedback} from "./template-workflow.mjs";
 import fs from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -112,11 +113,20 @@ await fs.writeFile(
   ),
 );
 await fs.writeFile(path.join(dist, ".nojekyll"), "");
+const feedback = JSON.parse(await read('data/template-feedback.json'));
+for(const f of feedback)validateFeedback(f,templates);
+await fs.writeFile(path.join(dist,'template-feedback.json'),JSON.stringify(feedback,null,2));
+for(const name of ['iak-add-template','iak-refine-template']){
+ const text=await read(`skills/${name}/SKILL.md`);const folder=path.join(dist,'skills',name);await fs.mkdir(folder,{recursive:true});
+ await fs.writeFile(path.join(folder,'SKILL.md'),text);
+ await fs.writeFile(path.join(folder,'registry.json'),JSON.stringify({name,version:site.version,file:'SKILL.md',sha256:crypto.createHash('sha256').update(text).digest('hex')},null,2));
+}
 const shell = await read("src/template-shell.html");
 for (const t of templates) {
-  if (!/^[a-z0-9-]+$/.test(t.id)) throw Error("Invalid template id");
+  validateTemplate(t);
   const folder = path.join(dist, "templates", t.id);
   await fs.mkdir(folder, { recursive: true });
+  if(t.type==='custom')await fs.cp(path.join(root,'src/template-previews',t.id),path.join(folder,'preview'),{recursive:true});
   await fs.writeFile(
     path.join(folder, "index.html"),
     shell.replaceAll("__TITLE__", t.name).replaceAll("__ID__", t.id),
@@ -127,6 +137,7 @@ for (const t of templates) {
       {
         ...t,
         designSystem: "../../SKILL.md",
+        lessons: feedback.filter(f=>f.templateId===t.id&&f.status==="verified").map(({id,rule,evidence,verification,regressionTests})=>({id,rule,evidence,verification,regressionTests})),
         status: "Draft starter, not an approved brand specification",
       },
       null,

@@ -1,0 +1,13 @@
+[
+  {
+    "id": "studio-asymmetric-grid",
+    "templateId": "studio-landing",
+    "expected": "데스크톱 비대칭 두 열",
+    "actual": "새 Claude 생성본이 동일한 세 열로 변경함",
+    "rule": "사용자가 별도 배치를 요구하지 않으면 원본의 비대칭 두 열을 유지하고 모바일에서는 단일 열로 재배치한다. 프로젝트 관리 템플릿의 세 열 구성을 가져오지 않는다.",
+    "evidence": "https://sugun8119-ops.github.io/iak-design-system/verification.md — Studio Landing 새 Claude 재현",
+    "status": "verified",
+    "verification": "2026-09-16 수정본 브라우저 확인: 1440px에서 약 685/527px 두 열, 375px에서 328px 단일 열. 생성본 검수 기록에 원본과 수정본을 구분함.",
+    "regressionTests": []
+  }
+]

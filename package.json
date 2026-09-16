@@ -1,6 +1,6 @@
 {
   "name": "iak-design-system",
-  "version": "0.12.0",
+  "version": "0.13.0",
   "private": true,
   "type": "module",
   "description": "IAK design system, template library and portable skill installer",

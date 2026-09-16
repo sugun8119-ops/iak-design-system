@@ -33,7 +33,10 @@ try {
   $("#layoutRule").textContent =
     `데스크톱: ${t.layout.desktop} / 모바일: ${t.layout.mobile}`;
   $("#request").value = t.features;
-  $("#templateView").innerHTML = { checkout, landing, workspace }[t.type]();
+  if(t.type==='custom') {
+    const frame=document.createElement('iframe'); frame.src='preview/index.html'; frame.title=t.name+' 미리보기'; frame.setAttribute('sandbox','allow-scripts allow-same-origin'); frame.style.cssText='width:100%;height:850px;border:0;background:var(--bg-canvas,#0d0d0d)';
+    $('#templateView').replaceChildren(frame);
+  } else $("#templateView").innerHTML = { checkout, landing, workspace }[t.type]();
   $("#copyUrl").onclick = () => copy(location.href.split("#")[0]);
   $("#useTemplate").onclick = () => {
     $("#request").scrollIntoView({ behavior: "smooth", block: "center" });

@@ -51,7 +51,7 @@ function templates() {
       "처음부터 시작하지 않아도 돼요.",
       "Claude Design 원본 UI 킷과 직접 만든 초안 예제를 구분해서 선택하세요.",
     ) +
-    `<section class="panel"><h2>Claude Design 원본 UI 킷</h2><p>실제 IAK 시스템의 레이아웃을 확인하고 URL과 요청문을 복사하세요.</p><div class="sample-row">${[["ai-crm/index.html","AI CRM"],["rais-audit/index v2.html","Audit Dashboard"],["rais-dashboard/index.html","Mailing Dashboard"]].map(([p,n])=>`<a class="button" href="library/view.html?file=${encodeURIComponent("ui_kits/"+p)}">${n} ↗</a>`).join("")}</div></section><h2>초안 예제</h2><label for="search">템플릿 검색</label><input type="search" id="search" class="search" placeholder="이름 또는 기능으로 검색"><div class="filters" role="group" aria-label="템플릿 분류">${["전체", "결제", "랜딩", "대시보드"].map((x, i) => `<button class="filter" aria-pressed="${!i}" data-category="${x}">${x}</button>`).join("")}</div><div id="results" class="cards"></div><p id="count" aria-live="polite" class="lead"></p>${note}`;
+    `<section class="panel"><h2>Claude Design 원본 UI 킷</h2><p>실제 IAK 시스템의 레이아웃을 확인하고 URL과 요청문을 복사하세요.</p><div class="sample-row">${[["ai-crm/index.html","AI CRM"],["rais-audit/index v2.html","Audit Dashboard"],["rais-dashboard/index.html","Mailing Dashboard"]].map(([p,n])=>`<a class="button" href="library/view.html?file=${encodeURIComponent("ui_kits/"+p)}">${n} ↗</a>`).join("")}</div></section><h2>초안 예제</h2><label for="search">템플릿 검색</label><input type="search" id="search" class="search" placeholder="이름 또는 기능으로 검색"><div class="filters" role="group" aria-label="템플릿 분류">${["전체", ...new Set(data.templates.map(t=>t.category))].map((x, i) => `<button class="filter" aria-pressed="${!i}" data-category="${esc(x)}">${esc(x)}</button>`).join("")}</div><div id="results" class="cards"></div><p id="count" aria-live="polite" class="lead"></p>${note}`;
   let cat = "전체";
   const render = () => {
     const q = document.querySelector("#search").value.trim().toLowerCase();
@@ -121,13 +121,25 @@ function repository() {
     ) +
     `<section class="panel"><h2>${data.repository ? esc(data.repository) : "iak-design-system · 전용 저장소 준비됨"}</h2><p>${data.repository ? "현재 배포본의 소스 저장소입니다." : "현재는 로컬 Git 저장소입니다. GitHub 계정 연결과 원격 저장소 생성 후 공개 주소를 사용할 수 있습니다."}</p>${data.repository ? `<a class="button" href="https://github.com/${esc(data.repository)}" target="_blank" rel="noopener">GitHub에서 보기 ↗</a>` : ""}</section><section class="panel"><h2>배포 흐름</h2><ol><li>GitHub에 별도 저장소를 만들고 코드를 올립니다.</li><li>Settings → Pages → Source를 GitHub Actions로 선택합니다.</li><li>Deploy Pages 워크플로가 검증 후 사이트와 스킬을 함께 배포합니다.</li><li>사용자는 시작하기에서 같은 명령을 다시 실행합니다.</li></ol></section><div class="callout">공개되는 것은 디자인 라이브러리 사이트입니다. 이 스킬로 만든 작업물은 요청이 없는 한 로컬에서만 실행합니다.</div>${note}`;
 }
+function operate() {
+ main.innerHTML=header('TEMPLATE WORKFLOW','내 디자인을 템플릿으로.','원본을 추가하고, 피드백을 다음 생성에 반영하세요.')+`
+ <section class="panel"><h2>01 · 운영 스킬 설치·업데이트</h2><label for="operatorTool">사용하는 AI 도구</label><select id="operatorTool"><option value="codex">Codex</option><option value="claude">Claude Code</option></select><p>터미널에서 한 번 설치한 뒤 새 작업/세션에서 사용하세요. 같은 명령으로 갱신합니다.</p><pre id="operatorInstall"></pre><button class="button primary" id="copyOperatorInstall">운영 스킬 설치 명령 복사</button></section>
+ <section class="panel"><h2>02 · 원하는 작업 요청</h2><form id="operatorForm"><label for="operatorMode">작업 종류</label><select id="operatorMode"><option value="add">새 템플릿 추가</option><option value="update">기존 템플릿 업데이트</option><option value="refine">피드백 반영·반복 방지</option></select><label for="operatorSource">원본 또는 기존 템플릿</label><input id="operatorSource" placeholder="Figma·Claude Design·템플릿 URL 또는 첨부 파일명"><label for="operatorRequest">원하는 디자인·기능 또는 수정 내용</label><textarea id="operatorRequest" required placeholder="이 디자인으로 예약 템플릿 추가해줘."></textarea><button class="button primary">AI에 전달할 요청문 만들기</button></form><pre id="operatorPrompt" hidden></pre><button class="button" id="copyOperatorPrompt" hidden>운영 요청문 복사</button><p>원본이 없으면 AI가 필요한 자료를 요청합니다. IAK 저장소가 연결된 프로젝트에서 실행하세요.</p></section>
+ <section class="panel"><h2>03 · 확인하고 공유</h2><p>원본 확인 → 로컬 미리보기 → 등록·검수 → 배포 흐름입니다. 이 사이트가 AI를 자동 실행하거나 템플릿을 바로 공개하지는 않습니다.</p><a href="developer/template-workflow.md">운영 절차·등록 형식 보기 ↗</a></section>`;
+ const tool=document.querySelector('#operatorTool');
+ const install=()=>{document.querySelector('#operatorInstall').textContent=['iak-add-template','iak-refine-template'].map(name=>data.siteUrl?`curl -fsSL '${data.siteUrl}install.mjs' | node --input-type=module - '${data.siteUrl}skills/${name}/registry.json' --tool ${tool.value}`:`node scripts/install.mjs dist/skills/${name}/registry.json --tool ${tool.value}`).join('\n');document.querySelector('#operatorPrompt').hidden=true;document.querySelector('#copyOperatorPrompt').hidden=true;};
+ tool.onchange=install;install();document.querySelector('#copyOperatorInstall').onclick=()=>copy(document.querySelector('#operatorInstall').textContent);
+ document.querySelector('#operatorForm').onsubmit=e=>{e.preventDefault();const mode=document.querySelector('#operatorMode').value;const skill=mode==='refine'?'iak-refine-template':'iak-add-template';const source=document.querySelector('#operatorSource').value.trim();const request=document.querySelector('#operatorRequest').value.trim();if(!request)return;const prompt=`${tool.value==='claude'?'/':'$'}${skill}\n\n작업: ${mode==='add'?'새 템플릿 추가':mode==='update'?'기존 템플릿 업데이트':'피드백 반영과 반복 방지'}\n원본/대상: ${source||'필요한 원본 자료를 먼저 요청해줘.'}\n\n${request}\n\n내 IAK 디자인을 유지하고 저장소에서 구현해줘. 로컬 미리보기와 검증 결과를 보여줘. 공개 배포는 하지 마.`;const out=document.querySelector('#operatorPrompt');out.textContent=prompt;out.hidden=false;document.querySelector('#copyOperatorPrompt').hidden=false;};
+ document.querySelector('#operatorForm').oninput=()=>{document.querySelector('#operatorPrompt').hidden=true;document.querySelector('#copyOperatorPrompt').hidden=true;};document.querySelector('#copyOperatorPrompt').onclick=()=>copy(document.querySelector('#operatorPrompt').textContent);
+}
+
 function render() {
   const key = location.hash.slice(1) || "overview";
   document
     .querySelectorAll("aside a")
     .forEach((a) => a.classList.toggle("active", a.hash === "#" + key));
   (
-    ({ overview, templates, start, foundations, components, assets, repository })[
+    ({ overview, templates, start, foundations, components, assets, repository, operate })[
       key
     ] || overview
   )();

@@ -5,15 +5,15 @@ import crypto from "node:crypto";
 // Standalone: usable as a local file or curl | node --input-type=module - <registry-url>.
 import {existsSync} from 'node:fs';
 import {pathToFileURL} from 'node:url';
-export function resolveTarget(args,{home=os.homedir(),codexHome=process.env.CODEX_HOME,exists=existsSync,cwd=process.cwd()}={}) {
+export function resolveTarget(args,{home=os.homedir(),codexHome=process.env.CODEX_HOME,exists=existsSync,cwd=process.cwd(),skill='iak-design-system'}={}) {
  let tool='codex',target; const seen=new Set();
  for(let i=0;i<args.length;i+=2){const flag=args[i],value=args[i+1];if(!['--tool','--target'].includes(flag)||!value||value.startsWith('--')||seen.has(flag))throw Error('Usage: install.mjs <registry> [--tool codex|claude] [--target directory]');seen.add(flag);if(flag==='--tool')tool=value;else target=value;}
  if(!['codex','claude'].includes(tool))throw Error('Unknown tool: '+tool);
  if(target)return path.resolve(cwd,target);
- if(tool==='claude')return path.join(home,'.claude','skills','iak-design-system');
- const legacy=path.join(codexHome||path.join(home,'.codex'),'skills','iak-design-system');
+ if(tool==='claude')return path.join(home,'.claude','skills',skill);
+ const legacy=path.join(codexHome||path.join(home,'.codex'),'skills',skill);
  // Keep existing users on the same file; fresh installs follow current Codex docs.
- return exists(path.join(legacy,'SKILL.md'))?legacy:path.join(home,'.agents','skills','iak-design-system');
+ return exists(path.join(legacy,'SKILL.md'))?legacy:path.join(home,'.agents','skills',skill);
 }
 async function install(){
 const args=process.argv.slice(2),source=args.shift();
@@ -34,16 +34,17 @@ async function read(location) {
   return fs.readFile(location, "utf8");
 }
 try {
-  const target=resolveTarget(args);
+
   if (!source) throw Error("registry.json 경로나 HTTPS URL이 필요합니다.");
   const registry = JSON.parse(await read(source));
   if (
-    registry.name !== "iak-design-system" ||
+    !["iak-design-system","iak-add-template","iak-refine-template"].includes(registry.name) ||
     !/^\w[\w.-]*\.md$/.test(registry.file) ||
     !/^\w[\w.-]*$/.test(registry.version) ||
     !/^[a-f0-9]{64}$/.test(registry.sha256)
   )
     throw Error("Invalid registry");
+  const target=resolveTarget(args,{skill:registry.name});
   const location = source.startsWith("https://")
     ? new URL(registry.file, source).href
     : path.resolve(path.dirname(source), registry.file);
@@ -54,7 +55,7 @@ try {
   )
     throw Error("Skill checksum mismatch");
   if (
-    !/^---\nname: iak-design-system\n/.test(content) ||
+    !content.startsWith(`---\nname: ${registry.name}\n`) ||
     !content.includes("\ndescription: ")
   )
     throw Error("Invalid SKILL.md");
@@ -68,7 +69,7 @@ try {
   } catch (e) {
     if (e.code !== "ENOENT") throw e;
   }
-  if (previous && !/^name: iak-design-system$/m.test(previous))
+  if (previous && !previous.split("\n").includes(`name: ${registry.name}`))
     throw Error("Different skill already exists");
   if (previous === content) {
     console.log("이미 최신입니다: " + dest);
