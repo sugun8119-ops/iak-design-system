@@ -1,0 +1,16 @@
+{
+  "name": "iak-design-system",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "description": "IAK design system, template library and portable skill installer",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "dev": "node scripts/build.mjs && node scripts/serve.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "install:skill": "node scripts/build.mjs && node scripts/install.mjs dist/registry.json"
+  }
+}

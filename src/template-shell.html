@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>__TITLE__ · IAK Templates</title>
+    <link rel="icon" href="../../favicon.svg" />
+    <link rel="stylesheet" href="../../styles.css" />
+    <link rel="stylesheet" href="../../template.css" />
+  </head>
+  <body data-template="__ID__">
+    <header class="preview-bar">
+      <a href="../../#templates">← 템플릿 목록</a
+      ><strong>__TITLE__ <span class="tag">초안 예제</span></strong>
+      <div class="actions">
+        <button class="button" id="copyUrl">URL 복사</button
+        ><button class="button primary" id="useTemplate">이 템플릿 사용</button>
+      </div>
+    </header>
+    <main class="preview-main">
+      <div id="templateView"></div>
+      <section class="panel">
+        <h2>이 레이아웃으로 만들기</h2>
+        <p id="description"></p>
+        <p id="layoutRule"></p>
+        <p><a href="template.json" target="_blank">AI용 레이아웃 설명 ↗</a></p>
+        <label for="request">필요한 기능</label
+        ><textarea id="request"></textarea>
+        <div class="actions">
+          <button class="button primary" id="makePrompt">요청문 만들기</button>
+        </div>
+        <pre id="generated" hidden></pre>
+        <button class="button" id="copyGenerated" hidden>요청문 복사</button>
+        <p class="hint">
+          샘플 콘텐츠와 임시 스타일입니다. 공식 IAK 디자인 토큰이 아닙니다.
+        </p>
+      </section>
+    </main>
+    <div id="toast" role="status"></div>
+    <script type="module" src="../../template.js"></script>
+  </body>
+</html>
