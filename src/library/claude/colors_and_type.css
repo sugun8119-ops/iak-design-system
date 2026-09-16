@@ -1,0 +1,532 @@
+/* ============================================================================
+   RAIS Design System — colors & type tokens
+   Dark-first dashboard system. Orange (#FFA726) is the single accent.
+   ============================================================================ */
+
+/* ---------- Webfonts ---------- */
+/* Pretendard — the ONE typeface for Korean, English and numerals.
+   Updated 2026-05-10: Roboto / Barlow / Public Sans were retired in
+   favour of Pretendard at every weight. Hierarchy / sizes / line-heights
+   are unchanged — only the family resolved.
+*/
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+  src: url("./fonts/Pretendard-Thin.otf") format("opentype");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+  src: url("./fonts/Pretendard-ExtraLight.otf") format("opentype");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  src: url("./fonts/Pretendard-Light.otf") format("opentype");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("./fonts/Pretendard-Regular.otf") format("opentype");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url("./fonts/Pretendard-Medium.otf") format("opentype");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src: url("./fonts/Pretendard-SemiBold.otf") format("opentype");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url("./fonts/Pretendard-Bold.otf") format("opentype");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+  src: url("./fonts/Pretendard-ExtraBold.otf") format("opentype");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+  src: url("./fonts/Pretendard-Black.otf") format("opentype");
+}
+
+/* Webfont strategy: Pretendard is the sole UI face.
+   Roboto, Barlow and Public Sans are no longer loaded — do NOT add
+   `<link href="...fonts.googleapis.com...">` to new pages. The system
+   inherits everything from this stylesheet. */
+
+:root {
+  /* ------------------------------------------------------------------
+     PALETTE — raw values (lifted from the Figma file)
+     ------------------------------------------------------------------ */
+
+  /* Primary — Orange. The single accent of the system. */
+  --rais-primary-lighter: #ffd08a;          /* rgb(255,208,138) — chip rail / hover wash */
+  --rais-primary-light:   #ffb21a;          /* rgb(255,178,26)  */
+  --rais-primary:         #ffa726;          /* rgb(255,167,38)  ← the accent */
+  --rais-primary-dark:    #cd7f0d;          /* rgb(205,127,13)  */
+  --rais-primary-darker:  #9f5f00;          /* rgb(159,95,0)    */
+  --rais-primary-deepest: #9e6004;          /* rgb(158,96,4)    chip text-on-soft */
+  --rais-primary-glow:    rgba(255,171,0,0.24);
+
+  /* Secondary — only ever appears as paired swatches in foundation docs.
+     Do not introduce in product surfaces unless explicitly asked. */
+  --rais-secondary-blue:   #005aff;         /* rgb(0,90,255)    */
+  --rais-secondary-purple: #8e33ff;         /* rgb(142,51,255)  */
+  --rais-secondary-glow:   rgba(142,51,255,0.24);
+
+  /* Info — cyan/blue accents */
+  --rais-info-light:  #00cef3;              /* rgb(0,206,243)   */
+  --rais-info:        #4c9aec;              /* rgb(76,154,236)  */
+  --rais-info-dark:   #3e7beb;              /* rgb(62,123,235)  */
+  --rais-info-darker: #007fb6;              /* rgb(0,127,182)   chip text */
+  --rais-info-glow:   rgba(0,184,217,0.24);
+
+  /* Success — mint/green */
+  --rais-success-lighter: #6cedbd;          /* rgb(108,237,189) */
+  --rais-success-light:   #27da68;          /* rgb(39,218,104)  status dot */
+  --rais-success:         #33c488;          /* rgb(51,196,136)  */
+  --rais-success-darker:  #034e42;          /* rgb(3,78,66)     chip text */
+  --rais-success-glow:    rgba(0,167,111,0.24);
+
+  /* Warning */
+  --rais-warning-light: #ffb21a;            /* rgb(255,178,26)  */
+  --rais-warning:       #faae3e;            /* rgb(250,174,62)  */
+  --rais-warning-glow:  rgba(255,171,0,0.24);
+
+  /* Error / Destructive */
+  --rais-error-light:  #ff6b4a;             /* rgb(255,107,74)  */
+  --rais-error:        #ff665b;             /* rgb(255,102,91)  */
+  --rais-error-glow:   rgba(255,86,48,0.24);
+
+  /* Grey scale — the workhorse */
+  --rais-grey-100: #f9fafb;
+  --rais-grey-200: #f4f6f8;
+  --rais-grey-250: #f5f7fb;                 /* rgb(245,247,251) — empty card */
+  --rais-grey-300: #e5ecf4;                 /* rgb(229,236,244) — light text */
+  --rais-grey-350: #d1dae3;                 /* rgb(209,218,227) — primary text on dark */
+  --rais-grey-400: #919eab;                 /* rgb(145,158,171) — secondary text */
+  --rais-grey-500: #637381;                 /* rgb(99,115,129)  — muted/disabled */
+  --rais-grey-600: #4d535b;                 /* rgb(77,83,91)    */
+  --rais-grey-700: #22282f;                 /* rgb(34,40,47)    */
+  --rais-grey-800: #1c252e;                 /* rgb(28,37,46)    */
+  --rais-grey-820: #1c222b;                 /* rgb(28,34,43)    field bg */
+  --rais-grey-850: #1d232c;                 /* rgb(29,35,44)    */
+  --rais-grey-900: #161616;                 /* rgb(22,22,22)    */
+  --rais-grey-950: #121212;                 /* rgb(18,18,18)    */
+  --rais-grey-1000: #0d0d0d;                /* rgb(13,13,13)    canvas */
+  --rais-grey-1100: #030a12;                /* rgb(3,10,18)     deepest */
+
+  /* Alpha greys — used for borders / dividers / soft fills */
+  --rais-alpha-08: rgba(145,158,171,0.08);
+  --rais-alpha-12: rgba(145,158,171,0.12);
+  --rais-alpha-16: rgba(145,158,171,0.16);
+  --rais-alpha-20: rgba(145,158,171,0.20);
+  --rais-alpha-24: rgba(145,158,171,0.24);
+
+  /* ------------------------------------------------------------------
+     SEMANTIC TOKENS — what to actually reach for in product code
+     ------------------------------------------------------------------ */
+
+  /* Surfaces — layered dark canvas */
+  --bg-canvas:      var(--rais-grey-1000);  /* page / sidebar */
+  --bg-elevated:    var(--rais-grey-950);   /* main content area */
+  --bg-card:        var(--rais-grey-1000);  /* card on canvas */
+  --bg-card-alt:    var(--rais-grey-900);   /* nested card */
+  --bg-field:       var(--rais-grey-820);   /* input / chip rail */
+  --bg-overlay:     rgba(0,0,0,0.25);
+
+  /* Foreground — text */
+  --fg-primary:     var(--rais-grey-350);   /* body text on dark */
+  --fg-secondary:   var(--rais-grey-400);   /* secondary text */
+  --fg-muted:       var(--rais-grey-500);   /* placeholder, disabled */
+  --fg-strong:      #ffffff;
+  --fg-on-accent:   var(--rais-grey-1000);  /* black on orange button */
+  --fg-on-light:    var(--rais-grey-800);   /* dark text on light surfaces */
+
+  /* Borders & dividers */
+  --border-subtle:  var(--rais-alpha-08);
+  --border-default: var(--rais-alpha-12);
+  --border-strong:  var(--rais-alpha-20);
+  --border-dashed:  2px dashed var(--rais-alpha-16);
+
+  /* Accent semantic */
+  --accent:         var(--rais-primary);
+  --accent-fg:      var(--rais-grey-1000);
+  --accent-glow:    var(--rais-primary-glow);
+
+  /* Status dot colors (top-bar bell, online, etc.) */
+  --status-online:  var(--rais-success-light);
+  --status-warn:    var(--rais-warning);
+  --status-error:   var(--rais-error);
+
+  /* ------------------------------------------------------------------
+     RADII
+     ------------------------------------------------------------------ */
+  --radius-xs:   4px;   /* small chip rail / shape */
+  --radius-sm:   6px;
+  --radius-md:   8px;   /* chips, buttons, inputs */
+  --radius-lg:   12px;
+  --radius-xl:   16px;  /* foundation card, mid card */
+  --radius-2xl:  24px;  /* primary content card */
+  --radius-pill: 500px; /* fully round / status dots / circular icons */
+
+  /* ------------------------------------------------------------------
+     SHADOW / GLOW SYSTEM
+     "Glow" = colored umbra under accent surfaces. Same shape, different hue.
+     ------------------------------------------------------------------ */
+  --shadow-card:
+    0px 12px 24px -4px rgba(145,158,171,0.12),
+    0px 0px 2px 0px rgba(145,158,171,0.20);
+  --shadow-soft:
+    0px 1px 2px 0px rgba(145,158,171,0.16);
+  --shadow-toast:
+    0px 16px 32px -4px rgba(0,0,0,0.40);
+
+  --glow-primary: 0px 8px 16px 0px var(--rais-primary-glow);
+  --glow-info:    0px 8px 16px 0px var(--rais-info-glow);
+  --glow-success: 0px 8px 16px 0px var(--rais-success-glow);
+  --glow-warning: 0px 8px 16px 0px var(--rais-warning-glow);
+  --glow-error:   0px 8px 16px 0px var(--rais-error-glow);
+  --glow-secondary: 0px 8px 16px 0px var(--rais-secondary-glow);
+
+  /* ------------------------------------------------------------------
+     FOCUS — UPDATED 2026-05-10 (per 05_Update-Rules)
+     The previous focus pattern (4 px outer accent halo) was too loud
+     in a dark, glow-heavy system. Replaced with **border + subtle inner
+     ring**: a 1 px accent border plus an inset 1 px ring. No outer halo.
+
+     `--focus-ring`     → use as box-shadow on focused inputs / buttons.
+     `--focus-border`   → token for the accent border colour.
+
+     Outer-glow tokens (--glow-*) are still valid for resting decoration
+     under coloured surfaces (toast icon backings, metric-icon plates),
+     but MUST NOT be used to indicate focus.
+     ------------------------------------------------------------------ */
+  --focus-border: var(--accent);
+  --focus-ring:   inset 0 0 0 1px var(--accent);
+
+  /* ------------------------------------------------------------------
+     SPACING — 4px base, no half steps
+     ------------------------------------------------------------------ */
+  --space-0:   0px;
+  --space-1:   4px;
+  --space-2:   8px;
+  --space-3:   12px;
+  --space-4:   16px;
+  --space-5:   20px;
+  --space-6:   24px;
+  --space-8:   32px;
+  --space-10:  40px;
+  --space-12:  48px;
+  --space-16:  64px;
+  --space-20:  80px;
+
+  /* ------------------------------------------------------------------
+     TYPE FAMILIES — REWRITTEN 2026-05-10
+     Pretendard is the ONLY UI face for Korean, English and numerals.
+     Roboto / Barlow / Public Sans were retired. The display / section /
+     ui aliases are kept so existing class names keep working — they all
+     resolve to Pretendard now.
+     ------------------------------------------------------------------ */
+  --font-pretendard: "Pretendard", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-ui:      var(--font-pretendard);
+  --font-display: var(--font-pretendard);
+  --font-section: var(--font-pretendard);
+  --font-kr:      var(--font-pretendard);
+  --font-mono:    ui-monospace, "SF Mono", "JetBrains Mono", Menlo, Consolas, monospace;
+
+  /* ------------------------------------------------------------------
+     TYPE SCALE — Pretendard, all weights via numeric weight class.
+     Hierarchy / sizes / line-heights are unchanged. Weight LOGIC:
+       · display + page titles  → 700–800
+       · section + card titles  → 600–700
+       · body text              → 400–500
+       · captions / helper text → 400
+     name              weight / size / line / family             role
+     ------------------------------------------------------------------ */
+  --text-display-xl:  800 64px/80px var(--font-pretendard);   /* hero numerals / brand H1 */
+  --text-display-lg:  700 48px/64px var(--font-pretendard);   /* docs masthead */
+  --text-display-md:  400 48px/64px var(--font-pretendard);   /* "Aa" specimen, large light proof */
+  --text-section:     700 32px/40px var(--font-pretendard);   /* docs section header */
+  --text-h1:          700 32px/40px var(--font-pretendard);   /* page title */
+  --text-h2:          700 24px/32px var(--font-pretendard);
+  --text-title:       600 18px/28px var(--font-pretendard);   /* card title (600 per "section/card 600–700") */
+  --text-body-lg:     400 16px/24px var(--font-pretendard);
+  --text-body:        400 14px/22px var(--font-pretendard);   /* default body */
+  --text-body-strong: 500 14px/22px var(--font-pretendard);   /* UI label / strong body (500 per "body 400–500") */
+  --text-button:      600 14px/24px var(--font-pretendard);   /* CTA — sits in "title" weight range */
+  --text-caption:     400 12px/18px var(--font-pretendard);   /* helper / meta */
+  --text-overline:    700 11px/18px var(--font-pretendard);   /* tiny uppercased — needs 700 for legibility */
+  --text-code:        500 13px/20px var(--font-mono);
+}
+
+/* ============================================================================
+   ELEMENT DEFAULTS — apply tokens to standard tags so prototypes look right
+   ============================================================================ */
+
+html, body {
+  background: var(--bg-canvas);
+  color: var(--fg-primary);
+  font: var(--text-body);
+  font-feature-settings: "ss01", "cv01", "cv11";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1 { font: var(--text-display-lg); color: var(--fg-strong); letter-spacing: -0.01em; }
+h2 { font: var(--text-h1);         color: var(--fg-strong); }
+h3 { font: var(--text-h2);         color: var(--fg-strong); }
+h4 { font: var(--text-title);      color: var(--fg-primary); }
+p  { font: var(--text-body);       color: var(--fg-primary); }
+small, .caption { font: var(--text-caption); color: var(--fg-secondary); }
+code, kbd { font: var(--text-code); color: var(--fg-primary); }
+
+/* Section / docs header (Barlow, used in foundation header bar) */
+.rais-section-title {
+  font: var(--text-section);
+  color: var(--fg-strong);
+  letter-spacing: 0.03em;
+}
+
+/* Small uppercase tag the foundation file uses everywhere ("states", "Contained", etc) */
+.rais-overline {
+  font: var(--text-overline);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+}
+
+/* ============================================================================
+   TP 01 · LAYOUT GRID LOCK — 2026.05.10j
+   12 / 8 / 4 column responsive grid + locked container, gaps and padding.
+   Use these custom properties or utilities — never hand-roll widths.
+   ============================================================================ */
+:root {
+  /* Container */
+  --container-max:    1440px;
+  --container-pad:    24px;            /* TP 01 · inner padding */
+
+  /* Grid columns by breakpoint */
+  --grid-cols-desktop: 12;   /* @kind other */
+  --grid-cols-tablet:  8;    /* @kind other */
+  --grid-cols-mobile:  4;    /* @kind other */
+  --grid-cols:         var(--grid-cols-desktop);
+
+  /* Gaps */
+  --section-gap:      32px;            /* TP 01 · section gap */
+  --card-gap:         24px;            /* TP 01 · card gap (was 16) */
+  --grid-gutter:      24px;
+}
+@media (max-width: 1024px) { :root { --grid-cols: var(--grid-cols-tablet); } }
+@media (max-width: 640px)  { :root { --grid-cols: var(--grid-cols-mobile); --container-pad: 16px; } }
+
+/* Container — single source of truth for page width and inner padding */
+.rais-container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--container-pad);
+}
+
+/* Grid — declarative columns. Use .col-span-N to span. */
+.rais-grid {
+  display: grid;
+  grid-template-columns: repeat(var(--grid-cols), minmax(0, 1fr));
+  gap: var(--grid-gutter);
+}
+.col-span-1  { grid-column: span 1  / span 1; }
+.col-span-2  { grid-column: span 2  / span 2; }
+.col-span-3  { grid-column: span 3  / span 3; }
+.col-span-4  { grid-column: span 4  / span 4; }
+.col-span-6  { grid-column: span 6  / span 6; }
+.col-span-8  { grid-column: span 8  / span 8; }
+.col-span-12 { grid-column: span 12 / span 12; }
+
+/* Page rhythm — vertical stacks honouring section / card gaps */
+.rais-stack-section { display: flex; flex-direction: column; gap: var(--section-gap); }
+.rais-stack-card    { display: flex; flex-direction: column; gap: var(--card-gap); }
+
+/* ============================================================================
+   TP 02 · FOCUS RING SYSTEM — 2026.05.10j
+   2 px ring · 2 px offset · semantic token · keyboard focus only.
+   Hover and focus are visually distinct and never collapse.
+   ============================================================================ */
+:root {
+  --focus-ring-width:  2px;
+  --focus-ring-offset: 2px;
+  --focus-ring-color:  var(--accent);   /* semantic — never a raw hex */
+}
+
+/* Default global rule — applies to every native interactive element. */
+:where(button, [role="button"], a, input, select, textarea, summary,
+       [tabindex]:not([tabindex="-1"]), [data-focusable])
+:focus-visible {
+  outline: var(--focus-ring-width) solid var(--focus-ring-color);
+  outline-offset: var(--focus-ring-offset);
+  border-radius: inherit;
+}
+/* Selectable card surface — opt-in via [data-focusable] or .is-focusable */
+.is-focusable:focus-visible {
+  outline: var(--focus-ring-width) solid var(--focus-ring-color);
+  outline-offset: var(--focus-ring-offset);
+}
+/* Mouse focus must NOT show the ring (keyboard-only) — :focus-visible already
+   handles this on modern engines; this guard catches legacy :focus fallbacks. */
+:where(button, [role="button"], a, input, select, textarea):focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* ============================================================================
+   TP 03 · SPACING LOCK — 2026.05.10j
+   Allowed scale: 4 · 8 · 12 · 16 · 20 · 24 · 32 · 40 · 48 · 64.
+   No off-scale pixel literals anywhere — use these utilities or tokens.
+   ============================================================================ */
+:root {
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-5:  20px;
+  --space-6:  24px;
+  --space-8:  32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+}
+
+/* Padding utilities */
+.p-1  { padding: var(--space-1); }   .p-2  { padding: var(--space-2); }
+.p-3  { padding: var(--space-3); }   .p-4  { padding: var(--space-4); }
+.p-5  { padding: var(--space-5); }   .p-6  { padding: var(--space-6); }
+.p-8  { padding: var(--space-8); }   .p-10 { padding: var(--space-10); }
+.p-12 { padding: var(--space-12); }  .p-16 { padding: var(--space-16); }
+
+/* Gap utilities (flex / grid) */
+.gap-1  { gap: var(--space-1); }   .gap-2  { gap: var(--space-2); }
+.gap-3  { gap: var(--space-3); }   .gap-4  { gap: var(--space-4); }
+.gap-5  { gap: var(--space-5); }   .gap-6  { gap: var(--space-6); }
+.gap-8  { gap: var(--space-8); }   .gap-10 { gap: var(--space-10); }
+.gap-12 { gap: var(--space-12); }  .gap-16 { gap: var(--space-16); }
+
+/* Component-size padding presets — for buttons, inputs, cards. */
+.pad-sm   { padding: var(--space-1) var(--space-3); }   /* 4 / 12  */
+.pad-md   { padding: var(--space-2) var(--space-4); }   /* 8 / 16  */
+.pad-lg   { padding: var(--space-3) var(--space-5); }   /* 12 / 20 */
+.pad-card { padding: var(--space-6); }                  /* 24 — TP 01 inner */
+
+/* ============================================================================
+   TP 05 · STATE DEPTH EXPANSION — 2026.05.10k
+   12-state canonical matrix + 11 extended states. Pair color + text + icon,
+   never overlap states (selected ≠ pressed ≠ focused).
+   ============================================================================ */
+:root {
+  /* Tier 1 — interaction (existing) */
+  --state-default:    var(--bg-card);
+  --state-hover:      var(--surface-hover, rgba(255,255,255,.04));
+  --state-pressed:    var(--surface-pressed, rgba(255,255,255,.06));
+  --state-focused:    var(--accent);
+  --state-disabled:   color-mix(in oklch, var(--bg-card) 60%, transparent);
+
+  /* Tier 2 — selection / disclosure */
+  --state-selected:   color-mix(in oklch, var(--accent) 12%, var(--bg-card));
+  --state-expanded:   var(--bg-card-alt);
+  --state-collapsed:  var(--bg-card);
+
+  /* Tier 3 — async / process */
+  --state-loading:    var(--bg-card);
+  --state-skeleton:   linear-gradient(90deg, rgba(255,255,255,.04) 0%, rgba(255,255,255,.08) 50%, rgba(255,255,255,.04) 100%);  /* @kind color */
+  --state-streaming:  var(--accent);
+  --state-processing: var(--rais-info, #4C9AEC);
+  --state-uploading:  var(--rais-info, #4C9AEC);
+
+  /* Tier 4 — direct manipulation */
+  --state-dragging:   color-mix(in oklch, var(--accent) 18%, var(--bg-card));
+  --state-sorting:    color-mix(in oklch, var(--accent) 10%, var(--bg-card));
+  --state-filtering:  color-mix(in oklch, var(--accent) 10%, var(--bg-card));
+
+  /* Tier 5 — semantic (existing tokens reused) */
+  --state-success:    var(--rais-success-light);
+  --state-warning:    var(--rais-warning);
+  --state-error:      var(--rais-error);
+}
+
+/* Skeleton shimmer keyframes (TP 05 + TP 08 motion) */
+@keyframes rais-skeleton {
+  0%   { background-position: -200% 0; }
+  100% { background-position:  200% 0; }
+}
+.is-skeleton {
+  background: var(--state-skeleton);
+  background-size: 200% 100%;
+  animation: rais-skeleton 1.4s ease-out infinite;
+  color: transparent !important;
+  border-radius: 6px;
+}
+.is-streaming::after {
+  content: "";
+  display: inline-block;
+  width: 6px; height: 14px;
+  margin-left: 2px;
+  background: var(--state-streaming);
+  vertical-align: -2px;
+  animation: rais-blink 0.9s ease-out infinite;
+}
+@keyframes rais-blink { 0%,49%{opacity:1} 50%,100%{opacity:0} }
+
+/* ============================================================================
+   TP 08 · MOTION SYSTEM — 2026.05.10k
+   Fast 120 · Default 180 · Slow 240 · standard ease-out cubic-bezier.
+   Respects prefers-reduced-motion.
+   ============================================================================ */
+:root {
+  --motion-fast:    120ms;  /* @kind other */
+  --motion-default: 180ms;  /* @kind other */
+  --motion-slow:    240ms;  /* @kind other */
+  --motion-ease:    cubic-bezier(0.16, 1, 0.30, 1); /* @kind other */
+  --motion-ease-in: cubic-bezier(0.40, 0, 0.20, 1); /* @kind other */
+
+  /* Per-pattern durations */
+  --motion-hover:     var(--motion-fast);
+  --motion-pressed:   var(--motion-fast);
+  --motion-toast:     var(--motion-default);
+  --motion-modal:     var(--motion-slow);
+  --motion-dropdown:  var(--motion-default);
+  --motion-accordion: var(--motion-default);
+  --motion-sidebar:   var(--motion-slow);
+}
+.transition-default { transition: all var(--motion-default) var(--motion-ease); }
+.transition-fast    { transition: all var(--motion-fast)    var(--motion-ease); }
+.transition-slow    { transition: all var(--motion-slow)    var(--motion-ease); }
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --motion-fast:    1ms; /* @kind other */
+    --motion-default: 1ms; /* @kind other */
+    --motion-slow:    1ms; /* @kind other */
+  }
+  .is-skeleton, .is-streaming::after { animation-duration: 0.01ms !important; }
+}

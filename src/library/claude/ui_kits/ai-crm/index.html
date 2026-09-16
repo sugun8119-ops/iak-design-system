@@ -1,0 +1,487 @@
+<!doctype html>
+<!-- @dsCard group="UI Kit — Ai Crm" name="AI CRM · Main" subtitle="Pipeline · KPIs · AI Copilot · Activity" -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>RAIS · AI CRM Main</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="../../colors_and_type.css">
+<script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+<style>
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg-canvas);color:var(--fg-primary);min-height:100vh;display:grid;grid-template-columns:240px 1fr;grid-template-rows:64px 1fr}
+
+  /* ── Topbar ── */
+  header.bar{
+    grid-column:1/-1;display:flex;align-items:center;gap:16px;padding:0 24px;
+    border-bottom:1px solid var(--border-subtle);background:var(--bg-canvas);position:sticky;top:0;z-index:5
+  }
+  .brand{display:flex;align-items:center;gap:10px;font:var(--text-body-strong);color:var(--fg-strong);width:240px;margin-left:-24px;padding-left:24px;border-right:1px solid var(--border-subtle);height:64px}
+  .brand .mk{width:28px;height:28px;border-radius:8px;background:var(--accent);display:grid;place-items:center;color:var(--accent-fg);font:800 13px/1 var(--font-ui);box-shadow:var(--accent-glow)}
+  .crumb{display:flex;align-items:center;gap:8px;font:var(--text-caption);color:var(--fg-muted);margin-left:8px}
+  .crumb iconify-icon{font-size:11px}
+  .crumb .cur{color:var(--fg-strong);font:var(--text-body-strong)}
+  .search{flex:1;max-width:480px;display:flex;align-items:center;gap:8px;background:var(--bg-field);border:1px solid var(--border-default);border-radius:10px;padding:8px 12px;color:var(--fg-muted);margin-left:24px}
+  .search input{flex:1;background:transparent;border:none;color:var(--fg-strong);font:var(--text-body);outline:none}
+  .search kbd{font:var(--text-overline);padding:2px 8px;border-radius:4px;background:var(--rais-alpha-08);color:var(--fg-muted)}
+  .top-actions{display:flex;gap:6px;margin-left:auto;align-items:center}
+  .icon-btn{width:36px;height:36px;border-radius:8px;background:transparent;border:1px solid var(--border-subtle);color:var(--fg-secondary);display:grid;place-items:center;cursor:pointer;position:relative}
+  .icon-btn:hover{color:var(--fg-strong);border-color:var(--border-default)}
+  .icon-btn .pip{position:absolute;top:7px;right:7px;width:7px;height:7px;border-radius:500px;background:var(--accent);border:2px solid var(--bg-canvas)}
+  .avatar{width:36px;height:36px;border-radius:500px;background:linear-gradient(135deg,#5b8cff,#a55bff);display:grid;place-items:center;color:#fff;font:600 13px/1 var(--font-ui)}
+
+  /* ── Sidebar ── */
+  nav.side{border-right:1px solid var(--border-subtle);padding:18px 12px;height:calc(100vh - 64px);overflow-y:auto;display:flex;flex-direction:column;gap:18px;position:sticky;top:64px}
+  nav.side .grp h6{margin:0 0 6px;padding:0 10px;font:var(--text-overline);color:var(--fg-muted)}
+  nav.side a{display:flex;align-items:center;gap:10px;padding:8px 10px;border-radius:8px;font:var(--text-caption);color:var(--fg-secondary);text-decoration:none;transition:all 120ms cubic-bezier(.16,1,.3,1)}
+  nav.side a:hover{background:var(--rais-alpha-08);color:var(--fg-strong)}
+  nav.side a.active{background:color-mix(in oklch,var(--accent) 12%,var(--bg-card));color:var(--accent);position:relative}
+  nav.side a.active::before{content:"";position:absolute;left:-12px;top:6px;bottom:6px;width:2px;background:var(--accent);border-radius:2px}
+  nav.side a iconify-icon{font-size:16px;color:var(--fg-muted)}
+  nav.side a.active iconify-icon{color:var(--accent)}
+  nav.side a .num{margin-left:auto;font:var(--text-overline);color:var(--fg-muted);background:var(--rais-alpha-08);padding:2px 8px;border-radius:500px}
+  nav.side a.active .num{background:rgba(255,167,38,.15);color:var(--accent)}
+  .side-card{margin-top:auto;padding:14px;border-radius:12px;background:linear-gradient(180deg,color-mix(in oklch,var(--accent) 14%,var(--bg-card)),var(--bg-card));border:1px solid color-mix(in oklch,var(--accent) 25%,var(--border-default));position:relative;overflow:hidden}
+  .side-card::after{content:"";position:absolute;right:-30px;top:-30px;width:100px;height:100px;border-radius:500px;background:radial-gradient(circle,rgba(255,167,38,.25),transparent 70%)}
+  .side-card .lbl{font:var(--text-overline);color:var(--accent);position:relative;z-index:1}
+  .side-card h5{margin:6px 0 4px;font:var(--text-body-strong);color:var(--fg-strong);position:relative;z-index:1}
+  .side-card p{margin:0 0 10px;font:var(--text-caption);color:var(--fg-secondary);position:relative;z-index:1}
+  .side-card button{width:100%;background:var(--accent);color:var(--accent-fg);border:none;border-radius:8px;font:var(--text-button);padding:8px;cursor:pointer;position:relative;z-index:1}
+
+  /* ── Main ── */
+  main{padding:32px;display:flex;flex-direction:column;gap:24px;overflow-x:hidden}
+
+  /* Page header */
+  .page-hdr{display:flex;align-items:flex-end;justify-content:space-between;gap:16px}
+  .page-hdr .l h1{margin:0;font:var(--text-h1);color:var(--fg-strong);letter-spacing:-.01em;display:flex;align-items:center;gap:12px}
+  .ai-pill{display:inline-flex;align-items:center;gap:6px;padding:4px 10px;border-radius:500px;background:color-mix(in oklch,var(--accent) 14%,var(--bg-card));border:1px solid color-mix(in oklch,var(--accent) 30%,transparent);font:var(--text-overline);color:var(--accent)}
+  .ai-pill .dot{width:6px;height:6px;border-radius:500px;background:var(--accent);animation:pulse 1.6s ease-out infinite}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+  .page-hdr .l p{margin:8px 0 0;font:var(--text-body);color:var(--fg-secondary);max-width:520px}
+  .page-hdr .r{display:flex;gap:8px}
+  .btn{font:var(--text-button);border:none;cursor:pointer;border-radius:8px;padding:10px 16px;display:inline-flex;align-items:center;gap:8px}
+  .btn.primary{background:var(--accent);color:var(--accent-fg)}
+  .btn.secondary{background:var(--bg-field);color:var(--fg-strong);border:1px solid var(--border-default)}
+  .btn.ghost{background:transparent;color:var(--fg-secondary);border:1px solid var(--border-subtle)}
+
+  /* KPI row */
+  .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .kpi{background:var(--bg-card);border:1px solid var(--border-default);border-radius:16px;padding:18px;display:flex;flex-direction:column;gap:10px;position:relative;overflow:hidden}
+  .kpi .top{display:flex;align-items:center;justify-content:space-between}
+  .kpi .lbl{font:var(--text-overline);color:var(--fg-muted)}
+  .kpi .ic{width:32px;height:32px;border-radius:8px;display:grid;place-items:center;color:var(--fg-strong)}
+  .kpi.featured .ic{background:color-mix(in oklch,var(--accent) 18%,var(--bg-card));color:var(--accent)}
+  .kpi:not(.featured) .ic{background:var(--rais-alpha-08);color:var(--fg-secondary)}
+  .kpi .val{font:700 32px/1 var(--font-ui);color:var(--fg-strong);font-feature-settings:"tnum";letter-spacing:-.01em}
+  .kpi .val small{font:600 16px/1 var(--font-ui);color:var(--fg-muted)}
+  .kpi .delta{display:inline-flex;align-items:center;gap:4px;font:var(--text-caption);font-feature-settings:"tnum"}
+  .kpi .delta.up{color:var(--rais-success-light)}
+  .kpi .delta.dn{color:var(--rais-error)}
+  .kpi.featured{background:linear-gradient(180deg,color-mix(in oklch,var(--accent) 8%,var(--bg-card)),var(--bg-card));border-color:color-mix(in oklch,var(--accent) 22%,var(--border-default))}
+  .kpi.featured::after{content:"";position:absolute;right:-40px;top:-40px;width:140px;height:140px;border-radius:500px;background:radial-gradient(circle,rgba(255,167,38,.18),transparent 70%);pointer-events:none}
+  .kpi .spark{height:32px;display:flex;align-items:flex-end;gap:3px;margin-top:auto}
+  .kpi .spark span{flex:1;background:color-mix(in oklch,var(--accent) 50%,transparent);border-radius:2px}
+  .kpi:not(.featured) .spark span{background:rgba(255,255,255,.14)}
+
+  /* Two-col layout */
+  .two-col{display:grid;grid-template-columns:1.4fr 1fr;gap:16px}
+  @media (max-width:1280px){.two-col{grid-template-columns:1fr}}
+
+  /* Pipeline board */
+  .panel{background:var(--bg-card);border:1px solid var(--border-default);border-radius:16px;overflow:hidden}
+  .panel-h{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid var(--border-subtle)}
+  .panel-h h3{margin:0;font:var(--text-title);color:var(--fg-strong)}
+  .panel-h .sub{font:var(--text-caption);color:var(--fg-muted);margin-top:2px}
+  .panel-h .actions{display:flex;gap:6px}
+  .seg{display:flex;background:var(--bg-field);border:1px solid var(--border-default);border-radius:8px;padding:2px;gap:2px}
+  .seg button{background:transparent;border:none;color:var(--fg-muted);font:var(--text-overline);padding:6px 10px;border-radius:6px;cursor:pointer}
+  .seg button.on{background:var(--rais-alpha-08);color:var(--fg-strong)}
+
+  .pipe{padding:16px;display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+  .col{background:var(--bg-card-alt);border:1px solid var(--border-subtle);border-radius:12px;padding:12px;display:flex;flex-direction:column;gap:10px;min-height:280px}
+  .col-h{display:flex;align-items:center;justify-content:space-between}
+  .col-h .nm{display:flex;align-items:center;gap:8px;font:var(--text-overline);color:var(--fg-secondary)}
+  .col-h .nm .ds{width:6px;height:6px;border-radius:500px}
+  .col-h .ct{font:var(--text-overline);color:var(--fg-muted);background:var(--rais-alpha-08);padding:2px 8px;border-radius:500px}
+  .col-h .total{font:var(--text-caption);color:var(--fg-muted);font-feature-settings:"tnum"}
+  .col-c1 .ds{background:var(--rais-info,#4C9AEC)}
+  .col-c2 .ds{background:var(--accent)}
+  .col-c3 .ds{background:var(--rais-warning)}
+  .col-c4 .ds{background:var(--rais-success-light)}
+
+  .deal{background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:10px;padding:12px;display:flex;flex-direction:column;gap:8px;cursor:pointer;transition:all 120ms cubic-bezier(.16,1,.3,1)}
+  .deal:hover{border-color:var(--border-default);transform:translateY(-1px)}
+  .deal .nm{font:var(--text-body-strong);color:var(--fg-strong)}
+  .deal .co{font:var(--text-caption);color:var(--fg-muted)}
+  .deal .meta{display:flex;align-items:center;justify-content:space-between;margin-top:4px}
+  .deal .amt{font:600 14px/1 var(--font-ui);color:var(--fg-strong);font-feature-settings:"tnum"}
+  .deal .av{display:flex}
+  .deal .av i{width:20px;height:20px;border-radius:500px;border:2px solid var(--bg-card);margin-left:-6px;font:600 9px/16px var(--font-ui);color:#fff;text-align:center;display:inline-block}
+  .deal .av i:first-child{margin-left:0}
+  .deal .ai{font:var(--text-overline);color:var(--accent);display:inline-flex;align-items:center;gap:4px;padding:2px 8px;border-radius:500px;background:color-mix(in oklch,var(--accent) 12%,var(--bg-card-alt));align-self:flex-start}
+  .deal .ai iconify-icon{font-size:10px}
+  .deal.warn{border-color:rgba(250,174,62,.30)}
+  .deal.warn .ai{background:rgba(250,174,62,.12);color:var(--rais-warning)}
+
+  /* AI Assistant panel */
+  .ai-panel{display:flex;flex-direction:column}
+  .ai-msg{padding:16px 20px;display:flex;flex-direction:column;gap:14px}
+  .ai-bub{padding:14px 16px;border-radius:12px 12px 12px 4px;background:var(--bg-card-alt);border:1px solid var(--border-subtle);font:var(--text-body);color:var(--fg-primary);position:relative}
+  .ai-bub.user{align-self:flex-end;border-radius:12px 12px 4px 12px;background:color-mix(in oklch,var(--accent) 14%,var(--bg-card));border-color:color-mix(in oklch,var(--accent) 25%,transparent);max-width:80%}
+  .ai-bub b{color:var(--fg-strong);font-weight:600}
+  .ai-bub .src{margin-top:8px;display:flex;flex-wrap:wrap;gap:6px}
+  .ai-bub .src span{font:var(--text-overline);padding:2px 8px;border-radius:500px;background:var(--rais-alpha-08);color:var(--fg-muted)}
+  .ai-actions{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+  .ai-actions button{font:var(--text-overline);padding:6px 10px;border-radius:6px;background:transparent;border:1px solid var(--border-subtle);color:var(--fg-secondary);cursor:pointer;display:inline-flex;align-items:center;gap:4px}
+  .ai-actions button:hover{border-color:var(--accent);color:var(--accent)}
+
+  .ai-input{padding:12px 16px;border-top:1px solid var(--border-subtle);background:var(--bg-card);display:flex;align-items:center;gap:10px}
+  .ai-input .field{flex:1;display:flex;align-items:center;gap:8px;background:var(--bg-field);border:1px solid var(--border-default);border-radius:10px;padding:10px 14px}
+  .ai-input .field input{flex:1;background:transparent;border:none;color:var(--fg-strong);font:var(--text-body);outline:none}
+  .ai-input .field input::placeholder{color:var(--fg-muted)}
+  .ai-input .send{width:36px;height:36px;border-radius:8px;background:var(--accent);color:var(--accent-fg);border:none;display:grid;place-items:center;cursor:pointer}
+
+  /* Streaming indicator */
+  .stream::after{content:"";display:inline-block;width:6px;height:14px;margin-left:2px;background:var(--accent);vertical-align:-2px;animation:blink .9s ease-out infinite}
+  @keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}
+
+  /* Activity */
+  .acts{padding:8px 0;max-height:280px;overflow-y:auto}
+  .act{display:flex;gap:12px;padding:10px 20px}
+  .act .av{width:28px;height:28px;border-radius:500px;display:grid;place-items:center;flex-shrink:0;font:600 11px/1 var(--font-ui);color:#fff}
+  .act .b{flex:1;min-width:0}
+  .act .b p{margin:0;font:var(--text-caption);color:var(--fg-primary);line-height:1.5}
+  .act .b p b{color:var(--fg-strong);font-weight:600}
+  .act .b time{font:var(--text-overline);color:var(--fg-muted);margin-top:2px;display:block}
+  .act .ic{width:28px;height:28px;border-radius:500px;display:grid;place-items:center;flex-shrink:0;font-size:14px}
+  .act .ic.ai{background:color-mix(in oklch,var(--accent) 16%,var(--bg-card));color:var(--accent)}
+  .act .ic.deal{background:rgba(39,218,104,.14);color:var(--rais-success-light)}
+  .act .ic.note{background:rgba(76,154,236,.14);color:var(--rais-info)}
+
+  /* Avatars colors */
+  .a-blue{background:linear-gradient(135deg,#5b8cff,#3a5dd9)}
+  .a-purp{background:linear-gradient(135deg,#a55bff,#6e3acc)}
+  .a-pink{background:linear-gradient(135deg,#ff5b9c,#cc3a73)}
+  .a-cyan{background:linear-gradient(135deg,#5bd9ff,#3a98cc)}
+  .a-grn{background:linear-gradient(135deg,#5bff8c,#3acc6e)}
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="brand">
+    <div class="mk">R</div>
+    <span>RAIS CRM</span>
+  </div>
+  <div class="crumb">
+    <span>Workspace</span>
+    <iconify-icon icon="eva:chevron-right-fill"></iconify-icon>
+    <span class="cur">Q2 Pipeline</span>
+  </div>
+  <div class="search">
+    <iconify-icon icon="eva:search-fill"></iconify-icon>
+    <input placeholder="Ask AI or search customers, deals, notes…">
+    <kbd>⌘K</kbd>
+  </div>
+  <div class="top-actions">
+    <button class="icon-btn" aria-label="AI inbox"><iconify-icon icon="solar:magic-stick-3-bold"></iconify-icon><span class="pip"></span></button>
+    <button class="icon-btn" aria-label="Notifications"><iconify-icon icon="solar:bell-bold"></iconify-icon><span class="pip"></span></button>
+    <button class="icon-btn" aria-label="Settings"><iconify-icon icon="solar:settings-bold"></iconify-icon></button>
+    <div class="avatar">JK</div>
+  </div>
+</header>
+
+<nav class="side">
+  <div class="grp">
+    <h6>Workspace</h6>
+    <a href="#"><iconify-icon icon="solar:home-2-bold"></iconify-icon>Dashboard</a>
+    <a href="#" class="active"><iconify-icon icon="solar:chart-square-bold"></iconify-icon>Pipeline<span class="num">42</span></a>
+    <a href="#"><iconify-icon icon="solar:users-group-rounded-bold"></iconify-icon>Customers<span class="num">1.2k</span></a>
+    <a href="#"><iconify-icon icon="solar:dollar-bold"></iconify-icon>Deals<span class="num">86</span></a>
+    <a href="#"><iconify-icon icon="solar:inbox-bold"></iconify-icon>Inbox<span class="num">12</span></a>
+  </div>
+  <div class="grp">
+    <h6>AI tools</h6>
+    <a href="#"><iconify-icon icon="solar:magic-stick-3-bold"></iconify-icon>Assistant</a>
+    <a href="#"><iconify-icon icon="solar:graph-up-bold"></iconify-icon>Forecast</a>
+    <a href="#"><iconify-icon icon="solar:asteroid-bold"></iconify-icon>Lead scoring</a>
+    <a href="#"><iconify-icon icon="solar:document-text-bold"></iconify-icon>Auto-notes</a>
+  </div>
+  <div class="grp">
+    <h6>Reports</h6>
+    <a href="#"><iconify-icon icon="solar:chart-2-bold"></iconify-icon>Performance</a>
+    <a href="#"><iconify-icon icon="solar:target-bold"></iconify-icon>Goals</a>
+  </div>
+  <div class="side-card">
+    <div class="lbl">RAIS · Pro</div>
+    <h5>Upgrade for unlimited AI</h5>
+    <p>10× faster forecasts, custom AI workflows.</p>
+    <button>Upgrade</button>
+  </div>
+</nav>
+
+<main>
+
+  <!-- Page header -->
+  <div class="page-hdr">
+    <div class="l">
+      <h1>Q2 Pipeline <span class="ai-pill"><span class="dot"></span>AI ACTIVE</span></h1>
+      <p>$ 2.4 M in flight across 42 deals. AI flagged 3 deals at risk and suggested 5 next-best actions.</p>
+    </div>
+    <div class="r">
+      <button class="btn ghost"><iconify-icon icon="eva:download-fill"></iconify-icon>Export</button>
+      <button class="btn secondary"><iconify-icon icon="eva:funnel-fill"></iconify-icon>Filters</button>
+      <button class="btn primary"><iconify-icon icon="eva:plus-fill"></iconify-icon>New deal</button>
+    </div>
+  </div>
+
+  <!-- KPI row -->
+  <div class="kpis">
+    <div class="kpi featured">
+      <div class="top">
+        <span class="lbl">PIPELINE VALUE</span>
+        <div class="ic"><iconify-icon icon="solar:dollar-bold"></iconify-icon></div>
+      </div>
+      <div class="val">$2.41<small>M</small></div>
+      <div class="delta up"><iconify-icon icon="eva:arrow-upward-fill"></iconify-icon>+18.2% vs Q1</div>
+      <div class="spark">
+        <span style="height:30%"></span><span style="height:42%"></span><span style="height:38%"></span>
+        <span style="height:55%"></span><span style="height:48%"></span><span style="height:62%"></span>
+        <span style="height:70%"></span><span style="height:65%"></span><span style="height:80%"></span>
+        <span style="height:75%"></span><span style="height:90%"></span><span style="height:100%"></span>
+      </div>
+    </div>
+    <div class="kpi">
+      <div class="top">
+        <span class="lbl">WIN RATE</span>
+        <div class="ic"><iconify-icon icon="solar:target-bold"></iconify-icon></div>
+      </div>
+      <div class="val">34<small>%</small></div>
+      <div class="delta up"><iconify-icon icon="eva:arrow-upward-fill"></iconify-icon>+4.1pt</div>
+      <div class="spark">
+        <span style="height:50%"></span><span style="height:55%"></span><span style="height:48%"></span>
+        <span style="height:60%"></span><span style="height:58%"></span><span style="height:65%"></span>
+        <span style="height:62%"></span><span style="height:70%"></span><span style="height:68%"></span>
+        <span style="height:75%"></span><span style="height:78%"></span><span style="height:82%"></span>
+      </div>
+    </div>
+    <div class="kpi">
+      <div class="top">
+        <span class="lbl">AI ACTIONS QUEUED</span>
+        <div class="ic"><iconify-icon icon="solar:magic-stick-3-bold"></iconify-icon></div>
+      </div>
+      <div class="val">12</div>
+      <div class="delta up"><iconify-icon icon="solar:flame-bold"></iconify-icon>5 high priority</div>
+      <div class="spark">
+        <span style="height:40%"></span><span style="height:35%"></span><span style="height:50%"></span>
+        <span style="height:45%"></span><span style="height:60%"></span><span style="height:55%"></span>
+        <span style="height:65%"></span><span style="height:70%"></span><span style="height:62%"></span>
+        <span style="height:75%"></span><span style="height:80%"></span><span style="height:85%"></span>
+      </div>
+    </div>
+    <div class="kpi">
+      <div class="top">
+        <span class="lbl">AT RISK</span>
+        <div class="ic"><iconify-icon icon="solar:shield-warning-bold"></iconify-icon></div>
+      </div>
+      <div class="val">3 <small>deals</small></div>
+      <div class="delta dn"><iconify-icon icon="eva:arrow-downward-fill"></iconify-icon>$ 480K exposure</div>
+      <div class="spark">
+        <span style="height:80%"></span><span style="height:70%"></span><span style="height:65%"></span>
+        <span style="height:55%"></span><span style="height:60%"></span><span style="height:50%"></span>
+        <span style="height:45%"></span><span style="height:50%"></span><span style="height:40%"></span>
+        <span style="height:42%"></span><span style="height:38%"></span><span style="height:35%"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Two-column -->
+  <div class="two-col">
+    <!-- Pipeline board -->
+    <div class="panel">
+      <div class="panel-h">
+        <div>
+          <h3>Pipeline board</h3>
+          <div class="sub">42 deals · sorted by AI confidence</div>
+        </div>
+        <div class="actions">
+          <div class="seg">
+            <button class="on">Board</button>
+            <button>Table</button>
+            <button>Forecast</button>
+          </div>
+        </div>
+      </div>
+      <div class="pipe">
+        <!-- Discovery -->
+        <div class="col col-c1">
+          <div class="col-h">
+            <div class="nm"><span class="ds"></span>Discovery</div>
+            <div class="ct">14</div>
+          </div>
+          <div class="col-h"><span class="total">$ 620K</span></div>
+          <div class="deal">
+            <div class="nm">Northwind Logistics</div>
+            <div class="co">Fleet AI · 120 vehicles</div>
+            <span class="ai"><iconify-icon icon="solar:magic-stick-3-bold"></iconify-icon>Schedule call</span>
+            <div class="meta">
+              <span class="amt">$ 48K</span>
+              <div class="av"><i class="a-blue">RJ</i><i class="a-purp">SK</i></div>
+            </div>
+          </div>
+          <div class="deal">
+            <div class="nm">Acme Ventures</div>
+            <div class="co">Series B</div>
+            <div class="meta"><span class="amt">$ 22K</span><div class="av"><i class="a-pink">AL</i></div></div>
+          </div>
+        </div>
+        <!-- Qualified -->
+        <div class="col col-c2">
+          <div class="col-h">
+            <div class="nm"><span class="ds"></span>Qualified</div>
+            <div class="ct">11</div>
+          </div>
+          <div class="col-h"><span class="total">$ 740K</span></div>
+          <div class="deal">
+            <div class="nm">Helios Bank</div>
+            <div class="co">Risk assistant</div>
+            <span class="ai"><iconify-icon icon="solar:magic-stick-3-bold"></iconify-icon>Send proposal</span>
+            <div class="meta"><span class="amt">$ 180K</span><div class="av"><i class="a-cyan">MJ</i><i class="a-grn">PT</i></div></div>
+          </div>
+          <div class="deal">
+            <div class="nm">Verdant Foods</div>
+            <div class="co">Demand forecasting</div>
+            <div class="meta"><span class="amt">$ 64K</span><div class="av"><i class="a-purp">SK</i></div></div>
+          </div>
+        </div>
+        <!-- Proposal -->
+        <div class="col col-c3">
+          <div class="col-h">
+            <div class="nm"><span class="ds"></span>Proposal</div>
+            <div class="ct">9</div>
+          </div>
+          <div class="col-h"><span class="total">$ 680K</span></div>
+          <div class="deal warn">
+            <div class="nm">Atlas Insurance</div>
+            <div class="co">Claims AI</div>
+            <span class="ai"><iconify-icon icon="solar:shield-warning-bold"></iconify-icon>Stalled 12d</span>
+            <div class="meta"><span class="amt">$ 240K</span><div class="av"><i class="a-blue">RJ</i></div></div>
+          </div>
+          <div class="deal">
+            <div class="nm">Quantum Labs</div>
+            <div class="co">RAG search</div>
+            <div class="meta"><span class="amt">$ 96K</span><div class="av"><i class="a-pink">AL</i><i class="a-cyan">MJ</i></div></div>
+          </div>
+        </div>
+        <!-- Closing -->
+        <div class="col col-c4">
+          <div class="col-h">
+            <div class="nm"><span class="ds"></span>Closing</div>
+            <div class="ct">8</div>
+          </div>
+          <div class="col-h"><span class="total">$ 370K</span></div>
+          <div class="deal">
+            <div class="nm">Orion Health</div>
+            <div class="co">Triage assistant</div>
+            <span class="ai"><iconify-icon icon="solar:check-circle-bold"></iconify-icon>92% to close</span>
+            <div class="meta"><span class="amt">$ 152K</span><div class="av"><i class="a-grn">PT</i><i class="a-purp">SK</i></div></div>
+          </div>
+          <div class="deal">
+            <div class="nm">Crestline Retail</div>
+            <div class="co">Inventory AI</div>
+            <div class="meta"><span class="amt">$ 84K</span><div class="av"><i class="a-blue">RJ</i></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- AI Assistant panel -->
+    <div class="panel ai-panel">
+      <div class="panel-h">
+        <div>
+          <h3 style="display:flex;align-items:center;gap:8px"><iconify-icon icon="solar:magic-stick-3-bold" style="color:var(--accent)"></iconify-icon>AI Copilot</h3>
+          <div class="sub">Trained on your pipeline · last sync 2 min ago</div>
+        </div>
+        <button class="icon-btn" aria-label="More"><iconify-icon icon="eva:more-horizontal-fill"></iconify-icon></button>
+      </div>
+      <div class="ai-msg">
+        <div class="ai-bub user">
+          Which deals should I focus on this week to hit Q2?
+        </div>
+        <div class="ai-bub">
+          You're <b>$ 180K short</b> of plan. Three moves close the gap:
+          <ol style="margin:8px 0;padding-left:20px">
+            <li><b>Helios Bank · $ 180K</b> — proposal sent 3d, stakeholder champion replied. Send pricing today, 78% confidence.</li>
+            <li><b>Atlas Insurance · $ 240K</b> — stalled 12 days. Re-engage with case study; 1-in-3 odds, but biggest single impact.</li>
+            <li><b>Orion Health · $ 152K</b> — verbal yes, contract redlines pending legal. Push for sign-off Friday.</li>
+          </ol>
+          Combined expected value: <b>$ 312K</b><span class="stream"></span>
+          <div class="src">
+            <span><iconify-icon icon="eva:link-fill" style="font-size:9px"></iconify-icon> 12 deal records</span>
+            <span><iconify-icon icon="eva:link-fill" style="font-size:9px"></iconify-icon> 4 email threads</span>
+            <span><iconify-icon icon="eva:link-fill" style="font-size:9px"></iconify-icon> Forecast model</span>
+          </div>
+          <div class="ai-actions">
+            <button><iconify-icon icon="eva:flash-fill"></iconify-icon>Draft 3 emails</button>
+            <button><iconify-icon icon="eva:calendar-fill"></iconify-icon>Schedule meetings</button>
+            <button><iconify-icon icon="eva:bookmark-fill"></iconify-icon>Save plan</button>
+          </div>
+        </div>
+      </div>
+      <div class="ai-input">
+        <div class="field">
+          <iconify-icon icon="solar:magic-stick-3-bold" style="color:var(--accent)"></iconify-icon>
+          <input placeholder="Ask anything about your pipeline…">
+        </div>
+        <button class="send" aria-label="Send"><iconify-icon icon="eva:arrow-upward-fill"></iconify-icon></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Activity -->
+  <div class="panel">
+    <div class="panel-h">
+      <div>
+        <h3>Recent activity</h3>
+        <div class="sub">Auto-logged by AI from email, calendar and calls</div>
+      </div>
+      <div class="actions">
+        <button class="btn ghost" style="padding:6px 12px;font:var(--text-caption)">View all</button>
+      </div>
+    </div>
+    <div class="acts">
+      <div class="act">
+        <div class="ic ai"><iconify-icon icon="solar:magic-stick-3-bold"></iconify-icon></div>
+        <div class="b">
+          <p>AI flagged <b>Atlas Insurance</b> as stalled. Suggested re-engagement with claims case study.</p>
+          <time>2 minutes ago</time>
+        </div>
+      </div>
+      <div class="act">
+        <div class="ic deal"><iconify-icon icon="solar:dollar-bold"></iconify-icon></div>
+        <div class="b">
+          <p><b>Helios Bank</b> moved from Qualified to Proposal · $ 180K</p>
+          <time>14 minutes ago · by Rachel J.</time>
+        </div>
+      </div>
+      <div class="act">
+        <div class="ic note"><iconify-icon icon="solar:document-text-bold"></iconify-icon></div>
+        <div class="b">
+          <p>Auto-note from call with <b>Orion Health</b>: legal review pending, target signature Friday.</p>
+          <time>1 hour ago</time>
+        </div>
+      </div>
+      <div class="act">
+        <div class="ic ai"><iconify-icon icon="solar:asteroid-bold"></iconify-icon></div>
+        <div class="b">
+          <p>Lead score updated for <b>Quantum Labs</b>: 64 → 81. Reason: pricing page revisit + executive intro.</p>
+          <time>3 hours ago</time>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+</body>
+</html>

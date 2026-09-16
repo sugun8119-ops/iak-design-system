@@ -1,0 +1,200 @@
+<!doctype html>
+<!-- @dsCard group="Brand" name="Structural Audit" subtitle="5-area Pass/Fail · 11 patches applied to source structure" -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>RAIS · Structural Audit (5 areas)</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="../colors_and_type.css">
+<script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+<style>
+  body{margin:0;background:var(--bg-canvas);color:var(--fg-primary);min-height:100vh}
+  .wrap{max-width:1200px;margin:0 auto;padding:56px 40px 80px}
+  .hdr{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;padding-bottom:20px;border-bottom:1px solid var(--border-subtle);margin-bottom:32px}
+  .ovl{font:var(--text-overline);color:var(--accent);margin-bottom:10px}
+  h1{margin:0;font:var(--text-h1);color:var(--fg-strong);letter-spacing:-.01em;max-width:680px}
+  .sub{margin:12px 0 0;font:var(--text-body);color:var(--fg-secondary);max-width:560px}
+  .meta{text-align:right;font:var(--text-caption);color:var(--fg-muted)}
+  .meta b{display:block;color:var(--fg-strong);font:var(--text-body-strong);margin-bottom:4px}
+  .scope{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:32px}
+  .scope .pill{display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border-radius:500px;background:var(--rais-alpha-08);font:var(--text-overline);color:var(--fg-secondary)}
+  .scope .pill iconify-icon{font-size:13px;color:var(--fg-muted)}
+
+  .row{background:var(--bg-card);border:1px solid var(--border-default);border-radius:24px;padding:28px;margin-bottom:18px;display:grid;grid-template-columns:280px 1fr 120px;gap:28px;align-items:flex-start}
+  .row .ph .num{font:700 11px/1 var(--font-ui);letter-spacing:.18em;color:var(--accent);margin-bottom:10px}
+  .row .ph h3{margin:0;font:var(--text-title);color:var(--fg-strong);letter-spacing:-.01em}
+  .row .ph .src{margin-top:10px;font:var(--text-caption);color:var(--fg-muted);font-family:ui-monospace}
+  .row .body{display:flex;flex-direction:column;gap:14px}
+  .row .body .sumline{font:var(--text-body);color:var(--fg-secondary)}
+  .row .body .findings{display:flex;flex-direction:column;gap:8px;margin-top:4px}
+  .find{display:grid;grid-template-columns:18px 1fr;gap:10px;padding:10px 12px;border-radius:10px;background:var(--rais-grey-900);border:1px solid var(--border-subtle)}
+  .find iconify-icon{font-size:14px;margin-top:3px}
+  .find.fix{background:rgba(39,218,104,.06);border-color:rgba(39,218,104,.18)}
+  .find.fix iconify-icon{color:var(--rais-success-light)}
+  .find.warn{background:rgba(250,174,62,.06);border-color:rgba(250,174,62,.22)}
+  .find.warn iconify-icon{color:var(--rais-warning)}
+  .find .k{font:var(--text-body-strong);color:var(--fg-primary)}
+  .find .v{font:var(--text-caption);color:var(--fg-secondary);margin-top:2px}
+  .find code{font:var(--text-code);color:var(--fg-strong);background:var(--rais-alpha-08);padding:1px 6px;border-radius:4px}
+
+  .res{justify-self:end;display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:500px;font:var(--text-overline);align-self:flex-start}
+  .res iconify-icon{font-size:14px}
+  .res.pass{background:rgba(39,218,104,.14);color:var(--rais-success-light)}
+  .res.cond{background:rgba(250,174,62,.14);color:var(--rais-warning)}
+
+  .summary{margin-top:36px;background:var(--bg-card);border:1px solid var(--border-default);border-radius:24px;padding:28px}
+  .summary h3{margin:0 0 16px;font:var(--text-title);color:var(--fg-strong)}
+  .summary table{width:100%;border-collapse:collapse}
+  .summary th,.summary td{text-align:left;padding:12px 0;font:var(--text-body);border-bottom:1px solid var(--border-subtle)}
+  .summary th{font:var(--text-overline);color:var(--fg-muted);border-bottom-color:var(--border-default)}
+  .summary tr:last-child td{border-bottom:none}
+  .summary td.r{text-align:right;font-feature-settings:"tnum";color:var(--fg-strong)}
+  .summary .v{font-weight:600}
+  .summary .v.p{color:var(--rais-success-light)}
+  .summary .v.c{color:var(--rais-warning)}
+
+  .note{margin-top:24px;display:flex;gap:12px;padding:18px 22px;background:rgba(76,154,236,.06);border:1px solid rgba(76,154,236,.22);border-radius:12px}
+  .note iconify-icon{font-size:18px;color:var(--rais-info);flex-shrink:0;margin-top:2px}
+  .note .body{font:var(--text-body);color:var(--fg-secondary)}
+  .note b{color:var(--fg-strong);font-weight:500}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hdr">
+    <div>
+      <div class="ovl">RAIS · Structural Audit · 2026.05.10g</div>
+      <h1>Information structure &amp; naming consistency check across five areas.</h1>
+      <p class="sub">Document rendering deferred. Audit covers data structure, taxonomy, duplicates and conflicts only. Critical conflicts patched in-place; cosmetic fixes left for later.</p>
+    </div>
+    <div class="meta">
+      <b>Scope</b>
+      Foundation · Components · States ·<br>Layouts · AI Prompt<br>5 areas · 11 patches applied
+    </div>
+  </header>
+
+  <div class="scope">
+    <span class="pill"><iconify-icon icon="solar:atom-bold"></iconify-icon>Foundation</span>
+    <span class="pill"><iconify-icon icon="solar:widget-5-bold"></iconify-icon>Component Variant</span>
+    <span class="pill"><iconify-icon icon="solar:transmission-bold"></iconify-icon>State System</span>
+    <span class="pill"><iconify-icon icon="solar:layers-bold"></iconify-icon>Layout Pattern</span>
+    <span class="pill"><iconify-icon icon="solar:magic-stick-3-bold"></iconify-icon>AI Prompt</span>
+  </div>
+
+  <!-- 01 Foundation -->
+  <div class="row">
+    <div class="ph">
+      <div class="num">01</div>
+      <h3>Foundation</h3>
+      <div class="src">tokens/colors.json<br>tokens/typography.json<br>tokens/spacing.json</div>
+    </div>
+    <div class="body">
+      <div class="sumline">Token tree intact. Three structural conflicts found, all patched non-destructively.</div>
+      <div class="findings">
+        <div class="find fix"><iconify-icon icon="eva:checkmark-circle-2-fill"></iconify-icon><div><div class="k">Conflict · `success` colour mismatch</div><div class="v"><code>color/action/success/default</code> was <code>#33C488</code>, <code>color/status/success</code> was <code>#27DA68</code>. Unified to <code>#27DA68</code> as the canonical green; action ramp re-derived around it.</div></div></div>
+        <div class="find fix"><iconify-icon icon="eva:checkmark-circle-2-fill"></iconify-icon><div><div class="k">Conflict · glow tokens drifted from accent palette</div><div class="v">Glow RGBs were inherited from a legacy ramp (e.g. <code>rgba(255,171,0,…)</code>). Each glow now matches the hex of its semantic source: <code>glow/primary</code> ↔ <code>action/primary</code>, <code>glow/{status}</code> ↔ <code>status/{role}</code>.</div></div></div>
+        <div class="find warn"><iconify-icon icon="eva:alert-triangle-fill"></iconify-icon><div><div class="k">Duplicate values across namespaces (kept by design)</div><div class="v"><code>color/action/danger</code> ≡ <code>color/status/error</code> (#FF665B); <code>color/data/blue</code> ≡ <code>color/status/info</code> (#4C9AEC). These are intentional cross-references — flagged so the next refactor can derive one from the other.</div></div></div>
+      </div>
+    </div>
+    <span class="res pass"><iconify-icon icon="eva:checkmark-circle-2-fill"></iconify-icon>Pass</span>
+  </div>
+
+  <!-- 02 Component Variant -->
+  <div class="row">
+    <div class="ph">
+      <div class="num">02</div>
+      <h3>Component Variant</h3>
+      <div class="src">docs/01-component-guide.md</div>
+    </div>
+    <div class="body">
+      <div class="sumline">Variant taxonomy now follows a single grammar: <code>Component · Type/Status · State</code>. Four conflicts patched, four missing components stubbed.</div>
+      <div class="findings">
+        <div class="find fix"><iconify-icon icon="eva:checkmark-circle-2-fill"></iconify-icon><div><div class="k">Misclassification · Card "Highlighted" was a state</div><div class="v">Reclassified as a <b>Variant</b>. Variants and States are now separate axes; Highlighted is opt-in styling, not interaction state.</div></div></div>
+        <div class="find fix"><iconify-icon icon="eva:checkmark-circle-2-fill"></iconify-icon><div><div class="k">Misclassification · Badge / Toast "Types" were status values</div><div class="v">Renamed the axis to <b>Status</b> for both. Values map 1:1 to <code>color/status/{role}</code>; the word "Type" is reserved for shape/category (Text vs Search vs Select).</div></div></div>
+        <div class="find fix"><iconify-icon icon="eva:checkmark-circle-2-fill"></iconify-icon><div><div class="k">Conflict · Input "Filled" was not in the state matrix</div><div class="v">Removed from the state list and explicitly noted as a content state inheriting <code>Default</code> styling.</div></div></div>
+        <div class="find fix"><iconify-icon icon="eva:checkmark-circle-2-fill"></iconify-icon><div><div class="k">Missing · Sidebar / Topbar / Modal / Table referenced but not specified</div><div class="v">All four referenced from AI Prompt §1 and Layout §1 but had no entry. Stub specifications added (anatomy, tokens, states) so every component referenced by the system is now defined.</div></div></div>
+        <div class="find fix"><iconify-icon icon="eva:checkmark-circle-2-fill"></iconify-icon><div><div class="k">Naming · Card role "AI Response" inconsistent with AI Prompt role list</div><div class="v">Aligned to <b>AI</b> across both documents.</div></div></div>
+        <div class="find fix"><iconify-icon icon="eva:checkmark-circle-2-fill"></iconify-icon><div><div class="k">Off-scale · Button Md padding was 8 × 14 (no token for 14)</div><div class="v">Snapped to 4 pt scale: <code>spacing/2 × spacing/4</code> (8 × 16). Lg / Sm rebased the same way.</div></div></div>
+      </div>
+    </div>
+    <span class="res pass"><iconify-icon icon="eva:checkmark-circle-2-fill"></iconify-icon>Pass</span>
+  </div>
+
+  <!-- 03 State System -->
+  <div class="row">
+    <div class="ph">
+      <div class="num">03</div>
+      <h3>State System</h3>
+      <div class="src">docs/02-state-system.md</div>
+    </div>
+    <div class="body">
+      <div class="sumline">Twelve-state matrix is canonical. After Component Variant patches it now agrees with every component definition.</div>
+      <div class="findings">
+        <div class="find fix"><iconify-icon icon="eva:checkmark-circle-2-fill"></iconify-icon><div><div class="k">Resolved · Component states now subset of canonical 12</div><div class="v">Button (6), Input (5), Card (6), Badge (5 status), Toast (4 status) — every list is now a clean subset of the 12-state matrix; no orphan terms remain.</div></div></div>
+        <div class="find warn"><iconify-icon icon="eva:alert-triangle-fill"></iconify-icon><div><div class="k">Naming friction · "State / Role / Component / State" repeats the word "State"</div><div class="v">Functional and parseable, but reads awkwardly. Recommended rename for next minor: <code>State / {Component} / {State}</code> (drop redundant Role since State already implies it). Not patched — would touch every prompt example.</div></div></div>
+      </div>
+    </div>
+    <span class="res pass"><iconify-icon icon="eva:checkmark-circle-2-fill"></iconify-icon>Pass</span>
+  </div>
+
+  <!-- 04 Layout Pattern -->
+  <div class="row">
+    <div class="ph">
+      <div class="num">04</div>
+      <h3>Layout Pattern</h3>
+      <div class="src">docs/03-layout-patterns.md</div>
+    </div>
+    <div class="body">
+      <div class="sumline">Ten templates intact. Two cross-axis overlaps clarified by note rather than removal — same artefact appearing in both Component and Layout layers is legitimate.</div>
+      <div class="findings">
+        <div class="find fix"><iconify-icon icon="eva:checkmark-circle-2-fill"></iconify-icon><div><div class="k">Cross-layer overlap · Modal exists as Component and Layout</div><div class="v">Component Guide entry now cross-references Layout §9 explicitly. Same component, framed differently per layer (anatomy vs shell).</div></div></div>
+        <div class="find warn"><iconify-icon icon="eva:alert-triangle-fill"></iconify-icon><div><div class="k">Cross-layer overlap · Empty exists as State, Card role, and Layout</div><div class="v">Three legitimate uses of the same word. Documented but not renamed — the disambiguation is implicit in the path (`State/.../Empty` vs `Card/Empty/...` vs `Layout/Empty`).</div></div></div>
+        <div class="find warn"><iconify-icon icon="eva:alert-triangle-fill"></iconify-icon><div><div class="k">Naming friction · breakpoints reuse <code>sm/md/lg/xl</code> like sizes &amp; radii</div><div class="v">Same labels carry different meanings across axes. Functional today; flagged so future rename uses size suffixes (e.g. <code>bp-sm</code>) if the system grows.</div></div></div>
+      </div>
+    </div>
+    <span class="res cond"><iconify-icon icon="eva:alert-triangle-fill"></iconify-icon>Pass · with notes</span>
+  </div>
+
+  <!-- 05 AI Prompt -->
+  <div class="row">
+    <div class="ph">
+      <div class="num">05</div>
+      <h3>AI Prompt</h3>
+      <div class="src">docs/05-ai-prompt-guide.md</div>
+    </div>
+    <div class="body">
+      <div class="sumline">Naming convention is the single source of truth — all upstream patches flow into it. Two structural fixes applied.</div>
+      <div class="findings">
+        <div class="find fix"><iconify-icon icon="eva:checkmark-circle-2-fill"></iconify-icon><div><div class="k">Conflict · Role list missing four roles used by Component Guide</div><div class="v">Added <code>Analytics</code>, <code>Info</code>, <code>Alert</code>, <code>Empty</code>. Role enumeration now matches the union of every <code>Card / Role / *</code> entry.</div></div></div>
+        <div class="find fix"><iconify-icon icon="eva:checkmark-circle-2-fill"></iconify-icon><div><div class="k">Conflict · Button JSON example used <code>spacing/2 spacing/3</code> (8 × 12)</div><div class="v">Updated to <code>spacing/2 spacing/4</code> (8 × 16) to match the corrected Md padding spec in Component Guide.</div></div></div>
+        <div class="find warn"><iconify-icon icon="eva:alert-triangle-fill"></iconify-icon><div><div class="k">Verified · Component enumeration now closed</div><div class="v">All nine components in §1 (Button, Card, Input, Badge, Toast, Sidebar, Topbar, Modal, Table) have full entries in Component Guide after the stubs were added.</div></div></div>
+      </div>
+    </div>
+    <span class="res pass"><iconify-icon icon="eva:checkmark-circle-2-fill"></iconify-icon>Pass</span>
+  </div>
+
+  <!-- Summary -->
+  <div class="summary">
+    <h3>Audit summary</h3>
+    <table>
+      <thead><tr><th>Area</th><th>Findings</th><th class="r">Patches</th><th class="r">Result</th></tr></thead>
+      <tbody>
+        <tr><td>01 · Foundation</td><td>Token tree closed; success ramp + glow palette aligned to source colours.</td><td class="r">3</td><td class="r"><span class="v p">Pass</span></td></tr>
+        <tr><td>02 · Component Variant</td><td>Type / Status / State / Variant axes separated; 4 components stubbed in.</td><td class="r">6</td><td class="r"><span class="v p">Pass</span></td></tr>
+        <tr><td>03 · State System</td><td>Twelve-state matrix is canonical; every component list is a clean subset.</td><td class="r">0</td><td class="r"><span class="v p">Pass</span></td></tr>
+        <tr><td>04 · Layout Pattern</td><td>Cross-layer overlaps documented; no structural conflict.</td><td class="r">0</td><td class="r"><span class="v c">Pass · notes</span></td></tr>
+        <tr><td>05 · AI Prompt</td><td>Roles + button JSON re-aligned with Component Guide.</td><td class="r">2</td><td class="r"><span class="v p">Pass</span></td></tr>
+        <tr><td><b>Total</b></td><td>11 critical conflicts patched · 4 friction notes deferred</td><td class="r"><b>11</b></td><td class="r"><span class="v p">Stable</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="note">
+    <iconify-icon icon="solar:info-circle-bold"></iconify-icon>
+    <div class="body"><b>Stability-first patches.</b> Only structural data was edited (token JSON + the variant/state/role tables in markdown source). No HTML preview file, CSS, or asset was touched — markdown rendering issues will be addressed in a separate pass without affecting the now-validated structure.</div>
+  </div>
+
+</div>
+</body>
+</html>

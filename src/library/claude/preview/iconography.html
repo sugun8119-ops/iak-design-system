@@ -1,0 +1,86 @@
+<!doctype html>
+<!-- @dsCard group="Brand" name="Iconography" subtitle="Minimal Web canonical · Eva + Solar solid · 16 / 20 / 24 px" viewport="1200x640" --><html><head><meta charset="utf-8"><title>Iconography</title>
+<script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body{margin:0;padding:24px;background:var(--bg-elevated);color:var(--fg-primary)}
+  .stack{display:flex;flex-direction:column;gap:24px;max-width:1100px}
+  .head{display:flex;align-items:flex-start;justify-content:space-between;gap:24px}
+  .head h2{margin:0 0 4px;font:var(--text-title);color:var(--fg-strong)}
+  .head p{margin:0;font:var(--text-caption);color:var(--fg-secondary);max-width:560px}
+  .badge{display:inline-flex;align-items:center;gap:6px;padding:4px 10px;border-radius:500px;background:rgba(255,167,38,.14);color:var(--accent);font:700 11px/1 var(--font-ui);letter-spacing:.06em;text-transform:uppercase}
+  .card{background:var(--bg-card);border-radius:16px;padding:24px;box-shadow:var(--shadow-card)}
+  .card h3{margin:0 0 4px;font:var(--text-body-strong);color:var(--fg-strong);font-size:13px;letter-spacing:.04em;text-transform:uppercase}
+  .card .sub{font:var(--text-caption);color:var(--fg-muted);margin-bottom:14px}
+  .row{display:grid;grid-template-columns:repeat(8,1fr);gap:18px 14px}
+  .ic{display:flex;flex-direction:column;align-items:center;gap:6px;color:var(--fg-secondary)}
+  .ic iconify-icon{color:var(--fg-primary)}
+  .ic.acc iconify-icon{color:var(--accent)}
+  .lbl{font:var(--text-caption);color:var(--fg-muted)}
+  .sizes{display:flex;align-items:center;gap:24px}
+  .sizes .ic{flex-direction:row}
+  .rules{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  .rule{display:flex;gap:12px;align-items:flex-start}
+  .rule iconify-icon{flex:0 0 18px;margin-top:1px}
+  .rule.do iconify-icon{color:var(--rais-success-light)}
+  .rule.dont iconify-icon{color:var(--rais-error)}
+  .rule b{display:block;color:var(--fg-strong);font:var(--text-body-strong);margin-bottom:2px}
+  .rule span{font:var(--text-caption);color:var(--fg-secondary)}
+</style></head>
+<body>
+<div class="stack">
+  <div class="head">
+    <div>
+      <h2>Iconography</h2>
+      <p>Solid (filled) icons only — Eva for navigation/arrows, Solar for status &amp; objects. Style is locked to the <strong>Minimal Web</strong> reference: friendly squircle geometry, single-colour, inherits <code>currentColor</code>. No outline/hairline icons in this dark system.</p>
+    </div>
+    <span class="badge">Minimal Web · Canonical</span>
+  </div>
+
+  <div class="card">
+    <h3>Catalogue · 24 px</h3>
+    <div class="sub">Default product size. Renders at <code>currentColor</code>.</div>
+    <div class="row">
+      <div class="ic"><iconify-icon icon="eva:arrow-ios-back-fill" width="24"></iconify-icon><span class="lbl">back</span></div>
+      <div class="ic"><iconify-icon icon="eva:arrow-ios-forward-fill" width="24"></iconify-icon><span class="lbl">forward</span></div>
+      <div class="ic"><iconify-icon icon="eva:arrow-ios-downward-fill" width="24"></iconify-icon><span class="lbl">down</span></div>
+      <div class="ic"><iconify-icon icon="solar:close-circle-bold" width="24"></iconify-icon><span class="lbl">close</span></div>
+      <div class="ic acc"><iconify-icon icon="solar:bell-bold" width="24"></iconify-icon><span class="lbl">bell</span></div>
+      <div class="ic"><iconify-icon icon="eva:search-fill" width="24"></iconify-icon><span class="lbl">search</span></div>
+      <div class="ic"><iconify-icon icon="eva:more-horizontal-fill" width="24"></iconify-icon><span class="lbl">more</span></div>
+      <div class="ic acc"><iconify-icon icon="solar:check-circle-bold" width="24"></iconify-icon><span class="lbl">check</span></div>
+      <div class="ic"><iconify-icon icon="solar:letter-bold" width="24"></iconify-icon><span class="lbl">mail</span></div>
+      <div class="ic"><iconify-icon icon="solar:chat-round-line-bold" width="24"></iconify-icon><span class="lbl">chat</span></div>
+      <div class="ic"><iconify-icon icon="solar:users-group-rounded-bold" width="24"></iconify-icon><span class="lbl">users</span></div>
+      <div class="ic"><iconify-icon icon="solar:chart-2-bold" width="24"></iconify-icon><span class="lbl">chart</span></div>
+      <div class="ic"><iconify-icon icon="solar:settings-bold" width="24"></iconify-icon><span class="lbl">settings</span></div>
+      <div class="ic"><iconify-icon icon="solar:bag-2-bold" width="24"></iconify-icon><span class="lbl">bag</span></div>
+      <div class="ic"><iconify-icon icon="solar:bank-bold" width="24"></iconify-icon><span class="lbl">bank</span></div>
+      <div class="ic"><iconify-icon icon="solar:danger-triangle-bold" width="24"></iconify-icon><span class="lbl">warn</span></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Sizes</h3>
+    <div class="sub">Three sanctioned sizes. <code>S 16</code> for chips &amp; inline. <code>M 20</code> for buttons. <code>L 24</code> for nav.</div>
+    <div class="sizes">
+      <div class="ic"><iconify-icon icon="solar:bell-bold" width="16"></iconify-icon><span class="lbl">16</span></div>
+      <div class="ic"><iconify-icon icon="solar:bell-bold" width="20"></iconify-icon><span class="lbl">20</span></div>
+      <div class="ic"><iconify-icon icon="solar:bell-bold" width="24"></iconify-icon><span class="lbl">24</span></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Rules</h3>
+    <div class="sub">Updated 2026-05-10 per <code>05_Update-Rules</code>.</div>
+    <div class="rules">
+      <div class="rule do"><iconify-icon icon="solar:check-circle-bold" width="18"></iconify-icon><div><b>Solid, single-colour, currentColor</b><span>Lock to filled glyphs. Tint via CSS, never hard-code a fill.</span></div></div>
+      <div class="rule dont"><iconify-icon icon="solar:close-circle-bold" width="18"></iconify-icon><div><b>No outline / hairline icons</b><span>They read as broken on the deep-black canvas.</span></div></div>
+      <div class="rule do"><iconify-icon icon="solar:check-circle-bold" width="18"></iconify-icon><div><b>Eva for nav arrows, Solar for objects</b><span>Both are filled and visually compatible; mix freely.</span></div></div>
+      <div class="rule dont"><iconify-icon icon="solar:close-circle-bold" width="18"></iconify-icon><div><b>No emoji in product chrome</b><span>Status uses coloured dots, never emoji.</span></div></div>
+      <div class="rule do"><iconify-icon icon="solar:check-circle-bold" width="18"></iconify-icon><div><b>16 / 20 / 24 only</b><span>Match the Figma component sizes. Nothing in between.</span></div></div>
+      <div class="rule dont"><iconify-icon icon="solar:close-circle-bold" width="18"></iconify-icon><div><b>Don't combine icons in a single glyph</b><span>One concept, one icon. Use a chip for compound state.</span></div></div>
+    </div>
+  </div>
+</div>
+</body></html>

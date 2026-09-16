@@ -1,0 +1,27 @@
+<!doctype html>
+<!-- @dsCard group="Components" name="Inputs" subtitle="Default · Filled · Focused · Error · Disabled" viewport="700x260" --><html><head><meta charset="utf-8"><title>Inputs</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body{margin:0;padding:20px;background:var(--bg-elevated);color:var(--fg-primary)}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:14px 18px}
+  .field{display:flex;flex-direction:column;gap:6px}
+  .lbl{font:var(--text-caption);color:var(--fg-secondary)}
+  .lbl-orange{color:var(--accent)}
+  .ctrl{height:42px;border-radius:8px;background:transparent;border:1px solid var(--border-strong);padding:0 14px;display:flex;align-items:center;color:var(--fg-primary);font:var(--text-body);font-feature-settings:"tnum"}
+  .ctrl.placeholder{color:var(--fg-muted)}
+  .ctrl.filled{background:var(--bg-field);border-color:transparent}
+  .ctrl.focused{border-color:var(--focus-border);box-shadow:var(--focus-ring);color:var(--fg-strong)}
+  .ctrl.error{border-color:var(--rais-error);color:var(--rais-error)}
+  .ctrl.disabled{background:var(--rais-alpha-08);color:var(--fg-muted);border-color:transparent}
+  .help{font:var(--text-caption);color:var(--rais-error)}
+</style></head>
+<body>
+<div class="grid">
+  <div class="field"><span class="lbl">Default</span><div class="ctrl placeholder">Placeholder</div></div>
+  <div class="field"><span class="lbl">Filled</span><div class="ctrl filled">Value</div></div>
+  <div class="field"><span class="lbl lbl-orange">Focused</span><div class="ctrl focused">Caret here|</div></div>
+  <div class="field"><span class="lbl">Error</span><div class="ctrl error">Invalid value</div><span class="help">Field is required</span></div>
+  <div class="field"><span class="lbl">Disabled</span><div class="ctrl disabled">Read-only</div></div>
+  <div class="field"><span class="lbl">With label · floating</span><div class="ctrl filled" style="position:relative">Mason@iak.studio<span style="position:absolute;top:-7px;left:10px;background:var(--bg-elevated);padding:0 4px;font:var(--text-caption);color:var(--accent)">Email</span></div></div>
+</div>
+</body></html>

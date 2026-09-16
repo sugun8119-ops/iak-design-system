@@ -1,3 +1,4 @@
+import { library } from "./library-ui.js";
 const main = document.querySelector("main");
 let data, toastTimer;
 const esc = (s) =>
@@ -40,16 +41,16 @@ const note =
 const header = (eyebrow, title, lead) =>
   `<div class="crumb">IAK / ${eyebrow}</div><span class="eyebrow">${eyebrow}</span><h1 class="page-title">${title}</h1><p class="lead">${lead}</p>`;
 function overview() {
-  main.innerHTML = `<div class="crumb">Design System / Overview</div><div class="hero"><div class="hero-copy"><span class="eyebrow">A shared starting point</span><h1>좋은 디자인을,<br><em>다음 작업의 시작으로.</em></h1><p>템플릿과 디자인 규칙을 AI에 연결하세요.<br>아이디어가 내 컴퓨터에서 동작하는 화면이 됩니다.</p><a class="button" href="#start">IAK로 시작하기 <span>↗</span></a></div><div class="hero-art" aria-hidden="true"><div class="art-grid"><div class="tile">Aa</div><div class="tile">↗</div><div class="tile">▦</div><div class="tile">✳</div></div><span class="art-tag">FOUNDATIONS FOR MAKING</span></div></div><div class="steps"><div class="step"><span>01</span><div><h3>스킬 설치</h3><p>명령 하나로 AI에 공통 규칙을 연결합니다.</p></div></div><div class="step"><span>02</span><div><h3>템플릿 선택</h3><p>마음에 드는 구성의 URL을 복사합니다.</p></div></div><div class="step"><span>03</span><div><h3>자연어로 만들기</h3><p>필요한 기능을 요청하고 로컬에서 확인합니다.</p></div></div></div><div class="section-head"><div><h2>작업의 시작점을 골라보세요.</h2><p>기능에 맞게 바꿀 수 있는 세 가지 레이아웃.</p></div><a class="text-link" href="#templates">모든 템플릿 보기 ↗</a></div><div class="cards">${data.templates.map(card).join("")}</div>${note}`;
+  main.innerHTML = `<div class="crumb">Design System / Overview</div><div class="hero"><div class="hero-copy"><span class="eyebrow">A shared starting point</span><h1>좋은 디자인을,<br><em>다음 작업의 시작으로.</em></h1><p>템플릿과 디자인 규칙을 AI에 연결하세요.<br>아이디어가 내 컴퓨터에서 동작하는 화면이 됩니다.</p><a class="button" href="#start">IAK로 시작하기 <span>↗</span></a></div><div class="hero-art" aria-hidden="true"><div class="art-grid"><div class="tile">Aa</div><div class="tile">↗</div><div class="tile">▦</div><div class="tile">✳</div></div><span class="art-tag">FOUNDATIONS FOR MAKING</span></div></div><section class="panel source-callout"><span class="eyebrow">CLAUDE DESIGN ORIGINALS</span><h2>IAK의 실제 디자인 자산을 담았습니다.</h2><p>162개 토큰 · 30개 원본 미리보기 · Pretendard 9개 굵기</p><a class="button" href="#assets">디자인 자산 둘러보기 ↗</a></section><div class="steps"><div class="step"><span>01</span><div><h3>스킬 설치</h3><p>명령 하나로 AI에 공통 규칙을 연결합니다.</p></div></div><div class="step"><span>02</span><div><h3>템플릿 선택</h3><p>마음에 드는 구성의 URL을 복사합니다.</p></div></div><div class="step"><span>03</span><div><h3>자연어로 만들기</h3><p>필요한 기능을 요청하고 로컬에서 확인합니다.</p></div></div></div><div class="section-head"><div><h2>작업의 시작점을 골라보세요.</h2><p>기능에 맞게 바꿀 수 있는 세 가지 레이아웃.</p></div><a class="text-link" href="#templates">모든 템플릿 보기 ↗</a></div><div class="cards">${data.templates.map(card).join("")}</div>${note}`;
 }
 function templates() {
   main.innerHTML =
     header(
       "TEMPLATES",
       "처음부터 시작하지 않아도 돼요.",
-      "레이아웃을 고르고 필요한 기능을 더해보세요. 아래 3개는 이번에 만든 초안 예제입니다.",
+      "Claude Design 원본 UI 킷과 직접 만든 초안 예제를 구분해서 선택하세요.",
     ) +
-    `<label for="search">템플릿 검색</label><input type="search" id="search" class="search" placeholder="이름 또는 기능으로 검색"><div class="filters" role="group" aria-label="템플릿 분류">${["전체", "결제", "랜딩", "대시보드"].map((x, i) => `<button class="filter" aria-pressed="${!i}" data-category="${x}">${x}</button>`).join("")}</div><div id="results" class="cards"></div><p id="count" aria-live="polite" class="lead"></p>${note}`;
+    `<section class="panel"><h2>Claude Design 원본 UI 킷</h2><p>실제 IAK 시스템의 레이아웃을 확인하고 URL과 요청문을 복사하세요.</p><div class="sample-row">${[["ai-crm/index.html","AI CRM"],["rais-audit/index v2.html","Audit Dashboard"],["rais-dashboard/index.html","Mailing Dashboard"]].map(([p,n])=>`<a class="button" href="library/view.html?file=${encodeURIComponent("ui_kits/"+p)}">${n} ↗</a>`).join("")}</div></section><h2>초안 예제</h2><label for="search">템플릿 검색</label><input type="search" id="search" class="search" placeholder="이름 또는 기능으로 검색"><div class="filters" role="group" aria-label="템플릿 분류">${["전체", "결제", "랜딩", "대시보드"].map((x, i) => `<button class="filter" aria-pressed="${!i}" data-category="${x}">${x}</button>`).join("")}</div><div id="results" class="cards"></div><p id="count" aria-live="polite" class="lead"></p>${note}`;
   let cat = "전체";
   const render = () => {
     const q = document.querySelector("#search").value.trim().toLowerCase();
@@ -83,7 +84,7 @@ function start() {
       "선택한 디자인을, 실제 화면으로.",
       "스킬을 설치하고 템플릿 URL과 원하는 기능을 Codex에 전달하세요.",
     ) +
-    `<section class="panel"><h2>01 · 스킬 설치와 업데이트</h2><p>${data.siteUrl ? "Codex 터미널에 복사해 실행하세요. Node.js 20 이상과 curl이 필요합니다." : "로컬 저장소 폴더에서 아래 명령을 실행하세요. GitHub Pages 배포 시 다른 컴퓨터에서도 쓸 수 있는 원격 명령으로 바뀝니다."}</p><pre id="command">${esc(data.command)}</pre><button class="button primary" id="copyCommand">명령 복사</button><p>같은 명령으로 최신 SKILL.md를 설치합니다. 실패하면 기존 파일을 유지합니다.</p></section><div class="two-col"><section class="panel"><h2>02 · 원하는 작업 입력</h2><form id="promptForm"><label for="templateUrl">템플릿 URL</label><input type="url" id="templateUrl" required placeholder="https://…"><label for="features">만들 화면과 기능</label><textarea id="features" required placeholder="이 템플릿과 유사하게 이벤트 결제 페이지를 만들어줘. 티켓 선택과 할인 코드를 넣어줘."></textarea><button class="button primary" style="margin-top:15px">요청문 만들기</button></form></section><section class="panel"><h2>03 · Codex에 붙여넣기</h2><pre id="prompt">템플릿 URL과 기능을 입력하면 요청문이 만들어집니다.</pre><button class="button" id="copyPrompt" disabled>요청문 복사</button><p>요청문을 Codex 작업 입력창에 붙여넣으세요. 이 사이트가 AI를 자동 호출하지는 않습니다.</p></section></div><div class="callout">기존 IAK 사이트에서 확인한 다크·오렌지 스타일을 적용했습니다. 전체 공식 디자인 시스템과의 대조는 별도 원본 연결 후 진행합니다.</div>`;
+    `<section class="panel"><h2>01 · 스킬 설치와 업데이트</h2><p>${data.siteUrl ? "Codex 터미널에 복사해 실행하세요. Node.js 20 이상과 curl이 필요합니다." : "로컬 저장소 폴더에서 아래 명령을 실행하세요. GitHub Pages 배포 시 다른 컴퓨터에서도 쓸 수 있는 원격 명령으로 바뀝니다."}</p><pre id="command">${esc(data.command)}</pre><button class="button primary" id="copyCommand">명령 복사</button><p>같은 명령으로 최신 SKILL.md를 설치합니다. 실패하면 기존 파일을 유지합니다.</p></section><div class="two-col"><section class="panel"><h2>02 · 원하는 작업 입력</h2><form id="promptForm"><label for="templateUrl">템플릿 URL</label><input type="url" id="templateUrl" required placeholder="https://…"><label for="features">만들 화면과 기능</label><textarea id="features" required placeholder="이 템플릿과 유사하게 이벤트 결제 페이지를 만들어줘. 티켓 선택과 할인 코드를 넣어줘."></textarea><button class="button primary" style="margin-top:15px">요청문 만들기</button></form></section><section class="panel"><h2>03 · Codex에 붙여넣기</h2><pre id="prompt">템플릿 URL과 기능을 입력하면 요청문이 만들어집니다.</pre><button class="button" id="copyPrompt" disabled>요청문 복사</button><p>요청문을 Codex 작업 입력창에 붙여넣으세요. 이 사이트가 AI를 자동 호출하지는 않습니다.</p></section></div><div class="callout">Claude Design의 IAK 원본을 연결했습니다. 162개 토큰과 실제 브랜드·폰트·컴포넌트 자산을 디자인 자산 메뉴에서 확인하세요.</div>`;
   document.querySelector("#copyCommand").onclick = () => copy(data.command);
   const form = document.querySelector("#promptForm");
   form.oninput = () => (document.querySelector("#copyPrompt").disabled = true);
@@ -104,50 +105,9 @@ function start() {
     }
   };
 }
-function foundations() {
-  main.innerHTML =
-    header(
-      "FOUNDATIONS",
-      "함께 사용하는 디자인 기준.",
-      "프로젝트에 적용할 공식 규칙과 라이브러리의 실험값을 구분합니다.",
-    ) +
-    `<div class="callout">적용 출처: 기존 IAK 사이트 소스 · 다크 표면, 오렌지 강조, 텍스트 위계와 버튼 패턴.</div><section class="panel"><h2>기존 IAK 사이트에서 확인한 토큰</h2>${Object.keys(data.design.tokens).length ? `<pre>${esc(JSON.stringify(data.design.tokens, null, 2))}</pre>` : "<p>아직 등록된 토큰이 없습니다. 원본 Figma 또는 디자인 문서를 확인한 후 등록합니다.</p>"}</section><section class="panel"><h2>적용된 IAK 사이트 팔레트</h2><p>기존 사이트의 값을 현재 라이브러리와 초안 예제에 연결했습니다.</p><div class="token-grid">${[
-      ["Text", "#f2f3f5"],
-      ["Accent", "#ffa726"],
-      ["Surface", "#141416"],
-      ["Background", "#0a0a0c"],
-    ]
-      .map(
-        ([n, c]) =>
-          `<div class="swatch"><div style="background:${c}"></div><p>${n}<br>${c}</p></div>`,
-      )
-      .join(
-        "",
-      )}</div></section><section class="panel"><h2>공통 작업 규칙</h2><ul>${data.design.rules.map((r) => `<li>${esc(r)}</li>`).join("")}</ul></section>${note}`;
-}
-function components() {
-  main.innerHTML =
-    header(
-      "COMPONENTS",
-      "작은 요소부터 일관되게.",
-      "브라우저 기본 요소로 만든 초안 상태 예제입니다. 공식 컴포넌트 패키지는 아닙니다.",
-    ) +
-    `<section class="panel"><h2>Button</h2><p>기본 · 보조 · 비활성화</p><div class="sample-row"><button class="button primary" id="demoButton">프로젝트 만들기</button><button class="button" id="demoCancel">취소</button><button class="button" disabled>저장 중…</button></div></section><section class="panel"><h2>Input</h2><form id="demoForm" novalidate><label for="demoInput">프로젝트 이름</label><input id="demoInput" placeholder="프로젝트 이름을 입력하세요" aria-describedby="demoError"><p id="demoError" class="error" hidden>이름을 입력해 주세요.</p><button class="button" style="margin-top:12px">입력 확인</button></form></section><section class="panel"><h2>Select</h2><label for="demoSelect">프로젝트 상태</label><select id="demoSelect"><option>기획 중</option><option>진행 중</option><option>완료</option></select></section>${note}`;
-  document.querySelector("#demoButton").onclick = () =>
-    notify("버튼 동작을 확인했습니다.");
-  document.querySelector("#demoCancel").onclick = () =>
-    notify("취소 버튼 예제입니다.");
-  document.querySelector("#demoForm").onsubmit = (e) => {
-    e.preventDefault();
-    const input = document.querySelector("#demoInput"),
-      bad = !input.value.trim();
-    document.querySelector("#demoError").hidden = !bad;
-    input.setAttribute("aria-invalid", bad);
-    input.classList.toggle("input-error", bad);
-    if (bad) input.focus();
-    else notify("입력한 이름을 확인했습니다.");
-  };
-}
+function foundations() { library(main, "tokens").catch(() => main.textContent = "자산을 불러오지 못했습니다."); }
+function components() { library(main, "Components").catch(() => main.textContent = "자산을 불러오지 못했습니다."); }
+function assets() { library(main).catch(() => main.textContent = "자산을 불러오지 못했습니다."); }
 function repository() {
   main.innerHTML =
     header(
@@ -163,7 +123,7 @@ function render() {
     .querySelectorAll("aside a")
     .forEach((a) => a.classList.toggle("active", a.hash === "#" + key));
   (
-    ({ overview, templates, start, foundations, components, repository })[
+    ({ overview, templates, start, foundations, components, assets, repository })[
       key
     ] || overview
   )();

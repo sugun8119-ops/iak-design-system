@@ -1,0 +1,332 @@
+<!doctype html>
+<!-- @dsCard group="Brand" name="Information Architecture" subtitle="32 → 22 items, 6 pillars, all renames + merges receipted" -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>RAIS · Information Architecture</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="../colors_and_type.css">
+<script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+<style>
+  body{margin:0;background:var(--bg-canvas);color:var(--fg-primary);min-height:100vh}
+  .wrap{max-width:1280px;margin:0 auto;padding:64px 48px 96px}
+
+  /* ─── Header ─── */
+  .hdr{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;padding-bottom:24px;border-bottom:1px solid var(--border-subtle);margin-bottom:48px}
+  .hdr .ovl{font:var(--text-overline);color:var(--accent);margin-bottom:12px}
+  .hdr h1{margin:0;font:var(--text-h1);color:var(--fg-strong);max-width:680px;letter-spacing:-.01em}
+  .hdr p{margin:14px 0 0;font:var(--text-body);color:var(--fg-secondary);max-width:560px}
+  .hdr .meta{text-align:right;font:var(--text-caption);color:var(--fg-muted)}
+  .hdr .meta b{display:block;color:var(--fg-strong);font:var(--text-body-strong);margin-bottom:4px}
+
+  /* ─── Counters ─── */
+  .counters{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:56px}
+  .counters .c{background:var(--bg-card);border:1px solid var(--border-default);border-radius:16px;padding:20px}
+  .counters .c .lbl{font:var(--text-overline);color:var(--fg-muted)}
+  .counters .c .val{font:700 32px/40px var(--font-ui);color:var(--fg-strong);margin-top:6px;font-feature-settings:"tnum"}
+  .counters .c .delta{font:var(--text-caption);color:var(--rais-success-light);margin-top:4px;display:flex;align-items:center;gap:4px}
+  .counters .c .delta iconify-icon{font-size:12px}
+
+  /* ─── Section heading ─── */
+  .sec-h{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin:64px 0 20px;padding-bottom:14px;border-bottom:1px solid var(--border-subtle)}
+  .sec-h h2{margin:0;font:var(--text-h2);color:var(--fg-strong);letter-spacing:-.01em}
+  .sec-h .desc{font:var(--text-body);color:var(--fg-secondary);max-width:520px;text-align:right}
+
+  /* ─── New IA grid ─── */
+  .ia{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+  .pillar{background:var(--bg-card);border:1px solid var(--border-default);border-radius:24px;padding:28px;display:flex;flex-direction:column;gap:18px}
+  .pillar .ph{display:flex;align-items:flex-start;justify-content:space-between;gap:16px}
+  .pillar .ph .num{font:700 11px/1 var(--font-ui);letter-spacing:.18em;color:var(--accent)}
+  .pillar .ph h3{margin:8px 0 6px;font:var(--text-title);color:var(--fg-strong);letter-spacing:-.01em}
+  .pillar .ph p{margin:0;font:var(--text-body);color:var(--fg-secondary)}
+  .pillar .ph .plate{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;flex-shrink:0;background:rgba(255,167,38,.12);color:var(--accent)}
+  .pillar .ph .plate iconify-icon{font-size:22px}
+  .pillar .ct{font:var(--text-overline);color:var(--fg-muted)}
+  .pillar ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px}
+  .pillar li{display:grid;grid-template-columns:170px 1fr auto;gap:16px;padding:12px 0;border-top:1px solid var(--border-subtle);align-items:baseline}
+  .pillar li:first-child{border-top:none}
+  .pillar li .nm{font:var(--text-body-strong);color:var(--fg-primary)}
+  .pillar li .pp{font:var(--text-caption);color:var(--fg-secondary)}
+  .pillar li .tag{justify-self:end;font:var(--text-overline);color:var(--fg-muted);padding:3px 8px;border-radius:500px;background:var(--rais-alpha-08);white-space:nowrap}
+  .pillar li .tag.merged{color:var(--rais-info);background:rgba(76,154,236,.10)}
+  .pillar li .tag.renamed{color:var(--rais-warning);background:rgba(250,174,62,.10)}
+  .pillar li .tag.new{color:var(--accent);background:rgba(255,167,38,.10)}
+
+  /* ─── Renames + Merges ─── */
+  .changes{margin-top:24px;background:var(--bg-card);border:1px solid var(--border-default);border-radius:24px;overflow:hidden}
+  .changes .h{padding:24px 28px;border-bottom:1px solid var(--border-subtle);display:flex;justify-content:space-between;align-items:center}
+  .changes .h h3{margin:0;font:var(--text-title);color:var(--fg-strong)}
+  .changes .h .tot{font:var(--text-overline);color:var(--fg-muted)}
+  .changes table{width:100%;border-collapse:collapse}
+  .changes th,.changes td{text-align:left;padding:14px 28px;font:var(--text-body);vertical-align:top}
+  .changes th{font:var(--text-overline);color:var(--fg-muted);background:var(--rais-grey-900);border-bottom:1px solid var(--border-subtle)}
+  .changes td{border-bottom:1px solid var(--border-subtle);color:var(--fg-primary)}
+  .changes tr:last-child td{border-bottom:none}
+  .changes .arr{color:var(--fg-muted)}
+  .changes .from{color:var(--fg-muted);text-decoration:line-through}
+  .changes .to{color:var(--fg-strong);font-weight:500}
+  .changes .why{color:var(--fg-secondary);font:var(--text-caption)}
+  .changes .kind{display:inline-flex;align-items:center;gap:6px;padding:3px 10px;border-radius:500px;font:var(--text-overline)}
+  .changes .kind.merge{color:var(--rais-info);background:rgba(76,154,236,.10)}
+  .changes .kind.rename{color:var(--rais-warning);background:rgba(250,174,62,.10)}
+
+  /* ─── Sidebar mock ─── */
+  .menu-mock{margin-top:48px;display:grid;grid-template-columns:280px 1fr;gap:24px;background:var(--bg-card);border:1px solid var(--border-default);border-radius:24px;overflow:hidden;min-height:520px}
+  .menu-mock .nav{background:var(--bg-canvas);border-right:1px solid var(--border-subtle);padding:24px 16px;display:flex;flex-direction:column;gap:6px}
+  .menu-mock .grp{font:var(--text-overline);color:var(--fg-muted);padding:14px 10px 6px}
+  .menu-mock .lk{display:flex;align-items:center;gap:10px;padding:9px 10px;border-radius:8px;color:var(--fg-secondary);font:500 13px/1.4 var(--font-ui);cursor:pointer}
+  .menu-mock .lk iconify-icon{font-size:16px;color:var(--fg-muted)}
+  .menu-mock .lk:hover{background:var(--rais-alpha-08);color:var(--fg-strong)}
+  .menu-mock .lk.active{background:rgba(255,167,38,.10);color:var(--fg-strong);box-shadow:inset 2px 0 0 var(--accent)}
+  .menu-mock .lk.active iconify-icon{color:var(--accent)}
+  .menu-mock .lk .ct{margin-left:auto;font:var(--text-caption);color:var(--fg-muted)}
+  .menu-mock .pv{padding:32px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;gap:14px}
+  .menu-mock .pv .ovl{font:var(--text-overline);color:var(--accent)}
+  .menu-mock .pv h4{margin:0;font:var(--text-h2);color:var(--fg-strong);letter-spacing:-.01em}
+  .menu-mock .pv p{margin:0;font:var(--text-body);color:var(--fg-secondary);max-width:380px}
+
+  /* ─── Footer note ─── */
+  .note{margin-top:32px;display:flex;gap:12px;padding:18px 22px;background:rgba(76,154,236,.06);border:1px solid rgba(76,154,236,.22);border-radius:12px}
+  .note iconify-icon{font-size:18px;color:var(--rais-info);flex-shrink:0;margin-top:2px}
+  .note .body{font:var(--text-body);color:var(--fg-secondary)}
+  .note b{color:var(--fg-strong);font-weight:500}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- Header -->
+  <header class="hdr">
+    <div>
+      <div class="ovl">RAIS · Information Architecture · Proposal</div>
+      <h1>Reorganising the design system into six operating areas.</h1>
+      <p>32 existing items collapsed into a clearer six-pillar map. Nothing deleted — items are renamed for clarity, merged where they overlap, and grouped under the role they serve in day-to-day use.</p>
+    </div>
+    <div class="meta">
+      <b>v 2026.05.10f</b>
+      Reclassification only<br>No tokens changed<br>32 items · 6 pillars
+    </div>
+  </header>
+
+  <!-- Counters -->
+  <div class="counters">
+    <div class="c"><div class="lbl">Before</div><div class="val">32</div><div class="delta" style="color:var(--fg-muted)">items in flat list</div></div>
+    <div class="c"><div class="lbl">After</div><div class="val">22</div><div class="delta"><iconify-icon icon="eva:arrow-downward-fill"></iconify-icon>−10 via merges</div></div>
+    <div class="c"><div class="lbl">Renamed</div><div class="val">8</div><div class="delta" style="color:var(--rais-warning)"><iconify-icon icon="eva:edit-fill"></iconify-icon>awkward labels fixed</div></div>
+    <div class="c"><div class="lbl">Pillars</div><div class="val">6</div><div class="delta" style="color:var(--accent)"><iconify-icon icon="eva:layers-fill"></iconify-icon>operating areas</div></div>
+  </div>
+
+  <!-- ─── Pillars ─── -->
+  <div class="sec-h">
+    <h2>The six pillars</h2>
+    <div class="desc">Each pillar groups items by the question it answers — from "what does it look like" through "is it correct".</div>
+  </div>
+
+  <div class="ia">
+
+    <!-- 1 Foundation -->
+    <div class="pillar">
+      <div class="ph">
+        <div>
+          <div class="num">01</div>
+          <h3>Foundation</h3>
+          <p>The atoms — colour, type, space, motion, brand. Everything else inherits from here.</p>
+        </div>
+        <div class="plate"><iconify-icon icon="solar:atom-bold"></iconify-icon></div>
+      </div>
+      <div class="ct">8 items</div>
+      <ul>
+        <li><div class="nm">Color</div><div class="pp">Primary, surface, greyscale and semantic palettes in one specimen.</div><span class="tag merged">merged ×5</span></li>
+        <li><div class="nm">Typography</div><div class="pp">Pretendard ladder — display, scale and live specimen.</div><span class="tag merged">merged ×4</span></li>
+        <li><div class="nm">Spacing</div><div class="pp">4-pt spacing scale and applied gap demonstration.</div><span class="tag merged">merged ×2</span></li>
+        <li><div class="nm">Radius</div><div class="pp">Corner-radius scale from chips to cards.</div><span class="tag">kept</span></li>
+        <li><div class="nm">Shadow</div><div class="pp">Elevation tokens for cards, popovers and toasts.</div><span class="tag">kept</span></li>
+        <li><div class="nm">Glow</div><div class="pp">Accent halo tokens for focus and active states.</div><span class="tag renamed">renamed</span></li>
+        <li><div class="nm">Iconography</div><div class="pp">Icon set, sizing rules and stroke conventions.</div><span class="tag renamed">renamed</span></li>
+        <li><div class="nm">Brand Mark</div><div class="pp">Logo lock-up, clear-space, colour and misuse rules.</div><span class="tag">kept</span></li>
+      </ul>
+    </div>
+
+    <!-- 2 Components -->
+    <div class="pillar">
+      <div class="ph">
+        <div>
+          <div class="num">02</div>
+          <h3>Components</h3>
+          <p>The building blocks — every UI element with all of its states defined and previewable.</p>
+        </div>
+        <div class="plate" style="background:rgba(76,154,236,.12);color:var(--rais-info)"><iconify-icon icon="solar:widget-5-bold"></iconify-icon></div>
+      </div>
+      <div class="ct">6 items</div>
+      <ul>
+        <li><div class="nm">Buttons</div><div class="pp">Primary, secondary, danger, text · 6 interaction states.</div><span class="tag">kept</span></li>
+        <li><div class="nm">Cards</div><div class="pp">Metric, list and content cards · default through loading.</div><span class="tag">kept</span></li>
+        <li><div class="nm">Inputs</div><div class="pp">Text fields, selects, and field groups · 4 states.</div><span class="tag renamed">renamed</span></li>
+        <li><div class="nm">Badges</div><div class="pp">Status chips for pass, review, fail and info.</div><span class="tag renamed">renamed</span></li>
+        <li><div class="nm">Toasts</div><div class="pp">Transient success, error and info notifications.</div><span class="tag renamed">renamed</span></li>
+        <li><div class="nm">Component Guide</div><div class="pp">Anatomy, props and usage rules for every component.</div><span class="tag">kept</span></li>
+      </ul>
+    </div>
+
+    <!-- 3 Patterns -->
+    <div class="pillar">
+      <div class="ph">
+        <div>
+          <div class="num">03</div>
+          <h3>Patterns</h3>
+          <p>How components compose — page templates, dashboards and reference applications.</p>
+        </div>
+        <div class="plate" style="background:rgba(39,218,104,.12);color:var(--rais-success-light)"><iconify-icon icon="solar:layers-bold"></iconify-icon></div>
+      </div>
+      <div class="ct">3 items</div>
+      <ul>
+        <li><div class="nm">Layout Patterns</div><div class="pp">Page templates, grid system and responsive rules.</div><span class="tag">kept</span></li>
+        <li><div class="nm">Dashboard UI Kit</div><div class="pp">RAIS dashboard reference — full screens with real data.</div><span class="tag">kept</span></li>
+        <li><div class="nm">State System</div><div class="pp">12-state matrix and motion specs across the system.</div><span class="tag renamed">renamed</span></li>
+      </ul>
+    </div>
+
+    <!-- 4 Governance -->
+    <div class="pillar">
+      <div class="ph">
+        <div>
+          <div class="num">04</div>
+          <h3>Governance</h3>
+          <p>The rules of the system — how it's used, how it changes, and where to start.</p>
+        </div>
+        <div class="plate" style="background:rgba(250,174,62,.12);color:var(--rais-warning)"><iconify-icon icon="solar:scale-bold"></iconify-icon></div>
+      </div>
+      <div class="ct">3 items</div>
+      <ul>
+        <li><div class="nm">Design Rulebook</div><div class="pp">First principles, do/don't, and decision-making framework.</div><span class="tag">kept</span></li>
+        <li><div class="nm">System Hub</div><div class="pp">Landing surface that links every pillar and document.</div><span class="tag">kept</span></li>
+        <li><div class="nm">Changelog</div><div class="pp">Versioned record of every system change.</div><span class="tag">kept</span></li>
+      </ul>
+    </div>
+
+    <!-- 5 AI Optimization -->
+    <div class="pillar">
+      <div class="ph">
+        <div>
+          <div class="num">05</div>
+          <h3>AI Optimization</h3>
+          <p>Conventions, examples and prompt templates so AI tools build on-system.</p>
+        </div>
+        <div class="plate" style="background:rgba(255,167,38,.12);color:var(--accent)"><iconify-icon icon="solar:magic-stick-3-bold"></iconify-icon></div>
+      </div>
+      <div class="ct">1 item</div>
+      <ul>
+        <li><div class="nm">AI Prompt Guide</div><div class="pp">Naming convention, prompt template and JSON examples for AI generation.</div><span class="tag">kept</span></li>
+      </ul>
+    </div>
+
+    <!-- 6 QA / Audit -->
+    <div class="pillar">
+      <div class="ph">
+        <div>
+          <div class="num">06</div>
+          <h3>QA / Audit</h3>
+          <p>Sign-off — does the screen meet the system before it ships?</p>
+        </div>
+        <div class="plate" style="background:rgba(255,102,91,.12);color:var(--rais-error)"><iconify-icon icon="solar:shield-check-bold"></iconify-icon></div>
+      </div>
+      <div class="ct">2 items</div>
+      <ul>
+        <li><div class="nm">QA Checklist</div><div class="pp">Six-category sign-off list run before any release.</div><span class="tag renamed">renamed</span></li>
+        <li><div class="nm">Audit Dashboard</div><div class="pp">Live scorecard of token, type, component, state and layout compliance.</div><span class="tag">kept</span></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- ─── Renames & merges ─── -->
+  <div class="sec-h" style="margin-top:80px">
+    <h2>Renames &amp; merges</h2>
+    <div class="desc">A receipt of every change made during reclassification. Source items remain intact under the new label.</div>
+  </div>
+
+  <div class="changes">
+    <div class="h">
+      <h3>Change log · IA proposal</h3>
+      <div class="tot">14 changes · 0 deletions</div>
+    </div>
+    <table>
+      <thead><tr><th style="width:120px">Type</th><th>From</th><th></th><th>To</th><th>Reason</th></tr></thead>
+      <tbody>
+        <tr><td><span class="kind merge"><iconify-icon icon="eva:layers-fill"></iconify-icon>Merge</span></td><td><span class="from">색상/회색조 · 색상/기본색 · 색상/의미론 · 색상/표면 · 색상 토큰</span></td><td class="arr">→</td><td><span class="to">Color</span></td><td class="why">Five separate colour pages collapsed into one specimen with all palettes side-by-side.</td></tr>
+        <tr><td><span class="kind merge"><iconify-icon icon="eva:layers-fill"></iconify-icon>Merge</span></td><td><span class="from">유형/표시 · 유형/크기 · 유형/표본 · 타이포그래피 토큰</span></td><td class="arr">→</td><td><span class="to">Typography</span></td><td class="why">Display, scale, specimen and tokens are one type system — one page.</td></tr>
+        <tr><td><span class="kind merge"><iconify-icon icon="eva:layers-fill"></iconify-icon>Merge</span></td><td><span class="from">간격 · 간격 토큰</span></td><td class="arr">→</td><td><span class="to">Spacing</span></td><td class="why">Token table and applied demo belong on the same page.</td></tr>
+        <tr><td><span class="kind rename"><iconify-icon icon="eva:edit-fill"></iconify-icon>Rename</span></td><td><span class="from">건배</span></td><td class="arr">→</td><td><span class="to">Toasts</span></td><td class="why">"건배" was a mistranslation of "Toast" (the celebratory kind).</td></tr>
+        <tr><td><span class="kind rename"><iconify-icon icon="eva:edit-fill"></iconify-icon>Rename</span></td><td><span class="from">국가 시스템</span></td><td class="arr">→</td><td><span class="to">State System</span></td><td class="why">"국가" (country) was a mistranslation of "State".</td></tr>
+        <tr><td><span class="kind rename"><iconify-icon icon="eva:edit-fill"></iconify-icon>Rename</span></td><td><span class="from">빛난다</span></td><td class="arr">→</td><td><span class="to">Glow</span></td><td class="why">Verb form ("it shines") replaced with the noun token name.</td></tr>
+        <tr><td><span class="kind rename"><iconify-icon icon="eva:edit-fill"></iconify-icon>Rename</span></td><td><span class="from">도상학</span></td><td class="arr">→</td><td><span class="to">Iconography</span></td><td class="why">Academic term replaced with the standard product label.</td></tr>
+        <tr><td><span class="kind rename"><iconify-icon icon="eva:edit-fill"></iconify-icon>Rename</span></td><td><span class="from">화면 품질 보증 체크리스트</span></td><td class="arr">→</td><td><span class="to">QA Checklist</span></td><td class="why">Long noun phrase trimmed to its conventional name.</td></tr>
+        <tr><td><span class="kind rename"><iconify-icon icon="eva:edit-fill"></iconify-icon>Rename</span></td><td><span class="from">칩과 상태</span></td><td class="arr">→</td><td><span class="to">Badges</span></td><td class="why">Component already named "Badge" in code; matches the rest of the system.</td></tr>
+        <tr><td><span class="kind rename"><iconify-icon icon="eva:edit-fill"></iconify-icon>Rename</span></td><td><span class="from">입력값</span></td><td class="arr">→</td><td><span class="to">Inputs</span></td><td class="why">"Input value" → "Inputs" (the component, not the data).</td></tr>
+        <tr><td><span class="kind rename"><iconify-icon icon="eva:edit-fill"></iconify-icon>Rename</span></td><td><span class="from">RAIS 대시보드 UI 키트</span></td><td class="arr">→</td><td><span class="to">Dashboard UI Kit</span></td><td class="why">"RAIS" prefix is implicit in the system; shorter label reads better in nav.</td></tr>
+        <tr><td><span class="kind merge"><iconify-icon icon="eva:layers-fill"></iconify-icon>Absorb</span></td><td><span class="from">문서 뷰어</span></td><td class="arr">→</td><td><span class="to">System Hub</span></td><td class="why">Doc viewer is a surface inside the hub — not its own destination.</td></tr>
+        <tr><td><span class="kind merge"><iconify-icon icon="eva:layers-fill"></iconify-icon>Absorb</span></td><td><span class="from">감사 대시보드</span></td><td class="arr">→</td><td><span class="to">Audit Dashboard</span></td><td class="why">Same artifact, English label kept; lives in QA / Audit.</td></tr>
+        <tr><td><span class="kind merge"><iconify-icon icon="eva:layers-fill"></iconify-icon>Absorb</span></td><td><span class="from">시스템 허브</span></td><td class="arr">→</td><td><span class="to">System Hub</span></td><td class="why">Localised label aligned with the canonical English name.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ─── Final menu mock ─── -->
+  <div class="sec-h" style="margin-top:80px">
+    <h2>Proposed sidebar</h2>
+    <div class="desc">How the new IA reads as a navigation menu — six groups, twenty-two destinations, no awkward labels.</div>
+  </div>
+
+  <div class="menu-mock">
+    <nav class="nav">
+      <div class="grp">01 · Foundation</div>
+      <div class="lk active"><iconify-icon icon="solar:palette-bold"></iconify-icon>Color<span class="ct">5→1</span></div>
+      <div class="lk"><iconify-icon icon="solar:text-bold"></iconify-icon>Typography<span class="ct">4→1</span></div>
+      <div class="lk"><iconify-icon icon="solar:ruler-bold"></iconify-icon>Spacing<span class="ct">2→1</span></div>
+      <div class="lk"><iconify-icon icon="solar:square-bold"></iconify-icon>Radius</div>
+      <div class="lk"><iconify-icon icon="solar:layers-minimalistic-bold"></iconify-icon>Shadow</div>
+      <div class="lk"><iconify-icon icon="solar:sun-bold"></iconify-icon>Glow</div>
+      <div class="lk"><iconify-icon icon="solar:shapes-bold"></iconify-icon>Iconography</div>
+      <div class="lk"><iconify-icon icon="solar:gem-bold"></iconify-icon>Brand Mark</div>
+
+      <div class="grp">02 · Components</div>
+      <div class="lk"><iconify-icon icon="solar:cursor-bold"></iconify-icon>Buttons</div>
+      <div class="lk"><iconify-icon icon="solar:card-bold"></iconify-icon>Cards</div>
+      <div class="lk"><iconify-icon icon="solar:pen-2-bold"></iconify-icon>Inputs</div>
+      <div class="lk"><iconify-icon icon="solar:tag-bold"></iconify-icon>Badges</div>
+      <div class="lk"><iconify-icon icon="solar:bell-bold"></iconify-icon>Toasts</div>
+      <div class="lk"><iconify-icon icon="solar:book-bold"></iconify-icon>Component Guide</div>
+
+      <div class="grp">03 · Patterns</div>
+      <div class="lk"><iconify-icon icon="solar:widget-add-bold"></iconify-icon>Layout Patterns</div>
+      <div class="lk"><iconify-icon icon="solar:monitor-bold"></iconify-icon>Dashboard UI Kit</div>
+      <div class="lk"><iconify-icon icon="solar:transmission-bold"></iconify-icon>State System</div>
+
+      <div class="grp">04 · Governance</div>
+      <div class="lk"><iconify-icon icon="solar:scale-bold"></iconify-icon>Design Rulebook</div>
+      <div class="lk"><iconify-icon icon="solar:home-2-bold"></iconify-icon>System Hub</div>
+      <div class="lk"><iconify-icon icon="solar:history-bold"></iconify-icon>Changelog</div>
+
+      <div class="grp">05 · AI Optimization</div>
+      <div class="lk"><iconify-icon icon="solar:magic-stick-3-bold"></iconify-icon>AI Prompt Guide</div>
+
+      <div class="grp">06 · QA / Audit</div>
+      <div class="lk"><iconify-icon icon="solar:checklist-bold"></iconify-icon>QA Checklist</div>
+      <div class="lk"><iconify-icon icon="solar:shield-check-bold"></iconify-icon>Audit Dashboard</div>
+    </nav>
+    <div class="pv">
+      <div class="ovl">01 · Foundation</div>
+      <h4>Color</h4>
+      <p>Primary, surface, greyscale and semantic palettes — every swatch in one specimen, with token names attached. Replaces five legacy pages.</p>
+    </div>
+  </div>
+
+  <!-- Note -->
+  <div class="note">
+    <iconify-icon icon="solar:info-circle-bold"></iconify-icon>
+    <div class="body"><b>Non-destructive proposal.</b> No source files have been deleted, renamed on disk, or restyled. This document defines the target IA — once approved, the asset manifest is updated to match (existing files re-grouped, redundant ones marked superseded but preserved in <code>/archive</code>).</div>
+  </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,768 @@
+<!doctype html>
+<!-- @dsCard group="Brand" name="Documentation viewer" subtitle="All seven docs as accordion-style HTML, no raw markdown" -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>RAIS · Documentation</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="colors_and_type.css">
+<style>
+  body{margin:0;background:var(--bg-canvas);color:var(--fg-primary)}
+  .shell{display:grid;grid-template-columns:260px 1fr;min-height:100vh}
+
+  /* Rail */
+  aside{position:sticky;top:0;height:100vh;background:var(--bg-canvas);border-right:1px solid var(--border-subtle);
+       padding:24px 16px;display:flex;flex-direction:column;gap:18px;overflow:auto}
+  .brand{display:flex;align-items:center;gap:10px;padding:0 6px}
+  .brand .mark{width:32px;height:18px;background:url('assets/iak-gem-mark-trio.png') center/contain no-repeat}
+  .brand .wm{font:700 13px/1 var(--font-ui);letter-spacing:.18em;text-transform:uppercase;color:var(--fg-strong)}
+  .back{font:500 12px/1 var(--font-ui);color:var(--fg-muted);text-decoration:none;padding:8px 10px;border-radius:8px;align-self:flex-start}
+  .back:hover{background:var(--rais-alpha-08);color:var(--fg-strong)}
+  .nav{display:flex;flex-direction:column;gap:2px;margin-top:8px}
+  .nav .grp{font:700 10px/1 var(--font-ui);letter-spacing:.14em;text-transform:uppercase;color:var(--fg-muted);padding:14px 10px 6px}
+  .nav a{display:flex;align-items:center;gap:10px;padding:8px 10px;border-radius:8px;text-decoration:none;color:var(--fg-secondary);
+        font:500 13px/1.4 var(--font-ui)}
+  .nav a:hover{background:var(--rais-alpha-08);color:var(--fg-strong)}
+  .nav a .num{font-family:var(--font-mono);font-size:11px;color:var(--fg-muted);min-width:18px}
+
+  /* Main */
+  main{padding:40px 56px 96px;max-width:1080px}
+  .masthead{padding-bottom:24px;border-bottom:1px solid var(--border-default);margin-bottom:32px;display:flex;align-items:flex-end;justify-content:space-between;gap:24px}
+  .masthead h1{margin:0;font:var(--text-display-lg);color:var(--fg-strong);letter-spacing:-.01em}
+  .masthead .sub{margin-top:6px;font:var(--text-body-lg);color:var(--fg-secondary);max-width:580px}
+  .masthead .tag{font:700 10px/1 var(--font-ui);letter-spacing:.14em;text-transform:uppercase;padding:5px 10px;border-radius:500px;background:rgba(255,167,38,.14);color:var(--accent)}
+
+  /* Doc card */
+  .doc{margin-top:32px;background:var(--bg-card);border:1px solid var(--border-default);border-radius:20px;overflow:hidden}
+  .doc > header{padding:24px 28px;border-bottom:1px solid var(--border-subtle);display:flex;align-items:flex-end;justify-content:space-between;gap:16px}
+  .doc > header .ix{display:flex;align-items:baseline;gap:10px}
+  .doc > header .ix .n{font:700 11px/1 var(--font-mono);letter-spacing:.14em;color:var(--accent)}
+  .doc > header h2{margin:0;font:var(--text-h1);color:var(--fg-strong)}
+  .doc > header p{margin:4px 0 0;font:var(--text-body);color:var(--fg-secondary);max-width:640px}
+
+  /* Accordion */
+  details{border-top:1px solid var(--border-subtle)}
+  details:first-of-type{border-top:none}
+  details > summary{list-style:none;cursor:pointer;padding:18px 28px;display:flex;align-items:center;justify-content:space-between;gap:16px;
+                    font:600 15px/1.3 var(--font-ui);color:var(--fg-strong)}
+  details > summary::-webkit-details-marker{display:none}
+  details > summary .meta{font:400 12px/1.4 var(--font-ui);color:var(--fg-muted)}
+  details > summary .chev{width:18px;height:18px;flex-shrink:0;color:var(--fg-muted);transition:transform 160ms ease}
+  details[open] > summary .chev{transform:rotate(90deg);color:var(--accent)}
+  details > summary:hover{background:var(--rais-alpha-08)}
+  details > .body{padding:6px 28px 24px;display:flex;flex-direction:column;gap:18px}
+  details > .body p{margin:0;font:var(--text-body);color:var(--fg-secondary)}
+
+  /* Spec list (replaces tables) */
+  .speclist{display:flex;flex-direction:column;gap:6px;background:var(--rais-grey-1000);border:1px solid var(--border-subtle);border-radius:12px;padding:6px}
+  .speclist .row{display:grid;grid-template-columns:200px 1fr;gap:18px;padding:10px 14px;border-radius:8px;align-items:baseline}
+  .speclist .row + .row{border-top:1px solid var(--border-subtle)}
+  .speclist .row .k{font:600 12px/1.4 var(--font-ui);color:var(--fg-muted);letter-spacing:.04em;text-transform:uppercase}
+  .speclist .row .v{font:400 13px/1.5 var(--font-ui);color:var(--fg-primary)}
+  .speclist .row .v code{font-family:var(--font-mono);font-size:12px;color:var(--accent);background:var(--rais-alpha-08);padding:1px 6px;border-radius:4px}
+
+  /* Bullet list */
+  ul.b{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+  ul.b li{display:flex;gap:10px;align-items:flex-start;font:400 14px/1.55 var(--font-ui);color:var(--fg-secondary)}
+  ul.b li::before{content:"";flex:0 0 6px;width:6px;height:6px;border-radius:500px;background:var(--accent);margin-top:8px}
+
+  /* Two-col list (Do / Don't) */
+  .twocol{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .listbox{border-radius:12px;padding:18px 20px;border:1px solid var(--border-subtle);background:var(--rais-grey-1000)}
+  .listbox.is-do{background:rgba(39,218,104,.05);border-color:rgba(39,218,104,.22)}
+  .listbox.is-dont{background:rgba(255,102,91,.05);border-color:rgba(255,102,91,.22)}
+  .listbox .h{font:700 11px/1 var(--font-ui);letter-spacing:.12em;text-transform:uppercase;margin-bottom:12px}
+  .listbox.is-do .h{color:var(--rais-success-light)}
+  .listbox.is-dont .h{color:var(--rais-error)}
+  .listbox ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+  .listbox li{display:flex;gap:10px;align-items:flex-start;font:400 13px/1.55 var(--font-ui);color:var(--fg-secondary)}
+  .listbox li::before{content:"";flex:0 0 6px;width:6px;height:6px;border-radius:500px;margin-top:7px}
+  .listbox.is-do  li::before{background:var(--rais-success-light)}
+  .listbox.is-dont li::before{background:var(--rais-error)}
+
+  /* Tag rows for variants */
+  .chips{display:flex;flex-wrap:wrap;gap:8px}
+  .chip{font:600 12px/1 var(--font-ui);padding:7px 11px;border-radius:500px;background:var(--rais-alpha-08);color:var(--fg-primary)}
+  .chip.accent{background:rgba(255,167,38,.14);color:var(--accent)}
+
+  /* Checklist */
+  ul.check{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+  ul.check li{display:flex;gap:10px;align-items:flex-start;font:400 14px/1.55 var(--font-ui);color:var(--fg-primary)}
+  ul.check li .box{flex:0 0 16px;width:16px;height:16px;border-radius:4px;border:1.5px solid var(--border-strong);margin-top:3px}
+
+  /* Definition */
+  .def{font:600 13px/1.4 var(--font-ui);color:var(--fg-strong)}
+  .def + .desc{font:400 13px/1.5 var(--font-ui);color:var(--fg-secondary);margin-top:2px}
+
+  /* Code-ish callouts */
+  .callout{background:var(--rais-grey-1000);border:1px solid var(--border-subtle);border-left:3px solid var(--accent);border-radius:8px;padding:14px 16px;font:400 13px/1.55 var(--font-ui);color:var(--fg-primary)}
+  .callout strong{color:var(--fg-strong);font-weight:600}
+
+  /* Inline accent labels */
+  .kbd{font-family:var(--font-mono);font-size:12px;color:var(--accent);background:var(--rais-alpha-08);padding:1px 6px;border-radius:4px}
+</style>
+</head>
+<body>
+<div class="shell">
+  <aside>
+    <div class="brand"><div class="mark"></div><div class="wm">RAIS</div></div>
+    <a class="back" href="index.html">← Back to hub</a>
+    <nav class="nav">
+      <div class="grp">Documentation</div>
+      <a href="#rulebook"><span class="num">00</span>Design Rulebook</a>
+      <a href="#components"><span class="num">01</span>Component Guide</a>
+      <a href="#states"><span class="num">02</span>State System</a>
+      <a href="#layouts"><span class="num">03</span>Layout Patterns</a>
+      <a href="#qa"><span class="num">04</span>QA Checklist</a>
+      <a href="#ai"><span class="num">05</span>AI Prompt Guide</a>
+      <a href="#changelog"><span class="num">06</span>Change Log</a>
+    </nav>
+  </aside>
+
+  <main>
+    <header class="masthead">
+      <div>
+        <h1>Documentation</h1>
+        <p class="sub">Seven operating manuals for the RAIS Design System. Open any section to read; collapse to scan.</p>
+      </div>
+      <span class="tag">v 2026.05.10e</span>
+    </header>
+
+    <!-- ─────────── 00 · Design Rulebook ─────────── -->
+    <article class="doc" id="rulebook">
+      <header>
+        <div>
+          <div class="ix"><span class="n">00</span></div>
+          <h2>Design Rulebook</h2>
+          <p>Five non-negotiables, visual DNA, and the do / don't that frames every screen review.</p>
+        </div>
+      </header>
+
+      <details open>
+        <summary>The five non-negotiables<svg class="chev" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="body">
+          <div class="speclist">
+            <div class="row"><div class="k">One accent</div><div class="v">Orange (<code>#FFA726</code>) is the only system accent. Blue is a data role, never a brand colour.</div></div>
+            <div class="row"><div class="k">Pretendard only</div><div class="v">No Roboto / Barlow / Public Sans. Korean, English and numerals share one face.</div></div>
+            <div class="row"><div class="k">Focus signal</div><div class="v">1 px accent border + inset 1 px ring. Never an outer halo or bloom.</div></div>
+            <div class="row"><div class="k">State expression</div><div class="v">Colour + text + icon together. Never colour alone (WCAG 1.4.1).</div></div>
+            <div class="row"><div class="k">Brand split</div><div class="v">Gem mark = identity (sidebar / topbar). Chrome motif = decorative (hero / header). They never share a composition.</div></div>
+          </div>
+        </div>
+      </details>
+
+      <details>
+        <summary>Visual DNA<svg class="chev" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="body">
+          <div class="speclist">
+            <div class="row"><div class="k">Surface stack</div><div class="v">canvas <code>#0D0D0D</code> → elevated <code>#121212</code> → card <code>#0D0D0D</code> → card-alt <code>#161616</code> → field <code>#1C222B</code></div></div>
+            <div class="row"><div class="k">Border</div><div class="v"><code>rgba(145,158,171, 0.08–0.20)</code> only — no solid hex borders</div></div>
+            <div class="row"><div class="k">Glow</div><div class="v">Resting decoration under coloured plates. Tight, ≤ 24 % opacity. Never as focus.</div></div>
+            <div class="row"><div class="k">Density</div><div class="v">4 px base. Card padding 24 · section gap 32 · page padding 32</div></div>
+            <div class="row"><div class="k">Radius</div><div class="v">Buttons / inputs <code>md (8)</code> · mid card <code>xl (16)</code> · primary card <code>2xl (24)</code> · pill <code>500</code></div></div>
+          </div>
+        </div>
+      </details>
+
+      <details>
+        <summary>Do / Don't<svg class="chev" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="body">
+          <div class="twocol">
+            <div class="listbox is-do">
+              <div class="h">Do</div>
+              <ul>
+                <li>Use semantic tokens (<code>color/action/primary/default</code>).</li>
+                <li>Apply <span class="kbd">text-wrap: pretty</span> and <span class="kbd">font-feature-settings: "tnum"</span> on numerics.</li>
+                <li>One primary CTA per surface.</li>
+                <li>Pair every status colour with text and an icon.</li>
+                <li>Render the gem logo as a flat raster on the canvas.</li>
+              </ul>
+            </div>
+            <div class="listbox is-dont">
+              <div class="h">Don't</div>
+              <ul>
+                <li>Drop raw hexes into product code.</li>
+                <li>Bold body copy for emphasis — use a chip or label.</li>
+                <li>Stack two filled-orange buttons next to each other.</li>
+                <li>Communicate state with colour alone.</li>
+                <li>Apply glow / halo / drop-shadow / blue-bg to the gem.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details>
+        <summary>Token reference<svg class="chev" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="body">
+          <ul class="b">
+            <li><span class="kbd">tokens/colors.json</span> — semantic colour roles + states</li>
+            <li><span class="kbd">tokens/typography.json</span> — type roles</li>
+            <li><span class="kbd">tokens/spacing.json</span> — spacing, radius, shadow, glow, focus</li>
+            <li><span class="kbd">colors_and_type.css</span> — runtime CSS custom properties (the source of truth at runtime)</li>
+          </ul>
+        </div>
+      </details>
+    </article>
+
+    <!-- ─────────── 01 · Component Guide ─────────── -->
+    <article class="doc" id="components">
+      <header>
+        <div>
+          <div class="ix"><span class="n">01</span></div>
+          <h2>Component Guide</h2>
+          <p>Naming convention plus the live spec for every base component.</p>
+        </div>
+      </header>
+
+      <details open>
+        <summary>Naming convention<svg class="chev" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="body">
+          <div class="callout"><strong>Pattern:</strong> Component / Role / Type / State</div>
+          <ul class="b">
+            <li>Button / Action / Primary / Default</li>
+            <li>Button / Action / Primary / Hover</li>
+            <li>Card / Metric / Highlighted</li>
+            <li>Input / Search / Focused</li>
+            <li>Badge / Status / Success</li>
+            <li>Toast / Notify / Error</li>
+          </ul>
+          <p>Use this exact format in Figma layer names, JSON variants, and AI prompts.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Button<svg class="chev" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="body">
+          <div class="def">Types</div>
+          <div class="chips"><span class="chip accent">Primary</span><span class="chip">Secondary</span><span class="chip">Danger</span><span class="chip">Text</span><span class="chip">Icon</span></div>
+          <div class="def">Sizes</div>
+          <div class="chips"><span class="chip">Lg · 44h</span><span class="chip">Md · 36h</span><span class="chip">Sm · 28h</span></div>
+          <div class="def">States</div>
+          <div class="chips"><span class="chip">Default</span><span class="chip">Hover</span><span class="chip">Pressed</span><span class="chip">Focused</span><span class="chip">Disabled</span><span class="chip">Loading</span></div>
+          <div class="speclist">
+            <div class="row"><div class="k">Padding</div><div class="v">Md 8 × 14 · Lg 10 × 18 · Sm 6 × 12</div></div>
+            <div class="row"><div class="k">Gap (icon ↔ label)</div><div class="v">8</div></div>
+            <div class="row"><div class="k">Radius</div><div class="v"><code>md (8)</code></div></div>
+            <div class="row"><div class="k">Icon size</div><div class="v">18 (Md / Lg) · 16 (Sm)</div></div>
+            <div class="row"><div class="k">Label font</div><div class="v"><code>type/button/default</code> — Pretendard 600 / 14 / 24</div></div>
+            <div class="row"><div class="k">Auto-layout</div><div class="v">Hug × Hug · gap 8 · padding inside</div></div>
+            <div class="row"><div class="k">Hover</div><div class="v">Background brightness +6 %, shadow tight (<code>shadow-sm</code>). No outer glow.</div></div>
+            <div class="row"><div class="k">Focus</div><div class="v"><code>border-color: focus-border</code> + <code>box-shadow: focus-ring</code> (inset 1 px). Never an outer halo.</div></div>
+            <div class="row"><div class="k">Loading</div><div class="v">Disable interaction, keep filled colour, swap label for an 18 px spinner. Width preserved.</div></div>
+          </div>
+        </div>
+      </details>
+
+      <details>
+        <summary>Card<svg class="chev" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="body">
+          <div class="def">Roles</div>
+          <div class="chips"><span class="chip">Metric</span><span class="chip">Analytics</span><span class="chip">Info</span><span class="chip accent">AI Response</span><span class="chip">Alert</span><span class="chip">Empty</span></div>
+          <div class="def">States</div>
+          <div class="chips"><span class="chip">Default</span><span class="chip">Highlighted</span><span class="chip">Warning</span><span class="chip">Error</span><span class="chip">Loading (skeleton)</span><span class="chip">Empty</span></div>
+          <div class="def">Common structure</div>
+          <p class="desc">Header (icon + title + action) — Body (metric value, list, or chart) — Footer (caption + delta chip, optional).</p>
+          <div class="speclist">
+            <div class="row"><div class="k">Background</div><div class="v"><code>surface/card</code></div></div>
+            <div class="row"><div class="k">Border</div><div class="v"><code>border/default</code> · 1 px</div></div>
+            <div class="row"><div class="k">Radius</div><div class="v"><code>2xl</code> (24)</div></div>
+            <div class="row"><div class="k">Shadow</div><div class="v"><code>shadow-lg</code> (resting)</div></div>
+            <div class="row"><div class="k">Internal gap</div><div class="v">16 (<code>spacing/4</code>)</div></div>
+            <div class="row"><div class="k">Highlighted variant</div><div class="v">Coloured icon plate (<code>color/data/blue</code>) with <code>glow-{role}</code> under the plate only — never on the card.</div></div>
+          </div>
+        </div>
+      </details>
+
+      <details>
+        <summary>Input<svg class="chev" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="body">
+          <div class="def">Types</div>
+          <div class="chips"><span class="chip">Text</span><span class="chip">Search</span><span class="chip">Select</span><span class="chip">Checkbox</span><span class="chip">Toggle</span></div>
+          <div class="def">States</div>
+          <div class="chips"><span class="chip">Default</span><span class="chip">Hover</span><span class="chip">Focused</span><span class="chip">Filled</span><span class="chip">Error</span><span class="chip">Disabled</span></div>
+          <div class="speclist">
+            <div class="row"><div class="k">Height</div><div class="v">40 (Md)</div></div>
+            <div class="row"><div class="k">Padding</div><div class="v">10 × 14</div></div>
+            <div class="row"><div class="k">Radius</div><div class="v"><code>md</code> (8)</div></div>
+            <div class="row"><div class="k">Background</div><div class="v"><code>surface/field</code></div></div>
+            <div class="row"><div class="k">Border</div><div class="v"><code>border/default</code></div></div>
+            <div class="row"><div class="k">Focus</div><div class="v"><code>border/focus</code> 1 px + <code>focus/ring</code> inset · no halo</div></div>
+            <div class="row"><div class="k">Error</div><div class="v"><code>status/error</code> border + helper text in error tone with <span class="kbd">eva:alert-circle-outline</span></div></div>
+            <div class="row"><div class="k">Label</div><div class="v"><code>type/label/default</code> · gap 6 above input</div></div>
+            <div class="row"><div class="k">Helper</div><div class="v"><code>type/caption/default</code> · gap 6 below input</div></div>
+          </div>
+        </div>
+      </details>
+
+      <details>
+        <summary>Badge<svg class="chev" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="body">
+          <div class="def">Types</div>
+          <div class="chips"><span class="chip">Success</span><span class="chip">Warning</span><span class="chip">Error</span><span class="chip">Info</span><span class="chip accent">New</span></div>
+          <div class="speclist">
+            <div class="row"><div class="k">Padding</div><div class="v">4 × 10</div></div>
+            <div class="row"><div class="k">Radius</div><div class="v"><code>pill</code> (500)</div></div>
+            <div class="row"><div class="k">Font</div><div class="v"><code>type/overline/default</code></div></div>
+            <div class="row"><div class="k">Icon</div><div class="v">Optional 12 px Eva / Solar solid · gap 4</div></div>
+            <div class="row"><div class="k">Background</div><div class="v"><code>status/{role}</code> @ 14 % opacity</div></div>
+            <div class="row"><div class="k">Text</div><div class="v"><code>status/{role}</code> light variant</div></div>
+          </div>
+        </div>
+      </details>
+
+      <details>
+        <summary>Toast<svg class="chev" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="body">
+          <div class="def">Types</div>
+          <div class="chips"><span class="chip">Success</span><span class="chip">Warning</span><span class="chip">Error</span><span class="chip">Info</span></div>
+          <p>Icon plate (rounded-square — <strong>not circle</strong>, patched 2026-05-10) on the left, title + body stacked on the right, dismiss icon top-right.</p>
+          <div class="speclist">
+            <div class="row"><div class="k">Width</div><div class="v">360</div></div>
+            <div class="row"><div class="k">Padding</div><div class="v">16</div></div>
+            <div class="row"><div class="k">Radius</div><div class="v"><code>lg</code> (12)</div></div>
+            <div class="row"><div class="k">Icon plate</div><div class="v">36 × 36 · radius 8 · bg <code>status/{role}</code> @ 14 % · icon <code>status/{role}</code></div></div>
+            <div class="row"><div class="k">Shadow</div><div class="v"><code>shadow-floating</code></div></div>
+            <div class="row"><div class="k">Dismiss</div><div class="v"><span class="kbd">eva:close-fill</span> 18 px · <code>text/muted</code></div></div>
+          </div>
+        </div>
+      </details>
+
+      <details>
+        <summary>Auto-layout rules (Figma + JSX parity)<svg class="chev" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="body">
+          <ul class="b">
+            <li>Every component is hug × hug unless explicitly fixed-width.</li>
+            <li>Padding lives on the parent, never on children via margin.</li>
+            <li>Gap is the only inter-child spacing — no padding-fakes.</li>
+            <li>Icons resize via fixed pixel size, never by stretching.</li>
+            <li>Text containers wrap with <span class="kbd">text-wrap: pretty</span>.</li>
+          </ul>
+        </div>
+      </details>
+    </article>
+
+    <!-- ─────────── 02 · State System ─────────── -->
+    <article class="doc" id="states">
+      <header>
+        <div>
+          <div class="ix"><span class="n">02</span></div>
+          <h2>State System</h2>
+          <p>Twelve states for every interactive component. Each state expressed by colour + text + icon — never colour alone.</p>
+        </div>
+      </header>
+
+      <details open>
+        <summary>The twelve states<svg class="chev" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="body">
+          <div class="speclist">
+            <div class="row"><div class="k">Default</div><div class="v">bg <code>surface/card</code> · border <code>border/default</code> · icon <code>text/secondary</code> · text <code>text/primary</code> · CTA available</div></div>
+            <div class="row"><div class="k">Hover</div><div class="v">bg +6 % brightness · border <code>border/strong</code> · icon → <code>text/strong</code> · cursor pointer</div></div>
+            <div class="row"><div class="k">Pressed</div><div class="v">bg <code>action/primary/pressed</code> · border <code>border/strong</code> · text <code>text/strong</code></div></div>
+            <div class="row"><div class="k">Focused</div><div class="v">unchanged bg · <strong>border focus 1 px + inset 1 px ring</strong> · tabindex visible</div></div>
+            <div class="row"><div class="k">Selected</div><div class="v">bg <code>surface/selected</code> (#FFA726 @ 10 %) · left-rule accent 2 px · icon accent · persistent</div></div>
+            <div class="row"><div class="k">Loading</div><div class="v">unchanged bg + border · replace icon with 18 px spinner · text <code>text/secondary</code> · CTA disabled</div></div>
+            <div class="row"><div class="k">Skeleton</div><div class="v">bg <code>surface/elevated</code> shimmer · no border · placeholder bars · CTA hidden</div></div>
+            <div class="row"><div class="k">Empty</div><div class="v">bg <code>surface/elevated</code> · dashed <code>border/default</code> · illustration / Eva outline · primary CTA "Add first…"</div></div>
+            <div class="row"><div class="k">Success</div><div class="v">bg <code>status/success</code> @ 8 % · border <code>status/success</code> 1 px · icon <span class="kbd">eva:checkmark-circle-2-fill</span> · CTA "Continue"</div></div>
+            <div class="row"><div class="k">Warning</div><div class="v">bg <code>status/warning</code> @ 8 % · border <code>status/warning</code> 1 px · icon <span class="kbd">eva:alert-triangle-fill</span> · CTA "Review"</div></div>
+            <div class="row"><div class="k">Error</div><div class="v">bg <code>status/error</code> @ 8 % · border <code>status/error</code> 1 px · icon <span class="kbd">eva:close-circle-fill</span> · CTA "Retry"</div></div>
+            <div class="row"><div class="k">Disabled</div><div class="v">bg <code>surface/card</code> · border <code>border/subtle</code> · text <code>text/disabled</code> · opacity 0.6 · cursor not-allowed</div></div>
+          </div>
+        </div>
+      </details>
+
+      <details>
+        <summary>Animation specs<svg class="chev" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="body">
+          <div class="speclist">
+            <div class="row"><div class="k">Hover</div><div class="v">background, border-color · 120 ms · ease-out</div></div>
+            <div class="row"><div class="k">Focus</div><div class="v">box-shadow, border-color · 0 ms · instant for accessibility</div></div>
+            <div class="row"><div class="k">Pressed</div><div class="v">transform <code>scale(0.98)</code> · 80 ms · ease-in</div></div>
+            <div class="row"><div class="k">Loading spinner</div><div class="v">rotate 360° · 800 ms · linear, infinite</div></div>
+            <div class="row"><div class="k">Skeleton shimmer</div><div class="v">gradient sweep · 1500 ms · linear, infinite</div></div>
+            <div class="row"><div class="k">Toast in / out</div><div class="v">translateY + opacity · 200 / 160 ms · <code>cubic-bezier(0.2,0.8,0.2,1)</code></div></div>
+          </div>
+        </div>
+      </details>
+
+      <details>
+        <summary>Accessibility floor<svg class="chev" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="body">
+          <ul class="b">
+            <li>Contrast: every text + bg pair must clear WCAG AA 4.5:1 (3:1 for ≥ 18 px).</li>
+            <li>Focus must be keyboard-visible without a mouse hover.</li>
+            <li>Status colours always paired with an icon for users who can't perceive hue.</li>
+            <li>Click targets ≥ 44 × 44 px on touch surfaces.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details>
+        <summary>Naming for AI prompts<svg class="chev" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="body">
+          <div class="callout"><strong>Pattern:</strong> State / Role / Component / State</div>
+          <ul class="b">
+            <li>State / Action / Button / Pressed</li>
+            <li>State / Status / Toast / Error</li>
+            <li>State / Field / Input / Focused</li>
+            <li>State / Empty / Card / Default</li>
+          </ul>
+        </div>
+      </details>
+    </article>
+
+    <!-- ─────────── 03 · Layout Patterns ─────────── -->
+    <article class="doc" id="layouts">
+      <header>
+        <div>
+          <div class="ix"><span class="n">03</span></div>
+          <h2>Layout Patterns</h2>
+          <p>Ten templates cover every screen. Build new screens by composing — never invent a new shell.</p>
+        </div>
+      </header>
+
+      <details open>
+        <summary>Global grid<svg class="chev" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="body">
+          <div class="speclist">
+            <div class="row"><div class="k">Container max-width</div><div class="v">1440</div></div>
+            <div class="row"><div class="k">Sidebar width</div><div class="v">280 (default) · 72 (collapsed)</div></div>
+            <div class="row"><div class="k">Topbar height</div><div class="v">64</div></div>
+            <div class="row"><div class="k">Page padding</div><div class="v">32 (<code>spacing/8</code>)</div></div>
+            <div class="row"><div class="k">Section gap</div><div class="v">32 (<code>spacing/8</code>)</div></div>
+            <div class="row"><div class="k">Card gap</div><div class="v">16 (<code>spacing/4</code>)</div></div>
+            <div class="row"><div class="k">Column grid</div><div class="v">12-col · 16 px gutter</div></div>
+            <div class="row"><div class="k">Breakpoints</div><div class="v">sm 640 · md 960 · lg 1280 · xl 1440</div></div>
+          </div>
+        </div>
+      </details>
+
+      <details>
+        <summary>The ten templates<svg class="chev" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="body">
+          <div class="speclist">
+            <div class="row"><div class="k">1 · Dashboard</div><div class="v">Sidebar + Topbar · Page-head · Metric row-4 · Panel row-2. Reference: <code>ui_kits/rais-dashboard/index.html</code></div></div>
+            <div class="row"><div class="k">2 · Analytics</div><div class="v">Same shell as Dashboard. Replaces row-2 with chart + filter rail. Header may host a chrome-motif analytics-header (right-aligned, cropped).</div></div>
+            <div class="row"><div class="k">3 · Table</div><div class="v">Page-head → filter chip-rail → bulk-action bar (when rows selected) → table → footer pager. Cell padding 12 × 16.</div></div>
+            <div class="row"><div class="k">4 · Detail</div><div class="v">Page-head → primary card (Hero / Identity) → tabbed sub-pages → activity feed in side rail.</div></div>
+            <div class="row"><div class="k">5 · Settings</div><div class="v">2-col within content: nav rail (200 px) left, form column right. Section gap 32 · form-row gap 16 · label above input.</div></div>
+            <div class="row"><div class="k">6 · Billing</div><div class="v">Settings shell + Card / Plan / Highlighted for current plan + Table / Invoices.</div></div>
+            <div class="row"><div class="k">7 · AI Chat</div><div class="v">2-col: conversation list (240 px) left, message thread right. Composer sticky bottom · 56 px tall · <code>surface/field</code>.</div></div>
+            <div class="row"><div class="k">8 · Builder</div><div class="v">3-col: node palette (240 px) · canvas (fluid) · inspector (320 px). Canvas uses <code>surface/elevated</code> with 24 px dot grid at <code>border/subtle</code>.</div></div>
+            <div class="row"><div class="k">9 · Modal</div><div class="v">Width sm 480 · md 640 · lg 880. Padding 24 · radius <code>xl</code> (16) · shadow <code>shadow-floating</code> · backdrop <code>surface/overlay</code>. Close <span class="kbd">eva:close-fill</span> 20 px top-right.</div></div>
+            <div class="row"><div class="k">10 · Empty</div><div class="v">Centred. Illustration / icon (96 px) → headline (<code>type/section/title</code>) → sub (<code>type/body/md</code>) → primary CTA. Container has <code>border-dashed</code> + <code>surface/elevated</code>.</div></div>
+          </div>
+        </div>
+      </details>
+
+      <details>
+        <summary>Sectioning &amp; responsive rules<svg class="chev" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="body">
+          <div class="def">Sectioning</div>
+          <ul class="b">
+            <li>A section = overline + section title + optional helper + content.</li>
+            <li>Wrap related cards in a single section to allow consistent gap.</li>
+            <li>Two consecutive sections are separated by section-gap (32). No extra dividers.</li>
+            <li>Page-head is always the first section, never wrapped in a card.</li>
+          </ul>
+          <div class="def">Responsive behaviour</div>
+          <div class="speclist">
+            <div class="row"><div class="k">≥ 1440</div><div class="v">Full sidebar · 12-col grid</div></div>
+            <div class="row"><div class="k">1280–1440</div><div class="v">Collapse sidebar to 240 px</div></div>
+            <div class="row"><div class="k">960–1280</div><div class="v">Collapse sidebar to icon-only (72 px)</div></div>
+            <div class="row"><div class="k">640–960</div><div class="v">Sidebar becomes top drawer · metric row-4 → row-2</div></div>
+            <div class="row"><div class="k">&lt; 640</div><div class="v">Single column · cards stack · tables horizontal-scroll inside their card</div></div>
+          </div>
+        </div>
+      </details>
+    </article>
+
+    <!-- ─────────── 04 · QA Checklist ─────────── -->
+    <article class="doc" id="qa">
+      <header>
+        <div>
+          <div class="ix"><span class="n">04</span></div>
+          <h2>Screen QA Checklist</h2>
+          <p>Run before every handoff. A screen is not done until every item clears.</p>
+        </div>
+      </header>
+
+      <details open>
+        <summary>Layout<svg class="chev" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="body">
+          <ul class="check">
+            <li><span class="box"></span>Page padding = 32 · section gap = 32 · card gap = 16</li>
+            <li><span class="box"></span>No off-grid spacing (every gap maps to a <code>spacing/*</code> token)</li>
+            <li><span class="box"></span>Sidebar 280 px (default) · topbar 64 px</li>
+            <li><span class="box"></span>Single primary CTA per surface</li>
+            <li><span class="box"></span>Card radius matches role (<code>xl 16</code> mid · <code>2xl 24</code> primary)</li>
+          </ul>
+        </div>
+      </details>
+
+      <details>
+        <summary>Typography<svg class="chev" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="body">
+          <ul class="check">
+            <li><span class="box"></span>Pretendard only — no Roboto / Barlow / Public Sans</li>
+            <li><span class="box"></span>Page title uses <code>type/page/title</code> · section titles use <code>type/section/title</code></li>
+            <li><span class="box"></span>Numeric columns use <span class="kbd">font-feature-settings: "tnum"</span></li>
+            <li><span class="box"></span>No font sizes below 12 px in product UI</li>
+            <li><span class="box"></span>No bolding for emphasis in body — use a chip or label</li>
+          </ul>
+        </div>
+      </details>
+
+      <details>
+        <summary>Component<svg class="chev" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="body">
+          <ul class="check">
+            <li><span class="box"></span>Buttons render correct padding for size (Md 8 × 14)</li>
+            <li><span class="box"></span>Inputs use <code>surface/field</code> bg · <code>md</code> radius</li>
+            <li><span class="box"></span>Toast icon plate is rounded-square (8 px radius), not circle</li>
+            <li><span class="box"></span>Badge uses <code>pill</code> radius and <code>status/{role}</code> @ 14 % bg</li>
+            <li><span class="box"></span>Icons all from a single family (Eva / Solar solid)</li>
+            <li><span class="box"></span>No icon family mixing within a screen</li>
+          </ul>
+        </div>
+      </details>
+
+      <details>
+        <summary>State<svg class="chev" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="body">
+          <ul class="check">
+            <li><span class="box"></span>Hover state defined for every clickable element</li>
+            <li><span class="box"></span>Focus = border + inset ring (no outer halo)</li>
+            <li><span class="box"></span>Loading + skeleton state defined where data is async</li>
+            <li><span class="box"></span>Empty state defined with illustration + primary CTA</li>
+            <li><span class="box"></span>Error state pairs colour + text + icon</li>
+          </ul>
+        </div>
+      </details>
+
+      <details>
+        <summary>Accessibility &amp; Brand<svg class="chev" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="body">
+          <div class="def">Accessibility</div>
+          <ul class="check">
+            <li><span class="box"></span>All text passes WCAG AA contrast on its surface</li>
+            <li><span class="box"></span>Status communicated by colour + icon + text</li>
+            <li><span class="box"></span>Keyboard focus visible without mouse hover</li>
+            <li><span class="box"></span>Hit targets ≥ 44 × 44 on touch</li>
+            <li><span class="box"></span>All images have alt · decorative motifs have <code>aria-hidden="true"</code></li>
+          </ul>
+          <div class="def">Brand</div>
+          <ul class="check">
+            <li><span class="box"></span>Gem logo only in sidebar / topbar / identity (never as hero)</li>
+            <li><span class="box"></span>Chrome motif only in hero / analytics header / promo (never as logo)</li>
+            <li><span class="box"></span>Logo and motif never appear in the same composition</li>
+            <li><span class="box"></span>No glow / halo / blue-bg on the gem mark</li>
+          </ul>
+        </div>
+      </details>
+
+      <details>
+        <summary>Responsive<svg class="chev" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="body">
+          <ul class="check">
+            <li><span class="box"></span>Sidebar collapses correctly at 1280 / 960 / 640</li>
+            <li><span class="box"></span>Metric row-4 reflows to row-2 then row-1</li>
+            <li><span class="box"></span>Tables become horizontal-scroll inside their card on mobile</li>
+            <li><span class="box"></span>Modal becomes full-screen sheet at &lt; 640</li>
+          </ul>
+        </div>
+      </details>
+    </article>
+
+    <!-- ─────────── 05 · AI Prompt Guide ─────────── -->
+    <article class="doc" id="ai">
+      <header>
+        <div>
+          <div class="ix"><span class="n">05</span></div>
+          <h2>AI / Claude Prompt Guide</h2>
+          <p>Optimisation rules for re-generating any RAIS surface with Claude.</p>
+        </div>
+      </header>
+
+      <details open>
+        <summary>Naming convention<svg class="chev" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="body">
+          <div class="callout"><strong>Pattern:</strong> Component / Role / Type / State</div>
+          <div class="speclist">
+            <div class="row"><div class="k">Component</div><div class="v">Button · Card · Input · Badge · Toast · Sidebar · Topbar · Modal · Table</div></div>
+            <div class="row"><div class="k">Role</div><div class="v">Action · Status · Data · Field · Nav · Notify · Metric · AI</div></div>
+            <div class="row"><div class="k">Type</div><div class="v">Varies by component (see Component Guide)</div></div>
+            <div class="row"><div class="k">State</div><div class="v">Default · Hover · Pressed · Focused · Selected · Loading · Skeleton · Empty · Success · Warning · Error · Disabled</div></div>
+          </div>
+        </div>
+      </details>
+
+      <details>
+        <summary>Prompt template<svg class="chev" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="body">
+          <div class="callout">
+            <strong>SYSTEM</strong> — You are a designer working in the RAIS Design System.<br>
+            Token source: <span class="kbd">tokens/colors.json</span>, <span class="kbd">tokens/typography.json</span>, <span class="kbd">tokens/spacing.json</span><br>
+            Component source: <span class="kbd">docs/01-component-guide.md</span><br>
+            State source: <span class="kbd">docs/02-state-system.md</span><br>
+            Layout source: <span class="kbd">docs/03-layout-patterns.md</span><br>
+            Direction: AI-native SaaS · dark-first · Pretendard only · orange single accent.
+          </div>
+          <div class="callout">
+            <strong>USER</strong> — Build {Layout / Template} for {Feature}.<br>
+            Compose from: {list of Component / Role / Type tokens}<br>
+            Surfaces: {list of state-tokens that must be visible in the output}<br>
+            Constraints: {any feature-specific rules}
+          </div>
+        </div>
+      </details>
+
+      <details>
+        <summary>Component JSON example (Button)<svg class="chev" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="body">
+          <div class="speclist">
+            <div class="row"><div class="k">component</div><div class="v">Button</div></div>
+            <div class="row"><div class="k">role</div><div class="v">Action</div></div>
+            <div class="row"><div class="k">type</div><div class="v">Primary</div></div>
+            <div class="row"><div class="k">size</div><div class="v">Md</div></div>
+            <div class="row"><div class="k">state</div><div class="v">Default</div></div>
+            <div class="row"><div class="k">props.label</div><div class="v">"New Campaign"</div></div>
+            <div class="row"><div class="k">props.iconLeft</div><div class="v"><span class="kbd">solar:add-circle-bold</span></div></div>
+            <div class="row"><div class="k">tokens.background</div><div class="v"><code>color/action/primary/default</code></div></div>
+            <div class="row"><div class="k">tokens.color</div><div class="v"><code>color/text/on-accent</code></div></div>
+            <div class="row"><div class="k">tokens.padding</div><div class="v"><code>spacing/2 spacing/3</code></div></div>
+            <div class="row"><div class="k">tokens.radius</div><div class="v"><code>radius/md</code></div></div>
+            <div class="row"><div class="k">tokens.font</div><div class="v"><code>type/button/default</code></div></div>
+            <div class="row"><div class="k">tokens.shadow</div><div class="v"><code>shadow/sm</code></div></div>
+            <div class="row"><div class="k">tokens.hover</div><div class="v"><code>color/action/primary/hover</code></div></div>
+            <div class="row"><div class="k">tokens.focus</div><div class="v"><code>border/focus + focus/ring</code></div></div>
+          </div>
+        </div>
+      </details>
+
+      <details>
+        <summary>Reusable prompt snippets<svg class="chev" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="body">
+          <div class="speclist">
+            <div class="row"><div class="k">Patch only</div><div class="v">"Apply the following non-destructive patch. Do not redesign the system. Touch only: {list}."</div></div>
+            <div class="row"><div class="k">Add component</div><div class="v">"Add Component / Role / Type honoring the existing state matrix. Output JSON per AI Prompt Guide §3."</div></div>
+            <div class="row"><div class="k">Build screen</div><div class="v">"Compose Layout / {template} for {feature} using only existing components and tokens."</div></div>
+            <div class="row"><div class="k">A11y review</div><div class="v">"Run the accessibility section of the QA Checklist against this screen and list violations with token-level fixes."</div></div>
+          </div>
+        </div>
+      </details>
+
+      <details>
+        <summary>Output format rules &amp; what NOT to ask<svg class="chev" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="body">
+          <div class="twocol">
+            <div class="listbox is-do">
+              <div class="h">Output rules</div>
+              <ul>
+                <li>HTML output references <code>colors_and_type.css</code> only — no inline hexes.</li>
+                <li>JSON output uses token paths, never literal values.</li>
+                <li>Markdown output uses sentence-case, single-line cells.</li>
+                <li>All component examples include the state field, even if Default.</li>
+              </ul>
+            </div>
+            <div class="listbox is-dont">
+              <div class="h">Never ask Claude to</div>
+              <ul>
+                <li>Invent a new accent colour.</li>
+                <li>Add an outer glow as focus.</li>
+                <li>Mix icon families.</li>
+                <li>Use the gem mark as a hero image.</li>
+                <li>Bulk-replace tokens — they are versioned in <code>tokens/*.json</code>.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </details>
+    </article>
+
+    <!-- ─────────── 06 · Change Log ─────────── -->
+    <article class="doc" id="changelog">
+      <header>
+        <div>
+          <div class="ix"><span class="n">06</span></div>
+          <h2>Change Log</h2>
+          <p>Reverse-chronological. Every patch dated and scoped.</p>
+        </div>
+      </header>
+
+      <details open>
+        <summary>2026-05-10f · Documentation viewer<svg class="chev" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="body">
+          <p>Replaced raw Markdown links with a styled HTML viewer (this page). All sections render as accordions with spec-lists / chip rows / Do-Don't boxes — no <code>|</code>, no backticks, no raw markdown leaking to the UI.</p>
+          <ul class="b">
+            <li>New: <code>docs.html</code> — single navigable doc viewer.</li>
+            <li>Updated: <code>index.html</code> — doc cards now link to <code>docs.html#section</code> anchors.</li>
+            <li>Source <code>.md</code> files retained for AI / Git diffing.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details>
+        <summary>2026-05-10e · System operationalisation<svg class="chev" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="body">
+          <p>Non-destructive: documentation + token JSONs only. No visual change.</p>
+          <ul class="b">
+            <li>tokens/colors.json · tokens/typography.json · tokens/spacing.json</li>
+            <li>docs/00 → 06 markdown sources</li>
+            <li>index.html — system hub</li>
+          </ul>
+        </div>
+      </details>
+
+      <details>
+        <summary>2026-05-10d · Brand mark page refinement<svg class="chev" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="body">
+          <ul class="b">
+            <li>Restored bad-treatment previews (stretched / cropped / tinted) inside Don't tiles.</li>
+            <li>Renamed rule-list classes to break collision with tile <code>.dont</code>.</li>
+            <li>DO / DON'T columns now sit in matched boxes (neutral / red-tint).</li>
+          </ul>
+        </div>
+      </details>
+
+      <details>
+        <summary>2026-05-10c · Brand mark page rebuilt<svg class="chev" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="body">
+          <ul class="b">
+            <li>Removed chrome-motif overlay and blue-glow background from guideline cards.</li>
+            <li>Aligned all logo cards (24 px padding, vertical-centre logo, baseline-aligned meta).</li>
+            <li>Don't cards: subtle red tint, low-opacity red border, solid-fill DON'T badge.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details>
+        <summary>2026-05-10b · Pretendard-only typography<svg class="chev" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="body">
+          <ul class="b">
+            <li>Roboto / Barlow / Public Sans removed.</li>
+            <li>Pretendard wired across weights 100 → 900 via local <code>@font-face</code>.</li>
+            <li>Google-Fonts links stripped from every preview &amp; kit.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details>
+        <summary>2026-05-10a · Update Rules patch<svg class="chev" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="body">
+          <ul class="b">
+            <li>Iconography — single Eva + Solar solid family across the system.</li>
+            <li>Toast — icon plate moved from circle to rounded-square.</li>
+            <li>Focus — outer halo replaced by 1 px accent border + inset 1 px ring.</li>
+            <li>Brand mark — gem (identity) + chrome motif (decorative) split.</li>
+            <li>Buttons — focus subtle (border + inset, no outer stroke).</li>
+          </ul>
+        </div>
+      </details>
+    </article>
+
+  </main>
+</div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!doctype html>
+<!-- @dsCard group="Components" name="Toasts" subtitle="Snackbar 420×46 — 5 severities" viewport="700x300" --><html><head><meta charset="utf-8"><title>Toasts</title>
+<script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body{margin:0;padding:18px;background:var(--bg-elevated);color:var(--fg-primary)}
+  .stack{display:flex;flex-direction:column;gap:10px}
+  .toast{display:flex;align-items:center;gap:12px;padding:10px 14px;border-radius:8px;background:var(--rais-grey-800);box-shadow:var(--shadow-toast);width:420px;font:var(--text-body-strong);color:#fff}
+  .icon{width:24px;height:24px;border-radius:6px;display:flex;align-items:center;justify-content:center;flex:0 0 24px}
+  .close{margin-left:auto;color:var(--fg-secondary);cursor:pointer}
+  .info .icon{background:var(--rais-info);color:#fff}
+  .success .icon{background:var(--rais-success);color:#fff}
+  .warning .icon{background:var(--rais-warning);color:var(--fg-on-light)}
+  .error .icon{background:var(--rais-error);color:#fff}
+  .default .icon{background:var(--rais-grey-700);color:var(--fg-strong)}
+</style></head>
+<body>
+<div class="stack">
+  <div class="toast default"><span class="icon"><iconify-icon icon="solar:info-circle-bold" width="16"></iconify-icon></span>Default snackbar message<iconify-icon class="close" icon="solar:close-circle-bold" width="20"></iconify-icon></div>
+  <div class="toast info"><span class="icon"><iconify-icon icon="solar:info-circle-bold" width="16"></iconify-icon></span>Recipient list updated<iconify-icon class="close" icon="solar:close-circle-bold" width="20"></iconify-icon></div>
+  <div class="toast success"><span class="icon"><iconify-icon icon="eva:checkmark-fill" width="16"></iconify-icon></span>Push alarm sent successfully<iconify-icon class="close" icon="solar:close-circle-bold" width="20"></iconify-icon></div>
+  <div class="toast warning"><span class="icon"><iconify-icon icon="solar:danger-triangle-bold" width="16"></iconify-icon></span>Quota at 92% — review usage<iconify-icon class="close" icon="solar:close-circle-bold" width="20"></iconify-icon></div>
+  <div class="toast error"><span class="icon"><iconify-icon icon="solar:close-circle-bold" width="16"></iconify-icon></span>Couldn't reach the database<iconify-icon class="close" icon="solar:close-circle-bold" width="20"></iconify-icon></div>
+</div>
+</body></html>

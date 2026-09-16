@@ -1,0 +1,55 @@
+{
+  "$meta": {
+    "name": "RAIS · State System v2",
+    "version": "2026.05.10k",
+    "principle": "Five tiers, 19 canonical states. Always pair color + text + icon. Never overlap two states on the same element."
+  },
+
+  "$enum": [
+    "default","hover","pressed","focused","disabled",
+    "selected","expanded","collapsed",
+    "loading","skeleton","streaming","processing","uploading",
+    "dragging","sorting","filtering",
+    "success","warning","error"
+  ],
+
+  "tier1_interaction": {
+    "default":  { "css": "var(--state-default)" },
+    "hover":    { "css": "var(--state-hover)" },
+    "pressed":  { "css": "var(--state-pressed)" },
+    "focused":  { "css": "var(--focus-ring-color)", "$ref": "TP 02 — outline only, no fill swap." },
+    "disabled": { "css": "var(--state-disabled)", "$rule": "Pair with cursor: not-allowed and aria-disabled." }
+  },
+
+  "tier2_selection": {
+    "selected":  { "css": "var(--state-selected)",  "$usage": "Toggled on, list-item picked." },
+    "expanded":  { "css": "var(--state-expanded)",  "$usage": "Accordion open, dropdown open." },
+    "collapsed": { "css": "var(--state-collapsed)", "$usage": "Accordion closed (default rest)." }
+  },
+
+  "tier3_async": {
+    "loading":    { "css": "var(--state-loading)",    "$usage": "Spinner overlay, content visible underneath." },
+    "skeleton":   { "css": "var(--state-skeleton)",   "$class": ".is-skeleton" },
+    "streaming":  { "css": "var(--state-streaming)",  "$class": ".is-streaming", "$usage": "AI typewriter cursor." },
+    "processing": { "css": "var(--state-processing)", "$usage": "Long server task in progress." },
+    "uploading":  { "css": "var(--state-uploading)",  "$usage": "File transfer, with progress bar." }
+  },
+
+  "tier4_manipulation": {
+    "dragging":  { "css": "var(--state-dragging)",  "$usage": "Item being moved by pointer." },
+    "sorting":   { "css": "var(--state-sorting)",   "$usage": "Table column actively sorting." },
+    "filtering": { "css": "var(--state-filtering)", "$usage": "Filter panel narrowing dataset." }
+  },
+
+  "tier5_semantic": {
+    "success": { "css": "var(--state-success)" },
+    "warning": { "css": "var(--state-warning)" },
+    "error":   { "css": "var(--state-error)" }
+  },
+
+  "$rules": {
+    "pairing": "Color alone is never enough — pair with text or icon.",
+    "no-overlap": "An element may carry exactly ONE state from tiers 1–4 at a time. Tier 5 (semantic) may stack.",
+    "naming": "State name must come from $enum. No 'highlighted', 'fancy', 'cool' etc."
+  }
+}

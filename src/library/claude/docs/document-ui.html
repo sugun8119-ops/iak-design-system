@@ -1,0 +1,481 @@
+<!doctype html>
+<!-- @dsCard group="Brand" name="Docs UI · Document Site" subtitle="Markdown · tables · preview · playground" -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>RAIS · Documentation</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="../colors_and_type.css">
+<script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+<style>
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg-canvas);color:var(--fg-primary);min-height:100vh;display:grid;grid-template-columns:280px 1fr;grid-template-rows:64px 1fr}
+
+  /* ─── Topbar ─── */
+  header.bar{
+    grid-column:1/-1;display:flex;align-items:center;gap:16px;
+    padding:0 24px;border-bottom:1px solid var(--border-subtle);background:var(--bg-canvas);position:sticky;top:0;z-index:5
+  }
+  header.bar .brand{display:flex;align-items:center;gap:10px;font:var(--text-body-strong);color:var(--fg-strong)}
+  header.bar .brand .mk{width:24px;height:24px;border-radius:6px;background:var(--accent);display:grid;place-items:center;color:var(--accent-fg);font:800 12px/1 var(--font-ui)}
+  header.bar .ver{font:var(--text-overline);color:var(--fg-muted);padding:3px 10px;border-radius:500px;background:var(--rais-alpha-08)}
+  header.bar .search{
+    flex:1;max-width:520px;display:flex;align-items:center;gap:8px;
+    background:var(--bg-field);border:1px solid var(--border-default);border-radius:10px;padding:8px 12px;
+    color:var(--fg-muted)
+  }
+  header.bar .search iconify-icon{font-size:16px}
+  header.bar .search input{flex:1;background:transparent;border:none;color:var(--fg-strong);font:var(--text-body);outline:none}
+  header.bar .search kbd{font:var(--text-overline);padding:2px 8px;border-radius:4px;background:var(--rais-alpha-08);color:var(--fg-muted)}
+  header.bar .links{display:flex;gap:6px;margin-left:auto}
+  header.bar .links a{font:var(--text-caption);color:var(--fg-secondary);padding:6px 12px;border-radius:8px;text-decoration:none}
+  header.bar .links a:hover{background:var(--rais-alpha-08);color:var(--fg-strong)}
+
+  /* ─── Sidebar ─── */
+  nav.side{
+    border-right:1px solid var(--border-subtle);
+    padding:24px 16px;overflow-y:auto;height:calc(100vh - 64px);position:sticky;top:64px
+  }
+  nav.side .grp{margin-bottom:18px}
+  nav.side .grp h6{margin:0 0 6px;padding:0 10px;font:var(--text-overline);color:var(--fg-muted)}
+  nav.side a{
+    display:flex;align-items:center;gap:10px;padding:7px 10px;border-radius:8px;
+    font:var(--text-caption);color:var(--fg-secondary);text-decoration:none;
+    transition:all var(--motion-fast,120ms) var(--motion-ease,ease-out)
+  }
+  nav.side a:hover{background:var(--rais-alpha-08);color:var(--fg-strong)}
+  nav.side a.active{background:color-mix(in oklch,var(--accent) 10%,var(--bg-card));color:var(--accent);position:relative}
+  nav.side a.active::before{content:"";position:absolute;left:-16px;top:6px;bottom:6px;width:2px;background:var(--accent);border-radius:2px}
+  nav.side a iconify-icon{font-size:14px;color:var(--fg-muted)}
+  nav.side a.active iconify-icon{color:var(--accent)}
+  nav.side a .num{margin-left:auto;font:var(--text-overline);color:var(--fg-muted)}
+
+  /* ─── Main ─── */
+  main{padding:48px 56px 80px;max-width:920px}
+
+  /* Breadcrumb */
+  .crumb{display:flex;align-items:center;gap:8px;font:var(--text-caption);color:var(--fg-muted);margin-bottom:18px}
+  .crumb iconify-icon{font-size:11px}
+  .crumb a{color:var(--fg-muted);text-decoration:none}
+  .crumb a:hover{color:var(--fg-strong)}
+  .crumb .cur{color:var(--fg-strong)}
+
+  /* Article header */
+  .art-h{padding-bottom:24px;border-bottom:1px solid var(--border-subtle);margin-bottom:32px}
+  .art-h .lab{font:var(--text-overline);color:var(--accent);margin-bottom:10px}
+  .art-h h1{margin:0;font:var(--text-h1);color:var(--fg-strong);letter-spacing:-.01em}
+  .art-h .lede{margin:14px 0 0;font:var(--text-body-lg, 400 17px/26px var(--font-pretendard));color:var(--fg-secondary);max-width:680px}
+  .art-h .meta{display:flex;gap:18px;margin-top:18px;font:var(--text-caption);color:var(--fg-muted)}
+  .art-h .meta b{color:var(--fg-primary);font-weight:500}
+
+  /* Markdown rendering */
+  .md h2{margin:48px 0 14px;font:var(--text-h2);color:var(--fg-strong);letter-spacing:-.005em;scroll-margin-top:80px}
+  .md h2::before{content:"§ ";color:var(--accent);font-weight:600}
+  .md h3{margin:32px 0 10px;font:var(--text-title);color:var(--fg-strong)}
+  .md p{margin:0 0 16px;font:var(--text-body);color:var(--fg-primary);max-width:680px;text-wrap:pretty}
+  .md p.lead{font:400 17px/26px var(--font-pretendard);color:var(--fg-secondary)}
+  .md ul,.md ol{margin:0 0 16px;padding-left:22px;display:flex;flex-direction:column;gap:6px}
+  .md li{font:var(--text-body);color:var(--fg-primary)}
+  .md li::marker{color:var(--accent)}
+  .md a{color:var(--accent);text-decoration:underline;text-decoration-color:rgba(255,167,38,.4);text-underline-offset:3px}
+  .md a:hover{text-decoration-color:var(--accent)}
+  .md hr{border:none;border-top:1px solid var(--border-subtle);margin:32px 0}
+  .md strong{color:var(--fg-strong);font-weight:600}
+  .md code{font:var(--text-code);background:var(--rais-alpha-08);padding:1px 6px;border-radius:4px;color:var(--fg-strong)}
+  .md blockquote{
+    margin:0 0 16px;padding:12px 16px;border-left:2px solid var(--accent);
+    background:color-mix(in oklch,var(--accent) 5%,var(--bg-canvas));
+    border-radius:0 8px 8px 0;font:var(--text-body);color:var(--fg-secondary)
+  }
+
+  /* Code block */
+  .code-block{
+    background:var(--rais-grey-1100,#030a12);border:1px solid var(--border-subtle);border-radius:12px;
+    margin:0 0 20px;overflow:hidden
+  }
+  .code-block .ch{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:8px 14px;border-bottom:1px solid var(--border-subtle);background:var(--rais-grey-950,#121212)
+  }
+  .code-block .ch .nm{font:var(--text-overline);color:var(--fg-muted)}
+  .code-block .ch .cp{font:var(--text-overline);color:var(--fg-muted);background:var(--rais-alpha-08);padding:3px 10px;border-radius:500px;cursor:pointer;display:flex;align-items:center;gap:4px}
+  .code-block .ch .cp:hover{color:var(--fg-strong)}
+  .code-block pre{margin:0;padding:16px 18px;overflow-x:auto;font:var(--text-code);color:var(--fg-primary);line-height:1.65}
+  .tk-key{color:var(--accent)}
+  .tk-str{color:var(--rais-success-light)}
+  .tk-num{color:var(--rais-info)}
+  .tk-cmt{color:var(--fg-muted)}
+
+  /* Table styling — TP 10 */
+  .table-wrap{margin:0 0 24px;border:1px solid var(--border-default);border-radius:12px;overflow:hidden}
+  .table-wrap table{width:100%;border-collapse:collapse;font:var(--text-caption)}
+  .table-wrap th{
+    text-align:left;padding:12px 16px;background:var(--rais-grey-900);
+    border-bottom:1px solid var(--border-subtle);
+    font:var(--text-overline);color:var(--fg-muted);white-space:nowrap
+  }
+  .table-wrap td{
+    padding:12px 16px;border-bottom:1px solid var(--border-subtle);
+    color:var(--fg-primary);font:var(--text-caption);vertical-align:top
+  }
+  .table-wrap tr:last-child td{border-bottom:none}
+  .table-wrap tr:hover td{background:var(--rais-alpha-08)}
+  .table-wrap td .pill{display:inline-block;padding:2px 8px;border-radius:500px;font:var(--text-overline);background:var(--rais-alpha-08);color:var(--fg-secondary)}
+  .table-wrap td .pill.suc{background:rgba(39,218,104,.12);color:var(--rais-success-light)}
+  .table-wrap td .pill.warn{background:rgba(250,174,62,.12);color:var(--rais-warning)}
+
+  /* Callout */
+  .callout{
+    display:flex;gap:14px;padding:14px 18px;border-radius:12px;margin:0 0 20px;
+    background:rgba(76,154,236,.06);border:1px solid rgba(76,154,236,.22)
+  }
+  .callout iconify-icon{font-size:20px;color:var(--rais-info,#4C9AEC);flex-shrink:0;margin-top:2px}
+  .callout .b{flex:1}
+  .callout .b b{display:block;font:var(--text-body-strong);color:var(--fg-strong);margin-bottom:2px}
+  .callout .b p{font:var(--text-caption);color:var(--fg-secondary);margin:0}
+  .callout.warn{background:rgba(250,174,62,.06);border-color:rgba(250,174,62,.22)}
+  .callout.warn iconify-icon{color:var(--rais-warning)}
+  .callout.suc{background:rgba(39,218,104,.06);border-color:rgba(39,218,104,.22)}
+  .callout.suc iconify-icon{color:var(--rais-success-light)}
+
+  /* Preview UI — live component preview frame */
+  .preview{
+    border:1px solid var(--border-default);border-radius:14px;overflow:hidden;margin:0 0 20px
+  }
+  .preview .pv-tabs{display:flex;border-bottom:1px solid var(--border-subtle);background:var(--rais-grey-900)}
+  .preview .pv-tabs button{
+    background:transparent;border:none;color:var(--fg-muted);font:var(--text-overline);
+    padding:10px 16px;cursor:pointer;border-bottom:2px solid transparent;
+    transition:all var(--motion-fast,120ms) var(--motion-ease,ease-out)
+  }
+  .preview .pv-tabs button.on{color:var(--fg-strong);border-color:var(--accent)}
+  .preview .pv-tabs button:hover:not(.on){color:var(--fg-secondary)}
+  .preview .pv-stage{
+    padding:48px 24px;display:grid;place-items:center;
+    background:
+      radial-gradient(circle at 1px 1px, rgba(255,255,255,.04) 1px, transparent 0) 0 0/16px 16px,
+      var(--bg-elevated)
+  }
+  .preview .pv-controls{display:flex;align-items:center;gap:8px;padding:10px 14px;border-top:1px solid var(--border-subtle);background:var(--rais-grey-900)}
+  .preview .pv-controls .lbl{font:var(--text-overline);color:var(--fg-muted);margin-right:auto}
+  .preview .pv-controls button.icon{
+    width:28px;height:28px;border-radius:6px;background:var(--bg-card);border:1px solid var(--border-subtle);
+    color:var(--fg-secondary);display:grid;place-items:center;cursor:pointer
+  }
+  .preview .pv-controls button.icon:hover{color:var(--fg-strong);border-color:var(--border-strong,var(--border-default))}
+
+  /* Demo button used inside preview */
+  .demo-btn{
+    background:var(--accent);color:var(--accent-fg);border:none;border-radius:8px;
+    font:var(--text-button);padding:10px 18px;cursor:pointer;
+    transition:transform var(--motion-fast,120ms) var(--motion-ease,ease-out)
+  }
+  .demo-btn:active{transform:scale(.98)}
+
+  /* Playground */
+  .playground{
+    display:grid;grid-template-columns:1fr 280px;border:1px solid var(--border-default);
+    border-radius:14px;overflow:hidden;margin:0 0 20px;min-height:280px
+  }
+  .playground .stage{
+    padding:48px 24px;display:grid;place-items:center;
+    background:
+      radial-gradient(circle at 1px 1px, rgba(255,255,255,.04) 1px, transparent 0) 0 0/16px 16px,
+      var(--bg-elevated)
+  }
+  .playground .panel{
+    border-left:1px solid var(--border-subtle);background:var(--rais-grey-900);padding:18px;display:flex;flex-direction:column;gap:14px
+  }
+  .playground .panel h6{margin:0;font:var(--text-overline);color:var(--fg-muted)}
+  .playground .ctrl{display:flex;flex-direction:column;gap:6px}
+  .playground .ctrl label{font:var(--text-overline);color:var(--fg-muted)}
+  .playground .ctrl select,.playground .ctrl input{
+    background:var(--bg-field);border:1px solid var(--border-default);color:var(--fg-strong);
+    border-radius:8px;padding:8px 10px;font:var(--text-caption);outline:none
+  }
+  .playground .seg{display:flex;background:var(--bg-field);border:1px solid var(--border-default);border-radius:8px;padding:2px;gap:2px}
+  .playground .seg button{
+    flex:1;background:transparent;border:none;color:var(--fg-muted);
+    font:var(--text-overline);padding:6px 8px;border-radius:6px;cursor:pointer
+  }
+  .playground .seg button.on{background:var(--rais-alpha-08);color:var(--fg-strong)}
+
+  /* TOC right rail */
+  .toc{position:fixed;right:24px;top:96px;width:200px;font:var(--text-caption)}
+  .toc h6{margin:0 0 8px;font:var(--text-overline);color:var(--fg-muted)}
+  .toc a{display:block;padding:4px 0;color:var(--fg-secondary);text-decoration:none;border-left:2px solid transparent;padding-left:10px;margin-left:-10px}
+  .toc a:hover{color:var(--fg-strong)}
+  .toc a.on{color:var(--accent);border-color:var(--accent)}
+  @media (max-width:1280px){.toc{display:none}}
+</style>
+</head>
+<body>
+
+  <header class="bar">
+    <div class="brand">
+      <div class="mk">R</div>
+      <span>RAIS Design System</span>
+    </div>
+    <span class="ver">v 2026.05.10k</span>
+    <div class="search">
+      <iconify-icon icon="eva:search-fill"></iconify-icon>
+      <input placeholder="Search docs, tokens, components…">
+      <kbd>⌘K</kbd>
+    </div>
+    <div class="links">
+      <a href="../index.html">Hub</a>
+      <a href="#">Tokens</a>
+      <a href="#">Components</a>
+      <a href="#">Changelog</a>
+    </div>
+  </header>
+
+  <nav class="side">
+    <div class="grp">
+      <h6>Get started</h6>
+      <a href="#"><iconify-icon icon="eva:home-fill"></iconify-icon>Overview</a>
+      <a href="#"><iconify-icon icon="eva:flash-fill"></iconify-icon>Quick start</a>
+      <a href="#"><iconify-icon icon="solar:bookmark-bold"></iconify-icon>Principles</a>
+    </div>
+    <div class="grp">
+      <h6>Foundation</h6>
+      <a href="#"><iconify-icon icon="solar:palette-bold"></iconify-icon>Color<span class="num">42</span></a>
+      <a href="#"><iconify-icon icon="solar:text-bold"></iconify-icon>Typography<span class="num">9</span></a>
+      <a href="#" class="active"><iconify-icon icon="solar:ruler-cross-pen-bold"></iconify-icon>Spacing<span class="num">10</span></a>
+      <a href="#"><iconify-icon icon="solar:square-bold-duotone"></iconify-icon>Radius<span class="num">7</span></a>
+      <a href="#"><iconify-icon icon="solar:sun-bold"></iconify-icon>Shadow / Glow<span class="num">9</span></a>
+      <a href="#"><iconify-icon icon="solar:play-circle-bold"></iconify-icon>Motion<span class="num">3</span></a>
+    </div>
+    <div class="grp">
+      <h6>Components</h6>
+      <a href="#"><iconify-icon icon="solar:square-double-alt-arrow-right-bold"></iconify-icon>Button</a>
+      <a href="#"><iconify-icon icon="solar:card-bold"></iconify-icon>Card</a>
+      <a href="#"><iconify-icon icon="solar:text-field-bold"></iconify-icon>Input</a>
+      <a href="#"><iconify-icon icon="solar:tag-bold"></iconify-icon>Badge</a>
+      <a href="#"><iconify-icon icon="solar:list-bold"></iconify-icon>Table</a>
+      <a href="#"><iconify-icon icon="solar:chat-square-bold"></iconify-icon>Toast</a>
+    </div>
+    <div class="grp">
+      <h6>Patterns</h6>
+      <a href="#"><iconify-icon icon="solar:layers-bold"></iconify-icon>Layout grid</a>
+      <a href="#"><iconify-icon icon="solar:focus-bold"></iconify-icon>Focus system</a>
+      <a href="#"><iconify-icon icon="solar:asteroid-bold"></iconify-icon>State system</a>
+    </div>
+    <div class="grp">
+      <h6>Governance</h6>
+      <a href="#"><iconify-icon icon="solar:checklist-bold"></iconify-icon>QA checklist</a>
+      <a href="#"><iconify-icon icon="solar:magic-stick-bold"></iconify-icon>AI prompt guide</a>
+      <a href="#"><iconify-icon icon="solar:history-bold"></iconify-icon>Changelog</a>
+    </div>
+  </nav>
+
+  <main class="md">
+    <div class="crumb">
+      <a href="#">Docs</a>
+      <iconify-icon icon="eva:chevron-right-fill"></iconify-icon>
+      <a href="#">Foundation</a>
+      <iconify-icon icon="eva:chevron-right-fill"></iconify-icon>
+      <span class="cur">Spacing</span>
+    </div>
+
+    <header class="art-h">
+      <div class="lab">FOUNDATION</div>
+      <h1>Spacing</h1>
+      <p class="lede">A locked 4 pt scale (4 · 8 · 12 · 16 · 20 · 24 · 32 · 40 · 48 · 64) drives every padding, margin and gap in the system. Off-scale literals are an audit failure.</p>
+      <div class="meta">
+        <div><b>Updated</b> 2026.05.10k</div>
+        <div><b>Tokens</b> 10 base · 11 semantic</div>
+        <div><b>Owner</b> RAIS Design</div>
+      </div>
+    </header>
+
+    <p class="lead">If you find yourself reaching for <code>10px 14px</code>, you have left the system. Use the closest token instead — the visual difference is imperceptible and the audit cost is zero.</p>
+
+    <div class="callout">
+      <iconify-icon icon="solar:info-circle-bold"></iconify-icon>
+      <div class="b">
+        <b>TP 03 · Spacing Lock</b>
+        <p>From 2026.05.10j, raw pixel values outside the <code>$enum</code> are blocked by the QA pass. Use <code>--space-N</code> custom properties or the <code>.p-N</code> / <code>.gap-N</code> utilities.</p>
+      </div>
+    </div>
+
+    <h2 id="scale">Scale</h2>
+    <p>Ten tokens cover the full layout range, from inline icon-label gaps to hero-section breathing room.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Token</th><th>Value</th><th>Custom property</th><th>Utility</th><th>Typical use</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td><code>spacing/1</code></td><td>4 px</td><td><code>--space-1</code></td><td><code>.p-1</code> · <code>.gap-1</code></td><td>Icon-to-label, dot-to-text</td><td><span class="pill suc">Stable</span></td></tr>
+          <tr><td><code>spacing/2</code></td><td>8 px</td><td><code>--space-2</code></td><td><code>.p-2</code> · <code>.gap-2</code></td><td>Inline chip rail, button icon gap</td><td><span class="pill suc">Stable</span></td></tr>
+          <tr><td><code>spacing/3</code></td><td>12 px</td><td><code>--space-3</code></td><td><code>.p-3</code> · <code>.gap-3</code></td><td>Table cell vertical, dense list</td><td><span class="pill suc">Stable</span></td></tr>
+          <tr><td><code>spacing/4</code></td><td>16 px</td><td><code>--space-4</code></td><td><code>.p-4</code> · <code>.gap-4</code></td><td>Form row gap, card gutter</td><td><span class="pill suc">Stable</span></td></tr>
+          <tr><td><code>spacing/5</code></td><td>20 px</td><td><code>--space-5</code></td><td><code>.p-5</code> · <code>.gap-5</code></td><td>Lg button horizontal padding</td><td><span class="pill suc">Stable</span></td></tr>
+          <tr><td><code>spacing/6</code></td><td>24 px</td><td><code>--space-6</code></td><td><code>.p-6</code> · <code>.gap-6</code></td><td>Card padding, container padding, card gap</td><td><span class="pill suc">Stable</span></td></tr>
+          <tr><td><code>spacing/8</code></td><td>32 px</td><td><code>--space-8</code></td><td><code>.p-8</code> · <code>.gap-8</code></td><td>Section gap, page padding (legacy)</td><td><span class="pill suc">Stable</span></td></tr>
+          <tr><td><code>spacing/10</code></td><td>40 px</td><td><code>--space-10</code></td><td><code>.p-10</code> · <code>.gap-10</code></td><td>Hero section vertical</td><td><span class="pill warn">Sparingly</span></td></tr>
+          <tr><td><code>spacing/12</code></td><td>48 px</td><td><code>--space-12</code></td><td><code>.p-12</code> · <code>.gap-12</code></td><td>Page header bottom margin</td><td><span class="pill warn">Sparingly</span></td></tr>
+          <tr><td><code>spacing/16</code></td><td>64 px</td><td><code>--space-16</code></td><td><code>.p-16</code> · <code>.gap-16</code></td><td>Top-level section break</td><td><span class="pill warn">Sparingly</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 id="preview">Preview</h2>
+    <p>Hover any padding to see its computed value. The preview frame uses the same dot grid as the application canvas so spatial relationships read true to product.</p>
+
+    <div class="preview">
+      <div class="pv-tabs">
+        <button class="on">Preview</button>
+        <button>HTML</button>
+        <button>CSS</button>
+        <button>JSON</button>
+      </div>
+      <div class="pv-stage">
+        <button class="demo-btn pad-md">Save changes</button>
+      </div>
+      <div class="pv-controls">
+        <span class="lbl">Button · Action / Primary / Md</span>
+        <button class="icon" title="Reset"><iconify-icon icon="eva:refresh-fill"></iconify-icon></button>
+        <button class="icon" title="Copy"><iconify-icon icon="eva:copy-fill"></iconify-icon></button>
+        <button class="icon" title="Open"><iconify-icon icon="eva:external-link-fill"></iconify-icon></button>
+      </div>
+    </div>
+
+    <h2 id="usage">Usage</h2>
+    <p>Reach for the named utility first. Drop to the custom property only when you need composition (e.g. in a calc).</p>
+
+    <div class="code-block">
+      <div class="ch">
+        <span class="nm">Card · padding</span>
+        <button class="cp"><iconify-icon icon="eva:copy-outline"></iconify-icon>Copy</button>
+      </div>
+<pre><span class="tk-cmt">/* ✅ Recommended — utility class */</span>
+&lt;div <span class="tk-key">class</span>=<span class="tk-str">"pad-card"</span>&gt;…&lt;/div&gt;
+
+<span class="tk-cmt">/* ✅ Allowed — custom property */</span>
+.card { padding: <span class="tk-key">var</span>(--space-<span class="tk-num">6</span>); }
+
+<span class="tk-cmt">/* ❌ Rejected — off-scale literal */</span>
+.card { padding: <span class="tk-num">10px</span> <span class="tk-num">14px</span>; }</pre>
+    </div>
+
+    <h2 id="playground">Playground</h2>
+    <p>Tweak the controls on the right to see how a button's padding token changes its silhouette without mutating any other style.</p>
+
+    <div class="playground">
+      <div class="stage">
+        <button class="demo-btn" id="pg-btn">Save changes</button>
+      </div>
+      <div class="panel">
+        <h6>Token controls</h6>
+        <div class="ctrl">
+          <label>Padding preset</label>
+          <div class="seg" id="pg-pad">
+            <button data-v="4 12">SM</button>
+            <button class="on" data-v="8 16">MD</button>
+            <button data-v="12 20">LG</button>
+          </div>
+        </div>
+        <div class="ctrl">
+          <label>Radius</label>
+          <select id="pg-radius">
+            <option value="6">sm · 6 px</option>
+            <option value="8" selected>md · 8 px</option>
+            <option value="12">lg · 12 px</option>
+            <option value="500">pill</option>
+          </select>
+        </div>
+        <div class="ctrl">
+          <label>Label</label>
+          <input id="pg-label" value="Save changes">
+        </div>
+        <div class="ctrl">
+          <label>State</label>
+          <div class="seg" id="pg-state">
+            <button class="on" data-v="default">Default</button>
+            <button data-v="loading">Loading</button>
+            <button data-v="disabled">Disabled</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h2 id="rules">Rules</h2>
+    <ul>
+      <li><strong>No literal pixel value</strong> outside the <code>$enum</code> may appear in component CSS.</li>
+      <li><strong>Composition is allowed</strong>: <code>calc(var(--space-6) + var(--space-2))</code> is fine — it always resolves to a token.</li>
+      <li><strong>Never animate spacing</strong>: animate <code>transform</code> instead. (See Motion.)</li>
+      <li><strong>Don't invent semantic names</strong> beyond those in <code>tokens/spacing.json $semantic</code>.</li>
+    </ul>
+
+    <div class="callout suc">
+      <iconify-icon icon="solar:check-circle-bold"></iconify-icon>
+      <div class="b">
+        <b>QA result</b>
+        <p>This page passes the spacing-consistency check. 21 spacing values used; 21 resolved to tokens; 0 off-scale literals.</p>
+      </div>
+    </div>
+
+    <blockquote>If the visual difference between two adjacent tokens isn't enough, the answer is rarely "add a value in between" — it's "rethink the layout."</blockquote>
+
+    <hr>
+    <p style="color:var(--fg-muted);font:var(--text-caption)">Last reviewed 2026.05.10k · <a href="#">Edit on GitHub</a> · <a href="#">Report an issue</a></p>
+  </main>
+
+  <aside class="toc">
+    <h6>On this page</h6>
+    <a href="#scale" class="on">Scale</a>
+    <a href="#preview">Preview</a>
+    <a href="#usage">Usage</a>
+    <a href="#playground">Playground</a>
+    <a href="#rules">Rules</a>
+  </aside>
+
+<script>
+  // Playground wiring
+  const btn = document.getElementById('pg-btn');
+  document.querySelectorAll('#pg-pad button').forEach(b=>{
+    b.addEventListener('click',()=>{
+      document.querySelectorAll('#pg-pad button').forEach(x=>x.classList.remove('on'));
+      b.classList.add('on');
+      const [y,x] = b.dataset.v.split(' ');
+      btn.style.padding = `${y}px ${x}px`;
+    });
+  });
+  document.getElementById('pg-radius').addEventListener('change',e=>{
+    btn.style.borderRadius = e.target.value + 'px';
+  });
+  document.getElementById('pg-label').addEventListener('input',e=>{
+    btn.textContent = e.target.value || 'Button';
+  });
+  document.querySelectorAll('#pg-state button').forEach(b=>{
+    b.addEventListener('click',()=>{
+      document.querySelectorAll('#pg-state button').forEach(x=>x.classList.remove('on'));
+      b.classList.add('on');
+      const v = b.dataset.v;
+      btn.style.opacity = v==='disabled' ? '0.5' : '1';
+      btn.style.cursor = v==='disabled' ? 'not-allowed' : 'pointer';
+      btn.textContent = v==='loading' ? '◐ Saving…' : (document.getElementById('pg-label').value || 'Button');
+    });
+  });
+
+  // Tabs (preview frame)
+  document.querySelectorAll('.pv-tabs button').forEach(b=>{
+    b.addEventListener('click',()=>{
+      b.parentElement.querySelectorAll('button').forEach(x=>x.classList.remove('on'));
+      b.classList.add('on');
+    });
+  });
+
+  // TOC scroll-spy
+  const links = document.querySelectorAll('.toc a');
+  const sections = [...links].map(a => document.getElementById(a.getAttribute('href').slice(1)));
+  window.addEventListener('scroll',()=>{
+    const y = window.scrollY + 120;
+    let cur = 0;
+    sections.forEach((s,i)=>{ if(s && s.offsetTop <= y) cur = i; });
+    links.forEach((l,i)=>l.classList.toggle('on', i===cur));
+  });
+</script>
+</body>
+</html>

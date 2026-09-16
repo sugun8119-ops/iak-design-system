@@ -1,0 +1,67 @@
+{
+  "$meta": {
+    "name": "RAIS · Typography tokens",
+    "version": "2026.05.10",
+    "family": "Pretendard — sole UI face for Korean, English and numerals.",
+    "weight-logic": {
+      "display + page title": "700–800",
+      "section + card title": "600–700",
+      "body UI text":          "400–500",
+      "caption / helper":      "400"
+    }
+  },
+
+  "type": {
+    "display": {
+      "xl": { "fontFamily": "Pretendard", "fontSize": 64, "fontWeight": 800, "lineHeight": 80, "letterSpacing": "-0.01em", "$usage": "Hero numerals, brand H1." },
+      "lg": { "fontFamily": "Pretendard", "fontSize": 48, "fontWeight": 700, "lineHeight": 64, "letterSpacing": "-0.005em", "$usage": "Docs masthead, marketing headline." }
+    },
+    "page": {
+      "title": { "fontFamily": "Pretendard", "fontSize": 32, "fontWeight": 700, "lineHeight": 40, "letterSpacing": "-0.005em", "$usage": "Top of every product page (Mailing, Account, Analytics…)." }
+    },
+    "section": {
+      "title": { "fontFamily": "Pretendard", "fontSize": 24, "fontWeight": 700, "lineHeight": 32, "$usage": "Section header inside a page." }
+    },
+    "card": {
+      "title": { "fontFamily": "Pretendard", "fontSize": 18, "fontWeight": 600, "lineHeight": 28, "$usage": "Card heading." }
+    },
+    "body": {
+      "lg": { "fontFamily": "Pretendard", "fontSize": 16, "fontWeight": 400, "lineHeight": 24 },
+      "md": { "fontFamily": "Pretendard", "fontSize": 14, "fontWeight": 400, "lineHeight": 22, "$usage": "Default body & UI text." },
+      "sm": { "fontFamily": "Pretendard", "fontSize": 13, "fontWeight": 400, "lineHeight": 20 }
+    },
+    "label": {
+      "default": { "fontFamily": "Pretendard", "fontSize": 14, "fontWeight": 500, "lineHeight": 22, "$usage": "Form labels, list-row primary text." },
+      "small":   { "fontFamily": "Pretendard", "fontSize": 12, "fontWeight": 500, "lineHeight": 18 }
+    },
+    "caption": {
+      "default": { "fontFamily": "Pretendard", "fontSize": 12, "fontWeight": 400, "lineHeight": 18, "$usage": "Helper text, table meta, captions." }
+    },
+    "overline": {
+      "default": { "fontFamily": "Pretendard", "fontSize": 11, "fontWeight": 700, "lineHeight": 18, "letterSpacing": "0.12em", "textTransform": "uppercase" }
+    },
+    "button": {
+      "default": { "fontFamily": "Pretendard", "fontSize": 14, "fontWeight": 600, "lineHeight": 24, "$usage": "All CTAs." }
+    },
+    "data": {
+      "lg": { "fontFamily": "Pretendard", "fontSize": 32, "fontWeight": 700, "lineHeight": 40, "fontFeatureSettings": "\"tnum\"", "$usage": "Large metric value (e.g. 4,289)." },
+      "md": { "fontFamily": "Pretendard", "fontSize": 18, "fontWeight": 600, "lineHeight": 24, "fontFeatureSettings": "\"tnum\"" }
+    },
+    "code": {
+      "default": { "fontFamily": "ui-monospace", "fontSize": 13, "fontWeight": 500, "lineHeight": 20 }
+    }
+  },
+
+  "$rules": {
+    "do": [
+      "Use Pretendard everywhere — Korean, English, numerals.",
+      "Use tabular-nums (`tnum`) on every numeric column / metric card.",
+      "Pick the closest role token; do not invent custom sizes per screen."
+    ],
+    "dont": [
+      "Don't load Roboto / Barlow / Public Sans — Pretendard is the sole face.",
+      "Don't go below 12 px in product UI; below that for tabular meta only.",
+      "Don't bold body copy for emphasis — use `label/default` (500) or a chip."
+    ]
+  }
+}

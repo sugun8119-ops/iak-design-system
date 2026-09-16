@@ -1,0 +1,94 @@
+{
+  "$meta": {
+    "name": "RAIS · Spacing / Radius / Shadow tokens",
+    "version": "2026.05.10",
+    "base": 4,
+    "principle": "4 px base scale, no half steps. Always reach for a token, never a literal pixel value."
+  },
+
+  "spacing": {
+    "0":  { "value": 0,  "type": "dimension" },
+    "1":  { "value": 4,  "type": "dimension" },
+    "2":  { "value": 8,  "type": "dimension" },
+    "3":  { "value": 12, "type": "dimension" },
+    "4":  { "value": 16, "type": "dimension" },
+    "5":  { "value": 20, "type": "dimension" },
+    "6":  { "value": 24, "type": "dimension" },
+    "8":  { "value": 32, "type": "dimension" },
+    "10": { "value": 40, "type": "dimension" },
+    "12": { "value": 48, "type": "dimension" },
+    "16": { "value": 64, "type": "dimension" },
+    "20": { "value": 80, "type": "dimension" },
+
+    "$semantic": {
+      "card-padding":      { "value": 24 },
+      "card-gap":          { "value": 24, "$note": "TP 01 · raised from 16 to 24 to match Layout Grid Lock." },
+      "section-gap":       { "value": 32 },
+      "page-padding":      { "value": 32 },
+      "container-padding": { "value": 24, "$note": "TP 01 · inner page padding inside .rais-container." },
+      "container-max":     { "value": 1440, "$note": "TP 01 · max content width." },
+      "form-row-gap":      { "value": 16 },
+      "icon-label-gap":    { "value": 8 },
+      "button-icon-gap":   { "value": 8 },
+      "table-cell-y":      { "value": 12 },
+      "table-cell-x":      { "value": 16 }
+    },
+
+    "$enum": [4, 8, 12, 16, 20, 24, 32, 40, 48, 64],
+    "$rule": "TP 03 · Spacing Lock. No literal pixel value outside this enum may appear in component CSS. Use --space-N or .p-N / .gap-N / .pad-* utilities."
+  },
+
+  "radius": {
+    "xs":   { "value": 4,   "type": "dimension", "$usage": "Status dots, tiny chips." },
+    "sm":   { "value": 6,   "type": "dimension" },
+    "md":   { "value": 8,   "type": "dimension", "$usage": "Buttons, inputs, chips." },
+    "lg":   { "value": 12,  "type": "dimension", "$usage": "Foundation cards, secondary cards." },
+    "xl":   { "value": 16,  "type": "dimension", "$usage": "Mid card." },
+    "2xl":  { "value": 24,  "type": "dimension", "$usage": "Primary content card, hero." },
+    "pill": { "value": 500, "type": "dimension", "$usage": "Status dots, badges, circular icons." }
+  },
+
+  "shadow": {
+    "sm":       { "value": "0px 1px 2px 0px rgba(145,158,171,0.16)" },
+    "md":       { "value": "0px 4px 8px -2px rgba(145,158,171,0.16), 0px 0px 1px 0px rgba(145,158,171,0.20)" },
+    "lg":       { "value": "0px 12px 24px -4px rgba(145,158,171,0.12), 0px 0px 2px 0px rgba(145,158,171,0.20)", "$usage": "Default card." },
+    "floating": { "value": "0px 16px 32px -4px rgba(0,0,0,0.40)", "$usage": "Modal, dropdown, toast." }
+  },
+
+  "glow": {
+    "primary": { "value": "0px 8px 16px 0px rgba(255,167,38,0.24)", "$desc": "RGB matches `color/action/primary/default` (#FFA726)." },
+    "info":    { "value": "0px 8px 16px 0px rgba(76,154,236,0.24)", "$desc": "RGB matches `color/status/info` (#4C9AEC)." },
+    "success": { "value": "0px 8px 16px 0px rgba(39,218,104,0.24)", "$desc": "RGB matches `color/status/success` (#27DA68)." },
+    "warning": { "value": "0px 8px 16px 0px rgba(250,174,62,0.24)", "$desc": "RGB matches `color/status/warning` (#FAAE3E)." },
+    "error":   { "value": "0px 8px 16px 0px rgba(255,102,91,0.24)", "$desc": "RGB matches `color/status/error` (#FF665B)." },
+    "$rules": {
+      "use": "Resting decoration only — under coloured icon plates / metric tiles.",
+      "never": "Never as focus ring; never on the gem mark; never as page background."
+    }
+  },
+
+  "focus": {
+    "border": { "value": "1px solid #FFA726" },
+    "ring":   { "value": "inset 0 0 0 1px #FFA726" },
+    "$rule": "Border + inset ring only. No outer glow halo.",
+
+    "ring-width":  { "value": 2,  "$note": "TP 02 · Focus Ring System." },
+    "ring-offset": { "value": 2,  "$note": "TP 02 · Focus Ring System." },
+    "ring-color":  { "value": "var(--accent)", "$note": "TP 02 · semantic only; never a raw hex." },
+    "$tp02": "Focus Ring · 2 px ring · 2 px offset · semantic token · keyboard-only via :focus-visible. Hover and focus must remain visually distinct."
+  },
+
+  "grid": {
+    "$tp01": "Layout Grid Lock — never hand-roll widths.",
+    "container-max": { "value": 1440, "type": "dimension" },
+    "container-pad": { "value": 24,   "type": "dimension" },
+    "section-gap":   { "value": 32,   "type": "dimension" },
+    "card-gap":      { "value": 24,   "type": "dimension" },
+    "gutter":        { "value": 24,   "type": "dimension" },
+    "columns": {
+      "desktop": { "value": 12, "$breakpoint": ">=1025px" },
+      "tablet":  { "value": 8,  "$breakpoint": "641-1024px" },
+      "mobile":  { "value": 4,  "$breakpoint": "<=640px" }
+    }
+  }
+}

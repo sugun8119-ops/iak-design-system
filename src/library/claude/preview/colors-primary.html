@@ -1,0 +1,41 @@
+<!doctype html>
+<!-- @dsCard group="Colors" name="Colors · Primary" subtitle="Orange accent + secondary docs pair" viewport="700x210" --><html><head><meta charset="utf-8"><title>Color · Primary</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body{margin:0;padding:20px;background:var(--bg-elevated);font:var(--text-body);color:var(--fg-primary)}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  .col{display:grid;grid-template-columns:1fr 40px;gap:8px}
+  .swatch{height:120px;border-radius:8px;display:flex;align-items:flex-end;padding:14px 16px;font:var(--text-body-strong);color:var(--fg-on-accent)}
+  .stack{display:grid;grid-template-rows:repeat(4,1fr);gap:8px}
+  .tiny{border-radius:4px}
+  .label{display:flex;justify-content:space-between;font:var(--text-caption);color:var(--fg-secondary);font-feature-settings:"tnum"}
+  .name{font:var(--text-body-strong);color:var(--fg-primary)}
+</style></head>
+<body>
+<div class="row">
+  <div>
+    <div class="col">
+      <div class="swatch" style="background:var(--rais-primary);box-shadow:var(--glow-primary)">#FFA726</div>
+      <div class="stack">
+        <div class="tiny" style="background:var(--rais-primary-lighter)"></div>
+        <div class="tiny" style="background:var(--rais-primary-light)"></div>
+        <div class="tiny" style="background:var(--rais-primary-dark)"></div>
+        <div class="tiny" style="background:var(--rais-primary-darker)"></div>
+      </div>
+    </div>
+    <div class="label" style="margin-top:10px"><span class="name">Primary</span><span>--accent</span></div>
+  </div>
+  <div>
+    <div class="col">
+      <div class="swatch" style="background:var(--rais-secondary-purple);box-shadow:var(--glow-secondary);color:#fff">#8E33FF</div>
+      <div class="stack">
+        <div class="tiny" style="background:#c684ff"></div>
+        <div class="tiny" style="background:#a673ff"></div>
+        <div class="tiny" style="background:#7322e0"></div>
+        <div class="tiny" style="background:#4a0fb0"></div>
+      </div>
+    </div>
+    <div class="label" style="margin-top:10px"><span class="name">Secondary</span><span>docs only</span></div>
+  </div>
+</div>
+</body></html>

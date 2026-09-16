@@ -1,0 +1,326 @@
+<!doctype html>
+<!-- @dsCard group="Brand" name="System Hub" subtitle="RAIS Design System — navigable hub for tokens, docs, previews, kits" -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>RAIS Design System · Hub</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="colors_and_type.css">
+<style>
+  :root { --hub-rail: 280px; }
+  body{margin:0;padding:0;background:var(--bg-canvas);color:var(--fg-primary);min-height:100vh}
+  .shell{display:grid;grid-template-columns:var(--hub-rail) 1fr;min-height:100vh}
+
+  /* ─── Sidebar ────────────────────────────────────────────── */
+  aside{position:sticky;top:0;height:100vh;background:var(--bg-canvas);border-right:1px solid var(--border-subtle);
+       padding:24px 18px;display:flex;flex-direction:column;gap:24px;overflow:auto}
+  .brand{display:flex;align-items:center;gap:10px;padding:0 6px}
+  .brand .mark{width:32px;height:18px;background:url('assets/iak-gem-mark-trio.png') center/contain no-repeat}
+  .brand .wm{font:700 13px/1 var(--font-ui);letter-spacing:.18em;text-transform:uppercase;color:var(--fg-strong)}
+  .nav{display:flex;flex-direction:column;gap:2px}
+  .nav .grp{font:700 10px/1 var(--font-ui);letter-spacing:.14em;text-transform:uppercase;color:var(--fg-muted);padding:14px 10px 6px}
+  .nav a{display:flex;align-items:center;gap:10px;padding:8px 10px;border-radius:8px;text-decoration:none;color:var(--fg-secondary);
+        font:500 13px/1.4 var(--font-ui)}
+  .nav a:hover{background:var(--rais-alpha-08);color:var(--fg-strong)}
+  .nav a .dot{width:6px;height:6px;border-radius:500px;background:currentColor;opacity:.5}
+  .nav .ver{margin-top:auto;padding:12px 10px;border-top:1px solid var(--border-subtle);font:400 11px/1.5 var(--font-ui);color:var(--fg-muted)}
+
+  /* ─── Main ──────────────────────────────────────────────── */
+  main{padding:40px 48px 80px;max-width:1200px}
+  .masthead{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;padding-bottom:24px;border-bottom:1px solid var(--border-default);margin-bottom:32px}
+  .masthead h1{margin:0;font:var(--text-display-lg);color:var(--fg-strong);letter-spacing:-.01em}
+  .masthead .sub{margin-top:6px;font:var(--text-body-lg);color:var(--fg-secondary);max-width:560px}
+  .masthead .meta{display:flex;flex-direction:column;align-items:flex-end;gap:6px;text-align:right}
+  .meta .tag{font:700 10px/1 var(--font-ui);letter-spacing:.14em;text-transform:uppercase;padding:5px 10px;border-radius:500px;background:rgba(255,167,38,.14);color:var(--accent)}
+  .meta .ver{font:400 12px/1.5 var(--font-ui);color:var(--fg-muted)}
+
+  /* Section heads */
+  section{margin-top:48px;scroll-margin-top:24px}
+  section > h2{margin:0 0 4px;font:700 11px/1 var(--font-ui);letter-spacing:.14em;text-transform:uppercase;color:var(--fg-muted)}
+  section > .h-row{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;padding-bottom:10px;border-bottom:1px solid var(--border-subtle);margin-bottom:18px}
+  section > .h-row h3{margin:0;font:var(--text-h2);color:var(--fg-strong)}
+  section > .h-row p{margin:4px 0 0;font:var(--text-body);color:var(--fg-secondary);max-width:680px}
+
+  /* Pillars (top stat row) */
+  .pillars{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:8px}
+  .pillar{background:var(--bg-card);border:1px solid var(--border-default);border-radius:16px;padding:20px;display:flex;flex-direction:column;gap:14px;min-height:130px}
+  .pillar .ix{display:flex;align-items:center;justify-content:space-between}
+  .pillar .ix .num{font:700 28px/1 var(--font-ui);color:var(--fg-strong);font-feature-settings:"tnum"}
+  .pillar .ix .chip{font:700 10px/1 var(--font-ui);letter-spacing:.12em;text-transform:uppercase;padding:5px 9px;border-radius:500px;background:var(--rais-alpha-08);color:var(--fg-secondary)}
+  .pillar .ttl{font:600 14px/1.3 var(--font-ui);color:var(--fg-strong)}
+  .pillar .desc{font:400 12px/1.5 var(--font-ui);color:var(--fg-secondary);margin:-6px 0 0}
+
+  /* Card grid (file cards) */
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  .grid.two{grid-template-columns:repeat(2,1fr)}
+  .card{display:flex;flex-direction:column;gap:10px;background:var(--bg-card);border:1px solid var(--border-default);border-radius:12px;padding:18px 18px 16px;text-decoration:none;color:inherit;
+        transition:background 120ms ease-out, border-color 120ms ease-out}
+  .card:hover{background:var(--bg-card-alt);border-color:var(--border-strong)}
+  .card .top{display:flex;align-items:center;justify-content:space-between;gap:8px}
+  .card .nm{font:600 14px/1.3 var(--font-ui);color:var(--fg-strong)}
+  .card .ext{font:700 10px/1 var(--font-mono);letter-spacing:.08em;color:var(--fg-muted);padding:4px 7px;border-radius:6px;background:var(--rais-alpha-08);text-transform:uppercase}
+  .card .desc{font:400 12px/1.5 var(--font-ui);color:var(--fg-secondary)}
+  .card .path{font-family:var(--font-mono);font-size:11px;color:var(--accent);margin-top:auto}
+
+  /* Token mini-cards */
+  .toks{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+  .tok{background:var(--bg-card);border:1px solid var(--border-default);border-radius:12px;padding:14px;display:flex;flex-direction:column;gap:10px;min-height:120px}
+  .tok .swatch{width:100%;height:46px;border-radius:8px;border:1px solid var(--border-subtle)}
+  .tok .nm{font:600 12px/1.3 var(--font-ui);color:var(--fg-strong)}
+  .tok .val{font-family:var(--font-mono);font-size:11px;color:var(--fg-secondary)}
+
+  /* Pillar accent variants */
+  .pillar.accent{background:linear-gradient(180deg,rgba(255,167,38,.07),rgba(255,167,38,0)),var(--bg-card);border-color:rgba(255,167,38,.22)}
+  .pillar.accent .ix .num{color:var(--accent)}
+
+  /* Quick rules card */
+  .rules{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .rule{background:var(--bg-card);border:1px solid var(--border-default);border-radius:12px;padding:18px}
+  .rule .h{font:700 11px/1 var(--font-ui);letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px}
+  .rule.do  .h{color:var(--rais-success-light)}
+  .rule.dont .h{color:var(--rais-error)}
+  .rule ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px}
+  .rule li{display:flex;gap:10px;align-items:flex-start;font:400 13px/1.55 var(--font-ui);color:var(--fg-secondary)}
+  .rule li::before{content:"";flex:0 0 6px;width:6px;height:6px;border-radius:500px;margin-top:7px}
+  .rule.do  li::before{background:var(--rais-success-light)}
+  .rule.dont li::before{background:var(--rais-error)}
+</style>
+</head>
+<body>
+<div class="shell">
+
+  <aside>
+    <div class="brand"><div class="mark"></div><div class="wm">RAIS</div></div>
+    <nav class="nav">
+      <div class="grp">System</div>
+      <a href="#overview"><span class="dot"></span>Overview</a>
+      <a href="#tokens"><span class="dot"></span>Tokens</a>
+      <a href="#docs"><span class="dot"></span>Documentation</a>
+      <div class="grp">Visual</div>
+      <a href="#previews"><span class="dot"></span>Preview cards</a>
+      <a href="#kits"><span class="dot"></span>UI kits</a>
+      <div class="grp">Operate</div>
+      <a href="#qa"><span class="dot"></span>QA &amp; AI</a>
+      <a href="#changelog"><span class="dot"></span>Change log</a>
+      <div class="ver">v 2026.05.10e<br>Pretendard · Orange · Dark-first</div>
+    </nav>
+  </aside>
+
+  <main>
+    <header class="masthead" id="overview">
+      <div>
+        <h1>RAIS Design System</h1>
+        <p class="sub">An operating system for AI-native, dark-first SaaS dashboards. Tokens, components, state matrix, layout templates, QA checklist, and a Claude prompt guide — one reach away.</p>
+      </div>
+      <div class="meta">
+        <span class="tag">v 2026.05.10e</span>
+        <span class="ver">Pretendard · #FFA726 accent · 12 states</span>
+      </div>
+    </header>
+
+    <!-- Pillars -->
+    <div class="pillars">
+      <div class="pillar accent">
+        <div class="ix"><div class="num">1</div><div class="chip">Accent</div></div>
+        <div class="ttl">Orange · #FFA726</div>
+        <div class="desc">Single system accent. Blue is data, never brand.</div>
+      </div>
+      <div class="pillar">
+        <div class="ix"><div class="num">12</div><div class="chip">States</div></div>
+        <div class="ttl">Full state matrix</div>
+        <div class="desc">Default → Disabled. Colour + text + icon, always.</div>
+      </div>
+      <div class="pillar">
+        <div class="ix"><div class="num">10</div><div class="chip">Layouts</div></div>
+        <div class="ttl">Templates</div>
+        <div class="desc">Dashboard, Analytics, Table, Detail, Settings, Billing, AI Chat, Builder, Modal, Empty.</div>
+      </div>
+      <div class="pillar">
+        <div class="ix"><div class="num">9</div><div class="chip">Pretendard</div></div>
+        <div class="ttl">One face, all weights</div>
+        <div class="desc">Korean + English + numerals. No Roboto / Barlow / Public Sans.</div>
+      </div>
+    </div>
+
+    <!-- Quick rules -->
+    <section>
+      <h2>The five non-negotiables</h2>
+      <div class="h-row"><div><h3>Do / Don't</h3><p>Pinned at the top of every screen review. Patches before redesigns.</p></div></div>
+      <div class="rules">
+        <div class="rule do">
+          <div class="h">Do</div>
+          <ul>
+            <li>Reach for semantic tokens — never raw hex in product code.</li>
+            <li>Use Pretendard for Korean, English, and numerals.</li>
+            <li>Express focus as 1 px accent border + inset 1 px ring.</li>
+            <li>Pair every status colour with text and an icon.</li>
+            <li>Use a single primary CTA per surface.</li>
+          </ul>
+        </div>
+        <div class="rule dont">
+          <div class="h">Don't</div>
+          <ul>
+            <li>Introduce a second brand accent.</li>
+            <li>Bold body copy for emphasis — use a chip / label.</li>
+            <li>Use outer glow / halo to indicate focus.</li>
+            <li>Place the gem mark on coloured glow or hero surfaces.</li>
+            <li>Mix icon families within a screen.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tokens -->
+    <section id="tokens">
+      <h2>Foundation</h2>
+      <div class="h-row">
+        <div><h3>Tokens</h3><p>Versioned JSON. CSS custom properties at runtime live in <code>colors_and_type.css</code>.</p></div>
+      </div>
+      <div class="grid">
+        <a class="card" href="tokens/colors.json">
+          <div class="top"><div class="nm">Color tokens</div><div class="ext">JSON</div></div>
+          <div class="desc">Semantic — action / surface / text / border / status / data with state variants.</div>
+          <div class="path">tokens/colors.json</div>
+        </a>
+        <a class="card" href="tokens/typography.json">
+          <div class="top"><div class="nm">Typography tokens</div><div class="ext">JSON</div></div>
+          <div class="desc">Pretendard role ladder: display, page, section, card, body, label, caption, overline, button, data.</div>
+          <div class="path">tokens/typography.json</div>
+        </a>
+        <a class="card" href="tokens/spacing.json">
+          <div class="top"><div class="nm">Spacing / radius / shadow</div><div class="ext">JSON</div></div>
+          <div class="desc">4 px scale · radii xs–pill · shadow + glow + focus rules.</div>
+          <div class="path">tokens/spacing.json</div>
+        </a>
+      </div>
+
+      <div class="h-row" style="margin-top:24px"><div><h3 style="font:var(--text-title);color:var(--fg-strong)">Live swatches</h3></div></div>
+      <div class="toks">
+        <div class="tok"><div class="swatch" style="background:#FFA726"></div><div class="nm">action / primary</div><div class="val">#FFA726</div></div>
+        <div class="tok"><div class="swatch" style="background:#FF665B"></div><div class="nm">action / danger</div><div class="val">#FF665B</div></div>
+        <div class="tok"><div class="swatch" style="background:#33C488"></div><div class="nm">action / success</div><div class="val">#33C488</div></div>
+        <div class="tok"><div class="swatch" style="background:#FAAE3E"></div><div class="nm">action / warning</div><div class="val">#FAAE3E</div></div>
+        <div class="tok"><div class="swatch" style="background:#0D0D0D"></div><div class="nm">surface / canvas</div><div class="val">#0D0D0D</div></div>
+        <div class="tok"><div class="swatch" style="background:#121212"></div><div class="nm">surface / elevated</div><div class="val">#121212</div></div>
+        <div class="tok"><div class="swatch" style="background:#161616"></div><div class="nm">surface / card-alt</div><div class="val">#161616</div></div>
+        <div class="tok"><div class="swatch" style="background:#1C222B"></div><div class="nm">surface / field</div><div class="val">#1C222B</div></div>
+      </div>
+    </section>
+
+    <!-- Docs -->
+    <section id="docs">
+      <h2>Operating manuals</h2>
+      <div class="h-row"><div><h3>Documentation</h3><p>Read top-to-bottom for system fluency. Each doc references tokens directly.</p></div></div>
+      <div class="grid">
+        <a class="card" href="docs.html#rulebook">
+          <div class="top"><div class="nm">00 · Design Rulebook</div><div class="ext">HTML</div></div>
+          <div class="desc">Five non-negotiables, visual DNA, do / don't.</div>
+          <div class="path">docs.html#rulebook</div>
+        </a>
+        <a class="card" href="docs.html#components">
+          <div class="top"><div class="nm">01 · Component Guide</div><div class="ext">HTML</div></div>
+          <div class="desc">Naming convention, button / card / input / badge / toast specs.</div>
+          <div class="path">docs.html#components</div>
+        </a>
+        <a class="card" href="docs.html#states">
+          <div class="top"><div class="nm">02 · State System</div><div class="ext">HTML</div></div>
+          <div class="desc">Twelve-state matrix, animation specs, accessibility floor.</div>
+          <div class="path">docs.html#states</div>
+        </a>
+        <a class="card" href="docs.html#layouts">
+          <div class="top"><div class="nm">03 · Layout Patterns</div><div class="ext">HTML</div></div>
+          <div class="desc">Ten templates, global grid, responsive rules.</div>
+          <div class="path">docs.html#layouts</div>
+        </a>
+        <a class="card" href="docs.html#qa">
+          <div class="top"><div class="nm">04 · Screen QA Checklist</div><div class="ext">HTML</div></div>
+          <div class="desc">Pre-handoff checklist across 6 categories.</div>
+          <div class="path">docs.html#qa</div>
+        </a>
+        <a class="card" href="docs.html#ai">
+          <div class="top"><div class="nm">05 · AI Prompt Guide</div><div class="ext">HTML</div></div>
+          <div class="desc">Naming convention, prompt template, JSON examples for Claude.</div>
+          <div class="path">docs.html#ai</div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Preview cards -->
+    <section id="previews">
+      <h2>Visual proof</h2>
+      <div class="h-row"><div><h3>Preview cards</h3><p>One HTML per token group — open any to inspect the live values on real surfaces.</p></div></div>
+      <div class="grid">
+        <a class="card" href="preview/colors-primary.html"><div class="top"><div class="nm">Colors · Primary</div><div class="ext">HTML</div></div><div class="desc">Orange ladder, accent + glow.</div><div class="path">preview/colors-primary.html</div></a>
+        <a class="card" href="preview/colors-semantic.html"><div class="top"><div class="nm">Colors · Semantic</div><div class="ext">HTML</div></div><div class="desc">Status, data, info palette.</div><div class="path">preview/colors-semantic.html</div></a>
+        <a class="card" href="preview/colors-grey.html"><div class="top"><div class="nm">Colors · Grey scale</div><div class="ext">HTML</div></div><div class="desc">Surface stack 1000 → 100.</div><div class="path">preview/colors-grey.html</div></a>
+        <a class="card" href="preview/surfaces.html"><div class="top"><div class="nm">Surfaces</div><div class="ext">HTML</div></div><div class="desc">Canvas / elevated / card / field.</div><div class="path">preview/surfaces.html</div></a>
+        <a class="card" href="preview/type-display.html"><div class="top"><div class="nm">Type · Display</div><div class="ext">HTML</div></div><div class="desc">Hero numerals, masthead.</div><div class="path">preview/type-display.html</div></a>
+        <a class="card" href="preview/type-scale.html"><div class="top"><div class="nm">Type · Scale</div><div class="ext">HTML</div></div><div class="desc">Full Pretendard ladder.</div><div class="path">preview/type-scale.html</div></a>
+        <a class="card" href="preview/type-specimens.html"><div class="top"><div class="nm">Type · Specimens</div><div class="ext">HTML</div></div><div class="desc">Aa proofs, weights 100 → 900.</div><div class="path">preview/type-specimens.html</div></a>
+        <a class="card" href="preview/spacing.html"><div class="top"><div class="nm">Spacing</div><div class="ext">HTML</div></div><div class="desc">4 px scale visualised.</div><div class="path">preview/spacing.html</div></a>
+        <a class="card" href="preview/radii.html"><div class="top"><div class="nm">Radii</div><div class="ext">HTML</div></div><div class="desc">xs → pill.</div><div class="path">preview/radii.html</div></a>
+        <a class="card" href="preview/shadows.html"><div class="top"><div class="nm">Shadows</div><div class="ext">HTML</div></div><div class="desc">sm / md / lg / floating.</div><div class="path">preview/shadows.html</div></a>
+        <a class="card" href="preview/glows.html"><div class="top"><div class="nm">Glows</div><div class="ext">HTML</div></div><div class="desc">Resting decoration only.</div><div class="path">preview/glows.html</div></a>
+        <a class="card" href="preview/buttons.html"><div class="top"><div class="nm">Buttons</div><div class="ext">HTML</div></div><div class="desc">Primary / Secondary / Danger / Text / Icon × states.</div><div class="path">preview/buttons.html</div></a>
+        <a class="card" href="preview/inputs.html"><div class="top"><div class="nm">Inputs</div><div class="ext">HTML</div></div><div class="desc">Default / focused / error / disabled.</div><div class="path">preview/inputs.html</div></a>
+        <a class="card" href="preview/cards.html"><div class="top"><div class="nm">Cards</div><div class="ext">HTML</div></div><div class="desc">Metric / Analytics / Info / AI / Alert / Empty.</div><div class="path">preview/cards.html</div></a>
+        <a class="card" href="preview/chips.html"><div class="top"><div class="nm">Chips</div><div class="ext">HTML</div></div><div class="desc">Status, filter, removable.</div><div class="path">preview/chips.html</div></a>
+        <a class="card" href="preview/toasts.html"><div class="top"><div class="nm">Toasts</div><div class="ext">HTML</div></div><div class="desc">Info / Success / Warning / Error.</div><div class="path">preview/toasts.html</div></a>
+        <a class="card" href="preview/iconography.html"><div class="top"><div class="nm">Iconography</div><div class="ext">HTML</div></div><div class="desc">Eva + Solar solid, single family.</div><div class="path">preview/iconography.html</div></a>
+        <a class="card" href="preview/brand.html"><div class="top"><div class="nm">Brand mark</div><div class="ext">HTML</div></div><div class="desc">Logo usage, sanctioned variants, do / don't.</div><div class="path">preview/brand.html</div></a>
+      </div>
+    </section>
+
+    <!-- Kits -->
+    <section id="kits">
+      <h2>Reference</h2>
+      <div class="h-row"><div><h3>UI kits</h3><p>Composed from the system end-to-end. Use as the canonical reference when in doubt.</p></div></div>
+      <div class="grid two">
+        <a class="card" href="ui_kits/rais-dashboard/index.html">
+          <div class="top"><div class="nm">RAIS Dashboard · Mailing</div><div class="ext">HTML</div></div>
+          <div class="desc">Full Mailing dashboard with sidebar, topbar, metric row, table, side rail. The shape every Dashboard template instances.</div>
+          <div class="path">ui_kits/rais-dashboard/index.html</div>
+        </a>
+        <a class="card" href="README.md">
+          <div class="top"><div class="nm">README · Project context</div><div class="ext">MD</div></div>
+          <div class="desc">Source-of-record for the Figma origin, content fundamentals, foundations.</div>
+          <div class="path">README.md</div>
+        </a>
+      </div>
+    </section>
+
+    <!-- QA + AI -->
+    <section id="qa">
+      <h2>Operate</h2>
+      <div class="h-row"><div><h3>QA &amp; AI</h3><p>Hand off and re-generate consistently. Both files reference the same token paths.</p></div></div>
+      <div class="grid two">
+        <a class="card" href="docs.html#qa">
+          <div class="top"><div class="nm">Screen QA Checklist</div><div class="ext">HTML</div></div>
+          <div class="desc">Layout · Typography · Component · State · Accessibility · Brand · Responsive. Run before every handoff.</div>
+          <div class="path">docs.html#qa</div>
+        </a>
+        <a class="card" href="docs.html#ai">
+          <div class="top"><div class="nm">Claude / AI Prompt Guide</div><div class="ext">HTML</div></div>
+          <div class="desc">Naming convention, prompt template, component + screen JSON, what NOT to ask.</div>
+          <div class="path">docs.html#ai</div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Changelog -->
+    <section id="changelog">
+      <h2>History</h2>
+      <div class="h-row"><div><h3>Change log</h3><p>Reverse-chronological. Every patch dated and scoped.</p></div></div>
+      <div class="grid two">
+        <a class="card" href="docs.html#changelog">
+          <div class="top"><div class="nm">Change Log</div><div class="ext">HTML</div></div>
+          <div class="desc">10f docs viewer · 10e operationalisation · 10d brand refinement · 10c brand rebuild · 10b Pretendard-only · 10a update rules.</div>
+          <div class="path">docs.html#changelog</div>
+        </a>
+      </div>
+    </section>
+
+  </main>
+</div>
+</body>
+</html>

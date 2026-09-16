@@ -1,0 +1,101 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "$meta": {
+    "name": "RAIS · Color tokens",
+    "version": "2026.05.10",
+    "mode": "dark-first",
+    "principle": "Semantic name, not raw hex. Components reach for `color/action/primary/default`, never `#FFA726` directly. State variants are siblings of `default`."
+  },
+
+  "color": {
+    "action": {
+      "primary":  {
+        "default":  { "value": "#FFA726", "type": "color", "$desc": "Accent orange — primary CTA fill." },
+        "hover":    { "value": "#FFB21A", "type": "color" },
+        "pressed":  { "value": "#CD7F0D", "type": "color" },
+        "focused":  { "value": "#FFA726", "type": "color", "$desc": "Same hue; focus expressed via 1px border + inset ring (see border/focus)." },
+        "disabled": { "value": "rgba(145,158,171,0.12)", "type": "color" },
+        "selected": { "value": "rgba(255,167,38,0.18)", "type": "color" }
+      },
+      "danger": {
+        "default":  { "value": "#FF665B", "type": "color" },
+        "hover":    { "value": "#FF6B4A", "type": "color" },
+        "pressed":  { "value": "#D74B3F", "type": "color" },
+        "disabled": { "value": "rgba(145,158,171,0.12)", "type": "color" }
+      },
+      "success": {
+        "default":  { "value": "#27DA68", "type": "color", "$desc": "Aligned with `color/status/success` — single canonical green." },
+        "hover":    { "value": "#4FE187", "type": "color" },
+        "pressed":  { "value": "#1F9F66", "type": "color" }
+      },
+      "warning": {
+        "default":  { "value": "#FAAE3E", "type": "color", "$desc": "Aligned with `color/status/warning`." },
+        "hover":    { "value": "#FFB21A", "type": "color" },
+        "pressed":  { "value": "#D6900F", "type": "color" }
+      },
+      "neutral": {
+        "default":  { "value": "#D1DAE3", "type": "color" },
+        "hover":    { "value": "#E5ECF4", "type": "color" },
+        "pressed":  { "value": "#919EAB", "type": "color" }
+      }
+    },
+
+    "surface": {
+      "canvas":   { "value": "#0D0D0D", "type": "color", "$desc": "Page / sidebar." },
+      "elevated": { "value": "#121212", "type": "color", "$desc": "Main content area beneath cards." },
+      "card":     { "value": "#0D0D0D", "type": "color" },
+      "card-alt": { "value": "#161616", "type": "color", "$desc": "Nested card / table header." },
+      "field":    { "value": "#1C222B", "type": "color", "$desc": "Input / chip-rail base." },
+      "overlay":  { "value": "rgba(0,0,0,0.25)", "type": "color" },
+      "hover":    { "value": "rgba(145,158,171,0.08)", "type": "color", "$desc": "Hover wash on listrows / nav items." },
+      "selected": { "value": "rgba(255,167,38,0.10)", "type": "color" }
+    },
+
+    "text": {
+      "primary":   { "value": "#D1DAE3", "type": "color" },
+      "secondary": { "value": "#919EAB", "type": "color" },
+      "muted":     { "value": "#637381", "type": "color" },
+      "disabled":  { "value": "rgba(145,158,171,0.40)", "type": "color" },
+      "strong":    { "value": "#FFFFFF", "type": "color" },
+      "on-accent": { "value": "#0D0D0D", "type": "color", "$desc": "Black text on orange button — passes AA on #FFA726." },
+      "on-light":  { "value": "#1C252E", "type": "color", "$desc": "For light-bg lockups / invoices." },
+      "link":      { "value": "#FFA726", "type": "color" }
+    },
+
+    "border": {
+      "subtle":  { "value": "rgba(145,158,171,0.08)", "type": "color" },
+      "default": { "value": "rgba(145,158,171,0.12)", "type": "color" },
+      "strong":  { "value": "rgba(145,158,171,0.20)", "type": "color" },
+      "focus":   { "value": "#FFA726", "type": "color", "$desc": "1 px border + inset 1 px ring. Never an outer halo." }
+    },
+
+    "status": {
+      "info":    { "value": "#4C9AEC", "type": "color" },
+      "success": { "value": "#27DA68", "type": "color" },
+      "warning": { "value": "#FAAE3E", "type": "color" },
+      "error":   { "value": "#FF665B", "type": "color" },
+      "new":     { "value": "#FFA726", "type": "color" }
+    },
+
+    "data": {
+      "blue":   { "value": "#4C9AEC", "type": "color", "$desc": "Default analytics / data role." },
+      "purple": { "value": "#8E33FF", "type": "color" },
+      "cyan":   { "value": "#00CEF3", "type": "color" },
+      "green":  { "value": "#27DA68", "type": "color" },
+      "amber":  { "value": "#FAAE3E", "type": "color" }
+    },
+
+    "$rules": {
+      "do": [
+        "Reference semantic tokens in product code; never raw palette hexes.",
+        "Pair color with text and an icon to communicate state — never colour alone (a11y).",
+        "Use `color/action/primary` for the single primary CTA per surface."
+      ],
+      "dont": [
+        "Don't introduce a second accent — orange is the only system accent.",
+        "Don't tint cards with a status colour; use a status badge instead.",
+        "Don't use outer glow/halo to indicate focus — use border + inset ring."
+      ]
+    }
+  }
+}

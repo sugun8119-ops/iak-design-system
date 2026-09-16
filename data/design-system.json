@@ -1,40 +1,59 @@
 {
   "name": "IAK Design Studio",
-  "version": "0.3.0",
-  "status": "existing-iak-site-derived",
+  "version": "0.4.0",
+  "status": "claude-design-source-imported",
   "sources": [
-    "references/iak-site-style.md"
+    "library/guide.md",
+    "library/claude/colors_and_type.css",
+    "library/catalog.json"
   ],
   "tokens": {
-    "background": "#0a0a0c",
-    "surface": "#141416",
-    "surfaceRaised": "#1a1a1d",
-    "textPrimary": "#f2f3f5",
-    "textSecondary": "#b7bac2",
+    "background": "#0d0d0d",
+    "surface": "#121212",
+    "surfaceRaised": "#161616",
+    "textPrimary": "#d1dae3",
+    "textSecondary": "#919eab",
     "accent": "#ffa726",
-    "accentHover": "#ffb44a",
-    "accentForeground": "#1a0f00",
-    "border": "rgba(255,255,255,0.10)",
-    "radiusCard": "20px",
-    "radiusButton": "500px"
+    "accentHover": "#ffb21a",
+    "accentForeground": "#0d0d0d",
+    "border": "rgba(145,158,171,0.12)",
+    "radiusCard": "24px",
+    "radiusButton": "8px"
   },
   "components": [
     {
-      "name": "Primary button",
-      "pattern": "Orange fill, dark label, pill radius, subtle orange shadow",
-      "source": "existing IAK portfolio CSS .btn-primary / .btn"
+      "name": "Buttons",
+      "source": "library/claude/preview/buttons.html",
+      "pattern": "Contained · Outlined · Text · Soft"
     },
     {
-      "name": "Card",
-      "pattern": "Dark surface, translucent border, 20px radius",
-      "source": "existing IAK portfolio CSS .card"
+      "name": "Cards",
+      "source": "library/claude/preview/cards.html",
+      "pattern": "Metric / Insight pattern"
+    },
+    {
+      "name": "Chips & Status",
+      "source": "library/claude/preview/chips.html",
+      "pattern": "Soft chips + status dots"
+    },
+    {
+      "name": "Inputs",
+      "source": "library/claude/preview/inputs.html",
+      "pattern": "Default · Filled · Focused · Error · Disabled"
+    },
+    {
+      "name": "Toasts",
+      "source": "library/claude/preview/toasts.html",
+      "pattern": "Snackbar 420×46 — 5 severities"
     }
   ],
   "rules": [
-    "사용자의 기능 요구와 명시적 디자인 지시를 우선한다.",
-    "선택한 템플릿 URL은 레이아웃 참고 자료로 사용한다. 필요한 기능에 맞게 구성과 콘텐츠를 새로 만든다.",
-    "IAK 공식 값으로 등록되지 않은 디자인 결정은 프로젝트의 임시 값으로 구분한다.",
-    "기본 결과는 내 컴퓨터의 127.0.0.1에 바인딩한 로컬 미리보기다. 배포와 공개 터널은 별도 요청이 있을 때만 진행한다.",
-    "현재 등록값은 기존 IAK 사이트에서 추출한 적용 기준이다. 별도의 공식 Figma 전체 검증으로 표현하지 않는다."
+    "IAK의 RAIS 원본 CSS와 library/guide.md의 최신 규칙을 적용한다.",
+    "Pretendard가 UI 기본 글꼴이다.",
+    "원본의 기본 토큰과 모바일·모션 감소 조건을 구분한다.",
+    "버튼·입력 반경은 8px, 카드 16/24px이며 pill을 기본 버튼으로 일반화하지 않는다.",
+    "원본 UI 킷은 프로토타입이다. 입력·접근성·실제 기능을 제품 요구에 맞춰 연결한다.",
+    "아이콘은 Eva/Solar 이름 참조이며 원본 SVG 파일과 JetBrains Mono 폰트는 포함되어 있지 않다.",
+    "사용자 요청을 우선하고 기본 개발 서버는 127.0.0.1에 바인딩한다."
   ]
 }

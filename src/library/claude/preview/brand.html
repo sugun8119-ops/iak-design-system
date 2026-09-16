@@ -1,0 +1,124 @@
+<!doctype html>
+<!-- @dsCard group="Brand" name="Brand mark" subtitle="Flat documentation, no decorative overlays" viewport="1200x1100" --><html><head><meta charset="utf-8"><title>Brand mark</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body{margin:0;padding:24px;background:var(--bg-elevated);color:var(--fg-primary)}
+  .stack{display:flex;flex-direction:column;gap:24px;max-width:1100px}
+  h2{margin:0 0 4px;font:var(--text-title);color:var(--fg-strong)}
+  .lede{font:var(--text-caption);color:var(--fg-secondary);max-width:680px;margin:0 0 8px}
+  .section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-top:8px;padding-bottom:8px;border-bottom:1px solid var(--border-default)}
+  .section-head h3{margin:0;font:600 18px/1.3 var(--font-ui);color:var(--fg-strong)}
+  .section-head .tag{font:700 10px/1 var(--font-ui);letter-spacing:.12em;text-transform:uppercase;padding:5px 10px;border-radius:500px;background:rgba(255,167,38,.14);color:var(--accent)}
+
+  /* Logo usage tiles — flat, no overlays. Flex column keeps logo vertically
+     centered in the visual area and titles/descriptions baseline-aligned. */
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .tile{display:flex;flex-direction:column;border-radius:12px;background:var(--rais-grey-1000);border:1px solid var(--border-default);padding:24px;min-height:240px}
+  .tile.light{background:var(--rais-grey-200);border:none}
+  .tile .visual{flex:1;display:flex;align-items:center;justify-content:center}
+  .tile .meta{margin-top:20px}
+  .tile .meta .ttl{font:600 14px/1.3 var(--font-ui);color:var(--fg-strong)}
+  .tile .meta .where{font:400 12px/1.5 var(--font-ui);color:var(--fg-secondary);margin-top:4px}
+  .meta.lite .ttl{color:var(--rais-grey-800)}
+  .meta.lite .where{color:var(--rais-grey-500)}
+  /* Logo previews — sized 15% / 10% larger per spec. */
+  .logo-mark{background:url('../assets/iak-gem-mark-trio.png') center/contain no-repeat}
+  .logo-48{width:161px;height:92px}     /* +15% Sidebar / Top-bar */
+  .logo-72{width:187px;height:106px}    /* +10% Identity card */
+  .lockup{display:flex;align-items:center;gap:14px}
+  .lockup .lm{width:64px;height:36px;background:url('../assets/iak-gem-mark-trio.png') center/contain no-repeat}
+  .lockup .lw{font:700 20px/1 var(--font-ui);letter-spacing:.14em;color:var(--rais-grey-800);text-transform:uppercase}
+
+  /* Don't tiles — subtle red tint, low-opacity red border, stronger badge. */
+  .donts{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+  .dont{position:relative;display:flex;flex-direction:column;border-radius:12px;background:rgba(255,102,91,.05);border:1px solid rgba(255,102,91,.22);padding:24px;min-height:220px}
+  .dont .visual{flex:1;display:flex;align-items:center;justify-content:center;padding-top:18px}
+  .dont .label{margin-top:14px;font:400 12px/1.5 var(--font-ui);color:var(--fg-secondary);text-align:left}
+  .dont .badge{position:absolute;top:12px;left:14px;font:700 10px/1 var(--font-ui);letter-spacing:.14em;color:#fff;background:var(--rais-error);padding:5px 9px;border-radius:500px}
+  /* Bad-treatment previews. Use the trio mark so each demonstrates the misuse. */
+  .dont-stretched{width:200px;height:60px;background:url('../assets/iak-gem-mark-trio.png') center/100% 100% no-repeat}
+  .dont-cropped{width:90px;height:80px;overflow:hidden}
+  .dont-cropped > div{width:180px;height:80px;background:url('../assets/iak-gem-mark-trio.png') -16px center/auto 80px no-repeat}
+  .dont-tinted{width:140px;height:80px;background:url('../assets/iak-gem-mark-trio.png') center/contain no-repeat;filter:hue-rotate(140deg) saturate(1.3)}
+
+  /* Rule list */
+  .rule-card{background:var(--bg-card);border-radius:12px;padding:24px;border:1px solid var(--border-default)}
+  .rule-card h3{margin:0 0 4px;font:600 13px/1.3 var(--font-ui);color:var(--fg-strong);letter-spacing:.04em;text-transform:uppercase}
+  .rule-card .sub{font:400 12px/1.5 var(--font-ui);color:var(--fg-muted);margin-bottom:16px}
+  .rules-2col{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .rule-col{border-radius:10px;padding:18px 20px;border:1px solid var(--border-subtle);background:var(--rais-grey-1000)}
+  .rule-col.is-dont{background:rgba(255,102,91,.05);border-color:rgba(255,102,91,.22)}
+  .rule-col .col-h{font:700 11px/1 var(--font-ui);letter-spacing:.12em;text-transform:uppercase;margin-bottom:12px}
+  .rule-col.is-do  .col-h{color:var(--rais-success-light)}
+  .rule-col.is-dont .col-h{color:var(--rais-error)}
+  .rule-col ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px}
+  .rule-col li{display:flex;gap:10px;align-items:flex-start;font:400 13px/1.55 var(--font-ui);color:var(--fg-secondary)}
+  .rule-col li::before{content:"";flex:0 0 6px;width:6px;height:6px;border-radius:500px;margin-top:7px}
+  .rule-col.is-do  li::before{background:var(--rais-success-light)}
+  .rule-col.is-dont li::before{background:var(--rais-error)}
+
+  /* Asset table */
+  .assets{background:var(--bg-card);border-radius:12px;overflow:hidden;border:1px solid var(--border-default)}
+  .assets table{width:100%;border-collapse:collapse}
+  .assets th,.assets td{text-align:left;padding:12px 18px;font:400 13px/1.5 var(--font-ui);border-bottom:1px solid var(--border-subtle)}
+  .assets tr:last-child td{border-bottom:0}
+  .assets th{font:700 11px/1 var(--font-ui);letter-spacing:.1em;text-transform:uppercase;color:var(--fg-muted);background:var(--rais-grey-900)}
+  .assets td.path{font-family:var(--font-mono);font-size:12px;color:var(--accent)}
+</style></head>
+<body>
+<div class="stack">
+  <div>
+    <h2>Brand mark</h2>
+    <p class="lede">Logo usage guidelines for the IAK Studio gem mark. The graphic motif (chrome) belongs to product hero / header surfaces and is documented separately — do not place it inside this guideline page.</p>
+  </div>
+
+  <!-- Usage -->
+  <div class="section-head">
+    <div>
+      <h3>Logo · gem mark</h3>
+      <div class="lede" style="margin:4px 0 0">Used for sidebar, top-bar, brand identity, navigation. Original proportions only — no stretch, no crop.</div>
+    </div>
+    <span class="tag">Official logo</span>
+  </div>
+  <div class="grid">
+    <div class="tile"><div class="visual"><div class="logo-mark logo-48"></div></div><div class="meta"><div class="ttl">Sidebar / Top-bar</div><div class="where">32–48 px · raster on canvas · no glow</div></div></div>
+    <div class="tile"><div class="visual"><div class="logo-mark logo-72"></div></div><div class="meta"><div class="ttl">Identity card</div><div class="where">Profile, settings, footer · 64–96 px</div></div></div>
+    <div class="tile light"><div class="visual"><div class="lockup"><div class="lm"></div><div class="lw">IAK STUDIO</div></div></div><div class="meta lite"><div class="ttl">Light-bg lockup</div><div class="where">Invoices, partner decks · mark + wordmark</div></div></div>
+  </div>
+
+  <!-- Don'ts — subtle red tint, stronger badge contrast -->
+  <div class="donts">
+    <div class="dont"><span class="badge">DON'T</span><div class="visual"><div class="dont-stretched"></div></div><div class="label">Stretch / non-uniform scale</div></div>
+    <div class="dont"><span class="badge">DON'T</span><div class="visual"><div class="dont-cropped"><div></div></div></div><div class="label">Crop the gem</div></div>
+    <div class="dont"><span class="badge">DON'T</span><div class="visual"><div class="dont-tinted"></div></div><div class="label">Recolour or tint the mark</div></div>
+  </div>
+
+  <!-- Rules -->
+  <div class="rule-card">
+    <h3>Rules · summary</h3>
+    <div class="sub">Updated 2026-05-10 per <code>05_Update-Rules</code>. Logo only — chrome motif rules live with the product hero documentation.</div>
+    <div class="rules-2col">
+      <div class="rule-col is-do">
+        <div class="col-h">Do</div>
+        <ul>
+          <li>Use in sidebar, top-bar, navigation and identity surfaces.</li>
+          <li>Maintain original proportions and original colour.</li>
+          <li>Reserve clear space ≥ ½ × mark height on every side.</li>
+          <li>Render as a plain raster on the canvas — no decoration.</li>
+        </ul>
+      </div>
+      <div class="rule-col is-dont">
+        <div class="col-h">Don't</div>
+        <ul>
+          <li>Stretch or scale non-uniformly.</li>
+          <li>Crop the gem or use a partial slice.</li>
+          <li>Apply outer glow, halo or drop-shadow.</li>
+          <li>Place on a blue or coloured glow background.</li>
+          <li>Use as a hero or oversized promotional image.</li>
+          <li>Pair with the chrome graphic motif in the same composition.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+</body></html>

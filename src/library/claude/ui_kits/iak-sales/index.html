@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>IAK Design Studio — Sales Portfolio</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="../../colors_and_type.css">
+<script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+<template id="__bundler_thumbnail" data-bg-color="#0d0d0d">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#0d0d0d"/>
+    <rect x="500" y="320" width="200" height="200" rx="44" fill="#FFA726"/>
+    <text x="600" y="455" font-family="sans-serif" font-size="96" font-weight="800" fill="#0d0d0d" text-anchor="middle">IAK</text>
+  </svg>
+</template>
+<style>
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg-canvas);color:var(--fg-primary);font:var(--text-body)}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+  section{padding:80px 0}
+  .ovl{font:var(--text-overline);color:var(--accent);letter-spacing:.14em}
+
+  /* Nav */
+  header{position:sticky;top:0;z-index:10;background:color-mix(in oklch,var(--bg-canvas) 88%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--border-subtle)}
+  header .bar{max-width:1200px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;gap:14px}
+  .brand{display:flex;align-items:center;gap:10px;font:var(--text-body-strong);color:var(--fg-strong)}
+  .brand .mk{width:30px;height:30px;border-radius:8px;background:var(--accent);display:grid;place-items:center;color:var(--accent-fg);font:800 13px/1 var(--font-ui);box-shadow:var(--accent-glow)}
+  header nav{margin-left:auto;display:flex;gap:6px}
+  header nav a{font:var(--text-caption);color:var(--fg-secondary);text-decoration:none;padding:8px 12px;border-radius:8px}
+  header nav a:hover{background:var(--rais-alpha-08);color:var(--fg-strong)}
+  .btn{font:var(--text-button);border:none;cursor:pointer;border-radius:8px;padding:10px 16px;display:inline-flex;align-items:center;gap:8px;text-decoration:none}
+  .btn.primary{background:var(--accent);color:var(--accent-fg)}
+  .btn.secondary{background:var(--bg-field);color:var(--fg-strong);border:1px solid var(--border-default)}
+  .btn.ghost{background:transparent;color:var(--fg-secondary);border:1px solid var(--border-subtle)}
+
+  /* Hero */
+  .hero h1{margin:18px 0 0;font:800 52px/1.1 var(--font-ui);color:var(--fg-strong);letter-spacing:-.02em;max-width:780px;text-wrap:pretty}
+  .hero h1 em{font-style:normal;color:var(--accent)}
+  .hero p.lede{margin:20px 0 0;font:400 18px/1.6 var(--font-pretendard);color:var(--fg-secondary);max-width:600px}
+  .hero .cta{display:flex;gap:10px;margin-top:28px;flex-wrap:wrap}
+  .hero .trust{margin-top:36px;display:flex;gap:28px;flex-wrap:wrap}
+  .hero .trust div{font:var(--text-caption);color:var(--fg-muted)}
+  .hero .trust b{display:block;font:700 24px/1 var(--font-ui);color:var(--fg-strong);font-feature-settings:"tnum";margin-bottom:4px}
+
+  .sec-h{margin-bottom:36px}
+  .sec-h h2{margin:10px 0 0;font:var(--text-h1);color:var(--fg-strong);letter-spacing:-.01em}
+  .sec-h p{margin:10px 0 0;font:var(--text-body);color:var(--fg-secondary);max-width:560px}
+
+  /* Problems */
+  .problems{background:var(--bg-elevated);border-top:1px solid var(--border-subtle);border-bottom:1px solid var(--border-subtle)}
+  .pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .pcard{background:var(--bg-card);border:1px solid var(--border-default);border-radius:16px;padding:22px;display:flex;flex-direction:column;gap:10px}
+  .pcard .ic{width:40px;height:40px;border-radius:10px;background:rgba(255,102,91,.12);color:var(--rais-error);display:grid;place-items:center;font-size:20px}
+  .pcard h4{margin:0;font:var(--text-card-title, 600 16px/1.4 var(--font-ui));color:var(--fg-strong)}
+  .pcard p{margin:0;font:var(--text-caption);color:var(--fg-secondary);line-height:1.6}
+
+  /* Packages — 4 equal */
+  .pkgs{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  @media(max-width:1000px){.pkgs{grid-template-columns:repeat(2,1fr)}.pgrid{grid-template-columns:1fr}}
+  .pkg{background:var(--bg-card);border:1px solid var(--border-default);border-radius:18px;padding:24px;display:flex;flex-direction:column;gap:16px;position:relative}
+  .pkg .tag{font:var(--text-overline);color:var(--accent)}
+  .pkg h3{margin:0;font:600 18px/1.3 var(--font-ui);color:var(--fg-strong)}
+  .pkg .sub{font:var(--text-caption);color:var(--fg-muted)}
+  .pkg .blk h5{margin:0 0 6px;font:var(--text-overline);color:var(--fg-muted)}
+  .pkg .blk p{margin:0;font:var(--text-caption);color:var(--fg-primary);line-height:1.6}
+  .pkg .blk ul{margin:0;padding-left:16px;display:flex;flex-direction:column;gap:4px}
+  .pkg .blk li{font:var(--text-caption);color:var(--fg-primary);line-height:1.5}
+  .pkg .blk li::marker{color:var(--accent)}
+  .pkg .fit{margin-top:auto;padding:10px 12px;border-radius:10px;background:var(--rais-alpha-08);font:var(--text-caption);color:var(--fg-secondary);line-height:1.5}
+  .pkg .fit b{color:var(--fg-strong);font-weight:600;display:block;margin-bottom:2px;font:var(--text-overline)}
+  .pkg .num{position:absolute;top:24px;right:24px;font:800 20px/1 var(--font-ui);color:var(--rais-alpha-20)}
+
+  /* Case template */
+  .case{background:var(--bg-elevated);border-top:1px solid var(--border-subtle);border-bottom:1px solid var(--border-subtle)}
+  .caseflow{display:flex;flex-wrap:wrap;gap:8px}
+  .caseflow .step{flex:1;min-width:140px;background:var(--bg-card);border:1px solid var(--border-default);border-radius:12px;padding:14px 16px}
+  .caseflow .step .n{font:var(--text-overline);color:var(--accent)}
+  .caseflow .step .t{font:var(--text-body-strong);color:var(--fg-strong);margin-top:6px}
+
+  /* CTA */
+  .cta-band{text-align:center;background:linear-gradient(180deg,color-mix(in oklch,var(--accent) 6%,var(--bg-canvas)),var(--bg-canvas))}
+  .cta-band h2{margin:0;font:800 36px/1.2 var(--font-ui);color:var(--fg-strong);letter-spacing:-.01em}
+  .cta-band p{margin:14px 0 0;font:var(--text-body);color:var(--fg-secondary)}
+  .cta-band .row{display:flex;gap:10px;justify-content:center;margin-top:24px;flex-wrap:wrap}
+
+  footer{border-top:1px solid var(--border-subtle);padding:28px 0}
+  footer .bar{display:flex;align-items:center;justify-content:space-between;gap:16px;font:var(--text-caption);color:var(--fg-muted)}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="bar">
+    <div class="brand"><div class="mk">IAK</div>IAK Design Studio</div>
+    <nav>
+      <a href="#problems">문제 진단</a>
+      <a href="#packages">패키지</a>
+      <a href="#case">케이스</a>
+      <a href="#recruit">파트너</a>
+    </nav>
+    <a class="btn primary" href="#cta" style="margin-left:8px"><iconify-icon icon="solar:document-add-bold"></iconify-icon>제안 요청</a>
+  </div>
+</header>
+
+<!-- 1 · HERO -->
+<section class="hero wrap">
+  <div class="ovl">UI/UX DESIGN STUDIO</div>
+  <h1>기존 서비스를 <em>더 명확하게, 더 쉽게,<br>더 설득력 있게</em> 다시 설계합니다.</h1>
+  <p class="lede">리뉴얼, 랜딩, 어드민 UI, 그리고 세일즈·리크루팅 에셋까지 — 프로젝트 성격에 맞춰 필요한 범위만 설계합니다.</p>
+  <div class="cta">
+    <a class="btn primary" href="#cta"><iconify-icon icon="solar:test-tube-bold"></iconify-icon>프로젝트 진단</a>
+    <a class="btn secondary" href="#case"><iconify-icon icon="solar:gallery-wide-bold"></iconify-icon>포트폴리오 보기</a>
+    <a class="btn ghost" href="#cta"><iconify-icon icon="solar:document-text-bold"></iconify-icon>제안서 요청</a>
+  </div>
+  <div class="trust">
+    <div><b>4</b>프로젝트 유형 대응</div>
+    <div><b>2–4주</b>스프린트 단위 진행</div>
+    <div><b>재사용</b>세일즈·운영 에셋 제공</div>
+  </div>
+</section>
+
+<!-- 2 · PROBLEMS -->
+<section class="problems" id="problems">
+  <div class="wrap">
+    <div class="sec-h"><div class="ovl">PROBLEMS WE SOLVE</div><h2>이런 문제를 해결합니다</h2><p>흔히 마주치는 다섯 가지 — 어느 하나라도 해당된다면 진단부터 시작할 수 있습니다.</p></div>
+    <div class="pgrid">
+      <div class="pcard"><div class="ic"><iconify-icon icon="solar:clock-circle-bold"></iconify-icon></div><h4>낡은 웹사이트·앱</h4><p>트렌드와 동떨어진 UI, 일관성 없는 화면. 첫인상에서 신뢰를 잃고 있습니다.</p></div>
+      <div class="pcard"><div class="ic"><iconify-icon icon="solar:question-circle-bold"></iconify-icon></div><h4>불명확한 서비스 설명</h4><p>무엇을 파는지 3초 안에 전달되지 않아 방문자가 이탈합니다.</p></div>
+      <div class="pcard"><div class="ic"><iconify-icon icon="solar:smartphone-bold"></iconify-icon></div><h4>약한 모바일 대응</h4><p>모바일에서 깨지는 레이아웃, 작은 터치 영역. 대부분의 트래픽을 놓칩니다.</p></div>
+      <div class="pcard"><div class="ic"><iconify-icon icon="solar:widget-bold"></iconify-icon></div><h4>복잡한 어드민·CMS UI</h4><p>운영자가 헤매는 대시보드와 테이블. 업무 속도와 정확도가 떨어집니다.</p></div>
+      <div class="pcard"><div class="ic"><iconify-icon icon="solar:gallery-remove-bold"></iconify-icon></div><h4>부족한 세일즈·채용 에셋</h4><p>포트폴리오, 회사소개, 채용 페이지가 없어 기회마다 매번 새로 만듭니다.</p></div>
+      <div class="pcard" style="background:linear-gradient(180deg,color-mix(in oklch,var(--accent) 8%,var(--bg-card)),var(--bg-card));border-color:color-mix(in oklch,var(--accent) 22%,var(--border-default))"><div class="ic" style="background:rgba(255,167,38,.14);color:var(--accent)"><iconify-icon icon="solar:test-tube-bold"></iconify-icon></div><h4 style="color:var(--accent)">먼저 진단부터</h4><p>어떤 패키지가 맞는지 모르겠다면, 진단 스프린트로 범위와 우선순위를 함께 정합니다.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 3 · BALANCED PACKAGES -->
+<section class="wrap" id="packages">
+  <div class="sec-h"><div class="ovl">BALANCED PACKAGES</div><h2>프로젝트에 맞는 네 가지 스프린트</h2><p>특정 패키지에 치우치지 않습니다. 문제·산출물·적합 신호를 보고 고르세요.</p></div>
+  <div class="pkgs">
+    <div class="pkg">
+      <span class="num">A</span>
+      <div><div class="tag">PACKAGE A</div><h3>리뉴얼 진단 스프린트</h3><div class="sub">Renewal Diagnosis</div></div>
+      <div class="blk"><h5>문제</h5><p>기존 웹·앱이 낡았고 핵심 화면이 설득력을 잃었다.</p></div>
+      <div class="blk"><h5>산출물</h5><ul><li>현행 UX 진단 리포트</li><li>핵심 화면 리디자인</li><li>개선 우선순위 로드맵</li></ul></div>
+      <div class="fit"><b>이럴 때</b>운영 중인 서비스를 다시 살리고 싶을 때</div>
+    </div>
+    <div class="pkg">
+      <span class="num">B</span>
+      <div><div class="tag">PACKAGE B</div><h3>랜딩 / 서비스 페이지</h3><div class="sub">Landing Sprint</div></div>
+      <div class="blk"><h5>문제</h5><p>서비스를 빠르게 설명하고 전환시킬 페이지가 없다.</p></div>
+      <div class="blk"><h5>산출물</h5><ul><li>반응형 랜딩 페이지</li><li>서비스 소개 구조 설계</li><li>전환 중심 카피·CTA</li></ul></div>
+      <div class="fit"><b>이럴 때</b>출시·캠페인·세일즈가 급할 때</div>
+    </div>
+    <div class="pkg">
+      <span class="num">C</span>
+      <div><div class="tag">PACKAGE C</div><h3>어드민 / CMS UX</h3><div class="sub">Admin UX Sprint</div></div>
+      <div class="blk"><h5>문제</h5><p>운영 UI가 복잡해 업무 속도와 정확도가 낮다.</p></div>
+      <div class="blk"><h5>산출물</h5><ul><li>대시보드·테이블·필터</li><li>상태 배지·상세 패널</li><li>운영 UI 컴포넌트 세트</li></ul></div>
+      <div class="fit"><b>이럴 때</b>내부 운영 도구를 개선할 때</div>
+    </div>
+    <div class="pkg">
+      <span class="num">D</span>
+      <div><div class="tag">PACKAGE D</div><h3>포트폴리오 / 채용 키트</h3><div class="sub">Company Asset Kit</div></div>
+      <div class="blk"><h5>문제</h5><p>포트폴리오·회사소개·채용 에셋이 흩어져 있다.</p></div>
+      <div class="blk"><h5>산출물</h5><ul><li>포트폴리오·회사소개</li><li>채용 페이지</li><li>재사용 제안 섹션</li></ul></div>
+      <div class="fit"><b>이럴 때</b>브랜드·채용 자산을 정비할 때</div>
+    </div>
+  </div>
+</section>
+
+<!-- 4 · CASE TEMPLATE -->
+<section class="case" id="case">
+  <div class="wrap">
+    <div class="sec-h"><div class="ovl">CASE STUDY TEMPLATE</div><h2>모든 케이스를 같은 구조로</h2><p>프로젝트 유형이 달라도 동일한 흐름으로 정리해 재사용합니다.</p></div>
+    <div class="caseflow">
+      <div class="step"><div class="n">01</div><div class="t">프로젝트 유형</div></div>
+      <div class="step"><div class="n">02</div><div class="t">클라이언트 문제</div></div>
+      <div class="step"><div class="n">03</div><div class="t">패키지 적합도</div></div>
+      <div class="step"><div class="n">04</div><div class="t">진단</div></div>
+      <div class="step"><div class="n">05</div><div class="t">디자인 방향</div></div>
+      <div class="step"><div class="n">06</div><div class="t">핵심 화면</div></div>
+      <div class="step"><div class="n">07</div><div class="t">산출물</div></div>
+      <div class="step"><div class="n">08</div><div class="t">재사용 에셋</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 5 · RECRUIT -->
+<section class="wrap" id="recruit">
+  <div class="sec-h"><div class="ovl">PARTNERS</div><h2>프로젝트 단위 UI/UX 파트너를 찾습니다</h2><p>리뉴얼 화면, 랜딩, 어드민·CMS UI, 포트폴리오·채용 에셋까지 — 네 가지 유형 모두를 함께 합니다. 특정 패키지 전용 채용이 아닙니다.</p></div>
+  <a class="btn secondary" href="#cta"><iconify-icon icon="solar:users-group-rounded-bold"></iconify-icon>파트너 지원하기</a>
+</section>
+
+<!-- 6 · CTA -->
+<section class="cta-band" id="cta">
+  <div class="wrap">
+    <h2>먼저 진단부터 시작하세요</h2>
+    <p>어떤 패키지가 맞는지 함께 정하고, 필요한 범위만 제안드립니다.</p>
+    <div class="row">
+      <a class="btn primary" href="#"><iconify-icon icon="solar:test-tube-bold"></iconify-icon>프로젝트 진단</a>
+      <a class="btn secondary" href="#"><iconify-icon icon="solar:document-text-bold"></iconify-icon>제안서 요청</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap bar">
+    <div class="brand"><div class="mk">IAK</div>IAK Design Studio</div>
+    <div>UI/UX 구조 · 비주얼 디렉션 · 재사용 세일즈 에셋</div>
+  </div>
+</footer>
+
+</body>
+</html>

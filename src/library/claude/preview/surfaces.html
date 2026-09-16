@@ -1,0 +1,19 @@
+<!doctype html>
+<!-- @dsCard group="Colors" name="Colors · Surfaces" subtitle="Layered black canvas tokens" viewport="700x150" --><html><head><meta charset="utf-8"><title>Surfaces</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body{margin:0;padding:20px;background:var(--bg-elevated);font:var(--text-body);color:var(--fg-primary)}
+  .row{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+  .layer{height:88px;border-radius:12px;display:flex;flex-direction:column;justify-content:flex-end;padding:12px;border:1px solid var(--border-default)}
+  .name{font:var(--text-body-strong);color:var(--fg-strong)}
+  .tok{font:var(--text-caption);color:var(--fg-secondary)}
+</style></head>
+<body>
+<div class="row">
+  <div class="layer" style="background:var(--bg-canvas)"><span class="name">Canvas</span><span class="tok">--bg-canvas</span></div>
+  <div class="layer" style="background:var(--bg-elevated)"><span class="name">Elevated</span><span class="tok">--bg-elevated</span></div>
+  <div class="layer" style="background:var(--bg-card-alt)"><span class="name">Card alt</span><span class="tok">--bg-card-alt</span></div>
+  <div class="layer" style="background:var(--bg-field)"><span class="name">Field</span><span class="tok">--bg-field</span></div>
+  <div class="layer" style="background:var(--rais-grey-1100)"><span class="name">Deepest</span><span class="tok">grey-1100</span></div>
+</div>
+</body></html>

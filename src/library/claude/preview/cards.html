@@ -1,0 +1,33 @@
+<!doctype html>
+<!-- @dsCard group="Components" name="Cards" subtitle="Metric / Insight pattern" viewport="700x260" --><html><head><meta charset="utf-8"><title>Card</title>
+<script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body{margin:0;padding:18px;background:var(--bg-elevated);color:var(--fg-primary)}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  .card{background:var(--bg-card);border-radius:24px;padding:22px;box-shadow:var(--shadow-card)}
+  .head{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px}
+  h4{margin:0;font:var(--text-title);color:var(--fg-strong)}
+  .stat{font-family:Roboto;font-weight:700;font-size:36px;line-height:1;color:var(--fg-strong);margin:14px 0 6px;font-feature-settings:"tnum"}
+  .delta{display:inline-flex;align-items:center;gap:4px;font:var(--text-caption);font-weight:700}
+  .up{color:var(--rais-success)}
+  .down{color:var(--rais-error)}
+  .sub{font:var(--text-caption);color:var(--fg-secondary)}
+  .icon-btn{width:32px;height:32px;border-radius:500px;background:var(--rais-alpha-08);display:flex;align-items:center;justify-content:center;color:var(--fg-secondary);cursor:pointer}
+</style></head>
+<body>
+<div class="grid">
+  <div class="card">
+    <div class="head"><h4>Sales this month</h4><span class="icon-btn"><iconify-icon icon="eva:more-horizontal-fill" width="18"></iconify-icon></span></div>
+    <div class="stat">$18,765</div>
+    <span class="delta up"><iconify-icon icon="eva:arrow-ios-upward-fill" width="14"></iconify-icon>+2.6%</span>
+    <div class="sub" style="margin-top:6px">vs. previous 28 days</div>
+  </div>
+  <div class="card">
+    <div class="head"><h4>Active subscribers</h4><span class="icon-btn"><iconify-icon icon="eva:more-horizontal-fill" width="18"></iconify-icon></span></div>
+    <div class="stat">4,289</div>
+    <span class="delta down"><iconify-icon icon="eva:arrow-ios-downward-fill" width="14"></iconify-icon>−0.4%</span>
+    <div class="sub" style="margin-top:6px">12 churned this week</div>
+  </div>
+</div>
+</body></html>

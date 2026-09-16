@@ -1,0 +1,66 @@
+<!doctype html>
+<!-- @dsCard group="Colors" name="Colors · Semantic" subtitle="Info / Success / Warning / Error" viewport="700x170" --><html><head><meta charset="utf-8"><title>Color · Semantic</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body{margin:0;padding:20px;background:var(--bg-elevated);font:var(--text-body);color:var(--fg-primary)}
+  .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+  .cell{display:flex;flex-direction:column;gap:8px}
+  .row{display:grid;grid-template-columns:1fr 40px;gap:6px}
+  .swatch{height:78px;border-radius:8px;display:flex;align-items:flex-end;padding:10px 12px;font:var(--text-caption);color:var(--fg-on-accent);font-weight:700}
+  .stack{display:grid;grid-template-rows:repeat(4,1fr);gap:4px}
+  .tiny{border-radius:3px}
+  .label{font:var(--text-body-strong)}
+  .hex{font:var(--text-caption);color:var(--fg-secondary);font-feature-settings:"tnum"}
+</style></head>
+<body>
+<div class="grid">
+  <div class="cell">
+    <div class="row">
+      <div class="swatch" style="background:var(--rais-info);box-shadow:var(--glow-info);color:#fff">#4C9AEC</div>
+      <div class="stack">
+        <div class="tiny" style="background:var(--rais-info-light)"></div>
+        <div class="tiny" style="background:var(--rais-info-dark)"></div>
+        <div class="tiny" style="background:var(--rais-info-darker)"></div>
+        <div class="tiny" style="background:#005482"></div>
+      </div>
+    </div>
+    <span class="label">Info</span>
+  </div>
+  <div class="cell">
+    <div class="row">
+      <div class="swatch" style="background:var(--rais-success);box-shadow:var(--glow-success);color:#fff">#33C488</div>
+      <div class="stack">
+        <div class="tiny" style="background:var(--rais-success-lighter)"></div>
+        <div class="tiny" style="background:var(--rais-success-light)"></div>
+        <div class="tiny" style="background:var(--rais-success-darker)"></div>
+        <div class="tiny" style="background:#012a23"></div>
+      </div>
+    </div>
+    <span class="label">Success</span>
+  </div>
+  <div class="cell">
+    <div class="row">
+      <div class="swatch" style="background:var(--rais-warning);box-shadow:var(--glow-warning)">#FAAE3E</div>
+      <div class="stack">
+        <div class="tiny" style="background:#ffd08a"></div>
+        <div class="tiny" style="background:var(--rais-warning-light)"></div>
+        <div class="tiny" style="background:#cd7f0d"></div>
+        <div class="tiny" style="background:#7a4900"></div>
+      </div>
+    </div>
+    <span class="label">Warning</span>
+  </div>
+  <div class="cell">
+    <div class="row">
+      <div class="swatch" style="background:var(--rais-error);box-shadow:var(--glow-error);color:#fff">#FF665B</div>
+      <div class="stack">
+        <div class="tiny" style="background:#ffb1a6"></div>
+        <div class="tiny" style="background:var(--rais-error-light)"></div>
+        <div class="tiny" style="background:#c2392c"></div>
+        <div class="tiny" style="background:#5e1611"></div>
+      </div>
+    </div>
+    <span class="label">Error</span>
+  </div>
+</div>
+</body></html>

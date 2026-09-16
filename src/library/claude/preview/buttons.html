@@ -1,0 +1,25 @@
+<!doctype html>
+<!-- @dsCard group="Components" name="Buttons" subtitle="Contained · Outlined · Text · Soft" viewport="700x210" --><html><head><meta charset="utf-8"><title>Buttons</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body{margin:0;padding:20px;background:var(--bg-elevated);color:var(--fg-primary)}
+  .row{display:flex;gap:12px;align-items:center;margin-bottom:14px}
+  .row:last-child{margin-bottom:0}
+  .btn{font:var(--text-button);padding:8px 14px;border-radius:8px;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:8px;font-feature-settings:"tnum";white-space:nowrap}
+  .contained{background:var(--accent);color:var(--accent-fg);transition:filter .12s ease,box-shadow .12s ease}
+  .contained.hover{filter:brightness(1.06);box-shadow:0 1px 0 rgba(255,255,255,.10) inset, 0 2px 6px rgba(255,167,38,.10)}
+  .contained-neutral{background:var(--rais-grey-350);color:var(--fg-on-light)}
+  .outlined{background:transparent;color:var(--fg-primary);border:1px solid var(--border-strong)}
+  .outlined-primary{background:transparent;color:var(--accent);border:1px solid var(--accent)}
+  .focused{background:transparent;color:var(--fg-primary);border:1px solid var(--accent);box-shadow:inset 0 0 0 1px rgba(255,167,38,.18)}
+  .text{background:transparent;color:var(--fg-primary)}
+  .text-primary{background:transparent;color:var(--accent)}
+  .soft{background:rgba(255,167,38,0.16);color:var(--rais-primary-light)}
+  .disabled{background:var(--rais-alpha-12);color:var(--fg-muted);cursor:not-allowed;box-shadow:none}
+  .lbl{font:var(--text-overline);color:var(--fg-muted);width:84px;letter-spacing:.1em}
+</style></head>
+<body>
+  <div class="row"><span class="lbl">CONTAINED</span><button class="btn contained">Enabled</button><button class="btn contained hover">Hover</button><button class="btn contained" style="background:var(--rais-primary-darker)">Pressed</button><button class="btn disabled">Disabled</button></div>
+  <div class="row"><span class="lbl">OUTLINED</span><button class="btn outlined">Default</button><button class="btn outlined-primary">Primary</button><button class="btn focused">Focused</button></div>
+  <div class="row"><span class="lbl">TEXT/SOFT</span><button class="btn text">Text</button><button class="btn text-primary">Text · Primary</button><button class="btn soft">Soft</button></div>
+</body></html>

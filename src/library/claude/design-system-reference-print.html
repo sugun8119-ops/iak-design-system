@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>RAIS Design System — Reference</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="colors_and_type.css">
+<script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+<style>
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg-canvas);color:var(--fg-primary);font:var(--text-body)}
+  .page{max-width:920px;margin:0 auto;padding:56px 56px 64px}
+  .sec{break-before:page}
+  .sec:first-child{break-before:auto}
+
+  /* Cover */
+  .cover{min-height:90vh;display:flex;flex-direction:column;justify-content:center;gap:24px}
+  .cover .mk{width:64px;height:64px;border-radius:16px;background:var(--accent);display:grid;place-items:center;color:var(--accent-fg);font:800 28px/1 var(--font-ui);box-shadow:var(--accent-glow)}
+  .cover h1{margin:0;font:800 64px/1.05 var(--font-ui);color:var(--fg-strong);letter-spacing:-.02em}
+  .cover .tag{font:var(--text-body-lg, 400 17px/26px var(--font-pretendard));color:var(--fg-secondary);max-width:560px}
+  .cover .meta{display:flex;gap:32px;margin-top:16px;font:var(--text-caption);color:var(--fg-muted)}
+  .cover .meta b{display:block;color:var(--fg-primary);font:var(--text-body-strong);margin-bottom:4px}
+  .cover .toc{margin-top:24px;display:grid;grid-template-columns:repeat(2,1fr);gap:8px 32px;max-width:600px}
+  .cover .toc div{display:flex;justify-content:space-between;font:var(--text-caption);color:var(--fg-secondary);padding:8px 0;border-bottom:1px solid var(--border-subtle)}
+  .cover .toc div span:first-child{color:var(--fg-primary)}
+
+  /* Section heading */
+  .sh{margin:0 0 24px;padding-bottom:14px;border-bottom:1px solid var(--border-default)}
+  .sh .n{font:var(--text-overline);color:var(--accent);margin-bottom:8px}
+  .sh h2{margin:0;font:var(--text-h1);color:var(--fg-strong);letter-spacing:-.01em}
+  .sh p{margin:8px 0 0;font:var(--text-body);color:var(--fg-secondary);max-width:620px}
+  h3.sub{margin:28px 0 12px;font:var(--text-title);color:var(--fg-strong)}
+
+  /* Color */
+  .swatches{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+  .sw{border:1px solid var(--border-subtle);border-radius:12px;overflow:hidden}
+  .sw .chip{height:72px}
+  .sw .meta{padding:10px 12px}
+  .sw .nm{font:var(--text-body-strong);color:var(--fg-strong)}
+  .sw .hex{font:var(--text-code);color:var(--fg-muted);margin-top:2px}
+
+  .scale-row{display:flex;border:1px solid var(--border-subtle);border-radius:12px;overflow:hidden;margin-top:8px}
+  .scale-row .c{flex:1;height:56px;display:flex;align-items:flex-end;justify-content:center;padding-bottom:6px;font:var(--text-overline);color:rgba(0,0,0,.5)}
+
+  /* Type specimens */
+  .type-row{display:flex;align-items:baseline;justify-content:space-between;gap:24px;padding:14px 0;border-bottom:1px solid var(--border-subtle)}
+  .type-row .lbl{font:var(--text-overline);color:var(--accent);flex:0 0 130px}
+  .type-row .spec{font:var(--text-caption);color:var(--fg-muted);flex:0 0 150px;text-align:right;font-feature-settings:"tnum"}
+  .type-row .demo{flex:1}
+
+  /* Tokens table */
+  .tk{width:100%;border-collapse:collapse;margin-top:4px}
+  .tk th{text-align:left;padding:10px 14px;background:var(--rais-grey-900);font:var(--text-overline);color:var(--fg-muted);border-bottom:1px solid var(--border-subtle)}
+  .tk td{padding:10px 14px;border-bottom:1px solid var(--border-subtle);font:var(--text-caption);color:var(--fg-primary)}
+  .tk td code{font:var(--text-code);color:var(--fg-strong);background:var(--rais-alpha-08);padding:1px 6px;border-radius:4px}
+  .tk .box{display:inline-block;vertical-align:middle;border-radius:6px;border:1px solid var(--border-subtle)}
+
+  /* Component demos */
+  .demo-card{background:var(--bg-card);border:1px solid var(--border-default);border-radius:16px;padding:24px;margin-top:12px}
+  .row{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+  .row + .row{margin-top:14px}
+  .btn{font:var(--text-button);border:none;cursor:pointer;border-radius:8px;padding:8px 16px;display:inline-flex;align-items:center;gap:8px}
+  .btn.primary{background:var(--accent);color:var(--accent-fg)}
+  .btn.secondary{background:var(--bg-field);color:var(--fg-strong);border:1px solid var(--border-default)}
+  .btn.danger{background:var(--rais-error);color:#fff}
+  .btn.text{background:transparent;color:var(--fg-secondary)}
+  .btn.focus{background:var(--accent);color:var(--accent-fg);outline:2px solid var(--accent);outline-offset:2px}
+  .btn.disabled{background:var(--rais-alpha-12);color:var(--fg-muted)}
+  .lbl-row{font:var(--text-overline);color:var(--fg-muted);width:90px;flex:0 0 90px}
+
+  .field{display:flex;flex-direction:column;gap:6px;flex:1;min-width:180px}
+  .field .fl{font:var(--text-overline);color:var(--fg-muted)}
+  .ctrl{height:40px;border-radius:8px;background:var(--bg-field);border:1px solid var(--border-default);padding:0 12px;display:flex;align-items:center;color:var(--fg-primary);font:var(--text-body)}
+  .ctrl.ph{color:var(--fg-muted)}
+  .ctrl.focus{border-color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent);color:var(--fg-strong)}
+  .ctrl.err{border-color:var(--rais-error);box-shadow:inset 0 0 0 1px var(--rais-error)}
+  .ctrl.dis{opacity:.6}
+
+  .bdg{display:inline-flex;align-items:center;gap:6px;padding:4px 10px;border-radius:500px;font:var(--text-overline)}
+  .bdg.suc{background:rgba(39,218,104,.14);color:var(--rais-success-light)}
+  .bdg.warn{background:rgba(250,174,62,.14);color:var(--rais-warning)}
+  .bdg.err{background:rgba(255,102,91,.14);color:var(--rais-error)}
+  .bdg.info{background:rgba(76,154,236,.14);color:var(--rais-info)}
+
+  .toast{display:flex;gap:12px;align-items:center;width:360px;padding:14px;border-radius:12px;background:var(--bg-card-alt);border:1px solid var(--border-default);box-shadow:var(--shadow-toast)}
+  .toast .pl{width:32px;height:32px;border-radius:8px;display:grid;place-items:center;flex-shrink:0}
+  .toast.suc .pl{background:rgba(39,218,104,.14);color:var(--rais-success-light)}
+  .toast.err .pl{background:rgba(255,102,91,.14);color:var(--rais-error)}
+  .toast .tt{font:var(--text-body-strong);color:var(--fg-strong)}
+  .toast .ms{font:var(--text-caption);color:var(--fg-secondary)}
+
+  .mcard{background:var(--bg-card);border:1px solid var(--border-default);border-radius:16px;padding:18px;width:200px}
+  .mcard .l{font:var(--text-overline);color:var(--fg-muted)}
+  .mcard .v{font:700 32px/1 var(--font-ui);color:var(--fg-strong);margin:8px 0;font-feature-settings:"tnum"}
+  .mcard .d{font:var(--text-caption);color:var(--rais-success-light)}
+
+  ul.rules{list-style:none;margin:8px 0 0;padding:0}
+  ul.rules li{display:flex;gap:10px;align-items:flex-start;padding:7px 0;font:var(--text-body);color:var(--fg-primary)}
+  ul.rules li iconify-icon{margin-top:3px;flex-shrink:0}
+  ul.rules li.do iconify-icon{color:var(--rais-success-light)}
+  ul.rules li.no iconify-icon{color:var(--rais-error)}
+
+  .foot{margin-top:48px;padding-top:16px;border-top:1px solid var(--border-subtle);font:var(--text-caption);color:var(--fg-muted);display:flex;justify-content:space-between}
+
+  @media print{
+    @page{size:A4 portrait;margin:14mm}
+    html,body{background:var(--bg-canvas) !important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    *{-webkit-print-color-adjust:exact !important;print-color-adjust:exact !important}
+    .page{max-width:none;margin:0;padding:0}
+    .sec{break-before:page}
+    .swatches,.demo-card,.type-row,.tk,.toast,.mcard,.sw{break-inside:avoid}
+    .cover{min-height:auto;padding-top:40px}
+    *,*::before,*::after{animation-duration:.001s !important;animation-delay:-99s !important;transition-duration:0s !important}
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- COVER -->
+  <section class="sec cover">
+    <div class="mk">R</div>
+    <h1>RAIS<br>Design System</h1>
+    <p class="tag">A dark-first, AI-native SaaS design system. Single orange accent, Pretendard everywhere, token-locked spacing and a 19-state expression model.</p>
+    <div class="meta">
+      <div><b>Version</b>2026.05.10k</div>
+      <div><b>Typeface</b>Pretendard</div>
+      <div><b>Accent</b>#FFA726</div>
+      <div><b>Mode</b>Dark-first</div>
+    </div>
+    <div class="toc">
+      <div><span>01 · Color</span><span>Palette &amp; surfaces</span></div>
+      <div><span>02 · Typography</span><span>Pretendard scale</span></div>
+      <div><span>03 · Spacing &amp; Radius</span><span>4 pt scale</span></div>
+      <div><span>04 · Shadow, Glow &amp; Motion</span><span>Elevation</span></div>
+      <div><span>05 · Components</span><span>Buttons → Cards</span></div>
+      <div><span>06 · Brand &amp; Principles</span><span>Do / Don't</span></div>
+    </div>
+  </section>
+
+  <!-- 01 COLOR -->
+  <section class="sec">
+    <div class="sh"><div class="n">01 · FOUNDATION</div><h2>Color</h2><p>Orange is the single accent. Blue is a data role, never brand. Six semantic families plus a layered greyscale carry the whole system.</p></div>
+
+    <h3 class="sub">Accent &amp; status</h3>
+    <div class="swatches">
+      <div class="sw"><div class="chip" style="background:#FFA726;box-shadow:var(--glow-primary)"></div><div class="meta"><div class="nm">Primary</div><div class="hex">#FFA726</div></div></div>
+      <div class="sw"><div class="chip" style="background:#4C9AEC"></div><div class="meta"><div class="nm">Info</div><div class="hex">#4C9AEC</div></div></div>
+      <div class="sw"><div class="chip" style="background:#27DA68"></div><div class="meta"><div class="nm">Success</div><div class="hex">#27DA68</div></div></div>
+      <div class="sw"><div class="chip" style="background:#FAAE3E"></div><div class="meta"><div class="nm">Warning</div><div class="hex">#FAAE3E</div></div></div>
+      <div class="sw"><div class="chip" style="background:#FF665B"></div><div class="meta"><div class="nm">Error</div><div class="hex">#FF665B</div></div></div>
+      <div class="sw"><div class="chip" style="background:#8E33FF"></div><div class="meta"><div class="nm">Data · Purple</div><div class="hex">#8E33FF</div></div></div>
+      <div class="sw"><div class="chip" style="background:#00CEF3"></div><div class="meta"><div class="nm">Data · Cyan</div><div class="hex">#00CEF3</div></div></div>
+      <div class="sw"><div class="chip" style="background:#D1DAE3"></div><div class="meta"><div class="nm">Neutral</div><div class="hex">#D1DAE3</div></div></div>
+    </div>
+
+    <h3 class="sub">Surface stack</h3>
+    <div class="swatches">
+      <div class="sw"><div class="chip" style="background:#0D0D0D"></div><div class="meta"><div class="nm">Canvas</div><div class="hex">#0D0D0D</div></div></div>
+      <div class="sw"><div class="chip" style="background:#121212"></div><div class="meta"><div class="nm">Elevated</div><div class="hex">#121212</div></div></div>
+      <div class="sw"><div class="chip" style="background:#161616"></div><div class="meta"><div class="nm">Card-alt</div><div class="hex">#161616</div></div></div>
+      <div class="sw"><div class="chip" style="background:#1C222B"></div><div class="meta"><div class="nm">Field</div><div class="hex">#1C222B</div></div></div>
+    </div>
+
+    <h3 class="sub">Text &amp; greyscale</h3>
+    <div class="scale-row">
+      <div class="c" style="background:#FFFFFF;color:#000">strong</div>
+      <div class="c" style="background:#D1DAE3">primary</div>
+      <div class="c" style="background:#919EAB">secondary</div>
+      <div class="c" style="background:#637381;color:#fff">muted</div>
+      <div class="c" style="background:#22282F;color:#fff">700</div>
+      <div class="c" style="background:#161616;color:#fff">900</div>
+      <div class="c" style="background:#0D0D0D;color:#fff">1000</div>
+    </div>
+    <div class="foot"><span>RAIS Design System</span><span>01 · Color</span></div>
+  </section>
+
+  <!-- 02 TYPOGRAPHY -->
+  <section class="sec">
+    <div class="sh"><div class="n">02 · FOUNDATION</div><h2>Typography</h2><p>Pretendard is the sole UI face for Korean, English and numerals. Weight logic: display/page 700–800 · section/card 600–700 · body 400–500 · caption 400.</p></div>
+
+    <div class="type-row"><div class="lbl">DISPLAY XL</div><div class="demo" style="font:800 40px/1 var(--font-pretendard);color:var(--fg-strong);letter-spacing:-.01em">Almost before we knew it</div><div class="spec">800 · 64/80</div></div>
+    <div class="type-row"><div class="lbl">PAGE TITLE</div><div class="demo" style="font:700 30px/1 var(--font-pretendard);color:var(--fg-strong)">페이지 제목 · Page title</div><div class="spec">700 · 32/40</div></div>
+    <div class="type-row"><div class="lbl">SECTION</div><div class="demo" style="font:700 22px/1 var(--font-pretendard);color:var(--fg-strong)">Section header</div><div class="spec">700 · 24/32</div></div>
+    <div class="type-row"><div class="lbl">CARD TITLE</div><div class="demo" style="font:600 17px/1 var(--font-pretendard);color:var(--fg-strong)">Card title · 카드 제목</div><div class="spec">600 · 18/28</div></div>
+    <div class="type-row"><div class="lbl">BODY</div><div class="demo" style="font:400 14px/1.5 var(--font-pretendard)">Default body — Pretendard 14 / 22, 한글도 동일 메트릭으로 흐른다.</div><div class="spec">400 · 14/22</div></div>
+    <div class="type-row"><div class="lbl">LABEL</div><div class="demo" style="font:500 14px/1 var(--font-pretendard);color:var(--fg-strong)">UI label · 라벨</div><div class="spec">500 · 14/22</div></div>
+    <div class="type-row"><div class="lbl">CAPTION</div><div class="demo" style="font:400 12px/1 var(--font-pretendard);color:var(--fg-secondary)">Caption / helper text</div><div class="spec">400 · 12/18</div></div>
+    <div class="type-row"><div class="lbl">OVERLINE</div><div class="demo" style="font:700 11px/1 var(--font-pretendard);letter-spacing:.12em;text-transform:uppercase;color:var(--fg-muted)">SECTION TAG</div><div class="spec">700 · 11/18</div></div>
+    <div class="type-row"><div class="lbl">DATA</div><div class="demo" style="font:700 30px/1 var(--font-pretendard);color:var(--fg-strong);font-feature-settings:'tnum'">$ 2,418,650</div><div class="spec">700 · tnum</div></div>
+    <div class="foot"><span>RAIS Design System</span><span>02 · Typography</span></div>
+  </section>
+
+  <!-- 03 SPACING -->
+  <section class="sec">
+    <div class="sh"><div class="n">03 · FOUNDATION</div><h2>Spacing &amp; Radius</h2><p>A locked 4 pt scale. Off-scale literals are an audit failure — reach for a token or utility.</p></div>
+
+    <h3 class="sub">Spacing scale</h3>
+    <table class="tk">
+      <thead><tr><th>Token</th><th>Value</th><th>Sample</th><th>Use</th></tr></thead>
+      <tbody>
+        <tr><td><code>--space-1</code></td><td>4 px</td><td><span class="box" style="width:4px;height:14px;background:var(--accent)"></span></td><td>Icon-to-label gap</td></tr>
+        <tr><td><code>--space-2</code></td><td>8 px</td><td><span class="box" style="width:8px;height:14px;background:var(--accent)"></span></td><td>Button icon gap, chip rail</td></tr>
+        <tr><td><code>--space-3</code></td><td>12 px</td><td><span class="box" style="width:12px;height:14px;background:var(--accent)"></span></td><td>Table cell vertical</td></tr>
+        <tr><td><code>--space-4</code></td><td>16 px</td><td><span class="box" style="width:16px;height:14px;background:var(--accent)"></span></td><td>Form row gap, card gutter</td></tr>
+        <tr><td><code>--space-6</code></td><td>24 px</td><td><span class="box" style="width:24px;height:14px;background:var(--accent)"></span></td><td>Card padding, card gap</td></tr>
+        <tr><td><code>--space-8</code></td><td>32 px</td><td><span class="box" style="width:32px;height:14px;background:var(--accent)"></span></td><td>Section gap, page padding</td></tr>
+        <tr><td><code>--space-16</code></td><td>64 px</td><td><span class="box" style="width:64px;height:14px;background:var(--accent)"></span></td><td>Top-level section break</td></tr>
+      </tbody>
+    </table>
+
+    <h3 class="sub">Radius</h3>
+    <div class="row">
+      <div style="text-align:center"><div class="box" style="width:72px;height:48px;border-radius:4px;background:var(--bg-field);border:1px solid var(--border-default)"></div><div style="font:var(--text-overline);color:var(--fg-muted);margin-top:6px">xs · 4</div></div>
+      <div style="text-align:center"><div class="box" style="width:72px;height:48px;border-radius:8px;background:var(--bg-field);border:1px solid var(--border-default)"></div><div style="font:var(--text-overline);color:var(--fg-muted);margin-top:6px">md · 8</div></div>
+      <div style="text-align:center"><div class="box" style="width:72px;height:48px;border-radius:16px;background:var(--bg-field);border:1px solid var(--border-default)"></div><div style="font:var(--text-overline);color:var(--fg-muted);margin-top:6px">xl · 16</div></div>
+      <div style="text-align:center"><div class="box" style="width:72px;height:48px;border-radius:24px;background:var(--bg-field);border:1px solid var(--border-default)"></div><div style="font:var(--text-overline);color:var(--fg-muted);margin-top:6px">2xl · 24</div></div>
+      <div style="text-align:center"><div class="box" style="width:48px;height:48px;border-radius:500px;background:var(--bg-field);border:1px solid var(--border-default)"></div><div style="font:var(--text-overline);color:var(--fg-muted);margin-top:6px">pill</div></div>
+    </div>
+    <div class="foot"><span>RAIS Design System</span><span>03 · Spacing &amp; Radius</span></div>
+  </section>
+
+  <!-- 04 SHADOW / GLOW / MOTION -->
+  <section class="sec">
+    <div class="sh"><div class="n">04 · FOUNDATION</div><h2>Shadow, Glow &amp; Motion</h2><p>Neutral shadows for elevation; coloured glows as resting decoration only — never as focus. Three motion durations, one easing.</p></div>
+
+    <h3 class="sub">Elevation</h3>
+    <div class="row">
+      <div class="demo-card" style="box-shadow:var(--shadow-soft);width:160px;text-align:center"><div style="font:var(--text-overline);color:var(--fg-muted)">shadow · sm</div></div>
+      <div class="demo-card" style="box-shadow:var(--shadow-card);width:160px;text-align:center"><div style="font:var(--text-overline);color:var(--fg-muted)">shadow · lg</div></div>
+      <div class="demo-card" style="box-shadow:var(--shadow-toast);width:160px;text-align:center"><div style="font:var(--text-overline);color:var(--fg-muted)">shadow · floating</div></div>
+    </div>
+
+    <h3 class="sub">Glow (resting decoration)</h3>
+    <div class="row">
+      <div style="width:44px;height:44px;border-radius:10px;background:var(--accent);box-shadow:var(--glow-primary)"></div>
+      <div style="width:44px;height:44px;border-radius:10px;background:var(--rais-info);box-shadow:var(--glow-info)"></div>
+      <div style="width:44px;height:44px;border-radius:10px;background:var(--rais-success);box-shadow:var(--glow-success)"></div>
+      <div style="width:44px;height:44px;border-radius:10px;background:var(--rais-warning);box-shadow:var(--glow-warning)"></div>
+      <div style="width:44px;height:44px;border-radius:10px;background:var(--rais-error);box-shadow:var(--glow-error)"></div>
+    </div>
+
+    <h3 class="sub">Motion</h3>
+    <table class="tk">
+      <thead><tr><th>Duration</th><th>Value</th><th>Use</th></tr></thead>
+      <tbody>
+        <tr><td><code>fast</code></td><td>120 ms</td><td>Hover, pressed, focus micro-feedback</td></tr>
+        <tr><td><code>default</code></td><td>180 ms</td><td>Toast, dropdown, accordion</td></tr>
+        <tr><td><code>slow</code></td><td>240 ms</td><td>Modal enter/exit, sidebar collapse</td></tr>
+        <tr><td colspan="3" style="color:var(--fg-muted)">Easing <code>cubic-bezier(0.16, 1, 0.30, 1)</code> · no bounce · collapses to 1 ms under reduced-motion</td></tr>
+      </tbody>
+    </table>
+    <div class="foot"><span>RAIS Design System</span><span>04 · Shadow, Glow &amp; Motion</span></div>
+  </section>
+
+  <!-- 05 COMPONENTS -->
+  <section class="sec">
+    <div class="sh"><div class="n">05 · COMPONENTS</div><h2>Components</h2><p>Naming: <code style="font:var(--text-code)">Component / Role / Type / State</code>. Focus is a 2 px accent ring with offset — never an outer halo bloom.</p></div>
+
+    <h3 class="sub">Button · Action</h3>
+    <div class="demo-card">
+      <div class="row"><span class="lbl-row">PRIMARY</span><button class="btn primary">Default</button><button class="btn primary" style="background:var(--rais-primary-light)">Hover</button><button class="btn focus">Focused</button><button class="btn disabled">Disabled</button></div>
+      <div class="row"><span class="lbl-row">VARIANTS</span><button class="btn secondary">Secondary</button><button class="btn danger"><iconify-icon icon="solar:trash-bin-trash-bold"></iconify-icon>Danger</button><button class="btn text">Text</button></div>
+    </div>
+
+    <h3 class="sub">Input · Field</h3>
+    <div class="demo-card">
+      <div class="row">
+        <div class="field"><span class="fl">DEFAULT</span><div class="ctrl ph">Placeholder</div></div>
+        <div class="field"><span class="fl">FOCUSED</span><div class="ctrl focus">Caret here|</div></div>
+        <div class="field"><span class="fl">ERROR</span><div class="ctrl err">Invalid value</div></div>
+        <div class="field"><span class="fl">DISABLED</span><div class="ctrl dis">Locked</div></div>
+      </div>
+    </div>
+
+    <h3 class="sub">Badge · Status &amp; Toast · Notify</h3>
+    <div class="demo-card">
+      <div class="row"><span class="bdg suc"><iconify-icon icon="eva:checkmark-circle-2-fill"></iconify-icon>Pass</span><span class="bdg warn"><iconify-icon icon="eva:alert-triangle-fill"></iconify-icon>Review</span><span class="bdg err"><iconify-icon icon="eva:close-circle-fill"></iconify-icon>Fail</span><span class="bdg info"><iconify-icon icon="eva:info-fill"></iconify-icon>Info</span></div>
+      <div class="row">
+        <div class="toast suc"><div class="pl"><iconify-icon icon="eva:checkmark-circle-2-fill"></iconify-icon></div><div><div class="tt">Audit passed</div><div class="ms">0 findings · Q2 review</div></div></div>
+        <div class="toast err"><div class="pl"><iconify-icon icon="eva:close-circle-fill"></iconify-icon></div><div><div class="tt">Audit failed</div><div class="ms">12 findings to resolve</div></div></div>
+      </div>
+    </div>
+
+    <h3 class="sub">Card · Metric</h3>
+    <div class="demo-card">
+      <div class="row">
+        <div class="mcard"><div class="l">PIPELINE VALUE</div><div class="v">$2.41M</div><div class="d">▲ +18.2%</div></div>
+        <div class="mcard"><div class="l">WIN RATE</div><div class="v">34%</div><div class="d">▲ +4.1pt</div></div>
+        <div class="mcard"><div class="l">AI ACTIONS</div><div class="v">12</div><div class="d">5 high priority</div></div>
+      </div>
+    </div>
+    <div class="foot"><span>RAIS Design System</span><span>05 · Components</span></div>
+  </section>
+
+  <!-- 06 BRAND / PRINCIPLES -->
+  <section class="sec">
+    <div class="sh"><div class="n">06 · GOVERNANCE</div><h2>Brand &amp; Principles</h2><p>The gem mark is identity (sidebar / topbar). The chrome motif is decorative (hero / header). They never share a composition.</p></div>
+
+    <h3 class="sub">Five non-negotiables</h3>
+    <ul class="rules">
+      <li class="do"><iconify-icon icon="eva:checkmark-circle-2-fill"></iconify-icon><span><b style="color:var(--fg-strong)">One accent.</b> Orange #FFA726 is the only system accent. Blue is a data role, never brand.</span></li>
+      <li class="do"><iconify-icon icon="eva:checkmark-circle-2-fill"></iconify-icon><span><b style="color:var(--fg-strong)">Pretendard only.</b> Korean, English and numerals share one face.</span></li>
+      <li class="do"><iconify-icon icon="eva:checkmark-circle-2-fill"></iconify-icon><span><b style="color:var(--fg-strong)">Focus = border + ring.</b> 2 px accent ring with offset, keyboard-only. Never an outer halo.</span></li>
+      <li class="do"><iconify-icon icon="eva:checkmark-circle-2-fill"></iconify-icon><span><b style="color:var(--fg-strong)">State = colour + text + icon.</b> Never colour alone (WCAG 1.4.1).</span></li>
+      <li class="do"><iconify-icon icon="eva:checkmark-circle-2-fill"></iconify-icon><span><b style="color:var(--fg-strong)">Logo ≠ motif.</b> Gem mark for identity; chrome motif for decoration. Never together.</span></li>
+    </ul>
+
+    <h3 class="sub">Don't</h3>
+    <ul class="rules">
+      <li class="no"><iconify-icon icon="eva:close-circle-fill"></iconify-icon><span>Drop raw hexes into product code, or invent a second accent.</span></li>
+      <li class="no"><iconify-icon icon="eva:close-circle-fill"></iconify-icon><span>Use an outer glow / halo to indicate focus.</span></li>
+      <li class="no"><iconify-icon icon="eva:close-circle-fill"></iconify-icon><span>Bold body copy for emphasis — use a chip or label.</span></li>
+      <li class="no"><iconify-icon icon="eva:close-circle-fill"></iconify-icon><span>Use the gem mark as a hero image, or place it on a coloured glow.</span></li>
+      <li class="no"><iconify-icon icon="eva:close-circle-fill"></iconify-icon><span>Reach for an off-scale pixel value outside the 4 pt enum.</span></li>
+    </ul>
+
+    <div class="foot"><span>RAIS Design System · v 2026.05.10k</span><span>06 · Brand &amp; Principles</span></div>
+  </section>
+
+</div>
+
+<script>
+  window.addEventListener('load', function(){
+    var go = function(){ setTimeout(function(){ window.print(); }, 600); };
+    if (document.fonts && document.fonts.ready) { document.fonts.ready.then(go); } else { go(); }
+  });
+</script>
+</body>
+</html>

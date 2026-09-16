@@ -70,3 +70,22 @@ GitHub의 main 변경 → Actions 빌드·배포 → 사용자가 같은 설치 
 ## 검증
 
 `npm test`로 설치·반복 실행·변경·백업·체크섬 실패·원본 누락·다른 스킬 덮어쓰기 방지를 검사합니다. `npm run build`는 템플릿과 배포 산출물을 생성합니다. 스크린샷·로컬 경로·계정 정보는 저장소 소스에 포함하지 않습니다.
+
+## Claude Design source library (v0.4)
+
+The IAK system was found in Claude Design under its internal name **RAIS Design System**. The source project archive contains 110 files. The public library includes 73 design-related files: CSS, tokens, documentation, preview pages, UI kits, brand assets and nine Pretendard weights. Duplicate uploads and the standalone sales portfolio are kept out of the public package. See `src/library/guide.md` for source history, conflicts and known limitations.
+
+- Site: `#assets` — searchable source gallery, tokens, files and icon references.
+- Preview: `library/view.html?file=preview%2Fbuttons.html` — original preview, URL and AI prompt copy.
+- Package: `library/iak-design-assets.zip` — source files, catalog, reconciliation guide and font license.
+- Skill installation still updates SKILL.md only; the skill links to the hosted full library for on-demand use.
+
+To refresh from a new Claude Design **Share → Project HTML → Project archive** export:
+
+```sh
+python3 scripts/import-claude.py '/path/to/RAIS Design System.zip'
+npm test
+npm run build
+```
+
+Review the source diff and `src/library/guide.md` before committing and pushing. The importer preserves CSS media-query contexts; the original Claude manifest incorrectly flattens mobile/reduced-motion values. Imported HTML is a design prototype, not a production component package. Iconify and some React/Babel runtime dependencies still use CDNs.

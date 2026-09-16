@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>RAIS · Audit Dashboard</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="../../colors_and_type.css">
+<script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+<style>
+  body{margin:0;background:var(--bg-canvas);color:var(--fg-primary);min-height:100vh}
+  .shell{display:grid;grid-template-columns:280px 1fr;min-height:100vh}
+
+  /* ─── Sidebar (Sidebar / Nav / Default) ─── */
+  aside{position:sticky;top:0;height:100vh;background:var(--bg-canvas);border-right:1px solid var(--border-subtle);
+       padding:24px 16px;display:flex;flex-direction:column;gap:18px;overflow:auto}
+  .brand{display:flex;align-items:center;gap:10px;padding:0 8px}
+  .brand .mark{width:32px;height:18px;background:url('../../assets/iak-gem-mark-trio.png') center/contain no-repeat}
+  .brand .wm{font:700 13px/1 var(--font-ui);letter-spacing:.18em;text-transform:uppercase;color:var(--fg-strong)}
+  .nav{display:flex;flex-direction:column;gap:2px;margin-top:8px}
+  .nav .grp{font:var(--text-overline);color:var(--fg-muted);padding:14px 10px 6px}
+  .nav a{display:flex;align-items:center;gap:10px;padding:10px;border-radius:8px;text-decoration:none;color:var(--fg-secondary);font:500 13px/1.4 var(--font-ui)}
+  .nav a:hover{background:var(--rais-alpha-08);color:var(--fg-strong)}
+  .nav a.active{background:rgba(255,167,38,.10);color:var(--fg-strong);box-shadow:inset 2px 0 0 var(--accent)}
+  .nav a iconify-icon{font-size:18px;color:var(--fg-muted)}
+  .nav a.active iconify-icon{color:var(--accent)}
+
+  /* ─── Header / Topbar ─── */
+  .top{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:16px 32px;border-bottom:1px solid var(--border-subtle);background:var(--bg-canvas);position:sticky;top:0;z-index:10}
+  .top .crumb{font:var(--text-caption);color:var(--fg-muted)}
+  .top .crumb b{color:var(--fg-primary);font-weight:500}
+  .top .right{display:flex;align-items:center;gap:12px}
+  .ipt{display:flex;align-items:center;gap:8px;background:var(--bg-field);border:1px solid var(--border-default);border-radius:8px;padding:8px 12px;width:280px}
+  .ipt iconify-icon{font-size:16px;color:var(--fg-muted)}
+  .ipt input{background:none;border:none;outline:none;color:var(--fg-primary);font:var(--text-body);width:100%}
+  .iconbtn{width:36px;height:36px;border-radius:8px;display:grid;place-items:center;background:var(--bg-field);border:1px solid var(--border-default);color:var(--fg-secondary);cursor:pointer;position:relative}
+  .iconbtn iconify-icon{font-size:18px}
+  .iconbtn .pip{position:absolute;top:6px;right:6px;width:8px;height:8px;border-radius:500px;background:var(--rais-error)}
+  .av{width:36px;height:36px;border-radius:500px;background:linear-gradient(135deg,#ffb21a,#cd7f0d);display:grid;place-items:center;color:var(--rais-grey-1000);font:600 13px/1 var(--font-ui)}
+
+  main{padding:32px}
+  .page-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:32px}
+  .page-head h1{margin:0;font:var(--text-h1);color:var(--fg-strong)}
+  .page-head .sub{margin-top:6px;font:var(--text-body);color:var(--fg-secondary)}
+  .page-head .acts{display:flex;gap:8px}
+
+  /* ─── Buttons ─── */
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:8px;font:var(--text-button);cursor:pointer;border:1px solid transparent;transition:background 120ms ease-out, border-color 120ms ease-out}
+  .btn iconify-icon{font-size:18px}
+  .btn-primary{background:var(--accent);color:var(--accent-fg)}
+  .btn-primary:hover{background:var(--rais-primary-light)}
+  .btn-secondary{background:var(--bg-field);color:var(--fg-primary);border-color:var(--border-default)}
+  .btn-secondary:hover{background:var(--rais-alpha-08);border-color:var(--border-strong)}
+  .btn-danger{background:var(--rais-error);color:#fff}
+  .btn-text{background:transparent;color:var(--fg-secondary);padding:10px 12px}
+  .btn-text:hover{color:var(--fg-strong);background:var(--rais-alpha-08)}
+  .btn-pressed{background:var(--rais-primary-dark);color:var(--accent-fg);transform:scale(.98)}
+  .btn-focus{background:var(--accent);color:var(--accent-fg);border-color:var(--focus-border);box-shadow:var(--focus-ring)}
+  .btn-disabled{background:var(--bg-field);color:var(--fg-muted);opacity:.6;cursor:not-allowed}
+  .btn-loading{background:var(--accent);color:var(--accent-fg);cursor:default}
+  .btn-loading .sp{width:16px;height:16px;border:2px solid rgba(13,13,13,.3);border-top-color:var(--accent-fg);border-radius:500px;animation:sp 800ms linear infinite}
+  @keyframes sp{to{transform:rotate(360deg)}}
+
+  /* ─── Section ─── */
+  section{margin-top:32px}
+  section .h-row{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;padding-bottom:10px;border-bottom:1px solid var(--border-subtle);margin-bottom:16px}
+  section .h-row h3{margin:0;font:var(--text-title);color:var(--fg-strong)}
+  section .h-row .ovl{font:var(--text-overline);color:var(--fg-muted)}
+
+  .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+
+  /* ─── Card states ─── */
+  .card{background:var(--bg-card);border:1px solid var(--border-default);border-radius:24px;padding:24px;display:flex;flex-direction:column;gap:14px;min-height:160px}
+  .card .ch{display:flex;align-items:center;justify-content:space-between}
+  .card .lbl{font:var(--text-caption);color:var(--fg-muted);text-transform:uppercase;letter-spacing:.12em}
+  .card .val{font:700 32px/40px var(--font-ui);color:var(--fg-strong);font-feature-settings:"tnum"}
+  .card .delta{font:var(--text-caption);color:var(--rais-success-light)}
+  .card .plate{width:36px;height:36px;border-radius:8px;display:grid;place-items:center}
+  .card .plate.blue{background:rgba(76,154,236,.14);color:var(--rais-info)}
+  .card .plate.amber{background:rgba(250,174,62,.14);color:var(--rais-warning)}
+  .card .plate.error{background:rgba(255,102,91,.14);color:var(--rais-error)}
+  .card.high{background:linear-gradient(180deg,rgba(255,167,38,.06),transparent),var(--bg-card);border-color:rgba(255,167,38,.22)}
+  .card.warn{border-color:rgba(250,174,62,.32);background:linear-gradient(180deg,rgba(250,174,62,.04),transparent),var(--bg-card)}
+  .card.err{border-color:rgba(255,102,91,.32);background:linear-gradient(180deg,rgba(255,102,91,.04),transparent),var(--bg-card)}
+  .card.load .skel{height:14px;border-radius:6px;background:linear-gradient(90deg,var(--rais-grey-900),var(--rais-grey-800),var(--rais-grey-900));background-size:200% 100%;animation:shim 1500ms linear infinite}
+  .card.load .skel.lg{height:32px;width:60%}
+  .card.load .skel.sm{height:10px;width:40%}
+  @keyframes shim{to{background-position:-200% 0}}
+
+  /* ─── Inputs ─── */
+  .field{display:flex;flex-direction:column;gap:6px}
+  .field .lab{font:var(--text-body-strong);color:var(--fg-primary)}
+  .field .help{font:var(--text-caption);color:var(--fg-muted)}
+  .field .help.err{color:var(--rais-error);display:flex;gap:6px;align-items:center}
+  .input{display:flex;align-items:center;gap:8px;background:var(--bg-field);border:1px solid var(--border-default);border-radius:8px;padding:10px 14px;height:40px;box-sizing:border-box}
+  .input input{background:none;border:none;outline:none;color:var(--fg-primary);font:var(--text-body);width:100%}
+  .input input::placeholder{color:var(--fg-muted)}
+  .input iconify-icon{font-size:16px;color:var(--fg-muted)}
+  .input.focus{border-color:var(--focus-border);box-shadow:var(--focus-ring)}
+  .input.err{border-color:var(--rais-error);box-shadow:inset 0 0 0 1px var(--rais-error)}
+  .input.dis{opacity:.6;cursor:not-allowed}
+  .input.dis input{cursor:not-allowed}
+
+  /* ─── Badges ─── */
+  .bdg{display:inline-flex;align-items:center;gap:6px;padding:5px 10px;border-radius:500px;font:var(--text-overline)}
+  .bdg iconify-icon{font-size:12px}
+  .bdg.suc{background:rgba(39,218,104,.14);color:var(--rais-success-light)}
+  .bdg.warn{background:rgba(250,174,62,.14);color:var(--rais-warning)}
+  .bdg.err{background:rgba(255,102,91,.14);color:var(--rais-error)}
+  .bdg.info{background:rgba(76,154,236,.14);color:var(--rais-info)}
+
+  /* ─── Table ─── */
+  .tbl-card{background:var(--bg-card);border:1px solid var(--border-default);border-radius:24px;overflow:hidden}
+  .tbl-head{display:flex;align-items:center;justify-content:space-between;padding:20px 24px;border-bottom:1px solid var(--border-subtle)}
+  .tbl-head h4{margin:0;font:var(--text-title);color:var(--fg-strong)}
+  table{width:100%;border-collapse:collapse}
+  th,td{text-align:left;padding:12px 24px;font:var(--text-body)}
+  th{font:var(--text-overline);color:var(--fg-muted);background:var(--rais-grey-900);border-bottom:1px solid var(--border-subtle)}
+  td{border-bottom:1px solid var(--border-subtle);color:var(--fg-primary)}
+  tr:last-child td{border-bottom:none}
+  td .who{display:flex;align-items:center;gap:10px}
+  td .av-sm{width:28px;height:28px;border-radius:500px;background:linear-gradient(135deg,var(--rais-info),var(--rais-info-dark));display:grid;place-items:center;font:600 11px/1 var(--font-ui);color:#fff}
+  td.num{font-feature-settings:"tnum";color:var(--fg-strong)}
+
+  /* ─── Toast ─── */
+  .toast{display:flex;gap:12px;width:360px;padding:16px;border-radius:12px;background:var(--bg-card-alt);border:1px solid var(--border-default);box-shadow:var(--shadow-toast)}
+  .toast .pl{width:36px;height:36px;border-radius:8px;display:grid;place-items:center;flex-shrink:0}
+  .toast.suc .pl{background:rgba(39,218,104,.14);color:var(--rais-success-light)}
+  .toast.err .pl{background:rgba(255,102,91,.14);color:var(--rais-error)}
+  .toast .body{flex:1}
+  .toast .ttl{font:var(--text-body-strong);color:var(--fg-strong)}
+  .toast .msg{font:var(--text-caption);color:var(--fg-secondary);margin-top:2px}
+  .toast .x{color:var(--fg-muted);cursor:pointer}
+
+  /* ─── Modal ─── */
+  .modal-frame{position:relative;background:var(--bg-overlay);border-radius:16px;padding:32px;border:1px dashed var(--border-strong);min-height:240px;display:grid;place-items:center}
+  .modal{width:480px;background:var(--bg-card-alt);border:1px solid var(--border-default);border-radius:16px;padding:24px;box-shadow:var(--shadow-toast);display:flex;flex-direction:column;gap:16px}
+  .modal .mh{display:flex;align-items:flex-start;justify-content:space-between;gap:16px}
+  .modal h4{margin:0;font:var(--text-title);color:var(--fg-strong)}
+  .modal p{margin:0;font:var(--text-body);color:var(--fg-secondary)}
+  .modal .acts{display:flex;justify-content:flex-end;gap:8px;margin-top:8px}
+
+  /* ─── Empty / Error / Loading ─── */
+  .state{background:var(--bg-card);border:1px dashed var(--border-strong);border-radius:24px;padding:40px;display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center;min-height:240px;justify-content:center}
+  .state iconify-icon{font-size:48px;color:var(--fg-muted)}
+  .state h4{margin:0;font:var(--text-title);color:var(--fg-strong)}
+  .state p{margin:0;font:var(--text-body);color:var(--fg-secondary);max-width:320px}
+  .state.err iconify-icon{color:var(--rais-error)}
+  .state.load .sp{width:40px;height:40px;border:3px solid var(--border-strong);border-top-color:var(--accent);border-radius:500px;animation:sp 800ms linear infinite}
+
+  /* ─── Audit panel ─── */
+  .audit{background:var(--bg-card);border:1px solid var(--border-default);border-radius:24px;overflow:hidden;margin-top:48px}
+  .audit-h{padding:24px;border-bottom:1px solid var(--border-subtle);display:flex;align-items:center;justify-content:space-between}
+  .audit-h h3{margin:0;font:var(--text-title);color:var(--fg-strong)}
+  .audit-h .stamp{font:var(--text-overline);color:var(--rais-success-light);padding:5px 10px;border-radius:500px;background:rgba(39,218,104,.14)}
+  .audit-row{display:grid;grid-template-columns:160px 1fr 110px;gap:18px;padding:18px 24px;border-top:1px solid var(--border-subtle);align-items:center}
+  .audit-row .k{font:var(--text-body-strong);color:var(--fg-strong)}
+  .audit-row .v{font:var(--text-caption);color:var(--fg-secondary)}
+  .audit-row .res{justify-self:end;display:inline-flex;align-items:center;gap:6px;padding:5px 12px;border-radius:500px;font:var(--text-overline)}
+  .audit-row .res.pass{background:rgba(39,218,104,.14);color:var(--rais-success-light)}
+  .audit-row .res.fail{background:rgba(255,102,91,.14);color:var(--rais-error)}
+</style>
+</head>
+<body>
+<div class="shell">
+
+  <!-- Sidebar -->
+  <aside data-screen-label="Sidebar">
+    <div class="brand"><div class="mark"></div><div class="wm">RAIS</div></div>
+    <nav class="nav">
+      <div class="grp">Audit</div>
+      <a href="#" class="active"><iconify-icon icon="solar:shield-check-bold"></iconify-icon>Overview</a>
+      <a href="#"><iconify-icon icon="solar:document-text-bold"></iconify-icon>Reports</a>
+      <a href="#"><iconify-icon icon="solar:users-group-rounded-bold"></iconify-icon>Reviewers</a>
+      <a href="#"><iconify-icon icon="solar:history-bold"></iconify-icon>History</a>
+      <div class="grp">System</div>
+      <a href="#"><iconify-icon icon="solar:settings-bold"></iconify-icon>Settings</a>
+      <a href="#"><iconify-icon icon="solar:question-circle-bold"></iconify-icon>Help</a>
+    </nav>
+  </aside>
+
+  <div>
+    <!-- Header / Topbar -->
+    <div class="top" data-screen-label="Topbar">
+      <div class="crumb">Audit · <b>Overview</b></div>
+      <div class="right">
+        <div class="ipt"><iconify-icon icon="eva:search-fill"></iconify-icon><input placeholder="Search audits, reviewers, sources…"></div>
+        <button class="iconbtn"><iconify-icon icon="solar:bell-bold"></iconify-icon><span class="pip"></span></button>
+        <button class="iconbtn"><iconify-icon icon="solar:settings-bold"></iconify-icon></button>
+        <div class="av">JL</div>
+      </div>
+    </div>
+
+    <main>
+      <!-- Page head -->
+      <div class="page-head">
+        <div>
+          <h1>Audit Dashboard</h1>
+          <p class="sub">Review every change against the RAIS Design System. Composed entirely from existing tokens and components.</p>
+        </div>
+        <div class="acts">
+          <button class="btn btn-secondary"><iconify-icon icon="solar:download-minimalistic-bold"></iconify-icon>Export</button>
+          <button class="btn btn-primary"><iconify-icon icon="solar:add-circle-bold"></iconify-icon>New Audit</button>
+        </div>
+      </div>
+
+      <!-- Card / Metric × 4 states -->
+      <section data-screen-label="01 Cards">
+        <div class="h-row"><div><h3>Card · Metric × 4 states</h3></div><div class="ovl">Default · Highlighted · Warning · Loading</div></div>
+        <div class="grid-4">
+          <div class="card">
+            <div class="ch"><div class="lbl">Total audits</div><div class="plate blue"><iconify-icon icon="solar:shield-check-bold"></iconify-icon></div></div>
+            <div class="val">1,284</div>
+            <div class="delta">+12.4% vs last month</div>
+          </div>
+          <div class="card high">
+            <div class="ch"><div class="lbl">Pass rate</div><div class="plate" style="background:rgba(255,167,38,.14);color:var(--accent)"><iconify-icon icon="solar:check-circle-bold"></iconify-icon></div></div>
+            <div class="val" style="color:var(--accent)">92.6%</div>
+            <div class="delta">+1.8 pts</div>
+          </div>
+          <div class="card warn">
+            <div class="ch"><div class="lbl">Pending review</div><div class="plate amber"><iconify-icon icon="solar:clock-circle-bold"></iconify-icon></div></div>
+            <div class="val">38</div>
+            <div class="delta" style="color:var(--rais-warning)">2 overdue</div>
+          </div>
+          <div class="card load">
+            <div class="ch"><div class="lbl">Loading</div><div class="plate" style="background:var(--rais-alpha-08)"><iconify-icon icon="solar:refresh-bold" style="color:var(--fg-muted)"></iconify-icon></div></div>
+            <div class="skel lg"></div>
+            <div class="skel sm"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Buttons × 4 states -->
+      <section data-screen-label="02 Buttons">
+        <div class="h-row"><div><h3>Button · Action × 4 states</h3></div><div class="ovl">Default · Hover · Pressed · Focused · Disabled · Loading</div></div>
+        <div class="card" style="flex-direction:row;flex-wrap:wrap;gap:12px;align-items:center;min-height:auto">
+          <button class="btn btn-primary"><iconify-icon icon="solar:add-circle-bold"></iconify-icon>Default</button>
+          <button class="btn btn-primary" style="background:var(--rais-primary-light)">Hover</button>
+          <button class="btn btn-pressed">Pressed</button>
+          <button class="btn btn-focus">Focused</button>
+          <button class="btn btn-disabled" disabled>Disabled</button>
+          <button class="btn btn-loading"><span class="sp"></span>Loading</button>
+          <span style="width:1px;height:28px;background:var(--border-default);margin:0 4px"></span>
+          <button class="btn btn-secondary">Secondary</button>
+          <button class="btn btn-danger"><iconify-icon icon="solar:trash-bin-trash-bold"></iconify-icon>Danger</button>
+          <button class="btn btn-text">Text</button>
+        </div>
+      </section>
+
+      <!-- Inputs × 4 states -->
+      <section data-screen-label="03 Inputs">
+        <div class="h-row"><div><h3>Input · Field × 4 states</h3></div><div class="ovl">Default · Focused · Error · Disabled</div></div>
+        <div class="grid-4">
+          <div class="field">
+            <div class="lab">Audit name</div>
+            <div class="input"><iconify-icon icon="solar:document-text-bold"></iconify-icon><input placeholder="e.g. Q2 access review"></div>
+            <div class="help">Descriptive title for the audit run.</div>
+          </div>
+          <div class="field">
+            <div class="lab">Reviewer email</div>
+            <div class="input focus"><iconify-icon icon="eva:email-fill"></iconify-icon><input value="reviewer@iak.studio"></div>
+            <div class="help">Focused state · accent border + inset ring.</div>
+          </div>
+          <div class="field">
+            <div class="lab">Threshold</div>
+            <div class="input err"><iconify-icon icon="solar:percent-circle-bold"></iconify-icon><input value="120"></div>
+            <div class="help err"><iconify-icon icon="eva:alert-circle-outline"></iconify-icon>Value must be between 0 and 100.</div>
+          </div>
+          <div class="field">
+            <div class="lab">Source connector</div>
+            <div class="input dis"><iconify-icon icon="solar:link-bold"></iconify-icon><input value="locked-by-admin" disabled></div>
+            <div class="help">Disabled · contact admin to change.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Badges × 4 -->
+      <section data-screen-label="04 Badges">
+        <div class="h-row"><div><h3>Badge · Status × 4 states</h3></div><div class="ovl">Success · Warning · Error · Info</div></div>
+        <div class="card" style="flex-direction:row;flex-wrap:wrap;gap:10px;align-items:center;min-height:auto">
+          <span class="bdg suc"><iconify-icon icon="eva:checkmark-circle-2-fill"></iconify-icon>Pass</span>
+          <span class="bdg warn"><iconify-icon icon="eva:alert-triangle-fill"></iconify-icon>Review</span>
+          <span class="bdg err"><iconify-icon icon="eva:close-circle-fill"></iconify-icon>Fail</span>
+          <span class="bdg info"><iconify-icon icon="eva:info-fill"></iconify-icon>Info</span>
+        </div>
+      </section>
+
+      <!-- Table -->
+      <section data-screen-label="05 Table">
+        <div class="h-row"><div><h3>Table · Recent audits</h3></div><div class="ovl">12 of 284 rows</div></div>
+        <div class="tbl-card">
+          <div class="tbl-head">
+            <h4>Recent audits</h4>
+            <div style="display:flex;gap:8px">
+              <button class="btn btn-secondary"><iconify-icon icon="eva:funnel-fill"></iconify-icon>Filter</button>
+              <button class="btn btn-secondary"><iconify-icon icon="solar:download-minimalistic-bold"></iconify-icon>Export</button>
+            </div>
+          </div>
+          <table>
+            <thead><tr><th>Audit</th><th>Reviewer</th><th>Status</th><th class="num">Findings</th><th>Updated</th></tr></thead>
+            <tbody>
+              <tr><td><div class="who"><div class="av-sm">Q2</div>Q2 Access review</div></td><td>Jiwon Lee</td><td><span class="bdg suc"><iconify-icon icon="eva:checkmark-circle-2-fill"></iconify-icon>Pass</span></td><td class="num">0</td><td>3 min ago</td></tr>
+              <tr><td><div class="who"><div class="av-sm">RB</div>Role-based access</div></td><td>Rina Baek</td><td><span class="bdg warn"><iconify-icon icon="eva:alert-triangle-fill"></iconify-icon>Review</span></td><td class="num">4</td><td>1 hr ago</td></tr>
+              <tr><td><div class="who"><div class="av-sm">SS</div>SSO migration</div></td><td>Sun Shin</td><td><span class="bdg err"><iconify-icon icon="eva:close-circle-fill"></iconify-icon>Fail</span></td><td class="num">12</td><td>Yesterday</td></tr>
+              <tr><td><div class="who"><div class="av-sm">DT</div>Data retention</div></td><td>David T.</td><td><span class="bdg info"><iconify-icon icon="eva:info-fill"></iconify-icon>Draft</span></td><td class="num">—</td><td>2 days</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Toast + Modal -->
+      <section data-screen-label="06 Toast and Modal">
+        <div class="h-row"><div><h3>Toast &amp; Modal</h3></div><div class="ovl">Notify · Confirm</div></div>
+        <div class="grid-2">
+          <div class="card" style="gap:12px">
+            <div class="lbl" style="font:var(--text-overline);color:var(--fg-muted)">Toasts</div>
+            <div class="toast suc"><div class="pl"><iconify-icon icon="eva:checkmark-circle-2-fill"></iconify-icon></div><div class="body"><div class="ttl">Audit passed</div><div class="msg">Q2 Access review · 0 findings</div></div><iconify-icon class="x" icon="eva:close-fill"></iconify-icon></div>
+            <div class="toast err"><div class="pl"><iconify-icon icon="eva:close-circle-fill"></iconify-icon></div><div class="body"><div class="ttl">Audit failed</div><div class="msg">SSO migration · 12 findings to resolve</div></div><iconify-icon class="x" icon="eva:close-fill"></iconify-icon></div>
+          </div>
+          <div class="modal-frame">
+            <div class="modal">
+              <div class="mh">
+                <h4>Run audit now?</h4>
+                <iconify-icon class="x" icon="eva:close-fill" style="font-size:20px;color:var(--fg-muted);cursor:pointer"></iconify-icon>
+              </div>
+              <p>This will queue an audit against 4 connected sources. The reviewer will be notified.</p>
+              <div class="acts">
+                <button class="btn btn-text">Cancel</button>
+                <button class="btn btn-primary"><iconify-icon icon="solar:play-bold"></iconify-icon>Run audit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Empty / Error / Loading -->
+      <section data-screen-label="07 Edge states">
+        <div class="h-row"><div><h3>Edge states</h3></div><div class="ovl">Empty · Error · Loading</div></div>
+        <div class="grid-2" style="grid-template-columns:repeat(3,1fr)">
+          <div class="state"><iconify-icon icon="solar:inbox-bold"></iconify-icon><h4>No audits yet</h4><p>Create your first audit to start tracking reviewer findings.</p><button class="btn btn-primary"><iconify-icon icon="solar:add-circle-bold"></iconify-icon>New Audit</button></div>
+          <div class="state err"><iconify-icon icon="solar:danger-triangle-bold"></iconify-icon><h4>Couldn't load audits</h4><p>The connector returned a 503. Try again or check the source.</p><button class="btn btn-secondary"><iconify-icon icon="eva:refresh-fill"></iconify-icon>Retry</button></div>
+          <div class="state load"><div class="sp"></div><h4>Loading audits…</h4><p>Fetching the latest 12 entries from the audit log.</p></div>
+        </div>
+      </section>
+
+      <!-- ─── Audit panel ─── -->
+      <div class="audit" data-screen-label="08 Audit Result">
+        <div class="audit-h">
+          <h3>RAIS System Audit</h3>
+          <span class="stamp">All Pass</span>
+        </div>
+        <div class="audit-row"><div><div class="k">Token</div><div class="v">Every colour, radius and shadow resolves to <code>colors_and_type.css</code> tokens — no raw hex.</div></div><span class="res pass"><iconify-icon icon="eva:checkmark-circle-2-fill"></iconify-icon>Pass</span></div>
+        <div class="audit-row"><div><div class="k">Typography</div><div class="v">Pretendard only · roles used: page/title, section/title, card/title, body, label, caption, overline, button, data.</div></div><span class="res pass"><iconify-icon icon="eva:checkmark-circle-2-fill"></iconify-icon>Pass</span></div>
+        <div class="audit-row"><div><div class="k">Component</div><div class="v">Sidebar · Topbar · Card × 4 · Button × 6 · Input × 4 · Badge × 4 · Table · Toast · Modal · Empty / Error / Loading. All from system.</div></div><span class="res pass"><iconify-icon icon="eva:checkmark-circle-2-fill"></iconify-icon>Pass</span></div>
+        <div class="audit-row"><div><div class="k">State</div><div class="v">Default · Hover · Pressed · Focused (border + inset ring, no halo) · Disabled · Loading · Empty · Error · Success · Warning. Colour + text + icon paired.</div></div><span class="res pass"><iconify-icon icon="eva:checkmark-circle-2-fill"></iconify-icon>Pass</span></div>
+        <div class="audit-row"><div><div class="k">Layout</div><div class="v">Dashboard template · sidebar 280 · topbar 64 · page padding 32 · section gap 32 · card gap 16 · radii from token scale.</div></div><span class="res pass"><iconify-icon icon="eva:checkmark-circle-2-fill"></iconify-icon>Pass</span></div>
+      </div>
+
+    </main>
+  </div>
+</div>
+</body>
+</html>

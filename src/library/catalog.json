@@ -1,0 +1,959 @@
+{
+  "name": "IAK Design Studio",
+  "sourceName": "RAIS Design System",
+  "sourceUrl": "https://claude.ai/design/p/019e07b0-88a3-7227-a822-3023b9cdee84",
+  "importedAt": "2026-09-16",
+  "archiveSha256": "3f4b9d341fa6259b577b0a0d31ff43fe5a9ac0f2a3addd0e1f289f03f7d4feed",
+  "files": [
+    {
+      "path": "index.html",
+      "bytes": 22416,
+      "sha256": "89ffac0718a058f3f98d7970fc11fdeb6c1e65dc223e37ccefa6238c28a3bde0"
+    },
+    {
+      "path": "_ds_bundle.js",
+      "bytes": 9684,
+      "sha256": "39c32338cf527d67bdb91456b664677c81b76e2e3cba9218d5bab34b874e1339"
+    },
+    {
+      "path": "_ds_manifest.json",
+      "bytes": 23115,
+      "sha256": "05327c8d6be44378d1d9e6a16bfe65f3066f6ded13088e3bf1d2082466e6c362"
+    },
+    {
+      "path": "README.md",
+      "bytes": 17150,
+      "sha256": "111830f3cb9392d515e2bb6f8c0acf1d9a00595eb6adf32e239a36de6cb9026a"
+    },
+    {
+      "path": "SKILL.md",
+      "bytes": 1353,
+      "sha256": "14cfbbb8e7d05788cb3c47646ca9151d520dda99a6a4b6b47ebf3e8d9201555e"
+    },
+    {
+      "path": "colors_and_type.css",
+      "bytes": 23018,
+      "sha256": "3053b0f63727104b19ec1ffcba22facb0a3ccbd92f13ea4ec82c9c17c0c49691"
+    },
+    {
+      "path": "docs.html",
+      "bytes": 53376,
+      "sha256": "94222217093f60e9e26db31526235e557f4d21d053d93b5e74a5dcfcf5312e4e"
+    },
+    {
+      "path": "design-system-reference-print.html",
+      "bytes": 25628,
+      "sha256": "7a03ea372c0c868625f2655db509d7c416c394eb3ee41c73e86187b73e265f3b"
+    },
+    {
+      "path": "ui_kits/rais-audit/index.html",
+      "bytes": 26324,
+      "sha256": "1f6e04dcc5612f3d36e7187214ec8dde8eda0d9ecc3dc2ecd20b78a500951b5c"
+    },
+    {
+      "path": "ui_kits/rais-audit/index v2.html",
+      "bytes": 28379,
+      "sha256": "d060a2fa5ad668ab1a1d0f8326fb90fd7b9d7af2d165b642089f28d350ac3c4e"
+    },
+    {
+      "path": "ui_kits/ai-crm/index.html",
+      "bytes": 29214,
+      "sha256": "50d951233776f5dd015fee38cd51983ca70eeb16f68f2fd06974dad47923203c"
+    },
+    {
+      "path": "ui_kits/ai-crm/index-print.html",
+      "bytes": 30589,
+      "sha256": "443236ecb6a127c1ac81913cc9e0ec740c56863f790deea31d7b3596b4f2bba5"
+    },
+    {
+      "path": "ui_kits/iak-sales/index.html",
+      "bytes": 14885,
+      "sha256": "ae20c209ec210301678bbb80c1f30360ecd43762d29306b65a1ead0456dd6c30"
+    },
+    {
+      "path": "ui_kits/rais-dashboard/Components.jsx",
+      "bytes": 2901,
+      "sha256": "fc2ced315ee72012299e3d2c27f3eb92b2fa4f892878c02b17a6991393279df2"
+    },
+    {
+      "path": "ui_kits/rais-dashboard/index.html",
+      "bytes": 21781,
+      "sha256": "c80b5691c2c74d00819225708da597b7df71508767ea43d3f98e526c036dc3c0"
+    },
+    {
+      "path": "ui_kits/rais-dashboard/Sidebar.jsx",
+      "bytes": 2254,
+      "sha256": "98e51da1e403ef538a4c8cd63226af46edc25504da2208cf801f3581619c717f"
+    },
+    {
+      "path": "ui_kits/rais-dashboard/README.md",
+      "bytes": 878,
+      "sha256": "662133161a63b38f6ac440984f6c475c3b6d6152d2b555a61492a2f45c33c753"
+    },
+    {
+      "path": "ui_kits/rais-dashboard/TopBar.jsx",
+      "bytes": 1002,
+      "sha256": "da2db3676a275f7ea7481233d0ee78f2cfdaa7f2c0453a301d606d19e6dbeaef"
+    },
+    {
+      "path": "docs/tp-04-10-bundle.html",
+      "bytes": 13566,
+      "sha256": "550fa9fbfdbbb39fd7ee10072481031fa17cdeaff90bef72dac9d9a0dcd8d50f"
+    },
+    {
+      "path": "docs/06-changelog.md",
+      "bytes": 3063,
+      "sha256": "f807319a4c376ea7e814bd88d2309e8c48a5bf5b27fa0545851a5747e4e67a28"
+    },
+    {
+      "path": "docs/04-qa-checklist.md",
+      "bytes": 2461,
+      "sha256": "026891d513f5b38ea75785d5fb9f0e75da1f21c6728d0ac179ab919f52bf89cd"
+    },
+    {
+      "path": "docs/02-state-system.md",
+      "bytes": 2964,
+      "sha256": "76cf4a005577361a3b0fa55d99fa1e41ef74bcacca56ba23395b0eba03d126e0"
+    },
+    {
+      "path": "docs/tp-01-03-bundle.html",
+      "bytes": 10717,
+      "sha256": "227a9684f9fc1e9ecdce28376fd3ded5dd39fe832cb2c9b0dc44415d8bcf9f93"
+    },
+    {
+      "path": "docs/document-ui.html",
+      "bytes": 25535,
+      "sha256": "1b4f7227898aa58c3ebc6a77b08b4a962859f50f680c40c20e9c89306f983bed"
+    },
+    {
+      "path": "docs/structural-audit.html",
+      "bytes": 16541,
+      "sha256": "d48763df998fba80949d3d87c81a6687d6cc1b58701b323ae7e6ed4d39f74dd0"
+    },
+    {
+      "path": "docs/03-layout-patterns.md",
+      "bytes": 4223,
+      "sha256": "0b8907856c7751130b5f02eb6b267dbc54cfe38d3fdc9271c489c0aab81e7b29"
+    },
+    {
+      "path": "docs/variant-stress-test.html",
+      "bytes": 35443,
+      "sha256": "15d5ae3bec4206d048063b8fd9d81400e4a84c59b6378c0f9e640188df9e0b38"
+    },
+    {
+      "path": "docs/00-design-rulebook.md",
+      "bytes": 2956,
+      "sha256": "6818410c12eca1b1137a33ce9106989966ed60fea87af64080b2fef02b50f9d8"
+    },
+    {
+      "path": "docs/01-component-guide.md",
+      "bytes": 6174,
+      "sha256": "88910bc740f7ed1e0cd6f9c46bc96148d2d9354baa51d29f1e069478e8287a17"
+    },
+    {
+      "path": "docs/information-architecture.html",
+      "bytes": 24273,
+      "sha256": "0ce13ff38c1bb72b1d4fb00736597d67e7d459967dd759177205a933796db5a3"
+    },
+    {
+      "path": "docs/05-ai-prompt-guide.md",
+      "bytes": 4171,
+      "sha256": "1fc67448f408bac2913ad5cf8c7e38dc27c1876e22d6be7e12b7dd12f092479c"
+    },
+    {
+      "path": "docs/regeneration-stability-test.html",
+      "bytes": 14828,
+      "sha256": "e66be42e542b1c1d8cb8880b360aa8cb022db4f4de49cd2e11130e12d6852d3d"
+    },
+    {
+      "path": "exports/RAIS-design-system.prompt.md",
+      "bytes": 9258,
+      "sha256": "ee01af877ae2ab308734267165df656961492ba9cd027656fb39c538c7a9e875"
+    },
+    {
+      "path": "exports/RAIS-design-system.prompt.txt",
+      "bytes": 9258,
+      "sha256": "ee01af877ae2ab308734267165df656961492ba9cd027656fb39c538c7a9e875"
+    },
+    {
+      "path": "preview/colors-grey.html",
+      "bytes": 1727,
+      "sha256": "2b82a2e3afe784d8e1d6af73cc9ff9bb8399ed86119adcdd9e4305fbb69dfa83"
+    },
+    {
+      "path": "preview/toasts.html",
+      "bytes": 2458,
+      "sha256": "33bd38fe9675b6023d44cf500ea2c20cff21da760bb31fe89b9c0758f52b657a"
+    },
+    {
+      "path": "preview/buttons.html",
+      "bytes": 2378,
+      "sha256": "6b54f20c454163327a6467d7881d0424183a91f0f9e22153bf50a88e1c899d47"
+    },
+    {
+      "path": "preview/radii.html",
+      "bytes": 1566,
+      "sha256": "4c32719f1fb2fa66d4862e4782e00a14806398f32baee65034f686237f4be70d"
+    },
+    {
+      "path": "preview/iconography.html",
+      "bytes": 6930,
+      "sha256": "64d5efed35296ec68eabddcb88ebda9672ab68e82ebd119a8f68c2be9b2d07ca"
+    },
+    {
+      "path": "preview/type-scale.html",
+      "bytes": 3077,
+      "sha256": "67f135761466171accf291980d38d09a6defd7e3d60091586eddb30399f2a0c4"
+    },
+    {
+      "path": "preview/brand-print.html",
+      "bytes": 8473,
+      "sha256": "2e17450e63f38a03c8585b73c9d1f96632053f8392aeb28d75a621016d0946ee"
+    },
+    {
+      "path": "preview/colors-semantic.html",
+      "bytes": 3110,
+      "sha256": "cee5bfd6c652d097cfc9eb108f103141cff958e9c22cccd47db0aa31ead60bcc"
+    },
+    {
+      "path": "preview/inputs.html",
+      "bytes": 2147,
+      "sha256": "7335ec1ac40b0ac43098749345dea89069e437335ec4669db105445d086d7e5b"
+    },
+    {
+      "path": "preview/shadows.html",
+      "bytes": 849,
+      "sha256": "a07f2cc82e909af7cdfea4c9ac9d9c206ad60fa854b5ef158769f15103464d7d"
+    },
+    {
+      "path": "preview/spacing.html",
+      "bytes": 1876,
+      "sha256": "99899245f4281e8668af0e5926ed0b0c1564d5ace4a88ca112c61704b643c093"
+    },
+    {
+      "path": "preview/type-specimens.html",
+      "bytes": 1794,
+      "sha256": "c5d52959c27a3abd35f171fa2552ed02b0b482f7dd8a1771e1c5b2268122c90e"
+    },
+    {
+      "path": "preview/chips.html",
+      "bytes": 2442,
+      "sha256": "e090b2b2596548641001b9e36a49a15d940ac665cc980743dade01c1b4f62cb5"
+    },
+    {
+      "path": "preview/cards.html",
+      "bytes": 2154,
+      "sha256": "d1c7ec64fd937f9470e609579dc0db28a857d0cda58e799395e7da88aa7537b0"
+    },
+    {
+      "path": "preview/type-display.html",
+      "bytes": 964,
+      "sha256": "f669fc0bedb2bdf3d97a02adc565746645e8daa544ab4208641a162219d176a8"
+    },
+    {
+      "path": "preview/glows.html",
+      "bytes": 1502,
+      "sha256": "4645175ea9601c2deb04a91f878a8b4d00505f823d17522fdd6d4d639d4a04a7"
+    },
+    {
+      "path": "preview/surfaces.html",
+      "bytes": 1432,
+      "sha256": "07711e90018404505959a9b3b3f0c4cc83d46f2404f60dd7e35af70fa67899dd"
+    },
+    {
+      "path": "preview/brand.html",
+      "bytes": 8730,
+      "sha256": "74c5d2f7b6166783e7347245fe80f4afc33a8ba3fe50f85ffd4860de4669e3d0"
+    },
+    {
+      "path": "preview/colors-primary.html",
+      "bytes": 2183,
+      "sha256": "9e5a621edf088944be1461aa8d6fa6284abbb9719dd11eaf4d81862fa84d348e"
+    },
+    {
+      "path": "fonts/Pretendard-Regular.otf",
+      "bytes": 1574352,
+      "sha256": "3ffbacde6ab8411f1d2db54bb9b1f0b3ee2a738932033722cf0388c06aed1c93"
+    },
+    {
+      "path": "fonts/Pretendard-Black.otf",
+      "bytes": 1559552,
+      "sha256": "94628b0bcea8936b6e5c30d98d685eb9bbaffb0fe2ed255542ecc656c248e021"
+    },
+    {
+      "path": "fonts/Pretendard-Medium.otf",
+      "bytes": 1584068,
+      "sha256": "d39e50e4bb52b4993b6a4eeb821a171254745bd824446af01e1f616b89fface0"
+    },
+    {
+      "path": "fonts/Pretendard-Light.otf",
+      "bytes": 1599968,
+      "sha256": "51418ee96ef96e9059db88d7da82f24fada1f4aca70d5157c878ea6b460dd343"
+    },
+    {
+      "path": "fonts/Pretendard-ExtraBold.otf",
+      "bytes": 1568512,
+      "sha256": "c35fe941b7568d52a96010561540e47f9d3948dfde66ba25bc1908233e0a40cd"
+    },
+    {
+      "path": "fonts/Pretendard-Bold.otf",
+      "bytes": 1576660,
+      "sha256": "2e91915fab54df71cc9598ebf608b2bdb54c6fe3c066ac61dff0bc44fca71cc7"
+    },
+    {
+      "path": "fonts/Pretendard-Thin.otf",
+      "bytes": 1487484,
+      "sha256": "635354dcdcc133318be74f9a83cb59d29652c56d463bcd34e20a8cd6e01f3af9"
+    },
+    {
+      "path": "fonts/Pretendard-ExtraLight.otf",
+      "bytes": 1544180,
+      "sha256": "e2837078f57079de2742e83c394a70b8a80b9662bc8ff4e96e7b791d6bd7cdbb"
+    },
+    {
+      "path": "fonts/Pretendard-SemiBold.otf",
+      "bytes": 1583704,
+      "sha256": "c89bc43027dc7cde5726e96223376f8eec09302b2fc1f8147fd5b57cfc376118"
+    },
+    {
+      "path": "assets/iak-mark.png",
+      "bytes": 1377042,
+      "sha256": "da40d01af1100eb57c6159f8c62fd03bcde47e69b843f5aa5c1409a3359e5674"
+    },
+    {
+      "path": "assets/graphic-motif-chrome.jpg",
+      "bytes": 67597,
+      "sha256": "cd328a612a150faf4b526d0e7e0752ddb71ec737439f556ccac2d2fd15730bd4"
+    },
+    {
+      "path": "assets/iak-gem-mark-trio.png",
+      "bytes": 1377042,
+      "sha256": "da40d01af1100eb57c6159f8c62fd03bcde47e69b843f5aa5c1409a3359e5674"
+    },
+    {
+      "path": "assets/avatar-sample.jpg",
+      "bytes": 9867,
+      "sha256": "1893c17367a2213b5634eb2ed0a2322e6a6946cb72b09f4a06e027850c7096c5"
+    },
+    {
+      "path": "assets/brand-mark-rgb.png",
+      "bytes": 246072,
+      "sha256": "7ebef9f276d8a1044e6979285f21a997d31dd2109af5c16d23493c5f3a628e4b"
+    },
+    {
+      "path": "assets/brand-noise.png",
+      "bytes": 403073,
+      "sha256": "e4722b35b5393961b76bdb1442416a7b6b66ad525f5d652c455059dd028845cc"
+    },
+    {
+      "path": "tokens/motion.json",
+      "bytes": 1527,
+      "sha256": "7dbce6ee395d08faf2b40d44a5a0371feb2bb6b009df0cb5acd86a126d9efc09"
+    },
+    {
+      "path": "tokens/typography.json",
+      "bytes": 3376,
+      "sha256": "dd2fa556b1cf31c4940dbe1dcc1c5b3538aa6689df35c584b59d847023b5e158"
+    },
+    {
+      "path": "tokens/states.json",
+      "bytes": 2524,
+      "sha256": "21d62bd0ad4b879d440786c6781941e70fd166febdb9ff9bb445e4f90fca7621"
+    },
+    {
+      "path": "tokens/spacing.json",
+      "bytes": 4822,
+      "sha256": "2d1b9bfb8783c53ebf9af1a6d1a8519c20388eaba3da9f2c0381fee41135d5da"
+    },
+    {
+      "path": "tokens/colors.json",
+      "bytes": 4938,
+      "sha256": "1f122b4ec5a3cd4a1c96aabd4c03ddfabc80d650dae2c577e1c9fe0766a56a6d"
+    }
+  ],
+  "cards": [
+    {
+      "path": "docs.html",
+      "group": "Brand",
+      "subtitle": "All seven docs as accordion-style HTML, no raw markdown",
+      "name": "Documentation viewer"
+    },
+    {
+      "path": "docs/document-ui.html",
+      "group": "Brand",
+      "subtitle": "Markdown · tables · preview · playground",
+      "name": "Docs UI · Document Site"
+    },
+    {
+      "path": "docs/information-architecture.html",
+      "group": "Brand",
+      "subtitle": "32 → 22 items, 6 pillars, all renames + merges receipted",
+      "name": "Information Architecture"
+    },
+    {
+      "path": "docs/regeneration-stability-test.html",
+      "group": "Brand",
+      "subtitle": "3-run comparison · 88/100 · Pass",
+      "name": "Regeneration Stability Test"
+    },
+    {
+      "path": "docs/structural-audit.html",
+      "group": "Brand",
+      "subtitle": "5-area Pass/Fail · 11 patches applied to source structure",
+      "name": "Structural Audit"
+    },
+    {
+      "path": "docs/tp-01-03-bundle.html",
+      "group": "Brand",
+      "subtitle": "Grid · Focus · Spacing locks landed",
+      "name": "TP 01–03 · Stability Bundle"
+    },
+    {
+      "path": "docs/tp-04-10-bundle.html",
+      "group": "Brand",
+      "subtitle": "Final 7 priorities · 98/100 predicted",
+      "name": "TP 04–10 · Final Bundle"
+    },
+    {
+      "path": "docs/variant-stress-test.html",
+      "group": "Brand",
+      "subtitle": "60 variants · 0 dupes · 0 conflicts · Pass",
+      "name": "Variant Stress Test"
+    },
+    {
+      "path": "index.html",
+      "group": "Brand",
+      "subtitle": "RAIS Design System — navigable hub for tokens, docs, previews, kits",
+      "name": "System Hub"
+    },
+    {
+      "path": "preview/brand.html",
+      "group": "Brand",
+      "viewport": "1200x1100",
+      "subtitle": "Flat documentation, no decorative overlays",
+      "name": "Brand mark"
+    },
+    {
+      "path": "preview/iconography.html",
+      "group": "Brand",
+      "viewport": "1200x640",
+      "subtitle": "Minimal Web canonical · Eva + Solar solid · 16 / 20 / 24 px",
+      "name": "Iconography"
+    },
+    {
+      "path": "preview/colors-grey.html",
+      "group": "Colors",
+      "viewport": "700x160",
+      "subtitle": "100 → 1000",
+      "name": "Colors · Grey scale"
+    },
+    {
+      "path": "preview/colors-primary.html",
+      "group": "Colors",
+      "viewport": "700x210",
+      "subtitle": "Orange accent + secondary docs pair",
+      "name": "Colors · Primary"
+    },
+    {
+      "path": "preview/colors-semantic.html",
+      "group": "Colors",
+      "viewport": "700x170",
+      "subtitle": "Info / Success / Warning / Error",
+      "name": "Colors · Semantic"
+    },
+    {
+      "path": "preview/surfaces.html",
+      "group": "Colors",
+      "viewport": "700x150",
+      "subtitle": "Layered black canvas tokens",
+      "name": "Colors · Surfaces"
+    },
+    {
+      "path": "preview/buttons.html",
+      "group": "Components",
+      "viewport": "700x210",
+      "subtitle": "Contained · Outlined · Text · Soft",
+      "name": "Buttons"
+    },
+    {
+      "path": "preview/cards.html",
+      "group": "Components",
+      "viewport": "700x260",
+      "subtitle": "Metric / Insight pattern",
+      "name": "Cards"
+    },
+    {
+      "path": "preview/chips.html",
+      "group": "Components",
+      "viewport": "700x140",
+      "subtitle": "Soft chips + status dots",
+      "name": "Chips & Status"
+    },
+    {
+      "path": "preview/inputs.html",
+      "group": "Components",
+      "viewport": "700x260",
+      "subtitle": "Default · Filled · Focused · Error · Disabled",
+      "name": "Inputs"
+    },
+    {
+      "path": "preview/toasts.html",
+      "group": "Components",
+      "viewport": "700x300",
+      "subtitle": "Snackbar 420×46 — 5 severities",
+      "name": "Toasts"
+    },
+    {
+      "path": "preview/glows.html",
+      "group": "Spacing",
+      "viewport": "700x170",
+      "subtitle": "Colored umbra under accent surfaces",
+      "name": "Glows"
+    },
+    {
+      "path": "preview/radii.html",
+      "group": "Spacing",
+      "viewport": "700x160",
+      "subtitle": "4 / 6 / 8 / 12 / 16 / 24 / pill",
+      "name": "Radii"
+    },
+    {
+      "path": "preview/shadows.html",
+      "group": "Spacing",
+      "viewport": "700x170",
+      "subtitle": "Card · Soft · Toast",
+      "name": "Shadows"
+    },
+    {
+      "path": "preview/spacing.html",
+      "group": "Spacing",
+      "viewport": "700x340",
+      "subtitle": "4-px base scale",
+      "name": "Spacing"
+    },
+    {
+      "path": "preview/type-display.html",
+      "group": "Type",
+      "viewport": "700x260",
+      "subtitle": "Pretendard 64/80 (current CSS)",
+      "name": "Type · Display"
+    },
+    {
+      "path": "preview/type-scale.html",
+      "group": "Type",
+      "viewport": "700x340",
+      "subtitle": "Display → Overline",
+      "name": "Type · Scale"
+    },
+    {
+      "path": "preview/type-specimens.html",
+      "group": "Type",
+      "viewport": "700x210",
+      "subtitle": "Pretendard UI / display / section",
+      "name": "Type · Specimens"
+    },
+    {
+      "path": "ui_kits/ai-crm/index.html",
+      "group": "UI Kit — Ai Crm",
+      "subtitle": "Pipeline · KPIs · AI Copilot · Activity",
+      "name": "AI CRM · Main"
+    },
+    {
+      "path": "ui_kits/rais-audit/index v2.html",
+      "group": "UI Kit — Rais Audit",
+      "name": "Audit Dashboard"
+    },
+    {
+      "path": "ui_kits/rais-dashboard/index.html",
+      "group": "UI Kit — Rais Dashboard",
+      "viewport": "1440x900",
+      "subtitle": "Sidebar + topbar + KPI row + mailing flow",
+      "name": "RAIS Dashboard — UI kit"
+    }
+  ],
+  "tokens": {
+    "--rais-primary-lighter": "#ffd08a",
+    "--rais-primary-light": "#ffb21a",
+    "--rais-primary": "#ffa726",
+    "--rais-primary-dark": "#cd7f0d",
+    "--rais-primary-darker": "#9f5f00",
+    "--rais-primary-deepest": "#9e6004",
+    "--rais-primary-glow": "rgba(255,171,0,0.24)",
+    "--rais-secondary-blue": "#005aff",
+    "--rais-secondary-purple": "#8e33ff",
+    "--rais-secondary-glow": "rgba(142,51,255,0.24)",
+    "--rais-info-light": "#00cef3",
+    "--rais-info": "#4c9aec",
+    "--rais-info-dark": "#3e7beb",
+    "--rais-info-darker": "#007fb6",
+    "--rais-info-glow": "rgba(0,184,217,0.24)",
+    "--rais-success-lighter": "#6cedbd",
+    "--rais-success-light": "#27da68",
+    "--rais-success": "#33c488",
+    "--rais-success-darker": "#034e42",
+    "--rais-success-glow": "rgba(0,167,111,0.24)",
+    "--rais-warning-light": "#ffb21a",
+    "--rais-warning": "#faae3e",
+    "--rais-warning-glow": "rgba(255,171,0,0.24)",
+    "--rais-error-light": "#ff6b4a",
+    "--rais-error": "#ff665b",
+    "--rais-error-glow": "rgba(255,86,48,0.24)",
+    "--rais-grey-100": "#f9fafb",
+    "--rais-grey-200": "#f4f6f8",
+    "--rais-grey-250": "#f5f7fb",
+    "--rais-grey-300": "#e5ecf4",
+    "--rais-grey-350": "#d1dae3",
+    "--rais-grey-400": "#919eab",
+    "--rais-grey-500": "#637381",
+    "--rais-grey-600": "#4d535b",
+    "--rais-grey-700": "#22282f",
+    "--rais-grey-800": "#1c252e",
+    "--rais-grey-820": "#1c222b",
+    "--rais-grey-850": "#1d232c",
+    "--rais-grey-900": "#161616",
+    "--rais-grey-950": "#121212",
+    "--rais-grey-1000": "#0d0d0d",
+    "--rais-grey-1100": "#030a12",
+    "--rais-alpha-08": "rgba(145,158,171,0.08)",
+    "--rais-alpha-12": "rgba(145,158,171,0.12)",
+    "--rais-alpha-16": "rgba(145,158,171,0.16)",
+    "--rais-alpha-20": "rgba(145,158,171,0.20)",
+    "--rais-alpha-24": "rgba(145,158,171,0.24)",
+    "--bg-canvas": "var(--rais-grey-1000)",
+    "--bg-elevated": "var(--rais-grey-950)",
+    "--bg-card": "var(--rais-grey-1000)",
+    "--bg-card-alt": "var(--rais-grey-900)",
+    "--bg-field": "var(--rais-grey-820)",
+    "--bg-overlay": "rgba(0,0,0,0.25)",
+    "--fg-primary": "var(--rais-grey-350)",
+    "--fg-secondary": "var(--rais-grey-400)",
+    "--fg-muted": "var(--rais-grey-500)",
+    "--fg-strong": "#ffffff",
+    "--fg-on-accent": "var(--rais-grey-1000)",
+    "--fg-on-light": "var(--rais-grey-800)",
+    "--border-subtle": "var(--rais-alpha-08)",
+    "--border-default": "var(--rais-alpha-12)",
+    "--border-strong": "var(--rais-alpha-20)",
+    "--border-dashed": "2px dashed var(--rais-alpha-16)",
+    "--accent": "var(--rais-primary)",
+    "--accent-fg": "var(--rais-grey-1000)",
+    "--accent-glow": "var(--rais-primary-glow)",
+    "--status-online": "var(--rais-success-light)",
+    "--status-warn": "var(--rais-warning)",
+    "--status-error": "var(--rais-error)",
+    "--radius-xs": "4px",
+    "--radius-sm": "6px",
+    "--radius-md": "8px",
+    "--radius-lg": "12px",
+    "--radius-xl": "16px",
+    "--radius-2xl": "24px",
+    "--radius-pill": "500px",
+    "--shadow-card": "0px 12px 24px -4px rgba(145,158,171,0.12),\n    0px 0px 2px 0px rgba(145,158,171,0.20)",
+    "--shadow-soft": "0px 1px 2px 0px rgba(145,158,171,0.16)",
+    "--shadow-toast": "0px 16px 32px -4px rgba(0,0,0,0.40)",
+    "--glow-primary": "0px 8px 16px 0px var(--rais-primary-glow)",
+    "--glow-info": "0px 8px 16px 0px var(--rais-info-glow)",
+    "--glow-success": "0px 8px 16px 0px var(--rais-success-glow)",
+    "--glow-warning": "0px 8px 16px 0px var(--rais-warning-glow)",
+    "--glow-error": "0px 8px 16px 0px var(--rais-error-glow)",
+    "--glow-secondary": "0px 8px 16px 0px var(--rais-secondary-glow)",
+    "--focus-border": "var(--accent)",
+    "--focus-ring": "inset 0 0 0 1px var(--accent)",
+    "--space-0": "0px",
+    "--space-1": "4px",
+    "--space-2": "8px",
+    "--space-3": "12px",
+    "--space-4": "16px",
+    "--space-5": "20px",
+    "--space-6": "24px",
+    "--space-8": "32px",
+    "--space-10": "40px",
+    "--space-12": "48px",
+    "--space-16": "64px",
+    "--space-20": "80px",
+    "--font-pretendard": "\"Pretendard\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+    "--font-ui": "var(--font-pretendard)",
+    "--font-display": "var(--font-pretendard)",
+    "--font-section": "var(--font-pretendard)",
+    "--font-kr": "var(--font-pretendard)",
+    "--font-mono": "ui-monospace, \"SF Mono\", \"JetBrains Mono\", Menlo, Consolas, monospace",
+    "--text-display-xl": "800 64px/80px var(--font-pretendard)",
+    "--text-display-lg": "700 48px/64px var(--font-pretendard)",
+    "--text-display-md": "400 48px/64px var(--font-pretendard)",
+    "--text-section": "700 32px/40px var(--font-pretendard)",
+    "--text-h1": "700 32px/40px var(--font-pretendard)",
+    "--text-h2": "700 24px/32px var(--font-pretendard)",
+    "--text-title": "600 18px/28px var(--font-pretendard)",
+    "--text-body-lg": "400 16px/24px var(--font-pretendard)",
+    "--text-body": "400 14px/22px var(--font-pretendard)",
+    "--text-body-strong": "500 14px/22px var(--font-pretendard)",
+    "--text-button": "600 14px/24px var(--font-pretendard)",
+    "--text-caption": "400 12px/18px var(--font-pretendard)",
+    "--text-overline": "700 11px/18px var(--font-pretendard)",
+    "--text-code": "500 13px/20px var(--font-mono)",
+    "--container-max": "1440px",
+    "--container-pad": "24px",
+    "--grid-cols-desktop": "12",
+    "--grid-cols-tablet": "8",
+    "--grid-cols-mobile": "4",
+    "--grid-cols": "var(--grid-cols-desktop)",
+    "--section-gap": "32px",
+    "--card-gap": "24px",
+    "--grid-gutter": "24px",
+    "--focus-ring-width": "2px",
+    "--focus-ring-offset": "2px",
+    "--focus-ring-color": "var(--accent)",
+    "--state-default": "var(--bg-card)",
+    "--state-hover": "var(--surface-hover, rgba(255,255,255,.04))",
+    "--state-pressed": "var(--surface-pressed, rgba(255,255,255,.06))",
+    "--state-focused": "var(--accent)",
+    "--state-disabled": "color-mix(in oklch, var(--bg-card) 60%, transparent)",
+    "--state-selected": "color-mix(in oklch, var(--accent) 12%, var(--bg-card))",
+    "--state-expanded": "var(--bg-card-alt)",
+    "--state-collapsed": "var(--bg-card)",
+    "--state-loading": "var(--bg-card)",
+    "--state-skeleton": "linear-gradient(90deg, rgba(255,255,255,.04) 0%, rgba(255,255,255,.08) 50%, rgba(255,255,255,.04) 100%)",
+    "--state-streaming": "var(--accent)",
+    "--state-processing": "var(--rais-info, #4C9AEC)",
+    "--state-uploading": "var(--rais-info, #4C9AEC)",
+    "--state-dragging": "color-mix(in oklch, var(--accent) 18%, var(--bg-card))",
+    "--state-sorting": "color-mix(in oklch, var(--accent) 10%, var(--bg-card))",
+    "--state-filtering": "color-mix(in oklch, var(--accent) 10%, var(--bg-card))",
+    "--state-success": "var(--rais-success-light)",
+    "--state-warning": "var(--rais-warning)",
+    "--state-error": "var(--rais-error)",
+    "--motion-fast": "120ms",
+    "--motion-default": "180ms",
+    "--motion-slow": "240ms",
+    "--motion-ease": "cubic-bezier(0.16, 1, 0.30, 1)",
+    "--motion-ease-in": "cubic-bezier(0.40, 0, 0.20, 1)",
+    "--motion-hover": "var(--motion-fast)",
+    "--motion-pressed": "var(--motion-fast)",
+    "--motion-toast": "var(--motion-default)",
+    "--motion-modal": "var(--motion-slow)",
+    "--motion-dropdown": "var(--motion-default)",
+    "--motion-accordion": "var(--motion-default)",
+    "--motion-sidebar": "var(--motion-slow)"
+  },
+  "contextOverrides": [
+    {
+      "condition": "@media (max-width: 1024px)",
+      "tokens": {
+        "--grid-cols": "var(--grid-cols-tablet)"
+      }
+    },
+    {
+      "condition": "@media (max-width: 640px)",
+      "tokens": {
+        "--grid-cols": "var(--grid-cols-mobile)",
+        "--container-pad": "16px"
+      }
+    },
+    {
+      "condition": "@media (prefers-reduced-motion: reduce)",
+      "tokens": {
+        "--motion-fast": "1ms",
+        "--motion-default": "1ms",
+        "--motion-slow": "1ms"
+      }
+    }
+  ],
+  "fonts": [
+    {
+      "family": "Pretendard",
+      "weight": "100",
+      "style": "normal",
+      "cssPath": "colors_and_type.css",
+      "files": [
+        "fonts/Pretendard-Thin.otf"
+      ]
+    },
+    {
+      "family": "Pretendard",
+      "weight": "200",
+      "style": "normal",
+      "cssPath": "colors_and_type.css",
+      "files": [
+        "fonts/Pretendard-ExtraLight.otf"
+      ]
+    },
+    {
+      "family": "Pretendard",
+      "weight": "300",
+      "style": "normal",
+      "cssPath": "colors_and_type.css",
+      "files": [
+        "fonts/Pretendard-Light.otf"
+      ]
+    },
+    {
+      "family": "Pretendard",
+      "weight": "400",
+      "style": "normal",
+      "cssPath": "colors_and_type.css",
+      "files": [
+        "fonts/Pretendard-Regular.otf"
+      ]
+    },
+    {
+      "family": "Pretendard",
+      "weight": "500",
+      "style": "normal",
+      "cssPath": "colors_and_type.css",
+      "files": [
+        "fonts/Pretendard-Medium.otf"
+      ]
+    },
+    {
+      "family": "Pretendard",
+      "weight": "600",
+      "style": "normal",
+      "cssPath": "colors_and_type.css",
+      "files": [
+        "fonts/Pretendard-SemiBold.otf"
+      ]
+    },
+    {
+      "family": "Pretendard",
+      "weight": "700",
+      "style": "normal",
+      "cssPath": "colors_and_type.css",
+      "files": [
+        "fonts/Pretendard-Bold.otf"
+      ]
+    },
+    {
+      "family": "Pretendard",
+      "weight": "800",
+      "style": "normal",
+      "cssPath": "colors_and_type.css",
+      "files": [
+        "fonts/Pretendard-ExtraBold.otf"
+      ]
+    },
+    {
+      "family": "Pretendard",
+      "weight": "900",
+      "style": "normal",
+      "cssPath": "colors_and_type.css",
+      "files": [
+        "fonts/Pretendard-Black.otf"
+      ]
+    }
+  ],
+  "icons": [
+    "eva:alert-circle-outline",
+    "eva:alert-triangle-fill",
+    "eva:arrow-downward-fill",
+    "eva:arrow-ios-back-fill",
+    "eva:arrow-ios-downward-fill",
+    "eva:arrow-ios-forward-fill",
+    "eva:arrow-ios-upward-fill",
+    "eva:arrow-upward-fill",
+    "eva:bookmark-fill",
+    "eva:calendar-fill",
+    "eva:checkmark-circle-2-fill",
+    "eva:checkmark-fill",
+    "eva:chevron-right-fill",
+    "eva:close-circle-fill",
+    "eva:close-fill",
+    "eva:copy-fill",
+    "eva:copy-outline",
+    "eva:download-fill",
+    "eva:edit-fill",
+    "eva:email-fill",
+    "eva:external-link-fill",
+    "eva:file-text-fill",
+    "eva:flash-fill",
+    "eva:funnel-fill",
+    "eva:home-fill",
+    "eva:info-fill",
+    "eva:layers-fill",
+    "eva:link-fill",
+    "eva:more-horizontal-fill",
+    "eva:plus-fill",
+    "eva:refresh-fill",
+    "eva:search-fill",
+    "solar:add-circle-bold",
+    "solar:alt-arrow-down-bold",
+    "solar:asteroid-bold",
+    "solar:atom-bold",
+    "solar:bag-2-bold",
+    "solar:bank-bold",
+    "solar:bell-bold",
+    "solar:book-2-bold",
+    "solar:book-bold",
+    "solar:bookmark-bold",
+    "solar:card-bold",
+    "solar:chart-2-bold",
+    "solar:chart-square-bold",
+    "solar:chat-round-line-bold",
+    "solar:chat-square-bold",
+    "solar:check-circle-bold",
+    "solar:checklist-bold",
+    "solar:clock-circle-bold",
+    "solar:close-circle-bold",
+    "solar:cursor-bold",
+    "solar:danger-triangle-bold",
+    "solar:document-add-bold",
+    "solar:document-text-bold",
+    "solar:dollar-bold",
+    "solar:download-minimalistic-bold",
+    "solar:flame-bold",
+    "solar:focus-bold",
+    "solar:gallery-remove-bold",
+    "solar:gallery-wide-bold",
+    "solar:gem-bold",
+    "solar:graph-up-bold",
+    "solar:history-bold",
+    "solar:home-2-bold",
+    "solar:inbox-bold",
+    "solar:info-circle-bold",
+    "solar:layers-bold",
+    "solar:layers-minimalistic-bold",
+    "solar:letter-bold",
+    "solar:link-bold",
+    "solar:list-bold",
+    "solar:magic-stick-3-bold",
+    "solar:magic-stick-bold",
+    "solar:monitor-bold",
+    "solar:moon-bold",
+    "solar:palette-bold",
+    "solar:pen-2-bold",
+    "solar:percent-circle-bold",
+    "solar:play-bold",
+    "solar:play-circle-bold",
+    "solar:question-circle-bold",
+    "solar:refresh-bold",
+    "solar:ruler-bold",
+    "solar:ruler-cross-pen-bold",
+    "solar:scale-bold",
+    "solar:settings-bold",
+    "solar:shapes-bold",
+    "solar:shield-check-bold",
+    "solar:shield-warning-bold",
+    "solar:smartphone-bold",
+    "solar:square-bold",
+    "solar:square-bold-duotone",
+    "solar:square-double-alt-arrow-right-bold",
+    "solar:sun-bold",
+    "solar:tag-bold",
+    "solar:target-bold",
+    "solar:test-tube-bold",
+    "solar:text-bold",
+    "solar:text-field-bold",
+    "solar:transmission-bold",
+    "solar:trash-bin-trash-bold",
+    "solar:users-group-rounded-bold",
+    "solar:widget-5-bold",
+    "solar:widget-add-bold",
+    "solar:widget-bold"
+  ],
+  "limits": [
+    "JetBrains Mono 원본 폰트 없음: 시스템 monospace fallback 사용.",
+    "아이콘은 Eva/Solar 이름 참조이며 SVG 원본은 ZIP에 없음. 기존 미리보기는 Iconify CDN 사용.",
+    "원본 README 및 미리보기 설명에 이전 폰트/포커스 규칙이 남아 있음. 적용 시 최신 CSS와 정리 문서 우선.",
+    "UI 킷은 디자인 프로토타입이며 실제 결제·로그인·CRM 서버가 연결된 제품이 아님.",
+    "uploads 중복 자료와 영업 포트폴리오 단독 HTML은 공개 디자인 패키지에서 제외. 전체 원본은 로컬 보관."
+  ]
+}

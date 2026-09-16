@@ -1,0 +1,314 @@
+<!doctype html>
+<!-- @dsCard group="UI Kit — Rais Dashboard" name="RAIS Dashboard — UI kit" subtitle="Sidebar + topbar + KPI row + mailing flow" viewport="1440x900" -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>RAIS Dashboard — UI Kit</title>
+<link rel="stylesheet" href="../../colors_and_type.css">
+<script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<style>
+  *,*::before,*::after{box-sizing:border-box}
+  html,body,#root{margin:0;height:100%}
+  body{background:var(--bg-elevated);color:var(--fg-primary);font:var(--text-body)}
+  .app{display:grid;grid-template-columns:280px 1fr;min-height:100vh}
+
+  /* ---------- Sidebar ---------- */
+  .sidebar{background:var(--bg-canvas);border-right:1px solid var(--border-default);padding:20px 16px 24px;display:flex;flex-direction:column;gap:18px;position:sticky;top:0;height:100vh;overflow:auto}
+  .brand{display:flex;align-items:center;gap:12px;padding:0 6px}
+  .brand-mark{width:38px;height:38px;border-radius:8px;object-fit:cover;background:var(--rais-grey-1100)}
+  .brand-name{font:700 13px/1.1 'Pretendard';letter-spacing:.18em;color:var(--fg-strong)}
+  .brand-tier{font:var(--text-caption);color:var(--fg-muted);margin-top:2px}
+  .org{display:flex;align-items:center;gap:10px;padding:10px 8px;border-radius:12px;background:var(--rais-alpha-08);cursor:pointer}
+  .org-avatar{width:36px;height:36px;border-radius:8px;background:var(--accent);color:var(--accent-fg);font:700 13px/36px 'Pretendard';text-align:center;letter-spacing:.04em}
+  .org-meta{flex:1}
+  .org-name{font:var(--text-body-strong);color:var(--fg-strong);font-size:13px}
+  .org-role{font:var(--text-caption);color:var(--fg-muted)}
+
+  .side-section{display:flex;flex-direction:column;gap:2px}
+  .side-section-title{padding:0 12px;margin-bottom:4px;color:var(--fg-muted);font-size:11px}
+  .side-item{display:flex;align-items:center;gap:12px;padding:9px 12px;border-radius:8px;color:var(--fg-secondary);cursor:pointer;font:var(--text-body-strong)}
+  .side-item:hover{background:var(--rais-alpha-08);color:var(--fg-primary)}
+  .side-item.active{background:rgba(255,167,38,0.10);color:var(--accent)}
+  .side-item.active iconify-icon{color:var(--accent)}
+  .side-item iconify-icon{color:var(--fg-muted);flex:0 0 auto}
+  .side-label{flex:1}
+  .side-badge{height:20px;min-width:20px;border-radius:500px;background:var(--accent);color:var(--accent-fg);font:700 11px/20px 'Pretendard';text-align:center;padding:0 6px}
+
+  .upsell{margin-top:auto;background:var(--bg-card-alt);border:1px solid var(--border-default);border-radius:16px;padding:16px;display:flex;flex-direction:column;gap:8px}
+  .upsell-title{font:var(--text-title);color:var(--fg-strong);font-size:15px}
+  .upsell-body{font:var(--text-caption);color:var(--fg-secondary)}
+
+  /* ---------- TopBar ---------- */
+  .main{display:flex;flex-direction:column;min-width:0}
+  .topbar{height:72px;display:flex;align-items:center;gap:14px;padding:0 28px;background:rgba(13,13,13,.72);backdrop-filter:blur(12px);position:sticky;top:0;z-index:10;border-bottom:1px solid var(--border-default)}
+  .search{display:flex;align-items:center;gap:8px;flex:1;max-width:480px;background:var(--bg-field);border:1px solid var(--border-default);border-radius:12px;padding:0 14px;height:40px}
+  .search input{flex:1;background:transparent;border:none;outline:none;color:var(--fg-primary);font:var(--text-body)}
+  .search input::placeholder{color:var(--fg-muted)}
+  .search kbd{font:600 11px/1 'Pretendard';color:var(--fg-muted);background:var(--rais-alpha-12);padding:3px 6px;border-radius:4px}
+  .topbar-right{margin-left:auto;display:flex;align-items:center;gap:6px}
+  .icon-btn{width:40px;height:40px;border-radius:500px;border:none;background:transparent;color:var(--fg-secondary);cursor:pointer;display:inline-flex;align-items:center;justify-content:center;position:relative}
+  .icon-btn:hover{background:var(--rais-alpha-08);color:var(--fg-primary)}
+  .icon-btn.sm{width:32px;height:32px}
+  .bell-dot{position:absolute;top:9px;right:10px;width:8px;height:8px;border-radius:500px;background:var(--rais-error);border:2px solid var(--bg-canvas)}
+  .avatar-wrap{position:relative;margin-left:6px}
+  .avatar{width:40px;height:40px;border-radius:500px;object-fit:cover;background:var(--rais-grey-700)}
+  .avatar-status{position:absolute;right:0;bottom:0;width:12px;height:12px;border-radius:500px;background:var(--rais-success-light);border:2px solid var(--bg-canvas)}
+
+  /* ---------- Page ---------- */
+  .page{padding:32px 28px 56px;display:flex;flex-direction:column;gap:24px;max-width:1400px;width:100%;margin:0 auto}
+  .page-head{display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .page-head h1{margin:0;font:var(--text-h1);color:var(--fg-strong)}
+  .page-sub{font:var(--text-body);color:var(--fg-secondary)}
+  .crumbs{display:flex;align-items:center;gap:6px;font:var(--text-caption);color:var(--fg-muted);margin-top:4px}
+  .crumbs span.cur{color:var(--fg-primary)}
+
+  .row-4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+  .row-2{display:grid;grid-template-columns:1.6fr 1fr;gap:18px}
+
+  /* ---------- Metric Card ---------- */
+  .metric-card{background:var(--bg-card);border-radius:16px;padding:20px;display:flex;flex-direction:column;gap:6px;box-shadow:var(--shadow-card)}
+  .metric-head{display:flex;justify-content:space-between;align-items:flex-start}
+  .metric-icon{width:42px;height:42px;border-radius:10px;display:flex;align-items:center;justify-content:center;color:#fff}
+  .metric-icon.glow-primary{background:var(--accent);color:var(--accent-fg);box-shadow:var(--glow-primary)}
+  .metric-icon.glow-info{background:var(--rais-info);box-shadow:var(--glow-info)}
+  .metric-icon.glow-success{background:var(--rais-success);box-shadow:var(--glow-success)}
+  .metric-icon.glow-error{background:var(--rais-error);box-shadow:var(--glow-error)}
+  .metric-label{font:var(--text-caption);color:var(--fg-secondary);margin-top:14px}
+  .metric-value{font:700 32px/40px 'Pretendard';color:var(--fg-strong);font-feature-settings:"tnum"}
+  .metric-foot{display:flex;align-items:center;gap:8px;margin-top:6px}
+  .delta{display:inline-flex;align-items:center;gap:2px;font:700 12px/1 'Pretendard'}
+  .delta.up{color:var(--rais-success)}
+  .delta.down{color:var(--rais-error)}
+  .metric-sub{font:var(--text-caption);color:var(--fg-muted)}
+
+  /* ---------- Big Card / Mailing ---------- */
+  .panel{background:var(--bg-card);border-radius:24px;box-shadow:var(--shadow-card);padding:24px}
+  .panel h3{margin:0;font:var(--text-title);color:var(--fg-strong)}
+  .panel .muted{font:var(--text-caption);color:var(--fg-secondary);margin-top:4px}
+
+  /* Stepper */
+  .stepper{display:flex;align-items:center;gap:12px;margin:20px 0 22px}
+  .step{display:flex;align-items:center;gap:10px;font:var(--text-body-strong);color:var(--fg-muted)}
+  .step-num{width:24px;height:24px;border-radius:500px;display:flex;align-items:center;justify-content:center;font:700 13px/1 'Pretendard';background:var(--rais-grey-700);color:var(--fg-muted)}
+  .step.active .step-num{background:var(--accent);color:var(--accent-fg);box-shadow:var(--glow-primary)}
+  .step.active{color:var(--fg-strong)}
+  .step.done .step-num{background:var(--rais-success);color:#0a1f17}
+  .step.done{color:var(--fg-secondary)}
+  .step-sep{flex:1;height:2px;background:var(--rais-alpha-12);border-radius:1px;min-width:24px}
+
+  /* Toolbar in panel */
+  .panel-tools{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+  .panel-search{flex:1;display:flex;align-items:center;gap:8px;height:48px;background:var(--bg-field);border-radius:8px;padding:0 14px;color:var(--fg-muted);font:var(--text-body)}
+  .panel-search input{background:transparent;border:none;outline:none;color:var(--fg-primary);font:var(--text-body);flex:1}
+  .panel-search input::placeholder{color:var(--fg-muted)}
+
+  /* Buttons */
+  .btn{font:var(--text-button);border:none;border-radius:8px;cursor:pointer;display:inline-flex;align-items:center;gap:8px;white-space:nowrap;transition:background 140ms ease}
+  .btn-md{height:40px;padding:0 16px}
+  .btn-sm{height:32px;padding:0 12px;font-size:13px}
+  .btn-lg{height:48px;padding:0 20px}
+  .btn-contained.btn-primary{background:var(--accent);color:var(--accent-fg);box-shadow:var(--glow-primary)}
+  .btn-contained.btn-primary:hover{background:var(--rais-primary-light)}
+  .btn-contained.btn-neutral{background:var(--rais-grey-350);color:var(--fg-on-light)}
+  .btn-contained.btn-neutral:hover{background:#fff}
+  .btn-outlined{background:transparent;border:1px solid var(--border-strong);color:var(--fg-primary)}
+  .btn-outlined.btn-primary{border-color:var(--accent);color:var(--accent)}
+  .btn-text{background:transparent;color:var(--fg-primary)}
+  .btn-text.btn-primary{color:var(--accent)}
+  .btn-soft.btn-primary{background:rgba(255,167,38,.16);color:var(--rais-primary-light)}
+  .btn:disabled{background:var(--rais-alpha-12);color:var(--fg-muted);box-shadow:none;cursor:not-allowed}
+
+  /* Chip rail */
+  .chip-rail{display:flex;gap:8px;align-items:center;margin:14px 0}
+  .chip{height:24px;padding:0 10px;border-radius:6px;display:inline-flex;align-items:center;gap:6px;font:700 11px/1 'Pretendard';letter-spacing:.04em}
+  .chip-default{background:var(--rais-alpha-12);color:var(--fg-secondary)}
+  .chip-primary{background:rgba(255,167,38,.16);color:var(--accent)}
+  .chip-info{background:rgba(76,154,236,.16);color:var(--rais-info-light)}
+  .chip-success{background:rgba(51,196,136,.16);color:var(--rais-success-lighter)}
+  .chip-warning{background:rgba(250,174,62,.16);color:var(--rais-warning)}
+  .chip-error{background:rgba(255,102,91,.16);color:var(--rais-error-light)}
+
+  /* Recipient table */
+  .table{width:100%;border-collapse:collapse;font:var(--text-body)}
+  .table th{font:var(--text-overline);color:var(--fg-muted);letter-spacing:.1em;text-align:left;padding:12px 14px;border-bottom:1px solid var(--border-default)}
+  .table td{padding:14px;border-bottom:1px solid var(--border-subtle);color:var(--fg-primary);vertical-align:middle}
+  .table tbody tr:hover{background:var(--rais-alpha-08)}
+  .check{width:18px;height:18px;border-radius:4px;border:1.5px solid var(--rais-alpha-24);display:inline-block;vertical-align:middle}
+  .check.on{background:var(--accent);border-color:var(--accent);position:relative}
+  .check.on::after{content:"";position:absolute;left:5px;top:1px;width:5px;height:10px;border:solid #0d0d0d;border-width:0 2px 2px 0;transform:rotate(45deg)}
+  .ava{width:32px;height:32px;border-radius:500px;background:var(--rais-grey-700);color:var(--fg-strong);font:700 12px/32px 'Pretendard';text-align:center;display:inline-block;margin-right:10px;vertical-align:middle}
+  .ava.a{background:#7e3ff2}.ava.b{background:#0e8a6c}.ava.c{background:#cf4727}.ava.d{background:#0a5c9b}
+
+  .panel-foot{display:flex;justify-content:space-between;align-items:center;margin-top:18px}
+
+  /* Side panel: insight */
+  .insight{background:var(--bg-card);border-radius:24px;padding:22px;display:flex;flex-direction:column;gap:14px;box-shadow:var(--shadow-card);overflow:hidden;position:relative}
+  .insight h3{margin:0;font:var(--text-title);color:var(--fg-strong)}
+  .insight .donut{align-self:center;width:200px;height:200px;border-radius:500px;background:conic-gradient(var(--accent) 0 62%, var(--rais-info) 62% 80%, var(--rais-grey-700) 80% 100%);position:relative;margin:6px 0}
+  .insight .donut::after{content:"";position:absolute;inset:18px;background:var(--bg-card);border-radius:500px}
+  .insight .donut-center{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;z-index:1}
+  .insight .donut-num{font:700 28px/1 'Pretendard';color:var(--fg-strong);font-feature-settings:"tnum"}
+  .insight .donut-lbl{font:var(--text-caption);color:var(--fg-secondary);margin-top:4px}
+  .legend{display:flex;flex-direction:column;gap:10px}
+  .legend-row{display:flex;align-items:center;gap:10px;font:var(--text-body-strong)}
+  .legend-dot{width:10px;height:10px;border-radius:500px}
+  .legend-val{margin-left:auto;color:var(--fg-strong);font-feature-settings:"tnum"}
+
+  /* Toast tray */
+  .toast-tray{position:fixed;left:50%;bottom:28px;transform:translateX(-50%);display:flex;flex-direction:column;gap:10px;z-index:50;pointer-events:none}
+  .toast{display:flex;align-items:center;gap:12px;padding:10px 14px;border-radius:8px;background:var(--rais-grey-800);box-shadow:var(--shadow-toast);min-width:380px;font:var(--text-body-strong);color:#fff;pointer-events:auto;animation:slide 240ms ease-out}
+  @keyframes slide{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+  .toast-icon{width:24px;height:24px;border-radius:6px;display:flex;align-items:center;justify-content:center;flex:0 0 24px;color:#fff}
+  .t-default .toast-icon{background:var(--rais-grey-700)}
+  .t-info .toast-icon{background:var(--rais-info)}
+  .t-success .toast-icon{background:var(--rais-success)}
+  .t-warning .toast-icon{background:var(--rais-warning);color:var(--fg-on-light)}
+  .t-error .toast-icon{background:var(--rais-error)}
+  .toast-msg{flex:1}
+  .toast-close{margin-left:auto;background:transparent;border:none;color:var(--fg-secondary);cursor:pointer}
+</style>
+</head>
+<body>
+<div id="root"></div>
+
+<script type="text/babel" src="Sidebar.jsx"></script>
+<script type="text/babel" src="TopBar.jsx"></script>
+<script type="text/babel" src="Components.jsx"></script>
+
+<script type="text/babel">
+const { useState } = React;
+
+function App() {
+  const [step, setStep] = useState(0);
+  const [toasts, setToasts] = useState([]);
+  const [selected, setSelected] = useState({1: true, 2: true});
+
+  const steps = ["Select Recipients", "Edit message", "Mailing Settings", "Review"];
+
+  function pushToast(severity, message) {
+    const id = Date.now() + Math.random();
+    setToasts(t => [...t, {id, severity, message}]);
+    setTimeout(() => setToasts(t => t.filter(x => x.id !== id)), 3500);
+  }
+
+  const recipients = [
+    {id:1, name:"Mason Carter",   email:"mason@iak.studio",     plan:"Pro",   tag:"Mason",   status:"online",  ava:"a", initials:"MC"},
+    {id:2, name:"Hana Park",      email:"hana@rais.team",       plan:"Pro",   tag:"May 12",  status:"online",  ava:"b", initials:"HP"},
+    {id:3, name:"Devon Reyes",    email:"devon@iak.studio",     plan:"Free",  tag:"VIP",     status:"idle",    ava:"c", initials:"DR"},
+    {id:4, name:"Yumi Tanaka",    email:"yumi@studio.iak",      plan:"Pro",   tag:"Beta",    status:"online",  ava:"d", initials:"YT"},
+    {id:5, name:"Ari Holst",      email:"ari@rais.team",        plan:"Trial", tag:"New",     status:"offline", ava:"a", initials:"AH"},
+  ];
+
+  return (
+    <div className="app">
+      <Sidebar />
+      <div className="main">
+        <TopBar onToast={() => pushToast("info","You have 3 unread notifications")} />
+        <div className="page">
+          <div className="page-head">
+            <div>
+              <h1>Mailing</h1>
+              <div className="crumbs"><span>Dashboard</span><iconify-icon icon="eva:arrow-ios-forward-fill" width="14"></iconify-icon><span>Management</span><iconify-icon icon="eva:arrow-ios-forward-fill" width="14"></iconify-icon><span className="cur">Mailing</span></div>
+            </div>
+            <div style={{display:"flex",gap:10}}>
+              <button className="btn btn-outlined btn-md"><iconify-icon icon="solar:download-minimalistic-bold" width="18"></iconify-icon>Export</button>
+              <button className="btn btn-contained btn-primary btn-md" onClick={() => pushToast("success","Push alarm sent successfully")}><iconify-icon icon="solar:add-circle-bold" width="18"></iconify-icon>New Campaign</button>
+            </div>
+          </div>
+
+          <div className="row-4">
+            <MetricCard icon="solar:letter-bold" label="Sent campaigns" value="148" delta="+12%" deltaDir="up" sub="vs. previous 28 days" glow="glow-primary" />
+            <MetricCard icon="solar:users-group-rounded-bold" label="Active subscribers" value="4,289" delta="−0.4%" deltaDir="down" sub="12 churned this week" glow="glow-info" />
+            <MetricCard icon="solar:chart-2-bold" label="Open rate" value="62.4%" delta="+2.6%" deltaDir="up" sub="industry avg. 41%" glow="glow-success" />
+            <MetricCard icon="solar:danger-triangle-bold" label="Bounces" value="38" delta="+1.1%" deltaDir="down" sub="needs attention" glow="glow-error" />
+          </div>
+
+          <div className="row-2">
+            <div className="panel">
+              <h3>Create Mailing Campaign</h3>
+              <div className="muted">Step {step+1} of {steps.length} — {steps[step]}</div>
+              <Stepper steps={steps} active={step} />
+
+              <div className="panel-tools">
+                <div className="panel-search">
+                  <iconify-icon icon="eva:search-fill" width="20"></iconify-icon>
+                  <input placeholder="Search recipients" />
+                </div>
+                <button className="btn btn-contained btn-neutral btn-lg">Add Filter</button>
+              </div>
+
+              <div className="chip-rail">
+                <Chip tone="info" removable>Mason</Chip>
+                <Chip tone="warning" removable>May 12th</Chip>
+                <Chip tone="default">+3 more</Chip>
+              </div>
+
+              <table className="table">
+                <thead>
+                  <tr>
+                    <th style={{width:36}}><span className={"check " + (Object.values(selected).filter(Boolean).length === recipients.length ? "on" : "")} onClick={() => {
+                      const all = Object.values(selected).filter(Boolean).length === recipients.length;
+                      setSelected(all ? {} : Object.fromEntries(recipients.map(r => [r.id, true])));
+                    }}></span></th>
+                    <th>Name</th>
+                    <th>Plan</th>
+                    <th>Tag</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {recipients.map(r => (
+                    <tr key={r.id} onClick={() => setSelected(s => ({...s, [r.id]: !s[r.id]}))} style={{cursor:"pointer"}}>
+                      <td><span className={"check " + (selected[r.id] ? "on" : "")}></span></td>
+                      <td><span className={"ava " + r.ava}>{r.initials}</span><strong style={{color:"var(--fg-strong)"}}>{r.name}</strong><div style={{font:"var(--text-caption)",color:"var(--fg-secondary)",marginLeft:42}}>{r.email}</div></td>
+                      <td><Chip tone={r.plan === "Pro" ? "primary" : r.plan === "Trial" ? "warning" : "default"}>{r.plan}</Chip></td>
+                      <td><Chip tone="info">{r.tag}</Chip></td>
+                      <td><Chip tone={r.status === "online" ? "success" : r.status === "idle" ? "warning" : "default"}>{r.status}</Chip></td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+
+              <div className="panel-foot">
+                <span className="muted">Selected Recipients ({Object.values(selected).filter(Boolean).length})</span>
+                <div style={{display:"flex",gap:8}}>
+                  <button className="btn btn-text btn-md" disabled={step === 0} onClick={() => setStep(s => Math.max(0, s - 1))}>Back</button>
+                  <button className="btn btn-contained btn-primary btn-md" onClick={() => {
+                    if (step < steps.length - 1) setStep(s => s + 1);
+                    else pushToast("success","Push alarm sent successfully");
+                  }}>{step === steps.length - 1 ? "Send" : "Next"}</button>
+                </div>
+              </div>
+            </div>
+
+            <div className="insight">
+              <h3>Open vs. Click rate</h3>
+              <div className="muted">Last 30 days</div>
+              <div className="donut">
+                <div className="donut-center"><div className="donut-num">62.4%</div><div className="donut-lbl">opens</div></div>
+              </div>
+              <div className="legend">
+                <div className="legend-row"><span className="legend-dot" style={{background:"var(--accent)"}}></span>Opened<span className="legend-val">62.4%</span></div>
+                <div className="legend-row"><span className="legend-dot" style={{background:"var(--rais-info)"}}></span>Clicked<span className="legend-val">17.8%</span></div>
+                <div className="legend-row"><span className="legend-dot" style={{background:"var(--rais-grey-700)"}}></span>Untouched<span className="legend-val">19.8%</span></div>
+              </div>
+              <button className="btn btn-soft btn-primary btn-md" style={{alignSelf:"flex-start",marginTop:8}}>View detailed analysis<iconify-icon icon="eva:arrow-ios-forward-fill" width="16"></iconify-icon></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="toast-tray">
+        {toasts.map(t => <Toast key={t.id} severity={t.severity} message={t.message} onClose={() => setToasts(x => x.filter(y => y.id !== t.id))} />)}
+      </div>
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+</script>
+</body>
+</html>
