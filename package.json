@@ -1,6 +1,6 @@
 {
   "name": "iak-design-system",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "private": true,
   "type": "module",
   "description": "IAK design system, template library and portable skill installer",
@@ -10,7 +10,22 @@
   "scripts": {
     "build": "node scripts/build.mjs",
     "dev": "node scripts/build.mjs && node scripts/serve.mjs",
-    "test": "node --test tests/*.test.mjs",
-    "install:skill": "node scripts/build.mjs && node scripts/install.mjs dist/registry.json"
+    "test": "node scripts/build-tooling.mjs && node --test tests/*.test.mjs",
+    "install:skill": "node scripts/build.mjs && node scripts/install.mjs dist/registry.json",
+    "build:tooling": "node scripts/build-tooling.mjs"
+  },
+  "devDependencies": {
+    "@iconify-json/eva": "^1.2.3",
+    "@iconify-json/solar": "^1.2.10",
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "@testing-library/dom": "^10.4.2",
+    "@testing-library/react": "^16.3.3",
+    "@types/react": "^18.3.31",
+    "@types/react-dom": "^18.3.7",
+    "esbuild": "^0.28.2",
+    "jsdom": "^26.1.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "typescript": "^7.0.2"
   }
 }

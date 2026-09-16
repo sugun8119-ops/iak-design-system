@@ -10,11 +10,12 @@ const root = fileURLToPath(new URL("../", import.meta.url));
 test("Pages build uses repository subpath, generates AI template routes and supports piped installer", async () => {
   const temp = await fs.mkdtemp(path.join(os.tmpdir(), "iak-build-"));
   try {
-    for (const dir of ["src", "data", "scripts"])
+    for (const dir of ["src", "data", "scripts", "packages"])
       await fs.cp(path.join(root, dir), path.join(temp, dir), {
         recursive: true,
       });
     await fs.copyFile(path.join(root, "SKILL.md"), path.join(temp, "SKILL.md"));
+    await fs.symlink(path.join(root, "node_modules"), path.join(temp, "node_modules"), "dir");
     const built = spawnSync(
       process.execPath,
       [path.join(temp, "scripts/build.mjs")],

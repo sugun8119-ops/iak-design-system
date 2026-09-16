@@ -4,3 +4,14 @@ node_modules/
 .env
 .env.*
 !.env.example
+
+packages/*/dist/
+packages/mcp/data/
+src/developer/app.js*
+src/developer/ui.css
+src/developer/releases/
+src/developer/components.json
+src/developer/icons.json
+src/developer/comparison.json
+
+src/developer/icon-licenses.json

@@ -1,0 +1,489 @@
+[
+  {
+    "name": "Button",
+    "group": "Actions",
+    "description": "고정 높이와 상태를 갖춘 작업 버튼.",
+    "props": [
+      {
+        "name": "variant",
+        "type": "'primary' | 'secondary' | 'danger' | 'text'",
+        "default": "primary",
+        "description": "IAK 행동 위계"
+      },
+      {
+        "name": "size",
+        "type": "'sm' | 'md' | 'lg'",
+        "default": "md",
+        "description": "높이 28 / 36 / 44px"
+      },
+      {
+        "name": "loading",
+        "type": "boolean",
+        "default": "false",
+        "description": "중복 클릭을 막고 너비를 유지합니다."
+      },
+      {
+        "name": "disabled",
+        "type": "boolean",
+        "default": "false",
+        "description": "키보드·포인터 동작 비활성화"
+      },
+      {
+        "name": "type",
+        "type": "'button' | 'submit' | 'reset'",
+        "default": "button",
+        "description": "폼 제출은 submit을 명시하세요."
+      },
+      {
+        "name": "className",
+        "type": "string",
+        "default": "—",
+        "description": "추가 스타일 클래스. 기본 토큰은 유지합니다."
+      },
+      {
+        "name": "ref",
+        "type": "React.Ref",
+        "default": "—",
+        "description": "입력과 버튼의 DOM 포커스 제어에 사용합니다."
+      }
+    ],
+    "accessibility": [
+      "Enter/Space는 native button 동작을 따릅니다.",
+      "loading은 disabled와 aria-busy로 전달합니다.",
+      "아이콘만 사용할 때 aria-label을 지정합니다."
+    ],
+    "example": "<Button variant=\"primary\" size=\"lg\">프로젝트 만들기</Button>",
+    "status": "preview",
+    "import": "import { Button } from '@iak-design/ui';",
+    "source": "packages/ui/src/index.tsx",
+    "designSource": "library/claude/docs/01-component-guide.md"
+  },
+  {
+    "name": "TextField",
+    "group": "Input",
+    "description": "레이블·도움말·오류 메시지를 연결한 한 줄 입력.",
+    "props": [
+      {
+        "name": "label",
+        "type": "string",
+        "default": "필수",
+        "description": "실제 label과 입력 ID를 연결합니다."
+      },
+      {
+        "name": "description",
+        "type": "string",
+        "default": "—",
+        "description": "도움말을 aria-describedby로 연결합니다."
+      },
+      {
+        "name": "error",
+        "type": "string",
+        "default": "—",
+        "description": "오류 메시지와 aria-invalid를 함께 적용합니다."
+      },
+      {
+        "name": "disabled",
+        "type": "boolean",
+        "default": "false",
+        "description": "실제 HTML disabled 속성을 적용합니다."
+      },
+      {
+        "name": "value / defaultValue",
+        "type": "native",
+        "default": "—",
+        "description": "제어/비제어 입력을 지원합니다."
+      },
+      {
+        "name": "onChange",
+        "type": "native handler",
+        "default": "—",
+        "description": "값 변경 이벤트입니다."
+      },
+      {
+        "name": "className",
+        "type": "string",
+        "default": "—",
+        "description": "추가 스타일 클래스. 기본 토큰은 유지합니다."
+      },
+      {
+        "name": "ref",
+        "type": "React.Ref",
+        "default": "—",
+        "description": "입력과 버튼의 DOM 포커스 제어에 사용합니다."
+      }
+    ],
+    "accessibility": [
+      "레이블은 placeholder와 별개입니다.",
+      "오류 메시지는 입력과 aria-describedby로 연결합니다.",
+      "유효성 검사 시점은 제품의 폼에서 결정합니다."
+    ],
+    "example": "<TextField label=\"프로젝트 이름\" description=\"최대 40자\" maxLength={40} />",
+    "status": "preview",
+    "import": "import { TextField } from '@iak-design/ui';",
+    "source": "packages/ui/src/index.tsx",
+    "designSource": "library/claude/docs/01-component-guide.md"
+  },
+  {
+    "name": "Textarea",
+    "group": "Input",
+    "description": "여러 줄 입력과 설명·오류 상태.",
+    "props": [
+      {
+        "name": "label",
+        "type": "string",
+        "default": "필수",
+        "description": "실제 label과 입력 ID를 연결합니다."
+      },
+      {
+        "name": "description",
+        "type": "string",
+        "default": "—",
+        "description": "도움말을 aria-describedby로 연결합니다."
+      },
+      {
+        "name": "error",
+        "type": "string",
+        "default": "—",
+        "description": "오류 메시지와 aria-invalid를 함께 적용합니다."
+      },
+      {
+        "name": "disabled",
+        "type": "boolean",
+        "default": "false",
+        "description": "실제 HTML disabled 속성을 적용합니다."
+      },
+      {
+        "name": "value / defaultValue",
+        "type": "native",
+        "default": "—",
+        "description": "제어/비제어 입력을 지원합니다."
+      },
+      {
+        "name": "onChange",
+        "type": "native handler",
+        "default": "—",
+        "description": "값 변경 이벤트입니다."
+      },
+      {
+        "name": "className",
+        "type": "string",
+        "default": "—",
+        "description": "추가 스타일 클래스. 기본 토큰은 유지합니다."
+      },
+      {
+        "name": "ref",
+        "type": "React.Ref",
+        "default": "—",
+        "description": "입력과 버튼의 DOM 포커스 제어에 사용합니다."
+      },
+      {
+        "name": "rows",
+        "type": "number",
+        "default": "4",
+        "description": "기본 표시 행 수"
+      }
+    ],
+    "accessibility": [
+      "label과 aria-describedby를 연결합니다.",
+      "키보드 입력과 기본 resize 동작을 지원합니다."
+    ],
+    "example": "<Textarea label=\"프로젝트 설명\" rows={4} />",
+    "status": "preview",
+    "import": "import { Textarea } from '@iak-design/ui';",
+    "source": "packages/ui/src/index.tsx",
+    "designSource": "library/claude/docs/01-component-guide.md"
+  },
+  {
+    "name": "Select",
+    "group": "Input",
+    "description": "운영체제의 키보드·모바일 선택 기능을 따르는 단일 선택.",
+    "props": [
+      {
+        "name": "label",
+        "type": "string",
+        "default": "필수",
+        "description": "실제 label과 입력 ID를 연결합니다."
+      },
+      {
+        "name": "description",
+        "type": "string",
+        "default": "—",
+        "description": "도움말을 aria-describedby로 연결합니다."
+      },
+      {
+        "name": "error",
+        "type": "string",
+        "default": "—",
+        "description": "오류 메시지와 aria-invalid를 함께 적용합니다."
+      },
+      {
+        "name": "disabled",
+        "type": "boolean",
+        "default": "false",
+        "description": "실제 HTML disabled 속성을 적용합니다."
+      },
+      {
+        "name": "value / defaultValue",
+        "type": "native",
+        "default": "—",
+        "description": "제어/비제어 입력을 지원합니다."
+      },
+      {
+        "name": "onChange",
+        "type": "native handler",
+        "default": "—",
+        "description": "값 변경 이벤트입니다."
+      },
+      {
+        "name": "className",
+        "type": "string",
+        "default": "—",
+        "description": "추가 스타일 클래스. 기본 토큰은 유지합니다."
+      },
+      {
+        "name": "ref",
+        "type": "React.Ref",
+        "default": "—",
+        "description": "입력과 버튼의 DOM 포커스 제어에 사용합니다."
+      }
+    ],
+    "accessibility": [
+      "native select입니다. 커스텀 팝오버가 아닙니다.",
+      "옵션은 option 요소로 제공합니다."
+    ],
+    "example": "<Select label=\"프로젝트 상태\" defaultValue=\"active\"><option value=\"active\">진행 중</option><option value=\"done\">완료</option></Select>",
+    "status": "preview",
+    "import": "import { Select } from '@iak-design/ui';",
+    "source": "packages/ui/src/index.tsx",
+    "designSource": "library/claude/docs/01-component-guide.md"
+  },
+  {
+    "name": "Checkbox",
+    "group": "Selection",
+    "description": "명시적 레이블을 갖춘 native 체크박스.",
+    "props": [
+      {
+        "name": "label",
+        "type": "string",
+        "default": "필수",
+        "description": "체크박스의 접근 가능한 이름"
+      },
+      {
+        "name": "checked / defaultChecked",
+        "type": "boolean",
+        "default": "false",
+        "description": "제어/비제어 상태"
+      },
+      {
+        "name": "onChange",
+        "type": "native handler",
+        "default": "—",
+        "description": "checked 값은 event.target.checked"
+      },
+      {
+        "name": "disabled",
+        "type": "boolean",
+        "default": "false",
+        "description": "native disabled"
+      },
+      {
+        "name": "className",
+        "type": "string",
+        "default": "—",
+        "description": "추가 스타일 클래스. 기본 토큰은 유지합니다."
+      },
+      {
+        "name": "ref",
+        "type": "React.Ref",
+        "default": "—",
+        "description": "입력과 버튼의 DOM 포커스 제어에 사용합니다."
+      }
+    ],
+    "accessibility": [
+      "Space로 체크 상태를 전환합니다.",
+      "label 클릭으로도 상태를 전환합니다."
+    ],
+    "example": "<Checkbox label=\"업데이트 받기\" defaultChecked />",
+    "status": "preview",
+    "import": "import { Checkbox } from '@iak-design/ui';",
+    "source": "packages/ui/src/index.tsx",
+    "designSource": "library/claude/docs/01-component-guide.md"
+  },
+  {
+    "name": "Switch",
+    "group": "Selection",
+    "description": "즉시 적용되는 설정의 켜짐·꺼짐 제어.",
+    "props": [
+      {
+        "name": "label",
+        "type": "string",
+        "default": "필수",
+        "description": "설정 이름"
+      },
+      {
+        "name": "checked / defaultChecked",
+        "type": "boolean",
+        "default": "false",
+        "description": "제어/비제어 상태"
+      },
+      {
+        "name": "onChange",
+        "type": "native handler",
+        "default": "—",
+        "description": "상태 변경"
+      },
+      {
+        "name": "disabled",
+        "type": "boolean",
+        "default": "false",
+        "description": "native disabled"
+      },
+      {
+        "name": "className",
+        "type": "string",
+        "default": "—",
+        "description": "추가 스타일 클래스. 기본 토큰은 유지합니다."
+      },
+      {
+        "name": "ref",
+        "type": "React.Ref",
+        "default": "—",
+        "description": "입력과 버튼의 DOM 포커스 제어에 사용합니다."
+      }
+    ],
+    "accessibility": [
+      "role=switch를 가진 native checkbox입니다.",
+      "Space로 전환하고 label을 항상 제공합니다."
+    ],
+    "example": "<Switch label=\"알림 켜기\" defaultChecked />",
+    "status": "preview",
+    "import": "import { Switch } from '@iak-design/ui';",
+    "source": "packages/ui/src/index.tsx",
+    "designSource": "library/claude/docs/01-component-guide.md"
+  },
+  {
+    "name": "Badge",
+    "group": "Feedback",
+    "description": "색상과 텍스트를 함께 사용하는 상태 표시.",
+    "props": [
+      {
+        "name": "tone",
+        "type": "'info' | 'success' | 'warning' | 'error' | 'neutral'",
+        "default": "neutral",
+        "description": "의미별 상태 색상"
+      },
+      {
+        "name": "children",
+        "type": "ReactNode",
+        "default": "필수",
+        "description": "상태 텍스트"
+      }
+    ],
+    "accessibility": [
+      "상태 이름을 반드시 텍스트로 표시합니다.",
+      "실시간 변경 공지는 제품 영역의 live region으로 처리합니다."
+    ],
+    "example": "<Badge tone=\"success\">저장 완료</Badge>",
+    "status": "preview",
+    "import": "import { Badge } from '@iak-design/ui';",
+    "source": "packages/ui/src/index.tsx",
+    "designSource": "library/claude/docs/01-component-guide.md"
+  },
+  {
+    "name": "Card",
+    "group": "Contents",
+    "description": "제목·본문·선택적 푸터를 가진 컨테이너.",
+    "props": [
+      {
+        "name": "title",
+        "type": "string",
+        "default": "—",
+        "description": "h2 제목과 section 연결"
+      },
+      {
+        "name": "footer",
+        "type": "ReactNode",
+        "default": "—",
+        "description": "추가 행동/보조 정보"
+      },
+      {
+        "name": "children",
+        "type": "ReactNode",
+        "default": "—",
+        "description": "본문"
+      }
+    ],
+    "accessibility": [
+      "제목이 있으면 aria-labelledby로 영역과 연결합니다.",
+      "카드 자체는 버튼이 아닙니다. 행동은 내부 링크/버튼으로 제공합니다."
+    ],
+    "example": "<Card title=\"이번 달 프로젝트\" footer=\"최근 업데이트: 오늘\"><p>진행 중인 프로젝트 12개</p></Card>",
+    "status": "preview",
+    "import": "import { Card } from '@iak-design/ui';",
+    "source": "packages/ui/src/index.tsx",
+    "designSource": "library/claude/docs/01-component-guide.md"
+  },
+  {
+    "name": "Skeleton",
+    "group": "Loading",
+    "description": "콘텐츠를 기다리는 동안 보여주는 자리 표시.",
+    "props": [
+      {
+        "name": "width / height",
+        "type": "string | number",
+        "default": "100% / 20",
+        "description": "예상 콘텐츠 크기"
+      },
+      {
+        "name": "circle",
+        "type": "boolean",
+        "default": "false",
+        "description": "원형 표시"
+      }
+    ],
+    "accessibility": [
+      "장식 요소는 aria-hidden 처리합니다.",
+      "부모 영역에 aria-busy와 로딩 설명을 제공하세요.",
+      "모션 감소 설정에서는 애니메이션을 끕니다."
+    ],
+    "example": "<div aria-busy=\"true\" aria-label=\"콘텐츠를 불러오는 중\"><Skeleton height={24} /></div>",
+    "status": "preview",
+    "import": "import { Skeleton } from '@iak-design/ui';",
+    "source": "packages/ui/src/index.tsx",
+    "designSource": "library/claude/docs/01-component-guide.md"
+  },
+  {
+    "name": "Icon",
+    "group": "Assets",
+    "description": "Eva/Solar에서 확인한 SVG를 로컬로 렌더링.",
+    "props": [
+      {
+        "name": "name",
+        "type": "IconName",
+        "default": "필수",
+        "description": "배포된 97개 이름 중 하나"
+      },
+      {
+        "name": "size",
+        "type": "16 | 20 | 24",
+        "default": "20",
+        "description": "아이콘 크기"
+      },
+      {
+        "name": "label",
+        "type": "string",
+        "default": "—",
+        "description": "의미가 있는 독립 아이콘의 접근 가능한 이름"
+      }
+    ],
+    "accessibility": [
+      "label이 없으면 장식용으로 aria-hidden 처리합니다.",
+      "아이콘 버튼의 이름은 버튼에 aria-label을 지정합니다."
+    ],
+    "example": "<Icon name=\"eva:checkmark-fill\" label=\"완료\" />",
+    "status": "preview",
+    "import": "import { Icon } from '@iak-design/ui';",
+    "source": "packages/ui/src/index.tsx",
+    "designSource": "library/claude/docs/01-component-guide.md"
+  }
+]

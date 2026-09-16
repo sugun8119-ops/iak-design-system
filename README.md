@@ -2,11 +2,12 @@
 
 템플릿 URL + 자연어 기능 요청 → IAK 규칙을 적용한 화면 → 로컬 브라우저 확인.
 
-별도 GitHub 저장소로 사용할 수 있는 디자인 라이브러리입니다. 외부 서비스 의존성 없이 Node.js 20+로 빌드하며 GitHub Pages 배포 워크플로가 포함되어 있습니다.
+별도 GitHub 저장소로 사용할 수 있는 디자인 라이브러리입니다. Node.js 20+와 npm 의존성을 설치해 빌드하며 GitHub Pages 배포 워크플로가 포함되어 있습니다.
 
 ## 로컬 실행
 
 ```sh
+npm ci
 npm run dev
 ```
 
@@ -89,3 +90,13 @@ npm run build
 ```
 
 Review the source diff and `src/library/guide.md` before committing and pushing. The importer preserves CSS media-query contexts; the original Claude manifest incorrectly flattens mobile/reduced-motion values. Imported HTML is a design prototype, not a production component package. Iconify and some React/Babel runtime dependencies still use CDNs.
+
+## 0.5 개발자 Preview
+
+`developer/`에 실제 React 컴포넌트 10종의 props, 실행 예제, 접근성 안내, 원티드 비교표와 설치 명령을 제공합니다. UI 패키지는 162개 기본 토큰과 조건별 오버라이드, Pretendard, 97개 SVG를 포함합니다. 원본의 9개 아이콘 이름은 미해결로 공개합니다.
+
+`packages/ui`와 `packages/mcp`는 빌드 시 npm 호환 tgz로 배포합니다. npm registry 정식 발행이 아닙니다. MCP는 읽기 전용 stdio 도구 10개이며 AI 클라이언트에 별도 등록해야 합니다. 설치 명령 재실행은 SKILL만 갱신합니다.
+
+검증: React 18의 입력/폼/로딩/접근성 속성 동작, SDK stdio MCP 통신, 원본 보존, Pages 하위 경로 빌드, 스킬 갱신 테스트. React 19, 스크린리더 전체 감사, 복합 위젯, 라이트 테마, Next.js 전용 통합은 아직 미검증 또는 미구현입니다.
+
+원티드 공식 문서와 공개 저장소를 비교 기준으로 삼았으며 이번 작업에서 Montage MCP 실시간 호출은 확인하지 못했습니다. IAK 구현은 Wanted 패키지와 별개입니다.

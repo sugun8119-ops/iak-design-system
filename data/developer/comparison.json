@@ -1,0 +1,21 @@
+{
+  "checkedAt":"2026-09-16",
+  "basis":"Wanted Montage official documentation and public repository. Live Wanted MCP calls were unavailable in this session.",
+  "sources":[
+    {"title":"Montage packages","url":"https://github.com/wanteddev/montage-web"},
+    {"title":"Montage components","url":"https://montage.wanted.co.kr/docs/components"},
+    {"title":"Button design","url":"https://montage.wanted.co.kr/docs/components/actions/button/design"},
+    {"title":"Text field design","url":"https://montage.wanted.co.kr/docs/components/selection-and-input/text-field/design"},
+    {"title":"Montage MCP tools","url":"https://github.com/wanteddev/montage-web/blob/main/packages/wds-mcp/README.md"}
+  ],
+  "items":[
+    {"area":"React 컴포넌트","wanted":"설치 가능한 컴포넌트 패키지와 다양한 UI 범주","before":"HTML 미리보기와 일부 JSX 조각","now":"기본 10개 export + TypeScript 타입 + 배포용 tarball","status":"부분 구현","remaining":"Dialog, Menu, Table, DatePicker, Toast 관리 등 복합 컴포넌트 확장"},
+    {"area":"컴포넌트 문서","wanted":"Design / Web 문서, variants, 상태, 예제","before":"원본 HTML과 문서 파일 링크","now":"props 표, 실제 React 플레이그라운드, 코드 복사, 접근성 메모","status":"구현","remaining":"10개 구현 범위에 한정"},
+    {"area":"디자인 토큰","wanted":"별도 테마 패키지와 스타일 엔진","before":"원본 CSS 및 토큰 검색","now":"162개 토큰 CSS·JSON을 React 패키지와 MCP에서 공유","status":"부분 구현","remaining":"IAK 다크 테마만 검증. 라이트 테마·테마 엔진 미구현"},
+    {"area":"아이콘","wanted":"전용 아이콘 컴포넌트 패키지","before":"106개 이름 참조, CDN 필요","now":"검증한 97개 SVG 로컬 패키징 + 타입 있는 Icon 컴포넌트","status":"부분 구현","remaining":"원본의 9개 이름은 upstream에 없어 unresolved로 표시"},
+    {"area":"AI / MCP","wanted":"컴포넌트·토큰·아이콘·가이드라인 조회 MCP","before":"SKILL.md와 자산 URL","now":"IAK 읽기 전용 stdio MCP 10개 도구 + 설치 파일","status":"구현","remaining":"AI 클라이언트 등록은 사용자가 선택. 원격 호스팅 MCP는 없음"},
+    {"area":"배포·업데이트","wanted":"패키지별 버전·프레임워크 통합·마이그레이션 도구","before":"GitHub Pages와 SKILL.md 갱신","now":"버전이 있는 UI/MCP tarball·lockfile·CI·변경 기록","status":"부분 구현","remaining":"npm registry 정식 발행·자동 버전 정책·codemod 미구현"},
+    {"area":"접근성·검증","wanted":"표준화된 컴포넌트·상태·구성 패턴","before":"원본 시각 상태 중심","now":"native 입력/선택, label/error 연결, loading 중복 클릭 차단, 의미 있는 동작 테스트","status":"부분 구현","remaining":"전체 브라우저·스크린리더 인증, 복합 위젯 포커스 관리 미검증"},
+    {"area":"플랫폼·개발 유틸리티","wanted":"Next.js 통합, styling engine, lint/codemod, 애니메이션 패키지","before":"정적 웹 전용","now":"React ESM과 타입, 원본 보존","status":"미구현","remaining":"Next.js 전용 어댑터·모바일 네이티브·lint/codemod·애니메이션 패키지"}
+  ]
+}
