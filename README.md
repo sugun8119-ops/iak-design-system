@@ -164,10 +164,13 @@ UI/MCP 0.9.1, 사이트/스킬 0.12.0입니다. React 19 소비자에서 발견�
 - Figma generated collections: `KOSAF/Primitives`, `KOSAF/Semantic`, `KOSAF/Layout`
 - Figma generated core components: Button, Input, Search, Checkbox, Radio, Tab, Badge, PaginationItem, TableRow, Modal, Stepper
 
-기존 관리 파일의 Typography, Button, Button Status, Tab, Mobile/PC Component, Table, Pagination, Interaction 영역은 KOSAF_V1 기준으로 점진적으로 교체합니다.
+2026-09-25: Common 두 섹션과 Interaction의 전수 조사 및 토큰·스타일 마이그레이션을 반영했습니다. Button 샘플 25개를 인스턴스로 연결했고, 원본 보존 예외와 남은 갭은 [마이그레이션 결과](KOSAF_V1/migration-status.md)에 기록했습니다.
 
 ## HYNIX_V1 · KPOP_V1 독립 디자인 시스템
 
 [시스템 선택](src/systems/README.md) · [공개 미리보기](https://sugun8119-ops.github.io/iak-design-system/systems/)
 
 `src/systems/HYNIX_V1`은 장비 관제/IoT, `src/systems/KPOP_V1`은 모바일 콘텐츠/엔터테인먼트에 사용합니다. 각 폴더의 CLAUDE.md가 Claude용 진입점이며 figma-system.json, claude-system.md, 독립 preview를 제공합니다. IAK Brand/RAIS의 원본 자산과 별도로 유지합니다.
+
+- KOSAF migration QA: [KOSAF_V1/migration-qa.json](KOSAF_V1/migration-qa.json)
+- KOSAF changed nodes: [KOSAF_V1/migration-changes.json](KOSAF_V1/migration-changes.json)

@@ -1,7 +1,7 @@
 {
   "id": "KOSAF_V1",
   "name": "KOSAF Public Commerce / Enterprise Web System",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "category": "Public / Enterprise / B2B Commerce",
   "source": {
     "finalFigma": {
@@ -162,26 +162,25 @@
     "color/action/danger",
     "color/state/focus",
     "color/state/warning",
-    "color/state/info-soft"
+    "color/state/info-soft",
+    "color/text/disabled",
+    "color/surface/disabled",
+    "color/border/subtle",
+    "color/icon/default",
+    "color/action/danger-hover"
   ],
   "components": [
     "Button",
     "Input",
-    "Search",
     "Checkbox",
     "Radio",
     "Tab",
-    "Badge",
     "PaginationItem",
     "TableRow",
+    "Search",
+    "Badge",
     "Modal",
-    "Stepper",
-    "Dropdown",
-    "Calendar",
-    "Header",
-    "Footer",
-    "ProductCard",
-    "SmallDataCard"
+    "Stepper"
   ],
   "patterns": [
     "TransactionStepper",
@@ -193,5 +192,86 @@
     "BuyerDashboard",
     "SellerDashboard",
     "ModalWorkflow"
-  ]
+  ],
+  "plannedComponents": [
+    "Dropdown",
+    "Calendar",
+    "Header",
+    "Footer",
+    "ProductCard",
+    "SmallDataCard"
+  ],
+  "patternsStatus": "Reference patterns; not separate implemented component families.",
+  "typographyInventory": {
+    "canonicalStyles": 9,
+    "sourcePreservingStyles": 60,
+    "total": 69,
+    "detailFile": "figma-inventory.json",
+    "policy": "Use canonical styles for new UI; preserve source-exact size, weight, line-height and tracking during migration. Both are linked to the Noto Sans KR font-family variable."
+  },
+  "migration": {
+    "date": "2026-09-25",
+    "status": "completed-with-preserved-exceptions",
+    "scope": [
+      "1:69548",
+      "1:69947",
+      "1:70749"
+    ],
+    "variableCount": 81,
+    "textStyleCount": 69,
+    "buttonInstanceReplacements": 25,
+    "nodeChanges": "migration-changes.json",
+    "qa": "migration-qa.json",
+    "report": "migration-status.md",
+    "unclassifiedVisibleRawPaintNodes": 832,
+    "missingBrandFontNodes": 34,
+    "limitations": "In-place token/style migration is not blanket component replacement or a full responsive/prototype rebuild."
+  },
+  "componentStates": {
+    "Button": [
+      "Style=Primary, State=Default",
+      "Style=Primary, State=Hover",
+      "Style=Primary, State=Disabled",
+      "Style=Secondary, State=Default",
+      "Style=Secondary, State=Hover",
+      "Style=Secondary, State=Disabled",
+      "Style=Danger, State=Default",
+      "Style=Danger, State=Hover",
+      "Style=Danger, State=Disabled",
+      "Style=Primary, State=Focus",
+      "Style=Secondary, State=Focus"
+    ],
+    "Input": [
+      "State=Default",
+      "State=Focus",
+      "State=Error",
+      "State=Disabled"
+    ],
+    "Checkbox": [
+      "State=Unchecked",
+      "State=Checked",
+      "State=Focus",
+      "State=Disabled"
+    ],
+    "Radio": [
+      "State=Unchecked",
+      "State=Checked",
+      "State=Focus",
+      "State=Disabled"
+    ],
+    "Tab": [
+      "State=Default",
+      "State=Selected"
+    ],
+    "PaginationItem": [
+      "State=Default",
+      "State=Hover",
+      "State=Selected",
+      "State=Disabled"
+    ],
+    "TableRow": [
+      "Device=Desktop",
+      "Device=Mobile"
+    ]
+  }
 }

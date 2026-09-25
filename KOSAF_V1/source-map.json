@@ -37,6 +37,98 @@
       "KOSAF/Badge",
       "KOSAF/Modal",
       "KOSAF/Stepper"
+    ],
+    "componentNodeIds": {
+      "KOSAF/Button": "218:590",
+      "KOSAF/Input": "218:600",
+      "KOSAF/Checkbox": "218:608",
+      "KOSAF/Radio": "218:614",
+      "KOSAF/Tab": "218:620",
+      "KOSAF/PaginationItem": "218:631",
+      "KOSAF/TableRow": "218:637",
+      "KOSAF/Search": "218:601",
+      "KOSAF/Badge": "218:621",
+      "KOSAF/Modal": "218:639",
+      "KOSAF/Stepper": "218:642"
+    },
+    "variableCount": 81,
+    "textStyleCount": 69,
+    "allCoreFamiliesParent": "218:570",
+    "buttonFocusVariants": {
+      "primary": "223:570",
+      "secondary": "223:572"
+    }
+  },
+  "migration": {
+    "date": "2026-09-25",
+    "status": "completed-with-preserved-exceptions",
+    "scannedSourceDescendants": 21768,
+    "scannedManagementDescendants": 16787,
+    "scope": [
+      "1:69548",
+      "1:69947",
+      "1:70749"
+    ],
+    "report": "migration-status.md",
+    "changedNodes": "migration-changes.json",
+    "qa": "migration-qa.json",
+    "inventory": "figma-inventory.json",
+    "untouchedReferenceNodes": [
+      "1:107843",
+      "213:712"
     ]
+  },
+  "preservation": {
+    "legacyPalettes": [
+      "1:69603",
+      "1:69659"
+    ],
+    "hiddenOriginals": [
+      "1:69734",
+      "1:69742",
+      "1:69737",
+      "1:69745",
+      "1:69736",
+      "1:69744",
+      "1:69741",
+      "1:69748",
+      "1:69735",
+      "1:69743",
+      "1:69739",
+      "1:69747",
+      "1:69738",
+      "1:69746",
+      "1:69740",
+      "1:69749",
+      "1:70389",
+      "1:70393",
+      "1:70397",
+      "1:70401",
+      "1:70405",
+      "1:70409",
+      "1:70413",
+      "1:70417",
+      "1:70421",
+      "1:70425",
+      "1:70429",
+      "1:70433",
+      "1:70437",
+      "1:70441",
+      "1:70445",
+      "1:70449",
+      "1:70469"
+    ],
+    "brandTextCount": 40,
+    "missingFontCount": 34,
+    "interactionCloseActions": [
+      "1:70959",
+      "1:71007",
+      "1:71112",
+      "1:71156",
+      "1:71208",
+      "1:85010"
+    ],
+    "sourceFileMutated": false,
+    "gameOfMindVisualAssetsImported": false
   }
 }

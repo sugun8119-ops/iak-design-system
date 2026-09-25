@@ -71,7 +71,7 @@ KOSAF_V1은 농산물 온라인 도매시장 최종 수정본에서 역추출한
 
 ### Actions
 - Button — Primary / Secondary / Danger
-- States — Default / Hover / Disabled
+- States — Default / Hover / Disabled; Primary / Secondary에는 Focus 추가
 - Search — 579×50, pill radius 25
 - Badge — short status text
 
@@ -135,4 +135,11 @@ IAK GameofMind의 다크/오렌지 외형은 KOSAF에 적용하지 않는다. KO
 - Interaction — 실제 화면/상호작용 레퍼런스
 - Frame 107 / Frame 108 — 메인 화면, 대시보드, 데이터 카드 레퍼런스
 
-향후 이 영역은 KOSAF_V1 컴포넌트 인스턴스와 semantic variable에 연결한다.
+2026-09-25: Common 두 섹션과 Interaction의 토큰·스타일 마이그레이션을 수행했다. Button 샘플 25개는 인스턴스로 교체했고, 나머지는 기존 구조 안에서 연결했다. 보존 예외와 미분류 색상 노드가 남아 있다. [migration-status.md](migration-status.md)를 실제 완료 범위로 참조한다.
+
+## 실제 자산과 원본 보존 규칙
+
+- 현재 변수 81개, 기본 Typography 9개 + KOSAF/Source 60개. 정확한 정의는 [figma-inventory.json](figma-inventory.json).
+- Source 스타일은 최종본의 실제 서체 조합을 보존한다. 신규 화면에는 기본 9개를 우선한다.
+- 위 컴포넌트/패턴 설명에는 설계 방향도 포함된다. 실제 생성된 11개 family와 구현 상태는 [figma-system.json](figma-system.json)의 components/componentStates를 따른다. plannedComponents는 구현되지 않은 항목이다.
+- 원본의 소형 컨트롤과 브랜드 서체 예외는 유지되어 있으므로 터치 영역·대비·누락 서체를 자동 해결된 것으로 간주하지 않는다.
