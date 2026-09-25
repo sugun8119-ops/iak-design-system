@@ -1,0 +1,582 @@
+{
+  "id": "KPOP_V1",
+  "name": "OFFBEAT",
+  "version": "1.0.0",
+  "category": "Mobile / Entertainment / Content",
+  "provenance": {
+    "referenceUrl": "https://www.behance.net/gallery/105759817/Kpop-World_App_GUI",
+    "reviewedAt": "2026-09-25",
+    "observed": [
+      "Saturated pink masthead with category navigation",
+      "Large rounded image-led stories with editorial overlays",
+      "White and pale-gray feeds, compact author metadata and social actions"
+    ],
+    "normalization": "All numeric values, sample copy/data, layouts and CSS graphics are newly authored interpretations, not extracted original design values. No customer assets bundled."
+  },
+  "tokens": {
+    "color": {
+      "canvas": {
+        "$type": "color",
+        "$value": "#F3F3F7"
+      },
+      "surface": {
+        "$type": "color",
+        "$value": "#FFFFFF"
+      },
+      "text": {
+        "$type": "color",
+        "$value": "#252438"
+      },
+      "muted": {
+        "$type": "color",
+        "$value": "#666478"
+      },
+      "border": {
+        "$type": "color",
+        "$value": "#DDDCE5"
+      },
+      "accent": {
+        "$type": "color",
+        "$value": "#C91C52"
+      },
+      "accentSoft": {
+        "$type": "color",
+        "$value": "#FFEAF1"
+      },
+      "selection": {
+        "$type": "color",
+        "$value": "#C91C52"
+      },
+      "success": {
+        "$type": "color",
+        "$value": "#176648"
+      },
+      "warning": {
+        "$type": "color",
+        "$value": "#885500"
+      },
+      "danger": {
+        "$type": "color",
+        "$value": "#B52C3B"
+      },
+      "white": {
+        "$type": "color",
+        "$value": "#FFFFFF"
+      }
+    },
+    "spacing": {
+      "0": {
+        "$type": "dimension",
+        "$value": {
+          "value": 0,
+          "unit": "px"
+        }
+      },
+      "4": {
+        "$type": "dimension",
+        "$value": {
+          "value": 4,
+          "unit": "px"
+        }
+      },
+      "8": {
+        "$type": "dimension",
+        "$value": {
+          "value": 8,
+          "unit": "px"
+        }
+      },
+      "12": {
+        "$type": "dimension",
+        "$value": {
+          "value": 12,
+          "unit": "px"
+        }
+      },
+      "16": {
+        "$type": "dimension",
+        "$value": {
+          "value": 16,
+          "unit": "px"
+        }
+      },
+      "20": {
+        "$type": "dimension",
+        "$value": {
+          "value": 20,
+          "unit": "px"
+        }
+      },
+      "24": {
+        "$type": "dimension",
+        "$value": {
+          "value": 24,
+          "unit": "px"
+        }
+      },
+      "32": {
+        "$type": "dimension",
+        "$value": {
+          "value": 32,
+          "unit": "px"
+        }
+      },
+      "48": {
+        "$type": "dimension",
+        "$value": {
+          "value": 48,
+          "unit": "px"
+        }
+      },
+      "64": {
+        "$type": "dimension",
+        "$value": {
+          "value": 64,
+          "unit": "px"
+        }
+      }
+    },
+    "radius": {
+      "sm": {
+        "$type": "dimension",
+        "$value": {
+          "value": 4,
+          "unit": "px"
+        }
+      },
+      "md": {
+        "$type": "dimension",
+        "$value": {
+          "value": 12,
+          "unit": "px"
+        }
+      },
+      "lg": {
+        "$type": "dimension",
+        "$value": {
+          "value": 24,
+          "unit": "px"
+        }
+      },
+      "xl": {
+        "$type": "dimension",
+        "$value": {
+          "value": 32,
+          "unit": "px"
+        }
+      }
+    },
+    "font": {
+      "family": {
+        "$type": "fontFamily",
+        "$value": [
+          "Arial",
+          "Apple SD Gothic Neo",
+          "Noto Sans KR",
+          "sans-serif"
+        ]
+      },
+      "size": {
+        "display": {
+          "$type": "dimension",
+          "$value": {
+            "value": 32,
+            "unit": "px"
+          }
+        },
+        "heading": {
+          "$type": "dimension",
+          "$value": {
+            "value": 24,
+            "unit": "px"
+          }
+        },
+        "title": {
+          "$type": "dimension",
+          "$value": {
+            "value": 18,
+            "unit": "px"
+          }
+        },
+        "body": {
+          "$type": "dimension",
+          "$value": {
+            "value": 16,
+            "unit": "px"
+          }
+        },
+        "meta": {
+          "$type": "dimension",
+          "$value": {
+            "value": 12,
+            "unit": "px"
+          }
+        }
+      }
+    },
+    "duration": {
+      "quick": {
+        "$type": "duration",
+        "$value": {
+          "value": 160,
+          "unit": "ms"
+        }
+      }
+    }
+  },
+  "typography": {
+    "display": {
+      "fontSize": 32,
+      "lineHeight": 46,
+      "fontWeight": 700,
+      "letterSpacing": -0.5
+    },
+    "heading": {
+      "fontSize": 24,
+      "lineHeight": 35,
+      "fontWeight": 700,
+      "letterSpacing": -0.5
+    },
+    "title": {
+      "fontSize": 18,
+      "lineHeight": 26,
+      "fontWeight": 700,
+      "letterSpacing": 0
+    },
+    "body": {
+      "fontSize": 16,
+      "lineHeight": 23,
+      "fontWeight": 400,
+      "letterSpacing": 0
+    },
+    "meta": {
+      "fontSize": 12,
+      "lineHeight": 17,
+      "fontWeight": 400,
+      "letterSpacing": 0
+    }
+  },
+  "effects": {
+    "raised": "0 8px 24px rgba(37,36,56,0.06)",
+    "inset": "none"
+  },
+  "layout": {
+    "referenceWidth": 390,
+    "columns": 4,
+    "gutter": 16,
+    "breakpoints": {
+      "mobile": 600,
+      "tablet": 900,
+      "desktop": 1200
+    },
+    "minTouchTarget": 44,
+    "responsive": "Single-column 320–480 mobile canvas; max reading width 680 on desktop"
+  },
+  "components": [
+    {
+      "name": "MobileShell",
+      "figmaName": "KPOP_V1/MobileShell",
+      "anatomy": "App header; scroll content; bottom navigation",
+      "variants": "width=320..480; state=ready|empty|error",
+      "autoLayout": "390 reference; 20 margins; 16 gutter; safe area bottom",
+      "behavior": "Reading view scales to 680 on wide screens; gallery may show 390px frame",
+      "tokenBindings": {
+        "text": "color.text",
+        "surface": "color.surface",
+        "focus": "color.selection",
+        "gap": "spacing.8"
+      },
+      "resizing": {
+        "horizontal": "FILL except badges/buttons HUG",
+        "vertical": "HUG except media with aspect ratio"
+      }
+    },
+    {
+      "name": "AppHeader",
+      "figmaName": "KPOP_V1/AppHeader",
+      "anatomy": "Generic wordmark; section label",
+      "variants": "variant=brand|back",
+      "autoLayout": "Horizontal; min-height 64; padding 16/20",
+      "behavior": "Back returns to feed; header does not obscure keyboard focus",
+      "tokenBindings": {
+        "text": "color.text",
+        "surface": "color.surface",
+        "focus": "color.selection",
+        "gap": "spacing.8"
+      },
+      "resizing": {
+        "horizontal": "FILL except badges/buttons HUG",
+        "vertical": "HUG except media with aspect ratio"
+      }
+    },
+    {
+      "name": "CategoryTabs",
+      "figmaName": "KPOP_V1/CategoryTabs",
+      "anatomy": "Category buttons and selected underline",
+      "variants": "selected=all|music|culture|stage",
+      "autoLayout": "Horizontal; min-height 44; overflow auto; gap 8",
+      "behavior": "Buttons expose aria-pressed; filtering is immediate and preserves focus",
+      "tokenBindings": {
+        "text": "color.text",
+        "surface": "color.surface",
+        "focus": "color.selection",
+        "gap": "spacing.8"
+      },
+      "resizing": {
+        "horizontal": "FILL except badges/buttons HUG",
+        "vertical": "HUG except media with aspect ratio"
+      }
+    },
+    {
+      "name": "FeatureStory",
+      "figmaName": "KPOP_V1/FeatureStory",
+      "anatomy": "Original media; category; title; metadata",
+      "variants": "variant=hero|detail; state=ready|media-missing",
+      "autoLayout": "4:5 hero; 16:10 detail; radius 24; padding 24",
+      "behavior": "Dark overlay behind white text; alt text if informative; link has explicit title",
+      "tokenBindings": {
+        "text": "color.text",
+        "surface": "color.surface",
+        "focus": "color.selection",
+        "gap": "spacing.8"
+      },
+      "resizing": {
+        "horizontal": "FILL except badges/buttons HUG",
+        "vertical": "HUG except media with aspect ratio"
+      }
+    },
+    {
+      "name": "StoryCard",
+      "figmaName": "KPOP_V1/StoryCard",
+      "anatomy": "Media thumbnail; category; title; reading time",
+      "variants": "variant=list|grid; state=ready|saved|media-missing",
+      "autoLayout": "List: 88x88 media and flexible text; gap 16; min-height 112",
+      "behavior": "Single descriptive link; avoid nested actions inside links",
+      "tokenBindings": {
+        "text": "color.text",
+        "surface": "color.surface",
+        "focus": "color.selection",
+        "gap": "spacing.8"
+      },
+      "resizing": {
+        "horizontal": "FILL except badges/buttons HUG",
+        "vertical": "HUG except media with aspect ratio"
+      }
+    },
+    {
+      "name": "AuthorMeta",
+      "figmaName": "KPOP_V1/AuthorMeta",
+      "anatomy": "Initial avatar; generic author; date",
+      "variants": "variant=compact|full",
+      "autoLayout": "Horizontal; gap 8; 32px avatar; 12px metadata",
+      "behavior": "Do not use real artist identity in demonstration content",
+      "tokenBindings": {
+        "text": "color.text",
+        "surface": "color.surface",
+        "focus": "color.selection",
+        "gap": "spacing.8"
+      },
+      "resizing": {
+        "horizontal": "FILL except badges/buttons HUG",
+        "vertical": "HUG except media with aspect ratio"
+      }
+    },
+    {
+      "name": "RankingRow",
+      "figmaName": "KPOP_V1/RankingRow",
+      "anatomy": "Rank; title; generic collection; trend text",
+      "variants": "trend=up|down|new",
+      "autoLayout": "Three columns 24/1fr/48; min-height 56",
+      "behavior": "Rank and trend use text, not color alone",
+      "tokenBindings": {
+        "text": "color.text",
+        "surface": "color.surface",
+        "focus": "color.selection",
+        "gap": "spacing.8"
+      },
+      "resizing": {
+        "horizontal": "FILL except badges/buttons HUG",
+        "vertical": "HUG except media with aspect ratio"
+      }
+    },
+    {
+      "name": "ScheduleRow",
+      "figmaName": "KPOP_V1/ScheduleRow",
+      "anatomy": "Date; event title; time",
+      "variants": "state=upcoming|ended",
+      "autoLayout": "Horizontal; gap 12; min-height 56",
+      "behavior": "State uses label; event data is fictional in preview",
+      "tokenBindings": {
+        "text": "color.text",
+        "surface": "color.surface",
+        "focus": "color.selection",
+        "gap": "spacing.8"
+      },
+      "resizing": {
+        "horizontal": "FILL except badges/buttons HUG",
+        "vertical": "HUG except media with aspect ratio"
+      }
+    },
+    {
+      "name": "ReactionBar",
+      "figmaName": "KPOP_V1/ReactionBar",
+      "anatomy": "Save button; local count or confirmation",
+      "variants": "saved=true|false",
+      "autoLayout": "Horizontal; gap 12; min-height 44",
+      "behavior": "Save exposes aria-pressed and live status; no implied server persistence",
+      "tokenBindings": {
+        "text": "color.text",
+        "surface": "color.surface",
+        "focus": "color.selection",
+        "gap": "spacing.8"
+      },
+      "resizing": {
+        "horizontal": "FILL except badges/buttons HUG",
+        "vertical": "HUG except media with aspect ratio"
+      }
+    },
+    {
+      "name": "BottomNav",
+      "figmaName": "KPOP_V1/BottomNav",
+      "anatomy": "Discover; category feed; story links",
+      "variants": "active=discover|feed|story",
+      "autoLayout": "Three equal columns; min-height 64; safe-area padding",
+      "behavior": "Use nav and aria-current=page; always show text labels",
+      "tokenBindings": {
+        "text": "color.text",
+        "surface": "color.surface",
+        "focus": "color.selection",
+        "gap": "spacing.8"
+      },
+      "resizing": {
+        "horizontal": "FILL except badges/buttons HUG",
+        "vertical": "HUG except media with aspect ratio"
+      }
+    },
+    {
+      "name": "Button",
+      "figmaName": "KPOP_V1/Button",
+      "anatomy": "Label; optional leading icon",
+      "variants": "variant=primary|secondary|quiet; state=default|hover|pressed|focus|disabled",
+      "autoLayout": "Horizontal center; gap 8; min-height 44; padding 12/16",
+      "behavior": "Enter/Space activates; disabled prevents input; visible 2px focus ring",
+      "tokenBindings": {
+        "text": "color.text",
+        "surface": "color.surface",
+        "focus": "color.selection",
+        "gap": "spacing.8"
+      },
+      "resizing": {
+        "horizontal": "FILL except badges/buttons HUG",
+        "vertical": "HUG except media with aspect ratio"
+      }
+    },
+    {
+      "name": "Field",
+      "figmaName": "KPOP_V1/Field",
+      "anatomy": "Visible label; input; help/error",
+      "variants": "state=default|focus|error|disabled",
+      "autoLayout": "Vertical; gap 8; input min-height 44; fill container",
+      "behavior": "Label linked to input; error text with aria-describedby; never placeholder-only",
+      "tokenBindings": {
+        "text": "color.text",
+        "surface": "color.surface",
+        "focus": "color.selection",
+        "gap": "spacing.8"
+      },
+      "resizing": {
+        "horizontal": "FILL except badges/buttons HUG",
+        "vertical": "HUG except media with aspect ratio"
+      }
+    }
+  ],
+  "templates": [
+    {
+      "level": "Main",
+      "name": "Discover",
+      "preview": "preview/index.html",
+      "components": [
+        "AppHeader",
+        "CategoryTabs",
+        "FeatureStory",
+        "RankingRow",
+        "BottomNav"
+      ],
+      "layout": "Shell > page heading > primary content > supporting content",
+      "states": [
+        "ready",
+        "loading",
+        "empty",
+        "error"
+      ]
+    },
+    {
+      "level": "Sub",
+      "name": "Category Feed",
+      "preview": "preview/sub.html",
+      "components": [
+        "CategoryTabs",
+        "Field",
+        "StoryCard",
+        "BottomNav"
+      ],
+      "layout": "Shell > page heading > primary content > supporting content",
+      "states": [
+        "ready",
+        "loading",
+        "empty",
+        "error"
+      ]
+    },
+    {
+      "level": "Detail",
+      "name": "Story Detail",
+      "preview": "preview/detail.html",
+      "components": [
+        "AuthorMeta",
+        "FeatureStory",
+        "ReactionBar",
+        "StoryCard"
+      ],
+      "layout": "Shell > page heading > primary content > supporting content",
+      "states": [
+        "ready",
+        "loading",
+        "empty",
+        "error"
+      ]
+    }
+  ],
+  "figma": {
+    "status": "Specification and token package; no native Figma file created",
+    "collection": "KPOP_V1",
+    "mode": "Light",
+    "variableNaming": "Flatten token paths to slash names, e.g. color/accent or spacing/16",
+    "typeMapping": {
+      "color": "COLOR; convert hex to normalized RGBA",
+      "dimension": "FLOAT; use $value.value in px",
+      "fontFamily": "STRING; choose first installed family",
+      "duration": "FLOAT; milliseconds"
+    },
+    "textStyles": "Create text styles from typography; lineHeight is pixels; family from tokens.font.family",
+    "effects": "Create named effect styles from effects; map CSS shadow to Figma drop/inner shadow",
+    "componentBuild": "Use components[].figmaName, autoLayout, variants, anatomy and tokenBindings. Layout strings are human-readable construction specs, not plugin commands.",
+    "tokenImport": "tokens is the portable typed-token subtree; the complete file is a custom design-system manifest, not a one-click native Figma import."
+  },
+  "accessibility": {
+    "textContrast": "At least 4.5:1 for body text",
+    "focus": "2px selection-color outline with 3px offset",
+    "motion": "Respect prefers-reduced-motion",
+    "stateRules": {
+      "loading": "Skeleton with aria-busy=true, maintain dimensions",
+      "empty": "Explicit message and reset/retry action",
+      "error": "Explain failed request and offer retry; preserve user input",
+      "disabled": "Native disabled for unavailable actions; never only opacity"
+    }
+  },
+  "previewContract": {
+    "runtime": "Plain HTML/CSS/JS. No build, database, router, external fonts or network requests.",
+    "data": "Fictional static fixtures only",
+    "persistence": "None; refresh resets state"
+  }
+}

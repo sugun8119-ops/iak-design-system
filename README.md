@@ -153,3 +153,9 @@ UI/MCP 0.9.1, 사이트/스킬 0.12.0입니다. React 19 소비자에서 발견�
 - `iak-refine-template`: 재현 문제 확인 → 해당 범위 수정 → 검증한 개선 규칙을 템플릿 JSON에 반영.
 
 등록 CLI와 입력 형식은 [템플릿 운영 가이드](src/developer/template-workflow.md)를 참고하세요. 커스텀 템플릿은 제작자가 검토한 정적 HTML·CSS·JavaScript를 등록합니다. 템플릿 수와 디자인 자산은 제작자가 직접 늘릴 수 있으며, 이 작업 흐름이 전체 컴포넌트 라이브러리를 자동 생성하지는 않습니다.
+
+## HYNIX_V1 · KPOP_V1 독립 디자인 시스템
+
+[시스템 선택](src/systems/README.md) · [공개 미리보기](https://sugun8119-ops.github.io/iak-design-system/systems/)
+
+`src/systems/HYNIX_V1`은 장비 관제/IoT, `src/systems/KPOP_V1`은 모바일 콘텐츠/엔터테인먼트에 사용합니다. 각 폴더의 CLAUDE.md가 Claude용 진입점이며 figma-system.json, claude-system.md, 독립 preview를 제공합니다. IAK Brand/RAIS의 원본 자산과 별도로 유지합니다.

@@ -1,0 +1,23 @@
+{
+  "version": "1.0.0",
+  "systems": [
+    {
+      "id": "HYNIX_V1",
+      "category": "Industrial / Device Control / Monitoring",
+      "tokens": "HYNIX_V1/figma-system.json",
+      "claude": "HYNIX_V1/claude-system.md",
+      "entrypoint": "HYNIX_V1/CLAUDE.md",
+      "preview": "HYNIX_V1/preview/index.html",
+      "figmaStatus": "pending team selection"
+    },
+    {
+      "id": "KPOP_V1",
+      "category": "Mobile / Entertainment / Content",
+      "tokens": "KPOP_V1/figma-system.json",
+      "claude": "KPOP_V1/claude-system.md",
+      "entrypoint": "KPOP_V1/CLAUDE.md",
+      "preview": "KPOP_V1/preview/index.html",
+      "figmaStatus": "pending team selection"
+    }
+  ]
+}

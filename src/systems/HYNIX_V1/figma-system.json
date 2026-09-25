@@ -1,0 +1,581 @@
+{
+  "id": "HYNIX_V1",
+  "name": "Relay Control",
+  "version": "1.0.0",
+  "category": "Industrial / Device Control / Monitoring",
+  "provenance": {
+    "referenceUrl": "https://www.behance.net/gallery/107517297/SK-hynix-system-ic-Device-Control-GUI-Design",
+    "reviewedAt": "2026-09-25",
+    "observed": [
+      "Cool pale-gray raised surfaces with rounded remote-screen tiles",
+      "Left equipment tree, compact session strip, multi-view workspace",
+      "Orange action emphasis, blue active screens, inset input fields"
+    ],
+    "normalization": "All numeric values, sample copy/data, layouts and CSS graphics are newly authored interpretations, not extracted original design values. No customer assets bundled."
+  },
+  "tokens": {
+    "color": {
+      "canvas": {
+        "$type": "color",
+        "$value": "#E9EDF3"
+      },
+      "surface": {
+        "$type": "color",
+        "$value": "#F4F6FA"
+      },
+      "text": {
+        "$type": "color",
+        "$value": "#202B3D"
+      },
+      "muted": {
+        "$type": "color",
+        "$value": "#546277"
+      },
+      "border": {
+        "$type": "color",
+        "$value": "#CAD2DF"
+      },
+      "accent": {
+        "$type": "color",
+        "$value": "#A94408"
+      },
+      "accentSoft": {
+        "$type": "color",
+        "$value": "#FFF0DF"
+      },
+      "selection": {
+        "$type": "color",
+        "$value": "#235DD2"
+      },
+      "success": {
+        "$type": "color",
+        "$value": "#176648"
+      },
+      "warning": {
+        "$type": "color",
+        "$value": "#885500"
+      },
+      "danger": {
+        "$type": "color",
+        "$value": "#B52C3B"
+      },
+      "white": {
+        "$type": "color",
+        "$value": "#FFFFFF"
+      }
+    },
+    "spacing": {
+      "0": {
+        "$type": "dimension",
+        "$value": {
+          "value": 0,
+          "unit": "px"
+        }
+      },
+      "4": {
+        "$type": "dimension",
+        "$value": {
+          "value": 4,
+          "unit": "px"
+        }
+      },
+      "8": {
+        "$type": "dimension",
+        "$value": {
+          "value": 8,
+          "unit": "px"
+        }
+      },
+      "12": {
+        "$type": "dimension",
+        "$value": {
+          "value": 12,
+          "unit": "px"
+        }
+      },
+      "16": {
+        "$type": "dimension",
+        "$value": {
+          "value": 16,
+          "unit": "px"
+        }
+      },
+      "20": {
+        "$type": "dimension",
+        "$value": {
+          "value": 20,
+          "unit": "px"
+        }
+      },
+      "24": {
+        "$type": "dimension",
+        "$value": {
+          "value": 24,
+          "unit": "px"
+        }
+      },
+      "32": {
+        "$type": "dimension",
+        "$value": {
+          "value": 32,
+          "unit": "px"
+        }
+      },
+      "48": {
+        "$type": "dimension",
+        "$value": {
+          "value": 48,
+          "unit": "px"
+        }
+      },
+      "64": {
+        "$type": "dimension",
+        "$value": {
+          "value": 64,
+          "unit": "px"
+        }
+      }
+    },
+    "radius": {
+      "sm": {
+        "$type": "dimension",
+        "$value": {
+          "value": 4,
+          "unit": "px"
+        }
+      },
+      "md": {
+        "$type": "dimension",
+        "$value": {
+          "value": 8,
+          "unit": "px"
+        }
+      },
+      "lg": {
+        "$type": "dimension",
+        "$value": {
+          "value": 16,
+          "unit": "px"
+        }
+      },
+      "xl": {
+        "$type": "dimension",
+        "$value": {
+          "value": 24,
+          "unit": "px"
+        }
+      }
+    },
+    "font": {
+      "family": {
+        "$type": "fontFamily",
+        "$value": [
+          "Arial",
+          "Apple SD Gothic Neo",
+          "Noto Sans KR",
+          "sans-serif"
+        ]
+      },
+      "size": {
+        "display": {
+          "$type": "dimension",
+          "$value": {
+            "value": 32,
+            "unit": "px"
+          }
+        },
+        "heading": {
+          "$type": "dimension",
+          "$value": {
+            "value": 24,
+            "unit": "px"
+          }
+        },
+        "title": {
+          "$type": "dimension",
+          "$value": {
+            "value": 18,
+            "unit": "px"
+          }
+        },
+        "body": {
+          "$type": "dimension",
+          "$value": {
+            "value": 14,
+            "unit": "px"
+          }
+        },
+        "meta": {
+          "$type": "dimension",
+          "$value": {
+            "value": 12,
+            "unit": "px"
+          }
+        }
+      }
+    },
+    "duration": {
+      "quick": {
+        "$type": "duration",
+        "$value": {
+          "value": 160,
+          "unit": "ms"
+        }
+      }
+    }
+  },
+  "typography": {
+    "display": {
+      "fontSize": 32,
+      "lineHeight": 46,
+      "fontWeight": 700,
+      "letterSpacing": -0.5
+    },
+    "heading": {
+      "fontSize": 24,
+      "lineHeight": 35,
+      "fontWeight": 700,
+      "letterSpacing": -0.5
+    },
+    "title": {
+      "fontSize": 18,
+      "lineHeight": 26,
+      "fontWeight": 700,
+      "letterSpacing": 0
+    },
+    "body": {
+      "fontSize": 14,
+      "lineHeight": 20,
+      "fontWeight": 400,
+      "letterSpacing": 0
+    },
+    "meta": {
+      "fontSize": 12,
+      "lineHeight": 17,
+      "fontWeight": 400,
+      "letterSpacing": 0
+    }
+  },
+  "effects": {
+    "raised": "6px 6px 16px #cbd2df, -6px -6px 16px #ffffff",
+    "inset": "inset 3px 3px 8px #cbd2df, inset -3px -3px 8px #ffffff"
+  },
+  "layout": {
+    "referenceWidth": 1440,
+    "columns": 12,
+    "gutter": 24,
+    "breakpoints": {
+      "mobile": 600,
+      "tablet": 900,
+      "desktop": 1200
+    },
+    "minTouchTarget": 44,
+    "responsive": "4/2/1 device columns; sidebar stacks below 900"
+  },
+  "components": [
+    {
+      "name": "AppShell",
+      "figmaName": "HYNIX_V1/AppShell",
+      "anatomy": "Session header; equipment sidebar; main workspace",
+      "variants": "density=comfortable|compact",
+      "autoLayout": "1440 reference; 208 sidebar; 24 outer margin; 24 gutter",
+      "behavior": "Below 900 stack sidebar as horizontal navigation; below 600 single column",
+      "tokenBindings": {
+        "text": "color.text",
+        "surface": "color.surface",
+        "focus": "color.selection",
+        "gap": "spacing.8"
+      },
+      "resizing": {
+        "horizontal": "FILL except badges/buttons HUG",
+        "vertical": "HUG except media with aspect ratio"
+      }
+    },
+    {
+      "name": "EquipmentTree",
+      "figmaName": "HYNIX_V1/EquipmentTree",
+      "anatomy": "Group; child equipment links; counts",
+      "variants": "expanded=true|false; selected=true|false",
+      "autoLayout": "Vertical; 44px rows; 16px child indent; width 208",
+      "behavior": "Use disclosure button and links, keyboard tab order follows visual order",
+      "tokenBindings": {
+        "text": "color.text",
+        "surface": "color.surface",
+        "focus": "color.selection",
+        "gap": "spacing.8"
+      },
+      "resizing": {
+        "horizontal": "FILL except badges/buttons HUG",
+        "vertical": "HUG except media with aspect ratio"
+      }
+    },
+    {
+      "name": "SessionBar",
+      "figmaName": "HYNIX_V1/SessionBar",
+      "anatomy": "Workspace name; connection; demo label",
+      "variants": "connection=connected|reconnecting|disconnected",
+      "autoLayout": "Horizontal; space-between; height min 56; wrap on small screens",
+      "behavior": "Reconnecting shows stale timestamp; do not imply live data",
+      "tokenBindings": {
+        "text": "color.text",
+        "surface": "color.surface",
+        "focus": "color.selection",
+        "gap": "spacing.8"
+      },
+      "resizing": {
+        "horizontal": "FILL except badges/buttons HUG",
+        "vertical": "HUG except media with aspect ratio"
+      }
+    },
+    {
+      "name": "DeviceTile",
+      "figmaName": "HYNIX_V1/DeviceTile",
+      "anatomy": "Generated screen; device name; status; last update",
+      "variants": "state=default|hover|selected|offline|loading",
+      "autoLayout": "Vertical; gap 12; padding 16; min-width 200; radius 16",
+      "behavior": "Open inspector on activation; offline disables commands, retains history",
+      "tokenBindings": {
+        "text": "color.text",
+        "surface": "color.surface",
+        "focus": "color.selection",
+        "gap": "spacing.8"
+      },
+      "resizing": {
+        "horizontal": "FILL except badges/buttons HUG",
+        "vertical": "HUG except media with aspect ratio"
+      }
+    },
+    {
+      "name": "StatusBadge",
+      "figmaName": "HYNIX_V1/StatusBadge",
+      "anatomy": "Dot; textual state",
+      "variants": "status=online|warning|offline|unknown",
+      "autoLayout": "Horizontal; gap 4; padding 4/8; hug content",
+      "behavior": "Always show text; unknown is not healthy",
+      "tokenBindings": {
+        "text": "color.text",
+        "surface": "color.surface",
+        "focus": "color.selection",
+        "gap": "spacing.8"
+      },
+      "resizing": {
+        "horizontal": "FILL except badges/buttons HUG",
+        "vertical": "HUG except media with aspect ratio"
+      }
+    },
+    {
+      "name": "MetricCard",
+      "figmaName": "HYNIX_V1/MetricCard",
+      "anatomy": "Label; value; unit; supporting text",
+      "variants": "state=normal|warning|unavailable",
+      "autoLayout": "Vertical; gap 8; padding 20; fill width",
+      "behavior": "Use tabular numerals; unavailable value is em dash",
+      "tokenBindings": {
+        "text": "color.text",
+        "surface": "color.surface",
+        "focus": "color.selection",
+        "gap": "spacing.8"
+      },
+      "resizing": {
+        "horizontal": "FILL except badges/buttons HUG",
+        "vertical": "HUG except media with aspect ratio"
+      }
+    },
+    {
+      "name": "TrendChart",
+      "figmaName": "HYNIX_V1/TrendChart",
+      "anatomy": "Title; line; axis units; accessible summary",
+      "variants": "state=ready|loading|empty|error",
+      "autoLayout": "Fill width; 180px plot; 16px padding",
+      "behavior": "Supply text summary; never encode series only by color",
+      "tokenBindings": {
+        "text": "color.text",
+        "surface": "color.surface",
+        "focus": "color.selection",
+        "gap": "spacing.8"
+      },
+      "resizing": {
+        "horizontal": "FILL except badges/buttons HUG",
+        "vertical": "HUG except media with aspect ratio"
+      }
+    },
+    {
+      "name": "ViewerPanel",
+      "figmaName": "HYNIX_V1/ViewerPanel",
+      "anatomy": "Toolbar; synthetic machine graphic; caption",
+      "variants": "state=connected|loading|disconnected",
+      "autoLayout": "Vertical; 16:10 viewport; min-width 0",
+      "behavior": "Remote control is integration-only; demo viewport is illustrative",
+      "tokenBindings": {
+        "text": "color.text",
+        "surface": "color.surface",
+        "focus": "color.selection",
+        "gap": "spacing.8"
+      },
+      "resizing": {
+        "horizontal": "FILL except badges/buttons HUG",
+        "vertical": "HUG except media with aspect ratio"
+      }
+    },
+    {
+      "name": "CommandPanel",
+      "figmaName": "HYNIX_V1/CommandPanel",
+      "anatomy": "Mode; setpoint; primary command; result",
+      "variants": "state=idle|confirming|pending|success|error|disabled",
+      "autoLayout": "Vertical; gap 16; padding 24; min-width 240",
+      "behavior": "Production commands need explicit target and confirmation; demo updates only local state",
+      "tokenBindings": {
+        "text": "color.text",
+        "surface": "color.surface",
+        "focus": "color.selection",
+        "gap": "spacing.8"
+      },
+      "resizing": {
+        "horizontal": "FILL except badges/buttons HUG",
+        "vertical": "HUG except media with aspect ratio"
+      }
+    },
+    {
+      "name": "EventRow",
+      "figmaName": "HYNIX_V1/EventRow",
+      "anatomy": "Time; severity label; description",
+      "variants": "severity=info|warning|error",
+      "autoLayout": "Horizontal wrapping; gap 16; min-height 48",
+      "behavior": "Chronological list; time and message readable without color",
+      "tokenBindings": {
+        "text": "color.text",
+        "surface": "color.surface",
+        "focus": "color.selection",
+        "gap": "spacing.8"
+      },
+      "resizing": {
+        "horizontal": "FILL except badges/buttons HUG",
+        "vertical": "HUG except media with aspect ratio"
+      }
+    },
+    {
+      "name": "Button",
+      "figmaName": "HYNIX_V1/Button",
+      "anatomy": "Label; optional leading icon",
+      "variants": "variant=primary|secondary|quiet; state=default|hover|pressed|focus|disabled",
+      "autoLayout": "Horizontal center; gap 8; min-height 44; padding 12/16",
+      "behavior": "Enter/Space activates; disabled prevents input; visible 2px focus ring",
+      "tokenBindings": {
+        "text": "color.text",
+        "surface": "color.surface",
+        "focus": "color.selection",
+        "gap": "spacing.8"
+      },
+      "resizing": {
+        "horizontal": "FILL except badges/buttons HUG",
+        "vertical": "HUG except media with aspect ratio"
+      }
+    },
+    {
+      "name": "Field",
+      "figmaName": "HYNIX_V1/Field",
+      "anatomy": "Visible label; input; help/error",
+      "variants": "state=default|focus|error|disabled",
+      "autoLayout": "Vertical; gap 8; input min-height 44; fill container",
+      "behavior": "Label linked to input; error text with aria-describedby; never placeholder-only",
+      "tokenBindings": {
+        "text": "color.text",
+        "surface": "color.surface",
+        "focus": "color.selection",
+        "gap": "spacing.8"
+      },
+      "resizing": {
+        "horizontal": "FILL except badges/buttons HUG",
+        "vertical": "HUG except media with aspect ratio"
+      }
+    }
+  ],
+  "templates": [
+    {
+      "level": "Main",
+      "name": "Fleet Overview",
+      "preview": "preview/index.html",
+      "components": [
+        "SessionBar",
+        "MetricCard",
+        "DeviceTile",
+        "EquipmentTree"
+      ],
+      "layout": "Shell > page heading > primary content > supporting content",
+      "states": [
+        "ready",
+        "loading",
+        "empty",
+        "error"
+      ]
+    },
+    {
+      "level": "Sub",
+      "name": "Equipment Group",
+      "preview": "preview/sub.html",
+      "components": [
+        "EquipmentTree",
+        "Field",
+        "DeviceTile",
+        "StatusBadge"
+      ],
+      "layout": "Shell > page heading > primary content > supporting content",
+      "states": [
+        "ready",
+        "loading",
+        "empty",
+        "error"
+      ]
+    },
+    {
+      "level": "Detail",
+      "name": "Device Inspector",
+      "preview": "preview/detail.html",
+      "components": [
+        "ViewerPanel",
+        "TrendChart",
+        "CommandPanel",
+        "EventRow"
+      ],
+      "layout": "Shell > page heading > primary content > supporting content",
+      "states": [
+        "ready",
+        "loading",
+        "empty",
+        "error"
+      ]
+    }
+  ],
+  "figma": {
+    "status": "Specification and token package; no native Figma file created",
+    "collection": "HYNIX_V1",
+    "mode": "Light",
+    "variableNaming": "Flatten token paths to slash names, e.g. color/accent or spacing/16",
+    "typeMapping": {
+      "color": "COLOR; convert hex to normalized RGBA",
+      "dimension": "FLOAT; use $value.value in px",
+      "fontFamily": "STRING; choose first installed family",
+      "duration": "FLOAT; milliseconds"
+    },
+    "textStyles": "Create text styles from typography; lineHeight is pixels; family from tokens.font.family",
+    "effects": "Create named effect styles from effects; map CSS shadow to Figma drop/inner shadow",
+    "componentBuild": "Use components[].figmaName, autoLayout, variants, anatomy and tokenBindings. Layout strings are human-readable construction specs, not plugin commands.",
+    "tokenImport": "tokens is the portable typed-token subtree; the complete file is a custom design-system manifest, not a one-click native Figma import."
+  },
+  "accessibility": {
+    "textContrast": "At least 4.5:1 for body text",
+    "focus": "2px selection-color outline with 3px offset",
+    "motion": "Respect prefers-reduced-motion",
+    "stateRules": {
+      "loading": "Skeleton with aria-busy=true, maintain dimensions",
+      "empty": "Explicit message and reset/retry action",
+      "error": "Explain failed request and offer retry; preserve user input",
+      "disabled": "Native disabled for unavailable actions; never only opacity"
+    }
+  },
+  "previewContract": {
+    "runtime": "Plain HTML/CSS/JS. No build, database, router, external fonts or network requests.",
+    "data": "Fictional static fixtures only",
+    "persistence": "None; refresh resets state"
+  }
+}
