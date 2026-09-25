@@ -1,0 +1,33 @@
+<!-- @dsCard group="Overlays" height=760 subtitle="selected · disabled · danger · long · separator" -->
+<!doctype html>
+<html lang="ko">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Menu — DEW_V1</title></head>
+<body>
+<div id="root"></div>
+<script>
+  var D = window.DEW, h = React.createElement;
+  function L(t) { return h('span', { className: 'dew-meta dew-pv-label' }, t); }
+  function C(t, node, style) { return h('div', { className: 'dew-pv-cell', style: style }, L(t), node); }
+  function H(t) { return h('p', { className: 'dew-meta dew-eyebrow dew-pv-h' }, t); }
+  function G(cells, wide) { return h('div', { className: 'dew-pv-grid' + (wide ? ' dew-pv-grid--wide' : '') }, cells); }
+  function K(list) { return list.map(function (n, i) { return h(React.Fragment, { key: i }, n); }); }
+
+  var items = [
+    { label: '최신순', selected: true },
+    { label: '읽기 시간 짧은 순', selected: false, state: 'hover' },
+    { label: '편집부 추천', selected: false, disabled: true, disabledReason: '다음 호부터 제공' },
+    { separator: true },
+    { label: 'Share this story — 이 이야기의 링크를 복사해서 다른 사람에게 보내기', icon: 'arrow-up-right', description: '긴 항목은 줄바꿈됩니다.' },
+    { label: '보관함에 저장', icon: 'bookmark', state: 'focus' },
+    { separator: true },
+    { label: '보관함에서 삭제', icon: 'trash', danger: true }
+  ];
+  var VIEW = [G(K([
+    C('closed trigger', h(D.Menu, { label: '정렬: 최신순', items: items })),
+    C('open (inline preview) — keyboard ↑ ↓ Esc', h(D.Menu, { label: '정렬: 최신순', defaultOpen: true, inline: true, items: items })),
+    C('text trigger, sm', h(D.Menu, { label: '더 보기', triggerVariant: 'text', size: 'sm', defaultOpen: true, inline: true, items: [{ label: '인쇄용 보기', icon: 'download' }, { label: '신고하기 (준비 중)', disabled: true }] }))
+  ]), true)];
+  ReactDOM.createRoot(document.getElementById('root')).render(h('div', { className: 'dew dew-pv' }, K(VIEW)));
+</script>
+</body>
+</html>

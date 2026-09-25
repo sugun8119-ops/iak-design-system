@@ -1,0 +1,15 @@
+<!-- @dsCard group="Media" height=460 subtitle="Landscape 4:3 · Portrait 3:4" -->
+<!doctype html>
+<html lang="ko">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>MediaCard — DEW_V1</title></head>
+<body>
+<div id="root"></div>
+<script>
+  var D = window.DEW, h = React.createElement;
+  var S = function (t) { return h('span', { className: 'dew-meta dew-pv-label' }, t); };
+  ReactDOM.createRoot(document.getElementById('root')).render(h('div', { className: 'dew dew-pv' }, h('div', { style: { display: 'grid', gridTemplateColumns: '7fr 5fr', gap: '24px', alignItems: 'start' } },
+    h('div', null, S('LANDSCAPE'), h(D.MediaCard, { orientation: 'landscape', tone: 'mint', label: '가로형 미디어 자리표시자', caption: '빛의 방향과 형태의 균형을 위한 미디어 예시.', credit: '자체 제작 도형' })),
+    h('div', null, S('PORTRAIT'), h(D.MediaCard, { orientation: 'portrait', label: '세로형 미디어 자리표시자', caption: '세로 크롭 예시.', credit: '자체 제작 도형' })))));
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ko">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="정적 샘플(상호작용 없음) · KOREX_V1 BrandHomeLoading"><title>BrandHomeLoading · KOREX_V1 (정적 샘플)</title>
+<link rel="stylesheet" href="../kit.css">
+<style>
+  /* page shell only — layout from README (max 1200 content, page padding 48/32/24); every value is a token */
+  body{margin:0;background:var(--canvas)}
+  .tp{box-sizing:border-box;max-width:calc(1200px + 2 * var(--space-48));margin:0 auto;padding:0 var(--space-48);font-family:var(--font-sans);color:var(--textPrimary)}
+  .tp-main > * + *{margin-top:var(--space-80)}
+  .tp-main{padding:var(--space-32) 0 var(--space-80)}
+  .tp-head{display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:var(--space-24);margin-bottom:var(--space-32)}
+  .tp .tp-head .kx-meta{margin-bottom:var(--space-8)}
+  .tp-intro{padding-top:var(--space-32)}
+  .tp .tp-intro .kx-display{margin:var(--space-16) 0}
+  .tp .tp-lead{max-width:62ch;color:var(--textSecondary)}
+  .tp-stack > * + *{margin-top:var(--space-32)}
+  .tp-spec{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-48);align-items:start}
+  .tp .tp-spec-info > * + *{margin-top:var(--space-24)}
+  .tp-badges,.tp-actions{display:flex;flex-wrap:wrap;gap:var(--space-8)}
+  .tp .kx-display,.tp .kx-heading{overflow-wrap:break-word;word-break:keep-all}
+  @media (min-width:768px) and (max-width:1023px){ .tp{padding:0 var(--space-32)} .tp-main > * + *{margin-top:var(--space-64)} }
+  @media (max-width:767px){ .tp{padding:0 var(--space-24)} .tp-main > * + *{margin-top:var(--space-48)} .tp-main{padding-bottom:var(--space-48)} .tp-spec{grid-template-columns:1fr;gap:var(--space-32)} .tp-spec .kx-media-tall,.tp-spec .kx-skel-tall{aspect-ratio:4/3} }
+</style>
+</head>
+<body>
+<p role="note" style="margin:0;padding:8px 24px;font:500 12px/18px var(--font-sans);color:var(--textPrimary);background:var(--primarySoft);border-bottom:1px solid var(--border)"><strong>정적 샘플</strong> — 상호작용 없음. 디자인 시스템 컴포넌트를 서버 렌더한 HTML이며 메뉴 열기·필터·페이지 이동·대화상자 열기는 동작하지 않는다. · <a href="../index.html">KOREX_V1 kit</a> · Template states · BrandHomeLoading</p>
+<div id="root"><div class="tp"><header class="kx kx-header"><a class="kx-brand" href="#">FORM &amp; PLACE</a><nav aria-label="주 탐색"><a href="#" aria-current="page">홈</a><a href="#">제품</a><a href="#">제품 상세</a></nav></header><main class="tp-main"><section class="kx kx-hero"><div><p class="kx-meta">OBJECTS FOR EVERYDAY LIVING</p><h1 class="kx-display">공간에 맞는 선택,<br/>일상에 맞는 형태.</h1><p class="kx-hero-text">소재와 쓰임을 기준으로 필요한 사물을 살펴보세요.</p><form class="kx kx-search" role="search"><label for="kx-q-1" class="kx-search-label">제품 검색</label><div class="kx-search-row"><input id="kx-q-1" type="search" class="kx-input" placeholder="예: 체어, 우드" autoComplete="off" value=""/><button type="submit" class="kx kx-cta kx-cta-primary">찾기 ↗</button></div></form></div><div class="kx-media kx-media-mint kx-media-tall" role="img" aria-label="히어로 미디어 자리표시자"></div></section><section><div class="tp-head kx"><div><p class="kx-meta">OUR COLLECTION</p><h2 class="kx-heading">생활을 구성하는 사물</h2></div><button type="button" class="kx kx-btn kx-btn-secondary kx-btn-md" disabled=""><span class="kx-btn-label">전체 제품</span><svg class="kx-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter" aria-hidden="true" focusable="false"><path d="M6 14 14 6"></path><path d="M8 6h6v6"></path></svg></button></div><div class="kx kx-grid" aria-busy="true"><article class="kx kx-card is-loading" aria-busy="true"><div class="kx kx-skeleton"><span aria-hidden="true" class="kx-skel-stack"><span class="kx-skel kx-skel-media"></span></span></div><div class="kx-card-text"><div class="kx kx-skeleton"><span aria-hidden="true" class="kx-skel-stack"><span class="kx-skel kx-skel-line" style="width:40%"></span></span></div><div class="kx kx-skeleton"><span aria-hidden="true" class="kx-skel-stack"><span class="kx-skel kx-skel-line kx-skel-title" style="width:70%"></span></span></div></div><span class="kx-sr">제품 정보를 불러오는 중</span></article><article class="kx kx-card is-loading" aria-busy="true"><div class="kx kx-skeleton"><span aria-hidden="true" class="kx-skel-stack"><span class="kx-skel kx-skel-media"></span></span></div><div class="kx-card-text"><div class="kx kx-skeleton"><span aria-hidden="true" class="kx-skel-stack"><span class="kx-skel kx-skel-line" style="width:40%"></span></span></div><div class="kx kx-skeleton"><span aria-hidden="true" class="kx-skel-stack"><span class="kx-skel kx-skel-line kx-skel-title" style="width:70%"></span></span></div></div><span class="kx-sr">제품 정보를 불러오는 중</span></article><article class="kx kx-card is-loading" aria-busy="true"><div class="kx kx-skeleton"><span aria-hidden="true" class="kx-skel-stack"><span class="kx-skel kx-skel-media"></span></span></div><div class="kx-card-text"><div class="kx kx-skeleton"><span aria-hidden="true" class="kx-skel-stack"><span class="kx-skel kx-skel-line" style="width:40%"></span></span></div><div class="kx kx-skeleton"><span aria-hidden="true" class="kx-skel-stack"><span class="kx-skel kx-skel-line kx-skel-title" style="width:70%"></span></span></div></div><span class="kx-sr">제품 정보를 불러오는 중</span></article></div></section><section class="kx kx-statement"><div class="kx-statement-inner"><p class="kx-meta">OUR APPROACH</p><h2 class="kx-heading">형태는 차분하게.<br/>쓰임은 분명하게.</h2><p class="kx-statement-body">매일 사용하는 물건일수록 공간과 자연스럽게 어울리는 균형을 생각합니다.</p></div></section></main><footer class="kx kx-footer"><span class="kx-footer-brand">FORM &amp; PLACE</span><span class="kx-meta">독립 예시 콘텐츠 · KOREX_V1 STYLE PREVIEW</span></footer></div></div>
+</body>
+</html>

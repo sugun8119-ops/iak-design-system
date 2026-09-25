@@ -1,0 +1,28 @@
+<!-- @dsCard group="Overlays" height=1400 subtitle="danger · default · loading · error + retry · long" -->
+<!doctype html>
+<html lang="ko">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AlertDialog — DEW_V1</title></head>
+<body>
+<div id="root"></div>
+<script>
+  var D = window.DEW, h = React.createElement;
+  function L(t) { return h('span', { className: 'dew-meta dew-pv-label' }, t); }
+  function C(t, node, style) { return h('div', { className: 'dew-pv-cell', style: style }, L(t), node); }
+  function H(t) { return h('p', { className: 'dew-meta dew-eyebrow dew-pv-h' }, t); }
+  function G(cells, wide) { return h('div', { className: 'dew-pv-grid' + (wide ? ' dew-pv-grid--wide' : '') }, cells); }
+  function K(list) { return list.map(function (n, i) { return h(React.Fragment, { key: i }, n); }); }
+
+  function frame(node) { return h('div', { className: 'dew-pv-frame' }, node); }
+  var VIEW = [
+    G(K([
+      C('danger — confirm destructive', frame(h(D.AlertDialog, { open: true, inline: true, title: '저장한 이야기를 삭제할까요?', description: '삭제하면 보관함에서 사라지며 되돌릴 수 없습니다.', confirmLabel: '삭제', onCancel: function () {}, onConfirm: function () {} }))),
+      C('default — neutral confirm', frame(h(D.AlertDialog, { open: true, inline: true, tone: 'default', title: '구독을 일시 중지할까요?', description: '다음 호부터 편지가 발송되지 않습니다.', confirmLabel: '일시 중지', onCancel: function () {}, onConfirm: function () {} }))),
+      C('loading — confirm in progress', frame(h(D.AlertDialog, { open: true, inline: true, title: '삭제하는 중', description: '잠시만 기다려 주세요.', confirmLabel: '삭제', loading: true, loadingLabel: '삭제 중', onCancel: function () {}, onConfirm: function () {} }))),
+      C('error + retry — action failed, dialog stays open', frame(h(D.AlertDialog, { open: true, inline: true, title: '저장한 이야기를 삭제할까요?', description: '삭제하면 보관함에서 사라지며 되돌릴 수 없습니다.', error: '연결이 끊겨 삭제하지 못했습니다. 네트워크를 확인한 뒤 다시 시도하세요.', errorTitle: '삭제하지 못했습니다', onCancel: function () {}, onRetry: function () {} }))),
+      C('long copy · KO+EN', frame(h(D.AlertDialog, { open: true, inline: true, title: 'Remove all 24 saved stories from this device?', description: '이 기기에 저장된 모든 이야기와 읽은 위치가 함께 지워집니다. 다른 기기에는 영향을 주지 않습니다.', confirmLabel: '모두 삭제', cancelLabel: '그대로 두기', onCancel: function () {}, onConfirm: function () {} })))
+    ]), true)
+  ];
+  ReactDOM.createRoot(document.getElementById('root')).render(h('div', { className: 'dew dew-pv' }, K(VIEW)));
+</script>
+</body>
+</html>

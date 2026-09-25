@@ -1,0 +1,27 @@
+<!-- @dsCard group="Forms" height=760 subtitle="label · description · counter · error · disabled · readOnly" -->
+<!doctype html>
+<html lang="ko">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Textarea — DEW_V1</title></head>
+<body>
+<div id="root"></div>
+<script>
+  var D = window.DEW, h = React.createElement;
+  function L(t) { return h('span', { className: 'dew-meta dew-pv-label' }, t); }
+  function C(t, node, style) { return h('div', { className: 'dew-pv-cell', style: style }, L(t), node); }
+  function H(t) { return h('p', { className: 'dew-meta dew-eyebrow dew-pv-h' }, t); }
+  function G(cells, wide) { return h('div', { className: 'dew-pv-grid' + (wide ? ' dew-pv-grid--wide' : '') }, cells); }
+  function K(list) { return list.map(function (n, i) { return h(React.Fragment, { key: i }, n); }); }
+
+  var LONG = '오후의 빛이 빈 탁자 위에 내려앉는 장면을 기록했습니다. This note mixes English and Korean to check wrapping across scripts without clipping any line of the reader letter.';
+  var VIEW = [G(K([
+    C('default + counter', h(D.Textarea, { label: '독자 편지', description: '다음 호에 소개될 수 있습니다.', placeholder: '짧은 감상을 남겨 주세요.', maxLength: 500 })),
+    C('focus', h(D.Textarea, { label: '독자 편지', state: 'focus', defaultValue: '좋은 이야기였습니다.', maxLength: 500 })),
+    C('error', h(D.Textarea, { label: '독자 편지', defaultValue: '', error: '내용을 10자 이상 입력하세요.', required: true })),
+    C('disabled', h(D.Textarea, { label: '편집부 메모', disabled: true, defaultValue: '예시 메모 — 편집 불가' })),
+    C('readOnly', h(D.Textarea, { label: '보낸 편지', readOnly: true, defaultValue: '지난주에 보낸 예시 편지입니다.' })),
+    C('long value · KO+EN', h(D.Textarea, { label: '긴 문구', defaultValue: LONG, rows: 5, maxLength: 500 }))
+  ]), true)];
+  ReactDOM.createRoot(document.getElementById('root')).render(h('div', { className: 'dew dew-pv' }, K(VIEW)));
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!-- @dsCard group="Layout" height=1500 subtitle="Feature · ThreeColumn" -->
+<!doctype html>
+<html lang="ko">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>EditorialGrid — DEW_V1</title></head>
+<body>
+<div id="root"></div>
+<script>
+  var D = window.DEW, h = React.createElement;
+  var S = function (t) { return h('span', { className: 'dew-meta dew-pv-label' }, t); };
+  ReactDOM.createRoot(document.getElementById('root')).render(h('div', { className: 'dew dew-wrap' },
+    h('div', { className: 'dew-section' }, h(D.EditorialGrid, { variant: 'feature', eyebrow: 'FEATURE', title: '이번 호의 이야기', items: [
+    { href: '#', media: { tone: 'mint' }, meta: 'CULTURE · 예시 에세이', title: '느린 오후의 색' },
+    { href: '#', media: { tone: 'light' }, meta: 'OBJECTS · 예시 에세이', title: '사물 사이의 여백' },
+    { href: '#', media: {}, meta: 'PLACES · 예시 에세이', title: '걷다 만난 작은 풍경' }
+  ] })),
+    h('div', { className: 'dew-section' }, h(D.EditorialGrid, { variant: 'three', eyebrow: 'SELECTED STORIES', title: '지금, 눈여겨볼 이야기', cta: { href: '#', label: '전체 저널' }, items: [
+    { href: '#', media: { tone: 'mint' }, meta: 'CULTURE · 예시 에세이', title: '느린 오후의 색' },
+    { href: '#', media: { tone: 'light' }, meta: 'OBJECTS · 예시 에세이', title: '사물 사이의 여백' },
+    { href: '#', media: {}, meta: 'PLACES · 예시 에세이', title: '걷다 만난 작은 풍경' }
+  ] }))));
+</script>
+</body>
+</html>

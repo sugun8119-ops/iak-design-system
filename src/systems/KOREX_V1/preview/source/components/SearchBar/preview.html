@@ -1,0 +1,19 @@
+<!-- @dsCard group="Search" height=370 -->
+<!doctype html>
+<html lang="ko">
+<head><meta charset="utf-8"><title>preview</title></head>
+<body style="margin:0;background:var(--canvas);padding:24px">
+<div id="root"></div>
+<script>
+  var K = window.KOREX, h = React.createElement;
+  var col = function (gap) { return { style: { display: 'flex', flexDirection: 'column', gap: gap || 24 } }; };
+  var row = function (gap) { return { style: { display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: gap || 24 } }; };
+  ReactDOM.createRoot(document.getElementById('root')).render(
+    h('div', col(32),
+      h(K.SearchBar, { label: '제품 검색 — Default', placeholder: '예: 체어, 우드' }),
+      h(K.SearchBar, { label: '제품 검색 — Focus', placeholder: '예: 체어, 우드', state: 'focus' }),
+      h(K.SearchBar, { label: '제품 검색 — Filled', defaultValue: '우드' }))
+  );
+</script>
+</body>
+</html>

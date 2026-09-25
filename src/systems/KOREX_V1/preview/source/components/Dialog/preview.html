@@ -1,0 +1,72 @@
+<!-- @dsCard group="Overlays" height=1500 subtitle="sm 400 · md 560 · lg 800" -->
+<!doctype html>
+<html lang="ko">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>preview</title>
+<style>
+  body{margin:0;background:var(--canvas);padding:var(--space-24)}
+  .pv{font-family:var(--font-sans);color:var(--textPrimary);font-size:15px;line-height:25px}
+  .pv .pv-origin{display:flex;flex-wrap:wrap;gap:var(--space-8);align-items:center;margin:0 0 var(--space-24);font-size:12px;line-height:18px;color:var(--textSecondary)}
+  .pv .pv-sec{margin:0 0 var(--space-32)}
+  .pv .pv-h{margin:0 0 var(--space-16);padding-bottom:var(--space-8);border-bottom:1px solid var(--border);font-size:12px;line-height:18px;font-weight:600;letter-spacing:.06em;color:var(--textSecondary)}
+  .pv-row{display:flex;flex-wrap:wrap;align-items:center;gap:var(--space-16)}
+  .pv-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:var(--space-24);align-items:start}
+  .pv-grid-wide{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:var(--space-24);align-items:start}
+  .pv-cell{display:flex;flex-direction:column;gap:var(--space-8);min-width:0}
+  .pv .pv-tag{font-size:12px;line-height:18px;font-weight:500;letter-spacing:.06em;color:var(--textSecondary)}
+  .pv-narrow{max-width:240px}
+  .pv-frame{position:relative;height:var(--h,360px);border:1px solid var(--border);border-radius:var(--radius-sm);overflow:hidden}
+  .pv-matrix{display:grid;grid-template-columns:96px repeat(3,auto);gap:var(--space-16);align-items:center;justify-content:start}
+  @media (max-width:520px){.pv-matrix{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div id="root" class="pv kx"></div>
+<script>
+  var K = window.KOREX, h = React.createElement, F = React.Fragment;
+  function origin(observed, derived) {
+    return h('p', { className: 'pv-origin' },
+      h(K.Badge, { tone: 'brand', icon: false, size: 'sm' }, 'IAK coverage'), h('span', null, observed),
+      derived ? h(K.Badge, { tone: 'neutral', icon: false, size: 'sm' }, 'derived-extension') : null, derived ? h('span', null, derived) : null);
+  }
+  function kids(args, from) { return Array.prototype.slice.call(args, from); }
+  function el(tag, props, list) { return h.apply(null, [tag, props].concat(list)); }
+  function sec(title) { return el('section', { className: 'pv-sec' }, [h('h2', { className: 'pv-h' }, title)].concat(kids(arguments, 1))); }
+  function cell(tag) { return el('div', { className: 'pv-cell' }, [h('span', { className: 'pv-tag' }, tag)].concat(kids(arguments, 1))); }
+  function row() { return el('div', { className: 'pv-row' }, kids(arguments, 0)); }
+  function grid() { return el('div', { className: 'pv-grid' }, kids(arguments, 0)); }
+  function wide() { return el('div', { className: 'pv-grid-wide' }, kids(arguments, 0)); }
+
+  function LiveDialog() {
+    var s = React.useState(false);
+    return sec('LIVE — 실제 모달 (Esc · 바깥 클릭 · 닫기)', row(
+      h(K.Button, { variant: 'secondary', onClick: function () { s[1](true); } }, '대화상자 열기'),
+      h(K.Dialog, { open: s[0], size: 'sm', title: '예시 모달', description: 'Tab은 패널 안에서 순환하고 Esc로 닫힙니다.', onClose: function () { s[1](false); },
+        footer: [h(K.Button, { key: 'a', variant: 'secondary', onClick: function () { s[1](false); } }, '닫기'), h(K.Button, { key: 'b', onClick: function () { s[1](false); } }, '확인')] })));
+  }
+  function View() {
+    return h(F, null,
+origin('KOREX surface 면·1px border·radius-lg 6 상한', 'Dialog 전체 · overlay 파생 토큰'),
+      h(LiveDialog),
+      sec('SM 400 — 확인',
+        h('div', { className: 'pv-frame', style: { '--h': '300px' } },
+          h(K.Dialog, { open: true, contained: true, size: 'sm', title: '비교 목록에 담았습니다', description: '비교 목록은 이 브라우저 세션 동안만 유지됩니다.', onClose: function () {},
+            footer: [h(K.Button, { key: 'a', variant: 'secondary' }, '계속 보기'), h(K.Button, { key: 'b' }, '비교하기')] }))),
+      sec('MD 560 — 폼',
+        h('div', { className: 'pv-frame', style: { '--h': '560px' } },
+          h(K.Dialog, { open: true, contained: true, size: 'md', title: '제품 문의', description: '예시 폼입니다. 실제 전송 기능은 포함하지 않습니다.', onClose: function () {},
+            footer: [h(K.Button, { key: 'a', variant: 'secondary' }, '취소'), h(K.Button, { key: 'b', loading: true, loadingLabel: '보내는 중…' }, '보내기')] },
+            h('div', { style: { display: 'flex', flexDirection: 'column', gap: 16 } },
+              h(K.TextField, { label: '이름', required: true, defaultValue: '홍길동' }),
+              h(K.Textarea, { label: '문의 내용', required: true, rows: 3, error: '문의 내용을 10자 이상 입력해 주세요.', defaultValue: '가격 문의' }))))),
+      sec('LG 800 — 긴 제목 · 긴 본문 · KO/EN',
+        h('div', { className: 'pv-frame', style: { '--h': '520px' } },
+          h(K.Dialog, { open: true, contained: true, size: 'lg', title: '확장형 라운드 다이닝 테이블 1800 소재 안내 — Material guide for the Extended Round Dining Table', onClose: function () {},
+            footer: [h(K.Button, { key: 'b' }, '확인')] },
+            h(K.Table, { caption: '소재별 관리 (예시)', columns: [{ key: 'm', label: '소재' }, { key: 'c', label: '관리 방법' }, { key: 'n', label: '비고' }],
+              rows: [{ m: '스톤 Stone', c: '중성 세제를 묻힌 부드러운 천으로 닦고 바로 마른 천으로 물기를 제거합니다.', n: null }, { m: '우드 Wood', c: '직사광선과 난방기 가까이를 피합니다.', n: '오일 마감 예시' }] }))))
+    );
+  }
+  ReactDOM.createRoot(document.getElementById('root')).render(h(View));
+</script>
+</body>
+</html>

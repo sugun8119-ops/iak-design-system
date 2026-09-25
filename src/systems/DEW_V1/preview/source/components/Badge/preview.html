@@ -1,0 +1,28 @@
+<!-- @dsCard group="Status" height=320 subtitle="neutral · info · success · warning · danger" -->
+<!doctype html>
+<html lang="ko">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Badge — DEW_V1</title></head>
+<body>
+<div id="root"></div>
+<script>
+  var D = window.DEW, h = React.createElement;
+  function L(t) { return h('span', { className: 'dew-meta dew-pv-label' }, t); }
+  function C(t, node, style) { return h('div', { className: 'dew-pv-cell', style: style }, L(t), node); }
+  function H(t) { return h('p', { className: 'dew-meta dew-eyebrow dew-pv-h' }, t); }
+  function G(cells, wide) { return h('div', { className: 'dew-pv-grid' + (wide ? ' dew-pv-grid--wide' : '') }, cells); }
+  function K(list) { return list.map(function (n, i) { return h(React.Fragment, { key: i }, n); }); }
+
+  var VIEW = [G(K([
+    C('neutral', h(D.Badge, null, '예시 에세이')),
+    C('info', h(D.Badge, { tone: 'info' }, '새 이야기')),
+    C('success', h(D.Badge, { tone: 'success' }, '저장됨')),
+    C('warning', h(D.Badge, { tone: 'warning' }, '수정 중')),
+    C('danger', h(D.Badge, { tone: 'danger' }, '게시 중단')),
+    C('no icon', h(D.Badge, { tone: 'success', icon: null }, 'SAVED')),
+    C('long · KO+EN', h('div', { style: { maxWidth: '220px' } }, h(D.Badge, { tone: 'info' }, 'Special edition — 연말 특별호 한정 이야기'))),
+    C('with ArticleMeta', h('div', { style: { display: 'flex', gap: '16px', alignItems: 'center', flexWrap: 'wrap' } }, h(D.Badge, { tone: 'info' }, '새 이야기'), h(D.ArticleMeta, { items: ['CULTURE', '3분 읽기'] })))
+  ]))];
+  ReactDOM.createRoot(document.getElementById('root')).render(h('div', { className: 'dew dew-pv' }, K(VIEW)));
+</script>
+</body>
+</html>

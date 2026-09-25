@@ -1,0 +1,42 @@
+<!-- @dsCard height=288 -->
+<!doctype html>
+<html lang="ko">
+<head><meta charset="utf-8"><title>KOREX_V1 cover</title>
+<style>
+  html,body{margin:0;height:100%;background:var(--canvas)}
+  .cv{position:relative;width:960px;height:288px;overflow:hidden;background:var(--canvas);font-family:var(--font-sans)}
+  .cv svg{position:absolute;left:480px;top:0;width:480px;height:288px}
+  .pr{fill:var(--primary)} .pd{fill:var(--primaryDark)} .ps{fill:var(--primarySoft)} .bd{fill:var(--border)}
+  .tile{rx:var(--radius-md);ry:var(--radius-md)}
+  .txt{position:absolute;left:48px;bottom:40px;max-width:440px}
+  .name{margin:0;font-size:80px;line-height:.92;font-weight:700;letter-spacing:-.045em;color:var(--textPrimary)}
+  .tag{margin:16px 0 0;font-size:13px;line-height:18px;color:var(--textSecondary)}
+</style></head>
+<body>
+<div class="cv">
+  <svg viewBox="0 0 480 288" aria-hidden="true">
+    <!--
+      blocks: primary slab 160×288 (bleeds top/bottom) · primaryDark ×2, primarySoft ×5, border ×2 tiles 88×66 (4:3)
+      arrangement: one tall slab (the image-first hero) with a 3-column product grid to its right, flush to the right edge
+      pattern: modular tiles cut by radius-md — KOREX explores products in a tidy 3-column 4:3 ContentGrid; the arch in the slab is the system's own media placeholder silhouette
+      scales: gap space-16 between tiles, space-24 slab→grid and top inset, tile corners radius-md (4px), slab square
+    -->
+    <rect class="pr" x="0" y="0" width="160" height="288"/>
+    <path class="ps" transform="rotate(-13 80 150)" d="M46 232 V118 a34 34 0 0 1 68 0 V232 Z"/>
+      <rect class="tile pd" x="184" y="24" width="88" height="66"/>
+      <rect class="tile ps" x="288" y="24" width="88" height="66"/>
+      <rect class="tile ps" x="392" y="24" width="88" height="66"/>
+      <rect class="tile ps" x="184" y="106" width="88" height="66"/>
+      <rect class="tile bd" x="288" y="106" width="88" height="66"/>
+      <rect class="tile pd" x="392" y="106" width="88" height="66"/>
+      <rect class="tile bd" x="184" y="188" width="88" height="66"/>
+      <rect class="tile ps" x="288" y="188" width="88" height="66"/>
+      <rect class="tile ps" x="392" y="188" width="88" height="66"/>
+  </svg>
+  <div class="txt">
+    <h1 class="name">KOREX_V1</h1>
+    <p class="tag">딥 그린 · 산세리프 · 이미지 우선 — Corporate / Brand / Product Web</p>
+  </div>
+</div>
+</body>
+</html>

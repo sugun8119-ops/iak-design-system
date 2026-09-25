@@ -1,0 +1,27 @@
+<!-- @dsCard group="Forms" height=620 subtitle="placeholder · selected · error · disabled · long option" -->
+<!doctype html>
+<html lang="ko">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Select — DEW_V1</title></head>
+<body>
+<div id="root"></div>
+<script>
+  var D = window.DEW, h = React.createElement;
+  function L(t) { return h('span', { className: 'dew-meta dew-pv-label' }, t); }
+  function C(t, node, style) { return h('div', { className: 'dew-pv-cell', style: style }, L(t), node); }
+  function H(t) { return h('p', { className: 'dew-meta dew-eyebrow dew-pv-h' }, t); }
+  function G(cells, wide) { return h('div', { className: 'dew-pv-grid' + (wide ? ' dew-pv-grid--wide' : '') }, cells); }
+  function K(list) { return list.map(function (n, i) { return h(React.Fragment, { key: i }, n); }); }
+
+  var OPTS = [{ value: 'new', label: '최신순' }, { value: 'read', label: '읽기 시간 짧은 순' }, { value: 'az', label: '제목 가나다순' }, { value: 'x', label: '편집부 추천 (준비 중)', disabled: true }];
+  var VIEW = [G(K([
+    C('placeholder', h(D.Select, { label: '정렬', placeholder: '정렬 기준 선택', options: OPTS })),
+    C('selected + description', h(D.Select, { label: '정렬', description: '목록 순서만 바뀝니다.', defaultValue: 'read', options: OPTS })),
+    C('focus', h(D.Select, { label: '주제', state: 'focus', defaultValue: 'c', options: [{ value: 'c', label: '문화' }, { value: 'o', label: '사물' }] })),
+    C('error', h(D.Select, { label: '발행 주기', placeholder: '선택', required: true, error: '발행 주기를 선택하세요.', options: [{ value: 'w', label: '매주' }] })),
+    C('disabled', h(D.Select, { label: '언어', defaultValue: 'ko', disabled: true, options: [{ value: 'ko', label: '한국어' }] })),
+    C('long option · KO+EN', h(D.Select, { label: 'Archive section', defaultValue: 'l', options: [{ value: 'l', label: 'Culture & Objects — 문화와 사물에 관한 아주 긴 섹션 이름 예시' }] }))
+  ]))];
+  ReactDOM.createRoot(document.getElementById('root')).render(h('div', { className: 'dew dew-pv' }, K(VIEW)));
+</script>
+</body>
+</html>

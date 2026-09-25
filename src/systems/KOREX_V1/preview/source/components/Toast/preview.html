@@ -1,0 +1,59 @@
+<!-- @dsCard group="Feedback" height=900 subtitle="info · success · warning · error" -->
+<!doctype html>
+<html lang="ko">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>preview</title>
+<style>
+  body{margin:0;background:var(--canvas);padding:var(--space-24)}
+  .pv{font-family:var(--font-sans);color:var(--textPrimary);font-size:15px;line-height:25px}
+  .pv .pv-origin{display:flex;flex-wrap:wrap;gap:var(--space-8);align-items:center;margin:0 0 var(--space-24);font-size:12px;line-height:18px;color:var(--textSecondary)}
+  .pv .pv-sec{margin:0 0 var(--space-32)}
+  .pv .pv-h{margin:0 0 var(--space-16);padding-bottom:var(--space-8);border-bottom:1px solid var(--border);font-size:12px;line-height:18px;font-weight:600;letter-spacing:.06em;color:var(--textSecondary)}
+  .pv-row{display:flex;flex-wrap:wrap;align-items:center;gap:var(--space-16)}
+  .pv-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:var(--space-24);align-items:start}
+  .pv-grid-wide{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:var(--space-24);align-items:start}
+  .pv-cell{display:flex;flex-direction:column;gap:var(--space-8);min-width:0}
+  .pv .pv-tag{font-size:12px;line-height:18px;font-weight:500;letter-spacing:.06em;color:var(--textSecondary)}
+  .pv-narrow{max-width:240px}
+  .pv-frame{position:relative;height:var(--h,360px);border:1px solid var(--border);border-radius:var(--radius-sm);overflow:hidden}
+  .pv-matrix{display:grid;grid-template-columns:96px repeat(3,auto);gap:var(--space-16);align-items:center;justify-content:start}
+  @media (max-width:520px){.pv-matrix{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div id="root" class="pv kx"></div>
+<script>
+  var K = window.KOREX, h = React.createElement, F = React.Fragment;
+  function origin(observed, derived) {
+    return h('p', { className: 'pv-origin' },
+      h(K.Badge, { tone: 'brand', icon: false, size: 'sm' }, 'IAK coverage'), h('span', null, observed),
+      derived ? h(K.Badge, { tone: 'neutral', icon: false, size: 'sm' }, 'derived-extension') : null, derived ? h('span', null, derived) : null);
+  }
+  function kids(args, from) { return Array.prototype.slice.call(args, from); }
+  function el(tag, props, list) { return h.apply(null, [tag, props].concat(list)); }
+  function sec(title) { return el('section', { className: 'pv-sec' }, [h('h2', { className: 'pv-h' }, title)].concat(kids(arguments, 1))); }
+  function cell(tag) { return el('div', { className: 'pv-cell' }, [h('span', { className: 'pv-tag' }, tag)].concat(kids(arguments, 1))); }
+  function row() { return el('div', { className: 'pv-row' }, kids(arguments, 0)); }
+  function grid() { return el('div', { className: 'pv-grid' }, kids(arguments, 0)); }
+  function wide() { return el('div', { className: 'pv-grid-wide' }, kids(arguments, 0)); }
+
+  function View() {
+    return h(F, null,
+origin('KOREX 팔레트 역할과 meta 타입', 'Toast 전체 · 4 tones'),
+      sec('4 TONES — 색 + 아이콘 + 단어',
+        wide(
+          h(K.Toast, { tone: 'info', title: '예시 데이터입니다', onClose: function () {} }, '실제 프로젝트의 제품 정보로 교체해 주세요.'),
+          h(K.Toast, { tone: 'success', title: '비교 목록에 담았습니다', onClose: function () {} }, '라운드 테이블 · 1개 추가'),
+          h(K.Toast, { tone: 'warning', title: '재고가 적습니다', onClose: function () {} }, '예시 수량 기준 2개 남았습니다.'),
+          h(K.Toast, { tone: 'error', title: '목록을 불러오지 못했습니다', onClose: function () {}, action: h(K.Button, { variant: 'secondary', size: 'sm', icon: 'refresh' }, '다시 시도') }, '잠시 후 다시 시도해 주세요.'))),
+      sec('LONG TEXT · KO/EN · NO CLOSE · INLINE',
+        wide(
+          h(K.Toast, { tone: 'success', title: 'Saved to comparison — 확장형 라운드 다이닝 테이블 1800 (Extended Round Dining Table)', onClose: function () {} }, '긴 제목과 본문은 줄바꿈하며 자르지 않습니다. Long titles wrap instead of truncating.'),
+          h(K.Toast, { tone: 'info', title: '자동으로 사라지지 않는 안내' }, '닫기 버튼이 없으면 화면 흐름 안에 고정된 안내로 쓴다.')),
+        h('div', { style: { height: 16 } }),
+        h(K.Toast, { tone: 'warning', inline: true, title: '인라인(페이지 안) 경고 — 폭 100%' }, '목록 상단에 붙는 안내로 쓸 때는 inline을 사용합니다.'))
+    );
+  }
+  ReactDOM.createRoot(document.getElementById('root')).render(h(View));
+</script>
+</body>
+</html>

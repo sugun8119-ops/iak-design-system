@@ -1,0 +1,15 @@
+<!-- @dsCard group="Editorial" height=720 subtitle="텍스트 5열 + 미디어 7열" -->
+<!doctype html>
+<html lang="ko">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>FeatureStory — DEW_V1</title></head>
+<body>
+<div id="root"></div>
+<script>
+  var D = window.DEW, h = React.createElement;
+  var S = function (t) { return h('span', { className: 'dew-meta dew-pv-label' }, t); };
+  ReactDOM.createRoot(document.getElementById('root')).render(h('div', { className: 'dew dew-wrap' }, h(D.FeatureStory, { as: 'h2', eyebrow: 'JOURNAL / EVERYDAY CULTURE', title: h(React.Fragment, null, '사소한 장면,', h('br'), '오래 남는 감각.'),
+    description: '빛과 사물, 그리고 일상에서 발견한 새로운 시선을 모읍니다.', cta: { href: '#', label: '이번 이야기 읽기' },
+    media: { label: '빛과 형태를 표현한 추상 미디어 자리표시자', caption: 'FIG. 01 — 빛과 형태', credit: '자체 제작 도형' } })));
+</script>
+</body>
+</html>

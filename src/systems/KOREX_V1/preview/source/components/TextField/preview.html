@@ -1,0 +1,63 @@
+<!-- @dsCard group="Forms" height=1100 subtitle="label · description · error · required · readOnly · disabled" -->
+<!doctype html>
+<html lang="ko">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>preview</title>
+<style>
+  body{margin:0;background:var(--canvas);padding:var(--space-24)}
+  .pv{font-family:var(--font-sans);color:var(--textPrimary);font-size:15px;line-height:25px}
+  .pv .pv-origin{display:flex;flex-wrap:wrap;gap:var(--space-8);align-items:center;margin:0 0 var(--space-24);font-size:12px;line-height:18px;color:var(--textSecondary)}
+  .pv .pv-sec{margin:0 0 var(--space-32)}
+  .pv .pv-h{margin:0 0 var(--space-16);padding-bottom:var(--space-8);border-bottom:1px solid var(--border);font-size:12px;line-height:18px;font-weight:600;letter-spacing:.06em;color:var(--textSecondary)}
+  .pv-row{display:flex;flex-wrap:wrap;align-items:center;gap:var(--space-16)}
+  .pv-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:var(--space-24);align-items:start}
+  .pv-grid-wide{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:var(--space-24);align-items:start}
+  .pv-cell{display:flex;flex-direction:column;gap:var(--space-8);min-width:0}
+  .pv .pv-tag{font-size:12px;line-height:18px;font-weight:500;letter-spacing:.06em;color:var(--textSecondary)}
+  .pv-narrow{max-width:240px}
+  .pv-frame{position:relative;height:var(--h,360px);border:1px solid var(--border);border-radius:var(--radius-sm);overflow:hidden}
+  .pv-matrix{display:grid;grid-template-columns:96px repeat(3,auto);gap:var(--space-16);align-items:center;justify-content:start}
+  @media (max-width:520px){.pv-matrix{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div id="root" class="pv kx"></div>
+<script>
+  var K = window.KOREX, h = React.createElement, F = React.Fragment;
+  function origin(observed, derived) {
+    return h('p', { className: 'pv-origin' },
+      h(K.Badge, { tone: 'brand', icon: false, size: 'sm' }, 'IAK coverage'), h('span', null, observed),
+      derived ? h(K.Badge, { tone: 'neutral', icon: false, size: 'sm' }, 'derived-extension') : null, derived ? h('span', null, derived) : null);
+  }
+  function kids(args, from) { return Array.prototype.slice.call(args, from); }
+  function el(tag, props, list) { return h.apply(null, [tag, props].concat(list)); }
+  function sec(title) { return el('section', { className: 'pv-sec' }, [h('h2', { className: 'pv-h' }, title)].concat(kids(arguments, 1))); }
+  function cell(tag) { return el('div', { className: 'pv-cell' }, [h('span', { className: 'pv-tag' }, tag)].concat(kids(arguments, 1))); }
+  function row() { return el('div', { className: 'pv-row' }, kids(arguments, 0)); }
+  function grid() { return el('div', { className: 'pv-grid' }, kids(arguments, 0)); }
+  function wide() { return el('div', { className: 'pv-grid-wide' }, kids(arguments, 0)); }
+
+  function View() {
+    return h(F, null,
+origin('KOREX 입력(48px, textSecondary 경계, 항상 보이는 label)을 그대로 사용', 'description · error/success 메시지 · readOnly · sm 크기'),
+      sec('STATES',
+        grid(
+          cell('default', h(K.TextField, { label: '제품명', placeholder: '예: 모듈 체어' })),
+          cell('description', h(K.TextField, { label: '제품명', description: '목록과 상세 화면에 그대로 노출됩니다.', placeholder: '예: 모듈 체어' })),
+          cell('required', h(K.TextField, { label: '담당자 이메일', required: true, type: 'email', placeholder: 'name@example.com' })),
+          cell('focus', h(K.TextField, { label: '제품명', state: 'focus', defaultValue: '라운드 테이블' })),
+          cell('error', h(K.TextField, { label: '담당자 이메일', required: true, type: 'email', defaultValue: 'name@', error: '이메일 형식이 올바르지 않습니다. 예: name@example.com' })),
+          cell('success', h(K.TextField, { label: '제품 코드', defaultValue: 'KX-CH-0001', success: '사용할 수 있는 코드입니다.' })),
+          cell('readOnly', h(K.TextField, { label: '등록 번호', readOnly: true, defaultValue: 'SAMPLE-2026-0003' })),
+          cell('disabled', h(K.TextField, { label: '제품명', disabled: true, defaultValue: '편집 권한 없음' })))),
+      sec('SIZE · LONG VALUE · KO/EN',
+        grid(
+          cell('sm (44)', h(K.TextField, { label: '검색어', size: 'sm', placeholder: '체어, 우드' })),
+          cell('long value', h(K.TextField, { label: '설치 주소', defaultValue: '예시시 예시구 예시로 123, 예시빌딩 12층 1203-B호 (Sample Tower, Suite 1203-B)' })),
+          cell('English label', h(K.TextField, { label: 'Company name', description: 'Shown on the quote header.', required: true, placeholder: 'Sample Studio Ltd.' })),
+          cell('long label', h(K.TextField, { label: '제품 상세 페이지 하단에 노출할 보조 설명 문구 (Secondary description)', placeholder: '최대 1줄' }))))
+    );
+  }
+  ReactDOM.createRoot(document.getElementById('root')).render(h(View));
+</script>
+</body>
+</html>

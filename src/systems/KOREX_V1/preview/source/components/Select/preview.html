@@ -1,0 +1,57 @@
+<!-- @dsCard group="Forms" height=700 subtitle="placeholder · long option · error · disabled" -->
+<!doctype html>
+<html lang="ko">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>preview</title>
+<style>
+  body{margin:0;background:var(--canvas);padding:var(--space-24)}
+  .pv{font-family:var(--font-sans);color:var(--textPrimary);font-size:15px;line-height:25px}
+  .pv .pv-origin{display:flex;flex-wrap:wrap;gap:var(--space-8);align-items:center;margin:0 0 var(--space-24);font-size:12px;line-height:18px;color:var(--textSecondary)}
+  .pv .pv-sec{margin:0 0 var(--space-32)}
+  .pv .pv-h{margin:0 0 var(--space-16);padding-bottom:var(--space-8);border-bottom:1px solid var(--border);font-size:12px;line-height:18px;font-weight:600;letter-spacing:.06em;color:var(--textSecondary)}
+  .pv-row{display:flex;flex-wrap:wrap;align-items:center;gap:var(--space-16)}
+  .pv-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:var(--space-24);align-items:start}
+  .pv-grid-wide{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:var(--space-24);align-items:start}
+  .pv-cell{display:flex;flex-direction:column;gap:var(--space-8);min-width:0}
+  .pv .pv-tag{font-size:12px;line-height:18px;font-weight:500;letter-spacing:.06em;color:var(--textSecondary)}
+  .pv-narrow{max-width:240px}
+  .pv-frame{position:relative;height:var(--h,360px);border:1px solid var(--border);border-radius:var(--radius-sm);overflow:hidden}
+  .pv-matrix{display:grid;grid-template-columns:96px repeat(3,auto);gap:var(--space-16);align-items:center;justify-content:start}
+  @media (max-width:520px){.pv-matrix{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div id="root" class="pv kx"></div>
+<script>
+  var K = window.KOREX, h = React.createElement, F = React.Fragment;
+  function origin(observed, derived) {
+    return h('p', { className: 'pv-origin' },
+      h(K.Badge, { tone: 'brand', icon: false, size: 'sm' }, 'IAK coverage'), h('span', null, observed),
+      derived ? h(K.Badge, { tone: 'neutral', icon: false, size: 'sm' }, 'derived-extension') : null, derived ? h('span', null, derived) : null);
+  }
+  function kids(args, from) { return Array.prototype.slice.call(args, from); }
+  function el(tag, props, list) { return h.apply(null, [tag, props].concat(list)); }
+  function sec(title) { return el('section', { className: 'pv-sec' }, [h('h2', { className: 'pv-h' }, title)].concat(kids(arguments, 1))); }
+  function cell(tag) { return el('div', { className: 'pv-cell' }, [h('span', { className: 'pv-tag' }, tag)].concat(kids(arguments, 1))); }
+  function row() { return el('div', { className: 'pv-row' }, kids(arguments, 0)); }
+  function grid() { return el('div', { className: 'pv-grid' }, kids(arguments, 0)); }
+  function wide() { return el('div', { className: 'pv-grid-wide' }, kids(arguments, 0)); }
+
+  function View() {
+    return h(F, null,
+origin('KOREX FilterPanel의 네이티브 select를 필드 규격으로 정리', 'description · error · readOnly · 자체 chevron 아이콘'),
+      sec('STATES',
+        grid(
+          cell('placeholder', h(K.Select, { label: '제품 종류', placeholder: '선택하세요', options: [{ value: 'seating', label: '체어' }, { value: 'tables', label: '테이블' }, { value: 'lighting', label: '조명' }] })),
+          cell('selected', h(K.Select, { label: '제품 종류', defaultValue: 'tables', options: [{ value: 'seating', label: '체어' }, { value: 'tables', label: '테이블' }, { value: 'lighting', label: '조명' }] })),
+          cell('focus', h(K.Select, { label: '정렬', state: 'focus', defaultValue: 'new', options: [{ value: 'new', label: '최신순' }, { value: 'name', label: '이름순' }] })),
+          cell('required + error', h(K.Select, { label: '설치 지역', required: true, placeholder: '선택하세요', error: '설치 지역을 선택해 주세요.', options: [{ value: 'a', label: '지역 A' }, { value: 'b', label: '지역 B' }] })),
+          cell('disabled option', h(K.Select, { label: '소재', defaultValue: 'wood', description: '스톤은 이번 예시에서 선택할 수 없습니다.', options: [{ value: 'wood', label: '우드' }, { value: 'stone', label: '스톤 (품절)', disabled: true }, { value: 'fabric', label: '패브릭' }] })),
+          cell('readOnly', h(K.Select, { label: '분류', readOnly: true, defaultValue: 'seating', options: [{ value: 'seating', label: '체어' }] })),
+          cell('disabled', h(K.Select, { label: '분류', disabled: true, defaultValue: 'seating', options: [{ value: 'seating', label: '체어' }] })),
+          cell('long option · KO/EN', h(K.Select, { label: 'Collection / 컬렉션', defaultValue: 'long', options: [{ value: 'long', label: '확장형 라운드 다이닝 테이블 컬렉션 — Extended Round Dining Table Collection 1800' }, { value: 's', label: 'Short' }] }))))
+    );
+  }
+  ReactDOM.createRoot(document.getElementById('root')).render(h(View));
+</script>
+</body>
+</html>

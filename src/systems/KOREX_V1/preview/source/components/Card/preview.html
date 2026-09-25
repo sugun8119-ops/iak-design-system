@@ -1,0 +1,60 @@
+<!-- @dsCard group="Content" height=1300 subtitle="default · hover · focus · selected · loading · missing image · long" -->
+<!doctype html>
+<html lang="ko">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>preview</title>
+<style>
+  body{margin:0;background:var(--canvas);padding:var(--space-24)}
+  .pv{font-family:var(--font-sans);color:var(--textPrimary);font-size:15px;line-height:25px}
+  .pv .pv-origin{display:flex;flex-wrap:wrap;gap:var(--space-8);align-items:center;margin:0 0 var(--space-24);font-size:12px;line-height:18px;color:var(--textSecondary)}
+  .pv .pv-sec{margin:0 0 var(--space-32)}
+  .pv .pv-h{margin:0 0 var(--space-16);padding-bottom:var(--space-8);border-bottom:1px solid var(--border);font-size:12px;line-height:18px;font-weight:600;letter-spacing:.06em;color:var(--textSecondary)}
+  .pv-row{display:flex;flex-wrap:wrap;align-items:center;gap:var(--space-16)}
+  .pv-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:var(--space-24);align-items:start}
+  .pv-grid-wide{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:var(--space-24);align-items:start}
+  .pv-cell{display:flex;flex-direction:column;gap:var(--space-8);min-width:0}
+  .pv .pv-tag{font-size:12px;line-height:18px;font-weight:500;letter-spacing:.06em;color:var(--textSecondary)}
+  .pv-narrow{max-width:240px}
+  .pv-frame{position:relative;height:var(--h,360px);border:1px solid var(--border);border-radius:var(--radius-sm);overflow:hidden}
+  .pv-matrix{display:grid;grid-template-columns:96px repeat(3,auto);gap:var(--space-16);align-items:center;justify-content:start}
+  @media (max-width:520px){.pv-matrix{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div id="root" class="pv kx"></div>
+<script>
+  var K = window.KOREX, h = React.createElement, F = React.Fragment;
+  function origin(observed, derived) {
+    return h('p', { className: 'pv-origin' },
+      h(K.Badge, { tone: 'brand', icon: false, size: 'sm' }, 'IAK coverage'), h('span', null, observed),
+      derived ? h(K.Badge, { tone: 'neutral', icon: false, size: 'sm' }, 'derived-extension') : null, derived ? h('span', null, derived) : null);
+  }
+  function kids(args, from) { return Array.prototype.slice.call(args, from); }
+  function el(tag, props, list) { return h.apply(null, [tag, props].concat(list)); }
+  function sec(title) { return el('section', { className: 'pv-sec' }, [h('h2', { className: 'pv-h' }, title)].concat(kids(arguments, 1))); }
+  function cell(tag) { return el('div', { className: 'pv-cell' }, [h('span', { className: 'pv-tag' }, tag)].concat(kids(arguments, 1))); }
+  function row() { return el('div', { className: 'pv-row' }, kids(arguments, 0)); }
+  function grid() { return el('div', { className: 'pv-grid' }, kids(arguments, 0)); }
+  function wide() { return el('div', { className: 'pv-grid-wide' }, kids(arguments, 0)); }
+
+  function View() {
+    return h(F, null,
+origin('KOREX ProductCard/ImageCard(미디어 4:3 → meta → title)를 일반 Card로 정리', 'outlined 면 · selected · loading · 이미지 누락'),
+      sec('STATES — outlined',
+        grid(
+          cell('default', h(K.Card, { media: { tone: 'mint' }, meta: 'SEATING / 우드', title: '모듈 체어' }, '앉는 깊이를 조절할 수 있는 예시 제품입니다.')),
+          cell('hover (link)', h(K.Card, { href: '#', state: 'hover', media: { tone: 'light' }, meta: 'LIGHTING / 패브릭', title: '소프트 램프' }, '부드럽게 확산되는 조명 예시.')),
+          cell('focus', h(K.Card, { href: '#', state: 'focus', media: {}, meta: 'TABLES / 스톤', title: '라운드 테이블' }, '키보드 포커스 상태.')),
+          cell('selected', h(K.Card, { selected: true, media: { tone: 'mint' }, meta: 'SEATING / 패브릭', title: '라운지 체어' }, '비교 목록에 담긴 상태.')),
+          cell('loading', h(K.Card, { loading: true })),
+          cell('missing image', h(K.Card, { media: { missing: true }, meta: 'STORAGE / 스틸', title: '오픈 선반' }, '대표 이미지가 아직 등록되지 않았습니다.')))),
+      sec('LONG TEXT · KO/EN · PLAIN · ACTIONS',
+        grid(
+          cell('long title — 2줄 말줄임 + title', h(K.Card, { href: '#', media: {}, meta: 'TABLES / 스톤 · STONE', title: '확장형 라운드 다이닝 테이블 1800 — Extended Round Dining Table with Separate Leaf and Matte Stone Top' }, '긴 제목은 두 줄까지, 전체 이름은 title 속성과 상세 화면에서 제공합니다.')),
+          cell('plain (KOREX 기본 카드 결)', h(K.Card, { variant: 'plain', media: { tone: 'light' }, meta: 'LIGHTING', title: 'Floor Lamp / 플로어 램프' })),
+          cell('text only + footer actions', h(K.Card, { meta: 'GUIDE', title: '소재 관리 안내', footer: [h(K.Button, { key: 'a', size: 'sm', variant: 'secondary' }, '자세히'), h(K.Button, { key: 'b', size: 'sm', variant: 'ghost' }, '나중에')] }, '우드·스톤·패브릭 소재별 관리 방법을 정리한 예시 카드입니다.'))))
+    );
+  }
+  ReactDOM.createRoot(document.getElementById('root')).render(h(View));
+</script>
+</body>
+</html>

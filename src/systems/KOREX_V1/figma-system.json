@@ -1,0 +1,823 @@
+{
+  "id": "KOREX_V1",
+  "name": "KOREX Brand Web System",
+  "version": "1.2.0",
+  "category": "Corporate / Brand / Product Web",
+  "foundation": {
+    "colors": {
+      "canvas": "#F5F6F2",
+      "surface": "#FFFFFF",
+      "textPrimary": "#172019",
+      "textSecondary": "#677068",
+      "border": "#D9DED8",
+      "primary": "#07523D",
+      "primaryDark": "#04382B",
+      "primarySoft": "#DCE8E3"
+    },
+    "typography": {
+      "display": {
+        "family": "Sans",
+        "size": 52,
+        "lineHeight": 60,
+        "weight": 700
+      },
+      "heading": {
+        "family": "Sans",
+        "size": 32,
+        "lineHeight": 40,
+        "weight": 700
+      },
+      "title": {
+        "family": "Sans",
+        "size": 20,
+        "lineHeight": 28,
+        "weight": 600
+      },
+      "body": {
+        "family": "Sans",
+        "size": 15,
+        "lineHeight": 25,
+        "weight": 400
+      },
+      "meta": {
+        "family": "Sans",
+        "size": 12,
+        "lineHeight": 18,
+        "weight": 500
+      }
+    },
+    "spacing": [
+      4,
+      8,
+      16,
+      24,
+      32,
+      48,
+      64,
+      80,
+      96
+    ],
+    "radius": {
+      "sm": 2,
+      "md": 4,
+      "lg": 6
+    },
+    "grid": {
+      "desktop": {
+        "columns": 12,
+        "maxWidth": 1200,
+        "gutter": 24
+      },
+      "tablet": {
+        "columns": 8,
+        "gutter": 20
+      },
+      "mobile": {
+        "columns": 4,
+        "gutter": 16
+      }
+    }
+  },
+  "components": [
+    "GlobalHeader",
+    "HeroSearch",
+    "SearchBar",
+    "CategoryNav",
+    "FilterPanel",
+    "ProductCard",
+    "ImageCard",
+    "ContentGrid",
+    "BrandStatement",
+    "CTA",
+    "Footer",
+    "Button",
+    "TextField",
+    "Textarea",
+    "Select",
+    "Checkbox",
+    "Switch",
+    "Badge",
+    "Card",
+    "Skeleton",
+    "Icon",
+    "Dialog",
+    "Menu",
+    "Table",
+    "Pagination",
+    "Toast",
+    "AlertDialog"
+  ],
+  "templates": [
+    "BrandHome",
+    "SearchList",
+    "ProductDetail"
+  ],
+  "provenance": {
+    "reference": "https://www.behance.net/gallery/133721087/KOREX-PM_WEB_UIUX_Design",
+    "basis": "Prior approved tokens + public portfolio thumbnail observed 2026-09-25. Detail page returned HTTP 403.",
+    "precision": "Normalized reusable values; not sampled measurements or original source tokens.",
+    "assets": "No original logos, copy, photography or real records are included. Icons are self-drawn; sample product names and table values are fictional.",
+    "observedMeaning": "'observed' in coverage/componentSpecs means inherited from the earlier normalized KOREX_V1 preview (prior approved tokens + public thumbnail). It does not mean precise extraction or measurement from the Behance original."
+  },
+  "responsive": {
+    "unit": "px",
+    "breakpoints": {
+      "mobile": "0–767",
+      "tablet": "768–1023",
+      "desktop": "1024+"
+    },
+    "frameWidths": [
+      1440,
+      834,
+      390
+    ],
+    "pagePadding": {
+      "desktop": 48,
+      "tablet": 32,
+      "mobile": 24
+    },
+    "mobileTypography": {
+      "display": {
+        "size": 36,
+        "lineHeight": 44
+      },
+      "heading": {
+        "size": 28,
+        "lineHeight": 36
+      }
+    }
+  },
+  "fontMapping": {
+    "Sans": {
+      "figma": "Inter",
+      "web": "Arial, \"Noto Sans KR\", sans-serif",
+      "usedBy": [
+        "display",
+        "heading",
+        "title",
+        "body",
+        "meta"
+      ]
+    },
+    "note": "Figma uses the existing Inter text styles for all 5 roles. Fonts are not bundled; the web renders with Arial and Noto Sans KR fallbacks. Glyph widths differ: Latin widths differ between Inter and Arial (Inter is generally slightly wider), and Inter has no Hangul glyphs, so Korean is drawn by a substitute font in Figma and by Noto Sans KR (or the OS default Korean font) on the web. Re-check line breaks and button/badge widths with the real fonts.",
+    "removed": "Serif mapping (Noto Serif KR / Georgia) removed — no role uses it. preview/styles.css still declares an unused --font-serif variable."
+  },
+  "componentSpecs": {
+    "GlobalHeader": {
+      "layout": "가로 Auto Layout, 양끝 정렬, 최소 높이 80; 모바일 wrap",
+      "anatomy": "텍스트 브랜드, 탐색 링크",
+      "variants": [
+        "Default"
+      ]
+    },
+    "HeroSearch": {
+      "layout": "배경 미디어와 별도 단색 텍스트 패널; 12열",
+      "anatomy": "제목, 설명, SearchBar",
+      "variants": [
+        "Default",
+        "MissingImage (derived-extension)"
+      ]
+    },
+    "SearchBar": {
+      "layout": "가로 Auto Layout, 높이 최소 48; 입력 Fill, 버튼 Hug",
+      "anatomy": "항상 보이는 label, search input, submit",
+      "variants": [
+        "Default",
+        "Focus",
+        "Filled",
+        "Disabled (derived-extension)"
+      ]
+    },
+    "CategoryNav": {
+      "layout": "가로 Auto Layout, gap 24; 모바일 wrap",
+      "anatomy": "카테고리 링크 또는 필터 버튼",
+      "variants": [
+        "Default",
+        "Selected",
+        "Hover",
+        "Focus"
+      ]
+    },
+    "FilterPanel": {
+      "layout": "가로 wrap, gap 16; 필요하면 세로",
+      "anatomy": "카테고리 select, 초기화 버튼, 결과 수",
+      "variants": [
+        "Default",
+        "Active",
+        "Empty",
+        "Disabled (derived-extension)"
+      ]
+    },
+    "ProductCard": {
+      "layout": "세로 Auto Layout, gap 16; 그림 4:3, radius 4",
+      "anatomy": "미디어, 분류, 제목 링크",
+      "variants": [
+        "Default",
+        "Hover",
+        "Focus",
+        "Loading (derived-extension)",
+        "MissingImage (derived-extension)"
+      ]
+    },
+    "ImageCard": {
+      "layout": "세로 Auto Layout, gap 16; 그림 4:3",
+      "anatomy": "미디어, 설명",
+      "variants": [
+        "Default",
+        "MissingImage (derived-extension)"
+      ]
+    },
+    "ContentGrid": {
+      "layout": "3열, gap 24; 태블릿 2열; 모바일 1열",
+      "anatomy": "ProductCard 또는 ImageCard",
+      "variants": [
+        "Default",
+        "Empty"
+      ]
+    },
+    "BrandStatement": {
+      "layout": "12열 중 8열 텍스트; 섹션 간격 80",
+      "anatomy": "메타, 제목, 본문",
+      "variants": [
+        "Default"
+      ]
+    },
+    "CTA": {
+      "layout": "가로 Auto Layout, 최소 높이 44, padding 8/24, radius 4",
+      "anatomy": "라벨",
+      "variants": [
+        "Primary",
+        "Secondary",
+        "Hover",
+        "Focus",
+        "Disabled (derived-extension)"
+      ]
+    },
+    "Footer": {
+      "layout": "가로 Auto Layout, 양끝 정렬, 상단 선; 모바일 세로",
+      "anatomy": "일반 텍스트 브랜드, 예시 안내",
+      "variants": [
+        "Default"
+      ]
+    },
+    "Button": {
+      "layout": "가로 Auto Layout, gap 8, radius 4; sm 36(hit 44) padding 4/16 · md 44 padding 8/24 · lg 56 padding 8/32",
+      "anatomy": "아이콘(선택), 라벨",
+      "variants": [
+        "primary",
+        "secondary",
+        "ghost",
+        "danger",
+        "sm",
+        "md",
+        "lg",
+        "default",
+        "hover",
+        "focus",
+        "pressed",
+        "disabled",
+        "loading"
+      ],
+      "origin": "observed: primary/secondary/text action · derived-extension: ghost name, danger, sm/lg, pressed, loading"
+    },
+    "TextField": {
+      "layout": "세로 Auto Layout, gap 8; 입력 48, padding 12/16, textSecondary 1px, radius 4",
+      "anatomy": "label(+필수/읽기 전용), description, input, message",
+      "variants": [
+        "default",
+        "description",
+        "required",
+        "focus",
+        "error",
+        "success",
+        "readOnly",
+        "disabled",
+        "sm"
+      ],
+      "origin": "observed: input+label · derived-extension: description, messages, readOnly, sm"
+    },
+    "Textarea": {
+      "layout": "TextField 규격, 최소 높이 120, 세로 리사이즈",
+      "anatomy": "label, counter, description, textarea, message",
+      "variants": [
+        "default",
+        "required",
+        "error",
+        "readOnly",
+        "disabled",
+        "long value"
+      ],
+      "origin": "derived-extension"
+    },
+    "Select": {
+      "layout": "TextField 규격 + 오른쪽 chevron 16px 여백",
+      "anatomy": "label, description, native select, chevron, message",
+      "variants": [
+        "placeholder",
+        "selected",
+        "focus",
+        "error",
+        "disabled option",
+        "readOnly",
+        "disabled",
+        "long option"
+      ],
+      "origin": "observed: FilterPanel select · derived-extension: messages, chevron"
+    },
+    "Checkbox": {
+      "layout": "가로 Auto Layout, gap 16, 행 44; 박스 20, radius 2",
+      "anatomy": "box(+check/minus), label, description, message",
+      "variants": [
+        "unchecked",
+        "checked",
+        "indeterminate",
+        "focus",
+        "disabled",
+        "disabled checked",
+        "error"
+      ],
+      "origin": "derived-extension"
+    },
+    "Switch": {
+      "layout": "가로, 양끝 정렬, 행 44; 트랙 44×24 radius 2, thumb 18",
+      "anatomy": "label, description, track, state text(켜짐/꺼짐)",
+      "variants": [
+        "off",
+        "on",
+        "hover",
+        "focus",
+        "loading",
+        "disabled"
+      ],
+      "origin": "derived-extension"
+    },
+    "Badge": {
+      "layout": "가로, gap 4, 높이 24(sm 20), padding 0/8, radius 2, meta 12/18 600",
+      "anatomy": "icon, text(max 240 말줄임)",
+      "variants": [
+        "neutral",
+        "brand",
+        "success",
+        "warning",
+        "error",
+        "sm",
+        "md"
+      ],
+      "origin": "derived-extension"
+    },
+    "Card": {
+      "layout": "세로, gap 16; outlined = surface + border 1px + radius 4 + padding 24; plain = no surface",
+      "anatomy": "media 4:3, meta, title(2줄), body, footer",
+      "variants": [
+        "default",
+        "hover",
+        "focus",
+        "selected",
+        "loading",
+        "missing image",
+        "long title"
+      ],
+      "origin": "observed: media→meta→title · derived-extension: outlined, selected, loading, missing image"
+    },
+    "Skeleton": {
+      "layout": "border 색 블록, radius 2(미디어 4); text 14, title 22, display 44, media 4:3/3:4",
+      "anatomy": "blocks + status text",
+      "variants": [
+        "text",
+        "title",
+        "display",
+        "media",
+        "composed"
+      ],
+      "origin": "derived-extension"
+    },
+    "Icon": {
+      "layout": "20×20 grid, stroke 1.5, square cap, currentColor; 16/20/24",
+      "anatomy": "20 glyphs",
+      "variants": [
+        "—"
+      ],
+      "origin": "derived-extension (original used text arrow ↗ only)"
+    },
+    "Dialog": {
+      "layout": "overlay + 가운데 패널; surface, border 1px, radius 6, padding 32(모바일 24), gap 24; sm 400 · md 560 · lg 800",
+      "anatomy": "title, description, close, body, footer(오른쪽 정렬)",
+      "variants": [
+        "sm",
+        "md",
+        "lg",
+        "form error",
+        "loading footer"
+      ],
+      "origin": "derived-extension"
+    },
+    "Menu": {
+      "layout": "트리거 Secondary + 목록(surface, textSecondary 1px, radius 4, 240–320); 항목 44, padding 10/16",
+      "anatomy": "icon slot 16, label, description, divider",
+      "variants": [
+        "closed",
+        "open",
+        "hover",
+        "focus",
+        "selected",
+        "disabled(+reason)",
+        "danger",
+        "long",
+        "disabled trigger"
+      ],
+      "origin": "derived-extension"
+    },
+    "Table": {
+      "layout": "헤더 12/18 textSecondary + 1px textSecondary 하단선; 행 1px border; 셀 12/16",
+      "anatomy": "caption, sortable header, row header, cells",
+      "variants": [
+        "sort",
+        "missing(—)",
+        "long wrap/truncate",
+        "selected row",
+        "loading",
+        "empty",
+        "error",
+        "narrow scroll"
+      ],
+      "origin": "observed: detail spec table · derived-extension: sort, states, scroll"
+    },
+    "Pagination": {
+      "layout": "가로, gap 8; 번호 44×44 radius 2, 현재 primary 면; 모바일: 이전·상태·다음 + 번호 줄",
+      "anatomy": "prev, numbers, ellipsis, status, next",
+      "variants": [
+        "first",
+        "middle",
+        "last",
+        "few",
+        "single",
+        "disabled"
+      ],
+      "origin": "derived-extension"
+    },
+    "Toast": {
+      "layout": "가로, gap 16, padding 16, radius 4, max 440 (inline 100%)",
+      "anatomy": "icon, tone word, title, text, action, close",
+      "variants": [
+        "info",
+        "success",
+        "warning",
+        "error",
+        "long",
+        "no close",
+        "inline"
+      ],
+      "origin": "derived-extension"
+    },
+    "AlertDialog": {
+      "layout": "Dialog sm + 40px 아이콘 마크(radius 2)",
+      "anatomy": "mark, title, description, cancel, confirm",
+      "variants": [
+        "danger",
+        "neutral",
+        "loading",
+        "error"
+      ],
+      "origin": "derived-extension"
+    }
+  },
+  "templateSpecs": {
+    "BrandHome": {
+      "preview": "preview/index.html",
+      "kit": "preview/kit/templates/BrandHome.html",
+      "sections": [
+        "GlobalHeader",
+        "HeroSearch",
+        "ContentGrid",
+        "BrandStatement",
+        "Footer"
+      ],
+      "states": [
+        "default",
+        "loading",
+        "error",
+        "long-text",
+        "missing-image"
+      ]
+    },
+    "SearchList": {
+      "preview": "preview/list.html",
+      "kit": "preview/kit/templates/SearchList.html",
+      "sections": [
+        "GlobalHeader",
+        "Intro",
+        "SearchBar",
+        "FilterPanel",
+        "ContentGrid",
+        "Pagination",
+        "Footer"
+      ],
+      "states": [
+        "default",
+        "loading",
+        "empty",
+        "error",
+        "long-text",
+        "missing-image"
+      ]
+    },
+    "ProductDetail": {
+      "preview": "preview/detail.html",
+      "kit": "preview/kit/templates/ProductDetail.html",
+      "sections": [
+        "GlobalHeader",
+        "Intro",
+        "ImageCard",
+        "Badge",
+        "Table",
+        "Button",
+        "ProductCard",
+        "BrandStatement",
+        "Footer"
+      ],
+      "states": [
+        "default",
+        "loading",
+        "error",
+        "long-text",
+        "missing-image"
+      ]
+    }
+  },
+  "figma": {
+    "format": "Custom handoff manifest; not a native Figma import or Tokens Studio file.",
+    "collection": "KOREX_V1",
+    "mode": "Default",
+    "variables": [
+      {
+        "name": "color/canvas",
+        "resolvedType": "COLOR",
+        "value": "#F5F6F2",
+        "source": "foundation.colors.canvas"
+      },
+      {
+        "name": "color/surface",
+        "resolvedType": "COLOR",
+        "value": "#FFFFFF",
+        "source": "foundation.colors.surface"
+      },
+      {
+        "name": "color/textPrimary",
+        "resolvedType": "COLOR",
+        "value": "#172019",
+        "source": "foundation.colors.textPrimary"
+      },
+      {
+        "name": "color/textSecondary",
+        "resolvedType": "COLOR",
+        "value": "#677068",
+        "source": "foundation.colors.textSecondary"
+      },
+      {
+        "name": "color/border",
+        "resolvedType": "COLOR",
+        "value": "#D9DED8",
+        "source": "foundation.colors.border"
+      },
+      {
+        "name": "color/primary",
+        "resolvedType": "COLOR",
+        "value": "#07523D",
+        "source": "foundation.colors.primary"
+      },
+      {
+        "name": "color/primaryDark",
+        "resolvedType": "COLOR",
+        "value": "#04382B",
+        "source": "foundation.colors.primaryDark"
+      },
+      {
+        "name": "color/primarySoft",
+        "resolvedType": "COLOR",
+        "value": "#DCE8E3",
+        "source": "foundation.colors.primarySoft"
+      },
+      {
+        "name": "color/overlay",
+        "resolvedType": "COLOR",
+        "value": "#172019",
+        "alpha": 0.56,
+        "source": "derivedTokens.overlay",
+        "status": "derived-extension"
+      },
+      {
+        "name": "space/4",
+        "resolvedType": "FLOAT",
+        "value": 4,
+        "source": "foundation.spacing"
+      },
+      {
+        "name": "space/8",
+        "resolvedType": "FLOAT",
+        "value": 8,
+        "source": "foundation.spacing"
+      },
+      {
+        "name": "space/16",
+        "resolvedType": "FLOAT",
+        "value": 16,
+        "source": "foundation.spacing"
+      },
+      {
+        "name": "space/24",
+        "resolvedType": "FLOAT",
+        "value": 24,
+        "source": "foundation.spacing"
+      },
+      {
+        "name": "space/32",
+        "resolvedType": "FLOAT",
+        "value": 32,
+        "source": "foundation.spacing"
+      },
+      {
+        "name": "space/48",
+        "resolvedType": "FLOAT",
+        "value": 48,
+        "source": "foundation.spacing"
+      },
+      {
+        "name": "space/64",
+        "resolvedType": "FLOAT",
+        "value": 64,
+        "source": "foundation.spacing"
+      },
+      {
+        "name": "space/80",
+        "resolvedType": "FLOAT",
+        "value": 80,
+        "source": "foundation.spacing"
+      },
+      {
+        "name": "space/96",
+        "resolvedType": "FLOAT",
+        "value": 96,
+        "source": "foundation.spacing"
+      },
+      {
+        "name": "radius/sm",
+        "resolvedType": "FLOAT",
+        "value": 2,
+        "source": "foundation.radius.sm"
+      },
+      {
+        "name": "radius/md",
+        "resolvedType": "FLOAT",
+        "value": 4,
+        "source": "foundation.radius.md"
+      },
+      {
+        "name": "radius/lg",
+        "resolvedType": "FLOAT",
+        "value": 6,
+        "source": "foundation.radius.lg"
+      }
+    ],
+    "textStyles": [
+      {
+        "name": "type/display",
+        "source": "foundation.typography.display",
+        "family": "Sans",
+        "size": 52,
+        "lineHeight": 60,
+        "weight": 700,
+        "fontFamily": "Inter"
+      },
+      {
+        "name": "type/heading",
+        "source": "foundation.typography.heading",
+        "family": "Sans",
+        "size": 32,
+        "lineHeight": 40,
+        "weight": 700,
+        "fontFamily": "Inter"
+      },
+      {
+        "name": "type/title",
+        "source": "foundation.typography.title",
+        "family": "Sans",
+        "size": 20,
+        "lineHeight": 28,
+        "weight": 600,
+        "fontFamily": "Inter"
+      },
+      {
+        "name": "type/body",
+        "source": "foundation.typography.body",
+        "family": "Sans",
+        "size": 15,
+        "lineHeight": 25,
+        "weight": 400,
+        "fontFamily": "Inter"
+      },
+      {
+        "name": "type/meta",
+        "source": "foundation.typography.meta",
+        "family": "Sans",
+        "size": 12,
+        "lineHeight": 18,
+        "weight": 500,
+        "fontFamily": "Inter"
+      }
+    ],
+    "instructions": [
+      "Create local variables using variables names; convert COLOR hex to normalized RGBA if scripting.",
+      "Create text styles separately using textStyles and fontMapping.",
+      "Create 1440 / 834 / 390 px frames and apply foundation.grid / responsive values.",
+      "Build components with Auto Layout per componentSpecs; compose templates per templateSpecs.",
+      "Drag preview/figma-board.svg into Figma as an editable visual reference. It does not create variables, components or Auto Layout."
+    ]
+  },
+  "authority": {
+    "visual": "KOREX_V1 — foundation, component styling and templates in this file are the only visual source.",
+    "coverage": "IAK Design Studio 16 common families — used only as a checklist of items and states; no IAK visuals.",
+    "excluded": [
+      "IAK dark theme",
+      "orange accent",
+      "Pretendard",
+      "IAK logo",
+      "SaaS / dashboard skin"
+    ]
+  },
+  "derivedTokens": [
+    {
+      "name": "overlay",
+      "value": "rgba(23, 32, 25, 0.56)",
+      "derivedFrom": "foundation.colors.textPrimary @ 56% opacity",
+      "use": "Dialog / AlertDialog scrim only",
+      "status": "derived-extension"
+    }
+  ],
+  "semanticRoles": {
+    "note": "No new hues. State is carried by icon + word first; color supports.",
+    "success": "primary + check icon",
+    "warning": "surface + textPrimary border + alert icon",
+    "error": "textPrimary fill or 2px textPrimary border + alert/close icon + '오류' word",
+    "danger": "textPrimary fill + trash icon + explicit verb",
+    "info": "surface + textSecondary border + info icon",
+    "selected": "primary fill/border + check or bold",
+    "disabled": "border / canvas surface + textSecondary text",
+    "focus": "2px textPrimary outline, offset 4 (surface on dark panels)"
+  },
+  "iakCoverageComponents": [
+    "Button",
+    "TextField",
+    "Textarea",
+    "Select",
+    "Checkbox",
+    "Switch",
+    "Badge",
+    "Card",
+    "Skeleton",
+    "Icon",
+    "Dialog",
+    "Menu",
+    "Table",
+    "Pagination",
+    "Toast",
+    "AlertDialog"
+  ],
+  "verification": {
+    "widths": [
+      1440,
+      834,
+      390,
+      375
+    ],
+    "note": "Template states rendered and checked for horizontal overflow, single h1, 44px targets and console errors."
+  },
+  "coverage": "coverage.md",
+  "source": {
+    "path": "preview/source/",
+    "note": "Public self-authored source copied from the live design-system artifact: components/bundle.js, bundle.css, index.d.ts, per-component preview.html and README.md, tokens.json, README.md, coverage.md, templates.js. No external uploads or secrets."
+  },
+  "upstreamClaudeVersion": "1.1.1",
+  "normalization": {
+    "coverageAuthority": "IAK 16 common families; applicable cases translated to project vocabulary",
+    "visualAuthority": "KOREX_V1",
+    "sharedVisualTheme": false,
+    "preserveFoundation": true,
+    "referenceCaseCount": 138,
+    "referenceCasesAreNotNativeVariantCount": true
+  },
+  "handoff": {
+    "claudeDesign": "https://claude.ai/artifact/23zNuD35PBpF9wPangTXsz?org=fa3d9581-54d4-4425-bae4-42d8076030e7",
+    "figma": "https://www.figma.com/design/MR9qvFSq9w5HAD2wnQObdn",
+    "github": "https://github.com/sugun8119-ops/iak-design-system/tree/main/src/systems/KOREX_V1",
+    "coverage": "preview/coverage.md",
+    "nativeMapping": "preview/handoff/figma-components.json",
+    "source": "preview/source/",
+    "nativeCommonVariants": 175,
+    "nativeOriginalFamilies": 11,
+    "commonFamilies": 16,
+    "nativeTemplates": 3,
+    "figmaPrototypeInteractions": false,
+    "codeConnectPublished": false,
+    "teamLibraryPublished": false
+  }
+}

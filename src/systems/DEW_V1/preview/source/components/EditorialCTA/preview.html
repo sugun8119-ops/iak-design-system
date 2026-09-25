@@ -1,0 +1,17 @@
+<!-- @dsCard group="Actions" height=150 subtitle="Default · Hover · Focus" -->
+<!doctype html>
+<html lang="ko">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>EditorialCTA — DEW_V1</title></head>
+<body>
+<div id="root"></div>
+<script>
+  var D = window.DEW, h = React.createElement;
+  var S = function (t) { return h('span', { className: 'dew-meta dew-pv-label' }, t); };
+  ReactDOM.createRoot(document.getElementById('root')).render(h('div', { className: 'dew dew-pv dew-pv-row' },
+    h('div', null, S('DEFAULT'), h(D.EditorialCTA, { href: '#', label: '이번 이야기 읽기' })),
+    h('div', null, S('HOVER'), h(D.EditorialCTA, { href: '#', state: 'hover', label: '전체 저널' })),
+    h('div', null, S('FOCUS'), h(D.EditorialCTA, { href: '#', state: 'focus', label: '이야기 읽기' })),
+    h('div', null, S('BACK'), h(D.EditorialCTA, { href: '#', direction: 'back', label: '저널로 돌아가기' }))));
+</script>
+</body>
+</html>

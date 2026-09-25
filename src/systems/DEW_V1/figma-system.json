@@ -1,0 +1,932 @@
+{
+  "id": "DEW_V1",
+  "name": "DEW Editorial System",
+  "version": "1.2.0",
+  "category": "Editorial / Premium / Content Web",
+  "foundation": {
+    "colors": {
+      "canvas": "#F7F3EA",
+      "surface": "#FFFFFF",
+      "textPrimary": "#111111",
+      "textSecondary": "#6F6A63",
+      "border": "#D8D2C8",
+      "accent": "#E3231C",
+      "support": "#A9E1D6"
+    },
+    "typography": {
+      "display": {
+        "family": "Serif",
+        "size": 64,
+        "lineHeight": 68,
+        "weight": 500
+      },
+      "heading": {
+        "family": "Serif",
+        "size": 40,
+        "lineHeight": 48,
+        "weight": 500
+      },
+      "title": {
+        "family": "Sans",
+        "size": 22,
+        "lineHeight": 30,
+        "weight": 600
+      },
+      "body": {
+        "family": "Sans",
+        "size": 16,
+        "lineHeight": 27,
+        "weight": 400
+      },
+      "meta": {
+        "family": "Sans",
+        "size": 12,
+        "lineHeight": 18,
+        "weight": 500
+      }
+    },
+    "spacing": [
+      4,
+      8,
+      16,
+      24,
+      32,
+      48,
+      72,
+      96,
+      128
+    ],
+    "radius": {
+      "sm": 0,
+      "md": 2,
+      "lg": 4
+    },
+    "grid": {
+      "desktop": {
+        "columns": 12,
+        "maxWidth": 1200,
+        "gutter": 24
+      },
+      "tablet": {
+        "columns": 8,
+        "gutter": 20
+      },
+      "mobile": {
+        "columns": 4,
+        "gutter": 16
+      }
+    }
+  },
+  "components": [
+    "EditorialHeader",
+    "CategoryNav",
+    "FeatureStory",
+    "StoryCard",
+    "MediaCard",
+    "EditorialGrid",
+    "QuoteBlock",
+    "ImageCaption",
+    "ArticleMeta",
+    "EditorialCTA",
+    "Footer",
+    "Button",
+    "TextField",
+    "Textarea",
+    "Select",
+    "Checkbox",
+    "Switch",
+    "Badge",
+    "Card",
+    "Skeleton",
+    "Icon",
+    "Dialog",
+    "AlertDialog",
+    "Menu",
+    "Table",
+    "Pagination",
+    "Toast"
+  ],
+  "templates": [
+    "EditorialHome",
+    "ArticleList",
+    "StoryDetail"
+  ],
+  "provenance": {
+    "reference": "https://www.behance.net/gallery/110574641/DEW-Webzine-Editorial-Web-Experience-Design",
+    "basis": "Prior approved tokens + public portfolio thumbnail observed 2026-09-25. Detail page returned HTTP 403.",
+    "precision": "Normalized reusable values inherited from v1.0; not sampled measurements or original source tokens. v1.1 additions are derived-extension.",
+    "assets": "No original logos, copy, photography or real records are included.",
+    "extensions": "v1.1 adds 16 common families, template states, icon set and one scrim token as derived-extension; IAK provided coverage only.",
+    "inheritance": {
+      "inheritedFromNormalizedV1_0": [
+        "foundation.colors (7)",
+        "foundation.typography (5)",
+        "foundation.spacing (9)",
+        "foundation.radius (3)",
+        "foundation.grid",
+        "responsive",
+        "11 editorial components",
+        "3 templates"
+      ],
+      "note": "Inherited values are the previously agreed normalized reusable tokens (public Behance thumbnail + agreed direction). They are not precise measurements extracted from the original Behance project.",
+      "derivedExtension": [
+        "16 common families (IAK coverage list, DEW visuals)",
+        "template states (14)",
+        "icon set (27)",
+        "scrim token",
+        "missing-image / loading states on editorial components",
+        "AlertDialog error + retry",
+        "ArticleList sort Menu + Pagination",
+        "control heights, dialog widths, motion, Korean line-break rule"
+      ]
+    }
+  },
+  "responsive": {
+    "unit": "px",
+    "breakpoints": {
+      "mobile": "0–767",
+      "tablet": "768–1023",
+      "desktop": "1024+"
+    },
+    "frameWidths": [
+      1440,
+      834,
+      390
+    ],
+    "pagePadding": {
+      "desktop": 48,
+      "tablet": 32,
+      "mobile": 24
+    },
+    "mobileTypography": {
+      "display": {
+        "size": 40,
+        "lineHeight": 44
+      },
+      "heading": {
+        "size": 32,
+        "lineHeight": 40
+      }
+    },
+    "verificationWidths": [
+      1440,
+      834,
+      390,
+      375
+    ]
+  },
+  "fontMapping": {
+    "Serif": {
+      "figma": "Noto Serif KR",
+      "figmaStyle": "Medium (500)",
+      "web": "Georgia, \"Noto Serif KR\", serif",
+      "usedBy": [
+        "display",
+        "heading"
+      ]
+    },
+    "Sans": {
+      "figma": "Inter",
+      "figmaStyle": "Regular 400 / Medium 500 / Semi Bold 600 per text style",
+      "web": "Arial, \"Noto Sans KR\", sans-serif",
+      "usedBy": [
+        "title",
+        "body",
+        "meta"
+      ]
+    },
+    "note": "Figma already has Noto Serif KR Medium headings and Inter body styles; this file matches them. Sizes, line heights and weights are identical on both sides, but glyph widths are not: the web renders Georgia / Arial first (then an installed Noto face for Hangul), so line breaks and heading line counts can differ from Figma. Inter has no Hangul glyphs, so Korean body text in Figma is drawn by a fallback font. Font files are not bundled."
+  },
+  "componentSpecs": {
+    "EditorialHeader": {
+      "layout": "가로 Auto Layout, 양끝 정렬, 최소 높이 80; 모바일 wrap",
+      "anatomy": "텍스트 브랜드, 탐색 링크",
+      "variants": [
+        "Default"
+      ],
+      "status": "source"
+    },
+    "CategoryNav": {
+      "layout": "가로 Auto Layout, gap 24; 모바일 wrap",
+      "anatomy": "카테고리 링크 또는 필터 버튼",
+      "variants": [
+        "Default",
+        "Selected",
+        "Hover",
+        "Focus"
+      ],
+      "status": "source"
+    },
+    "FeatureStory": {
+      "layout": "12열 중 텍스트 5열 + 미디어 7열; 모바일 세로",
+      "anatomy": "메타, 제목, 설명, 이미지, CTA",
+      "variants": [
+        "Default"
+      ],
+      "extensionStates": [
+        "Loading (Skeleton feature)",
+        "MissingImage"
+      ],
+      "status": "source"
+    },
+    "StoryCard": {
+      "layout": "세로 Auto Layout, gap 16, 테두리 없는 이미지 우선 구성",
+      "anatomy": "미디어, 메타, 제목 링크",
+      "variants": [
+        "Default",
+        "Hover",
+        "Focus"
+      ],
+      "extensionStates": [
+        "Loading (Skeleton story)",
+        "MissingImage"
+      ],
+      "status": "source"
+    },
+    "MediaCard": {
+      "layout": "세로 Auto Layout; 이미지 4:3 또는 3:4",
+      "anatomy": "이미지, ImageCaption",
+      "variants": [
+        "Landscape",
+        "Portrait"
+      ],
+      "extensionStates": [
+        "MissingImage (caption kept)"
+      ],
+      "status": "source"
+    },
+    "EditorialGrid": {
+      "layout": "큰 feature 1개 + 보조 2개 또는 3열; 모바일 1열",
+      "anatomy": "StoryCard 인스턴스",
+      "variants": [
+        "Feature",
+        "ThreeColumn"
+      ],
+      "status": "source"
+    },
+    "QuoteBlock": {
+      "layout": "세로 Auto Layout, padding 48; 모바일 24",
+      "anatomy": "인용문, 출처 역할 텍스트",
+      "variants": [
+        "Default"
+      ],
+      "status": "source"
+    },
+    "ImageCaption": {
+      "layout": "가로 Auto Layout, gap 8; meta 스타일",
+      "anatomy": "이미지 설명, 제공자 역할",
+      "variants": [
+        "Default"
+      ],
+      "status": "source"
+    },
+    "ArticleMeta": {
+      "layout": "가로 Auto Layout, gap 16, wrap; meta 스타일",
+      "anatomy": "주제, 예시 읽기 시간",
+      "variants": [
+        "Default"
+      ],
+      "status": "source"
+    },
+    "EditorialCTA": {
+      "layout": "가로 Auto Layout, 높이 최소 44, 밑줄 텍스트",
+      "anatomy": "라벨, 방향 기호",
+      "variants": [
+        "Default",
+        "Hover",
+        "Focus"
+      ],
+      "status": "source"
+    },
+    "Footer": {
+      "layout": "가로 Auto Layout, 양끝 정렬, 상단 선; 모바일 세로",
+      "anatomy": "일반 텍스트 브랜드, 예시 안내",
+      "variants": [
+        "Default"
+      ],
+      "status": "source"
+    },
+    "Button": {
+      "layout": "sm 44 / md 48 / lg 56 height, padding 16/24/32, body 16 600, radius 0, gap 8",
+      "anatomy": "variant primary(textPrimary fill, canvas label) / secondary(1px textPrimary) / danger(1px accent + accent icon, textPrimary label) / text(underline)",
+      "variants": [
+        "Default",
+        "Hover",
+        "Focus",
+        "Pressed",
+        "Disabled",
+        "Loading",
+        "IconStart",
+        "IconEnd",
+        "IconOnly",
+        "LongLabel",
+        "FullWidth"
+      ],
+      "status": "derived-extension",
+      "coverageSource": "IAK common family"
+    },
+    "TextField": {
+      "layout": "vertical gap 8; label body 600; field 48h surface, 1px textSecondary, radius 2",
+      "anatomy": "label, description(meta), field, error(icon+text)",
+      "variants": [
+        "Default",
+        "Hover",
+        "Focus",
+        "Error",
+        "Disabled",
+        "ReadOnly",
+        "Required",
+        "WithIcon",
+        "Long"
+      ],
+      "status": "derived-extension",
+      "coverageSource": "IAK common family"
+    },
+    "Textarea": {
+      "layout": "as TextField, min 136h, vertical resize, meta counter",
+      "anatomy": "label, description, field, counter, error",
+      "variants": [
+        "Default",
+        "Focus",
+        "Error",
+        "Disabled",
+        "ReadOnly",
+        "Long"
+      ],
+      "status": "derived-extension",
+      "coverageSource": "IAK common family"
+    },
+    "Select": {
+      "layout": "as TextField + chevron-down 20 at right 16",
+      "anatomy": "label, description, native select, icon, error",
+      "variants": [
+        "Placeholder",
+        "Selected",
+        "Focus",
+        "Error",
+        "Disabled",
+        "LongOption"
+      ],
+      "status": "derived-extension",
+      "coverageSource": "IAK common family"
+    },
+    "Checkbox": {
+      "layout": "row min 44h gap 16; box 20 square 1px textPrimary",
+      "anatomy": "box, label, description, error",
+      "variants": [
+        "Unchecked",
+        "Checked",
+        "Hover",
+        "Focus",
+        "Indeterminate",
+        "Error",
+        "Disabled",
+        "DisabledChecked",
+        "Long"
+      ],
+      "status": "derived-extension",
+      "coverageSource": "IAK common family"
+    },
+    "Switch": {
+      "layout": "row min 44h space-between; track 44x24 radius 2, thumb 16 square; state word meta",
+      "anatomy": "label, description, track, state word",
+      "variants": [
+        "Off",
+        "On",
+        "Focus",
+        "DisabledOff",
+        "DisabledOn",
+        "Long"
+      ],
+      "status": "derived-extension",
+      "coverageSource": "IAK common family"
+    },
+    "Badge": {
+      "layout": "min 24h, padding 2/8, meta 12/18 500, radius 0, icon 16 gap 4",
+      "anatomy": "icon, label",
+      "variants": [
+        "Neutral",
+        "Info",
+        "Success",
+        "Warning",
+        "Danger",
+        "NoIcon",
+        "Long"
+      ],
+      "status": "derived-extension",
+      "coverageSource": "IAK common family"
+    },
+    "Card": {
+      "layout": "vertical gap 8 (media gap 16); padding 24; plain = 1px textPrimary top rule; horizontal = 5:7 grid",
+      "anatomy": "media, eyebrow, title, description, badges, footer",
+      "variants": [
+        "Plain",
+        "Outlined",
+        "Support",
+        "Hover",
+        "Focus",
+        "Selected",
+        "Disabled",
+        "MissingImage",
+        "Long",
+        "Horizontal"
+      ],
+      "status": "derived-extension",
+      "coverageSource": "IAK common family"
+    },
+    "Skeleton": {
+      "layout": "border fill, radius 2, pulse 1.4s (none when reduced motion)",
+      "anatomy": "bones in the geometry of the target component",
+      "variants": [
+        "Text",
+        "Heading",
+        "Media",
+        "Story",
+        "Feature",
+        "Row"
+      ],
+      "status": "derived-extension",
+      "coverageSource": "IAK common family"
+    },
+    "Icon": {
+      "layout": "24 grid, stroke 1.5, square cap, miter join; sizes 16/20/24; currentColor",
+      "anatomy": "27 glyphs",
+      "variants": [
+        "16",
+        "20",
+        "24",
+        "Accent",
+        "Muted"
+      ],
+      "status": "derived-extension",
+      "coverageSource": "IAK common family"
+    },
+    "Dialog": {
+      "layout": "canvas panel, 1px textPrimary, radius 0, padding 32 (mobile 24), gap 16; widths 400/560/800; scrim backdrop; title heading serif",
+      "anatomy": "eyebrow, heading, close, description, body, footer (1px border top)",
+      "variants": [
+        "Small",
+        "Medium",
+        "Large",
+        "LongTitle",
+        "MobileSheet"
+      ],
+      "status": "derived-extension",
+      "coverageSource": "IAK common family"
+    },
+    "AlertDialog": {
+      "layout": "Dialog sm + 2px accent top rule for danger; cancel secondary + confirm danger",
+      "anatomy": "icon, heading, description, actions",
+      "variants": [
+        "Danger",
+        "Default",
+        "Loading",
+        "ErrorRetry",
+        "Long"
+      ],
+      "status": "derived-extension",
+      "coverageSource": "IAK common family",
+      "errorRetry": {
+        "status": "derived-extension",
+        "layout": "surface box, 1px accent border, radius 0, padding 16, gap 16, above the footer",
+        "anatomy": "accent error icon 20, textPrimary title (600), textSecondary message, role=alert",
+        "action": "confirm button becomes '다시 시도' with refresh icon (same danger/primary variant); dialog stays open; cancel stays secondary"
+      }
+    },
+    "Menu": {
+      "layout": "surface panel, 1px textPrimary, padding 8/0, items min 44h padding 8/16, width 240–320",
+      "anatomy": "trigger Button, items(icon, label, description), separator",
+      "variants": [
+        "Closed",
+        "Open",
+        "Selected",
+        "Hover",
+        "Focus",
+        "Disabled",
+        "Danger",
+        "Long"
+      ],
+      "status": "derived-extension",
+      "coverageSource": "IAK common family",
+      "a11y": "aria-controls is set only while the list is open"
+    },
+    "Table": {
+      "layout": "header meta over 1px textPrimary; cells padding 16, 1px border row rules; wrapper scrolls horizontally",
+      "anatomy": "caption, summary, sortable headers, rows, state row",
+      "variants": [
+        "Sorted",
+        "SelectedRow",
+        "Missing",
+        "Loading",
+        "Empty",
+        "Error",
+        "Long",
+        "Narrow"
+      ],
+      "status": "derived-extension",
+      "coverageSource": "IAK common family"
+    },
+    "Pagination": {
+      "layout": "horizontal gap 16; numbers 44x44; current 600 + 2px accent underline; mobile shows 'n / total'",
+      "anatomy": "prev, numbers, ellipsis, next, status",
+      "variants": [
+        "First",
+        "Middle",
+        "Last",
+        "Single",
+        "Disabled",
+        "MobileCompact"
+      ],
+      "status": "derived-extension",
+      "coverageSource": "IAK common family"
+    },
+    "Toast": {
+      "layout": "surface, 1px textPrimary, radius 0, padding 16, max 400; grid 32 icon / text / close; region fixed bottom-right 24 (mobile 16)",
+      "anatomy": "icon square, tone word, title, message, action, close",
+      "variants": [
+        "Info",
+        "Success",
+        "Warning",
+        "Error",
+        "Action",
+        "Long",
+        "Stack"
+      ],
+      "status": "derived-extension",
+      "coverageSource": "IAK common family"
+    }
+  },
+  "templateSpecs": {
+    "EditorialHome": {
+      "preview": "preview/index.html",
+      "sections": [
+        "Header",
+        "FeatureStory",
+        "EditorialGrid",
+        "QuoteBlock",
+        "Footer"
+      ],
+      "states": {
+        "loading": {
+          "preview": "preview/index-loading.html",
+          "status": "derived-extension"
+        },
+        "empty": {
+          "preview": "preview/index-empty.html",
+          "status": "derived-extension"
+        },
+        "error": {
+          "preview": "preview/index-error.html",
+          "status": "derived-extension"
+        },
+        "long": {
+          "preview": "preview/index-long.html",
+          "status": "derived-extension"
+        },
+        "missing": {
+          "preview": "preview/index-missing.html",
+          "status": "derived-extension"
+        },
+        "default": {
+          "preview": "preview/index.html",
+          "status": "source"
+        }
+      }
+    },
+    "ArticleList": {
+      "preview": "preview/list.html",
+      "sections": [
+        "Header",
+        "CategoryNav",
+        "Menu (sort, derived-extension)",
+        "EditorialGrid",
+        "Pagination (derived-extension)",
+        "Footer"
+      ],
+      "states": {
+        "loading": {
+          "preview": "preview/list-loading.html",
+          "status": "derived-extension"
+        },
+        "empty": {
+          "preview": "preview/list-empty.html",
+          "status": "derived-extension"
+        },
+        "error": {
+          "preview": "preview/list-error.html",
+          "status": "derived-extension"
+        },
+        "long": {
+          "preview": "preview/list-long.html",
+          "status": "derived-extension"
+        },
+        "missing": {
+          "preview": "preview/list-missing.html",
+          "status": "derived-extension"
+        },
+        "default": {
+          "preview": "preview/list.html",
+          "status": "source"
+        }
+      }
+    },
+    "StoryDetail": {
+      "preview": "preview/detail.html",
+      "sections": [
+        "Header",
+        "ArticleMeta",
+        "MediaCard",
+        "QuoteBlock",
+        "Footer"
+      ],
+      "states": {
+        "loading": {
+          "preview": "preview/detail-loading.html",
+          "status": "derived-extension"
+        },
+        "error": {
+          "preview": "preview/detail-error.html",
+          "status": "derived-extension"
+        },
+        "long": {
+          "preview": "preview/detail-long.html",
+          "status": "derived-extension"
+        },
+        "missing": {
+          "preview": "preview/detail-missing.html",
+          "status": "derived-extension"
+        },
+        "default": {
+          "preview": "preview/detail.html",
+          "status": "source"
+        }
+      },
+      "notApplicable": {
+        "empty": "single-story page has no empty list state"
+      }
+    }
+  },
+  "figma": {
+    "format": "Custom handoff manifest; not a native Figma import or Tokens Studio file.",
+    "collection": "DEW_V1",
+    "mode": "Default",
+    "variables": [
+      {
+        "name": "color/canvas",
+        "resolvedType": "COLOR",
+        "value": "#F7F3EA",
+        "source": "foundation.colors.canvas"
+      },
+      {
+        "name": "color/surface",
+        "resolvedType": "COLOR",
+        "value": "#FFFFFF",
+        "source": "foundation.colors.surface"
+      },
+      {
+        "name": "color/textPrimary",
+        "resolvedType": "COLOR",
+        "value": "#111111",
+        "source": "foundation.colors.textPrimary"
+      },
+      {
+        "name": "color/textSecondary",
+        "resolvedType": "COLOR",
+        "value": "#6F6A63",
+        "source": "foundation.colors.textSecondary"
+      },
+      {
+        "name": "color/border",
+        "resolvedType": "COLOR",
+        "value": "#D8D2C8",
+        "source": "foundation.colors.border"
+      },
+      {
+        "name": "color/accent",
+        "resolvedType": "COLOR",
+        "value": "#E3231C",
+        "source": "foundation.colors.accent"
+      },
+      {
+        "name": "color/support",
+        "resolvedType": "COLOR",
+        "value": "#A9E1D6",
+        "source": "foundation.colors.support"
+      },
+      {
+        "name": "space/4",
+        "resolvedType": "FLOAT",
+        "value": 4,
+        "source": "foundation.spacing"
+      },
+      {
+        "name": "space/8",
+        "resolvedType": "FLOAT",
+        "value": 8,
+        "source": "foundation.spacing"
+      },
+      {
+        "name": "space/16",
+        "resolvedType": "FLOAT",
+        "value": 16,
+        "source": "foundation.spacing"
+      },
+      {
+        "name": "space/24",
+        "resolvedType": "FLOAT",
+        "value": 24,
+        "source": "foundation.spacing"
+      },
+      {
+        "name": "space/32",
+        "resolvedType": "FLOAT",
+        "value": 32,
+        "source": "foundation.spacing"
+      },
+      {
+        "name": "space/48",
+        "resolvedType": "FLOAT",
+        "value": 48,
+        "source": "foundation.spacing"
+      },
+      {
+        "name": "space/72",
+        "resolvedType": "FLOAT",
+        "value": 72,
+        "source": "foundation.spacing"
+      },
+      {
+        "name": "space/96",
+        "resolvedType": "FLOAT",
+        "value": 96,
+        "source": "foundation.spacing"
+      },
+      {
+        "name": "space/128",
+        "resolvedType": "FLOAT",
+        "value": 128,
+        "source": "foundation.spacing"
+      },
+      {
+        "name": "radius/sm",
+        "resolvedType": "FLOAT",
+        "value": 0,
+        "source": "foundation.radius.sm"
+      },
+      {
+        "name": "radius/md",
+        "resolvedType": "FLOAT",
+        "value": 2,
+        "source": "foundation.radius.md"
+      },
+      {
+        "name": "radius/lg",
+        "resolvedType": "FLOAT",
+        "value": 4,
+        "source": "foundation.radius.lg"
+      },
+      {
+        "name": "color/scrim",
+        "resolvedType": "COLOR",
+        "value": "#1111117A",
+        "source": "extensions.tokens.colors.scrim",
+        "status": "derived-extension"
+      }
+    ],
+    "textStyles": [
+      {
+        "name": "type/display",
+        "source": "foundation.typography.display",
+        "family": "Serif",
+        "size": 64,
+        "lineHeight": 68,
+        "weight": 500
+      },
+      {
+        "name": "type/heading",
+        "source": "foundation.typography.heading",
+        "family": "Serif",
+        "size": 40,
+        "lineHeight": 48,
+        "weight": 500
+      },
+      {
+        "name": "type/title",
+        "source": "foundation.typography.title",
+        "family": "Sans",
+        "size": 22,
+        "lineHeight": 30,
+        "weight": 600
+      },
+      {
+        "name": "type/body",
+        "source": "foundation.typography.body",
+        "family": "Sans",
+        "size": 16,
+        "lineHeight": 27,
+        "weight": 400
+      },
+      {
+        "name": "type/meta",
+        "source": "foundation.typography.meta",
+        "family": "Sans",
+        "size": 12,
+        "lineHeight": 18,
+        "weight": 500
+      }
+    ],
+    "instructions": [
+      "Create local variables using variables names; convert COLOR hex to normalized RGBA if scripting.",
+      "Create text styles separately using textStyles and fontMapping.",
+      "Create 1440 / 834 / 390 px frames and apply foundation.grid / responsive values.",
+      "Build components with Auto Layout per componentSpecs; compose templates per templateSpecs.",
+      "Drag preview/figma-board.svg into Figma as an editable visual reference. It does not create variables, components or Auto Layout.",
+      "Build the 16 derived-extension families from componentSpecs (status = derived-extension) with DEW variables only; do not import IAK styles."
+    ]
+  },
+  "authority": {
+    "visual": "DEW (this file's foundation, unchanged from v1.0)",
+    "coverage": "IAK Design Studio — list of common families and states only; no IAK colours, fonts, radius or layouts"
+  },
+  "extensions": {
+    "status": "derived-extension",
+    "tokens": {
+      "colors": {
+        "scrim": "rgba(17,17,17,0.48)"
+      },
+      "note": "Only new token. Semantic meaning uses existing palette + words + icons."
+    },
+    "semantic": {
+      "neutral": "textSecondary text + outline",
+      "info": "surface + textPrimary outline + info icon",
+      "success": "support fill + textPrimary + check icon",
+      "warning": "border fill + textPrimary + alert icon",
+      "danger": "accent outline/icon/2px rule + textPrimary text (accent never text)"
+    },
+    "controlHeights": [
+      44,
+      48,
+      56
+    ],
+    "dialogWidths": [
+      400,
+      560,
+      800
+    ],
+    "icons": {
+      "grid": 24,
+      "stroke": 1.5,
+      "cap": "square",
+      "sizes": [
+        16,
+        20,
+        24
+      ],
+      "count": 27
+    },
+    "typographyRules": {
+      "wordBreak": "keep-all",
+      "overflowWrap": "anywhere"
+    },
+    "motion": {
+      "spinner": "900ms linear",
+      "skeletonPulse": "1.4s",
+      "switch": "150ms",
+      "reducedMotion": "none"
+    },
+    "stateMap": {
+      "hover": "underline (accent 2px on text/danger)",
+      "focus": "2px textPrimary outline, 4px offset",
+      "pressed": "textSecondary fill (primary) / border fill (secondary, danger)",
+      "disabled": "border fill/boundary + textSecondary",
+      "loading": "spinner + aria-busy, label kept",
+      "error": "accent boundary + icon + textPrimary message",
+      "selected": "2px accent underline (nav, pagination, sort) or 2px textPrimary inset (Card)",
+      "errorRetry": "AlertDialog: accent-bordered surface message + retry button (derived-extension)"
+    }
+  },
+  "upstreamClaudeVersion": "1.1",
+  "normalization": {
+    "coverageAuthority": "IAK 16 common families; applicable cases translated to project vocabulary",
+    "visualAuthority": "DEW_V1",
+    "sharedVisualTheme": false,
+    "preserveFoundation": true,
+    "referenceCaseCount": 138,
+    "referenceCasesAreNotNativeVariantCount": true
+  },
+  "handoff": {
+    "claudeDesign": "https://claude.ai/artifact/QPSdZdNRdLF3gfnZccrmYv?org=fa3d9581-54d4-4425-bae4-42d8076030e7",
+    "figma": "https://www.figma.com/design/qDaMlSX00Eow0b7aDYKKsf",
+    "github": "https://github.com/sugun8119-ops/iak-design-system/tree/main/src/systems/DEW_V1",
+    "coverage": "preview/coverage.md",
+    "nativeMapping": "preview/handoff/figma-components.json",
+    "source": "preview/source/",
+    "nativeCommonVariants": 175,
+    "nativeOriginalFamilies": 11,
+    "commonFamilies": 16,
+    "nativeTemplates": 3,
+    "figmaPrototypeInteractions": false,
+    "codeConnectPublished": false,
+    "teamLibraryPublished": false
+  }
+}

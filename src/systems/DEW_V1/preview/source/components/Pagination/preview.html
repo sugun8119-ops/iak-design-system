@@ -1,0 +1,26 @@
+<!-- @dsCard group="Navigation" height=760 subtitle="first · middle · last · single · disabled · mobile" -->
+<!doctype html>
+<html lang="ko">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Pagination — DEW_V1</title></head>
+<body>
+<div id="root"></div>
+<script>
+  var D = window.DEW, h = React.createElement;
+  function L(t) { return h('span', { className: 'dew-meta dew-pv-label' }, t); }
+  function C(t, node, style) { return h('div', { className: 'dew-pv-cell', style: style }, L(t), node); }
+  function H(t) { return h('p', { className: 'dew-meta dew-eyebrow dew-pv-h' }, t); }
+  function G(cells, wide) { return h('div', { className: 'dew-pv-grid' + (wide ? ' dew-pv-grid--wide' : '') }, cells); }
+  function K(list) { return list.map(function (n, i) { return h(React.Fragment, { key: i }, n); }); }
+
+  var VIEW = [
+    C('first (1 / 12)', h(D.Pagination, { page: 1, total: 12, onChange: function () {} })),
+    C('middle (6 / 12)', h(D.Pagination, { page: 6, total: 12, onChange: function () {} })),
+    C('last (12 / 12)', h(D.Pagination, { page: 12, total: 12, onChange: function () {} })),
+    C('single (1 / 1)', h(D.Pagination, { page: 1, total: 1 })),
+    C('disabled (while loading)', h(D.Pagination, { page: 3, total: 12, disabled: true })),
+    C('mobile < 768 — numbers become "6 / 12"', h('div', { style: { maxWidth: '343px' } }, h('nav', { className: 'dew dew-pg', 'aria-label': '모바일 예시', style: { justifyContent: 'space-between' } }, h('a', { className: 'dew-pg__step', href: '#' }, h(D.Icon, { name: 'chevron-left' }), '이전'), h('p', { style: { fontWeight: 600 } }, '6 / 12'), h('a', { className: 'dew-pg__step', href: '#' }, '다음', h(D.Icon, { name: 'chevron-right' })))))
+  ];
+  ReactDOM.createRoot(document.getElementById('root')).render(h('div', { className: 'dew dew-pv' }, K(VIEW)));
+</script>
+</body>
+</html>

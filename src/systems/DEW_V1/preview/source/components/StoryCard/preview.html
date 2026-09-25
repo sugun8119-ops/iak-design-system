@@ -1,0 +1,16 @@
+<!-- @dsCard group="Editorial" height=470 subtitle="Default · Hover · Focus" -->
+<!doctype html>
+<html lang="ko">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>StoryCard — DEW_V1</title></head>
+<body>
+<div id="root"></div>
+<script>
+  var D = window.DEW, h = React.createElement;
+  var S = function (t) { return h('span', { className: 'dew-meta dew-pv-label' }, t); };
+  ReactDOM.createRoot(document.getElementById('root')).render(h('div', { className: 'dew dew-pv' }, h('div', { style: { display: 'grid', gridTemplateColumns: 'repeat(3, minmax(0,1fr))', gap: '24px' } },
+    h('div', null, S('DEFAULT'), h(D.StoryCard, { href: '#', media: { tone: 'mint' }, meta: 'CULTURE · 예시 에세이', title: '느린 오후의 색' })),
+    h('div', null, S('HOVER'), h(D.StoryCard, { href: '#', state: 'hover', media: { tone: 'light' }, meta: 'OBJECTS · 예시 에세이', title: '사물 사이의 여백' })),
+    h('div', null, S('FOCUS'), h(D.StoryCard, { href: '#', state: 'focus', media: {}, meta: 'PLACES · 예시 에세이', title: '걷다 만난 작은 풍경' })))));
+</script>
+</body>
+</html>

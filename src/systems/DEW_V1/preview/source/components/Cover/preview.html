@@ -1,0 +1,52 @@
+<!-- @dsCard height=288 -->
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>DEW_V1</title>
+<style>
+  html, body { margin:0; height:100%; }
+  body { background:var(--canvas); color:var(--textPrimary); font-family:var(--font-sans); overflow:hidden; }
+  .cover { position:relative; height:288px; overflow:hidden; }
+  .art { position:absolute; top:0; left:480px; width:480px; height:288px; overflow:hidden; }
+  .art svg { display:block; width:480px; height:288px; }
+  .mint { fill:var(--support); }
+  .ink { fill:var(--textPrimary); }
+  .paper { fill:var(--border); }
+  .red { fill:var(--accent); }
+  .arch { fill:var(--textSecondary); }
+  .blk { rx:var(--radius-md); }
+  .sq { rx:var(--radius-sm); }
+  .rule { stroke:var(--border); stroke-width:1; }
+  .words { position:absolute; left:48px; bottom:40px; max-width:440px; }
+  .name { margin:0; font-family:var(--font-serif); font-size:104px; line-height:.92; font-weight:500; letter-spacing:-.045em; color:var(--textPrimary); }
+  .tag { margin:16px 0 0 4px; font-size:14px; line-height:20px; color:var(--textSecondary); }
+</style>
+</head>
+<body>
+<div class="cover">
+<div class="art" aria-hidden="true">
+<svg viewBox="0 0 480 288" width="480" height="288">
+<!--
+  blocks      support 192×232 bled off the top (the mint photo plane, largest) · textPrimary 168×152 · border 264×48 bled off top-right (the media ground) · accent 24×24 once (red in small doses) — ≈38% of 960×288
+  arrangement asymmetric 5:7-style split: one tall mint slab left, ink slab + paper band right, bottoms on one line at y=224, space-24 gutters
+  pattern     "editorial, serif, borders not shadows": three border hairlines at a space-16 pitch crossing the ink slab and the ground; the placeholder arch (48% top radii) cut into the mint slab in textSecondary
+  scales      sides in space-8 / space-24 multiples; gutters space-24; hairline pitch space-16; corners radius-md (2px), the red square radius-sm (0)
+-->
+<rect class="mint blk" x="24" y="-8" width="192" height="232" rx="2"/>
+<path class="arch" d="M84 206 L84 110 A36 36 0 0 1 156 110 L156 206 Z" transform="rotate(13 120 158)"/>
+<rect class="paper blk" x="240" y="-8" width="264" height="56" rx="2"/>
+<rect class="ink blk" x="240" y="72" width="168" height="152" rx="2"/>
+<rect class="red sq" x="432" y="200" width="24" height="24" rx="0"/>
+<line class="rule" x1="216" y1="120" x2="480" y2="120"/>
+<line class="rule" x1="216" y1="136" x2="480" y2="136"/>
+<line class="rule" x1="216" y1="152" x2="480" y2="152"/>
+</svg>
+</div>
+<div class="words">
+<h1 class="name">DEW_V1</h1>
+<p class="tag">Editorial / Premium / Content Web — 따뜻한 바탕, 세리프, 이미지 중심의 비대칭 리듬.</p>
+</div>
+</div>
+</body>
+</html>

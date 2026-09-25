@@ -1,0 +1,11 @@
+# AlertDialog
+
+A small (400) `role="alertdialog"` that interrupts to confirm a consequential action. Built on Dialog; it has no close icon and the backdrop does not dismiss it — the person answers with one of the two buttons (Esc = cancel).
+
+**Consumer provides:** `open`, `title` (a question), `description` (the consequence), `confirmLabel` (a verb — "삭제", not "확인"), `cancelLabel`, `onConfirm`, `onCancel`, `tone` (`danger` default | `default`), `loading` + `loadingLabel`, `error` + `errorTitle` + `retryLabel` + `onRetry`.
+
+- Danger: 2px `accent` top rule, `accent` alert icon, danger Button (accent border, never a red fill). Cancel is secondary and comes first.
+- **Error + retry (derived-extension):** pass `error` (message) and optional `errorTitle`, `retryLabel`, `onRetry`. The dialog stays open; a `surface` box with a 1px `accent` border, `accent` error icon and `textPrimary` title (`role="alert"`) sits above the actions, and the confirm button becomes "다시 시도" with a refresh icon (same danger/primary variant). Message text is `textSecondary` on `surface` (5.36:1); red is never text.
+- Loading keeps the dialog open with `aria-busy` on the confirm button and cancel disabled.
+
+Status: **derived-extension**.

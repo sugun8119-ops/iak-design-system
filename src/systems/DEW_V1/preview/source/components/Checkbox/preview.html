@@ -1,0 +1,29 @@
+<!-- @dsCard group="Forms" height=560 subtitle="unchecked · checked · indeterminate · error · disabled · long" -->
+<!doctype html>
+<html lang="ko">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Checkbox — DEW_V1</title></head>
+<body>
+<div id="root"></div>
+<script>
+  var D = window.DEW, h = React.createElement;
+  function L(t) { return h('span', { className: 'dew-meta dew-pv-label' }, t); }
+  function C(t, node, style) { return h('div', { className: 'dew-pv-cell', style: style }, L(t), node); }
+  function H(t) { return h('p', { className: 'dew-meta dew-eyebrow dew-pv-h' }, t); }
+  function G(cells, wide) { return h('div', { className: 'dew-pv-grid' + (wide ? ' dew-pv-grid--wide' : '') }, cells); }
+  function K(list) { return list.map(function (n, i) { return h(React.Fragment, { key: i }, n); }); }
+
+  var VIEW = [G(K([
+    C('unchecked', h(D.Checkbox, { label: '뉴스레터 받기' })),
+    C('checked + description', h(D.Checkbox, { label: '새 이야기 알림', description: '주 1회, 금요일 오전', defaultChecked: true })),
+    C('hover', h(D.Checkbox, { label: '문화 주제 포함', state: 'hover' })),
+    C('focus', h(D.Checkbox, { label: '사물 주제 포함', state: 'focus', defaultChecked: true })),
+    C('indeterminate (group partly selected)', h(D.Checkbox, { label: '모든 주제', indeterminate: true })),
+    C('error', h(D.Checkbox, { label: '예시 이용 안내에 동의합니다', required: true, error: '계속하려면 동의가 필요합니다.' })),
+    C('disabled', h(D.Checkbox, { label: '인쇄본 받기 (준비 중)', disabled: true })),
+    C('disabled checked', h(D.Checkbox, { label: '기본 알림', disabled: true, defaultChecked: true })),
+    C('long label · KO+EN', h(D.Checkbox, { label: 'Send me the weekly digest — 이번 주에 발행된 모든 에세이와 사진 이야기를 한 통의 편지로 받아보기', defaultChecked: true }))
+  ]))];
+  ReactDOM.createRoot(document.getElementById('root')).render(h('div', { className: 'dew dew-pv' }, K(VIEW)));
+</script>
+</body>
+</html>

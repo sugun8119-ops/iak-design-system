@@ -1,0 +1,28 @@
+<!-- @dsCard group="Forms" height=900 subtitle="label · description · error · disabled · readOnly · long" -->
+<!doctype html>
+<html lang="ko">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>TextField — DEW_V1</title></head>
+<body>
+<div id="root"></div>
+<script>
+  var D = window.DEW, h = React.createElement;
+  function L(t) { return h('span', { className: 'dew-meta dew-pv-label' }, t); }
+  function C(t, node, style) { return h('div', { className: 'dew-pv-cell', style: style }, L(t), node); }
+  function H(t) { return h('p', { className: 'dew-meta dew-eyebrow dew-pv-h' }, t); }
+  function G(cells, wide) { return h('div', { className: 'dew-pv-grid' + (wide ? ' dew-pv-grid--wide' : '') }, cells); }
+  function K(list) { return list.map(function (n, i) { return h(React.Fragment, { key: i }, n); }); }
+
+  var VIEW = [G(K([
+    C('default + description', h(D.TextField, { label: '이름', description: '독자 편지에 표시됩니다.', placeholder: '예: 김하늘' })),
+    C('hover', h(D.TextField, { label: '이메일', state: 'hover', defaultValue: 'reader@example.com', type: 'email' })),
+    C('focus', h(D.TextField, { label: '이메일', state: 'focus', defaultValue: 'reader@example.com', type: 'email' })),
+    C('required + icon', h(D.TextField, { label: '검색어', required: true, icon: 'search', placeholder: '주제나 제목' })),
+    C('error', h(D.TextField, { label: '이메일', defaultValue: 'reader@', error: '이메일 형식이 올바르지 않습니다. @ 뒤에 도메인을 입력하세요.' })),
+    C('disabled', h(D.TextField, { label: '회원 번호', defaultValue: 'EX-0000', disabled: true, description: '예시 값 — 수정할 수 없습니다.' })),
+    C('readOnly', h(D.TextField, { label: '구독 주기', defaultValue: '매주 금요일', readOnly: true })),
+    C('long label / value · KO+EN', h(D.TextField, { label: '받는 분 주소 (Recipient address for the printed special edition)', optional: true, defaultValue: 'Extraordinarilylongstreetnamewithoutspaces-Building 2, 서울특별시 예시구 예시로 123' }))
+  ]))];
+  ReactDOM.createRoot(document.getElementById('root')).render(h('div', { className: 'dew dew-pv' }, K(VIEW)));
+</script>
+</body>
+</html>

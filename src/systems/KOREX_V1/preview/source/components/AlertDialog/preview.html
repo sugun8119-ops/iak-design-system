@@ -1,0 +1,59 @@
+<!-- @dsCard group="Overlays" height=1100 subtitle="danger · neutral · loading · error" -->
+<!doctype html>
+<html lang="ko">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>preview</title>
+<style>
+  body{margin:0;background:var(--canvas);padding:var(--space-24)}
+  .pv{font-family:var(--font-sans);color:var(--textPrimary);font-size:15px;line-height:25px}
+  .pv .pv-origin{display:flex;flex-wrap:wrap;gap:var(--space-8);align-items:center;margin:0 0 var(--space-24);font-size:12px;line-height:18px;color:var(--textSecondary)}
+  .pv .pv-sec{margin:0 0 var(--space-32)}
+  .pv .pv-h{margin:0 0 var(--space-16);padding-bottom:var(--space-8);border-bottom:1px solid var(--border);font-size:12px;line-height:18px;font-weight:600;letter-spacing:.06em;color:var(--textSecondary)}
+  .pv-row{display:flex;flex-wrap:wrap;align-items:center;gap:var(--space-16)}
+  .pv-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:var(--space-24);align-items:start}
+  .pv-grid-wide{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:var(--space-24);align-items:start}
+  .pv-cell{display:flex;flex-direction:column;gap:var(--space-8);min-width:0}
+  .pv .pv-tag{font-size:12px;line-height:18px;font-weight:500;letter-spacing:.06em;color:var(--textSecondary)}
+  .pv-narrow{max-width:240px}
+  .pv-frame{position:relative;height:var(--h,360px);border:1px solid var(--border);border-radius:var(--radius-sm);overflow:hidden}
+  .pv-matrix{display:grid;grid-template-columns:96px repeat(3,auto);gap:var(--space-16);align-items:center;justify-content:start}
+  @media (max-width:520px){.pv-matrix{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div id="root" class="pv kx"></div>
+<script>
+  var K = window.KOREX, h = React.createElement, F = React.Fragment;
+  function origin(observed, derived) {
+    return h('p', { className: 'pv-origin' },
+      h(K.Badge, { tone: 'brand', icon: false, size: 'sm' }, 'IAK coverage'), h('span', null, observed),
+      derived ? h(K.Badge, { tone: 'neutral', icon: false, size: 'sm' }, 'derived-extension') : null, derived ? h('span', null, derived) : null);
+  }
+  function kids(args, from) { return Array.prototype.slice.call(args, from); }
+  function el(tag, props, list) { return h.apply(null, [tag, props].concat(list)); }
+  function sec(title) { return el('section', { className: 'pv-sec' }, [h('h2', { className: 'pv-h' }, title)].concat(kids(arguments, 1))); }
+  function cell(tag) { return el('div', { className: 'pv-cell' }, [h('span', { className: 'pv-tag' }, tag)].concat(kids(arguments, 1))); }
+  function row() { return el('div', { className: 'pv-row' }, kids(arguments, 0)); }
+  function grid() { return el('div', { className: 'pv-grid' }, kids(arguments, 0)); }
+  function wide() { return el('div', { className: 'pv-grid-wide' }, kids(arguments, 0)); }
+
+  function View() {
+    return h(F, null,
+origin('Dialog sm + KOREX 버튼', 'AlertDialog 전체 · 잉크 danger 표현'),
+      sec('DANGER — 되돌릴 수 없는 삭제',
+        h('div', { className: 'pv-frame', style: { '--h': '320px' } },
+          h(K.AlertDialog, { open: true, contained: true, title: '비교 목록을 비울까요?', description: '담아 둔 예시 제품 3개가 목록에서 삭제됩니다. 되돌릴 수 없습니다.', confirmLabel: '목록 비우기', onCancel: function () {}, onConfirm: function () {} }))),
+      sec('LOADING — 확인 처리 중',
+        h('div', { className: 'pv-frame', style: { '--h': '320px' } },
+          h(K.AlertDialog, { open: true, contained: true, loading: true, loadingLabel: '비우는 중…', title: '비교 목록을 비울까요?', description: '처리 중에는 닫거나 취소할 수 없습니다.', confirmLabel: '목록 비우기', onCancel: function () {}, onConfirm: function () {} }))),
+      sec('ERROR — 처리 실패 후',
+        h('div', { className: 'pv-frame', style: { '--h': '360px' } },
+          h(K.AlertDialog, { open: true, contained: true, error: '목록을 비우지 못했습니다. 잠시 후 다시 시도해 주세요.', title: '비교 목록을 비울까요?', description: '담아 둔 예시 제품 3개가 삭제됩니다.', confirmLabel: '다시 시도', onCancel: function () {}, onConfirm: function () {} }))),
+      sec('NEUTRAL · KO/EN',
+        h('div', { className: 'pv-frame', style: { '--h': '320px' } },
+          h(K.AlertDialog, { open: true, contained: true, tone: 'neutral', title: 'Leave this page? / 페이지를 나갈까요?', description: '작성 중인 문의 내용은 저장되지 않습니다.', confirmLabel: '나가기', cancelLabel: '계속 작성', onCancel: function () {}, onConfirm: function () {} })))
+    );
+  }
+  ReactDOM.createRoot(document.getElementById('root')).render(h(View));
+</script>
+</body>
+</html>

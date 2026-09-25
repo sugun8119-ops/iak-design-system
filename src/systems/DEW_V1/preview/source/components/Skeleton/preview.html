@@ -1,0 +1,29 @@
+<!-- @dsCard group="Status" height=900 subtitle="text · heading · media · story · feature · row" -->
+<!doctype html>
+<html lang="ko">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Skeleton — DEW_V1</title></head>
+<body>
+<div id="root"></div>
+<script>
+  var D = window.DEW, h = React.createElement;
+  function L(t) { return h('span', { className: 'dew-meta dew-pv-label' }, t); }
+  function C(t, node, style) { return h('div', { className: 'dew-pv-cell', style: style }, L(t), node); }
+  function H(t) { return h('p', { className: 'dew-meta dew-eyebrow dew-pv-h' }, t); }
+  function G(cells, wide) { return h('div', { className: 'dew-pv-grid' + (wide ? ' dew-pv-grid--wide' : '') }, cells); }
+  function K(list) { return list.map(function (n, i) { return h(React.Fragment, { key: i }, n); }); }
+
+  var VIEW = [
+    G(K([
+      C('text (3 lines)', h(D.Skeleton, { variant: 'text' })),
+      C('heading (serif scale)', h(D.Skeleton, { variant: 'heading' })),
+      C('media 4:3', h(D.Skeleton, { variant: 'media' })),
+      C('story — StoryCard loading', h(D.Skeleton, { variant: 'story', label: '이야기를 불러오는 중' })),
+      C('row — Table loading', h(D.Skeleton, { variant: 'row', cells: 3 }))
+    ])),
+    H('FEATURE — FeatureStory loading (5 : 7)'),
+    h(D.Skeleton, { variant: 'feature', label: '대표 이야기를 불러오는 중' })
+  ];
+  ReactDOM.createRoot(document.getElementById('root')).render(h('div', { className: 'dew dew-pv' }, K(VIEW)));
+</script>
+</body>
+</html>

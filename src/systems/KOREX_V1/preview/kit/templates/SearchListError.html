@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ko">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="정적 샘플(상호작용 없음) · KOREX_V1 SearchListError"><title>SearchListError · KOREX_V1 (정적 샘플)</title>
+<link rel="stylesheet" href="../kit.css">
+<style>
+  /* page shell only — layout from README (max 1200 content, page padding 48/32/24); every value is a token */
+  body{margin:0;background:var(--canvas)}
+  .tp{box-sizing:border-box;max-width:calc(1200px + 2 * var(--space-48));margin:0 auto;padding:0 var(--space-48);font-family:var(--font-sans);color:var(--textPrimary)}
+  .tp-main > * + *{margin-top:var(--space-80)}
+  .tp-main{padding:var(--space-32) 0 var(--space-80)}
+  .tp-head{display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:var(--space-24);margin-bottom:var(--space-32)}
+  .tp .tp-head .kx-meta{margin-bottom:var(--space-8)}
+  .tp-intro{padding-top:var(--space-32)}
+  .tp .tp-intro .kx-display{margin:var(--space-16) 0}
+  .tp .tp-lead{max-width:62ch;color:var(--textSecondary)}
+  .tp-stack > * + *{margin-top:var(--space-32)}
+  .tp-spec{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-48);align-items:start}
+  .tp .tp-spec-info > * + *{margin-top:var(--space-24)}
+  .tp-badges,.tp-actions{display:flex;flex-wrap:wrap;gap:var(--space-8)}
+  .tp .kx-display,.tp .kx-heading{overflow-wrap:break-word;word-break:keep-all}
+  @media (min-width:768px) and (max-width:1023px){ .tp{padding:0 var(--space-32)} .tp-main > * + *{margin-top:var(--space-64)} }
+  @media (max-width:767px){ .tp{padding:0 var(--space-24)} .tp-main > * + *{margin-top:var(--space-48)} .tp-main{padding-bottom:var(--space-48)} .tp-spec{grid-template-columns:1fr;gap:var(--space-32)} .tp-spec .kx-media-tall,.tp-spec .kx-skel-tall{aspect-ratio:4/3} }
+</style>
+</head>
+<body>
+<p role="note" style="margin:0;padding:8px 24px;font:500 12px/18px var(--font-sans);color:var(--textPrimary);background:var(--primarySoft);border-bottom:1px solid var(--border)"><strong>정적 샘플</strong> — 상호작용 없음. 디자인 시스템 컴포넌트를 서버 렌더한 HTML이며 메뉴 열기·필터·페이지 이동·대화상자 열기는 동작하지 않는다. · <a href="../index.html">KOREX_V1 kit</a> · Template states · SearchListError</p>
+<div id="root"><div class="tp"><header class="kx kx-header"><a class="kx-brand" href="#">FORM &amp; PLACE</a><nav aria-label="주 탐색"><a href="#">홈</a><a href="#" aria-current="page">제품</a><a href="#">제품 상세</a></nav></header><main class="tp-main"><section class="tp-intro kx"><p class="kx-meta">COLLECTION / SAMPLE CATALOGUE</p><h1 class="kx-display">필요한 형태를 찾아보세요.</h1><p class="tp-lead">이름이나 소재로 찾고, 제품 종류로 좁혀보세요.</p></section><section class="tp-stack"><form class="kx kx-search" role="search"><label for="q" class="kx-search-label">제품 검색</label><div class="kx-search-row"><input id="q" type="search" class="kx-input" placeholder="예: 체어, 우드" autoComplete="off" value=""/><button type="submit" class="kx kx-cta kx-cta-primary">찾기 ↗</button></div></form><div class="kx kx-filter"><label for="category">제품 종류<select id="category" class="kx-select" disabled=""><option value="all" selected="">전체</option><option value="seating">체어</option><option value="tables">테이블</option><option value="lighting">조명</option></select></label><button type="button" class="kx kx-cta kx-cta-secondary" disabled="">초기화</button><p class="kx-filter-count" role="status" aria-live="polite">결과를 불러오지 못했습니다</p></div><div class="kx kx-toast kx-toast-error is-inline" role="alert" aria-live="assertive"><span class="kx-toast-mark"><svg class="kx-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter" aria-hidden="true" focusable="false"><path d="M5 5l10 10"></path><path d="M15 5 5 15"></path></svg></span><div class="kx-toast-body"><p class="kx-toast-tone">오류</p><p class="kx-toast-title">제품 목록을 불러오지 못했습니다</p><p class="kx-toast-text">예시 오류 상태입니다. 검색 조건은 유지됩니다. 잠시 후 다시 시도해 주세요.</p><div class="kx-toast-action"><button type="button" class="kx kx-btn kx-btn-secondary kx-btn-sm"><svg class="kx-icon" width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter" aria-hidden="true" focusable="false"><path d="M15.5 8A6 6 0 1 0 16 11"></path><path d="M15.5 3.5V8H11"></path></svg><span class="kx-btn-label">다시 시도</span></button></div></div></div></section></main><footer class="kx kx-footer"><span class="kx-footer-brand">FORM &amp; PLACE</span><span class="kx-meta">독립 예시 콘텐츠 · KOREX_V1 STYLE PREVIEW</span></footer></div></div>
+</body>
+</html>

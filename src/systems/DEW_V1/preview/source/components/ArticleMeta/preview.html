@@ -1,0 +1,13 @@
+<!-- @dsCard group="Editorial" height=100 subtitle="gap 16 · wrap" -->
+<!doctype html>
+<html lang="ko">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ArticleMeta — DEW_V1</title></head>
+<body>
+<div id="root"></div>
+<script>
+  var D = window.DEW, h = React.createElement;
+  var S = function (t) { return h('span', { className: 'dew-meta dew-pv-label' }, t); };
+  ReactDOM.createRoot(document.getElementById('root')).render(h('div', { className: 'dew dew-pv' }, h(D.ArticleMeta, { items: ['CULTURE', '예시 에세이', '3분 읽기'] })));
+</script>
+</body>
+</html>

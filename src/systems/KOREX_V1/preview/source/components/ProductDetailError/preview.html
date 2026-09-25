@@ -1,0 +1,187 @@
+<!-- @dsCard group="Template states" page width=1440 height=2250 subtitle="ProductDetail · error" -->
+<!doctype html>
+<html lang="ko">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ProductDetail · error · KOREX_V1</title>
+<style>
+  /* page shell only — layout from README (max 1200 content, page padding 48/32/24); every value is a token */
+  body{margin:0;background:var(--canvas)}
+  .tp{box-sizing:border-box;max-width:calc(1200px + 2 * var(--space-48));margin:0 auto;padding:0 var(--space-48);font-family:var(--font-sans);color:var(--textPrimary)}
+  .tp-main > * + *{margin-top:var(--space-80)}
+  .tp-main{padding:var(--space-32) 0 var(--space-80)}
+  .tp-head{display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:var(--space-24);margin-bottom:var(--space-32)}
+  .tp .tp-head .kx-meta{margin-bottom:var(--space-8)}
+  .tp-intro{padding-top:var(--space-32)}
+  .tp .tp-intro .kx-display{margin:var(--space-16) 0}
+  .tp .tp-lead{max-width:62ch;color:var(--textSecondary)}
+  .tp-stack > * + *{margin-top:var(--space-32)}
+  .tp-spec{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-48);align-items:start}
+  .tp .tp-spec-info > * + *{margin-top:var(--space-24)}
+  .tp-badges,.tp-actions{display:flex;flex-wrap:wrap;gap:var(--space-8)}
+  .tp .kx-display,.tp .kx-heading{overflow-wrap:break-word;word-break:keep-all}
+  @media (min-width:768px) and (max-width:1023px){ .tp{padding:0 var(--space-32)} .tp-main > * + *{margin-top:var(--space-64)} }
+  @media (max-width:767px){ .tp{padding:0 var(--space-24)} .tp-main > * + *{margin-top:var(--space-48)} .tp-main{padding-bottom:var(--space-48)} .tp-spec{grid-template-columns:1fr;gap:var(--space-32)} .tp-spec .kx-media-tall,.tp-spec .kx-skel-tall{aspect-ratio:4/3} }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script>
+(function () {
+  var K = window.KOREX, React = window.React, h = React.createElement, F = React.Fragment;
+  var BRAND = 'FORM & PLACE';
+  var BASE = [
+    { name: '모듈 체어', category: 'seating', label: 'SEATING', material: '우드', media: 'default' },
+    { name: '라운드 테이블', category: 'tables', label: 'TABLES', material: '스톤', media: 'mint' },
+    { name: '소프트 램프', category: 'lighting', label: 'LIGHTING', material: '패브릭', media: 'light' },
+    { name: '라운지 체어', category: 'seating', label: 'SEATING', material: '패브릭', media: 'mint' },
+    { name: '사이드 테이블', category: 'tables', label: 'TABLES', material: '우드', media: 'light' },
+    { name: '플로어 램프', category: 'lighting', label: 'LIGHTING', material: '스틸', media: 'default' }
+  ];
+  var LONG = [
+    { name: '모듈형 라운지 체어 — Modular Lounge Chair with Removable Cover', category: 'seating', label: 'SEATING · 좌식 가구', material: '패브릭 · Fabric', media: 'default' },
+    { name: 'Extended Round Dining Table 1800 / 확장형 라운드 다이닝 테이블', category: 'tables', label: 'TABLES · 식탁', material: '스톤 · Matte stone', media: 'mint' },
+    { name: '소프트 램프', category: 'lighting', label: 'LIGHTING', material: '패브릭', media: 'light' },
+    { name: '벽면 고정형 오픈 선반 시스템 (Wall-mounted Open Shelving System)', category: 'seating', label: 'STORAGE · 수납', material: '스틸 · Powder-coated steel', media: 'mint' },
+    { name: 'Side Table', category: 'tables', label: 'TABLES', material: '우드 · Oak veneer', media: 'light' },
+    { name: '플로어 램프', category: 'lighting', label: 'LIGHTING', material: '스틸', media: 'default' }
+  ];
+  function records(state) { return state === 'long-text' ? LONG : BASE; }
+  function nav(current) {
+    return [{ label: '홈', href: '#', current: current === 'home' }, { label: '제품', href: '#', current: current === 'list' }, { label: '제품 상세', href: '#', current: current === 'detail' }];
+  }
+  function card(state) {
+    return function (r, i) {
+      return h(K.ProductCard, { key: r.name, title: r.name, category: r.label + ' / ' + r.material, media: r.media, href: '#', imageMissing: state === 'missing-image' && i % 2 === 0 });
+    };
+  }
+  function loadingCards(n) { var a = []; for (var i = 0; i < n; i++) a.push(h(K.ProductCard, { key: i, loading: true })); return a; }
+  function footer() { return h(K.Footer, { brand: BRAND, note: '독립 예시 콘텐츠 · KOREX_V1 STYLE PREVIEW' }); }
+  function shell(current, main) {
+    return h('div', { className: 'tp' }, h(K.GlobalHeader, { brand: BRAND, links: nav(current) }), h('main', { className: 'tp-main' }, main), footer());
+  }
+  function errorToast(title, text) {
+    return h(K.Toast, { tone: 'error', inline: true, title: title, action: h(K.Button, { variant: 'secondary', size: 'sm', icon: 'refresh' }, '다시 시도') }, text);
+  }
+
+  /* BrandHome: default · loading · error · long-text · missing-image */
+  function BrandHome(p) {
+    var state = p.state || 'default', R = records(state).slice(0, 3), long = state === 'long-text';
+    var collection;
+    if (state === 'loading') collection = h(K.ContentGrid, { busy: true }, loadingCards(3));
+    else if (state === 'error') collection = errorToast('컬렉션을 불러오지 못했습니다', '예시 오류 상태입니다. 잠시 후 다시 시도해 주세요. 브랜드 소개와 검색은 계속 사용할 수 있습니다.');
+    else collection = h(K.ContentGrid, null, R.map(card(state)));
+    return shell('home', [
+      h(K.HeroSearch, {
+        key: 'hero',
+        meta: long ? 'OBJECTS FOR EVERYDAY LIVING · 오래 쓰는 사물을 위한 컬렉션' : 'OBJECTS FOR EVERYDAY LIVING',
+        title: long ? '오래 머무는 공간을 위한, 소재와 비례가 분명한 사물들 — Objects for long-lived spaces' : h(F, null, '공간에 맞는 선택,', h('br'), '일상에 맞는 형태.'),
+        text: long ? '소재·쓰임·공간 크기를 기준으로 필요한 사물을 살펴보세요. Browse by material, use and room size; long copy wraps and never truncates.' : '소재와 쓰임을 기준으로 필요한 사물을 살펴보세요.',
+        imageMissing: state === 'missing-image',
+        search: { label: '제품 검색', placeholder: '예: 체어, 우드' }
+      }),
+      h('section', { key: 'col' },
+        h('div', { className: 'tp-head kx' },
+          h('div', null, h('p', { className: 'kx-meta' }, 'OUR COLLECTION'), h('h2', { className: 'kx-heading' }, long ? '생활을 구성하는 사물 — Everyday objects that shape a room' : '생활을 구성하는 사물')),
+          h(K.Button, { variant: 'secondary', href: '#', iconEnd: 'arrow-up-right', disabled: state === 'loading' }, '전체 제품')),
+        collection),
+      h(K.BrandStatement, { key: 'st', meta: 'OUR APPROACH', title: h(F, null, '형태는 차분하게.', h('br'), '쓰임은 분명하게.') },
+        long ? '매일 사용하는 물건일수록 공간과 자연스럽게 어울리는 균형을 생각합니다. We design for balance with the room — 긴 본문도 8열 폭 안에서 줄바꿈되며, 행 길이는 62자를 넘지 않습니다.' : '매일 사용하는 물건일수록 공간과 자연스럽게 어울리는 균형을 생각합니다.')
+    ]);
+  }
+
+  /* SearchList: default · loading · empty · error · long-text · missing-image */
+  var OPTIONS = [{ value: 'all', label: '전체' }, { value: 'seating', label: '체어' }, { value: 'tables', label: '테이블' }, { value: 'lighting', label: '조명' }];
+  var PER = 3;
+  function SearchList(p) {
+    var state = p.state || 'default', long = state === 'long-text';
+    var q = React.useState(state === 'empty' ? '대리석 소파' : (long ? 'Extended round dining table 1800 확장형' : ''));
+    var c = React.useState('all');
+    var pg = React.useState(1);
+    var all = records(state);
+    var query = q[0].trim().toLocaleLowerCase();
+    var hits = long ? all : all.filter(function (r) {
+      return (r.name + ' ' + r.material).toLocaleLowerCase().indexOf(query) !== -1 && (c[0] === 'all' || r.category === c[0]);
+    });
+    var pages = Math.max(1, Math.ceil(hits.length / PER));
+    var page = Math.min(pg[0], pages);
+    var shown = hits.slice((page - 1) * PER, page * PER);
+    function reset() { q[1](''); c[1]('all'); pg[1](1); }
+    var busy = state === 'loading', failed = state === 'error';
+    var countLabel = busy ? function () { return '불러오는 중…'; } : failed ? function () { return '결과를 불러오지 못했습니다'; } : function (n) { return n + '개 예시 제품'; };
+    var results;
+    if (busy) results = h(K.ContentGrid, { busy: true }, loadingCards(3));
+    else if (failed) results = errorToast('제품 목록을 불러오지 못했습니다', '예시 오류 상태입니다. 검색 조건은 유지됩니다. 잠시 후 다시 시도해 주세요.');
+    else results = h(K.ContentGrid, {
+      empty: hits.length === 0, emptyTitle: '일치하는 제품이 없습니다.', emptyText: '다른 이름이나 소재를 입력하거나 필터를 초기화해 주세요.',
+      emptyAction: h(K.Button, { variant: 'secondary', icon: 'refresh', onClick: reset }, '검색 초기화')
+    }, shown.map(card(state)));
+    return shell('list', [
+      h('section', { key: 'intro', className: 'tp-intro kx' },
+        h('p', { className: 'kx-meta' }, 'COLLECTION / SAMPLE CATALOGUE'),
+        h('h1', { className: 'kx-display' }, long ? '필요한 형태를 찾아보세요 — Find the form your space needs' : '필요한 형태를 찾아보세요.'),
+        h('p', { className: 'tp-lead' }, '이름이나 소재로 찾고, 제품 종류로 좁혀보세요.')),
+      h('section', { key: 'list', className: 'tp-stack' },
+        h(K.SearchBar, { id: 'q', label: '제품 검색', placeholder: '예: 체어, 우드', value: q[0], onChange: function (v) { q[1](v); pg[1](1); }, onSubmit: q[1], disabled: busy }),
+        h(K.FilterPanel, { id: 'category', label: '제품 종류', options: OPTIONS, value: c[0], disabled: busy || failed, onChange: function (v) { c[1](v); pg[1](1); }, onReset: reset, count: busy || failed ? -1 : hits.length, countLabel: countLabel }),
+        results,
+        (busy || (!failed && hits.length > 0)) ? h(K.Pagination, { total: busy ? 2 : pages, page: page, disabled: busy, onChange: pg[1], label: '제품 목록 페이지' }) : null)
+    ]);
+  }
+
+  /* ProductDetail: default · loading · error · long-text · missing-image */
+  function ProductDetail(p) {
+    var state = p.state || 'default', long = state === 'long-text';
+    var R = records(state), item = long ? R[1] : R[0];
+    var related = R.slice(long ? 2 : 1, long ? 4 : 3);
+    if (state === 'loading') {
+      return shell('detail', [
+        h('section', { key: 'intro', className: 'tp-intro kx', 'aria-busy': 'true' }, h('h1', { className: 'kx-sr' }, '제품 정보를 불러오는 중'), h(K.Skeleton, { lines: 1, width: '30%', silent: true }), h('div', { style: { height: 16 } }), h(K.Skeleton, { lines: 1, size: 'display', width: '55%', label: '제품 정보를 불러오는 중' })),
+        h('section', { key: 'spec', className: 'tp-spec kx' },
+          h(K.Skeleton, { variant: 'media', tall: true, silent: true }),
+          h('div', { className: 'tp-spec-info' }, h(K.Skeleton, { lines: 1, width: '25%', silent: true }), h(K.Skeleton, { lines: 1, size: 'title', width: '70%', silent: true }), h(K.Skeleton, { lines: 3, silent: true }),
+            h(K.Table, { caption: '제품 사양', captionHidden: true, state: 'loading', loadingRows: 3, columns: [{ key: 'k', label: '항목' }, { key: 'v', label: '내용' }], rows: [] }))),
+        h('section', { key: 'rel' }, h('div', { className: 'tp-head kx' }, h('div', null, h('p', { className: 'kx-meta' }, 'SEE ALSO'), h('h2', { className: 'kx-heading' }, '함께 보는 사물'))), h(K.ContentGrid, { busy: true }, loadingCards(2)))
+      ]);
+    }
+    if (state === 'error') {
+      return shell('detail', [
+        h('section', { key: 'intro', className: 'tp-intro kx' },
+          h('p', { className: 'kx-meta' }, 'COLLECTION / PRODUCT DETAIL'),
+          h('h1', { className: 'kx-display' }, '제품 정보를 불러오지 못했습니다')),
+        h('section', { key: 'err', className: 'tp-stack' },
+          errorToast('예시 오류 상태입니다', '연결을 확인한 뒤 다시 시도하거나 제품 목록으로 돌아가 주세요.'),
+          h('div', { className: 'kx pv-actions' }, h(K.Button, { variant: 'secondary', href: '#', icon: 'chevron-left' }, '제품 목록으로 돌아가기')))
+      ]);
+    }
+    var spec = [
+      { k: '소재 예시', v: item.material },
+      { k: '표면', v: long ? '무광 마감 · Matte finish, hand-waxed edge with a protective oil coat (예시 사양)' : '무광 · 예시 사양' },
+      { k: '치수 / 가격', v: '실제 프로젝트에서 입력' },
+      { k: '배송 예정', v: null }
+    ];
+    return shell('detail', [
+      h('section', { key: 'intro', className: 'tp-intro kx' },
+        h('p', { className: 'kx-meta' }, 'COLLECTION / PRODUCT DETAIL'),
+        h('h1', { className: 'kx-display' }, item.name)),
+      h('section', { key: 'spec', className: 'tp-spec kx' },
+        h(K.ImageCard, { tall: true, media: item.media, imageMissing: state === 'missing-image', caption: state === 'missing-image' ? '대표 이미지가 아직 등록되지 않았습니다 · 이미지 없음' : '사진 교체용 자리표시자 · 실제 제품 이미지 아님', mediaLabel: '예시 제품을 위한 추상 미디어 자리표시자' }),
+        h('div', { className: 'tp-spec-info' },
+          h('div', { className: 'tp-badges' }, h(K.Badge, { tone: 'brand', icon: false }, item.label), h(K.Badge, { tone: 'neutral' }, '예시 데이터')),
+          h('h2', { className: 'kx-heading' }, '일상에 자연스럽게', h('br'), '어울리는 균형.'),
+          h('p', null, long ? '제품의 형태와 소재를 설명하는 예시 상세 화면입니다. This paragraph mixes Korean and English to check wrapping — 새 프로젝트의 제품 이미지와 정보로 교체해 사용하세요. 긴 설명도 자르지 않고 모두 보여줍니다.' : '제품의 형태와 소재를 설명하는 예시 상세 화면입니다. 새 프로젝트의 제품 이미지와 정보로 교체해 사용하세요.'),
+          h(K.Table, { caption: '제품 사양', captionHidden: true, columns: [{ key: 'k', label: '항목', width: '38%' }, { key: 'v', label: '내용' }], rows: spec, rowKey: 'k' }),
+          h('div', { className: 'tp-actions' }, h(K.Button, { href: '#' }, '제품 목록으로 돌아가기'), h(K.Button, { variant: 'ghost', icon: 'plus' }, '비교 목록에 담기')))),
+      h('section', { key: 'rel' },
+        h('div', { className: 'tp-head kx' }, h('div', null, h('p', { className: 'kx-meta' }, 'SEE ALSO'), h('h2', { className: 'kx-heading' }, '함께 보는 사물'))),
+        h(K.ContentGrid, null, related.map(function (r, i) { return h(K.ProductCard, { key: r.name, title: r.name, category: r.label + ' / ' + r.material, media: r.media, href: '#', imageMissing: state === 'missing-image' && i === 0 }); }))),
+      h(K.BrandStatement, { key: 'st', meta: 'MATERIAL & FORM', title: '오래 바라봐도 편안한 사물.' },
+        '절제된 선과 자연스러운 소재를 중심으로 제품의 특징을 설명하는 영역입니다. 검증되지 않은 성능이나 판매 실적을 제시하지 않습니다.')
+    ]);
+  }
+
+  window.KOREX_TEMPLATES = { BrandHome: BrandHome, SearchList: SearchList, ProductDetail: ProductDetail };
+})();
+
+  ReactDOM.createRoot(document.getElementById('root')).render(React.createElement(window.KOREX_TEMPLATES.ProductDetail, { state: 'error' }));
+</script>
+</body>
+</html>

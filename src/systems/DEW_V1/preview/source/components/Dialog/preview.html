@@ -1,0 +1,31 @@
+<!-- @dsCard group="Overlays" height=1700 subtitle="sm 400 · md 560 · lg 800 (inline previews)" -->
+<!doctype html>
+<html lang="ko">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Dialog — DEW_V1</title></head>
+<body>
+<div id="root"></div>
+<script>
+  var D = window.DEW, h = React.createElement;
+  function L(t) { return h('span', { className: 'dew-meta dew-pv-label' }, t); }
+  function C(t, node, style) { return h('div', { className: 'dew-pv-cell', style: style }, L(t), node); }
+  function H(t) { return h('p', { className: 'dew-meta dew-eyebrow dew-pv-h' }, t); }
+  function G(cells, wide) { return h('div', { className: 'dew-pv-grid' + (wide ? ' dew-pv-grid--wide' : '') }, cells); }
+  function K(list) { return list.map(function (n, i) { return h(React.Fragment, { key: i }, n); }); }
+
+  var foot = K([h(D.Button, { key: 1, variant: 'secondary' }, '취소'), h(D.Button, { key: 2 }, '저장')]);
+  function frame(node) { return h('div', { className: 'dew-pv-frame' }, node); }
+  var VIEW = [
+    H('SM — 400'),
+    frame(h(D.Dialog, { open: true, inline: true, size: 'sm', title: '저장했습니다', description: '저장한 이야기는 보관함에서 다시 볼 수 있습니다.', onClose: function () {}, footer: h(D.Button, null, '확인') })),
+    H('MD — 560 · form'),
+    frame(h(D.Dialog, { open: true, inline: true, size: 'md', eyebrow: 'LETTER', title: '독자 편지 보내기', onClose: function () {}, footer: foot },
+      h(D.TextField, { label: '이름', placeholder: '예: 김하늘' }), h(D.Textarea, { label: '편지', rows: 3, maxLength: 500 }))),
+    H('LG — 800 · asymmetric 5 : 7 body · long copy'),
+    frame(h(D.Dialog, { open: true, inline: true, size: 'lg', eyebrow: 'IMAGE', title: 'A long dialog title that wraps onto a second line — 이미지 정보', onClose: function () {}, footer: h(D.Button, { variant: 'secondary' }, '닫기') },
+      h(D.MediaCard, { tone: 'mint', caption: '예시 미디어', credit: '자체 제작 도형' }),
+      h('div', null, h(D.ArticleMeta, { items: ['OBJECTS', '예시 사진'] }), h('p', { style: { marginTop: '16px' } }, '큰 대화상자는 미디어와 설명을 5 : 7로 나눕니다. 모바일에서는 세로로 쌓이고 하단에서 올라옵니다.'))))
+  ];
+  ReactDOM.createRoot(document.getElementById('root')).render(h('div', { className: 'dew dew-pv' }, K(VIEW)));
+</script>
+</body>
+</html>

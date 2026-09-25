@@ -1,4 +1,19 @@
-# HYNIX_V1 · KPOP_V1 디자인 시스템
+# 프로젝트별 독립 디자인 시스템
+
+IAK는 항목과 케이스의 기준이고, 시각 스타일은 각 프로젝트가 정한다. 이번 수정 완료 범위는 DEW_V1과 KOREX_V1이다. 포트폴리오 전체의 제작 완료를 의미하지 않는다.
+
+| 프로젝트 | 용도 | 스타일 |
+|---|---|---|
+| DEW_V1 | Editorial / Premium / Content Web | 크림 바탕·세리프 헤드라인·편집 그리드 |
+| KOREX_V1 | Corporate / Brand / Product Web | 녹색 브랜드·제품 탐색·기업 정보 |
+
+각 폴더는 figma-system.json, claude-system.md, preview/로 구성된다. 각 27개 컴포넌트 항목과 기본 템플릿 3개, 공통 상태 사례를 제공한다. preview/source/는 Claude의 재사용 소스, preview/handoff/는 Figma 연결 및 검증 기록이다. 정적 HTML 사례와 React 런타임 소스를 구분해 사용한다.
+
+IAK_MASTER_V1은 항목 참조 자료다. 프로젝트별 시각 디자인을 대체하지 않는다. 정확한 적용 범위는 각 preview/coverage.md에 있다.
+
+## 기존 HYNIX_V1 · KPOP_V1 기록
+
+아래 내용은 기존 두 시스템의 개별 기록입니다. 새 프로젝트의 수치나 서체 규칙에 적용하지 않습니다.
 
 두 독립 시스템입니다. 한 프로젝트에 하나를 선택하고 `CLAUDE.md` → `claude-system.md` → `figma-system.json` 순으로 적용합니다. 정적 HTML/CSS/JS이며 DB·Router·설치가 필요 없습니다.
 

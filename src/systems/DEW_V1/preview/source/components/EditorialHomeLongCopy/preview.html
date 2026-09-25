@@ -1,0 +1,91 @@
+<!-- @dsCard group="Template states" height=2600 width=1440 page subtitle="긴 문구 — KO/EN 긴 제목·메타·인용" -->
+<!doctype html>
+<html lang="ko">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>EditorialHomeLongCopy — DEW_V1</title>
+<style>.dew-intro{padding:64px 0 40px} .dew .dew-intro h1{margin:16px 0} .dew-story{max-width:720px;margin:48px auto 72px} .dew .dew-story p{margin:24px 0} .dew .dew-story h2{margin-top:48px} .dew-listbar{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap} .dew-state-card{padding:48px} .dew .dew-state-card h2{margin:16px 0 8px} @media (max-width:767px){.dew-intro{padding:48px 0 32px} .dew-state-card{padding:24px}}</style></head>
+<body>
+<div id="root"></div>
+<script>
+  var D = window.DEW, h = React.createElement;
+  var LK = window.__DEW_LINKS || { home: '#', list: '#', detail: '#' };
+  var LONG_T = 'A very long headline that keeps going — 계절과 계절 사이, 오래 남는 사물과 장면에 관한 아주 긴 제목';
+  function NAV(cur) { return h(D.EditorialHeader, { brand: 'MASTHEAD', brandHref: LK.home, links: [{ label: '홈', href: LK.home, current: cur === 0 }, { label: '저널', href: LK.list, current: cur === 1 }, { label: '스토리', href: LK.detail, current: cur === 2 }] }); }
+  var FOOT = h(D.Footer, { brand: 'MASTHEAD', note: '독립 예시 콘텐츠 · DEW_V1 STYLE PREVIEW' });
+  function cards(state) {
+    var base = [
+      { href: LK.detail, media: { tone: 'mint' }, meta: 'CULTURE · 예시 에세이', title: '느린 오후의 색' },
+      { href: LK.detail, media: { tone: 'light' }, meta: 'OBJECTS · 예시 에세이', title: '사물 사이의 여백' },
+      { href: LK.detail, media: {}, meta: 'PLACES · 예시 에세이', title: '걷다 만난 작은 풍경' }];
+    if (state === 'long') { base[0].title = LONG_T; base[1].meta = 'OBJECTS & EVERYDAY DESIGN · 아주 긴 분류 이름의 예시 에세이 · 14분 읽기'; base[2].title = 'Extraordinarilylongunbrokenwordforwrappingcheck 풍경'; }
+    if (state === 'missing') { base[0].media = { missing: true, label: '느린 오후의 색' }; base[2].media = { missing: true, label: '걷다 만난 작은 풍경' }; }
+    return base;
+  }
+  /* page-level status panel = Card(outlined) + Icon + heading + Button (composition, not a new component) */
+  function Panel(kind, title, msg, actions) {
+    var err = kind === 'error';
+    return h('div', { role: err ? 'alert' : 'status', className: 'dew-state-panel' },
+      h(D.Card, { variant: 'outlined', title: null, className: 'dew-state-card' },
+        h(D.Icon, { name: err ? 'error' : 'search', size: 24, tone: err ? 'accent' : null }),
+        h('h2', { className: 'dew-heading' }, title),
+        h('p', { className: 'dew-lead' }, msg),
+        actions ? h('div', { className: 'dew-ucard__footer' }, actions) : null));
+  }
+  function skelGrid(n) { var a = []; for (var i = 0; i < n; i++) a.push(h(D.Skeleton, { key: i, variant: 'story', ratio: i === 0 && n === 3 ? null : null, decorative: true })); return h('div', { className: 'dew-grid dew-grid--three' }, h('div', { className: 'dew-grid__items' }, a)); }
+
+  function Home(state) {
+    var feature;
+    if (state === 'loading') feature = h(D.Skeleton, { variant: 'feature', label: '대표 이야기를 불러오는 중' });
+    else if (state === 'empty') feature = h('section', { className: 'dew-intro' }, h('p', { className: 'dew-meta dew-eyebrow' }, 'JOURNAL'), h('h1', { className: 'dew-display' }, '다음 이야기를 준비하고 있습니다'), h('p', { className: 'dew-lead' }, '아직 소개할 대표 이야기가 없습니다. 지난 저널을 먼저 둘러보세요.'), h(D.EditorialCTA, { href: LK.list, label: '저널 둘러보기' }));
+    else feature = h(D.FeatureStory, { eyebrow: state === 'long' ? 'JOURNAL / EVERYDAY CULTURE / SPECIAL EDITION / 예시 특별호' : 'JOURNAL / EVERYDAY CULTURE',
+      title: state === 'long' ? LONG_T : h(React.Fragment, null, '사소한 장면,', h('br'), '오래 남는 감각.'),
+      description: state === 'long' ? '빛과 사물, 그리고 일상에서 발견한 새로운 시선을 모읍니다. This description is intentionally long to verify wrapping in English and Korean within the five-column text area.' : '빛과 사물, 그리고 일상에서 발견한 새로운 시선을 모읍니다.',
+      cta: { href: LK.detail, label: '이번 이야기 읽기' },
+      media: state === 'missing' ? { missing: true, label: '대표 이야기 이미지', caption: 'FIG. 01 — 이미지를 불러오지 못했습니다', credit: '대체 표시' } : { label: '빛과 형태를 표현한 추상 미디어 자리표시자', caption: 'FIG. 01 — 빛과 형태', credit: '자체 제작 도형' } });
+    var head = { eyebrow: 'SELECTED STORIES', title: state === 'long' ? '지금, 눈여겨볼 이야기 — Stories worth a slower read this week' : '지금, 눈여겨볼 이야기', cta: { href: LK.list, label: '전체 저널' } };
+    var grid;
+    if (state === 'loading') grid = h('div', { className: 'dew-section' }, h('div', { className: 'dew-grid__head' }, h('div', null, h('p', { className: 'dew-meta dew-eyebrow' }, head.eyebrow), h('h2', { className: 'dew-heading' }, head.title))), skelGrid(3));
+    else if (state === 'empty') grid = h('div', { className: 'dew-section' }, Panel('empty', '선택된 이야기가 없습니다', '편집부가 이번 주 이야기를 고르는 중입니다.', h(D.Button, { variant: 'secondary', icon: 'arrow-right', iconPosition: 'end' }, '전체 저널 보기')));
+    else if (state === 'error') grid = h('div', { className: 'dew-section' }, Panel('error', '이야기를 불러오지 못했습니다', '연결이 잠시 끊겼습니다. 다시 시도하거나 저널 목록으로 이동하세요.', [h(D.Button, { key: 1, variant: 'secondary', icon: 'refresh' }, '다시 시도'), h(D.EditorialCTA, { key: 2, href: LK.list, label: '저널로 이동' })]));
+    else grid = h('div', { className: 'dew-section' }, h(D.EditorialGrid, Object.assign({ variant: 'three', items: cards(state) }, head)));
+    var quote = state === 'loading' || state === 'error' ? null : h('div', { style: { margin: '24px 0 72px' } }, h(D.QuoteBlock, { quote: state === 'long' ? '“좋은 이야기는 익숙한 것을 다시 보게 한다. A good story makes the familiar strange again, and then familiar once more.”' : '“좋은 이야기는 익숙한 것을 다시 보게 한다.”', cite: '예시 편집 문장' }));
+    return h('div', { className: 'dew dew-wrap' }, NAV(0), h('main', null, feature, grid, quote), FOOT);
+  }
+
+  function List(state) {
+    var intro = h('section', { className: 'dew-intro' }, h('p', { className: 'dew-meta dew-eyebrow' }, 'THE JOURNAL'), h('h1', { className: 'dew-display' }, state === 'long' ? '일상을 읽는 시선 — Ways of reading the everyday' : '일상을 읽는 시선'), h('p', { className: 'dew-lead' }, '문화, 사물, 공간에 관한 짧은 기록들.'));
+    var cats = [{ label: '전체', selected: state !== 'empty' }, { label: '문화', href: '#' }, { label: '사물', href: '#', selected: state === 'empty' }, { label: '공간', href: '#' }];
+    if (state === 'long') cats.push({ label: 'Architecture & Interiors 건축과 실내', href: '#' }, { label: '긴 주제 이름의 예시 카테고리', href: '#' });
+    var body;
+    if (state === 'loading') body = h('div', { className: 'dew-section', 'aria-busy': 'true' }, h('p', { className: 'dew-sr', role: 'status' }, '저널 목록을 불러오는 중'), skelGrid(3), h('div', { style: { marginTop: '48px' } }, h(D.Pagination, { page: 1, total: 12, disabled: true })));
+    else if (state === 'empty') body = h('div', { className: 'dew-section' }, Panel('empty', '이 주제의 이야기가 아직 없습니다', '‘사물’ 주제의 첫 이야기를 준비하고 있습니다. 다른 주제를 둘러보세요.', h(D.Button, { variant: 'secondary' }, '전체 주제 보기')));
+    else if (state === 'error') body = h('div', { className: 'dew-section' }, Panel('error', '목록을 불러오지 못했습니다', '잠시 후 다시 시도해 주세요. 이미 불러온 이야기는 유지됩니다.', h(D.Button, { variant: 'secondary', icon: 'refresh' }, '다시 시도')),
+      h(D.ToastRegion, null, h(D.Toast, { tone: 'error', title: '연결이 끊겼습니다', message: '네트워크를 확인하세요.', onClose: function () {} })));
+    else body = h('div', { className: 'dew-section' }, h(D.EditorialGrid, { variant: 'feature', items: cards(state) }), h('div', { style: { marginTop: '72px' } }, h(D.EditorialGrid, { variant: 'three', items: cards(state) })), h('div', { style: { marginTop: '48px' } }, h(D.Pagination, { page: 2, total: 12, onChange: function () {} })));
+    return h('div', { className: 'dew dew-wrap' }, NAV(1), h('main', null, intro, h('div', { className: 'dew-listbar' }, h(D.CategoryNav, { label: '저널 주제', items: cats }), h(D.Menu, { label: '정렬: 최신순', align: 'end', items: [{ label: '최신순', selected: true }, { label: '읽기 시간 짧은 순', selected: false }] })), body), FOOT);
+  }
+
+  function Detail(state) {
+    var art;
+    if (state === 'loading') art = h('article', { 'aria-busy': 'true' }, h('header', { className: 'dew-intro' }, h(D.Skeleton, { variant: 'block', width: '220px', height: 18, decorative: true }), h('div', { style: { margin: '16px 0' } }, h(D.Skeleton, { variant: 'heading', label: '이야기를 불러오는 중' })), h(D.Skeleton, { variant: 'text', lines: 1, decorative: true })), h(D.Skeleton, { variant: 'media', decorative: true }), h('div', { className: 'dew-story' }, h(D.Skeleton, { variant: 'text', lines: 5, decorative: true })));
+    else if (state === 'error') art = h('section', { className: 'dew-intro', role: 'alert' }, h(D.Icon, { name: 'error', size: 24, tone: 'accent' }), h('h1', { className: 'dew-display', style: { margin: '16px 0' } }, '이야기를 찾을 수 없습니다'), h('p', { className: 'dew-lead' }, '주소가 바뀌었거나 게시가 중단된 이야기입니다.'), h('div', { className: 'dew-ucard__footer', style: { marginTop: '24px' } }, h(D.Button, { variant: 'secondary', icon: 'refresh' }, '다시 시도'), h(D.EditorialCTA, { href: LK.list, direction: 'back', label: '저널로 돌아가기' })));
+    else {
+      var L = state === 'long';
+      art = h('article', null,
+        h('header', { className: 'dew-intro' }, h(D.ArticleMeta, { items: L ? ['CULTURE & OBJECTS', '아주 긴 분류 이름의 예시 에세이', '14분 읽기', 'SPECIAL EDITION'] : ['CULTURE', '예시 에세이', '3분 읽기'] }),
+          h('h1', { className: 'dew-display' }, L ? LONG_T : h(React.Fragment, null, '사소한 장면,', h('br'), '오래 남는 감각.')),
+          h('p', { className: 'dew-lead' }, L ? '매일 지나치는 풍경 속에서 새로운 관점을 발견하는 일. A lead paragraph that runs long enough to wrap several times at every width.' : '매일 지나치는 풍경 속에서 새로운 관점을 발견하는 일.')),
+        h(D.MediaCard, state === 'missing' ? { orientation: 'landscape', missing: true, label: '일상 속 형태', caption: '이미지를 불러오지 못했습니다. 캡션은 그대로 남습니다.', credit: '대체 표시' } : { orientation: 'landscape', label: '일상 속 형태를 표현한 추상 자리표시자', caption: L ? 'A long caption that describes the light, the table and the shape of the afternoon — 빛의 방향과 형태의 균형을 위한 미디어 예시.' : '빛의 방향과 형태의 균형을 위한 미디어 예시.', credit: '자체 제작 도형' }),
+        h('div', { className: 'dew-story' },
+          h('p', null, '오후의 빛이 빈 탁자 위에 내려앉습니다. 평소에는 보이지 않던 사물의 윤곽이 조금씩 또렷해집니다.'),
+          h('h2', { className: 'dew-heading' }, L ? '조금 더 천천히 보기 — Looking a little more slowly' : '조금 더 천천히 보기'),
+          h('p', null, L ? 'Extraordinarilylongunbrokenwordthatmustwrapwithoutoverflowingthecolumn. 본문 폭을 좁히고 문단 사이에 여백을 두어 하나의 생각에서 다음 생각으로 자연스럽게 이동하도록 구성했습니다.' : '본문 폭을 좁히고 문단 사이에 여백을 두어, 하나의 생각에서 다음 생각으로 자연스럽게 이동하도록 구성했습니다.')),
+        h(D.QuoteBlock, { quote: L ? '“관찰은 일상의 해상도를 높이는 일. Observation raises the resolution of the everyday.”' : '“관찰은 일상의 해상도를 높이는 일.”', cite: '예시 편집 문장' }));
+    }
+    return h('div', { className: 'dew dew-wrap' }, NAV(2), h('main', null, art, state === 'error' ? h('div', { className: 'dew-section' }) : h('div', { style: { padding: '24px 0 72px' } }, h(D.EditorialCTA, { href: LK.list, direction: 'back', label: '저널로 돌아가기' }))), FOOT);
+  }
+  window.__DEW_T = { Home: Home, List: List, Detail: Detail };
+
+  ReactDOM.createRoot(document.getElementById('root')).render(Home('long'));
+</script>
+</body>
+</html>

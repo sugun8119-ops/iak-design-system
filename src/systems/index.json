@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "systems": [
     {
       "id": "HYNIX_V1",
@@ -24,6 +24,38 @@
       "figma": "https://www.figma.com/design/VR9GFAKIFEjLWuQonbJVYv",
       "claudeDesign": "https://claude.ai/design/p/b9b13fc9-3a4a-4815-b091-5eab5b27fa26",
       "claudeDesignStatus": "draft_paused_usage_limit"
+    },
+    {
+      "id": "DEW_V1",
+      "category": "Editorial / Premium / Content Web",
+      "tokens": "DEW_V1/figma-system.json",
+      "claude": "DEW_V1/claude-system.md",
+      "entrypoint": "DEW_V1/claude-system.md",
+      "preview": "DEW_V1/preview/index.html",
+      "figmaStatus": "native_file_updated",
+      "figma": "https://www.figma.com/design/qDaMlSX00Eow0b7aDYKKsf",
+      "claudeDesign": "https://claude.ai/artifact/QPSdZdNRdLF3gfnZccrmYv?org=fa3d9581-54d4-4425-bae4-42d8076030e7",
+      "claudeDesignStatus": "published",
+      "componentFamilies": 27,
+      "nativeCommonVariants": 175,
+      "visualAuthority": "DEW_V1",
+      "coverageAuthority": "IAK families and applicable cases"
+    },
+    {
+      "id": "KOREX_V1",
+      "category": "Corporate / Brand / Product Web",
+      "tokens": "KOREX_V1/figma-system.json",
+      "claude": "KOREX_V1/claude-system.md",
+      "entrypoint": "KOREX_V1/claude-system.md",
+      "preview": "KOREX_V1/preview/index.html",
+      "figmaStatus": "native_file_updated",
+      "figma": "https://www.figma.com/design/MR9qvFSq9w5HAD2wnQObdn",
+      "claudeDesign": "https://claude.ai/artifact/23zNuD35PBpF9wPangTXsz?org=fa3d9581-54d4-4425-bae4-42d8076030e7",
+      "claudeDesignStatus": "published",
+      "componentFamilies": 27,
+      "nativeCommonVariants": 175,
+      "visualAuthority": "KOREX_V1",
+      "coverageAuthority": "IAK families and applicable cases"
     }
   ]
 }

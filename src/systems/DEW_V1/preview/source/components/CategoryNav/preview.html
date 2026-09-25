@@ -1,0 +1,14 @@
+<!-- @dsCard group="Navigation" height=140 subtitle="Default · Selected · Hover · Focus" -->
+<!doctype html>
+<html lang="ko">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>CategoryNav — DEW_V1</title></head>
+<body>
+<div id="root"></div>
+<script>
+  var D = window.DEW, h = React.createElement;
+  var S = function (t) { return h('span', { className: 'dew-meta dew-pv-label' }, t); };
+  ReactDOM.createRoot(document.getElementById('root')).render(h('div', { className: 'dew dew-pv' }, h(D.CategoryNav, { label: '저널 주제', items: [
+    { label: '전체', selected: true }, { label: '문화', state: 'hover' }, { label: '사물', state: 'focus' }, { label: '공간' } ] })));
+</script>
+</body>
+</html>

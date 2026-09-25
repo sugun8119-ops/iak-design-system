@@ -1,0 +1,26 @@
+<!-- @dsCard group="Forms" height=420 subtitle="off · on · focus · disabled · long" -->
+<!doctype html>
+<html lang="ko">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Switch — DEW_V1</title></head>
+<body>
+<div id="root"></div>
+<script>
+  var D = window.DEW, h = React.createElement;
+  function L(t) { return h('span', { className: 'dew-meta dew-pv-label' }, t); }
+  function C(t, node, style) { return h('div', { className: 'dew-pv-cell', style: style }, L(t), node); }
+  function H(t) { return h('p', { className: 'dew-meta dew-eyebrow dew-pv-h' }, t); }
+  function G(cells, wide) { return h('div', { className: 'dew-pv-grid' + (wide ? ' dew-pv-grid--wide' : '') }, cells); }
+  function K(list) { return list.map(function (n, i) { return h(React.Fragment, { key: i }, n); }); }
+
+  var VIEW = [G(K([
+    C('off', h(D.Switch, { label: '본문 글자 크게' })),
+    C('on', h(D.Switch, { label: '이미지 자동 재생', defaultChecked: true })),
+    C('focus', h(D.Switch, { label: '읽은 이야기 흐리게', state: 'focus' })),
+    C('disabled off', h(D.Switch, { label: '오프라인 저장 (준비 중)', disabled: true })),
+    C('disabled on', h(D.Switch, { label: '필수 알림', disabled: true, defaultChecked: true })),
+    C('long + description · KO+EN', h(D.Switch, { label: 'Reduce motion — 페이지 전환과 이미지 효과를 줄입니다', description: '시스템 설정을 따르지 않고 이 사이트에만 적용됩니다.', defaultChecked: true }))
+  ]))];
+  ReactDOM.createRoot(document.getElementById('root')).render(h('div', { className: 'dew dew-pv' }, K(VIEW)));
+</script>
+</body>
+</html>

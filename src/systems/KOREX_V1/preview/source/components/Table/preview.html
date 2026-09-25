@@ -1,0 +1,71 @@
+<!-- @dsCard group="Data" height=2100 subtitle="sort · loading · empty · error · missing · long · narrow" -->
+<!doctype html>
+<html lang="ko">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>preview</title>
+<style>
+  body{margin:0;background:var(--canvas);padding:var(--space-24)}
+  .pv{font-family:var(--font-sans);color:var(--textPrimary);font-size:15px;line-height:25px}
+  .pv .pv-origin{display:flex;flex-wrap:wrap;gap:var(--space-8);align-items:center;margin:0 0 var(--space-24);font-size:12px;line-height:18px;color:var(--textSecondary)}
+  .pv .pv-sec{margin:0 0 var(--space-32)}
+  .pv .pv-h{margin:0 0 var(--space-16);padding-bottom:var(--space-8);border-bottom:1px solid var(--border);font-size:12px;line-height:18px;font-weight:600;letter-spacing:.06em;color:var(--textSecondary)}
+  .pv-row{display:flex;flex-wrap:wrap;align-items:center;gap:var(--space-16)}
+  .pv-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:var(--space-24);align-items:start}
+  .pv-grid-wide{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:var(--space-24);align-items:start}
+  .pv-cell{display:flex;flex-direction:column;gap:var(--space-8);min-width:0}
+  .pv .pv-tag{font-size:12px;line-height:18px;font-weight:500;letter-spacing:.06em;color:var(--textSecondary)}
+  .pv-narrow{max-width:240px}
+  .pv-frame{position:relative;height:var(--h,360px);border:1px solid var(--border);border-radius:var(--radius-sm);overflow:hidden}
+  .pv-matrix{display:grid;grid-template-columns:96px repeat(3,auto);gap:var(--space-16);align-items:center;justify-content:start}
+  @media (max-width:520px){.pv-matrix{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div id="root" class="pv kx"></div>
+<script>
+  var K = window.KOREX, h = React.createElement, F = React.Fragment;
+  function origin(observed, derived) {
+    return h('p', { className: 'pv-origin' },
+      h(K.Badge, { tone: 'brand', icon: false, size: 'sm' }, 'IAK coverage'), h('span', null, observed),
+      derived ? h(K.Badge, { tone: 'neutral', icon: false, size: 'sm' }, 'derived-extension') : null, derived ? h('span', null, derived) : null);
+  }
+  function kids(args, from) { return Array.prototype.slice.call(args, from); }
+  function el(tag, props, list) { return h.apply(null, [tag, props].concat(list)); }
+  function sec(title) { return el('section', { className: 'pv-sec' }, [h('h2', { className: 'pv-h' }, title)].concat(kids(arguments, 1))); }
+  function cell(tag) { return el('div', { className: 'pv-cell' }, [h('span', { className: 'pv-tag' }, tag)].concat(kids(arguments, 1))); }
+  function row() { return el('div', { className: 'pv-row' }, kids(arguments, 0)); }
+  function grid() { return el('div', { className: 'pv-grid' }, kids(arguments, 0)); }
+  function wide() { return el('div', { className: 'pv-grid-wide' }, kids(arguments, 0)); }
+
+  var STATUS = function (v) { var m = { stock: ['success', '재고 있음'], low: ['warning', '재고 적음'], end: ['error', '판매 종료'] }[v]; return m ? h(K.Badge, { tone: m[0], size: 'sm' }, m[1]) : v; };
+  var COLS = [
+    { key: 'name', label: '제품명', sortable: true },
+    { key: 'cat', label: '분류', sortable: true },
+    { key: 'desc', label: '설명', truncate: true },
+    { key: 'width', label: '폭(mm)', sortable: true, align: 'end' },
+    { key: 'status', label: '상태', render: STATUS }
+  ];
+  var ROWS = [
+    { name: '모듈 체어', cat: 'SEATING', desc: '앉는 깊이를 조절하는 예시 체어', width: 620, status: 'stock' },
+    { name: '라운드 테이블', cat: 'TABLES', desc: '확장형 상판 — Extended round dining table with separate leaf and matte stone top', width: 1800, status: 'low' },
+    { name: '소프트 램프', cat: 'LIGHTING', desc: null, width: null, status: 'stock' },
+    { name: 'Lounge Chair', cat: 'SEATING', desc: '영문 이름 예시', width: 780, status: 'end' }
+  ];
+  function View() {
+    return h(F, null,
+origin('KOREX 상세 사양 표(1px border 행 구분, th 굵기 600)', '정렬 · loading/empty/error · 누락 값 · 가로 스크롤'),
+      sec('SORT (이름 오름차순) · MISSING VALUE · LONG TEXT (말줄임 열) · STATUS BADGE',
+        h(K.Table, { caption: '예시 제품 목록', rowKey: 'name', defaultSort: { key: 'name', dir: 'asc' }, columns: COLS, rows: ROWS })),
+      sec('SELECTED ROW · LONG TEXT WRAP',
+        h(K.Table, { caption: '비교 목록', captionHidden: true, rowKey: 'name', selectedKey: '라운드 테이블', columns: [{ key: 'name', label: '제품명' }, { key: 'note', label: '설명' }],
+          rows: [{ name: '라운드 테이블', note: '확장 상판을 별도 포장해 배송하는 예시 설명 — The extension leaf ships in a separate box and can be stored under the frame.' }, { name: '모듈 체어', note: '짧은 설명' }] })),
+      sec('LOADING', h(K.Table, { state: 'loading', columns: COLS, rows: [] })),
+      sec('EMPTY', h(K.Table, { state: 'empty', columns: COLS, rows: [], emptyTitle: '조건에 맞는 제품이 없습니다.', emptyText: '검색어나 분류를 바꿔 보세요.', emptyAction: h(K.Button, { variant: 'secondary', size: 'sm' }, '조건 초기화') })),
+      sec('ERROR', h(K.Table, { state: 'error', columns: COLS, rows: [], errorText: '예시 오류 상태입니다. 네트워크 연결을 확인한 뒤 다시 시도해 주세요.', onRetry: function () {} })),
+      sec('NARROW — 360px 컨테이너, 최소 폭 640 가로 스크롤',
+        h('div', { style: { maxWidth: 360 } }, h(K.Table, { caption: '좁은 화면 예시', minWidth: 640, columns: COLS, rows: ROWS.slice(0, 3) })))
+    );
+  }
+  ReactDOM.createRoot(document.getElementById('root')).render(h(View));
+</script>
+</body>
+</html>

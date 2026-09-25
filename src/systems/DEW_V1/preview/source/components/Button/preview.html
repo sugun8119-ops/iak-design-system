@@ -1,0 +1,44 @@
+<!-- @dsCard group="Actions" height=1500 subtitle="primary · secondary · danger · text / 3 sizes / states" -->
+<!doctype html>
+<html lang="ko">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Button — DEW_V1</title></head>
+<body>
+<div id="root"></div>
+<script>
+  var D = window.DEW, h = React.createElement;
+  function L(t) { return h('span', { className: 'dew-meta dew-pv-label' }, t); }
+  function C(t, node, style) { return h('div', { className: 'dew-pv-cell', style: style }, L(t), node); }
+  function H(t) { return h('p', { className: 'dew-meta dew-eyebrow dew-pv-h' }, t); }
+  function G(cells, wide) { return h('div', { className: 'dew-pv-grid' + (wide ? ' dew-pv-grid--wide' : '') }, cells); }
+  function K(list) { return list.map(function (n, i) { return h(React.Fragment, { key: i }, n); }); }
+
+  var V = ['primary', 'secondary', 'danger', 'text'];
+  var S = ['default', 'hover', 'focus', 'pressed'];
+  var rows = V.map(function (v) {
+    return G(K([
+      C(v + ' · default', h(D.Button, { variant: v }, '저장하기')),
+      C(v + ' · hover', h(D.Button, { variant: v, state: 'hover' }, '저장하기')),
+      C(v + ' · focus', h(D.Button, { variant: v, state: 'focus' }, '저장하기')),
+      C(v + ' · pressed', h(D.Button, { variant: v, state: 'pressed' }, '저장하기')),
+      C(v + ' · disabled', h(D.Button, { variant: v, disabled: true }, '저장하기')),
+      C(v + ' · loading', h(D.Button, { variant: v, loading: true, loadingLabel: '저장 중' }, '저장하기'))
+    ]));
+  });
+  var VIEW = [
+    H('PRIMARY'), rows[0], H('SECONDARY'), rows[1], H('DANGER — accent border + icon, never a red fill'), rows[2], H('TEXT'), rows[3],
+    H('SIZES — sm 44 · md 48 · lg 56 (all ≥ 44px target)'),
+    G(K([C('sm', h(D.Button, { size: 'sm' }, '구독')), C('md', h(D.Button, { size: 'md' }, '구독')), C('lg', h(D.Button, { size: 'lg' }, '구독'))])),
+    H('ICON · ICON-ONLY · LONG LABEL · KO/EN'),
+    G(K([
+      C('icon start', h(D.Button, { variant: 'secondary', icon: 'bookmark' }, '저장')),
+      C('icon end', h(D.Button, { variant: 'primary', icon: 'arrow-right', iconPosition: 'end' }, '다음 단계')),
+      C('icon-only (aria-label)', h('div', { style: { display: 'flex', gap: '8px' } }, h(D.Button, { variant: 'secondary', iconOnly: true, icon: 'search', label: '검색', size: 'sm' }), h(D.Button, { variant: 'text', iconOnly: true, icon: 'close', label: '닫기' }), h(D.Button, { variant: 'primary', iconOnly: true, icon: 'plus', label: '추가', size: 'lg' }))),
+      C('English label', h(D.Button, { variant: 'secondary' }, 'Read the full story')),
+      C('long label — wraps, never truncates', h('div', { style: { maxWidth: '260px' } }, h(D.Button, { variant: 'primary' }, '이번 호의 모든 이야기를 한 번에 저장하고 나중에 읽기'))),
+      C('full width (mobile form)', h(D.Button, { variant: 'primary', fullWidth: true, icon: 'download' }, '예시 파일 받기'))
+    ]))
+  ];
+  ReactDOM.createRoot(document.getElementById('root')).render(h('div', { className: 'dew dew-pv' }, K(VIEW)));
+</script>
+</body>
+</html>

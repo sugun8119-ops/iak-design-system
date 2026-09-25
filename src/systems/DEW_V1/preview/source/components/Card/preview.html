@@ -1,0 +1,41 @@
+<!-- @dsCard group="Layout" height=1400 subtitle="plain · outlined · support · states · missing image · long · horizontal" -->
+<!doctype html>
+<html lang="ko">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Card — DEW_V1</title></head>
+<body>
+<div id="root"></div>
+<script>
+  var D = window.DEW, h = React.createElement;
+  function L(t) { return h('span', { className: 'dew-meta dew-pv-label' }, t); }
+  function C(t, node, style) { return h('div', { className: 'dew-pv-cell', style: style }, L(t), node); }
+  function H(t) { return h('p', { className: 'dew-meta dew-eyebrow dew-pv-h' }, t); }
+  function G(cells, wide) { return h('div', { className: 'dew-pv-grid' + (wide ? ' dew-pv-grid--wide' : '') }, cells); }
+  function K(list) { return list.map(function (n, i) { return h(React.Fragment, { key: i }, n); }); }
+
+  var btns = h(React.Fragment, null, h(D.Button, { size: 'sm', variant: 'secondary' }, '자세히'), h(D.EditorialCTA, { href: '#', label: '이야기로 이동' }));
+  var VIEW = [
+    H('VARIANTS'),
+    G(K([
+      C('plain — top rule', h(D.Card, { eyebrow: 'NOTE · 예시', title: '편집 노트', description: '이번 호를 만든 방식에 대한 짧은 기록.' })),
+      C('outlined — surface + hairline', h(D.Card, { variant: 'outlined', eyebrow: 'GUIDE', title: '읽기 안내', description: '긴 글은 저장해 두고 천천히 읽을 수 있습니다.', footer: btns })),
+      C('support — mint plane', h(D.Card, { variant: 'support', eyebrow: 'LETTER', title: '독자 편지 보내기', description: '짧은 감상을 편집부에 전해 주세요.', footer: h(D.Button, { size: 'sm' }, '편지 쓰기') }))
+    ])),
+    H('STATES'),
+    G(K([
+      C('default (link)', h(D.Card, { href: '#', media: { tone: 'mint' }, eyebrow: 'ARCHIVE', title: '지난 호 모아보기' })),
+      C('hover', h(D.Card, { href: '#', state: 'hover', media: { tone: 'light' }, eyebrow: 'ARCHIVE', title: '지난 호 모아보기' })),
+      C('focus', h(D.Card, { href: '#', state: 'focus', media: {}, eyebrow: 'ARCHIVE', title: '지난 호 모아보기' })),
+      C('selected', h(D.Card, { href: '#', selected: true, variant: 'outlined', eyebrow: 'ISSUE 02', title: '가을 특별호', description: '선택한 호가 목록 위에 고정됩니다.' })),
+      C('disabled', h(D.Card, { disabled: true, variant: 'outlined', eyebrow: 'ISSUE 03', title: '겨울호 (준비 중)', description: '아직 열 수 없습니다.', badges: h(D.Badge, { tone: 'warning' }, '준비 중') })),
+      C('missing image', h(D.Card, { href: '#', media: { missing: true, label: '표지 이미지' }, eyebrow: 'ISSUE 01', title: '여름호' }))
+    ])),
+    H('LONG COPY · KO+EN · HORIZONTAL 5:7'),
+    G(K([
+      C('long title + badges', h(D.Card, { variant: 'outlined', eyebrow: 'SPECIAL EDITION · 예시', title: 'A very long English headline about slow afternoons and the objects that stay with us — 오래 남는 사물에 관한 긴 제목', description: '긴 제목은 줄바꿈되며 말줄임으로 자르지 않습니다.', badges: K([h(D.Badge, { tone: 'info' }, '새 이야기'), h(D.Badge, null, '12분 읽기')]) })),
+      C('horizontal (media 5 : text 7 → stacks < 768)', h(D.Card, { orientation: 'horizontal', href: '#', media: { tone: 'mint' }, eyebrow: 'OBJECTS', title: '사물 사이의 여백', description: '가로형 카드는 미디어 5, 텍스트 7의 비대칭 비율을 씁니다.' }))
+    ]), true)
+  ];
+  ReactDOM.createRoot(document.getElementById('root')).render(h('div', { className: 'dew dew-pv' }, K(VIEW)));
+</script>
+</body>
+</html>

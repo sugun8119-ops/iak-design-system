@@ -1,0 +1,599 @@
+{
+  "version": "1.1",
+  "authority": {
+    "coverage": "IAK_MASTER_V1",
+    "visual": "each project independently"
+  },
+  "components": {
+    "Button": [
+      {
+        "id": "primary",
+        "referenceType": "code"
+      },
+      {
+        "id": "secondary",
+        "referenceType": "code"
+      },
+      {
+        "id": "danger",
+        "referenceType": "code"
+      },
+      {
+        "id": "text",
+        "referenceType": "code"
+      },
+      {
+        "id": "size-sm",
+        "referenceType": "code"
+      },
+      {
+        "id": "size-md",
+        "referenceType": "code"
+      },
+      {
+        "id": "size-lg",
+        "referenceType": "code"
+      },
+      {
+        "id": "default",
+        "referenceType": "code"
+      },
+      {
+        "id": "hover-primary",
+        "referenceType": "code"
+      },
+      {
+        "id": "pressed-primary",
+        "referenceType": "code"
+      },
+      {
+        "id": "focus",
+        "referenceType": "code"
+      },
+      {
+        "id": "disabled",
+        "referenceType": "code"
+      },
+      {
+        "id": "loading",
+        "referenceType": "code"
+      },
+      {
+        "id": "with-icon",
+        "referenceType": "composition"
+      },
+      {
+        "id": "icon-only",
+        "referenceType": "composition"
+      },
+      {
+        "id": "long-label",
+        "referenceType": "code"
+      },
+      {
+        "id": "d-outlined",
+        "referenceType": "design-only"
+      },
+      {
+        "id": "d-outlined-primary",
+        "referenceType": "design-only"
+      },
+      {
+        "id": "d-soft",
+        "referenceType": "design-only"
+      }
+    ],
+    "TextField": [
+      {
+        "id": "default",
+        "referenceType": "code"
+      },
+      {
+        "id": "filled",
+        "referenceType": "code"
+      },
+      {
+        "id": "hover",
+        "referenceType": "code"
+      },
+      {
+        "id": "focus",
+        "referenceType": "code"
+      },
+      {
+        "id": "error",
+        "referenceType": "code"
+      },
+      {
+        "id": "disabled",
+        "referenceType": "code"
+      },
+      {
+        "id": "description",
+        "referenceType": "code"
+      },
+      {
+        "id": "required",
+        "referenceType": "code"
+      },
+      {
+        "id": "readonly",
+        "referenceType": "native"
+      },
+      {
+        "id": "long-label",
+        "referenceType": "code"
+      },
+      {
+        "id": "long-value",
+        "referenceType": "code"
+      },
+      {
+        "id": "type-email",
+        "referenceType": "native"
+      },
+      {
+        "id": "d-floating",
+        "referenceType": "design-only"
+      }
+    ],
+    "Textarea": [
+      {
+        "id": "default",
+        "referenceType": "code"
+      },
+      {
+        "id": "filled",
+        "referenceType": "code"
+      },
+      {
+        "id": "hover",
+        "referenceType": "code"
+      },
+      {
+        "id": "focus",
+        "referenceType": "code"
+      },
+      {
+        "id": "error",
+        "referenceType": "code"
+      },
+      {
+        "id": "disabled",
+        "referenceType": "code"
+      },
+      {
+        "id": "rows-2",
+        "referenceType": "native"
+      },
+      {
+        "id": "long-text",
+        "referenceType": "code"
+      },
+      {
+        "id": "description",
+        "referenceType": "code"
+      }
+    ],
+    "Select": [
+      {
+        "id": "default",
+        "referenceType": "code"
+      },
+      {
+        "id": "hover",
+        "referenceType": "code"
+      },
+      {
+        "id": "focus",
+        "referenceType": "code"
+      },
+      {
+        "id": "error",
+        "referenceType": "code"
+      },
+      {
+        "id": "disabled",
+        "referenceType": "code"
+      },
+      {
+        "id": "description",
+        "referenceType": "code"
+      },
+      {
+        "id": "long-option",
+        "referenceType": "code"
+      },
+      {
+        "id": "placeholder-option",
+        "referenceType": "native"
+      }
+    ],
+    "Checkbox": [
+      {
+        "id": "unchecked",
+        "referenceType": "code"
+      },
+      {
+        "id": "checked",
+        "referenceType": "code"
+      },
+      {
+        "id": "focus",
+        "referenceType": "code"
+      },
+      {
+        "id": "disabled",
+        "referenceType": "code"
+      },
+      {
+        "id": "disabled-checked",
+        "referenceType": "code"
+      },
+      {
+        "id": "long-label",
+        "referenceType": "code"
+      },
+      {
+        "id": "group",
+        "referenceType": "composition"
+      }
+    ],
+    "Switch": [
+      {
+        "id": "off",
+        "referenceType": "code"
+      },
+      {
+        "id": "on",
+        "referenceType": "code"
+      },
+      {
+        "id": "focus",
+        "referenceType": "code"
+      },
+      {
+        "id": "disabled-off",
+        "referenceType": "code"
+      },
+      {
+        "id": "disabled-on",
+        "referenceType": "code"
+      },
+      {
+        "id": "long-label",
+        "referenceType": "code"
+      }
+    ],
+    "Badge": [
+      {
+        "id": "neutral",
+        "referenceType": "code"
+      },
+      {
+        "id": "info",
+        "referenceType": "code"
+      },
+      {
+        "id": "success",
+        "referenceType": "code"
+      },
+      {
+        "id": "warning",
+        "referenceType": "code"
+      },
+      {
+        "id": "error",
+        "referenceType": "code"
+      },
+      {
+        "id": "with-icon",
+        "referenceType": "composition"
+      },
+      {
+        "id": "long-text",
+        "referenceType": "code"
+      },
+      {
+        "id": "number",
+        "referenceType": "code"
+      },
+      {
+        "id": "d-status-dot",
+        "referenceType": "design-only"
+      },
+      {
+        "id": "d-filter-chip",
+        "referenceType": "design-only"
+      }
+    ],
+    "Card": [
+      {
+        "id": "full",
+        "referenceType": "code"
+      },
+      {
+        "id": "body-only",
+        "referenceType": "code"
+      },
+      {
+        "id": "long-title",
+        "referenceType": "code"
+      },
+      {
+        "id": "loading",
+        "referenceType": "composition"
+      },
+      {
+        "id": "missing",
+        "referenceType": "composition"
+      },
+      {
+        "id": "error",
+        "referenceType": "composition"
+      }
+    ],
+    "Skeleton": [
+      {
+        "id": "default",
+        "referenceType": "code"
+      },
+      {
+        "id": "sized",
+        "referenceType": "code"
+      },
+      {
+        "id": "circle",
+        "referenceType": "code"
+      },
+      {
+        "id": "list-row",
+        "referenceType": "composition"
+      }
+    ],
+    "Icon": [
+      {
+        "id": "size-16",
+        "referenceType": "code"
+      },
+      {
+        "id": "size-20",
+        "referenceType": "code"
+      },
+      {
+        "id": "size-24",
+        "referenceType": "code"
+      },
+      {
+        "id": "decorative",
+        "referenceType": "code"
+      },
+      {
+        "id": "labeled",
+        "referenceType": "code"
+      },
+      {
+        "id": "currentColor",
+        "referenceType": "code"
+      },
+      {
+        "id": "unresolved",
+        "referenceType": "code"
+      }
+    ],
+    "Dialog": [
+      {
+        "id": "size-sm",
+        "referenceType": "code"
+      },
+      {
+        "id": "size-md",
+        "referenceType": "code"
+      },
+      {
+        "id": "size-lg",
+        "referenceType": "code"
+      },
+      {
+        "id": "no-description",
+        "referenceType": "code"
+      },
+      {
+        "id": "long-content",
+        "referenceType": "code"
+      },
+      {
+        "id": "focus-close",
+        "referenceType": "code"
+      },
+      {
+        "id": "live",
+        "referenceType": "preview-only"
+      }
+    ],
+    "Menu": [
+      {
+        "id": "default",
+        "referenceType": "code"
+      },
+      {
+        "id": "highlighted",
+        "referenceType": "code"
+      },
+      {
+        "id": "disabled-item",
+        "referenceType": "code"
+      },
+      {
+        "id": "danger",
+        "referenceType": "code"
+      },
+      {
+        "id": "long-label",
+        "referenceType": "code"
+      },
+      {
+        "id": "a",
+        "referenceType": "preview-only"
+      }
+    ],
+    "Table": [
+      {
+        "id": "default",
+        "referenceType": "code"
+      },
+      {
+        "id": "sorted-asc",
+        "referenceType": "code"
+      },
+      {
+        "id": "sorted-desc",
+        "referenceType": "code"
+      },
+      {
+        "id": "paginated",
+        "referenceType": "code"
+      },
+      {
+        "id": "loading",
+        "referenceType": "code"
+      },
+      {
+        "id": "error",
+        "referenceType": "code"
+      },
+      {
+        "id": "empty",
+        "referenceType": "code"
+      },
+      {
+        "id": "focus-sort",
+        "referenceType": "code"
+      },
+      {
+        "id": "missing-long",
+        "referenceType": "code"
+      },
+      {
+        "id": "narrow",
+        "referenceType": "code"
+      },
+      {
+        "id": "virtual",
+        "referenceType": "code"
+      }
+    ],
+    "Pagination": [
+      {
+        "id": "first",
+        "referenceType": "code"
+      },
+      {
+        "id": "middle",
+        "referenceType": "code"
+      },
+      {
+        "id": "last",
+        "referenceType": "code"
+      },
+      {
+        "id": "single",
+        "referenceType": "code"
+      },
+      {
+        "id": "disabled",
+        "referenceType": "code"
+      },
+      {
+        "id": "hover",
+        "referenceType": "code"
+      },
+      {
+        "id": "focus",
+        "referenceType": "code"
+      },
+      {
+        "id": "live",
+        "referenceType": "preview-only"
+      }
+    ],
+    "Toast": [
+      {
+        "id": "success",
+        "referenceType": "code"
+      },
+      {
+        "id": "warning",
+        "referenceType": "code"
+      },
+      {
+        "id": "error",
+        "referenceType": "code"
+      },
+      {
+        "id": "info",
+        "referenceType": "code"
+      },
+      {
+        "id": "description",
+        "referenceType": "code"
+      },
+      {
+        "id": "action",
+        "referenceType": "code"
+      },
+      {
+        "id": "long-text",
+        "referenceType": "code"
+      },
+      {
+        "id": "focus-close",
+        "referenceType": "code"
+      },
+      {
+        "id": "stack-3",
+        "referenceType": "code"
+      },
+      {
+        "id": "live",
+        "referenceType": "preview-only"
+      },
+      {
+        "id": "d-snackbar-default",
+        "referenceType": "design-only"
+      }
+    ],
+    "AlertDialog": [
+      {
+        "id": "default",
+        "referenceType": "code"
+      },
+      {
+        "id": "danger",
+        "referenceType": "code"
+      },
+      {
+        "id": "pending",
+        "referenceType": "code"
+      },
+      {
+        "id": "error",
+        "referenceType": "code"
+      },
+      {
+        "id": "long-text",
+        "referenceType": "code"
+      },
+      {
+        "id": "live",
+        "referenceType": "preview-only"
+      }
+    ]
+  },
+  "rules": [
+    "Keep source-specific components and templates",
+    "Mark new cases derived-extension",
+    "Do not inherit IAK palette/type/radius/layout",
+    "No count claims until rendered and verified"
+  ]
+}

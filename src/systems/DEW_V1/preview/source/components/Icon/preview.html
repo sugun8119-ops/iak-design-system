@@ -1,0 +1,29 @@
+<!-- @dsCard group="Foundations" height=560 subtitle="self-drawn 24px line set · 16 / 20 / 24" -->
+<!doctype html>
+<html lang="ko">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Icon — DEW_V1</title></head>
+<body>
+<div id="root"></div>
+<script>
+  var D = window.DEW, h = React.createElement;
+  function L(t) { return h('span', { className: 'dew-meta dew-pv-label' }, t); }
+  function C(t, node, style) { return h('div', { className: 'dew-pv-cell', style: style }, L(t), node); }
+  function H(t) { return h('p', { className: 'dew-meta dew-eyebrow dew-pv-h' }, t); }
+  function G(cells, wide) { return h('div', { className: 'dew-pv-grid' + (wide ? ' dew-pv-grid--wide' : '') }, cells); }
+  function K(list) { return list.map(function (n, i) { return h(React.Fragment, { key: i }, n); }); }
+
+  var names = D.Icon.names;
+  var VIEW = [
+    G(K(names.map(function (n) { return C(n, h('span', { style: { display: 'flex', gap: '16px', alignItems: 'center' } }, h(D.Icon, { name: n, size: 24 }), h(D.Icon, { name: n, size: 20 }), h(D.Icon, { name: n, size: 16 }))); }))),
+    H('COLOUR RULES'),
+    G(K([
+      C('textPrimary (default)', h(D.Icon, { name: 'bookmark', size: 24, label: '저장' })),
+      C('textSecondary (muted)', h(D.Icon, { name: 'image-off', size: 24, tone: 'muted' })),
+      C('accent — danger / error mark only', h(D.Icon, { name: 'alert', size: 24, tone: 'accent' })),
+      C('with text', h('span', { style: { display: 'inline-flex', gap: '8px', alignItems: 'center' } }, h(D.Icon, { name: 'arrow-up-right', size: 20 }), '이야기 읽기'))
+    ]))
+  ];
+  ReactDOM.createRoot(document.getElementById('root')).render(h('div', { className: 'dew dew-pv' }, K(VIEW)));
+</script>
+</body>
+</html>

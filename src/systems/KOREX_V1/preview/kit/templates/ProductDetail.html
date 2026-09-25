@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ko">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="정적 샘플(상호작용 없음) · KOREX_V1 ProductDetail"><title>ProductDetail · KOREX_V1 (정적 샘플)</title>
+<link rel="stylesheet" href="../kit.css">
+<style>
+  /* page shell only — layout from README (max 1200 content, page padding 48/32/24); every value is a token */
+  body{margin:0;background:var(--canvas)}
+  .tp{box-sizing:border-box;max-width:calc(1200px + 2 * var(--space-48));margin:0 auto;padding:0 var(--space-48);font-family:var(--font-sans);color:var(--textPrimary)}
+  .tp-main > * + *{margin-top:var(--space-80)}
+  .tp-main{padding:var(--space-32) 0 var(--space-80)}
+  .tp-head{display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:var(--space-24);margin-bottom:var(--space-32)}
+  .tp .tp-head .kx-meta{margin-bottom:var(--space-8)}
+  .tp-intro{padding-top:var(--space-32)}
+  .tp .tp-intro .kx-display{margin:var(--space-16) 0}
+  .tp .tp-lead{max-width:62ch;color:var(--textSecondary)}
+  .tp-stack > * + *{margin-top:var(--space-32)}
+  .tp-spec{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-48);align-items:start}
+  .tp .tp-spec-info > * + *{margin-top:var(--space-24)}
+  .tp-badges,.tp-actions{display:flex;flex-wrap:wrap;gap:var(--space-8)}
+  .tp .kx-display,.tp .kx-heading{overflow-wrap:break-word;word-break:keep-all}
+  @media (min-width:768px) and (max-width:1023px){ .tp{padding:0 var(--space-32)} .tp-main > * + *{margin-top:var(--space-64)} }
+  @media (max-width:767px){ .tp{padding:0 var(--space-24)} .tp-main > * + *{margin-top:var(--space-48)} .tp-main{padding-bottom:var(--space-48)} .tp-spec{grid-template-columns:1fr;gap:var(--space-32)} .tp-spec .kx-media-tall,.tp-spec .kx-skel-tall{aspect-ratio:4/3} }
+</style>
+</head>
+<body>
+<p role="note" style="margin:0;padding:8px 24px;font:500 12px/18px var(--font-sans);color:var(--textPrimary);background:var(--primarySoft);border-bottom:1px solid var(--border)"><strong>정적 샘플</strong> — 상호작용 없음. 디자인 시스템 컴포넌트를 서버 렌더한 HTML이며 메뉴 열기·필터·페이지 이동·대화상자 열기는 동작하지 않는다. · <a href="../index.html">KOREX_V1 kit</a> · Templates · ProductDetail</p>
+<div id="root"><div class="tp"><header class="kx kx-header"><a class="kx-brand" href="#">FORM &amp; PLACE</a><nav aria-label="주 탐색"><a href="#">홈</a><a href="#">제품</a><a href="#" aria-current="page">제품 상세</a></nav></header><main class="tp-main"><section class="tp-intro kx"><p class="kx-meta">COLLECTION / PRODUCT DETAIL</p><h1 class="kx-display">모듈 체어</h1></section><section class="tp-spec kx"><figure class="kx kx-imagecard"><div class="kx-media kx-media-tall" role="img" aria-label="예시 제품을 위한 추상 미디어 자리표시자"></div><figcaption class="kx-meta">사진 교체용 자리표시자 · 실제 제품 이미지 아님</figcaption></figure><div class="tp-spec-info"><div class="tp-badges"><span class="kx kx-badge kx-badge-brand" title="SEATING"><span class="kx-badge-text">SEATING</span></span><span class="kx kx-badge kx-badge-neutral" title="예시 데이터"><span class="kx-badge-text">예시 데이터</span></span></div><h2 class="kx-heading">일상에 자연스럽게<br/>어울리는 균형.</h2><p>제품의 형태와 소재를 설명하는 예시 상세 화면입니다. 새 프로젝트의 제품 이미지와 정보로 교체해 사용하세요.</p><div class="kx kx-table-block"><div class="kx-table-wrap"><table class="kx-table"><caption class="kx-sr">제품 사양</caption><thead><tr><th scope="col" class="" style="width:38%">항목</th><th scope="col" class="">내용</th></tr></thead><tbody><tr class=""><th scope="row" class="">소재 예시</th><td class="">우드</td></tr><tr class=""><th scope="row" class="">표면</th><td class="">무광 · 예시 사양</td></tr><tr class=""><th scope="row" class="">치수 / 가격</th><td class="">실제 프로젝트에서 입력</td></tr><tr class=""><th scope="row" class="">배송 예정</th><td class=""><span aria-hidden="true" class="kx-missing">—</span><span class="kx-sr">값 없음</span></td></tr></tbody></table></div></div><div class="tp-actions"><a class="kx kx-btn kx-btn-primary kx-btn-md" href="#"><span class="kx-btn-label">제품 목록으로 돌아가기</span></a><button type="button" class="kx kx-btn kx-btn-ghost kx-btn-md"><svg class="kx-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter" aria-hidden="true" focusable="false"><path d="M10 4v12"></path><path d="M4 10h12"></path></svg><span class="kx-btn-label">비교 목록에 담기</span></button></div></div></section><section><div class="tp-head kx"><div><p class="kx-meta">SEE ALSO</p><h2 class="kx-heading">함께 보는 사물</h2></div></div><div class="kx kx-grid"><article class="kx kx-card"><a class="kx-card-link" href="#"><div class="kx-media kx-media-mint" role="img" aria-label="라운드 테이블의 미디어 자리표시자"></div><div class="kx-card-text"><p class="kx-meta">TABLES / 스톤</p><h3 class="kx-title">라운드 테이블</h3></div></a></article><article class="kx kx-card"><a class="kx-card-link" href="#"><div class="kx-media kx-media-light" role="img" aria-label="소프트 램프의 미디어 자리표시자"></div><div class="kx-card-text"><p class="kx-meta">LIGHTING / 패브릭</p><h3 class="kx-title">소프트 램프</h3></div></a></article></div></section><section class="kx kx-statement"><div class="kx-statement-inner"><p class="kx-meta">MATERIAL &amp; FORM</p><h2 class="kx-heading">오래 바라봐도 편안한 사물.</h2><p class="kx-statement-body">절제된 선과 자연스러운 소재를 중심으로 제품의 특징을 설명하는 영역입니다. 검증되지 않은 성능이나 판매 실적을 제시하지 않습니다.</p></div></section></main><footer class="kx kx-footer"><span class="kx-footer-brand">FORM &amp; PLACE</span><span class="kx-meta">독립 예시 콘텐츠 · KOREX_V1 STYLE PREVIEW</span></footer></div></div>
+</body>
+</html>

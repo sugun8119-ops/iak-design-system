@@ -1,0 +1,72 @@
+<!-- @dsCard group="Actions" height=1500 subtitle="Primary · Secondary · Ghost · Danger × sm/md/lg" -->
+<!doctype html>
+<html lang="ko">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>preview</title>
+<style>
+  body{margin:0;background:var(--canvas);padding:var(--space-24)}
+  .pv{font-family:var(--font-sans);color:var(--textPrimary);font-size:15px;line-height:25px}
+  .pv .pv-origin{display:flex;flex-wrap:wrap;gap:var(--space-8);align-items:center;margin:0 0 var(--space-24);font-size:12px;line-height:18px;color:var(--textSecondary)}
+  .pv .pv-sec{margin:0 0 var(--space-32)}
+  .pv .pv-h{margin:0 0 var(--space-16);padding-bottom:var(--space-8);border-bottom:1px solid var(--border);font-size:12px;line-height:18px;font-weight:600;letter-spacing:.06em;color:var(--textSecondary)}
+  .pv-row{display:flex;flex-wrap:wrap;align-items:center;gap:var(--space-16)}
+  .pv-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:var(--space-24);align-items:start}
+  .pv-grid-wide{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:var(--space-24);align-items:start}
+  .pv-cell{display:flex;flex-direction:column;gap:var(--space-8);min-width:0}
+  .pv .pv-tag{font-size:12px;line-height:18px;font-weight:500;letter-spacing:.06em;color:var(--textSecondary)}
+  .pv-narrow{max-width:240px}
+  .pv-frame{position:relative;height:var(--h,360px);border:1px solid var(--border);border-radius:var(--radius-sm);overflow:hidden}
+  .pv-matrix{display:grid;grid-template-columns:96px repeat(3,auto);gap:var(--space-16);align-items:center;justify-content:start}
+  @media (max-width:520px){.pv-matrix{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div id="root" class="pv kx"></div>
+<script>
+  var K = window.KOREX, h = React.createElement, F = React.Fragment;
+  function origin(observed, derived) {
+    return h('p', { className: 'pv-origin' },
+      h(K.Badge, { tone: 'brand', icon: false, size: 'sm' }, 'IAK coverage'), h('span', null, observed),
+      derived ? h(K.Badge, { tone: 'neutral', icon: false, size: 'sm' }, 'derived-extension') : null, derived ? h('span', null, derived) : null);
+  }
+  function kids(args, from) { return Array.prototype.slice.call(args, from); }
+  function el(tag, props, list) { return h.apply(null, [tag, props].concat(list)); }
+  function sec(title) { return el('section', { className: 'pv-sec' }, [h('h2', { className: 'pv-h' }, title)].concat(kids(arguments, 1))); }
+  function cell(tag) { return el('div', { className: 'pv-cell' }, [h('span', { className: 'pv-tag' }, tag)].concat(kids(arguments, 1))); }
+  function row() { return el('div', { className: 'pv-row' }, kids(arguments, 0)); }
+  function grid() { return el('div', { className: 'pv-grid' }, kids(arguments, 0)); }
+  function wide() { return el('div', { className: 'pv-grid-wide' }, kids(arguments, 0)); }
+
+  function View() {
+    return h(F, null,
+origin('KOREX CTA(Primary/Secondary, 각진 4px, 44px)와 밑줄 텍스트 액션을 그대로 확장', 'Ghost 명칭·Danger·sm/lg 크기·pressed/loading 상태'),
+      sec('VARIANTS × SIZES — sm 36(히트 영역 44) · md 44 · lg 56',
+        h('div', { className: 'pv-matrix' },
+          ['primary', 'secondary', 'ghost', 'danger'].map(function (v) {
+            return h(F, { key: v }, h('span', { className: 'pv-tag' }, v),
+              ['sm', 'md', 'lg'].map(function (s) { return h('div', { key: s }, h(K.Button, { variant: v, size: s, icon: v === 'danger' ? 'trash' : undefined }, v === 'danger' ? '삭제 Delete' : '저장 Save')); }));
+          }))),
+      ['primary', 'secondary', 'ghost', 'danger'].map(function (v) {
+        return h(F, { key: v }, sec(v.toUpperCase() + ' — STATES (md)', row(
+          cell('default', h(K.Button, { variant: v }, '컬렉션 보기')),
+          cell('hover', h(K.Button, { variant: v, state: 'hover' }, '컬렉션 보기')),
+          cell('focus', h(K.Button, { variant: v, state: 'focus' }, '컬렉션 보기')),
+          cell('pressed', h(K.Button, { variant: v, state: 'pressed' }, '컬렉션 보기')),
+          cell('disabled', h(K.Button, { variant: v, disabled: true }, '컬렉션 보기')),
+          cell('loading', h(K.Button, { variant: v, loading: true, loadingLabel: '불러오는 중…' }, '컬렉션 보기')))));
+      }),
+      sec('ICON · LONG LABEL · KO/EN',
+        row(
+          cell('icon start', h(K.Button, { variant: 'secondary', icon: 'search' }, '제품 찾기')),
+          cell('icon end (↗ 대체)', h(K.Button, { iconEnd: 'arrow-up-right' }, 'View collection')),
+          cell('icon only + 이름', h(K.Button, { variant: 'secondary', iconOnly: true, icon: 'more', label: '더 보기' })),
+          cell('link (href)', h(K.Button, { variant: 'ghost', href: '#', iconEnd: 'arrow-up-right' }, '전체 제품'))),
+        h('div', { style: { height: 24 } }),
+        row(
+          h('div', { className: 'pv-narrow' }, cell('long label · 240px — 줄바꿈', h(K.Button, { block: true }, '변경 사항을 저장하고 다음 단계로 이동 — Save changes and continue'))),
+          h('div', { className: 'pv-narrow' }, cell('block (full width)', h(K.Button, { variant: 'secondary', block: true }, '목록으로 돌아가기')))))
+    );
+  }
+  ReactDOM.createRoot(document.getElementById('root')).render(h(View));
+</script>
+</body>
+</html>

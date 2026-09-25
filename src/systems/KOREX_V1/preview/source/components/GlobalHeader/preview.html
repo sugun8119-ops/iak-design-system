@@ -1,0 +1,17 @@
+<!-- @dsCard group="Navigation" height=130 -->
+<!doctype html>
+<html lang="ko">
+<head><meta charset="utf-8"><title>preview</title></head>
+<body style="margin:0;background:var(--canvas);padding:24px">
+<div id="root"></div>
+<script>
+  var K = window.KOREX, h = React.createElement;
+  var col = function (gap) { return { style: { display: 'flex', flexDirection: 'column', gap: gap || 24 } }; };
+  var row = function (gap) { return { style: { display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: gap || 24 } }; };
+  ReactDOM.createRoot(document.getElementById('root')).render(
+    h(K.GlobalHeader, { brand: 'FORM & PLACE', links: [
+      { label: '홈', href: '#', current: true }, { label: '제품', href: '#' }, { label: '제품 상세', href: '#' }] })
+  );
+</script>
+</body>
+</html>

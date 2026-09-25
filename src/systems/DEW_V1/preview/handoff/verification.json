@@ -1,0 +1,39 @@
+{
+  "staticHTMLCount": 18,
+  "errors": [],
+  "foundationUnchanged": true,
+  "contrast": {
+    "textPrimary/canvas": 17.05,
+    "textSecondary/canvas": 4.84,
+    "textSecondary/surface": 5.36
+  },
+  "sourceJavaScriptSyntax": "pass",
+  "browser": {
+    "mobileWidth": 375,
+    "mobileChecked": [
+      "home",
+      "list",
+      "detail",
+      "component index"
+    ],
+    "homeDesktopWidth": 1440,
+    "horizontalOverflow": false
+  },
+  "figma": {
+    "commonVariants": 175,
+    "unboundColors": 0,
+    "duplicateVariantNames": 0
+  },
+  "repositoryRegression": {
+    "tests": 31,
+    "passed": 31,
+    "scope": "existing IAK repository suite; not a certification of new DEW/KOREX runtime components"
+  },
+  "build": "pass",
+  "limitations": [
+    "Figma static state variants; runtime interactions use Claude/source",
+    "Figma and web font metrics differ; explicit font mapping retained",
+    "No Code Connect or team-library publication",
+    "Original Behance detail inaccessible; normalized approved tokens, not precise source extraction"
+  ]
+}
