@@ -6,3 +6,7 @@
 
 /* Figma Dev Mode token aliases */
 :root{--font-size-display:32px;--line-height-display:46px;--font-size-heading:24px;--line-height-heading:35px;--font-size-title:18px;--line-height-title:26px;--font-size-body:16px;--line-height-body:23px;--font-size-meta:12px;--line-height-meta:17px;--font-family:Arial,"Apple SD Gothic Neo","Noto Sans KR",sans-serif;--duration-quick:160ms;}
+
+/* Case alignment 1.1 */
+body{font-family:var(--font-family)}h1{line-height:var(--line-height-display)}h2{line-height:var(--line-height-heading)}h3{line-height:var(--line-height-title)}.badge{padding:4px 8px;gap:4px}.metric{padding:20px}
+button,.btn,input,select{border-radius:var(--radius-md)}.panel{border-radius:var(--radius-lg)}

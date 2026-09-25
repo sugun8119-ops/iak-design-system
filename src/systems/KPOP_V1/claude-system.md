@@ -81,3 +81,11 @@ Main은 피처·순위·일정, Sub는 검색과 카테고리 필터, Detail은 
 ## Registered design resources
 
 실제 Figma 파일과 Claude Design 등록 상태는 `integrations.json`, 컴포넌트별 링크는 `figma-components.json`을 참고한다. Figma에서 Templates 페이지의 Main/Sub/Detail 프레임을 복제해 시작한다. 네이티브 Figma는 편집 가능한 로컬 컴포넌트이며 팀 라이브러리 게시는 별도다. HTML preview와 Figma는 동일 토큰과 컴포넌트 계약을 따르는 별도 렌더링 예시이며 픽셀 단위 복제본은 아니다.
+
+## Case structure inheritance
+
+IAK Design Studio는 케이스 항목 구조만 제공한다. 색·서체·간격·라운드·그림자·레이아웃은 이 프로젝트의 figma-system.json을 따른다. IAK/RAIS 시각 토큰을 상속하지 않는다.
+
+`case-coverage.json`은 IAK 원본 30항목의 대응표이며 `preview/cases.html`에서 모두 탐색한다. `docs/`의 7개 문서는 이 프로젝트 전용이다. 원본 감사 점수는 복사하지 않는다.
+
+추가 컴포넌트 **Toast**: info/success/warning/error/neutral, 44px 닫기, 프로젝트 surface/의미색/radius.md 사용. status/alert 구분, 자동 닫기 없음.

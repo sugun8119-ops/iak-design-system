@@ -9,19 +9,27 @@
     "semanticVariables": 38,
     "textStyles": 5,
     "effectStyles": 2,
-    "componentSets": 12,
-    "variants": 50,
+    "componentSets": 13,
+    "variants": 55,
     "templates": {
       "Main": "https://www.figma.com/design/VR9GFAKIFEjLWuQonbJVYv?node-id=7-2",
       "Sub": "https://www.figma.com/design/VR9GFAKIFEjLWuQonbJVYv?node-id=7-48",
       "Detail": "https://www.figma.com/design/VR9GFAKIFEjLWuQonbJVYv?node-id=7-111"
     },
-    "font": "Noto Sans KR (available family from the source fallback stack)"
+    "font": "Noto Sans KR (available family from the source fallback stack)",
+    "caseCount": 30,
+    "caseLibrary": "https://www.figma.com/design/VR9GFAKIFEjLWuQonbJVYv?node-id=20-3",
+    "projectGuides": "https://www.figma.com/design/VR9GFAKIFEjLWuQonbJVYv?node-id=20-277",
+    "toast": "https://www.figma.com/design/VR9GFAKIFEjLWuQonbJVYv?node-id=20-304"
   },
   "claudeDesign": {
     "url": "https://claude.ai/design/p/b9b13fc9-3a4a-4815-b091-5eab5b27fa26",
-    "status": "draft_paused_usage_limit",
-    "note": "생성 중 계정 사용 한도에 도달. Claude UI 기준 2026-09-25 13:50 KST 이후 Resume 후 최종 검사 및 게시 필요."
+    "status": "published",
+    "note": "Published confirmed in UI. Final automatic recheck interrupted by Claude session limit; reset shown as 2026-09-25 23:50 KST. Existing fallback fonts remain intentional.",
+    "caseCount": 30,
+    "componentCount": 13,
+    "templateCount": 3,
+    "structureCheck": "prior structure check passed except intended OS font warning; final post-radius/TP10 recheck interrupted"
   },
   "github": "https://github.com/sugun8119-ops/iak-design-system/tree/main/src/systems/KPOP_V1",
   "preview": "https://sugun8119-ops.github.io/iak-design-system/systems/KPOP_V1/preview/index.html",

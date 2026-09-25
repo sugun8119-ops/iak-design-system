@@ -1,0 +1,59 @@
+{
+  "system": "KPOP_V1",
+  "revision": "1.1.0",
+  "status": "local-and-figma-checks-passed; see claudeDesign for external verification limits",
+  "regenerationStability": "not-run; no inherited IAK score",
+  "variantStress": "not-run; existing variant contracts retained",
+  "checks": {
+    "caseEntries": 30,
+    "caseAnchors": 30,
+    "missingLocalLinks": 0,
+    "guideDocuments": 7,
+    "visualTokensUnchanged": true,
+    "mobileWidth": 375,
+    "mainSubDetailOverflow": false,
+    "casePageOverflow": false,
+    "toastDismiss": true,
+    "toastFocusAfterDismiss": "next visible dismiss button",
+    "toastTargetMinimumPixels": 44
+  },
+  "figmaFoundationAudit": {
+    "variables": 76,
+    "invalidScopes": 0,
+    "missingWebSyntax": 0
+  },
+  "limitations": [
+    "Independent 3-run regeneration test not performed.",
+    "AI variant stress regeneration not performed.",
+    "Figma team library publishing and automatic cross-tool sync are not enabled."
+  ],
+  "figmaRevision": {
+    "caseCount": 30,
+    "guides": 7,
+    "componentSets": 13,
+    "toastVariants": 5,
+    "unboundNewSolidFills": 0,
+    "toastDismissTarget": 44,
+    "caseLayoutReviewed": true,
+    "guideLayoutReviewed": true,
+    "toastLayoutReviewed": true
+  },
+  "contrastMinimumTextOnSurface": 5.57,
+  "claudeDesign": {
+    "published": true,
+    "components": 13,
+    "templates": 3,
+    "cases": 30,
+    "structureCheck": "earlier check passed except system font warning",
+    "finalPostCorrectionCheck": "interrupted by Claude session limit",
+    "lastObservedChanges": "OS local font declaration and radius md12/lg24 correction saved; final full TP10 report not verified",
+    "usageResetDisplayed": "2026-09-25 23:50 KST",
+    "font": "intentional OS fallback; no font files bundled"
+  },
+  "repositoryChecks": {
+    "build": "passed",
+    "testsPassed": 31,
+    "testsFailed": 0,
+    "scope": "Existing repository suite; not a claim that Claude background checks finished."
+  }
+}

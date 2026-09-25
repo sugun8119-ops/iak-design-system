@@ -1,7 +1,7 @@
 {
   "id": "HYNIX_V1",
   "name": "Relay Control",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "category": "Industrial / Device Control / Monitoring",
   "provenance": {
     "referenceUrl": "https://www.behance.net/gallery/107517297/SK-hynix-system-ic-Device-Control-GUI-Design",
@@ -270,7 +270,7 @@
       "desktop": 1200
     },
     "minTouchTarget": 44,
-    "responsive": "4/2/1 device columns; sidebar stacks below 900"
+    "responsive": "4 device columns above 1200px, 2 at 601–1200px, 1 at <=600px; sidebar stacks at <=900px"
   },
   "components": [
     {
@@ -488,6 +488,31 @@
         "horizontal": "FILL except badges/buttons HUG",
         "vertical": "HUG except media with aspect ratio"
       }
+    },
+    {
+      "name": "Toast",
+      "figmaName": "HYNIX_V1/Toast",
+      "anatomy": "Severity label; message; dismiss button",
+      "variants": "severity=info|success|warning|error|neutral",
+      "autoLayout": "Horizontal; max-width 420, mobile width 100%; padding 16; gap 12; dismiss target 44px",
+      "behavior": "role=status for info/success/neutral, role=alert for warning/error; explicit dismiss; no automatic timeout; no focus stealing; local demo only",
+      "tokenBindings": {
+        "surface": "color.surface",
+        "text": "color.text",
+        "border": "color.border",
+        "info": "color.selection",
+        "success": "color.success",
+        "warning": "color.warning",
+        "error": "color.danger",
+        "neutral": "color.muted",
+        "radius": "radius.md",
+        "gap": "spacing.12"
+      },
+      "resizing": {
+        "horizontal": "FILL to 420px",
+        "vertical": "HUG"
+      },
+      "provenance": "Added to cover IAK Toasts case, using only project-specific styling."
     }
   ],
   "templates": [
@@ -547,7 +572,7 @@
     }
   ],
   "figma": {
-    "status": "Specification and token package; no native Figma file created",
+    "status": "Native editable Figma file created; see integrations.figma.url. JSON remains a portable specification.",
     "collection": "HYNIX_V1",
     "mode": "Light",
     "variableNaming": "Flatten token paths to slash names, e.g. color/accent or spacing/16",
@@ -589,22 +614,38 @@
       "semanticVariables": 38,
       "textStyles": 5,
       "effectStyles": 2,
-      "componentSets": 12,
-      "variants": 56,
+      "componentSets": 13,
+      "variants": 61,
       "templates": {
         "Main": "https://www.figma.com/design/Nh9NILHBye8VS0jGtph3UB?node-id=6-2",
         "Sub": "https://www.figma.com/design/Nh9NILHBye8VS0jGtph3UB?node-id=6-110",
         "Detail": "https://www.figma.com/design/Nh9NILHBye8VS0jGtph3UB?node-id=6-247"
       },
-      "font": "Noto Sans KR (available family from the source fallback stack)"
+      "font": "Noto Sans KR (available family from the source fallback stack)",
+      "caseCount": 30,
+      "caseLibrary": "https://www.figma.com/design/Nh9NILHBye8VS0jGtph3UB?node-id=19-3",
+      "projectGuides": "https://www.figma.com/design/Nh9NILHBye8VS0jGtph3UB?node-id=19-278",
+      "toast": "https://www.figma.com/design/Nh9NILHBye8VS0jGtph3UB?node-id=19-305"
     },
     "claudeDesign": {
       "url": "https://claude.ai/design/p/e80718a5-1ce2-4e2c-8305-66e1c569290b",
       "status": "published",
-      "note": "팀의 신규 프로젝트에서 선택 가능. 조직 기본값은 변경하지 않음."
+      "note": "IAK case structure only; independent HYNIX style. Claude reports 34 cards, 13 components and 3 templates; background visual check is separate.",
+      "caseCount": 30,
+      "componentCount": 13,
+      "templateCount": 3,
+      "structureCheck": "passed"
     },
     "github": "https://github.com/sugun8119-ops/iak-design-system/tree/main/src/systems/HYNIX_V1",
     "preview": "https://sugun8119-ops.github.io/iak-design-system/systems/HYNIX_V1/preview/index.html",
     "updatedAt": "2026-09-25"
+  },
+  "caseStructure": {
+    "source": "IAK Design Studio",
+    "sourcePath": "src/library/claude/_ds_manifest.json",
+    "sourceRevision": "65dd70bd3dc25656d3095f3fc066076dac03fddb",
+    "inheritance": "case categories only; no visual-style inheritance",
+    "coverage": "case-coverage.json",
+    "count": 30
   }
 }

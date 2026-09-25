@@ -8,7 +8,7 @@
 정확한 폰트·색상·간격을 원본에서 추출한 패키지가 아니다. 아래 수치는 새로 정한 범용 규칙이다. 원본 로고, 실카피, 고객 이미지, 아이콘, 장비/IP/인물 데이터는 포함하지 않는다. 시스템 ID는 분류용이며 새 제품의 브랜드로 노출하지 않는다.
 
 ## Layout
-4/2/1 device columns; sidebar stacks below 900.
+4 device columns above 1200px, 2 at 601–1200px, 1 at <=600px; sidebar stacks at <=900px.
 기준 프레임 1440px, 12 columns, gutter 24px.
 4px spacing base; 권장 간격 8/12/16/20/24/32/48/64. 콘텐츠가 많아지면 높이를 늘리고 글자를 임의 축소하지 않는다.
 데스크톱 사이드바 208px, 주요 작업면 24px 패딩. 선택 장비와 세션 상태는 항상 명시한다. 태블릿은 2열, 모바일은 1열. 모니터링 값과 제어 입력을 시각적으로 분리한다.
@@ -81,3 +81,11 @@ Main은 그룹/가동 요약과 타일, Sub는 검색 가능한 장비 목록, D
 ## Registered design resources
 
 실제 Figma 파일과 Claude Design 등록 상태는 `integrations.json`, 컴포넌트별 링크는 `figma-components.json`을 참고한다. Figma에서 Templates 페이지의 Main/Sub/Detail 프레임을 복제해 시작한다. 네이티브 Figma는 편집 가능한 로컬 컴포넌트이며 팀 라이브러리 게시는 별도다. HTML preview와 Figma는 동일 토큰과 컴포넌트 계약을 따르는 별도 렌더링 예시이며 픽셀 단위 복제본은 아니다.
+
+## Case structure inheritance
+
+IAK Design Studio는 케이스 항목 구조만 제공한다. 색·서체·간격·라운드·그림자·레이아웃은 이 프로젝트의 figma-system.json을 따른다. IAK/RAIS 시각 토큰을 상속하지 않는다.
+
+`case-coverage.json`은 IAK 원본 30항목의 대응표이며 `preview/cases.html`에서 모두 탐색한다. `docs/`의 7개 문서는 이 프로젝트 전용이다. 원본 감사 점수는 복사하지 않는다.
+
+추가 컴포넌트 **Toast**: info/success/warning/error/neutral, 44px 닫기, 프로젝트 surface/의미색/radius.md 사용. status/alert 구분, 자동 닫기 없음.

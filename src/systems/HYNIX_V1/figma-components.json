@@ -433,6 +433,42 @@
       ],
       "source": "preview/components.html",
       "specification": "figma-system.json#/components"
+    },
+    "Toast": {
+      "nodeId": "19:305",
+      "url": "https://www.figma.com/design/Nh9NILHBye8VS0jGtph3UB?node-id=19-305",
+      "variants": [
+        {
+          "id": "19:300",
+          "name": "severity=info",
+          "width": 420,
+          "height": 92
+        },
+        {
+          "id": "19:301",
+          "name": "severity=success",
+          "width": 420,
+          "height": 92
+        },
+        {
+          "id": "19:302",
+          "name": "severity=warning",
+          "width": 420,
+          "height": 92
+        },
+        {
+          "id": "19:303",
+          "name": "severity=error",
+          "width": 420,
+          "height": 92
+        },
+        {
+          "id": "19:304",
+          "name": "severity=neutral",
+          "width": 420,
+          "height": 92
+        }
+      ]
     }
   },
   "note": "Native Figma local components. This is a source map, not a published Figma Code Connect integration."

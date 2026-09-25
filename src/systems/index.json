@@ -11,7 +11,10 @@
       "figmaStatus": "native_file_created",
       "figma": "https://www.figma.com/design/Nh9NILHBye8VS0jGtph3UB",
       "claudeDesign": "https://claude.ai/design/p/e80718a5-1ce2-4e2c-8305-66e1c569290b",
-      "claudeDesignStatus": "published"
+      "claudeDesignStatus": "published",
+      "caseLibrary": "HYNIX_V1/preview/cases.html",
+      "caseCoverage": "HYNIX_V1/case-coverage.json",
+      "caseCount": 30
     },
     {
       "id": "KPOP_V1",
@@ -23,7 +26,10 @@
       "figmaStatus": "native_file_created",
       "figma": "https://www.figma.com/design/VR9GFAKIFEjLWuQonbJVYv",
       "claudeDesign": "https://claude.ai/design/p/b9b13fc9-3a4a-4815-b091-5eab5b27fa26",
-      "claudeDesignStatus": "draft_paused_usage_limit"
+      "claudeDesignStatus": "published",
+      "caseLibrary": "KPOP_V1/preview/cases.html",
+      "caseCoverage": "KPOP_V1/case-coverage.json",
+      "caseCount": 30
     },
     {
       "id": "DEW_V1",
@@ -57,5 +63,6 @@
       "visualAuthority": "KOREX_V1",
       "coverageAuthority": "IAK families and applicable cases"
     }
-  ]
+  ],
+  "policy": "IAK case structure only; each Behance project retains its own visual style."
 }

@@ -9,19 +9,27 @@
     "semanticVariables": 38,
     "textStyles": 5,
     "effectStyles": 2,
-    "componentSets": 12,
-    "variants": 56,
+    "componentSets": 13,
+    "variants": 61,
     "templates": {
       "Main": "https://www.figma.com/design/Nh9NILHBye8VS0jGtph3UB?node-id=6-2",
       "Sub": "https://www.figma.com/design/Nh9NILHBye8VS0jGtph3UB?node-id=6-110",
       "Detail": "https://www.figma.com/design/Nh9NILHBye8VS0jGtph3UB?node-id=6-247"
     },
-    "font": "Noto Sans KR (available family from the source fallback stack)"
+    "font": "Noto Sans KR (available family from the source fallback stack)",
+    "caseCount": 30,
+    "caseLibrary": "https://www.figma.com/design/Nh9NILHBye8VS0jGtph3UB?node-id=19-3",
+    "projectGuides": "https://www.figma.com/design/Nh9NILHBye8VS0jGtph3UB?node-id=19-278",
+    "toast": "https://www.figma.com/design/Nh9NILHBye8VS0jGtph3UB?node-id=19-305"
   },
   "claudeDesign": {
     "url": "https://claude.ai/design/p/e80718a5-1ce2-4e2c-8305-66e1c569290b",
     "status": "published",
-    "note": "팀의 신규 프로젝트에서 선택 가능. 조직 기본값은 변경하지 않음."
+    "note": "IAK case structure only; independent HYNIX style. Claude reports 34 cards, 13 components and 3 templates; background visual check is separate.",
+    "caseCount": 30,
+    "componentCount": 13,
+    "templateCount": 3,
+    "structureCheck": "passed"
   },
   "github": "https://github.com/sugun8119-ops/iak-design-system/tree/main/src/systems/HYNIX_V1",
   "preview": "https://sugun8119-ops.github.io/iak-design-system/systems/HYNIX_V1/preview/index.html",

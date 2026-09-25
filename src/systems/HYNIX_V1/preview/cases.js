@@ -1,0 +1,1 @@
+document.querySelectorAll('[data-dismiss]').forEach(b=>b.addEventListener('click',()=>{const n=b.closest('.toast');const next=n.nextElementSibling?.querySelector('button')||n.previousElementSibling?.querySelector('button');n.hidden=true;if(next)next.focus();}));
