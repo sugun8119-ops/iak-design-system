@@ -68,3 +68,14 @@ Primary #059B00, Hover #02AC5A, Positive #17BF56, Text #333333/#707070/#888888, 
 - [실제 Figma 변수·스타일·컴포넌트 목록](figma-inventory.json), [소스 매핑](source-map.json).
 
 흰 글자 대비(계산값): Primary 3.69:1, Hover 2.98:1, Positive 2.44:1.
+
+## Claude Design registration - 2026-09-25
+
+[KOSAF_V1 - Project Design System](https://claude.ai/design/p/f8c97b66-58c3-463f-9523-26fdd5b960d4) is now a native Published design system. Codex verified the checked Published control and the UI message that it is available for the team's new projects, with a New design entry point. Existing Agri Market, IAK and GameofMind systems were not modified.
+
+- Ported 81 variables, 69 text styles (9 canonical + 60 preserved) and 11 component families from the Figma export into CSS/React assets.
+- Supplied [82-node geometry export](kosaf-component-geometry.json) to correct component dimensions and paint values.
+- Native check_design_system reported no issues and recognized 11 families. Claude reported successful rendering of the Core board, 5 state cards and mobile reference, without console errors. Codex also observed rendered Core board controls after publication.
+- Original logos, icons and product photos are not included in the Claude package. No substitute icon library was applied. Mobile screen is explicitly a screenshot-based reference. Noto Sans KR loads from Google Fonts.
+- Measured disabled fill #EAEAEA versus semantic surface/disabled #D9D9D9 is a documented source exception. Incorrect contrast-conformance wording was removed.
+- This is a snapshot port from source commit e384bfa and supplied exports, not automatic bidirectional synchronization. The full React files generated inside Claude have not been exported back into this repository.

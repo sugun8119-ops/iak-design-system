@@ -1,0 +1,1848 @@
+{
+  "source": "SZ7AweGiHxzEDmEmuNi3LY/218:570",
+  "keyLegend": {
+    "p": "parent",
+    "t": "type",
+    "n": "name",
+    "w": "width",
+    "h": "height",
+    "r": "radius",
+    "pad": "top/right/bottom/left",
+    "sw": "stroke weight",
+    "fs": "font size",
+    "lh": "line height"
+  },
+  "nodes": [
+    {
+      "id": "218:571",
+      "p": "218:570",
+      "t": "TEXT",
+      "n": "Buttons",
+      "w": 93,
+      "h": 29,
+      "x": 56,
+      "y": 56,
+      "fill": [
+        "#333333"
+      ],
+      "stroke": [],
+      "sw": 1,
+      "text": "Buttons",
+      "font": "Bold",
+      "fs": 24,
+      "lh": {
+        "unit": "AUTO"
+      }
+    },
+    {
+      "id": "218:590",
+      "p": "218:570",
+      "t": "COMPONENT_SET",
+      "n": "KOSAF/Button",
+      "w": 1100,
+      "h": 185,
+      "x": 56,
+      "y": 112,
+      "layout": "NONE",
+      "pad": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "r": 5,
+      "fill": [],
+      "stroke": [],
+      "sw": 1
+    },
+    {
+      "id": "218:572",
+      "p": "218:590",
+      "t": "COMPONENT",
+      "n": "Style=Primary, State=Default",
+      "w": 164,
+      "h": 45,
+      "x": 0,
+      "y": 0,
+      "layout": "NONE",
+      "pad": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "r": 5,
+      "fill": [
+        "#059b00"
+      ],
+      "stroke": [
+        "#059b00"
+      ],
+      "sw": 1
+    },
+    {
+      "id": "218:573",
+      "p": "218:572",
+      "t": "TEXT",
+      "n": "버튼",
+      "w": 30,
+      "h": 19,
+      "x": 51,
+      "y": 13,
+      "fill": [
+        "#ffffff"
+      ],
+      "stroke": [],
+      "sw": 1,
+      "text": "버튼",
+      "font": "Medium",
+      "fs": 16,
+      "lh": {
+        "unit": "AUTO"
+      }
+    },
+    {
+      "id": "218:574",
+      "p": "218:590",
+      "t": "COMPONENT",
+      "n": "Style=Primary, State=Hover",
+      "w": 164,
+      "h": 45,
+      "x": 184,
+      "y": 0,
+      "layout": "NONE",
+      "pad": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "r": 5,
+      "fill": [
+        "#02ac5a"
+      ],
+      "stroke": [
+        "#059b00"
+      ],
+      "sw": 1
+    },
+    {
+      "id": "218:575",
+      "p": "218:574",
+      "t": "TEXT",
+      "n": "버튼",
+      "w": 30,
+      "h": 19,
+      "x": 51,
+      "y": 13,
+      "fill": [
+        "#ffffff"
+      ],
+      "stroke": [],
+      "sw": 1,
+      "text": "버튼",
+      "font": "Medium",
+      "fs": 16,
+      "lh": {
+        "unit": "AUTO"
+      }
+    },
+    {
+      "id": "218:576",
+      "p": "218:590",
+      "t": "COMPONENT",
+      "n": "Style=Primary, State=Disabled",
+      "w": 164,
+      "h": 45,
+      "x": 368,
+      "y": 0,
+      "layout": "NONE",
+      "pad": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "r": 5,
+      "fill": [
+        "#eaeaea"
+      ],
+      "stroke": [
+        "#dddddd"
+      ],
+      "sw": 1
+    },
+    {
+      "id": "218:577",
+      "p": "218:576",
+      "t": "TEXT",
+      "n": "버튼",
+      "w": 30,
+      "h": 19,
+      "x": 51,
+      "y": 13,
+      "fill": [
+        "#a0a0a0"
+      ],
+      "stroke": [],
+      "sw": 1,
+      "text": "버튼",
+      "font": "Medium",
+      "fs": 16,
+      "lh": {
+        "unit": "AUTO"
+      }
+    },
+    {
+      "id": "218:578",
+      "p": "218:590",
+      "t": "COMPONENT",
+      "n": "Style=Secondary, State=Default",
+      "w": 164,
+      "h": 45,
+      "x": 552,
+      "y": 0,
+      "layout": "NONE",
+      "pad": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "r": 5,
+      "fill": [
+        "#ffffff"
+      ],
+      "stroke": [
+        "#dddddd"
+      ],
+      "sw": 1
+    },
+    {
+      "id": "218:579",
+      "p": "218:578",
+      "t": "TEXT",
+      "n": "버튼",
+      "w": 30,
+      "h": 19,
+      "x": 41,
+      "y": 13,
+      "fill": [
+        "#333333"
+      ],
+      "stroke": [],
+      "sw": 1,
+      "text": "버튼",
+      "font": "Medium",
+      "fs": 16,
+      "lh": {
+        "unit": "AUTO"
+      }
+    },
+    {
+      "id": "218:580",
+      "p": "218:590",
+      "t": "COMPONENT",
+      "n": "Style=Secondary, State=Hover",
+      "w": 164,
+      "h": 45,
+      "x": 736,
+      "y": 0,
+      "layout": "NONE",
+      "pad": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "r": 5,
+      "fill": [
+        "#f7f7f7"
+      ],
+      "stroke": [
+        "#dddddd"
+      ],
+      "sw": 1
+    },
+    {
+      "id": "218:581",
+      "p": "218:580",
+      "t": "TEXT",
+      "n": "버튼",
+      "w": 30,
+      "h": 19,
+      "x": 41,
+      "y": 13,
+      "fill": [
+        "#333333"
+      ],
+      "stroke": [],
+      "sw": 1,
+      "text": "버튼",
+      "font": "Medium",
+      "fs": 16,
+      "lh": {
+        "unit": "AUTO"
+      }
+    },
+    {
+      "id": "218:582",
+      "p": "218:590",
+      "t": "COMPONENT",
+      "n": "Style=Secondary, State=Disabled",
+      "w": 164,
+      "h": 45,
+      "x": 920,
+      "y": 0,
+      "layout": "NONE",
+      "pad": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "r": 5,
+      "fill": [
+        "#eaeaea"
+      ],
+      "stroke": [
+        "#dddddd"
+      ],
+      "sw": 1
+    },
+    {
+      "id": "218:583",
+      "p": "218:582",
+      "t": "TEXT",
+      "n": "버튼",
+      "w": 30,
+      "h": 19,
+      "x": 41,
+      "y": 13,
+      "fill": [
+        "#a0a0a0"
+      ],
+      "stroke": [],
+      "sw": 1,
+      "text": "버튼",
+      "font": "Medium",
+      "fs": 16,
+      "lh": {
+        "unit": "AUTO"
+      }
+    },
+    {
+      "id": "218:584",
+      "p": "218:590",
+      "t": "COMPONENT",
+      "n": "Style=Danger, State=Default",
+      "w": 164,
+      "h": 45,
+      "x": 0,
+      "y": 70,
+      "layout": "NONE",
+      "pad": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "r": 5,
+      "fill": [
+        "#e23736"
+      ],
+      "stroke": [
+        "#e23736"
+      ],
+      "sw": 1
+    },
+    {
+      "id": "218:585",
+      "p": "218:584",
+      "t": "TEXT",
+      "n": "버튼",
+      "w": 30,
+      "h": 19,
+      "x": 54.5,
+      "y": 13,
+      "fill": [
+        "#ffffff"
+      ],
+      "stroke": [],
+      "sw": 1,
+      "text": "버튼",
+      "font": "Medium",
+      "fs": 16,
+      "lh": {
+        "unit": "AUTO"
+      }
+    },
+    {
+      "id": "218:586",
+      "p": "218:590",
+      "t": "COMPONENT",
+      "n": "Style=Danger, State=Hover",
+      "w": 164,
+      "h": 45,
+      "x": 184,
+      "y": 70,
+      "layout": "NONE",
+      "pad": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "r": 5,
+      "fill": [
+        "#ff5858"
+      ],
+      "stroke": [
+        "#e23736"
+      ],
+      "sw": 1
+    },
+    {
+      "id": "218:587",
+      "p": "218:586",
+      "t": "TEXT",
+      "n": "버튼",
+      "w": 30,
+      "h": 19,
+      "x": 54.5,
+      "y": 13,
+      "fill": [
+        "#ffffff"
+      ],
+      "stroke": [],
+      "sw": 1,
+      "text": "버튼",
+      "font": "Medium",
+      "fs": 16,
+      "lh": {
+        "unit": "AUTO"
+      }
+    },
+    {
+      "id": "218:588",
+      "p": "218:590",
+      "t": "COMPONENT",
+      "n": "Style=Danger, State=Disabled",
+      "w": 164,
+      "h": 45,
+      "x": 368,
+      "y": 70,
+      "layout": "NONE",
+      "pad": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "r": 5,
+      "fill": [
+        "#eaeaea"
+      ],
+      "stroke": [
+        "#dddddd"
+      ],
+      "sw": 1
+    },
+    {
+      "id": "218:589",
+      "p": "218:588",
+      "t": "TEXT",
+      "n": "버튼",
+      "w": 30,
+      "h": 19,
+      "x": 54.5,
+      "y": 13,
+      "fill": [
+        "#a0a0a0"
+      ],
+      "stroke": [],
+      "sw": 1,
+      "text": "버튼",
+      "font": "Medium",
+      "fs": 16,
+      "lh": {
+        "unit": "AUTO"
+      }
+    },
+    {
+      "id": "223:570",
+      "p": "218:590",
+      "t": "COMPONENT",
+      "n": "Style=Primary, State=Focus",
+      "w": 164,
+      "h": 45,
+      "x": 552,
+      "y": 70,
+      "layout": "NONE",
+      "pad": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "r": 5,
+      "fill": [
+        "#059b00"
+      ],
+      "stroke": [
+        "#0047ed"
+      ],
+      "sw": 2
+    },
+    {
+      "id": "223:571",
+      "p": "223:570",
+      "t": "TEXT",
+      "n": "버튼",
+      "w": 30,
+      "h": 19,
+      "x": 51,
+      "y": 13,
+      "fill": [
+        "#ffffff"
+      ],
+      "stroke": [],
+      "sw": 1,
+      "text": "버튼",
+      "font": "Medium",
+      "fs": 16,
+      "lh": {
+        "unit": "AUTO"
+      }
+    },
+    {
+      "id": "223:572",
+      "p": "218:590",
+      "t": "COMPONENT",
+      "n": "Style=Secondary, State=Focus",
+      "w": 164,
+      "h": 45,
+      "x": 736,
+      "y": 70,
+      "layout": "NONE",
+      "pad": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "r": 5,
+      "fill": [
+        "#ffffff"
+      ],
+      "stroke": [
+        "#0047ed"
+      ],
+      "sw": 2
+    },
+    {
+      "id": "223:573",
+      "p": "223:572",
+      "t": "TEXT",
+      "n": "버튼",
+      "w": 30,
+      "h": 19,
+      "x": 41,
+      "y": 13,
+      "fill": [
+        "#333333"
+      ],
+      "stroke": [],
+      "sw": 1,
+      "text": "버튼",
+      "font": "Medium",
+      "fs": 16,
+      "lh": {
+        "unit": "AUTO"
+      }
+    },
+    {
+      "id": "218:591",
+      "p": "218:570",
+      "t": "TEXT",
+      "n": "Inputs / Selection",
+      "w": 207,
+      "h": 29,
+      "x": 56,
+      "y": 372,
+      "fill": [
+        "#333333"
+      ],
+      "stroke": [],
+      "sw": 1,
+      "text": "Inputs / Selection",
+      "font": "Bold",
+      "fs": 24,
+      "lh": {
+        "unit": "AUTO"
+      }
+    },
+    {
+      "id": "218:600",
+      "p": "218:570",
+      "t": "COMPONENT_SET",
+      "n": "KOSAF/Input",
+      "w": 1247,
+      "h": 45,
+      "x": 56,
+      "y": 428,
+      "layout": "NONE",
+      "pad": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "r": 5,
+      "fill": [],
+      "stroke": [],
+      "sw": 1
+    },
+    {
+      "id": "218:592",
+      "p": "218:600",
+      "t": "COMPONENT",
+      "n": "State=Default",
+      "w": 287,
+      "h": 45,
+      "x": 0,
+      "y": 0,
+      "layout": "NONE",
+      "pad": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "r": 5,
+      "fill": [
+        "#ffffff"
+      ],
+      "stroke": [
+        "#dddddd"
+      ],
+      "sw": 1
+    },
+    {
+      "id": "218:593",
+      "p": "218:592",
+      "t": "TEXT",
+      "n": "입력값을 입력하세요",
+      "w": 120,
+      "h": 17,
+      "x": 14,
+      "y": 14,
+      "fill": [
+        "#707070"
+      ],
+      "stroke": [],
+      "sw": 1,
+      "text": "입력값을 입력하세요",
+      "font": "Regular",
+      "fs": 14,
+      "lh": {
+        "unit": "AUTO"
+      }
+    },
+    {
+      "id": "218:594",
+      "p": "218:600",
+      "t": "COMPONENT",
+      "n": "State=Focus",
+      "w": 287,
+      "h": 45,
+      "x": 320,
+      "y": 0,
+      "layout": "NONE",
+      "pad": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "r": 5,
+      "fill": [
+        "#ffffff"
+      ],
+      "stroke": [
+        "#0047ed"
+      ],
+      "sw": 2
+    },
+    {
+      "id": "218:595",
+      "p": "218:594",
+      "t": "TEXT",
+      "n": "입력값을 입력하세요",
+      "w": 120,
+      "h": 17,
+      "x": 14,
+      "y": 14,
+      "fill": [
+        "#707070"
+      ],
+      "stroke": [],
+      "sw": 1,
+      "text": "입력값을 입력하세요",
+      "font": "Regular",
+      "fs": 14,
+      "lh": {
+        "unit": "AUTO"
+      }
+    },
+    {
+      "id": "218:596",
+      "p": "218:600",
+      "t": "COMPONENT",
+      "n": "State=Error",
+      "w": 287,
+      "h": 45,
+      "x": 640,
+      "y": 0,
+      "layout": "NONE",
+      "pad": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "r": 5,
+      "fill": [
+        "#ffffff"
+      ],
+      "stroke": [
+        "#e23736"
+      ],
+      "sw": 1
+    },
+    {
+      "id": "218:597",
+      "p": "218:596",
+      "t": "TEXT",
+      "n": "입력값을 입력하세요",
+      "w": 120,
+      "h": 17,
+      "x": 14,
+      "y": 14,
+      "fill": [
+        "#707070"
+      ],
+      "stroke": [],
+      "sw": 1,
+      "text": "입력값을 입력하세요",
+      "font": "Regular",
+      "fs": 14,
+      "lh": {
+        "unit": "AUTO"
+      }
+    },
+    {
+      "id": "218:598",
+      "p": "218:600",
+      "t": "COMPONENT",
+      "n": "State=Disabled",
+      "w": 287,
+      "h": 45,
+      "x": 960,
+      "y": 0,
+      "layout": "NONE",
+      "pad": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "r": 5,
+      "fill": [
+        "#f7f7f7"
+      ],
+      "stroke": [
+        "#dddddd"
+      ],
+      "sw": 1
+    },
+    {
+      "id": "218:599",
+      "p": "218:598",
+      "t": "TEXT",
+      "n": "Disabled",
+      "w": 57,
+      "h": 17,
+      "x": 14,
+      "y": 14,
+      "fill": [
+        "#a0a0a0"
+      ],
+      "stroke": [],
+      "sw": 1,
+      "text": "Disabled",
+      "font": "Regular",
+      "fs": 14,
+      "lh": {
+        "unit": "AUTO"
+      }
+    },
+    {
+      "id": "218:608",
+      "p": "218:570",
+      "t": "COMPONENT_SET",
+      "n": "KOSAF/Checkbox",
+      "w": 200,
+      "h": 20,
+      "x": 56,
+      "y": 618,
+      "layout": "NONE",
+      "pad": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "r": 5,
+      "fill": [],
+      "stroke": [],
+      "sw": 1
+    },
+    {
+      "id": "218:603",
+      "p": "218:608",
+      "t": "COMPONENT",
+      "n": "State=Unchecked",
+      "w": 20,
+      "h": 20,
+      "x": 0,
+      "y": 0,
+      "layout": "NONE",
+      "pad": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "r": 3,
+      "fill": [
+        "#ffffff"
+      ],
+      "stroke": [
+        "#c1c1c1"
+      ],
+      "sw": 1
+    },
+    {
+      "id": "218:604",
+      "p": "218:608",
+      "t": "COMPONENT",
+      "n": "State=Checked",
+      "w": 20,
+      "h": 20,
+      "x": 60,
+      "y": 0,
+      "layout": "NONE",
+      "pad": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "r": 3,
+      "fill": [
+        "#059b00"
+      ],
+      "stroke": [
+        "#c1c1c1"
+      ],
+      "sw": 1
+    },
+    {
+      "id": "218:605",
+      "p": "218:604",
+      "t": "TEXT",
+      "n": "✓",
+      "w": 11,
+      "h": 17,
+      "x": 4,
+      "y": 0,
+      "fill": [
+        "#ffffff"
+      ],
+      "stroke": [],
+      "sw": 1,
+      "text": "✓",
+      "font": "Bold",
+      "fs": 14,
+      "lh": {
+        "unit": "AUTO"
+      }
+    },
+    {
+      "id": "218:606",
+      "p": "218:608",
+      "t": "COMPONENT",
+      "n": "State=Focus",
+      "w": 20,
+      "h": 20,
+      "x": 120,
+      "y": 0,
+      "layout": "NONE",
+      "pad": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "r": 3,
+      "fill": [
+        "#ffffff"
+      ],
+      "stroke": [
+        "#0047ed"
+      ],
+      "sw": 2
+    },
+    {
+      "id": "218:607",
+      "p": "218:608",
+      "t": "COMPONENT",
+      "n": "State=Disabled",
+      "w": 20,
+      "h": 20,
+      "x": 180,
+      "y": 0,
+      "layout": "NONE",
+      "pad": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "r": 3,
+      "fill": [
+        "#eaeaea"
+      ],
+      "stroke": [
+        "#c1c1c1"
+      ],
+      "sw": 1
+    },
+    {
+      "id": "218:614",
+      "p": "218:570",
+      "t": "COMPONENT_SET",
+      "n": "KOSAF/Radio",
+      "w": 200,
+      "h": 20,
+      "x": 360,
+      "y": 618,
+      "layout": "NONE",
+      "pad": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "r": 5,
+      "fill": [],
+      "stroke": [],
+      "sw": 1
+    },
+    {
+      "id": "218:609",
+      "p": "218:614",
+      "t": "COMPONENT",
+      "n": "State=Unchecked",
+      "w": 20,
+      "h": 20,
+      "x": 0,
+      "y": 0,
+      "layout": "NONE",
+      "pad": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "r": 10,
+      "fill": [
+        "#ffffff"
+      ],
+      "stroke": [
+        "#c1c1c1"
+      ],
+      "sw": 1
+    },
+    {
+      "id": "218:610",
+      "p": "218:614",
+      "t": "COMPONENT",
+      "n": "State=Checked",
+      "w": 20,
+      "h": 20,
+      "x": 60,
+      "y": 0,
+      "layout": "NONE",
+      "pad": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "r": 10,
+      "fill": [
+        "#ffffff"
+      ],
+      "stroke": [
+        "#c1c1c1"
+      ],
+      "sw": 1
+    },
+    {
+      "id": "218:611",
+      "p": "218:610",
+      "t": "ELLIPSE",
+      "n": "Ellipse",
+      "w": 10,
+      "h": 10,
+      "x": 5,
+      "y": 5,
+      "r": 0,
+      "fill": [
+        "#059b00"
+      ],
+      "stroke": [],
+      "sw": 1
+    },
+    {
+      "id": "218:612",
+      "p": "218:614",
+      "t": "COMPONENT",
+      "n": "State=Focus",
+      "w": 20,
+      "h": 20,
+      "x": 120,
+      "y": 0,
+      "layout": "NONE",
+      "pad": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "r": 10,
+      "fill": [
+        "#ffffff"
+      ],
+      "stroke": [
+        "#0047ed"
+      ],
+      "sw": 2
+    },
+    {
+      "id": "218:613",
+      "p": "218:614",
+      "t": "COMPONENT",
+      "n": "State=Disabled",
+      "w": 20,
+      "h": 20,
+      "x": 180,
+      "y": 0,
+      "layout": "NONE",
+      "pad": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "r": 10,
+      "fill": [
+        "#ffffff"
+      ],
+      "stroke": [
+        "#d9d9d9"
+      ],
+      "sw": 1
+    },
+    {
+      "id": "218:615",
+      "p": "218:570",
+      "t": "TEXT",
+      "n": "Tabs / Badge / Pagination",
+      "w": 296,
+      "h": 29,
+      "x": 56,
+      "y": 728,
+      "fill": [
+        "#333333"
+      ],
+      "stroke": [],
+      "sw": 1,
+      "text": "Tabs / Badge / Pagination",
+      "font": "Bold",
+      "fs": 24,
+      "lh": {
+        "unit": "AUTO"
+      }
+    },
+    {
+      "id": "218:620",
+      "p": "218:570",
+      "t": "COMPONENT_SET",
+      "n": "KOSAF/Tab",
+      "w": 264,
+      "h": 44,
+      "x": 56,
+      "y": 784,
+      "layout": "NONE",
+      "pad": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "r": 5,
+      "fill": [],
+      "stroke": [],
+      "sw": 1
+    },
+    {
+      "id": "218:616",
+      "p": "218:620",
+      "t": "COMPONENT",
+      "n": "State=Default",
+      "w": 124,
+      "h": 44,
+      "x": 0,
+      "y": 0,
+      "layout": "NONE",
+      "pad": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "r": 5,
+      "fill": [
+        "#ffffff"
+      ],
+      "stroke": [
+        "#dddddd"
+      ],
+      "sw": 1
+    },
+    {
+      "id": "218:617",
+      "p": "218:616",
+      "t": "TEXT",
+      "n": "입찰거래",
+      "w": 59,
+      "h": 19,
+      "x": 32.5,
+      "y": 12.5,
+      "fill": [
+        "#333333"
+      ],
+      "stroke": [],
+      "sw": 1,
+      "text": "입찰거래",
+      "font": "Medium",
+      "fs": 16,
+      "lh": {
+        "unit": "AUTO"
+      }
+    },
+    {
+      "id": "218:618",
+      "p": "218:620",
+      "t": "COMPONENT",
+      "n": "State=Selected",
+      "w": 124,
+      "h": 44,
+      "x": 140,
+      "y": 0,
+      "layout": "NONE",
+      "pad": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "r": 5,
+      "fill": [
+        "#059b00"
+      ],
+      "stroke": [
+        "#059b00"
+      ],
+      "sw": 1
+    },
+    {
+      "id": "218:619",
+      "p": "218:618",
+      "t": "TEXT",
+      "n": "정가거래",
+      "w": 59,
+      "h": 19,
+      "x": 32.5,
+      "y": 12.5,
+      "fill": [
+        "#ffffff"
+      ],
+      "stroke": [],
+      "sw": 1,
+      "text": "정가거래",
+      "font": "Medium",
+      "fs": 16,
+      "lh": {
+        "unit": "AUTO"
+      }
+    },
+    {
+      "id": "218:631",
+      "p": "218:570",
+      "t": "COMPONENT_SET",
+      "n": "KOSAF/PaginationItem",
+      "w": 204,
+      "h": 42,
+      "x": 520,
+      "y": 784,
+      "layout": "NONE",
+      "pad": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "r": 5,
+      "fill": [],
+      "stroke": [],
+      "sw": 1
+    },
+    {
+      "id": "218:623",
+      "p": "218:631",
+      "t": "COMPONENT",
+      "n": "State=Default",
+      "w": 42,
+      "h": 42,
+      "x": 0,
+      "y": 0,
+      "layout": "NONE",
+      "pad": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "r": 5,
+      "fill": [
+        "#ffffff"
+      ],
+      "stroke": [
+        "#dddddd"
+      ],
+      "sw": 1
+    },
+    {
+      "id": "218:624",
+      "p": "218:623",
+      "t": "TEXT",
+      "n": "1",
+      "w": 8,
+      "h": 17,
+      "x": 17,
+      "y": 12.5,
+      "fill": [
+        "#333333"
+      ],
+      "stroke": [],
+      "sw": 1,
+      "text": "1",
+      "font": "Medium",
+      "fs": 14,
+      "lh": {
+        "unit": "AUTO"
+      }
+    },
+    {
+      "id": "218:625",
+      "p": "218:631",
+      "t": "COMPONENT",
+      "n": "State=Hover",
+      "w": 42,
+      "h": 42,
+      "x": 54,
+      "y": 0,
+      "layout": "NONE",
+      "pad": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "r": 5,
+      "fill": [
+        "#f7f7f7"
+      ],
+      "stroke": [
+        "#dddddd"
+      ],
+      "sw": 1
+    },
+    {
+      "id": "218:626",
+      "p": "218:625",
+      "t": "TEXT",
+      "n": "1",
+      "w": 8,
+      "h": 17,
+      "x": 17,
+      "y": 12.5,
+      "fill": [
+        "#333333"
+      ],
+      "stroke": [],
+      "sw": 1,
+      "text": "1",
+      "font": "Medium",
+      "fs": 14,
+      "lh": {
+        "unit": "AUTO"
+      }
+    },
+    {
+      "id": "218:627",
+      "p": "218:631",
+      "t": "COMPONENT",
+      "n": "State=Selected",
+      "w": 42,
+      "h": 42,
+      "x": 108,
+      "y": 0,
+      "layout": "NONE",
+      "pad": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "r": 5,
+      "fill": [
+        "#059b00"
+      ],
+      "stroke": [
+        "#dddddd"
+      ],
+      "sw": 1
+    },
+    {
+      "id": "218:628",
+      "p": "218:627",
+      "t": "TEXT",
+      "n": "1",
+      "w": 8,
+      "h": 17,
+      "x": 17,
+      "y": 12.5,
+      "fill": [
+        "#ffffff"
+      ],
+      "stroke": [],
+      "sw": 1,
+      "text": "1",
+      "font": "Medium",
+      "fs": 14,
+      "lh": {
+        "unit": "AUTO"
+      }
+    },
+    {
+      "id": "218:629",
+      "p": "218:631",
+      "t": "COMPONENT",
+      "n": "State=Disabled",
+      "w": 42,
+      "h": 42,
+      "x": 162,
+      "y": 0,
+      "layout": "NONE",
+      "pad": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "r": 5,
+      "fill": [
+        "#ffffff"
+      ],
+      "stroke": [
+        "#dddddd"
+      ],
+      "sw": 1
+    },
+    {
+      "id": "218:630",
+      "p": "218:629",
+      "t": "TEXT",
+      "n": "1",
+      "w": 8,
+      "h": 17,
+      "x": 17,
+      "y": 12.5,
+      "fill": [
+        "#a0a0a0"
+      ],
+      "stroke": [],
+      "sw": 1,
+      "text": "1",
+      "font": "Medium",
+      "fs": 14,
+      "lh": {
+        "unit": "AUTO"
+      }
+    },
+    {
+      "id": "218:632",
+      "p": "218:570",
+      "t": "TEXT",
+      "n": "Data Display",
+      "w": 147,
+      "h": 29,
+      "x": 56,
+      "y": 894,
+      "fill": [
+        "#333333"
+      ],
+      "stroke": [],
+      "sw": 1,
+      "text": "Data Display",
+      "font": "Bold",
+      "fs": 24,
+      "lh": {
+        "unit": "AUTO"
+      }
+    },
+    {
+      "id": "218:637",
+      "p": "218:570",
+      "t": "COMPONENT_SET",
+      "n": "KOSAF/TableRow",
+      "w": 1500,
+      "h": 140,
+      "x": 56,
+      "y": 950,
+      "layout": "NONE",
+      "pad": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "r": 5,
+      "fill": [],
+      "stroke": [],
+      "sw": 1
+    },
+    {
+      "id": "218:633",
+      "p": "218:637",
+      "t": "COMPONENT",
+      "n": "Device=Desktop",
+      "w": 1500,
+      "h": 70,
+      "x": 0,
+      "y": 0,
+      "layout": "NONE",
+      "pad": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "r": 0,
+      "fill": [
+        "#ffffff"
+      ],
+      "stroke": [
+        "#dddddd"
+      ],
+      "sw": 1
+    },
+    {
+      "id": "218:634",
+      "p": "218:633",
+      "t": "TEXT",
+      "n": "상품명 판매자 판매단가 수량 상태",
+      "w": 278,
+      "h": 19,
+      "x": 24,
+      "y": 22,
+      "fill": [
+        "#333333"
+      ],
+      "stroke": [],
+      "sw": 1,
+      "text": "상품명     판매자     판매단가     수량     상태",
+      "font": "Regular",
+      "fs": 16,
+      "lh": {
+        "unit": "AUTO"
+      }
+    },
+    {
+      "id": "218:635",
+      "p": "218:637",
+      "t": "COMPONENT",
+      "n": "Device=Mobile",
+      "w": 350,
+      "h": 50,
+      "x": 0,
+      "y": 90,
+      "layout": "NONE",
+      "pad": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "r": 0,
+      "fill": [
+        "#ffffff"
+      ],
+      "stroke": [
+        "#dddddd"
+      ],
+      "sw": 1
+    },
+    {
+      "id": "218:636",
+      "p": "218:635",
+      "t": "TEXT",
+      "n": "상품명 · 상태",
+      "w": 79,
+      "h": 17,
+      "x": 16,
+      "y": 15,
+      "fill": [
+        "#333333"
+      ],
+      "stroke": [],
+      "sw": 1,
+      "text": "상품명 · 상태",
+      "font": "Regular",
+      "fs": 14,
+      "lh": {
+        "unit": "AUTO"
+      }
+    },
+    {
+      "id": "218:638",
+      "p": "218:570",
+      "t": "TEXT",
+      "n": "Modal Shell / Stepper",
+      "w": 251,
+      "h": 29,
+      "x": 56,
+      "y": 1140,
+      "fill": [
+        "#333333"
+      ],
+      "stroke": [],
+      "sw": 1,
+      "text": "Modal Shell / Stepper",
+      "font": "Bold",
+      "fs": 24,
+      "lh": {
+        "unit": "AUTO"
+      }
+    },
+    {
+      "id": "218:601",
+      "p": "218:570",
+      "t": "COMPONENT",
+      "n": "KOSAF/Search",
+      "w": 579,
+      "h": 50,
+      "x": 56,
+      "y": 528,
+      "layout": "NONE",
+      "pad": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "r": 25,
+      "fill": [
+        "#ffffff"
+      ],
+      "stroke": [
+        "#059b00"
+      ],
+      "sw": 2
+    },
+    {
+      "id": "218:602",
+      "p": "218:601",
+      "t": "TEXT",
+      "n": "검색어를 입력하세요",
+      "w": 120,
+      "h": 17,
+      "x": 24,
+      "y": 16.5,
+      "fill": [
+        "#707070"
+      ],
+      "stroke": [],
+      "sw": 1,
+      "text": "검색어를 입력하세요",
+      "font": "Regular",
+      "fs": 14,
+      "lh": {
+        "unit": "AUTO"
+      }
+    },
+    {
+      "id": "218:621",
+      "p": "218:570",
+      "t": "COMPONENT",
+      "n": "KOSAF/Badge",
+      "w": 88,
+      "h": 30,
+      "x": 380,
+      "y": 784,
+      "layout": "NONE",
+      "pad": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "r": 15,
+      "fill": [
+        "#ebffe9"
+      ],
+      "stroke": [],
+      "sw": 1
+    },
+    {
+      "id": "218:622",
+      "p": "218:621",
+      "t": "TEXT",
+      "n": "답변완료",
+      "w": 52,
+      "h": 17,
+      "x": 18,
+      "y": 6.5,
+      "fill": [
+        "#059b00"
+      ],
+      "stroke": [],
+      "sw": 1,
+      "text": "답변완료",
+      "font": "Medium",
+      "fs": 14,
+      "lh": {
+        "unit": "AUTO"
+      }
+    },
+    {
+      "id": "218:639",
+      "p": "218:570",
+      "t": "COMPONENT",
+      "n": "KOSAF/Modal",
+      "w": 706,
+      "h": 630,
+      "x": 56,
+      "y": 1196,
+      "layout": "NONE",
+      "pad": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "r": 10,
+      "fill": [
+        "#ffffff"
+      ],
+      "stroke": [
+        "#dddddd"
+      ],
+      "sw": 1
+    },
+    {
+      "id": "218:640",
+      "p": "218:639",
+      "t": "TEXT",
+      "n": "상세 정보",
+      "w": 86,
+      "h": 26,
+      "x": 30,
+      "y": 28,
+      "fill": [
+        "#333333"
+      ],
+      "stroke": [],
+      "sw": 1,
+      "text": "상세 정보",
+      "font": "Bold",
+      "fs": 22,
+      "lh": {
+        "unit": "AUTO"
+      }
+    },
+    {
+      "id": "218:641",
+      "p": "218:639",
+      "t": "RECTANGLE",
+      "n": "Rectangle",
+      "w": 646,
+      "h": 1,
+      "x": 30,
+      "y": 82,
+      "r": 0,
+      "fill": [
+        "#dddddd"
+      ],
+      "stroke": [],
+      "sw": 1
+    },
+    {
+      "id": "218:642",
+      "p": "218:570",
+      "t": "COMPONENT",
+      "n": "KOSAF/Stepper",
+      "w": 645,
+      "h": 50,
+      "x": 820,
+      "y": 1196,
+      "layout": "NONE",
+      "pad": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "r": 0,
+      "fill": [],
+      "stroke": [],
+      "sw": 1
+    },
+    {
+      "id": "218:643",
+      "p": "218:642",
+      "t": "RECTANGLE",
+      "n": "Rectangle",
+      "w": 205,
+      "h": 50,
+      "x": 0,
+      "y": 0,
+      "r": 5,
+      "fill": [
+        "#f7f7f7"
+      ],
+      "stroke": [],
+      "sw": 1
+    },
+    {
+      "id": "218:644",
+      "p": "218:642",
+      "t": "TEXT",
+      "n": "01 장바구니",
+      "w": 71,
+      "h": 17,
+      "x": 24,
+      "y": 15,
+      "fill": [
+        "#707070"
+      ],
+      "stroke": [],
+      "sw": 1,
+      "text": "01 장바구니",
+      "font": "Medium",
+      "fs": 14,
+      "lh": {
+        "unit": "AUTO"
+      }
+    },
+    {
+      "id": "218:645",
+      "p": "218:642",
+      "t": "RECTANGLE",
+      "n": "Rectangle",
+      "w": 205,
+      "h": 50,
+      "x": 220,
+      "y": 0,
+      "r": 5,
+      "fill": [
+        "#059b00"
+      ],
+      "stroke": [],
+      "sw": 1
+    },
+    {
+      "id": "218:646",
+      "p": "218:642",
+      "t": "TEXT",
+      "n": "02 주문/결제",
+      "w": 77,
+      "h": 17,
+      "x": 244,
+      "y": 15,
+      "fill": [
+        "#ffffff"
+      ],
+      "stroke": [],
+      "sw": 1,
+      "text": "02 주문/결제",
+      "font": "Medium",
+      "fs": 14,
+      "lh": {
+        "unit": "AUTO"
+      }
+    },
+    {
+      "id": "218:647",
+      "p": "218:642",
+      "t": "RECTANGLE",
+      "n": "Rectangle",
+      "w": 205,
+      "h": 50,
+      "x": 440,
+      "y": 0,
+      "r": 5,
+      "fill": [
+        "#f7f7f7"
+      ],
+      "stroke": [],
+      "sw": 1
+    },
+    {
+      "id": "218:648",
+      "p": "218:642",
+      "t": "TEXT",
+      "n": "03 주문완료",
+      "w": 71,
+      "h": 17,
+      "x": 464,
+      "y": 15,
+      "fill": [
+        "#707070"
+      ],
+      "stroke": [],
+      "sw": 1,
+      "text": "03 주문완료",
+      "font": "Medium",
+      "fs": 14,
+      "lh": {
+        "unit": "AUTO"
+      }
+    }
+  ]
+}
