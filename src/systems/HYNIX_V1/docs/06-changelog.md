@@ -10,8 +10,15 @@
 
 ## 사용자 승인 폰트 업데이트
 
-Pretendard 1.3.9를 기본 글꼴로 사용한다. 실제 WOFF2와 SIL OFL 라이선스를 assets/fonts/에 포함한다. 기존 크기·굵기·행간은 유지한다. Figma에도 공식 Pretendard 9개 굵기를 업로드하고 전체 텍스트와 스타일에 실제 적용했다. 이전 OS-only 규칙을 대체한다.
+Pretendard 1.3.9를 기본 글꼴로 사용한다. 실제 WOFF2와 SIL OFL 라이선스를 assets/fonts/에 포함한다. Pretendard 크기·굵기를 유지하고 품질 개정의 행간은 JSON typography를 따른다. Figma에도 공식 Pretendard 9개 굵기를 업로드하고 전체 텍스트와 스타일에 실제 적용했다. 이전 OS-only 규칙을 대체한다.
 
 
 ### Figma Pretendard 적용 완료
 공식 OTF 9개 굵기 업로드 후 20개 페이지, 5개 텍스트 스타일과 694개 텍스트를 실제 Pretendard로 교체했다. Main/Sub/Detail 렌더링을 확인했다.
+
+
+## Quality revision 1.3
+
+HYNIX: 균등한 요약·장비 카드, 44px 버튼, 25px 비조작 상태 배지. 네이비 그리드와 자체 제작 모듈 도식. Raised 4/4/12, inset 2/2/6. 선택/포커스 파랑, 실행 주황을 유지한다.
+
+타이포: Display32/40, Heading24/32, Title18/26, Body14/20, Meta12/17. Pretendard 실제 파일 사용. IAK30항목과 프로젝트 고유 색상·13컴포넌트·Main/Sub/Detail을 유지한다.

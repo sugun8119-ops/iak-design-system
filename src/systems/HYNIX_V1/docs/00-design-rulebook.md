@@ -11,3 +11,10 @@ IAK Design Studio는 케이스 항목 구조만 제공한다. 색·서체·간�
 
 ### Font policy update
 Pretendard 1.3.9를 기본 사용하고 번들 WOFF2를 로드한다. 기존 크기·굵기·행간 유지. Figma 전체 텍스트와 스타일에도 업로드된 Pretendard를 실제 적용했다.
+
+
+## Quality revision 1.3
+
+HYNIX: 균등한 요약·장비 카드, 44px 버튼, 25px 비조작 상태 배지. 네이비 그리드와 자체 제작 모듈 도식. Raised 4/4/12, inset 2/2/6. 선택/포커스 파랑, 실행 주황을 유지한다.
+
+타이포: Display32/40, Heading24/32, Title18/26, Body14/20, Meta12/17. Pretendard 실제 파일 사용. IAK30항목과 프로젝트 고유 색상·13컴포넌트·Main/Sub/Detail을 유지한다.

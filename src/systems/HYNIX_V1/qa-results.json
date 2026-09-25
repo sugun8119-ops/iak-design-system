@@ -100,5 +100,59 @@
       "validation": "HYNIX: 18 width/page combinations reported without overflow; KPOP: long-content overflow fixed and checked",
       "source": "Claude final response plus visible Published/UI font status"
     }
+  },
+  "qualityRevision": {
+    "version": "1.3",
+    "localViewportChecks": {
+      "pages": [
+        "Main",
+        "Sub",
+        "Detail"
+      ],
+      "widths": [
+        1440,
+        900,
+        375,
+        320
+      ],
+      "horizontalOverflow": 0,
+      "intentionalScrollableTabs": false
+    },
+    "figma": {
+      "mainSubDetailVisualReview": "passed",
+      "textOverflow": 0,
+      "exports": [
+        "preview/figma-main.png",
+        "preview/figma-sub.png",
+        "preview/figma-detail.png"
+      ]
+    },
+    "interactionChecks": [
+      "local control Monitor72 applies",
+      "offline disables action and clears current value"
+    ],
+    "repositoryTests": "31 passed",
+    "notVerified": [
+      "Physical devices",
+      "VoiceOver/TalkBack",
+      "Independent AI regeneration"
+    ],
+    "claudeDesign": {
+      "revision": "rev.2",
+      "check": "No issues found",
+      "cards": 34,
+      "components": 13,
+      "templates": 3,
+      "cssTokens": 105,
+      "source": "Claude completion report: rendered source copies passed 12 width checks, long text and interaction checks; published rebuild verified separately",
+      "published": true,
+      "publishedVerification": {
+        "reloaded": true,
+        "heading": "Pretendard 32px / 40px",
+        "button": "44px; padding 0 16px"
+      }
+    },
+    "build": "passed",
+    "keyboardFocus": "2px visible outline verified in local preview"
   }
 }

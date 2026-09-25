@@ -17,3 +17,10 @@
 - Toast: Severity label; message; dismiss button. severity=info|success|warning|error|neutral. role=status for info/success/neutral, role=alert for warning/error; explicit dismiss; no automatic timeout; no focus stealing; local demo only.
 
 컴포넌트는 프로젝트 토큰에 바인딩한다. Figma 네이티브 라이브러리는 편집용이며 HTML 런타임과 자동 동기화되지 않는다.
+
+
+## Quality revision 1.3
+
+HYNIX: 균등한 요약·장비 카드, 44px 버튼, 25px 비조작 상태 배지. 네이비 그리드와 자체 제작 모듈 도식. Raised 4/4/12, inset 2/2/6. 선택/포커스 파랑, 실행 주황을 유지한다.
+
+타이포: Display32/40, Heading24/32, Title18/26, Body14/20, Meta12/17. Pretendard 실제 파일 사용. IAK30항목과 프로젝트 고유 색상·13컴포넌트·Main/Sub/Detail을 유지한다.

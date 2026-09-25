@@ -14,7 +14,7 @@
 데스크톱 사이드바 208px, 주요 작업면 24px 패딩. 선택 장비와 세션 상태는 항상 명시한다. 태블릿은 2열, 모바일은 1열. 모니터링 값과 제어 입력을 시각적으로 분리한다.
 
 ## Typography
-Pretendard 1.3.9를 기본 글꼴로 사용한다. 실제 WOFF2와 SIL OFL 라이선스를 assets/fonts/에 포함한다. 기존 크기·굵기·행간은 유지한다. Figma에도 공식 Pretendard 9개 굵기를 업로드하고 전체 텍스트와 스타일에 실제 적용했다.
+Pretendard 1.3.9를 기본 글꼴로 사용한다. 실제 WOFF2와 SIL OFL 라이선스를 assets/fonts/에 포함한다. Pretendard 크기·굵기를 유지하고 품질 개정의 행간은 JSON typography를 따른다. Figma에도 공식 Pretendard 9개 굵기를 업로드하고 전체 텍스트와 스타일에 실제 적용했다.
 Display/Heading/Title/Body/Meta = 32 / 24 / 18 / 14 / 12px. 제목 700, 본문 400. 정확한 lineHeight는 JSON typography 참조.
 한글 제목은 어절 단위 줄바꿈, 긴 ID는 overflow-wrap. 수치는 tabular-nums, 단위와 갱신시각을 함께 표시.
 
@@ -89,3 +89,10 @@ IAK Design Studio는 케이스 항목 구조만 제공한다. 색·서체·간�
 `case-coverage.json`은 IAK 원본 30항목의 대응표이며 `preview/cases.html`에서 모두 탐색한다. `docs/`의 7개 문서는 이 프로젝트 전용이다. 원본 감사 점수는 복사하지 않는다.
 
 추가 컴포넌트 **Toast**: info/success/warning/error/neutral, 44px 닫기, 프로젝트 surface/의미색/radius.md 사용. status/alert 구분, 자동 닫기 없음.
+
+
+## Quality revision 1.3
+
+HYNIX: 균등한 요약·장비 카드, 44px 버튼, 25px 비조작 상태 배지. 네이비 그리드와 자체 제작 모듈 도식. Raised 4/4/12, inset 2/2/6. 선택/포커스 파랑, 실행 주황을 유지한다.
+
+타이포: Display32/40, Heading24/32, Title18/26, Body14/20, Meta12/17. Pretendard 실제 파일 사용. IAK30항목과 프로젝트 고유 색상·13컴포넌트·Main/Sub/Detail을 유지한다.

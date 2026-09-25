@@ -14,7 +14,7 @@ Single-column 320–480 mobile canvas; max reading width 680 on desktop.
 모바일 좌우 20px. 헤더 → 카테고리 → 피처 → 피드 순서. 카드 전체 라운드는 24px, 작은 썸네일 12px. 하단 탐색은 라벨을 유지하며 콘텐츠를 가리지 않는다.
 
 ## Typography
-Pretendard 1.3.9를 기본 글꼴로 사용한다. 실제 WOFF2와 SIL OFL 라이선스를 assets/fonts/에 포함한다. 기존 크기·굵기·행간은 유지한다. Figma에도 공식 Pretendard 9개 굵기를 업로드하고 전체 텍스트와 스타일에 실제 적용했다.
+Pretendard 1.3.9를 기본 글꼴로 사용한다. 실제 WOFF2와 SIL OFL 라이선스를 assets/fonts/에 포함한다. Pretendard 크기·굵기를 유지하고 품질 개정의 행간은 JSON typography를 따른다. Figma에도 공식 Pretendard 9개 굵기를 업로드하고 전체 텍스트와 스타일에 실제 적용했다.
 Display/Heading/Title/Body/Meta = 32 / 24 / 18 / 16 / 12px. 제목 700, 본문 400. 정확한 lineHeight는 JSON typography 참조.
 한글 제목은 어절 단위 줄바꿈, 긴 ID는 overflow-wrap. 피드 제목은 두 줄 권장, 상세 제목·본문은 자르지 않는다. 본문 행간 약 1.6.
 
@@ -24,7 +24,7 @@ Radius sm/md/lg/xl = 4/12/24/32px.
 핑크는 헤더·선택·주요 버튼에 집중한다. 뉴스 본문은 흰색에 짙은 글자. 장식 그라데이션 위에는 읽기용 텍스트를 무작정 올리지 않는다.
 
 ## Image Direction
-실사용에는 권리가 확보된 공연·문화 사진을 배치한다. Hero 4:5, 상세 16:10, 목록 1:1. 인물 얼굴과 제목이 겹치지 않도록 focal point 지정. 제공 데모는 자체 CSS 추상 그래픽이며 실제 연예인·앨범·고객 이미지는 없다.
+실사용에는 권리가 확보된 공연·문화 사진을 배치한다. Hero 4:5, 상세 16:10, 목록 1:1. 인물 얼굴과 제목이 겹치지 않도록 focal point 지정. 제공 데모는 자체 제작 SVG 추상 그래픽이며 실제 연예인·앨범·고객 이미지는 없다.
 
 ## Components
 공통 source of truth: figma-system.json의 components. Anatomy, variants, Auto Layout, resizing, interaction, token bindings 포함.
@@ -89,3 +89,10 @@ IAK Design Studio는 케이스 항목 구조만 제공한다. 색·서체·간�
 `case-coverage.json`은 IAK 원본 30항목의 대응표이며 `preview/cases.html`에서 모두 탐색한다. `docs/`의 7개 문서는 이 프로젝트 전용이다. 원본 감사 점수는 복사하지 않는다.
 
 추가 컴포넌트 **Toast**: info/success/warning/error/neutral, 44px 닫기, 프로젝트 surface/의미색/radius.md 사용. status/alert 구분, 자동 닫기 없음.
+
+
+## Quality revision 1.3
+
+KPOP: 48px 기본 버튼, 44px 최소 터치 영역, 25~28px 비조작 배지. Hero 4:5 / Detail 16:10 / 목록 1:1. 이미지의 이중 패딩 제거, 목록 88px 썸네일 + 16px 간격과 hairline 구분. 본문 16/26, 문단 사이24. 자체 링·캡슐 SVG를 중앙 크롭한다.
+
+타이포: Display32/40, Heading24/32, Title18/26, Body16/26, Meta12/17. Pretendard 실제 파일 사용. IAK30항목과 프로젝트 고유 색상·13컴포넌트·Main/Sub/Detail을 유지한다.
