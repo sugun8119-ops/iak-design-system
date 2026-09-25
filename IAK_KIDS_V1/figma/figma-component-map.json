@@ -1,0 +1,908 @@
+{
+  "fileKey": "O7wy74Ds5S9rV8WopyCe5d",
+  "url": "https://www.figma.com/design/O7wy74Ds5S9rV8WopyCe5d",
+  "components": {
+    "Button": {
+      "createdNodeIds": [
+        "4:2",
+        "4:3",
+        "4:4",
+        "4:5",
+        "4:6",
+        "4:7",
+        "4:8",
+        "4:9",
+        "4:10",
+        "4:11",
+        "4:12",
+        "4:13",
+        "4:14",
+        "4:15",
+        "4:16",
+        "4:17",
+        "4:18",
+        "4:19",
+        "4:20",
+        "4:21",
+        "4:22",
+        "4:23",
+        "4:24",
+        "4:25",
+        "4:26",
+        "4:27",
+        "4:28",
+        "4:29",
+        "4:30",
+        "4:31",
+        "4:32",
+        "4:33",
+        "4:34",
+        "4:35",
+        "4:36",
+        "4:37",
+        "4:38",
+        "4:39",
+        "4:40",
+        "4:41",
+        "4:42",
+        "4:43",
+        "4:44",
+        "4:45"
+      ],
+      "setId": "4:45",
+      "name": "Button",
+      "variants": [
+        {
+          "id": "4:5",
+          "name": "Variant=primary, State=default",
+          "w": 190,
+          "h": 48
+        },
+        {
+          "id": "4:7",
+          "name": "Variant=primary, State=hover",
+          "w": 190,
+          "h": 48
+        },
+        {
+          "id": "4:9",
+          "name": "Variant=primary, State=pressed",
+          "w": 190,
+          "h": 48
+        },
+        {
+          "id": "4:11",
+          "name": "Variant=primary, State=focus",
+          "w": 190,
+          "h": 48
+        },
+        {
+          "id": "4:13",
+          "name": "Variant=primary, State=disabled",
+          "w": 190,
+          "h": 48
+        },
+        {
+          "id": "4:15",
+          "name": "Variant=secondary, State=default",
+          "w": 190,
+          "h": 48
+        },
+        {
+          "id": "4:17",
+          "name": "Variant=secondary, State=hover",
+          "w": 190,
+          "h": 48
+        },
+        {
+          "id": "4:19",
+          "name": "Variant=secondary, State=pressed",
+          "w": 190,
+          "h": 48
+        },
+        {
+          "id": "4:21",
+          "name": "Variant=secondary, State=focus",
+          "w": 190,
+          "h": 48
+        },
+        {
+          "id": "4:23",
+          "name": "Variant=secondary, State=disabled",
+          "w": 190,
+          "h": 48
+        },
+        {
+          "id": "4:25",
+          "name": "Variant=accent, State=default",
+          "w": 190,
+          "h": 48
+        },
+        {
+          "id": "4:27",
+          "name": "Variant=accent, State=hover",
+          "w": 190,
+          "h": 48
+        },
+        {
+          "id": "4:29",
+          "name": "Variant=accent, State=pressed",
+          "w": 190,
+          "h": 48
+        },
+        {
+          "id": "4:31",
+          "name": "Variant=accent, State=focus",
+          "w": 190,
+          "h": 48
+        },
+        {
+          "id": "4:33",
+          "name": "Variant=accent, State=disabled",
+          "w": 190,
+          "h": 48
+        },
+        {
+          "id": "4:35",
+          "name": "Variant=danger, State=default",
+          "w": 190,
+          "h": 48
+        },
+        {
+          "id": "4:37",
+          "name": "Variant=danger, State=hover",
+          "w": 190,
+          "h": 48
+        },
+        {
+          "id": "4:39",
+          "name": "Variant=danger, State=pressed",
+          "w": 190,
+          "h": 48
+        },
+        {
+          "id": "4:41",
+          "name": "Variant=danger, State=focus",
+          "w": 190,
+          "h": 48
+        },
+        {
+          "id": "4:43",
+          "name": "Variant=danger, State=disabled",
+          "w": 190,
+          "h": 48
+        }
+      ],
+      "unbound": [],
+      "doc": "4:2"
+    },
+    "TextField": {
+      "createdNodeIds": [
+        "4:46",
+        "4:47",
+        "4:48",
+        "4:49",
+        "4:50",
+        "4:51",
+        "4:52",
+        "4:53",
+        "4:54",
+        "4:55",
+        "4:56",
+        "4:57",
+        "4:58",
+        "4:59",
+        "4:60",
+        "4:61",
+        "4:62",
+        "4:63",
+        "4:64",
+        "4:65",
+        "4:66",
+        "4:67",
+        "4:68",
+        "4:69",
+        "4:70",
+        "4:71",
+        "4:72",
+        "4:73",
+        "4:74"
+      ],
+      "setId": "4:74",
+      "name": "TextField",
+      "variants": [
+        {
+          "id": "4:49",
+          "name": "State=default",
+          "w": 320,
+          "h": 145
+        },
+        {
+          "id": "4:54",
+          "name": "State=hover",
+          "w": 320,
+          "h": 145
+        },
+        {
+          "id": "4:59",
+          "name": "State=focus",
+          "w": 320,
+          "h": 148
+        },
+        {
+          "id": "4:64",
+          "name": "State=error",
+          "w": 320,
+          "h": 145
+        },
+        {
+          "id": "4:69",
+          "name": "State=disabled",
+          "w": 320,
+          "h": 145
+        }
+      ],
+      "unbound": [],
+      "doc": "4:46"
+    },
+    "Select": {
+      "createdNodeIds": [
+        "4:75",
+        "4:76",
+        "4:77",
+        "4:78",
+        "4:79",
+        "4:80",
+        "4:81",
+        "4:82",
+        "4:83",
+        "4:84",
+        "4:85",
+        "4:86",
+        "4:87",
+        "4:88",
+        "4:89",
+        "4:90",
+        "4:91",
+        "4:92",
+        "4:93",
+        "4:94",
+        "4:95",
+        "4:96",
+        "4:97",
+        "4:98",
+        "4:99",
+        "4:100",
+        "4:101",
+        "4:102",
+        "4:103"
+      ],
+      "setId": "4:103",
+      "name": "Select",
+      "variants": [
+        {
+          "id": "4:78",
+          "name": "State=default",
+          "w": 320,
+          "h": 145
+        },
+        {
+          "id": "4:83",
+          "name": "State=hover",
+          "w": 320,
+          "h": 145
+        },
+        {
+          "id": "4:88",
+          "name": "State=focus",
+          "w": 320,
+          "h": 148
+        },
+        {
+          "id": "4:93",
+          "name": "State=error",
+          "w": 320,
+          "h": 145
+        },
+        {
+          "id": "4:98",
+          "name": "State=disabled",
+          "w": 320,
+          "h": 145
+        }
+      ],
+      "unbound": [],
+      "doc": "4:75"
+    },
+    "Checkbox": {
+      "createdNodeIds": [
+        "4:104",
+        "4:105",
+        "4:106",
+        "4:107",
+        "4:108",
+        "4:109",
+        "4:110",
+        "4:111",
+        "4:112",
+        "4:113",
+        "4:114",
+        "4:115",
+        "4:116",
+        "4:117",
+        "4:118",
+        "4:119",
+        "4:120",
+        "4:121",
+        "4:122",
+        "4:123",
+        "4:124",
+        "4:125",
+        "4:126",
+        "4:127",
+        "4:128"
+      ],
+      "setId": "4:128",
+      "name": "Checkbox",
+      "variants": [
+        {
+          "id": "4:107",
+          "name": "Checked=false, State=default",
+          "w": 320,
+          "h": 50
+        },
+        {
+          "id": "4:110",
+          "name": "Checked=false, State=focus",
+          "w": 320,
+          "h": 56
+        },
+        {
+          "id": "4:113",
+          "name": "Checked=false, State=disabled",
+          "w": 320,
+          "h": 50
+        },
+        {
+          "id": "4:116",
+          "name": "Checked=true, State=default",
+          "w": 320,
+          "h": 50
+        },
+        {
+          "id": "4:120",
+          "name": "Checked=true, State=focus",
+          "w": 320,
+          "h": 56
+        },
+        {
+          "id": "4:124",
+          "name": "Checked=true, State=disabled",
+          "w": 320,
+          "h": 50
+        }
+      ],
+      "unbound": [],
+      "doc": "4:104"
+    },
+    "Toggle": {
+      "createdNodeIds": [
+        "4:129",
+        "4:130",
+        "4:131",
+        "4:132",
+        "4:133",
+        "4:134",
+        "4:135",
+        "4:136",
+        "4:137",
+        "4:138",
+        "4:139",
+        "4:140",
+        "4:141",
+        "4:142",
+        "4:143",
+        "4:144",
+        "4:145",
+        "4:146",
+        "4:147",
+        "4:148",
+        "4:149",
+        "4:150",
+        "4:151",
+        "4:152",
+        "4:153",
+        "4:154",
+        "4:155",
+        "4:156"
+      ],
+      "setId": "4:156",
+      "name": "Toggle",
+      "variants": [
+        {
+          "id": "4:132",
+          "name": "Checked=false, State=default",
+          "w": 320,
+          "h": 52
+        },
+        {
+          "id": "4:136",
+          "name": "Checked=false, State=focus",
+          "w": 320,
+          "h": 58
+        },
+        {
+          "id": "4:140",
+          "name": "Checked=false, State=disabled",
+          "w": 320,
+          "h": 52
+        },
+        {
+          "id": "4:144",
+          "name": "Checked=true, State=default",
+          "w": 320,
+          "h": 52
+        },
+        {
+          "id": "4:148",
+          "name": "Checked=true, State=focus",
+          "w": 320,
+          "h": 58
+        },
+        {
+          "id": "4:152",
+          "name": "Checked=true, State=disabled",
+          "w": 320,
+          "h": 52
+        }
+      ],
+      "unbound": [],
+      "doc": "4:129"
+    },
+    "Badge": {
+      "createdNodeIds": [
+        "4:157",
+        "4:158",
+        "4:159",
+        "4:160",
+        "4:161",
+        "4:162",
+        "4:163",
+        "4:164",
+        "4:165",
+        "4:166",
+        "4:167",
+        "4:168",
+        "22:2",
+        "22:3",
+        "22:4",
+        "22:5"
+      ],
+      "setId": "4:168",
+      "name": "Badge",
+      "variants": [
+        {
+          "id": "4:160",
+          "name": "Status=success",
+          "w": 160,
+          "h": 36
+        },
+        {
+          "id": "4:162",
+          "name": "Status=warning",
+          "w": 160,
+          "h": 36
+        },
+        {
+          "id": "4:164",
+          "name": "Status=error",
+          "w": 160,
+          "h": 36
+        },
+        {
+          "id": "4:166",
+          "name": "Status=info",
+          "w": 160,
+          "h": 36
+        },
+        {
+          "id": "22:2",
+          "name": "Status=accent",
+          "w": 160,
+          "h": 36
+        },
+        {
+          "id": "22:4",
+          "name": "Status=neutral",
+          "w": 160,
+          "h": 36
+        }
+      ],
+      "unbound": [],
+      "doc": "4:157"
+    },
+    "Toast": {
+      "createdNodeIds": [
+        "4:169",
+        "4:170",
+        "4:171",
+        "4:172",
+        "4:173",
+        "4:174",
+        "4:175",
+        "4:176",
+        "4:177",
+        "4:178",
+        "4:179",
+        "4:180",
+        "4:181",
+        "4:182",
+        "4:183",
+        "4:184"
+      ],
+      "setId": "4:184",
+      "name": "Toast",
+      "variants": [
+        {
+          "id": "4:172",
+          "name": "Status=success",
+          "w": 320,
+          "h": 90
+        },
+        {
+          "id": "4:175",
+          "name": "Status=warning",
+          "w": 320,
+          "h": 90
+        },
+        {
+          "id": "4:178",
+          "name": "Status=error",
+          "w": 320,
+          "h": 90
+        },
+        {
+          "id": "4:181",
+          "name": "Status=info",
+          "w": 320,
+          "h": 90
+        }
+      ],
+      "unbound": [],
+      "doc": "4:169"
+    },
+    "TopAppBar": {
+      "createdNodeIds": [
+        "5:2",
+        "5:3",
+        "5:4",
+        "5:5",
+        "5:6",
+        "5:7",
+        "5:8"
+      ],
+      "setId": "5:8",
+      "name": "TopAppBar",
+      "variants": [
+        {
+          "id": "5:5",
+          "name": "State=default",
+          "w": 350,
+          "h": 104
+        }
+      ],
+      "unbound": [],
+      "doc": "5:2"
+    },
+    "BottomNavigation": {
+      "createdNodeIds": [
+        "5:9",
+        "5:10",
+        "5:11",
+        "5:12",
+        "5:13",
+        "5:14",
+        "5:15",
+        "5:16",
+        "5:17",
+        "5:18",
+        "5:19",
+        "5:20",
+        "5:21",
+        "5:22",
+        "5:23",
+        "5:24",
+        "5:25",
+        "5:26",
+        "5:27",
+        "5:28",
+        "5:29",
+        "5:30",
+        "5:31",
+        "5:32",
+        "5:33"
+      ],
+      "setId": "5:33",
+      "name": "BottomNavigation",
+      "variants": [
+        {
+          "id": "5:12",
+          "name": "State=home",
+          "w": 350,
+          "h": 66
+        },
+        {
+          "id": "5:19",
+          "name": "State=activity",
+          "w": 350,
+          "h": 66
+        },
+        {
+          "id": "5:26",
+          "name": "State=settings",
+          "w": 350,
+          "h": 66
+        }
+      ],
+      "unbound": [],
+      "doc": "5:9"
+    },
+    "ProfileCard": {
+      "createdNodeIds": [
+        "5:34",
+        "5:35",
+        "5:36",
+        "5:37",
+        "5:38",
+        "5:39",
+        "5:40",
+        "5:41",
+        "5:42",
+        "5:43",
+        "5:44"
+      ],
+      "setId": "5:44",
+      "name": "ProfileCard",
+      "variants": [
+        {
+          "id": "5:37",
+          "name": "State=default",
+          "w": 350,
+          "h": 108
+        }
+      ],
+      "unbound": [],
+      "doc": "5:34"
+    },
+    "StatusCard": {
+      "createdNodeIds": [
+        "5:45",
+        "5:46",
+        "5:47",
+        "5:48",
+        "5:49",
+        "I5:49;4:167",
+        "5:51",
+        "5:52",
+        "5:53",
+        "5:54",
+        "I5:54;4:161",
+        "5:56",
+        "5:57",
+        "5:58",
+        "5:59",
+        "I5:59;4:163",
+        "5:61",
+        "5:62",
+        "5:63",
+        "5:64",
+        "I5:64;4:165",
+        "5:66",
+        "5:67",
+        "5:68"
+      ],
+      "setId": "5:68",
+      "name": "StatusCard",
+      "variants": [
+        {
+          "id": "5:48",
+          "name": "State=info",
+          "w": 350,
+          "h": 154
+        },
+        {
+          "id": "5:53",
+          "name": "State=success",
+          "w": 350,
+          "h": 154
+        },
+        {
+          "id": "5:58",
+          "name": "State=warning",
+          "w": 350,
+          "h": 154
+        },
+        {
+          "id": "5:63",
+          "name": "State=error",
+          "w": 350,
+          "h": 154
+        }
+      ],
+      "unbound": [],
+      "doc": "5:45"
+    },
+    "ActionCard": {
+      "createdNodeIds": [
+        "5:69",
+        "5:70",
+        "5:71",
+        "5:72",
+        "5:73",
+        "I5:73;4:163",
+        "5:75",
+        "5:76",
+        "5:77",
+        "I5:77;4:6",
+        "5:79",
+        "5:80",
+        "I5:80;4:163",
+        "5:82",
+        "5:83",
+        "5:84",
+        "I5:84;4:6",
+        "5:86",
+        "5:87",
+        "I5:87;4:163",
+        "5:89",
+        "5:90",
+        "5:91",
+        "I5:91;4:6",
+        "5:93"
+      ],
+      "setId": "5:93",
+      "name": "ActionCard",
+      "variants": [
+        {
+          "id": "5:72",
+          "name": "State=default",
+          "w": 350,
+          "h": 240
+        },
+        {
+          "id": "5:79",
+          "name": "State=hover",
+          "w": 350,
+          "h": 240
+        },
+        {
+          "id": "5:86",
+          "name": "State=focus",
+          "w": 350,
+          "h": 244
+        }
+      ],
+      "unbound": [],
+      "doc": "5:69"
+    },
+    "ProgressCard": {
+      "createdNodeIds": [
+        "5:94",
+        "5:95",
+        "5:96",
+        "5:97",
+        "5:98",
+        "5:99",
+        "5:100",
+        "5:101",
+        "5:102",
+        "5:103",
+        "I5:103;4:161",
+        "5:105"
+      ],
+      "setId": "5:105",
+      "name": "ProgressCard",
+      "variants": [
+        {
+          "id": "5:97",
+          "name": "State=default",
+          "w": 350,
+          "h": 214
+        }
+      ],
+      "unbound": [],
+      "doc": "5:94"
+    },
+    "ScheduleItem": {
+      "createdNodeIds": [
+        "5:106",
+        "5:107",
+        "5:108",
+        "5:109",
+        "5:110",
+        "5:111",
+        "5:112",
+        "I5:112;4:167",
+        "5:114",
+        "5:115",
+        "5:116",
+        "5:117",
+        "I5:117;4:161",
+        "5:119"
+      ],
+      "setId": "5:119",
+      "name": "ScheduleItem",
+      "variants": [
+        {
+          "id": "5:109",
+          "name": "State=planned",
+          "w": 350,
+          "h": 148
+        },
+        {
+          "id": "5:114",
+          "name": "State=completed",
+          "w": 350,
+          "h": 148
+        }
+      ],
+      "unbound": [],
+      "doc": "5:106"
+    },
+    "SettingRow": {
+      "createdNodeIds": [
+        "5:120",
+        "5:121",
+        "5:122",
+        "5:123",
+        "5:124",
+        "5:125",
+        "5:126",
+        "I5:126;4:145",
+        "I5:126;4:146",
+        "I5:126;4:147",
+        "5:130"
+      ],
+      "setId": "5:130",
+      "name": "SettingRow",
+      "variants": [
+        {
+          "id": "5:123",
+          "name": "State=default",
+          "w": 350,
+          "h": 164
+        }
+      ],
+      "unbound": [],
+      "doc": "5:120"
+    },
+    "FriendlyModal": {
+      "createdNodeIds": [
+        "5:131",
+        "5:132",
+        "5:133",
+        "5:134",
+        "5:135",
+        "5:136",
+        "5:137",
+        "I5:137;4:36",
+        "5:139",
+        "I5:139;4:16",
+        "5:141"
+      ],
+      "setId": "5:141",
+      "name": "FriendlyModal",
+      "variants": [
+        {
+          "id": "5:134",
+          "name": "State=default",
+          "w": 350,
+          "h": 258
+        }
+      ],
+      "unbound": [],
+      "doc": "5:131"
+    }
+  },
+  "syncVersion": "2.2"
+}

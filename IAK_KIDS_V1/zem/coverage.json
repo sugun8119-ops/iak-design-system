@@ -1,0 +1,396 @@
+{
+ "system": "IAK KIDS_V1 · Little Everyday",
+ "version": "2.2.0",
+ "checked": "2026-09-25",
+ "totalItems": 62,
+ "summary": {
+  "method": "zem/qa.html run in this session (iframes at 1440/834/375), plus scripted interaction checks",
+  "font": "Nanum Barun Gothic 400 + 700: document.fonts.check true",
+  "cards": "140/140 component cases rendered, 0 in-case overflow",
+  "patterns": "120/120 (40 states × 3 viewports) no horizontal overflow; 375: 0 targets <36px, 0 text spilling outside cards",
+  "kits": "9/9 no overflow",
+  "contrast": "66/66 pairs pass (63 v2.2 pairs + selected tab, hover, focus gap); text ≥4.5, boundary ≥3",
+  "interaction": "Dialog: opens, focus inside, Esc closes, focus returns to trigger · Menu: ArrowDown opens, arrow navigation, Esc closes + focus returns · Switch: click toggles checked",
+  "notVerified": [
+   "Real devices / Safari / screen readers",
+   "Form typing in the parent kit (no text input on that screen); TextField states verified visually via card cases only",
+   "Pixel-level visual review at 375/834 (overflow measured, not screenshotted)",
+   "OFL.txt copyright line vs official Naver source"
+  ]
+ },
+ "note": "Measured by zem/qa.html in the current environment only. Historical records (uploads/IAK_KIDS_V1/figma-audit.json, browser-check.json, contrast-report.*, ZEM_V1 v1 scores) are not reused.",
+ "items": [
+  {
+   "name": "IAK KIDS_V1 · Integrated preview",
+   "group": "IAK KIDS · Hub",
+   "path": "zem/index.html",
+   "subtitle": "pattern/kit × state × 375/834/1440 · links to all 62 items"
+  },
+  {
+   "name": "IAK KIDS QA · live render check",
+   "group": "IAK KIDS · Hub",
+   "path": "zem/qa.html",
+   "subtitle": "cases rendered · 1440/834/375 overflow · small targets · contrast pairs — recomputed on open"
+  },
+  {
+   "name": "Colors · Palette (32 raw values)",
+   "group": "IAK KIDS · Colors",
+   "path": "zem/foundations/accents.html",
+   "subtitle": "all active raw hex values · use semantic roles in UI, never these directly"
+  },
+  {
+   "name": "Borders",
+   "group": "IAK KIDS · Spacing",
+   "path": "zem/foundations/borders.html",
+   "subtitle": "1px divider · 1.5px control · 2px drop/focus"
+  },
+  {
+   "name": "Brand identity rules",
+   "group": "IAK KIDS · Brand",
+   "path": "zem/foundations/brand.html",
+   "subtitle": "text identification only · no logo copy · no characters"
+  },
+  {
+   "name": "Buttons overview",
+   "group": "IAK KIDS · Overview",
+   "path": "zem/foundations/buttons.html",
+   "subtitle": "primary · secondary · accent · danger · text · disabled"
+  },
+  {
+   "name": "Cards overview",
+   "group": "IAK KIDS · Overview",
+   "path": "zem/foundations/cards.html",
+   "subtitle": "status card · list card · progress card"
+  },
+  {
+   "name": "Chips & status",
+   "group": "IAK KIDS · Overview",
+   "path": "zem/foundations/chips.html",
+   "subtitle": "badge tones · profile chip · check circles"
+  },
+  {
+   "name": "Colors · Text & borders",
+   "group": "IAK KIDS · Colors",
+   "path": "zem/foundations/colors-neutral.html",
+   "subtitle": "7 text roles · 4 border roles · subtle = decorative only"
+  },
+  {
+   "name": "Colors · Primary · Secondary · Accent",
+   "group": "IAK KIDS · Colors",
+   "path": "zem/foundations/colors-primary.html",
+   "subtitle": "leaf green · sky blue · playful purple — 18 roles + on-colour contrast"
+  },
+  {
+   "name": "Colors · Status",
+   "group": "IAK KIDS · Colors",
+   "path": "zem/foundations/colors-semantic.html",
+   "subtitle": "success · warning · error · info — foreground/background/solid/on-solid + error hover/pressed"
+  },
+  {
+   "name": "Iconography",
+   "group": "IAK KIDS · Brand",
+   "path": "zem/foundations/iconography.html",
+   "subtitle": "generic function icons · tiles · 20/24 · no source artwork"
+  },
+  {
+   "name": "Icons · 97 SVG + 9 unresolved",
+   "group": "IAK KIDS · Foundations",
+   "path": "zem/foundations/icons.html",
+   "subtitle": "generic Eva/Solar · currentColor · 16/20/24 · tiles"
+  },
+  {
+   "name": "Inputs overview",
+   "group": "IAK KIDS · Overview",
+   "path": "zem/foundations/inputs.html",
+   "subtitle": "default · filled · focused · error · disabled"
+  },
+  {
+   "name": "Foundations",
+   "group": "IAK KIDS · Foundations",
+   "path": "zem/foundations/layout-focus-motion.html",
+   "subtitle": "light only · roles · grid 4/8/12 · focus 3px accent + gap · motion 120/180/240 · reduced 1ms"
+  },
+  {
+   "name": "Motion",
+   "group": "IAK KIDS · Foundations",
+   "path": "zem/foundations/motion.html",
+   "subtitle": "120 · 180 · 240ms · ease · reduced 1ms · live"
+  },
+  {
+   "name": "Namespace check · 16 exports",
+   "group": "IAK KIDS · Hub",
+   "path": "zem/foundations/namespace.html",
+   "subtitle": "compiled bundle → window namespace → live render"
+  },
+  {
+   "name": "Props ↔ design-only map",
+   "group": "IAK KIDS · Foundations",
+   "path": "zem/foundations/props-map.html",
+   "subtitle": "design-only visuals mapped to real props"
+  },
+  {
+   "name": "Radii & borders",
+   "group": "IAK KIDS · Spacing",
+   "path": "zem/foundations/radii.html",
+   "subtitle": "6 · 12 tile/control · 16 card · 24 sheet · pill"
+  },
+  {
+   "name": "Shadows",
+   "group": "IAK KIDS · Spacing",
+   "path": "zem/foundations/shadows.html",
+   "subtitle": "card · raised · modal — deep-leaf tinted"
+  },
+  {
+   "name": "Spacing",
+   "group": "IAK KIDS · Spacing",
+   "path": "zem/foundations/spacing.html",
+   "subtitle": "4-base · 4 8 12 16 20 24 32 40 · pad 20/24 · gutter 12/16/24"
+  },
+  {
+   "name": "Colors · Surfaces · State · Progress",
+   "group": "IAK KIDS · Colors",
+   "path": "zem/foundations/surfaces.html",
+   "subtitle": "sand cream canvas · white cards · selected/hover/disabled/focus gap · progress · scrim"
+  },
+  {
+   "name": "Toasts overview",
+   "group": "IAK KIDS · Overview",
+   "path": "zem/foundations/toasts.html",
+   "subtitle": "success · warning · error · info"
+  },
+  {
+   "name": "Type · Display",
+   "group": "IAK KIDS · Type",
+   "path": "zem/foundations/type-display.html",
+   "subtitle": "Nanum Barun Gothic · self-hosted 400/700 · display 700 28/38 · Figma = Pretendard"
+  },
+  {
+   "name": "Type · Scale",
+   "group": "IAK KIDS · Type",
+   "path": "zem/foundations/type-scale.html",
+   "subtitle": "display 28 · h1 24 · h2 18 · title 16 · body 16/26 · caption 13/20 · overline 12"
+  },
+  {
+   "name": "Type · Specimens",
+   "group": "IAK KIDS · Type",
+   "path": "zem/foundations/type-specimens.html",
+   "subtitle": "Korean / Latin / numerals · 400 · 700 · long text"
+  },
+  {
+   "name": "AlertDialog",
+   "group": "IAK KIDS · Components",
+   "path": "zem/components/AlertDialog.html",
+   "subtitle": "primary · danger · pending · error · live"
+  },
+  {
+   "name": "Badge",
+   "group": "IAK KIDS · Components",
+   "path": "zem/components/Badge.html",
+   "subtitle": "tone 5 · icon · long text · design-only"
+  },
+  {
+   "name": "Button",
+   "group": "IAK KIDS · Components",
+   "path": "zem/components/Button.html",
+   "subtitle": "variant 4 · size 3 · hover/focus/pressed/disabled/loading · long"
+  },
+  {
+   "name": "Card",
+   "group": "IAK KIDS · Components",
+   "path": "zem/components/Card.html",
+   "subtitle": "title · footer · empty · missing · long"
+  },
+  {
+   "name": "Checkbox",
+   "group": "IAK KIDS · Components",
+   "path": "zem/components/Checkbox.html",
+   "subtitle": "default · checked · focus · disabled · long label"
+  },
+  {
+   "name": "Dialog",
+   "group": "IAK KIDS · Components",
+   "path": "zem/components/Dialog.html",
+   "subtitle": "size 3 · form · error · long · live"
+  },
+  {
+   "name": "Icon",
+   "group": "IAK KIDS · Components",
+   "path": "zem/components/Icon.html",
+   "subtitle": "size · color role · label · missing name"
+  },
+  {
+   "name": "Menu",
+   "group": "IAK KIDS · Components",
+   "path": "zem/components/Menu.html",
+   "subtitle": "default · highlighted · disabled · danger · long"
+  },
+  {
+   "name": "Pagination",
+   "group": "IAK KIDS · Components",
+   "path": "zem/components/Pagination.html",
+   "subtitle": "first · middle · last · disabled · hover/focus"
+  },
+  {
+   "name": "Select",
+   "group": "IAK KIDS · Components",
+   "path": "zem/components/Select.html",
+   "subtitle": "default · error · disabled · long option"
+  },
+  {
+   "name": "Skeleton",
+   "group": "IAK KIDS · Components",
+   "path": "zem/components/Skeleton.html",
+   "subtitle": "line · block · circle · card"
+  },
+  {
+   "name": "Switch",
+   "group": "IAK KIDS · Components",
+   "path": "zem/components/Switch.html",
+   "subtitle": "on/off · focus · disabled · long label"
+  },
+  {
+   "name": "Table",
+   "group": "IAK KIDS · Components",
+   "path": "zem/components/Table.html",
+   "subtitle": "sort · pagination · loading/error/empty · missing · long · virtual"
+  },
+  {
+   "name": "TextField",
+   "group": "IAK KIDS · Components",
+   "path": "zem/components/TextField.html",
+   "subtitle": "label · description · error · disabled · hover/focus · long"
+  },
+  {
+   "name": "Textarea",
+   "group": "IAK KIDS · Components",
+   "path": "zem/components/Textarea.html",
+   "subtitle": "rows · error · disabled · long text"
+  },
+  {
+   "name": "Toast",
+   "group": "IAK KIDS · Components",
+   "path": "zem/components/Toast.html",
+   "subtitle": "tone 4 · description · action · long · stack · live"
+  },
+  {
+   "name": "01 · Dashboard",
+   "group": "IAK KIDS · Patterns",
+   "path": "zem/patterns/01-dashboard.html",
+   "subtitle": "default · loading · empty · error · 375 first → 834/1440 · derived extension"
+  },
+  {
+   "name": "02 · Analytics",
+   "group": "IAK KIDS · Patterns",
+   "path": "zem/patterns/02-analytics.html",
+   "subtitle": "default · loading · empty · error · 375 first → 834/1440 · derived extension"
+  },
+  {
+   "name": "03 · Table",
+   "group": "IAK KIDS · Patterns",
+   "path": "zem/patterns/03-table.html",
+   "subtitle": "default · loading · empty · error · long-text · 375 first → 834/1440 · derived extension"
+  },
+  {
+   "name": "04 · Detail",
+   "group": "IAK KIDS · Patterns",
+   "path": "zem/patterns/04-detail.html",
+   "subtitle": "default · loading · missing-data · error · 375 first → 834/1440 · derived extension"
+  },
+  {
+   "name": "05 · Settings",
+   "group": "IAK KIDS · Patterns",
+   "path": "zem/patterns/05-settings.html",
+   "subtitle": "default · saving · error · success · 375 first → 834/1440 · derived extension"
+  },
+  {
+   "name": "06 · Billing",
+   "group": "IAK KIDS · Patterns",
+   "path": "zem/patterns/06-billing.html",
+   "subtitle": "default · loading · error · empty · 375 first → 834/1440 · derived extension"
+  },
+  {
+   "name": "07 · AI Chat",
+   "group": "IAK KIDS · Patterns",
+   "path": "zem/patterns/07-chat.html",
+   "subtitle": "default · streaming · empty · error · 375 first → 834/1440 · derived extension"
+  },
+  {
+   "name": "08 · Builder",
+   "group": "IAK KIDS · Patterns",
+   "path": "zem/patterns/08-builder.html",
+   "subtitle": "default · selected · dragging · empty · 375 first → 834/1440 · derived extension"
+  },
+  {
+   "name": "09 · Modal",
+   "group": "IAK KIDS · Patterns",
+   "path": "zem/patterns/09-modal.html",
+   "subtitle": "dialog · confirm · pending · error · 375 first → 834/1440 · derived extension"
+  },
+  {
+   "name": "10 · Empty",
+   "group": "IAK KIDS · Patterns",
+   "path": "zem/patterns/10-empty.html",
+   "subtitle": "first-run · no-results · no-access · 375 first → 834/1440 · derived extension"
+  },
+  {
+   "name": "UI kit · 활동용 · Activity",
+   "group": "IAK KIDS · UI kits",
+   "path": "zem/ui_kits/activity.html",
+   "subtitle": "아이 미션 완료 토글 · 진행률 · 기록(?p=analytics) · derived sample"
+  },
+  {
+   "name": "UI kit · 부모용 · Parent",
+   "group": "IAK KIDS · UI kits",
+   "path": "zem/ui_kits/parent.html",
+   "subtitle": "요청 수락/거절 · 자녀별 사용 목표 · 보호 설정(?p=settings) · derived sample"
+  },
+  {
+   "name": "UI kit · 일정용 · Schedule",
+   "group": "IAK KIDS · UI kits",
+   "path": "zem/ui_kits/schedule.html",
+   "subtitle": "주간 시간표 · 일정 추가 Dialog(검증 오류) · 오늘 일정 · derived sample"
+  },
+  {
+   "name": "00 · Rulebook",
+   "group": "IAK KIDS · Docs",
+   "path": "zem/docs/00-rulebook.html",
+   "subtitle": "light only · roles · identity · do/don't"
+  },
+  {
+   "name": "01 · Component guide",
+   "group": "IAK KIDS · Docs",
+   "path": "zem/docs/01-components.html",
+   "subtitle": "16 components · props · variants · sizes"
+  },
+  {
+   "name": "02 · State system",
+   "group": "IAK KIDS · Docs",
+   "path": "zem/docs/02-states.html",
+   "subtitle": "matrix of rendered states per component"
+  },
+  {
+   "name": "03 · Layout",
+   "group": "IAK KIDS · Docs",
+   "path": "zem/docs/03-layout.html",
+   "subtitle": "375 first · 4/8/12 cols · 640/1024 · tabbar → rail"
+  },
+  {
+   "name": "04 · QA checklist",
+   "group": "IAK KIDS · Docs",
+   "path": "zem/docs/04-qa-checklist.html",
+   "subtitle": "what zem/qa.html measures · manual checks"
+  },
+  {
+   "name": "05 · AI prompt guide",
+   "group": "IAK KIDS · Docs",
+   "path": "zem/docs/05-ai-prompt.html",
+   "subtitle": "how to generate Little Everyday screens · summary of claude-system.md"
+  },
+  {
+   "name": "06 · Changelog",
+   "group": "IAK KIDS · Docs",
+   "path": "zem/docs/06-changelog.html",
+   "subtitle": "v2.2 palette migration · prior history"
+  }
+ ]
+}

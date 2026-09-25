@@ -1,0 +1,19 @@
+<!-- @dsCard group="IAK KIDS · Components" viewport="1200x1020" name="TextField" subtitle="label · description · error · disabled · hover/focus · long" -->
+<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>IAK KIDS_V1 · TextField</title>
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script><script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script><script src="../lib/icons.js"></script><script src="../lib/zem-ui.js"></script><script src="../lib/card.js"></script></head><body><div id="root"></div><script>
+const h=React.createElement,X=ZEM;const {Icon,Button,TextField,Textarea,Select,Checkbox,Switch,Badge,Card,Skeleton,Dialog,Menu,Table,Pagination,ToastProvider,useToast,AlertDialog}=X;const W=(w,el)=>h('div',{style:{width:w,maxWidth:'100%'}},el);
+
+const T=p=>W(260,h(TextField,{label:'미션 이름',...p}));
+ZEMCard.mount({name:'TextField',group:'IAK KIDS · Component · Input',description:'label 필수. description/error는 aria-describedby, error는 aria-invalid + error-foreground 2px 테두리 + 굵은 오류 문구. 높이 48 · radius 12 · 경계 border-default(3:1) → hover border-strong → focus accent 링.',meta:['API = zem/components/TextField.d.ts','props: label, description?, error?, required?, disabled + native input'],
+sections:[{title:'State',cases:[
+ {id:'default',label:'default · placeholder',el:T({placeholder:'예: 줄넘기 100번'})},{id:'filled',label:'filled',el:T({defaultValue:'주말 줄넘기 챌린지'})},
+ {id:'hover',label:'hover · border-strong',el:T({defaultValue:'주말 줄넘기 챌린지','data-preview-state':'hover'})},{id:'focus',label:'focus-visible · 3px accent',el:T({defaultValue:'주말 줄넘기 챌린지','data-preview-state':'focus'})},
+ {id:'error',label:'error · aria-invalid',el:T({defaultValue:'가을!!',error:'특수문자는 사용할 수 없습니다.'})},{id:'disabled',label:'disabled · #E5E6D8',el:T({defaultValue:'잠긴 값',disabled:true})},
+ {id:'description',label:'description',el:T({description:'최대 40자',maxLength:40})},{id:'required',label:'required · 별표 aria-hidden',el:T({required:true,placeholder:'필수 입력'})},
+ {id:'readonly',tag:'native',label:'readOnly (전용 스타일 없음)',el:T({readOnly:true,defaultValue:'PRJ-2026-0412'})}]},
+{title:'Content',cases:[{id:'long-label',label:'긴 레이블·도움말 줄바꿈',el:W(260,h(TextField,{label:'고객에게 표시되는 공개 미션 이름 (다국어 지원)',description:'이 이름은 초대 메일, 청구서, 공유 링크 미리보기에 동일하게 표시됩니다.'}))},
+ {id:'long-value',label:'긴 값 · 입력 내부 스크롤',el:T({defaultValue:'2026 하반기 통합 브랜드 리뉴얼 및 파트너 온보딩 캠페인 v3 최종'})},{id:'type-email',tag:'native',label:'type="email"',el:W(260,h(TextField,{label:'이메일',type:'email',placeholder:'name@example.com'}))}]},
+{title:'Design-only',cases:[{id:'d-floating',tag:'design-only',label:'Floating label → 대응: label prop (상단 고정)',el:W(260,h('div',{style:{position:'relative'}},h('span',{style:{position:'absolute',left:12,top:-9,padding:'0 4px',background:'var(--iak-kids-background-canvas)',font:'var(--zem-text-caption)',color:'var(--zem-fg-2)'}},'Email'),h('input',{className:'zem-input',defaultValue:'mina@example.com','aria-label':'Email'})))}]}],
+notInSource:['success/valid 상태 스타일 없음','size variant 없음 (40px 고정)','prefix/suffix 아이콘 슬롯 없음']});
+</script></body></html>

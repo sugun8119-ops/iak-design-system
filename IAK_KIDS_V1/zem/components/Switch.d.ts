@@ -1,0 +1,3 @@
+import * as React from 'react';
+export interface SwitchProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>,'type'>{label:string};
+export declare function Switch(props:SwitchProps):React.ReactElement|null;

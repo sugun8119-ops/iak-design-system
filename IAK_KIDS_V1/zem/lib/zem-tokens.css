@@ -1,0 +1,54 @@
+/* IAK KIDS_V1 · Little Everyday — role aliases + type/space/motion. Colour values come ONLY from iak-kids-tokens.css (62 semantic roles).
+   The --zem-* names are a compatibility API kept so existing components/cards/consumers keep working; they are NOT a brand. */
+@font-face{font-family:"Nanum Barun Gothic";src:url("../../fonts/NanumBarunGothic.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Nanum Barun Gothic";src:url("../../fonts/NanumBarunGothicBold.ttf") format("truetype");font-weight:700;font-style:normal;font-display:swap}
+:root{
+color-scheme:light;
+/* roles → semantic */
+--zem-white:var(--iak-kids-surface-default);
+--zem-bg:var(--iak-kids-background-canvas);--zem-bg-alt:var(--iak-kids-background-alternate);
+--zem-surface:var(--iak-kids-surface-default);--zem-surface-subtle:var(--iak-kids-surface-subtle);--zem-surface-tint:var(--iak-kids-surface-tinted);--zem-surface-raised:var(--iak-kids-surface-raised);--zem-surface-inverse:var(--iak-kids-surface-inverse);
+--zem-header:var(--iak-kids-background-canvas);--zem-panel:var(--iak-kids-surface-subtle);
+--zem-fg:var(--iak-kids-text-primary);--zem-fg-2:var(--iak-kids-text-secondary);--zem-fg-muted:var(--iak-kids-text-muted);--zem-fg-placeholder:var(--iak-kids-text-placeholder);--zem-fg-disabled:var(--iak-kids-text-disabled);--zem-fg-on-brand:var(--iak-kids-primary-on);--zem-fg-inverse:var(--iak-kids-text-inverse);--zem-link:var(--iak-kids-text-link);
+--zem-action:var(--iak-kids-primary-default);--zem-action-hover:var(--iak-kids-primary-hover);--zem-action-pressed:var(--iak-kids-primary-pressed);--zem-action-soft:var(--iak-kids-primary-soft);--zem-action-on-soft:var(--iak-kids-primary-on-soft);
+--zem-secondary:var(--iak-kids-secondary-default);--zem-secondary-hover:var(--iak-kids-secondary-hover);--zem-secondary-pressed:var(--iak-kids-secondary-pressed);--zem-secondary-on:var(--iak-kids-secondary-on);--zem-secondary-soft:var(--iak-kids-secondary-soft);--zem-secondary-on-soft:var(--iak-kids-secondary-on-soft);
+--zem-accent:var(--iak-kids-accent-default);--zem-accent-hover:var(--iak-kids-accent-hover);--zem-accent-pressed:var(--iak-kids-accent-pressed);--zem-accent-on:var(--iak-kids-accent-on);--zem-accent-soft:var(--iak-kids-accent-soft);--zem-accent-on-soft:var(--iak-kids-accent-on-soft);
+--zem-progress:var(--iak-kids-progress-fill);--zem-progress-track:var(--iak-kids-progress-track);
+--zem-point-cyan:var(--iak-kids-secondary-default);--zem-point-lime:var(--iak-kids-primary-soft);--zem-point-done:var(--iak-kids-status-success-solid);
+--zem-success:var(--iak-kids-status-success-foreground);--zem-success-bg:var(--iak-kids-status-success-background);--zem-success-solid:var(--iak-kids-status-success-solid);
+--zem-warning:var(--iak-kids-status-warning-foreground);--zem-warning-bg:var(--iak-kids-status-warning-background);--zem-warning-solid:var(--iak-kids-status-warning-solid);
+--zem-error:var(--iak-kids-status-error-foreground);--zem-error-bg:var(--iak-kids-status-error-background);--zem-error-solid:var(--iak-kids-status-error-solid);--zem-error-hover:var(--iak-kids-status-error-hover);--zem-error-pressed:var(--iak-kids-status-error-pressed);
+--zem-info:var(--iak-kids-status-info-foreground);--zem-info-bg:var(--iak-kids-status-info-background);--zem-info-solid:var(--iak-kids-status-info-solid);
+--zem-border:var(--iak-kids-border-subtle);/* decorative dividers only */--zem-border-control:var(--iak-kids-border-default);/* inputs, required boundaries ≥3:1 */--zem-border-strong:var(--iak-kids-border-strong);
+--zem-overlay:var(--iak-kids-overlay-scrim);
+--zem-state-hover:var(--iak-kids-state-hover);--zem-state-selected:var(--iak-kids-state-selected);--zem-disabled-bg:var(--iak-kids-state-disabled-background);--zem-disabled-fg:var(--iak-kids-state-disabled-text);
+/* deprecated primitive aliases (v1 compatibility only — do not use in new work) */
+--zem-periwinkle-50:var(--iak-kids-background-canvas);--zem-periwinkle-100:var(--iak-kids-primary-soft);--zem-periwinkle-200:var(--iak-kids-surface-subtle);--zem-periwinkle-300:var(--iak-kids-border-subtle);--zem-periwinkle-400:var(--iak-kids-border-default);--zem-periwinkle-500:var(--iak-kids-primary-default);--zem-periwinkle-600:var(--iak-kids-primary-default);--zem-periwinkle-700:var(--iak-kids-primary-hover);--zem-periwinkle-800:var(--iak-kids-primary-pressed);
+--zem-cyan-100:var(--iak-kids-secondary-soft);--zem-cyan-500:var(--iak-kids-secondary-default);--zem-cyan-700:var(--iak-kids-secondary-on-soft);
+--zem-lime-100:var(--iak-kids-primary-soft);--zem-lime-300:var(--iak-kids-primary-soft);--zem-lime-600:var(--iak-kids-primary-default);--zem-lime-800:var(--iak-kids-primary-on-soft);
+--zem-mint-100:var(--iak-kids-status-success-background);--zem-mint-500:var(--iak-kids-status-success-solid);--zem-mint-700:var(--iak-kids-status-success-foreground);
+--zem-sky-100:var(--iak-kids-status-info-background);--zem-sky-500:var(--iak-kids-secondary-default);--zem-sky-700:var(--iak-kids-status-info-foreground);
+--zem-violet-100:var(--iak-kids-accent-soft);--zem-violet-500:var(--iak-kids-accent-default);--zem-violet-700:var(--iak-kids-accent-on-soft);
+--zem-orange-100:var(--iak-kids-status-warning-background);--zem-orange-500:var(--iak-kids-status-warning-solid);--zem-orange-700:var(--iak-kids-status-warning-foreground);
+--zem-coral-100:var(--iak-kids-status-error-background);--zem-coral-500:var(--iak-kids-status-error-solid);--zem-coral-600:var(--iak-kids-status-error-hover);--zem-coral-700:var(--iak-kids-status-error-foreground);
+--zem-ink-900:var(--iak-kids-text-primary);--zem-ink-700:var(--iak-kids-text-secondary);--zem-ink-500:var(--iak-kids-text-secondary);--zem-ink-400:var(--iak-kids-text-muted);--zem-ink-300:var(--iak-kids-text-disabled);--zem-ink-200:var(--iak-kids-border-default);--zem-ink-100:var(--iak-kids-state-disabled-background);
+/* type · Nanum Barun Gothic 400/700 self-hosted (web). Figma file uses Pretendard — Figma-side only, not loaded here. */
+--zem-font:"Nanum Barun Gothic","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+--zem-font-mono:ui-monospace,SFMono-Regular,Menlo,monospace;
+--zem-text-display:700 28px/38px var(--zem-font);--zem-text-h1:700 24px/32px var(--zem-font);--zem-text-h2:700 18px/26px var(--zem-font);--zem-text-title:700 16px/24px var(--zem-font);
+--zem-text-body:400 16px/26px var(--zem-font);--zem-text-body-strong:700 16px/26px var(--zem-font);--zem-text-caption:400 13px/20px var(--zem-font);--zem-text-overline:700 12px/16px var(--zem-font);--zem-text-code:400 13px/20px var(--zem-font-mono);
+--zem-space-1:var(--iak-kids-space-1);--zem-space-2:var(--iak-kids-space-2);--zem-space-3:var(--iak-kids-space-3);--zem-space-4:var(--iak-kids-space-4);--zem-space-5:var(--iak-kids-space-5);--zem-space-6:var(--iak-kids-space-6);--zem-space-8:var(--iak-kids-space-8);--zem-space-10:var(--iak-kids-space-10);
+--zem-radius-xs:6px;--zem-radius-tile:var(--iak-kids-radius-md);--zem-radius-control:var(--iak-kids-radius-md);--zem-radius-card:var(--iak-kids-radius-lg);--zem-radius-sheet:var(--iak-kids-radius-xl);--zem-radius-pill:999px;
+--zem-border-w:1px;--zem-shadow-card:var(--iak-kids-shadow-card);--zem-shadow-raise:var(--iak-kids-shadow-raised);--zem-shadow-modal:var(--iak-kids-shadow-modal);--zem-shadow-header:none;
+/* focus · accent ring 3px + white gap (≥3:1 on canvas/surface) */
+--zem-focus-color:var(--iak-kids-border-focus);--zem-focus-gap:var(--iak-kids-state-focus-gap);--zem-focus-width:3px;--zem-focus-offset:2px;
+--zem-motion-fast:120ms;/* @kind other */
+--zem-motion-base:180ms;/* @kind other */
+--zem-motion-slow:240ms;/* @kind other */
+--zem-ease:cubic-bezier(.2,.8,.2,1);/* @kind other */
+--zem-container-max:1200px;--zem-pad:20px;--zem-gutter:12px;--zem-cols:4;/* @kind other */
+--zem-tabbar-h:72px;--zem-header-h:56px;
+}
+@media(min-width:640px){:root{--zem-pad:24px;--zem-gutter:16px;--zem-cols:8;/* @kind other */}}
+@media(min-width:1024px){:root{--zem-gutter:24px;--zem-cols:12;/* @kind other */}}
+@media(prefers-reduced-motion:reduce){:root{--zem-motion-fast:1ms;/* @kind other */--zem-motion-base:1ms;/* @kind other */--zem-motion-slow:1ms;/* @kind other */}}

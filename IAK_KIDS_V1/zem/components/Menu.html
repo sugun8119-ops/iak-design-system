@@ -1,0 +1,13 @@
+<!-- @dsCard group="IAK KIDS · Components" viewport="1200x700" name="Menu" subtitle="default · highlighted · disabled · danger · long" -->
+<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>IAK KIDS_V1 · Menu</title>
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script><script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script><script src="../lib/icons.js"></script><script src="../lib/zem-ui.js"></script><script src="../lib/card.js"></script></head><body><div id="root"></div><script>
+const h=React.createElement,X=ZEM;const {Icon,Button,TextField,Textarea,Select,Checkbox,Switch,Badge,Card,Skeleton,Dialog,Menu,Table,Pagination,ToastProvider,useToast,AlertDialog}=X;const W=(w,el)=>h('div',{style:{width:w,maxWidth:'100%'}},el);
+
+const items=[{id:'rename',label:'이름 변경',onSelect(){}},{id:'dup',label:'복제',onSelect(){}},{id:'export',label:'내보내기 (권한 없음)',disabled:true,onSelect(){}},{id:'archive',label:'보관',danger:true,separatorBefore:true,onSelect(){}}];
+ZEMCard.mount({name:'Menu',group:'IAK KIDS · Component · Presentation',description:'흰 팝오버 · radius 16 · 항목 44px 이상 · hover = state-hover, highlighted = state-selected + primary-on-soft(굵게). danger는 error-foreground.',meta:['API = zem/components/Menu.d.ts','overlay = 미리보기 근사 구현','align: start|center|end'],
+sections:[{title:'State',cases:[{id:'default',label:'open · 기본',el:h(Menu,{inline:true,label:'미션 작업',items:items.slice(0,2)})},{id:'highlighted',label:'data-highlighted (hover/키보드)',el:h(Menu,{inline:true,label:'미션 작업',items:items.slice(0,2),highlightedId:'dup'})},{id:'disabled-item',label:'disabled 항목 · 선택 불가',el:h(Menu,{inline:true,label:'미션 작업',items:items.slice(0,3)})},{id:'danger',label:'danger + separatorBefore',el:h(Menu,{inline:true,label:'미션 작업',items})}]},
+{title:'Content',cases:[{id:'long-label',label:'긴 항목 줄바꿈 (overflow-wrap)',el:W(220,h(Menu,{inline:true,label:'작업',items:[{id:'a',label:'선택한 12개 미션을 다른 워크스페이스로 이동',onSelect(){}},{id:'b',label:'링크 복사',onSelect(){}}]}))}]},
+{title:'Live',note:'Enter/Space/↓로 열기, ↑↓ Home End, Esc 복귀',cases:[{id:'live',tag:'preview-only',label:'trigger → open',el:h('div',{style:{minHeight:200}},h(Menu,{trigger:h(Button,{variant:'secondary'},'미션 작업',h(Icon,{name:'eva:arrow-ios-downward-fill',size:16})),label:'미션 작업',align:'start',items}))}]}],
+notInSource:['아이콘 슬롯·단축키 표시·체크 항목·서브메뉴 없음','검색형 메뉴 없음']});
+</script></body></html>

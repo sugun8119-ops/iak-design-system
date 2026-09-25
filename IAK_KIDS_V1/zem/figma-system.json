@@ -1,0 +1,536 @@
+{
+ "id": "IAK_KIDS_V1",
+ "name": "IAK KIDS_V1 — Little Everyday",
+ "version": "2.2.0",
+ "category": "Friendly Mobile / Kids / Family Utility",
+ "description": "Kids/Friendly 방향의 자체 시맨틱 팔레트와 범용 모바일 컴포넌트. 기존 브랜드 화면·이미지·아이콘은 포함하지 않는다.",
+ "foundation": {
+  "colors": {
+   "primary": {
+    "default": "#487538",
+    "hover": "#39612C",
+    "pressed": "#2B4D23",
+    "on": "#FFFFFF",
+    "soft": "#EAF4CA",
+    "onSoft": "#2B4D23"
+   },
+   "secondary": {
+    "default": "#9DDCED",
+    "hover": "#83CDE2",
+    "pressed": "#6BBBD3",
+    "on": "#184957",
+    "soft": "#E5F6FB",
+    "onSoft": "#245B6D"
+   },
+   "accent": {
+    "default": "#7954AD",
+    "hover": "#684395",
+    "pressed": "#56347F",
+    "on": "#FFFFFF",
+    "soft": "#F0E8F8",
+    "onSoft": "#56347F"
+   },
+   "surface": {
+    "default": "#FFFFFF",
+    "subtle": "#F4F0DD",
+    "tinted": "#EAF4CA",
+    "raised": "#FFFFFF",
+    "inverse": "#293F2D"
+   },
+   "background": {
+    "canvas": "#FFF9E8",
+    "alternate": "#F4F0DD"
+   },
+   "text": {
+    "primary": "#293F2D",
+    "secondary": "#50634C",
+    "muted": "#626B56",
+    "placeholder": "#626B56",
+    "inverse": "#FFFFFF",
+    "disabled": "#626B56",
+    "link": "#39612C"
+   },
+   "border": {
+    "subtle": "#D9DFC6",
+    "default": "#7A8469",
+    "strong": "#50634C",
+    "focus": "#7954AD"
+   },
+   "status": {
+    "success": {
+     "foreground": "#386A36",
+     "background": "#EAF4CA",
+     "solid": "#386A36",
+     "onSolid": "#FFFFFF"
+    },
+    "warning": {
+     "foreground": "#805910",
+     "background": "#FFF0BD",
+     "solid": "#805910",
+     "onSolid": "#FFFFFF"
+    },
+    "error": {
+     "foreground": "#B34B37",
+     "background": "#FDECE4",
+     "solid": "#B34B37",
+     "onSolid": "#FFFFFF",
+     "hover": "#983B2B",
+     "pressed": "#7E2E21"
+    },
+    "info": {
+     "foreground": "#24627A",
+     "background": "#E5F6FB",
+     "solid": "#24627A",
+     "onSolid": "#FFFFFF"
+    }
+   },
+   "state": {
+    "selected": "#EAF4CA",
+    "hover": "#F4F0DD",
+    "disabledBackground": "#E5E6D8",
+    "disabledText": "#626B56",
+    "focusGap": "#FFFFFF"
+   },
+   "progress": {
+    "fill": "#487538",
+    "track": "#EAF4CA"
+   },
+   "overlay": {
+    "scrim": "#293F2D7A"
+   }
+  },
+  "typography": {
+   "fontFamily": "system-ui, -apple-system, BlinkMacSystemFont, sans-serif",
+   "unit": "px",
+   "heading": {
+    "fontSize": 24,
+    "fontWeight": 700,
+    "lineHeight": 32
+   },
+   "title": {
+    "fontSize": 18,
+    "fontWeight": 600,
+    "lineHeight": 26
+   },
+   "body": {
+    "fontSize": 16,
+    "fontWeight": 400,
+    "lineHeight": 26
+   },
+   "caption": {
+    "fontSize": 13,
+    "fontWeight": 400,
+    "lineHeight": 20
+   },
+   "figmaFontFamily": "Pretendard"
+  },
+  "spacing": [
+   4,
+   8,
+   12,
+   16,
+   20,
+   24,
+   32,
+   40
+  ],
+  "radius": {
+   "sm": 8,
+   "md": 12,
+   "lg": 16,
+   "xl": 24
+  },
+  "grid": {
+   "unit": "px",
+   "mobile": {
+    "columns": 4,
+    "margin": 20,
+    "gutter": 12,
+    "referenceWidth": 390,
+    "minWidth": 320,
+    "maxContentWidth": 480
+   }
+  }
+ },
+ "components": [
+  "TopAppBar",
+  "BottomNavigation",
+  "ProfileCard",
+  "StatusCard",
+  "ActionCard",
+  "ProgressCard",
+  "ScheduleItem",
+  "SettingRow",
+  "Toggle",
+  "Badge",
+  "FriendlyModal",
+  "Button",
+  "TextField",
+  "Select",
+  "Checkbox",
+  "Toast"
+ ],
+ "templates": {
+  "Home": [
+   "TopAppBar",
+   "ActionCard",
+   "ScheduleItem",
+   "BottomNavigation"
+  ],
+  "Activity": [
+   "TopAppBar",
+   "ProgressCard",
+   "ScheduleItem",
+   "BottomNavigation"
+  ],
+  "Detail": [
+   "TopAppBar",
+   "StatusCard",
+   "Button",
+   "FriendlyModal"
+  ],
+  "Settings": [
+   "TopAppBar",
+   "ProfileCard",
+   "SettingRow",
+   "Toggle",
+   "BottomNavigation"
+  ]
+ },
+ "componentTokens": {
+  "TopAppBar": {
+   "default": {
+    "background": "background.canvas",
+    "text": "text.primary",
+    "action": "primary.default"
+   }
+  },
+  "BottomNavigation": {
+   "default": {
+    "background": "surface.default",
+    "text": "text.secondary"
+   },
+   "selected": {
+    "background": "state.selected",
+    "text": "primary.onSoft",
+    "indicator": "primary.default"
+   }
+  },
+  "ProfileCard": {
+   "default": {
+    "background": "surface.default",
+    "text": "text.primary",
+    "supportingText": "text.secondary",
+    "border": "border.subtle",
+    "avatarBackground": "secondary.soft",
+    "avatarText": "secondary.onSoft"
+   }
+  },
+  "StatusCard": {
+   "default": {
+    "background": "surface.default",
+    "text": "text.primary",
+    "supportingText": "text.secondary",
+    "border": "border.subtle"
+   },
+   "success": {
+    "background": "status.success.background",
+    "text": "status.success.foreground"
+   },
+   "warning": {
+    "background": "status.warning.background",
+    "text": "status.warning.foreground"
+   },
+   "error": {
+    "background": "status.error.background",
+    "text": "status.error.foreground"
+   },
+   "info": {
+    "background": "status.info.background",
+    "text": "status.info.foreground"
+   }
+  },
+  "ActionCard": {
+   "default": {
+    "background": "surface.default",
+    "text": "text.primary",
+    "supportingText": "text.secondary",
+    "border": "border.subtle",
+    "action": "primary.default"
+   },
+   "hover": {
+    "border": "border.strong"
+   },
+   "focus": {
+    "ring": "border.focus"
+   }
+  },
+  "ProgressCard": {
+   "default": {
+    "background": "surface.default",
+    "text": "text.primary",
+    "supportingText": "text.secondary",
+    "border": "border.subtle",
+    "fill": "progress.fill",
+    "track": "progress.track"
+   }
+  },
+  "ScheduleItem": {
+   "default": {
+    "background": "surface.default",
+    "text": "text.primary",
+    "supportingText": "text.secondary",
+    "border": "border.subtle"
+   },
+   "completed": {
+    "label": "status.success.foreground",
+    "badge": "status.success.background"
+   }
+  },
+  "SettingRow": {
+   "default": {
+    "background": "surface.default",
+    "text": "text.primary",
+    "supportingText": "text.secondary",
+    "border": "border.subtle"
+   }
+  },
+  "Toggle": {
+   "off": {
+    "track": "border.default",
+    "thumb": "surface.default",
+    "text": "text.primary"
+   },
+   "on": {
+    "track": "primary.default",
+    "thumb": "primary.on",
+    "text": "text.primary"
+   },
+   "disabled": {
+    "track": "state.disabledBackground",
+    "thumb": "state.disabledText",
+    "text": "state.disabledText"
+   }
+  },
+  "Badge": {
+   "success": {
+    "background": "status.success.background",
+    "text": "status.success.foreground"
+   },
+   "warning": {
+    "background": "status.warning.background",
+    "text": "status.warning.foreground"
+   },
+   "error": {
+    "background": "status.error.background",
+    "text": "status.error.foreground"
+   },
+   "info": {
+    "background": "status.info.background",
+    "text": "status.info.foreground"
+   }
+  },
+  "FriendlyModal": {
+   "default": {
+    "background": "surface.default",
+    "text": "text.primary",
+    "supportingText": "text.secondary",
+    "border": "border.subtle",
+    "overlay": "overlay.scrim",
+    "action": "primary.default"
+   }
+  },
+  "Button": {
+   "primary": {
+    "default": "primary.default",
+    "hover": "primary.hover",
+    "pressed": "primary.pressed",
+    "on": "primary.on"
+   },
+   "secondary": {
+    "default": "secondary.default",
+    "hover": "secondary.hover",
+    "pressed": "secondary.pressed",
+    "on": "secondary.on"
+   },
+   "accent": {
+    "default": "accent.default",
+    "hover": "accent.hover",
+    "pressed": "accent.pressed",
+    "on": "accent.on"
+   },
+   "danger": {
+    "default": "status.error.solid",
+    "hover": "status.error.hover",
+    "pressed": "status.error.pressed",
+    "on": "status.error.onSolid"
+   },
+   "disabled": {
+    "background": "state.disabledBackground",
+    "text": "state.disabledText"
+   },
+   "focus": {
+    "ring": "border.focus",
+    "gap": "state.focusGap"
+   }
+  },
+  "TextField": {
+   "default": {
+    "background": "surface.default",
+    "text": "text.primary",
+    "placeholder": "text.placeholder",
+    "border": "border.default"
+   },
+   "hover": {
+    "border": "border.strong"
+   },
+   "focus": {
+    "ring": "border.focus"
+   },
+   "error": {
+    "border": "status.error.foreground",
+    "message": "status.error.foreground"
+   },
+   "disabled": {
+    "background": "state.disabledBackground",
+    "text": "state.disabledText"
+   }
+  },
+  "Select": {
+   "default": {
+    "background": "surface.default",
+    "text": "text.primary",
+    "border": "border.default"
+   },
+   "focus": {
+    "ring": "border.focus"
+   }
+  },
+  "Checkbox": {
+   "default": {
+    "border": "border.default",
+    "background": "surface.default"
+   },
+   "checked": {
+    "background": "primary.default",
+    "mark": "primary.on"
+   },
+   "focus": {
+    "ring": "border.focus"
+   }
+  },
+  "Toast": {
+   "success": {
+    "background": "status.success.background",
+    "text": "status.success.foreground"
+   },
+   "warning": {
+    "background": "status.warning.background",
+    "text": "status.warning.foreground"
+   },
+   "error": {
+    "background": "status.error.background",
+    "text": "status.error.foreground"
+   },
+   "info": {
+    "background": "status.info.background",
+    "text": "status.info.foreground"
+   }
+  }
+ },
+ "metadata": {
+  "previousId": "ZEM_V1",
+  "mode": "light",
+  "format": "design specification, not a Figma plugin import format",
+  "figmaSynced": true,
+  "paletteDirection": "leaf green / sky blue / playful purple / sand cream",
+  "sourceAssetsIncluded": false,
+  "figmaFileKey": "O7wy74Ds5S9rV8WopyCe5d",
+  "figmaUrl": "https://www.figma.com/design/O7wy74Ds5S9rV8WopyCe5d",
+  "paletteReference": "https://pokopia.pokemon.com/en-us/",
+  "paletteNote": "Original accessible interpretation of a sunny garden palette; colors only; no game assets."
+ },
+ "rules": [
+  "Use semantic roles; never replace colors by nearest old hue.",
+  "Small text >=4.5:1; required control boundaries and focus >=3:1.",
+  "Primary and Accent use white on-colors; Secondary uses dark blue text.",
+  "border.subtle is decorative only. Inputs use border.default.",
+  "Do not use brand illustrations, logos, source screenshots, source icons, or distinctive source layout combinations.",
+  "System fonts, text navigation and neutral initials need no external assets."
+ ],
+ "webImplementation": {
+  "project": "IAK KIDS_V1 · Little Everyday (Claude design system)",
+  "entry": "styles.css → zem/lib/iak-kids-tokens.css, zem-tokens.css, zem-ui.css, zem-shell.css",
+  "semanticTokenPrefix": "--iak-kids-",
+  "semanticColorCount": 62,
+  "paletteCount": 32,
+  "compatibilityAliases": "--zem-* role names and window.ZEM namespace are kept as a compatibility API; their values reference --iak-kids-* roles. --zem-periwinkle/cyan/lime/... primitives are deprecated aliases.",
+  "typography": {
+   "webFontFamily": "\"Nanum Barun Gothic\", \"Apple SD Gothic Neo\", \"Malgun Gothic\", system-ui, sans-serif",
+   "webFontFiles": [
+    "fonts/NanumBarunGothic.ttf (400)",
+    "fonts/NanumBarunGothicBold.ttf (700)"
+   ],
+   "figmaFontFamily": "Pretendard (Figma file only — not loaded on web)",
+   "weightMapping": "title 600 → 700 on web (only 400/700 exist)",
+   "scale": {
+    "display": "700 28/38",
+    "h1": "700 24/32",
+    "h2": "700 18/26",
+    "title": "700 16/24",
+    "body": "400 16/26",
+    "caption": "400 13/20",
+    "overline": "700 12/16"
+   }
+  },
+  "focus": "3px solid border.focus + 2px state.focusGap",
+  "components": [
+   "Button(+accent)",
+   "TextField",
+   "Textarea",
+   "Select",
+   "Checkbox",
+   "Switch",
+   "Badge(+accent)",
+   "Card",
+   "Skeleton",
+   "Icon",
+   "Dialog",
+   "Menu",
+   "Table",
+   "Pagination",
+   "Toast",
+   "AlertDialog"
+  ],
+  "componentMapping": {
+   "TopAppBar": ".zs-header/.zs-top",
+   "BottomNavigation": ".zs-tabbar / .zs-rail",
+   "ProfileCard": ".ava + Card",
+   "StatusCard": "Card + .banner / Badge",
+   "ActionCard": "Card + Button",
+   "ProgressCard": "Card + .prog",
+   "ScheduleItem": ".rows li",
+   "SettingRow": ".rows li + Switch",
+   "Toggle": "Switch",
+   "FriendlyModal": "Dialog / AlertDialog"
+  },
+  "patterns": [
+   "Dashboard",
+   "Analytics",
+   "Table",
+   "Detail",
+   "Settings",
+   "Billing",
+   "AI Chat",
+   "Builder",
+   "Modal",
+   "Empty"
+  ],
+  "uiKits": [
+   "zem/ui_kits/parent.html",
+   "zem/ui_kits/schedule.html",
+   "zem/ui_kits/activity.html"
+  ],
+  "previousVersion": "archive/zem-v1/figma-system.v1.json (inactive)"
+ }
+}

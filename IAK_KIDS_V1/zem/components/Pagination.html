@@ -1,0 +1,13 @@
+<!-- @dsCard group="IAK KIDS · Components" viewport="1200x520" name="Pagination" subtitle="first · middle · last · disabled · hover/focus" -->
+<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>IAK KIDS_V1 · Pagination</title>
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script><script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script><script src="../lib/icons.js"></script><script src="../lib/zem-ui.js"></script><script src="../lib/card.js"></script></head><body><div id="root"></div><script>
+const h=React.createElement,X=ZEM;const {Icon,Button,TextField,Textarea,Select,Checkbox,Switch,Badge,Card,Skeleton,Dialog,Menu,Table,Pagination,ToastProvider,useToast,AlertDialog}=X;const W=(w,el)=>h('div',{style:{width:w,maxWidth:'100%'}},el);
+
+const P=p=>h(Pagination,{page:3,pageCount:12,onPageChange(){},...p});
+ZEMCard.mount({name:'Pagination',group:'IAK KIDS · Component · Navigation',description:'«·이전·현재/전체·다음·». 44px · radius 12 · border-default 테두리 · link 텍스트. hover state-hover, 비활성 #E5E6D8/#626B56.',meta:['API = zem/components/Pagination.d.ts','page · pageCount · onPageChange · disabled · label'],
+sections:[{title:'Position',cases:[{id:'first',label:'page=1 · 이전 비활성',el:P({page:1})},{id:'middle',label:'page=3 / 12',el:P({})},{id:'last',label:'page=12 · 다음 비활성',el:P({page:12})},{id:'single',label:'pageCount=1 · 모두 비활성',el:P({page:1,pageCount:1})}]},
+{title:'State',cases:[{id:'disabled',label:'disabled (loading 중)',el:P({disabled:true})},{id:'hover',label:'hover · 다음 bg-field',el:P({previewState:'hover'})},{id:'focus',label:'focus-visible · 다음',el:P({previewState:'focus'})}]},
+{title:'Live',cases:[{id:'live',tag:'preview-only',label:'상태 연결',el:h(function(){const [p,s]=React.useState(1);return h(Pagination,{page:p,pageCount:5,onPageChange:s})})}]}],
+notInSource:['번호 목록형(1 2 3 …) 없음','page size 선택 없음']});
+</script></body></html>

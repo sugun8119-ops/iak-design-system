@@ -1,0 +1,27 @@
+<!-- @dsCard group="IAK KIDS · Components" viewport="1200x1250" name="Button" subtitle="variant 4 · size 3 · hover/focus/pressed/disabled/loading · long" -->
+<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>IAK KIDS_V1 · Button</title>
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script><script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script><script src="../lib/icons.js"></script><script src="../lib/zem-ui.js"></script><script src="../lib/card.js"></script></head><body><div id="root"></div><script>
+const h=React.createElement,{Icon,Button}=ZEM;
+const B=(p,t)=>h(Button,p,t||'시작하기');
+const all=(p)=>h(React.Fragment,null,B({...p}),B({...p,variant:'secondary'},'나중에'),B({...p,variant:'accent'},'새로 발견'),B({...p,variant:'danger'},'삭제'),B({...p,variant:'text'},'자세히'));
+ZEMCard.mount({name:'Button',group:'IAK KIDS · Component · Actions',description:'버튼 radius 12 · 최소 높이 48(md). primary #487538/흰 글자 · secondary #9DDCED/#184957 · accent #7954AD/흰 글자 · danger #B34B37/흰 글자. hover/pressed는 각 역할의 *-hover/*-pressed 토큰, 비활성 #E5E6D8/#626B56, 포커스 3px accent 링 + 흰 틈.',meta:['variant: primary|secondary|accent|danger|text','size: sm 36 · md 48 · lg 56','radius 12 (sm 8)','focus 3px border-focus + 2px focus-gap','hover/pressed: figma componentTokens.Button'],
+sections:[
+{title:'Variant',note:'size=md',cases:[{id:'primary',label:'variant="primary"',el:B({})},{id:'secondary',label:'variant="secondary"',el:B({variant:'secondary'},'나중에')},{id:'danger',label:'variant="danger"',el:B({variant:'danger'},'미션 삭제')},{id:'accent',label:'variant="accent"',el:B({variant:'accent'},'새로 발견')},{id:'text',label:'variant="text"',el:B({variant:'text'},'자세히 보기')}]},
+{title:'Size',cases:[{id:'size-sm',label:'size="sm" · 36px',el:h(React.Fragment,null,B({size:'sm'}),B({size:'sm',variant:'secondary'},'나중에'))},{id:'size-md',label:'size="md" · 48px',el:h(React.Fragment,null,B({size:'md'}),B({size:'md',variant:'secondary'},'나중에'))},{id:'size-lg',label:'size="lg" · 56px',el:h(React.Fragment,null,B({size:'lg'}),B({size:'lg',variant:'secondary'},'나중에'))}]},
+{title:'State',note:'hover/pressed/focus는 data-preview-state로 고정 표시(미리보기 전용). 실제는 :hover/:active/:focus-visible',cases:[
+ {id:'default',label:'default',w2:true,el:all({})},
+ {id:'hover',label:'hover · *-hover 토큰',w2:true,el:all({'data-preview-state':'hover'})},
+ {id:'pressed',label:'pressed · *-pressed 토큰 · scale .98',w2:true,el:all({'data-preview-state':'pressed'})},
+ {id:'focus',label:'focus-visible · 3px accent + 흰 틈',w2:true,el:all({'data-preview-state':'focus'})},
+ {id:'disabled',label:'disabled · #E5E6D8 배경 / #626B56 텍스트',w2:true,el:all({disabled:true})},
+ {id:'loading',label:'loading · aria-busy, 너비 유지',w2:true,el:h(React.Fragment,null,B({loading:true},'보내는 중'),B({loading:true,variant:'secondary'},'불러오기'),B({loading:true,variant:'accent'},'찾는 중'),B({loading:true,variant:'danger'},'삭제 중'))}]},
+{title:'Content',cases:[{id:'with-icon',tag:'composition',label:'children = Icon + label',el:h(Button,null,h(Icon,{name:'eva:plus-fill',size:18}),'미션 추가')},
+ {id:'icon-only',tag:'composition',label:'Icon only + aria-label (48px 정사각)',el:h(React.Fragment,null,h(Button,{variant:'secondary','aria-label':'일정 추가',style:{width:48,padding:0}},h(Icon,{name:'eva:plus-fill',size:20})),h(Button,{'aria-label':'메시지',style:{width:48,padding:0}},h(Icon,{name:'solar:chat-round-line-bold',size:20})))},
+ {id:'full-width',tag:'composition',label:'모바일 full-width CTA',w2:true,el:h(Button,{size:'lg',style:{width:'100%'}},'미션 시작하기')},
+ {id:'long-label',label:'긴 문구 · 좁은 폭에서 말줄임(…) · 전체 문구는 title로',w2:true,el:h('div',{style:{width:220,border:'1.5px dashed var(--zem-border-strong)',borderRadius:12,padding:8,overflow:'hidden'}},B({title:'이번 주말 가족 나들이 일정 전체 공유하기',style:{maxWidth:'100%'}},'이번 주말 가족 나들이 일정 전체 공유하기'))}]},
+{title:'Design-only',note:'코드 prop 없음. 대응 props로 대체',cases:[
+ {id:'d-soft',tag:'design-only',label:'Soft (primary-soft) → 대응 없음 · 완료/보상 강조 전용',el:h('button',{type:'button',className:'zem-button zem-button--md',style:{background:'var(--iak-kids-primary-soft)',color:'var(--iak-kids-primary-on-soft)'}},h('span',null,'완료 확인'))},
+ {id:'d-on-header',tag:'design-only',label:'On canvas header → 대응: text',el:h('div',{style:{background:'var(--iak-kids-background-canvas)',padding:12,borderRadius:16,border:'1px solid var(--iak-kids-border-subtle)'}},h(Button,{variant:'text',size:'sm'},'전체 보기'))}]}],
+notInSource:['icon-only 전용 prop 없음 — children + aria-label로 조합','full-width prop 없음 — style/width로 조합']});
+</script></body></html>

@@ -1,0 +1,12 @@
+<!-- @dsCard group="IAK KIDS · Components" viewport="1200x520" name="Switch" subtitle="on/off · focus · disabled · long label" -->
+<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>IAK KIDS_V1 · Switch</title>
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script><script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script><script src="../lib/icons.js"></script><script src="../lib/zem-ui.js"></script><script src="../lib/card.js"></script></head><body><div id="root"></div><script>
+const h=React.createElement,X=ZEM;const {Icon,Button,TextField,Textarea,Select,Checkbox,Switch,Badge,Card,Skeleton,Dialog,Menu,Table,Pagination,ToastProvider,useToast,AlertDialog}=X;const W=(w,el)=>h('div',{style:{width:w,maxWidth:'100%'}},el);
+
+const S=p=>h(Switch,{label:'알림 켜기',...p});
+ZEMCard.mount({name:'Switch',group:'IAK KIDS · Component · Selection',description:'role="switch" native checkbox. 트랙 52×32 · off border-default / on primary-default · thumb 24 흰색. disabled는 #E5E6D8 트랙 + 테두리. 상태는 레이블 문구로도 전달.',meta:['API = zem/components/Switch.d.ts','track 48×28 · thumb 22 · 이동 20px'],
+sections:[{title:'State',cases:[{id:'off',label:'off',el:S({})},{id:'on',label:'on',el:S({defaultChecked:true})},{id:'focus',label:'focus-visible (track)',el:S({'data-preview-state':'focus',defaultChecked:true})},{id:'disabled-off',label:'disabled off',el:S({disabled:true})},{id:'disabled-on',label:'disabled on',el:S({disabled:true,defaultChecked:true})}]},
+{title:'Content',cases:[{id:'long-label',label:'긴 레이블',el:W(260,S({label:'업무 시간 외에는 긴급 알림만 받고 나머지는 다음 날 오전에 요약 받기'}))}]}],
+notInSource:['size variant 없음','label 위치(좌/우) 옵션 없음','loading 상태 없음']});
+</script></body></html>
