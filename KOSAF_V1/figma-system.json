@@ -1,0 +1,197 @@
+{
+  "id": "KOSAF_V1",
+  "name": "KOSAF Public Commerce / Enterprise Web System",
+  "version": "1.0.0",
+  "category": "Public / Enterprise / B2B Commerce",
+  "source": {
+    "finalFigma": {
+      "fileKey": "MOEAkEbXtwHdE3xveg2Gto",
+      "nodeId": "1:85779"
+    },
+    "managementFigma": {
+      "fileKey": "SZ7AweGiHxzEDmEmuNi3LY",
+      "nodes": [
+        "1:69548",
+        "1:69947",
+        "1:70749",
+        "1:107843",
+        "213:712"
+      ]
+    },
+    "sourcePolicy": "Final source Figma overrides legacy guide values."
+  },
+  "foundation": {
+    "colors": {
+      "primary": "#059B00",
+      "primaryHover": "#02AC5A",
+      "positive": "#17BF56",
+      "brandSoft": "#EBFFE9",
+      "limeSoft": "#D5FFBA",
+      "textPrimary": "#333333",
+      "textSecondary": "#707070",
+      "textMuted": "#888888",
+      "borderDefault": "#DDDDDD",
+      "borderStrong": "#C1C1C1",
+      "surface": "#FFFFFF",
+      "surfaceSubtle": "#F7F7F7",
+      "focus": "#0047ED",
+      "warning": "#FFE326",
+      "danger": "#E23736",
+      "dangerSoft": "#FF5858"
+    },
+    "typography": {
+      "fontFamily": "Noto Sans KR",
+      "unit": "px",
+      "display": {
+        "fontSize": 40,
+        "fontWeight": 700,
+        "lineHeight": 52
+      },
+      "h1": {
+        "fontSize": 30,
+        "fontWeight": 700,
+        "lineHeight": 40
+      },
+      "h2": {
+        "fontSize": 24,
+        "fontWeight": 700,
+        "lineHeight": 34
+      },
+      "h3": {
+        "fontSize": 22,
+        "fontWeight": 500,
+        "lineHeight": 34
+      },
+      "title": {
+        "fontSize": 20,
+        "fontWeight": 500,
+        "lineHeight": 30
+      },
+      "bodyL": {
+        "fontSize": 18,
+        "fontWeight": 400,
+        "lineHeight": 30
+      },
+      "bodyM": {
+        "fontSize": 16,
+        "fontWeight": 400,
+        "lineHeight": 24
+      },
+      "bodyS": {
+        "fontSize": 14,
+        "fontWeight": 400,
+        "lineHeight": 20
+      },
+      "caption": {
+        "fontSize": 12,
+        "fontWeight": 400,
+        "lineHeight": 16
+      }
+    },
+    "spacing": [
+      4,
+      8,
+      10,
+      12,
+      16,
+      20,
+      24,
+      30,
+      32,
+      40,
+      50,
+      60
+    ],
+    "radius": {
+      "xs": 2,
+      "sm": 3,
+      "control": 5,
+      "md": 10,
+      "card": 16,
+      "lg": 20,
+      "pill": 25,
+      "xl": 30,
+      "2xl": 40,
+      "full": 999
+    },
+    "layout": {
+      "desktop": {
+        "referenceWidth": 1920,
+        "tableRowHeight": 70,
+        "sectionSpacing": [
+          20,
+          30,
+          50
+        ]
+      },
+      "mobile": {
+        "referenceWidth": [
+          390,
+          391
+        ],
+        "tableRowHeight": 50
+      },
+      "controls": {
+        "compact": 34,
+        "small": 42,
+        "form": 45,
+        "search": 50,
+        "largeAction": 70
+      },
+      "search": {
+        "width": 579,
+        "height": 50,
+        "radius": 25
+      }
+    }
+  },
+  "semanticTokens": [
+    "color/bg/canvas",
+    "color/bg/subtle",
+    "color/surface/default",
+    "color/surface/brand-soft",
+    "color/text/primary",
+    "color/text/secondary",
+    "color/text/muted",
+    "color/text/inverse",
+    "color/border/default",
+    "color/border/strong",
+    "color/action/primary",
+    "color/action/primary-hover",
+    "color/action/positive",
+    "color/action/danger",
+    "color/state/focus",
+    "color/state/warning",
+    "color/state/info-soft"
+  ],
+  "components": [
+    "Button",
+    "Input",
+    "Search",
+    "Checkbox",
+    "Radio",
+    "Tab",
+    "Badge",
+    "PaginationItem",
+    "TableRow",
+    "Modal",
+    "Stepper",
+    "Dropdown",
+    "Calendar",
+    "Header",
+    "Footer",
+    "ProductCard",
+    "SmallDataCard"
+  ],
+  "patterns": [
+    "TransactionStepper",
+    "ProductSearch",
+    "DesktopDataTable",
+    "MobileDataList",
+    "ProductDetail",
+    "AuthenticationForm",
+    "BuyerDashboard",
+    "SellerDashboard",
+    "ModalWorkflow"
+  ]
+}
