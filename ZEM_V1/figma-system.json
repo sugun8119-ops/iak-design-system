@@ -1,0 +1,44 @@
+{
+  "id": "ZEM_V1",
+  "name": "Friendly Family Mobile System",
+  "version": "1.0.0",
+  "category": "Friendly Mobile / Kids / Family Utility",
+  "description": "친근한 모바일 구조를 범용화한 독립 스타일 가이드. 원본 브랜드 자산을 포함하지 않으며 Figma 플러그인 전용 가져오기 형식은 아니다.",
+  "foundation": {
+    "colors": {
+      "canvas": "#F7F8FC",
+      "surface": "#FFFFFF",
+      "textPrimary": "#20232A",
+      "textSecondary": "#737985",
+      "primary": "#6C8DF5",
+      "secondary": "#77D5A6",
+      "warning": "#F3B84B",
+      "danger": "#ED6A6A",
+      "border": "#E7EAF0",
+      "action": "#3858B8",
+      "onAction": "#FFFFFF",
+      "textMuted": "#626975",
+      "dangerText": "#B42332"
+    },
+    "typography": {
+      "fontFamily": "system-ui, -apple-system, BlinkMacSystemFont, sans-serif",
+      "unit": "px",
+      "heading": { "fontSize": 24, "fontWeight": 700, "lineHeight": 32 },
+      "title": { "fontSize": 18, "fontWeight": 600, "lineHeight": 26 },
+      "body": { "fontSize": 14, "fontWeight": 400, "lineHeight": 22 },
+      "caption": { "fontSize": 12, "fontWeight": 400, "lineHeight": 18 }
+    },
+    "spacing": [4, 8, 12, 16, 20, 24, 32, 40],
+    "radius": { "sm": 8, "md": 12, "lg": 16, "xl": 24 },
+    "grid": {
+      "unit": "px",
+      "mobile": { "columns": 4, "margin": 20, "gutter": 12, "referenceWidth": 390, "minWidth": 320, "maxContentWidth": 480 }
+    }
+  },
+  "components": [
+    "TopAppBar", "BottomNavigation", "ProfileCard", "StatusCard",
+    "ActionCard", "ProgressCard", "ScheduleItem", "SettingRow",
+    "Toggle", "Badge", "FriendlyModal"
+  ],
+  "templates": ["Home", "Activity", "Detail", "Settings"]
+}
