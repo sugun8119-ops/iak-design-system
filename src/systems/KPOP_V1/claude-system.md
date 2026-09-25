@@ -14,7 +14,7 @@ Single-column 320–480 mobile canvas; max reading width 680 on desktop.
 모바일 좌우 20px. 헤더 → 카테고리 → 피처 → 피드 순서. 카드 전체 라운드는 24px, 작은 썸네일 12px. 하단 탐색은 라벨을 유지하며 콘텐츠를 가리지 않는다.
 
 ## Typography
-Pretendard 1.3.9를 기본 글꼴로 사용한다. 실제 WOFF2와 SIL OFL 라이선스를 assets/fonts/에 포함한다. 기존 크기·굵기·행간은 유지한다. Figma 자동화 환경에는 Pretendard가 없어 캔버스는 Noto Sans KR 대체이며, Pretendard 설치 환경에서 교체할 수 있다.
+Pretendard 1.3.9를 기본 글꼴로 사용한다. 실제 WOFF2와 SIL OFL 라이선스를 assets/fonts/에 포함한다. 기존 크기·굵기·행간은 유지한다. Figma에도 공식 Pretendard 9개 굵기를 업로드하고 전체 텍스트와 스타일에 실제 적용했다.
 Display/Heading/Title/Body/Meta = 32 / 24 / 18 / 16 / 12px. 제목 700, 본문 400. 정확한 lineHeight는 JSON typography 참조.
 한글 제목은 어절 단위 줄바꿈, 긴 ID는 overflow-wrap. 피드 제목은 두 줄 권장, 상세 제목·본문은 자르지 않는다. 본문 행간 약 1.6.
 

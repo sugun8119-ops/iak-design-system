@@ -16,7 +16,7 @@
       "Sub": "https://www.figma.com/design/Nh9NILHBye8VS0jGtph3UB?node-id=6-110",
       "Detail": "https://www.figma.com/design/Nh9NILHBye8VS0jGtph3UB?node-id=6-247"
     },
-    "font": "Noto Sans KR rendering fallback; preferred project font Pretendard 1.3.9 (not available in current Figma automation catalog)",
+    "font": "Pretendard 1.3.9 actual rendering; official OTF uploaded to Figma account, all text nodes and styles migrated",
     "caseCount": 30,
     "caseLibrary": "https://www.figma.com/design/Nh9NILHBye8VS0jGtph3UB?node-id=19-3",
     "projectGuides": "https://www.figma.com/design/Nh9NILHBye8VS0jGtph3UB?node-id=19-278",

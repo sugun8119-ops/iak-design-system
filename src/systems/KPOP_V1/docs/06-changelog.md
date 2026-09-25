@@ -13,4 +13,8 @@ Claude Design TP01–TP10, 반경·Toast 9개 규격, check_design_system 통과
 
 ## 사용자 승인 폰트 업데이트
 
-Pretendard 1.3.9를 기본 글꼴로 사용한다. 실제 WOFF2와 SIL OFL 라이선스를 assets/fonts/에 포함한다. 기존 크기·굵기·행간은 유지한다. Figma 자동화 환경에는 Pretendard가 없어 캔버스는 Noto Sans KR 대체이며, Pretendard 설치 환경에서 교체할 수 있다. 이전 OS-only 규칙을 대체한다.
+Pretendard 1.3.9를 기본 글꼴로 사용한다. 실제 WOFF2와 SIL OFL 라이선스를 assets/fonts/에 포함한다. 기존 크기·굵기·행간은 유지한다. Figma에도 공식 Pretendard 9개 굵기를 업로드하고 전체 텍스트와 스타일에 실제 적용했다. 이전 OS-only 규칙을 대체한다.
+
+
+### Figma Pretendard 적용 완료
+공식 OTF 9개 굵기 업로드 후 20개 페이지, 5개 텍스트 스타일과 574개 텍스트를 실제 Pretendard로 교체했다. Main/Sub/Detail 렌더링을 확인했다.

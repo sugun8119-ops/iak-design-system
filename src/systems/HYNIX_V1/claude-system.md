@@ -14,7 +14,7 @@
 데스크톱 사이드바 208px, 주요 작업면 24px 패딩. 선택 장비와 세션 상태는 항상 명시한다. 태블릿은 2열, 모바일은 1열. 모니터링 값과 제어 입력을 시각적으로 분리한다.
 
 ## Typography
-Pretendard 1.3.9를 기본 글꼴로 사용한다. 실제 WOFF2와 SIL OFL 라이선스를 assets/fonts/에 포함한다. 기존 크기·굵기·행간은 유지한다. Figma 자동화 환경에는 Pretendard가 없어 캔버스는 Noto Sans KR 대체이며, Pretendard 설치 환경에서 교체할 수 있다.
+Pretendard 1.3.9를 기본 글꼴로 사용한다. 실제 WOFF2와 SIL OFL 라이선스를 assets/fonts/에 포함한다. 기존 크기·굵기·행간은 유지한다. Figma에도 공식 Pretendard 9개 굵기를 업로드하고 전체 텍스트와 스타일에 실제 적용했다.
 Display/Heading/Title/Body/Meta = 32 / 24 / 18 / 14 / 12px. 제목 700, 본문 400. 정확한 lineHeight는 JSON typography 참조.
 한글 제목은 어절 단위 줄바꿈, 긴 ID는 overflow-wrap. 수치는 tabular-nums, 단위와 갱신시각을 함께 표시.
 

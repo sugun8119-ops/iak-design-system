@@ -83,13 +83,22 @@
         "sha256": "c5fd0c3568fc1368a3edc0d0fbb36df029935954276e3573451b3bae09e27296"
       }
     ],
-    "figmaRendering": "Noto Sans KR fallback",
+    "figmaRendering": "Pretendard 1.3.9 actual rendering",
     "checks": {
       "woff2Signature": "wOF2 verified",
       "mobile375MainSubDetail": "no horizontal overflow",
       "computedFamily": "Pretendard first",
       "serverFontRequests": "200",
-      "figmaPolicyNode": "24:2"
+      "figmaPolicyNode": "24:2",
+      "figmaActualFont": {
+        "family": "Pretendard",
+        "uploadedWeights": 9,
+        "textStyles": 5,
+        "pages": 20,
+        "textNodes": 574,
+        "nonPretendardTextNodes": 0,
+        "mainSubDetailVisualReview": "passed"
+      }
     },
     "authorization": "User permits modern system-like fonts; supersedes OS-only policy",
     "claudeDesign": {

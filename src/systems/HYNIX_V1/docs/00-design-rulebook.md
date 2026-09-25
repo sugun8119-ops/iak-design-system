@@ -10,4 +10,4 @@ IAK Design Studio는 케이스 항목 구조만 제공한다. 색·서체·간�
 우선순위: 사용자 요구 → 프로젝트 figma-system.json → claude-system.md → 개별 템플릿. IAK 항목에 없는 신규 업무 사례는 자동으로 확장하지 않는다.
 
 ### Font policy update
-Pretendard 1.3.9를 기본 사용하고 번들 WOFF2를 로드한다. 기존 크기·굵기·행간 유지. Figma 자동화의 렌더링은 Noto Sans KR 대체이며 Pretendard 실제 적용으로 오해하지 않는다.
+Pretendard 1.3.9를 기본 사용하고 번들 WOFF2를 로드한다. 기존 크기·굵기·행간 유지. Figma 전체 텍스트와 스타일에도 업로드된 Pretendard를 실제 적용했다.
