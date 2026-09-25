@@ -1,0 +1,71 @@
+{
+  "date": "2026-09-26",
+  "stage": "published-pre-fix-dom-audit",
+  "cardsInspected": 94,
+  "emptyBodies": 0,
+  "brokenLoadedImages": 0,
+  "horizontalOverflow": [
+    {
+      "card": "Pagination",
+      "clientWidth": 681,
+      "scrollWidth": 740
+    },
+    {
+      "card": "Radius",
+      "clientWidth": 681,
+      "scrollWidth": 713
+    },
+    {
+      "card": "KOSAF_V1 / Core Components (218:570)",
+      "clientWidth": 1594,
+      "scrollWidth": 1612
+    },
+    {
+      "card": "검색 결과 — PC 1920",
+      "clientWidth": 1901,
+      "scrollWidth": 1920
+    },
+    {
+      "card": "구매자 마이페이지 — PC 1920",
+      "clientWidth": 1901,
+      "scrollWidth": 1920
+    },
+    {
+      "card": "상품상세 — PC 1920",
+      "clientWidth": 1901,
+      "scrollWidth": 1920
+    },
+    {
+      "card": "장바구니 — PC 1920",
+      "clientWidth": 1901,
+      "scrollWidth": 1920
+    },
+    {
+      "card": "주문 완료 — PC 1920",
+      "clientWidth": 1901,
+      "scrollWidth": 1920
+    },
+    {
+      "card": "주문·결제 — PC 1920",
+      "clientWidth": 1901,
+      "scrollWidth": 1920
+    },
+    {
+      "card": "판매자 마이샵 — PC 1920",
+      "clientWidth": 1901,
+      "scrollWidth": 1920
+    },
+    {
+      "card": "판매자 회원가입 — PC 1920",
+      "clientWidth": 1901,
+      "scrollWidth": 1920
+    },
+    {
+      "card": "FAQ · 공지 · 후기 — PC 1920",
+      "clientWidth": 1901,
+      "scrollWidth": 1920
+    }
+  ],
+  "interpretation": "DOM loading and dimensions smoke check, not exhaustive visual approval. Image failures counted only for complete images with naturalWidth=0. Mobile body width was371 due to scrollbar inside390 frame; body clipping can hide child overflow.",
+  "nativeFixStatus": "Claude resumed, acknowledged requests and was editing/rendering. Browser connection lost before completion could be verified. Do not mark these12 fixed yet."
+}

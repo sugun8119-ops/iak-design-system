@@ -97,3 +97,7 @@ Primary #059B00, Hover #02AC5A, Positive #17BF56, Text #333333/#707070/#888888, 
 100 native files changed (including regenerated files), 46 families / 94 cards retained. Product images and fallback slots, consistent demo catalogue and calculated totals, product title/meta alignment, tabular numbers, mobile insets and bottom-action clearance, page headings and form errors refined. All 46 cards use concise Korean metadata and collapsed API details; wide previews include readable crops. Pass2 saved changes to login/mypage/myshop/support and 25 foundation/guide cards.
 
 Published representative checks: mobile product detail image and price consistency, quantity/total update, ProductCard images/metadata, mobile signup alignment. All 94 manifest card paths exist; canonical token files unchanged. Claude hit its usage limit after pass2 saves/checker, so exhaustive visual QA remains incomplete. See `claude-design-qa.json`, `claude-design/docs/quality-refinement.md`, and `quality-changes-2026-09-26.json`. No Figma mutations in this quality pass.
+
+
+## Published card DOM audit — 2026-09-26
+All94 published card bodies were inspected:0 empty bodies,0 broken completed images.12 horizontal-overflow findings were measured (Pagination, Radius, Coreboard and9 desktop kits). See `published-card-audit-2026-09-26.json`. Native Claude fix work was resumed and edits observed, but Chrome disconnected before final results/export could be verified. These findings remain pending; no new native snapshot is claimed. This is a DOM smoke check, not full visual acceptance.
