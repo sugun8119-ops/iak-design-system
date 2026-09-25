@@ -1,0 +1,3263 @@
+{
+  "variables": [
+    {
+      "id": "VariableID:216:573",
+      "name": "green/700",
+      "type": "COLOR",
+      "collection": "VariableCollectionId:216:570",
+      "values": {
+        "216:0": {
+          "r": 0.019607843831181526,
+          "g": 0.6078431606292725,
+          "b": 0,
+          "a": 1
+        }
+      },
+      "scopes": [],
+      "web": "var(--kosaf-green-700)"
+    },
+    {
+      "id": "VariableID:216:574",
+      "name": "green/600",
+      "type": "COLOR",
+      "collection": "VariableCollectionId:216:570",
+      "values": {
+        "216:0": {
+          "r": 0.007843137718737125,
+          "g": 0.6745098233222961,
+          "b": 0.3529411852359772,
+          "a": 1
+        }
+      },
+      "scopes": [],
+      "web": "var(--kosaf-green-600)"
+    },
+    {
+      "id": "VariableID:216:575",
+      "name": "green/500",
+      "type": "COLOR",
+      "collection": "VariableCollectionId:216:570",
+      "values": {
+        "216:0": {
+          "r": 0.09019608050584793,
+          "g": 0.7490196228027344,
+          "b": 0.33725491166114807,
+          "a": 1
+        }
+      },
+      "scopes": [],
+      "web": "var(--kosaf-green-500)"
+    },
+    {
+      "id": "VariableID:216:576",
+      "name": "green/100",
+      "type": "COLOR",
+      "collection": "VariableCollectionId:216:570",
+      "values": {
+        "216:0": {
+          "r": 0.9215686321258545,
+          "g": 1,
+          "b": 0.9137254953384399,
+          "a": 1
+        }
+      },
+      "scopes": [],
+      "web": "var(--kosaf-green-100)"
+    },
+    {
+      "id": "VariableID:216:577",
+      "name": "lime/100",
+      "type": "COLOR",
+      "collection": "VariableCollectionId:216:570",
+      "values": {
+        "216:0": {
+          "r": 0.8352941274642944,
+          "g": 1,
+          "b": 0.729411780834198,
+          "a": 1
+        }
+      },
+      "scopes": [],
+      "web": "var(--kosaf-lime-100)"
+    },
+    {
+      "id": "VariableID:216:578",
+      "name": "black",
+      "type": "COLOR",
+      "collection": "VariableCollectionId:216:570",
+      "values": {
+        "216:0": {
+          "r": 0,
+          "g": 0,
+          "b": 0,
+          "a": 1
+        }
+      },
+      "scopes": [],
+      "web": "var(--kosaf-black)"
+    },
+    {
+      "id": "VariableID:216:579",
+      "name": "white",
+      "type": "COLOR",
+      "collection": "VariableCollectionId:216:570",
+      "values": {
+        "216:0": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        }
+      },
+      "scopes": [],
+      "web": "var(--kosaf-white)"
+    },
+    {
+      "id": "VariableID:216:580",
+      "name": "gray/900",
+      "type": "COLOR",
+      "collection": "VariableCollectionId:216:570",
+      "values": {
+        "216:0": {
+          "r": 0.20000000298023224,
+          "g": 0.20000000298023224,
+          "b": 0.20000000298023224,
+          "a": 1
+        }
+      },
+      "scopes": [],
+      "web": "var(--kosaf-gray-900)"
+    },
+    {
+      "id": "VariableID:216:581",
+      "name": "gray/850",
+      "type": "COLOR",
+      "collection": "VariableCollectionId:216:570",
+      "values": {
+        "216:0": {
+          "r": 0.2666666805744171,
+          "g": 0.2666666805744171,
+          "b": 0.2666666805744171,
+          "a": 1
+        }
+      },
+      "scopes": [],
+      "web": "var(--kosaf-gray-850)"
+    },
+    {
+      "id": "VariableID:216:582",
+      "name": "gray/800",
+      "type": "COLOR",
+      "collection": "VariableCollectionId:216:570",
+      "values": {
+        "216:0": {
+          "r": 0.4000000059604645,
+          "g": 0.4000000059604645,
+          "b": 0.4000000059604645,
+          "a": 1
+        }
+      },
+      "scopes": [],
+      "web": "var(--kosaf-gray-800)"
+    },
+    {
+      "id": "VariableID:216:583",
+      "name": "gray/700",
+      "type": "COLOR",
+      "collection": "VariableCollectionId:216:570",
+      "values": {
+        "216:0": {
+          "r": 0.43921568989753723,
+          "g": 0.43921568989753723,
+          "b": 0.43921568989753723,
+          "a": 1
+        }
+      },
+      "scopes": [],
+      "web": "var(--kosaf-gray-700)"
+    },
+    {
+      "id": "VariableID:216:584",
+      "name": "gray/600",
+      "type": "COLOR",
+      "collection": "VariableCollectionId:216:570",
+      "values": {
+        "216:0": {
+          "r": 0.5333333611488342,
+          "g": 0.5333333611488342,
+          "b": 0.5333333611488342,
+          "a": 1
+        }
+      },
+      "scopes": [],
+      "web": "var(--kosaf-gray-600)"
+    },
+    {
+      "id": "VariableID:216:585",
+      "name": "gray/500",
+      "type": "COLOR",
+      "collection": "VariableCollectionId:216:570",
+      "values": {
+        "216:0": {
+          "r": 0.6274510025978088,
+          "g": 0.6274510025978088,
+          "b": 0.6274510025978088,
+          "a": 1
+        }
+      },
+      "scopes": [],
+      "web": "var(--kosaf-gray-500)"
+    },
+    {
+      "id": "VariableID:216:586",
+      "name": "gray/400",
+      "type": "COLOR",
+      "collection": "VariableCollectionId:216:570",
+      "values": {
+        "216:0": {
+          "r": 0.6705882549285889,
+          "g": 0.6705882549285889,
+          "b": 0.6705882549285889,
+          "a": 1
+        }
+      },
+      "scopes": [],
+      "web": "var(--kosaf-gray-400)"
+    },
+    {
+      "id": "VariableID:216:587",
+      "name": "gray/350",
+      "type": "COLOR",
+      "collection": "VariableCollectionId:216:570",
+      "values": {
+        "216:0": {
+          "r": 0.7568627595901489,
+          "g": 0.7568627595901489,
+          "b": 0.7568627595901489,
+          "a": 1
+        }
+      },
+      "scopes": [],
+      "web": "var(--kosaf-gray-350)"
+    },
+    {
+      "id": "VariableID:216:588",
+      "name": "gray/300",
+      "type": "COLOR",
+      "collection": "VariableCollectionId:216:570",
+      "values": {
+        "216:0": {
+          "r": 0.800000011920929,
+          "g": 0.800000011920929,
+          "b": 0.800000011920929,
+          "a": 1
+        }
+      },
+      "scopes": [],
+      "web": "var(--kosaf-gray-300)"
+    },
+    {
+      "id": "VariableID:216:589",
+      "name": "gray/250",
+      "type": "COLOR",
+      "collection": "VariableCollectionId:216:570",
+      "values": {
+        "216:0": {
+          "r": 0.8509804010391235,
+          "g": 0.8509804010391235,
+          "b": 0.8509804010391235,
+          "a": 1
+        }
+      },
+      "scopes": [],
+      "web": "var(--kosaf-gray-250)"
+    },
+    {
+      "id": "VariableID:216:590",
+      "name": "gray/200",
+      "type": "COLOR",
+      "collection": "VariableCollectionId:216:570",
+      "values": {
+        "216:0": {
+          "r": 0.8666666746139526,
+          "g": 0.8666666746139526,
+          "b": 0.8666666746139526,
+          "a": 1
+        }
+      },
+      "scopes": [],
+      "web": "var(--kosaf-gray-200)"
+    },
+    {
+      "id": "VariableID:216:591",
+      "name": "gray/150",
+      "type": "COLOR",
+      "collection": "VariableCollectionId:216:570",
+      "values": {
+        "216:0": {
+          "r": 0.8745098114013672,
+          "g": 0.8784313797950745,
+          "b": 0.8941176533699036,
+          "a": 1
+        }
+      },
+      "scopes": [],
+      "web": "var(--kosaf-gray-150)"
+    },
+    {
+      "id": "VariableID:216:592",
+      "name": "gray/100",
+      "type": "COLOR",
+      "collection": "VariableCollectionId:216:570",
+      "values": {
+        "216:0": {
+          "r": 0.9176470637321472,
+          "g": 0.9176470637321472,
+          "b": 0.9176470637321472,
+          "a": 1
+        }
+      },
+      "scopes": [],
+      "web": "var(--kosaf-gray-100)"
+    },
+    {
+      "id": "VariableID:216:593",
+      "name": "gray/050",
+      "type": "COLOR",
+      "collection": "VariableCollectionId:216:570",
+      "values": {
+        "216:0": {
+          "r": 0.9686274528503418,
+          "g": 0.9686274528503418,
+          "b": 0.9686274528503418,
+          "a": 1
+        }
+      },
+      "scopes": [],
+      "web": "var(--kosaf-gray-050)"
+    },
+    {
+      "id": "VariableID:216:594",
+      "name": "blue/600",
+      "type": "COLOR",
+      "collection": "VariableCollectionId:216:570",
+      "values": {
+        "216:0": {
+          "r": 0,
+          "g": 0.27843138575553894,
+          "b": 0.929411768913269,
+          "a": 1
+        }
+      },
+      "scopes": [],
+      "web": "var(--kosaf-blue-600)"
+    },
+    {
+      "id": "VariableID:216:595",
+      "name": "yellow/500",
+      "type": "COLOR",
+      "collection": "VariableCollectionId:216:570",
+      "values": {
+        "216:0": {
+          "r": 1,
+          "g": 0.8901960849761963,
+          "b": 0.14901961386203766,
+          "a": 1
+        }
+      },
+      "scopes": [],
+      "web": "var(--kosaf-yellow-500)"
+    },
+    {
+      "id": "VariableID:216:596",
+      "name": "red/600",
+      "type": "COLOR",
+      "collection": "VariableCollectionId:216:570",
+      "values": {
+        "216:0": {
+          "r": 0.886274516582489,
+          "g": 0.21568627655506134,
+          "b": 0.21176470816135406,
+          "a": 1
+        }
+      },
+      "scopes": [],
+      "web": "var(--kosaf-red-600)"
+    },
+    {
+      "id": "VariableID:216:597",
+      "name": "red/500",
+      "type": "COLOR",
+      "collection": "VariableCollectionId:216:570",
+      "values": {
+        "216:0": {
+          "r": 1,
+          "g": 0.3450980484485626,
+          "b": 0.3450980484485626,
+          "a": 1
+        }
+      },
+      "scopes": [],
+      "web": "var(--kosaf-red-500)"
+    },
+    {
+      "id": "VariableID:216:598",
+      "name": "lavender/100",
+      "type": "COLOR",
+      "collection": "VariableCollectionId:216:570",
+      "values": {
+        "216:0": {
+          "r": 0.95686274766922,
+          "g": 0.9215686321258545,
+          "b": 1,
+          "a": 1
+        }
+      },
+      "scopes": [],
+      "web": "var(--kosaf-lavender-100)"
+    },
+    {
+      "id": "VariableID:216:599",
+      "name": "color/bg/canvas",
+      "type": "COLOR",
+      "collection": "VariableCollectionId:216:571",
+      "values": {
+        "216:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:216:579"
+        }
+      },
+      "scopes": [
+        "FRAME_FILL"
+      ],
+      "web": "var(--kosaf-color-bg-canvas)"
+    },
+    {
+      "id": "VariableID:216:600",
+      "name": "color/bg/subtle",
+      "type": "COLOR",
+      "collection": "VariableCollectionId:216:571",
+      "values": {
+        "216:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:216:593"
+        }
+      },
+      "scopes": [
+        "FRAME_FILL",
+        "SHAPE_FILL"
+      ],
+      "web": "var(--kosaf-color-bg-subtle)"
+    },
+    {
+      "id": "VariableID:216:601",
+      "name": "color/surface/default",
+      "type": "COLOR",
+      "collection": "VariableCollectionId:216:571",
+      "values": {
+        "216:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:216:579"
+        }
+      },
+      "scopes": [
+        "FRAME_FILL",
+        "SHAPE_FILL"
+      ],
+      "web": "var(--kosaf-color-surface-default)"
+    },
+    {
+      "id": "VariableID:216:602",
+      "name": "color/surface/brand-soft",
+      "type": "COLOR",
+      "collection": "VariableCollectionId:216:571",
+      "values": {
+        "216:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:216:576"
+        }
+      },
+      "scopes": [
+        "FRAME_FILL",
+        "SHAPE_FILL"
+      ],
+      "web": "var(--kosaf-color-surface-brand-soft)"
+    },
+    {
+      "id": "VariableID:216:603",
+      "name": "color/text/primary",
+      "type": "COLOR",
+      "collection": "VariableCollectionId:216:571",
+      "values": {
+        "216:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:216:580"
+        }
+      },
+      "scopes": [
+        "TEXT_FILL"
+      ],
+      "web": "var(--kosaf-color-text-primary)"
+    },
+    {
+      "id": "VariableID:216:604",
+      "name": "color/text/secondary",
+      "type": "COLOR",
+      "collection": "VariableCollectionId:216:571",
+      "values": {
+        "216:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:216:583"
+        }
+      },
+      "scopes": [
+        "TEXT_FILL"
+      ],
+      "web": "var(--kosaf-color-text-secondary)"
+    },
+    {
+      "id": "VariableID:216:605",
+      "name": "color/text/muted",
+      "type": "COLOR",
+      "collection": "VariableCollectionId:216:571",
+      "values": {
+        "216:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:216:584"
+        }
+      },
+      "scopes": [
+        "TEXT_FILL"
+      ],
+      "web": "var(--kosaf-color-text-muted)"
+    },
+    {
+      "id": "VariableID:216:606",
+      "name": "color/text/inverse",
+      "type": "COLOR",
+      "collection": "VariableCollectionId:216:571",
+      "values": {
+        "216:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:216:579"
+        }
+      },
+      "scopes": [
+        "TEXT_FILL"
+      ],
+      "web": "var(--kosaf-color-text-inverse)"
+    },
+    {
+      "id": "VariableID:216:607",
+      "name": "color/border/default",
+      "type": "COLOR",
+      "collection": "VariableCollectionId:216:571",
+      "values": {
+        "216:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:216:590"
+        }
+      },
+      "scopes": [
+        "STROKE_COLOR"
+      ],
+      "web": "var(--kosaf-color-border-default)"
+    },
+    {
+      "id": "VariableID:216:608",
+      "name": "color/border/strong",
+      "type": "COLOR",
+      "collection": "VariableCollectionId:216:571",
+      "values": {
+        "216:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:216:587"
+        }
+      },
+      "scopes": [
+        "STROKE_COLOR"
+      ],
+      "web": "var(--kosaf-color-border-strong)"
+    },
+    {
+      "id": "VariableID:216:609",
+      "name": "color/action/primary",
+      "type": "COLOR",
+      "collection": "VariableCollectionId:216:571",
+      "values": {
+        "216:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:216:573"
+        }
+      },
+      "scopes": [
+        "FRAME_FILL",
+        "SHAPE_FILL",
+        "TEXT_FILL",
+        "STROKE_COLOR"
+      ],
+      "web": "var(--kosaf-color-action-primary)"
+    },
+    {
+      "id": "VariableID:216:610",
+      "name": "color/action/primary-hover",
+      "type": "COLOR",
+      "collection": "VariableCollectionId:216:571",
+      "values": {
+        "216:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:216:574"
+        }
+      },
+      "scopes": [
+        "FRAME_FILL",
+        "SHAPE_FILL",
+        "STROKE_COLOR"
+      ],
+      "web": "var(--kosaf-color-action-primary-hover)"
+    },
+    {
+      "id": "VariableID:216:611",
+      "name": "color/action/positive",
+      "type": "COLOR",
+      "collection": "VariableCollectionId:216:571",
+      "values": {
+        "216:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:216:575"
+        }
+      },
+      "scopes": [
+        "FRAME_FILL",
+        "SHAPE_FILL",
+        "TEXT_FILL"
+      ],
+      "web": "var(--kosaf-color-action-positive)"
+    },
+    {
+      "id": "VariableID:216:612",
+      "name": "color/action/danger",
+      "type": "COLOR",
+      "collection": "VariableCollectionId:216:571",
+      "values": {
+        "216:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:216:596"
+        }
+      },
+      "scopes": [
+        "FRAME_FILL",
+        "SHAPE_FILL",
+        "TEXT_FILL",
+        "STROKE_COLOR"
+      ],
+      "web": "var(--kosaf-color-action-danger)"
+    },
+    {
+      "id": "VariableID:216:613",
+      "name": "color/state/focus",
+      "type": "COLOR",
+      "collection": "VariableCollectionId:216:571",
+      "values": {
+        "216:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:216:594"
+        }
+      },
+      "scopes": [
+        "STROKE_COLOR"
+      ],
+      "web": "var(--kosaf-color-state-focus)"
+    },
+    {
+      "id": "VariableID:216:614",
+      "name": "color/state/warning",
+      "type": "COLOR",
+      "collection": "VariableCollectionId:216:571",
+      "values": {
+        "216:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:216:595"
+        }
+      },
+      "scopes": [
+        "FRAME_FILL",
+        "SHAPE_FILL"
+      ],
+      "web": "var(--kosaf-color-state-warning)"
+    },
+    {
+      "id": "VariableID:216:615",
+      "name": "color/state/info-soft",
+      "type": "COLOR",
+      "collection": "VariableCollectionId:216:571",
+      "values": {
+        "216:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:216:598"
+        }
+      },
+      "scopes": [
+        "FRAME_FILL",
+        "SHAPE_FILL"
+      ],
+      "web": "var(--kosaf-color-state-info-soft)"
+    },
+    {
+      "id": "VariableID:216:616",
+      "name": "spacing/4",
+      "type": "FLOAT",
+      "collection": "VariableCollectionId:216:572",
+      "values": {
+        "216:2": 4
+      },
+      "scopes": [
+        "GAP"
+      ],
+      "web": "var(--kosaf-spacing-4)"
+    },
+    {
+      "id": "VariableID:216:617",
+      "name": "spacing/8",
+      "type": "FLOAT",
+      "collection": "VariableCollectionId:216:572",
+      "values": {
+        "216:2": 8
+      },
+      "scopes": [
+        "GAP"
+      ],
+      "web": "var(--kosaf-spacing-8)"
+    },
+    {
+      "id": "VariableID:216:618",
+      "name": "spacing/10",
+      "type": "FLOAT",
+      "collection": "VariableCollectionId:216:572",
+      "values": {
+        "216:2": 10
+      },
+      "scopes": [
+        "GAP"
+      ],
+      "web": "var(--kosaf-spacing-10)"
+    },
+    {
+      "id": "VariableID:216:619",
+      "name": "spacing/12",
+      "type": "FLOAT",
+      "collection": "VariableCollectionId:216:572",
+      "values": {
+        "216:2": 12
+      },
+      "scopes": [
+        "GAP"
+      ],
+      "web": "var(--kosaf-spacing-12)"
+    },
+    {
+      "id": "VariableID:216:620",
+      "name": "spacing/16",
+      "type": "FLOAT",
+      "collection": "VariableCollectionId:216:572",
+      "values": {
+        "216:2": 16
+      },
+      "scopes": [
+        "GAP"
+      ],
+      "web": "var(--kosaf-spacing-16)"
+    },
+    {
+      "id": "VariableID:216:621",
+      "name": "spacing/20",
+      "type": "FLOAT",
+      "collection": "VariableCollectionId:216:572",
+      "values": {
+        "216:2": 20
+      },
+      "scopes": [
+        "GAP"
+      ],
+      "web": "var(--kosaf-spacing-20)"
+    },
+    {
+      "id": "VariableID:216:622",
+      "name": "spacing/24",
+      "type": "FLOAT",
+      "collection": "VariableCollectionId:216:572",
+      "values": {
+        "216:2": 24
+      },
+      "scopes": [
+        "GAP"
+      ],
+      "web": "var(--kosaf-spacing-24)"
+    },
+    {
+      "id": "VariableID:216:623",
+      "name": "spacing/30",
+      "type": "FLOAT",
+      "collection": "VariableCollectionId:216:572",
+      "values": {
+        "216:2": 30
+      },
+      "scopes": [
+        "GAP"
+      ],
+      "web": "var(--kosaf-spacing-30)"
+    },
+    {
+      "id": "VariableID:216:624",
+      "name": "spacing/32",
+      "type": "FLOAT",
+      "collection": "VariableCollectionId:216:572",
+      "values": {
+        "216:2": 32
+      },
+      "scopes": [
+        "GAP"
+      ],
+      "web": "var(--kosaf-spacing-32)"
+    },
+    {
+      "id": "VariableID:216:625",
+      "name": "spacing/40",
+      "type": "FLOAT",
+      "collection": "VariableCollectionId:216:572",
+      "values": {
+        "216:2": 40
+      },
+      "scopes": [
+        "GAP"
+      ],
+      "web": "var(--kosaf-spacing-40)"
+    },
+    {
+      "id": "VariableID:216:626",
+      "name": "spacing/50",
+      "type": "FLOAT",
+      "collection": "VariableCollectionId:216:572",
+      "values": {
+        "216:2": 50
+      },
+      "scopes": [
+        "GAP"
+      ],
+      "web": "var(--kosaf-spacing-50)"
+    },
+    {
+      "id": "VariableID:216:627",
+      "name": "spacing/60",
+      "type": "FLOAT",
+      "collection": "VariableCollectionId:216:572",
+      "values": {
+        "216:2": 60
+      },
+      "scopes": [
+        "GAP"
+      ],
+      "web": "var(--kosaf-spacing-60)"
+    },
+    {
+      "id": "VariableID:216:628",
+      "name": "radius/2",
+      "type": "FLOAT",
+      "collection": "VariableCollectionId:216:572",
+      "values": {
+        "216:2": 2
+      },
+      "scopes": [
+        "CORNER_RADIUS"
+      ],
+      "web": "var(--kosaf-radius-2)"
+    },
+    {
+      "id": "VariableID:216:629",
+      "name": "radius/3",
+      "type": "FLOAT",
+      "collection": "VariableCollectionId:216:572",
+      "values": {
+        "216:2": 3
+      },
+      "scopes": [
+        "CORNER_RADIUS"
+      ],
+      "web": "var(--kosaf-radius-3)"
+    },
+    {
+      "id": "VariableID:216:630",
+      "name": "radius/5",
+      "type": "FLOAT",
+      "collection": "VariableCollectionId:216:572",
+      "values": {
+        "216:2": 5
+      },
+      "scopes": [
+        "CORNER_RADIUS"
+      ],
+      "web": "var(--kosaf-radius-5)"
+    },
+    {
+      "id": "VariableID:216:631",
+      "name": "radius/10",
+      "type": "FLOAT",
+      "collection": "VariableCollectionId:216:572",
+      "values": {
+        "216:2": 10
+      },
+      "scopes": [
+        "CORNER_RADIUS"
+      ],
+      "web": "var(--kosaf-radius-10)"
+    },
+    {
+      "id": "VariableID:216:632",
+      "name": "radius/16",
+      "type": "FLOAT",
+      "collection": "VariableCollectionId:216:572",
+      "values": {
+        "216:2": 16
+      },
+      "scopes": [
+        "CORNER_RADIUS"
+      ],
+      "web": "var(--kosaf-radius-16)"
+    },
+    {
+      "id": "VariableID:216:633",
+      "name": "radius/20",
+      "type": "FLOAT",
+      "collection": "VariableCollectionId:216:572",
+      "values": {
+        "216:2": 20
+      },
+      "scopes": [
+        "CORNER_RADIUS"
+      ],
+      "web": "var(--kosaf-radius-20)"
+    },
+    {
+      "id": "VariableID:216:634",
+      "name": "radius/25",
+      "type": "FLOAT",
+      "collection": "VariableCollectionId:216:572",
+      "values": {
+        "216:2": 25
+      },
+      "scopes": [
+        "CORNER_RADIUS"
+      ],
+      "web": "var(--kosaf-radius-25)"
+    },
+    {
+      "id": "VariableID:216:635",
+      "name": "radius/30",
+      "type": "FLOAT",
+      "collection": "VariableCollectionId:216:572",
+      "values": {
+        "216:2": 30
+      },
+      "scopes": [
+        "CORNER_RADIUS"
+      ],
+      "web": "var(--kosaf-radius-30)"
+    },
+    {
+      "id": "VariableID:216:636",
+      "name": "radius/40",
+      "type": "FLOAT",
+      "collection": "VariableCollectionId:216:572",
+      "values": {
+        "216:2": 40
+      },
+      "scopes": [
+        "CORNER_RADIUS"
+      ],
+      "web": "var(--kosaf-radius-40)"
+    },
+    {
+      "id": "VariableID:216:637",
+      "name": "radius/full",
+      "type": "FLOAT",
+      "collection": "VariableCollectionId:216:572",
+      "values": {
+        "216:2": 999
+      },
+      "scopes": [
+        "CORNER_RADIUS"
+      ],
+      "web": "var(--kosaf-radius-full)"
+    },
+    {
+      "id": "VariableID:220:570",
+      "name": "typography/font-family",
+      "type": "STRING",
+      "collection": "VariableCollectionId:216:572",
+      "values": {
+        "216:2": "Noto Sans KR"
+      },
+      "scopes": [
+        "FONT_FAMILY"
+      ],
+      "web": "var(--kosaf-typography-font-family)"
+    },
+    {
+      "id": "VariableID:220:571",
+      "name": "viewport/desktop",
+      "type": "FLOAT",
+      "collection": "VariableCollectionId:216:572",
+      "values": {
+        "216:2": 1920
+      },
+      "scopes": [
+        "WIDTH_HEIGHT"
+      ],
+      "web": "var(--kosaf-viewport-desktop)"
+    },
+    {
+      "id": "VariableID:220:572",
+      "name": "viewport/mobile",
+      "type": "FLOAT",
+      "collection": "VariableCollectionId:216:572",
+      "values": {
+        "216:2": 390
+      },
+      "scopes": [
+        "WIDTH_HEIGHT"
+      ],
+      "web": "var(--kosaf-viewport-mobile)"
+    },
+    {
+      "id": "VariableID:220:573",
+      "name": "viewport/mobile-wide",
+      "type": "FLOAT",
+      "collection": "VariableCollectionId:216:572",
+      "values": {
+        "216:2": 391
+      },
+      "scopes": [
+        "WIDTH_HEIGHT"
+      ],
+      "web": "var(--kosaf-viewport-mobile-wide)"
+    },
+    {
+      "id": "VariableID:220:574",
+      "name": "control/compact",
+      "type": "FLOAT",
+      "collection": "VariableCollectionId:216:572",
+      "values": {
+        "216:2": 34
+      },
+      "scopes": [
+        "WIDTH_HEIGHT"
+      ],
+      "web": "var(--kosaf-control-compact)"
+    },
+    {
+      "id": "VariableID:220:575",
+      "name": "control/form",
+      "type": "FLOAT",
+      "collection": "VariableCollectionId:216:572",
+      "values": {
+        "216:2": 45
+      },
+      "scopes": [
+        "WIDTH_HEIGHT"
+      ],
+      "web": "var(--kosaf-control-form)"
+    },
+    {
+      "id": "VariableID:220:576",
+      "name": "control/search",
+      "type": "FLOAT",
+      "collection": "VariableCollectionId:216:572",
+      "values": {
+        "216:2": 50
+      },
+      "scopes": [
+        "WIDTH_HEIGHT"
+      ],
+      "web": "var(--kosaf-control-search)"
+    },
+    {
+      "id": "VariableID:220:577",
+      "name": "control/mobile-action",
+      "type": "FLOAT",
+      "collection": "VariableCollectionId:216:572",
+      "values": {
+        "216:2": 70
+      },
+      "scopes": [
+        "WIDTH_HEIGHT"
+      ],
+      "web": "var(--kosaf-control-mobile-action)"
+    },
+    {
+      "id": "VariableID:220:578",
+      "name": "table/desktop-row",
+      "type": "FLOAT",
+      "collection": "VariableCollectionId:216:572",
+      "values": {
+        "216:2": 70
+      },
+      "scopes": [
+        "WIDTH_HEIGHT"
+      ],
+      "web": "var(--kosaf-table-desktop-row)"
+    },
+    {
+      "id": "VariableID:220:579",
+      "name": "table/mobile-row",
+      "type": "FLOAT",
+      "collection": "VariableCollectionId:216:572",
+      "values": {
+        "216:2": 50
+      },
+      "scopes": [
+        "WIDTH_HEIGHT"
+      ],
+      "web": "var(--kosaf-table-mobile-row)"
+    },
+    {
+      "id": "VariableID:220:580",
+      "name": "color/text/disabled",
+      "type": "COLOR",
+      "collection": "VariableCollectionId:216:571",
+      "values": {
+        "216:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:216:585"
+        }
+      },
+      "scopes": [
+        "TEXT_FILL"
+      ],
+      "web": "var(--kosaf-color-text-disabled)"
+    },
+    {
+      "id": "VariableID:220:581",
+      "name": "color/surface/disabled",
+      "type": "COLOR",
+      "collection": "VariableCollectionId:216:571",
+      "values": {
+        "216:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:216:589"
+        }
+      },
+      "scopes": [
+        "FRAME_FILL",
+        "SHAPE_FILL"
+      ],
+      "web": "var(--kosaf-color-surface-disabled)"
+    },
+    {
+      "id": "VariableID:220:582",
+      "name": "color/border/subtle",
+      "type": "COLOR",
+      "collection": "VariableCollectionId:216:571",
+      "values": {
+        "216:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:216:592"
+        }
+      },
+      "scopes": [
+        "STROKE_COLOR"
+      ],
+      "web": "var(--kosaf-color-border-subtle)"
+    },
+    {
+      "id": "VariableID:220:583",
+      "name": "color/icon/default",
+      "type": "COLOR",
+      "collection": "VariableCollectionId:216:571",
+      "values": {
+        "216:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:216:580"
+        }
+      },
+      "scopes": [
+        "SHAPE_FILL"
+      ],
+      "web": "var(--kosaf-color-icon-default)"
+    },
+    {
+      "id": "VariableID:225:595",
+      "name": "control/small",
+      "type": "FLOAT",
+      "collection": "VariableCollectionId:216:572",
+      "values": {
+        "216:2": 42
+      },
+      "scopes": [
+        "WIDTH_HEIGHT"
+      ],
+      "web": "var(--kosaf-control-small)"
+    },
+    {
+      "id": "VariableID:225:596",
+      "name": "color/action/danger-hover",
+      "type": "COLOR",
+      "collection": "VariableCollectionId:216:571",
+      "values": {
+        "216:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:216:597"
+        }
+      },
+      "scopes": [
+        "FRAME_FILL",
+        "SHAPE_FILL",
+        "STROKE_COLOR"
+      ],
+      "web": "var(--kosaf-color-action-danger-hover)"
+    }
+  ],
+  "textStyles": [
+    {
+      "id": "S:96df98ed6081a4dde9a4b7c355d06870df65f2e6,",
+      "name": "KOSAF/Display/40",
+      "font": {
+        "family": "Noto Sans KR",
+        "style": "Bold",
+        "variationSettings": {
+          "wght": 700
+        }
+      },
+      "size": 40,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 52
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "boundVariables": {
+        "fontFamily": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:220:570"
+        }
+      },
+      "description": ""
+    },
+    {
+      "id": "S:55ef3e0b96b40c874a96c7f058f3e5e362f2717b,",
+      "name": "KOSAF/Heading/H1",
+      "font": {
+        "family": "Noto Sans KR",
+        "style": "Bold",
+        "variationSettings": {
+          "wght": 700
+        }
+      },
+      "size": 30,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 40
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "boundVariables": {
+        "fontFamily": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:220:570"
+        }
+      },
+      "description": ""
+    },
+    {
+      "id": "S:3329c0505c8b3c0876ceda5fdcfa77c1e380aafb,",
+      "name": "KOSAF/Heading/H2",
+      "font": {
+        "family": "Noto Sans KR",
+        "style": "Bold",
+        "variationSettings": {
+          "wght": 700
+        }
+      },
+      "size": 24,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 34
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "boundVariables": {
+        "fontFamily": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:220:570"
+        }
+      },
+      "description": ""
+    },
+    {
+      "id": "S:5a2ed6bcafbf8b3735348bb5f1be6a9647dc4850,",
+      "name": "KOSAF/Heading/H3",
+      "font": {
+        "family": "Noto Sans KR",
+        "style": "Medium",
+        "variationSettings": {
+          "wght": 500
+        }
+      },
+      "size": 22,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 34
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "boundVariables": {
+        "fontFamily": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:220:570"
+        }
+      },
+      "description": ""
+    },
+    {
+      "id": "S:048a80e6b9245b724da6d6a783a3056f53060685,",
+      "name": "KOSAF/Title/20",
+      "font": {
+        "family": "Noto Sans KR",
+        "style": "Medium",
+        "variationSettings": {
+          "wght": 500
+        }
+      },
+      "size": 20,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 30
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "boundVariables": {
+        "fontFamily": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:220:570"
+        }
+      },
+      "description": ""
+    },
+    {
+      "id": "S:a6818915b7bdac3ac70525e07f502bee5f5ff16f,",
+      "name": "KOSAF/Body/L",
+      "font": {
+        "family": "Noto Sans KR",
+        "style": "Regular",
+        "variationSettings": {
+          "wght": 400
+        }
+      },
+      "size": 18,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 30
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "boundVariables": {
+        "fontFamily": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:220:570"
+        }
+      },
+      "description": ""
+    },
+    {
+      "id": "S:1470f5b0bff3ad7ad873bd75a4096b6885ce28d8,",
+      "name": "KOSAF/Body/M",
+      "font": {
+        "family": "Noto Sans KR",
+        "style": "Regular",
+        "variationSettings": {
+          "wght": 400
+        }
+      },
+      "size": 16,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 24
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "boundVariables": {
+        "fontFamily": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:220:570"
+        }
+      },
+      "description": ""
+    },
+    {
+      "id": "S:32e45730b4843af28351aedd9a193ad9dba3a70c,",
+      "name": "KOSAF/Body/S",
+      "font": {
+        "family": "Noto Sans KR",
+        "style": "Regular",
+        "variationSettings": {
+          "wght": 400
+        }
+      },
+      "size": 14,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 20
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "boundVariables": {
+        "fontFamily": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:220:570"
+        }
+      },
+      "description": ""
+    },
+    {
+      "id": "S:13110592d755de20c1f6bc567e0f2948d1ea3592,",
+      "name": "KOSAF/Caption",
+      "font": {
+        "family": "Noto Sans KR",
+        "style": "Regular",
+        "variationSettings": {
+          "wght": 400
+        }
+      },
+      "size": 12,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 16
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "boundVariables": {
+        "fontFamily": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:220:570"
+        }
+      },
+      "description": ""
+    },
+    {
+      "id": "S:fa6269f03d965472f8599549a5305ed314552d6a,",
+      "name": "KOSAF/Source/18/Regular/PIXELS-34/PERCENT-0",
+      "font": {
+        "family": "Noto Sans KR",
+        "style": "Regular",
+        "variationSettings": {
+          "wght": 400
+        }
+      },
+      "size": 18,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 34
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "boundVariables": {
+        "fontFamily": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:220:570"
+        }
+      },
+      "description": "Exact source typography; MOEAkEbXtwHdE3xveg2Gto node 1:85789. Retained to avoid layout reflow; canonical 9 styles remain recommended for new UI."
+    },
+    {
+      "id": "S:7e3a87c20b16af2f3b68a2438d78060a2f3eab63,",
+      "name": "KOSAF/Source/15/Medium/PIXELS-15/PIXELS--0.4",
+      "font": {
+        "family": "Noto Sans KR",
+        "style": "Medium",
+        "variationSettings": {
+          "wght": 500
+        }
+      },
+      "size": 15,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 15
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -0.4000000059604645
+      },
+      "boundVariables": {
+        "fontFamily": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:220:570"
+        }
+      },
+      "description": "Exact source typography; MOEAkEbXtwHdE3xveg2Gto node I1:85801;1938:67860. Retained to avoid layout reflow; canonical 9 styles remain recommended for new UI."
+    },
+    {
+      "id": "S:0c2259753b20423089a047cedc44757cbfad68c5,",
+      "name": "KOSAF/Source/30/Bold/AUTO-Auto/PERCENT-0",
+      "font": {
+        "family": "Noto Sans KR",
+        "style": "Bold",
+        "variationSettings": {
+          "wght": 700
+        }
+      },
+      "size": 30,
+      "lineHeight": {
+        "unit": "AUTO"
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "boundVariables": {
+        "fontFamily": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:220:570"
+        }
+      },
+      "description": "Exact source typography; MOEAkEbXtwHdE3xveg2Gto node 1:85803. Retained to avoid layout reflow; canonical 9 styles remain recommended for new UI."
+    },
+    {
+      "id": "S:2e311a174676fda38b1014344b3bb64185e1c3db,",
+      "name": "KOSAF/Source/18/Bold/AUTO-Auto/PERCENT-0",
+      "font": {
+        "family": "Noto Sans KR",
+        "style": "Bold",
+        "variationSettings": {
+          "wght": 700
+        }
+      },
+      "size": 18,
+      "lineHeight": {
+        "unit": "AUTO"
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "boundVariables": {
+        "fontFamily": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:220:570"
+        }
+      },
+      "description": "Exact source typography; MOEAkEbXtwHdE3xveg2Gto node 1:85806. Retained to avoid layout reflow; canonical 9 styles remain recommended for new UI."
+    },
+    {
+      "id": "S:d60bbedcd45ae88ab405cc3f60c103f3671f8c1d,",
+      "name": "KOSAF/Source/18/Regular/AUTO-Auto/PERCENT-0",
+      "font": {
+        "family": "Noto Sans KR",
+        "style": "Regular",
+        "variationSettings": {
+          "wght": 400
+        }
+      },
+      "size": 18,
+      "lineHeight": {
+        "unit": "AUTO"
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "boundVariables": {
+        "fontFamily": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:220:570"
+        }
+      },
+      "description": "Exact source typography; MOEAkEbXtwHdE3xveg2Gto node 1:85806. Retained to avoid layout reflow; canonical 9 styles remain recommended for new UI."
+    },
+    {
+      "id": "S:2f94973af74c8b35751837f02a6b01d60172d18f,",
+      "name": "KOSAF/Source/14/Medium/PIXELS-14/PERCENT-0",
+      "font": {
+        "family": "Noto Sans KR",
+        "style": "Medium",
+        "variationSettings": {
+          "wght": 500
+        }
+      },
+      "size": 14,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 14
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "boundVariables": {
+        "fontFamily": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:220:570"
+        }
+      },
+      "description": "Exact source typography; MOEAkEbXtwHdE3xveg2Gto node 1:85815. Retained to avoid layout reflow; canonical 9 styles remain recommended for new UI."
+    },
+    {
+      "id": "S:fe719ace5f1dae291e3b5cd85277fb483f263996,",
+      "name": "KOSAF/Source/12/Bold/AUTO-Auto/PERCENT-0",
+      "font": {
+        "family": "Noto Sans KR",
+        "style": "Bold",
+        "variationSettings": {
+          "wght": 700
+        }
+      },
+      "size": 12,
+      "lineHeight": {
+        "unit": "AUTO"
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "boundVariables": {
+        "fontFamily": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:220:570"
+        }
+      },
+      "description": "Exact source typography; MOEAkEbXtwHdE3xveg2Gto node 1:85876. Retained to avoid layout reflow; canonical 9 styles remain recommended for new UI."
+    },
+    {
+      "id": "S:0bfb937fb5d4068df7cf2d906181c444cc2bc398,",
+      "name": "KOSAF/Source/20/Bold/PIXELS-20/PERCENT-0",
+      "font": {
+        "family": "Noto Sans KR",
+        "style": "Bold",
+        "variationSettings": {
+          "wght": 700
+        }
+      },
+      "size": 20,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 20
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "boundVariables": {
+        "fontFamily": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:220:570"
+        }
+      },
+      "description": "Exact source typography; MOEAkEbXtwHdE3xveg2Gto node 1:85919. Retained to avoid layout reflow; canonical 9 styles remain recommended for new UI."
+    },
+    {
+      "id": "S:a3df70d0cf90c60b69f2566970607a35c97af08a,",
+      "name": "KOSAF/Source/18/Medium/AUTO-Auto/PERCENT-0",
+      "font": {
+        "family": "Noto Sans KR",
+        "style": "Medium",
+        "variationSettings": {
+          "wght": 500
+        }
+      },
+      "size": 18,
+      "lineHeight": {
+        "unit": "AUTO"
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "boundVariables": {
+        "fontFamily": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:220:570"
+        }
+      },
+      "description": "Exact source typography; MOEAkEbXtwHdE3xveg2Gto node 1:86012. Retained to avoid layout reflow; canonical 9 styles remain recommended for new UI."
+    },
+    {
+      "id": "S:40cd863279768c23c71ef85a05afbbd029be0c34,",
+      "name": "KOSAF/Source/15/Regular/PIXELS-15/PIXELS--0.4",
+      "font": {
+        "family": "Noto Sans KR",
+        "style": "Regular",
+        "variationSettings": {
+          "wght": 400
+        }
+      },
+      "size": 15,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 15
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -0.4000000059604645
+      },
+      "boundVariables": {
+        "fontFamily": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:220:570"
+        }
+      },
+      "description": "Exact source typography; MOEAkEbXtwHdE3xveg2Gto node 1:86033. Retained to avoid layout reflow; canonical 9 styles remain recommended for new UI."
+    },
+    {
+      "id": "S:cdadf67f1098fa9b46c1c3798eb18f1379a38b47,",
+      "name": "KOSAF/Source/14/Regular/AUTO-Auto/PERCENT-0",
+      "font": {
+        "family": "Noto Sans KR",
+        "style": "Regular",
+        "variationSettings": {
+          "wght": 400
+        }
+      },
+      "size": 14,
+      "lineHeight": {
+        "unit": "AUTO"
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "boundVariables": {
+        "fontFamily": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:220:570"
+        }
+      },
+      "description": "Exact source typography; MOEAkEbXtwHdE3xveg2Gto node 1:86054. Retained to avoid layout reflow; canonical 9 styles remain recommended for new UI."
+    },
+    {
+      "id": "S:f09a7e76bb03d27483eddd4a8f8bb49ac1e2ef74,",
+      "name": "KOSAF/Source/15/Medium/AUTO-Auto/PERCENT-0",
+      "font": {
+        "family": "Noto Sans KR",
+        "style": "Medium",
+        "variationSettings": {
+          "wght": 500
+        }
+      },
+      "size": 15,
+      "lineHeight": {
+        "unit": "AUTO"
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "boundVariables": {
+        "fontFamily": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:220:570"
+        }
+      },
+      "description": "Exact source typography; MOEAkEbXtwHdE3xveg2Gto node 1:86060. Retained to avoid layout reflow; canonical 9 styles remain recommended for new UI."
+    },
+    {
+      "id": "S:be74b23ca9cdd98e83bdb7a48efe9a0123a53bc9,",
+      "name": "KOSAF/Source/20/Bold/AUTO-Auto/PERCENT-0",
+      "font": {
+        "family": "Noto Sans KR",
+        "style": "Bold",
+        "variationSettings": {
+          "wght": 700
+        }
+      },
+      "size": 20,
+      "lineHeight": {
+        "unit": "AUTO"
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "boundVariables": {
+        "fontFamily": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:220:570"
+        }
+      },
+      "description": "Exact source typography; MOEAkEbXtwHdE3xveg2Gto node 1:86073. Retained to avoid layout reflow; canonical 9 styles remain recommended for new UI."
+    },
+    {
+      "id": "S:d40a4aac5ac0d0d201308779324381b7284c5ca5,",
+      "name": "KOSAF/Source/20/Medium/AUTO-Auto/PERCENT-0",
+      "font": {
+        "family": "Noto Sans KR",
+        "style": "Medium",
+        "variationSettings": {
+          "wght": 500
+        }
+      },
+      "size": 20,
+      "lineHeight": {
+        "unit": "AUTO"
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "boundVariables": {
+        "fontFamily": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:220:570"
+        }
+      },
+      "description": "Exact source typography; MOEAkEbXtwHdE3xveg2Gto node 1:86073. Retained to avoid layout reflow; canonical 9 styles remain recommended for new UI."
+    },
+    {
+      "id": "S:e379a54f630facf377c8e907cd59ba07a38cd65f,",
+      "name": "KOSAF/Source/15/Regular/AUTO-Auto/PERCENT-0",
+      "font": {
+        "family": "Noto Sans KR",
+        "style": "Regular",
+        "variationSettings": {
+          "wght": 400
+        }
+      },
+      "size": 15,
+      "lineHeight": {
+        "unit": "AUTO"
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "boundVariables": {
+        "fontFamily": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:220:570"
+        }
+      },
+      "description": "Exact source typography; MOEAkEbXtwHdE3xveg2Gto node 1:86080. Retained to avoid layout reflow; canonical 9 styles remain recommended for new UI."
+    },
+    {
+      "id": "S:540af90d8d357e4e662675ae611fa3a0efd86304,",
+      "name": "KOSAF/Source/15/Bold/AUTO-Auto/PERCENT-0",
+      "font": {
+        "family": "Noto Sans KR",
+        "style": "Bold",
+        "variationSettings": {
+          "wght": 700
+        }
+      },
+      "size": 15,
+      "lineHeight": {
+        "unit": "AUTO"
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "boundVariables": {
+        "fontFamily": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:220:570"
+        }
+      },
+      "description": "Exact source typography; MOEAkEbXtwHdE3xveg2Gto node 1:86080. Retained to avoid layout reflow; canonical 9 styles remain recommended for new UI."
+    },
+    {
+      "id": "S:3e6a0d211dc675cd24ace6364b864ede454cbc23,",
+      "name": "KOSAF/Source/24/Bold/AUTO-Auto/PERCENT-0",
+      "font": {
+        "family": "Noto Sans KR",
+        "style": "Bold",
+        "variationSettings": {
+          "wght": 700
+        }
+      },
+      "size": 24,
+      "lineHeight": {
+        "unit": "AUTO"
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "boundVariables": {
+        "fontFamily": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:220:570"
+        }
+      },
+      "description": "Exact source typography; MOEAkEbXtwHdE3xveg2Gto node 1:86080. Retained to avoid layout reflow; canonical 9 styles remain recommended for new UI."
+    },
+    {
+      "id": "S:c8f7c45629142f7ff1e619c2947688a08203d381,",
+      "name": "KOSAF/Source/14/Medium/AUTO-Auto/PERCENT-0",
+      "font": {
+        "family": "Noto Sans KR",
+        "style": "Medium",
+        "variationSettings": {
+          "wght": 500
+        }
+      },
+      "size": 14,
+      "lineHeight": {
+        "unit": "AUTO"
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "boundVariables": {
+        "fontFamily": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:220:570"
+        }
+      },
+      "description": "Exact source typography; MOEAkEbXtwHdE3xveg2Gto node 1:86094. Retained to avoid layout reflow; canonical 9 styles remain recommended for new UI."
+    },
+    {
+      "id": "S:96efe73ca58f12e2d3375129f9e459e9006d5cce,",
+      "name": "KOSAF/Source/24/Medium/PERCENT-152.8/PERCENT-0",
+      "font": {
+        "family": "Noto Sans KR",
+        "style": "Medium",
+        "variationSettings": {
+          "wght": 500
+        }
+      },
+      "size": 24,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 152.7999997138977
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "boundVariables": {
+        "fontFamily": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:220:570"
+        }
+      },
+      "description": "Exact source typography; MOEAkEbXtwHdE3xveg2Gto node 1:86103. Retained to avoid layout reflow; canonical 9 styles remain recommended for new UI."
+    },
+    {
+      "id": "S:4ba101510a831db673e89e0bd6a8bc9dff0744dc,",
+      "name": "KOSAF/Source/40/Bold/AUTO-Auto/PERCENT-0",
+      "font": {
+        "family": "Noto Sans KR",
+        "style": "Bold",
+        "variationSettings": {
+          "wght": 700
+        }
+      },
+      "size": 40,
+      "lineHeight": {
+        "unit": "AUTO"
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "boundVariables": {
+        "fontFamily": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:220:570"
+        }
+      },
+      "description": "Exact source typography; MOEAkEbXtwHdE3xveg2Gto node 1:86141. Retained to avoid layout reflow; canonical 9 styles remain recommended for new UI."
+    },
+    {
+      "id": "S:551dd98f6c7b18ac29cb8d6104b74976118f2e4b,",
+      "name": "KOSAF/Source/15/Medium/PIXELS-15/PERCENT-0",
+      "font": {
+        "family": "Noto Sans KR",
+        "style": "Medium",
+        "variationSettings": {
+          "wght": 500
+        }
+      },
+      "size": 15,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 15
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "boundVariables": {
+        "fontFamily": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:220:570"
+        }
+      },
+      "description": "Exact source typography; MOEAkEbXtwHdE3xveg2Gto node 1:86226. Retained to avoid layout reflow; canonical 9 styles remain recommended for new UI."
+    },
+    {
+      "id": "S:8f568c3558dd396840e842c6a2c43cf0ee406835,",
+      "name": "KOSAF/Source/20/Medium/PIXELS-20/PERCENT-0",
+      "font": {
+        "family": "Noto Sans KR",
+        "style": "Medium",
+        "variationSettings": {
+          "wght": 500
+        }
+      },
+      "size": 20,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 20
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "boundVariables": {
+        "fontFamily": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:220:570"
+        }
+      },
+      "description": "Exact source typography; MOEAkEbXtwHdE3xveg2Gto node 1:86227. Retained to avoid layout reflow; canonical 9 styles remain recommended for new UI."
+    },
+    {
+      "id": "S:016ed7e4c56957a8be5ae95691387a5bd3c4d748,",
+      "name": "KOSAF/Source/16/Medium/PIXELS-16/PERCENT-0",
+      "font": {
+        "family": "Noto Sans KR",
+        "style": "Medium",
+        "variationSettings": {
+          "wght": 500
+        }
+      },
+      "size": 16,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 16
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "boundVariables": {
+        "fontFamily": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:220:570"
+        }
+      },
+      "description": "Exact source typography; MOEAkEbXtwHdE3xveg2Gto node 1:86236. Retained to avoid layout reflow; canonical 9 styles remain recommended for new UI."
+    },
+    {
+      "id": "S:73a7a2aabaa0f0c70bb316ff97f961c70460b8a2,",
+      "name": "KOSAF/Source/22/Medium/AUTO-Auto/PERCENT-0",
+      "font": {
+        "family": "Noto Sans KR",
+        "style": "Medium",
+        "variationSettings": {
+          "wght": 500
+        }
+      },
+      "size": 22,
+      "lineHeight": {
+        "unit": "AUTO"
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "boundVariables": {
+        "fontFamily": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:220:570"
+        }
+      },
+      "description": "Exact source typography; MOEAkEbXtwHdE3xveg2Gto node 1:87363. Retained to avoid layout reflow; canonical 9 styles remain recommended for new UI."
+    },
+    {
+      "id": "S:889548617c1ef02a7836b981d708d066f3f66f64,",
+      "name": "KOSAF/Source/22/Regular/PIXELS-34/PERCENT-0",
+      "font": {
+        "family": "Noto Sans KR",
+        "style": "Regular",
+        "variationSettings": {
+          "wght": 400
+        }
+      },
+      "size": 22,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 34
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "boundVariables": {
+        "fontFamily": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:220:570"
+        }
+      },
+      "description": "Exact source typography; MOEAkEbXtwHdE3xveg2Gto node 1:87379. Retained to avoid layout reflow; canonical 9 styles remain recommended for new UI."
+    },
+    {
+      "id": "S:302f7f59796b1e09ad92af5fcdef21abac2ff1ba,",
+      "name": "KOSAF/Source/18/Medium/PIXELS-18/PERCENT-0",
+      "font": {
+        "family": "Noto Sans KR",
+        "style": "Medium",
+        "variationSettings": {
+          "wght": 500
+        }
+      },
+      "size": 18,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 18
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "boundVariables": {
+        "fontFamily": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:220:570"
+        }
+      },
+      "description": "Exact source typography; MOEAkEbXtwHdE3xveg2Gto node 1:87389. Retained to avoid layout reflow; canonical 9 styles remain recommended for new UI."
+    },
+    {
+      "id": "S:59ff98df14da0419b034a9dab519a31ec9f589d8,",
+      "name": "KOSAF/Source/14/Regular/PIXELS-14/PERCENT-0",
+      "font": {
+        "family": "Noto Sans KR",
+        "style": "Regular",
+        "variationSettings": {
+          "wght": 400
+        }
+      },
+      "size": 14,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 14
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "boundVariables": {
+        "fontFamily": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:220:570"
+        }
+      },
+      "description": "Exact source typography; MOEAkEbXtwHdE3xveg2Gto node 1:87492. Retained to avoid layout reflow; canonical 9 styles remain recommended for new UI."
+    },
+    {
+      "id": "S:93a0322327132ee7c597c613d14998ce82919bd7,",
+      "name": "KOSAF/Source/16/Medium/AUTO-Auto/PERCENT-0",
+      "font": {
+        "family": "Noto Sans KR",
+        "style": "Medium",
+        "variationSettings": {
+          "wght": 500
+        }
+      },
+      "size": 16,
+      "lineHeight": {
+        "unit": "AUTO"
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "boundVariables": {
+        "fontFamily": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:220:570"
+        }
+      },
+      "description": "Exact source typography; MOEAkEbXtwHdE3xveg2Gto node 1:86778. Retained to avoid layout reflow; canonical 9 styles remain recommended for new UI."
+    },
+    {
+      "id": "S:94cb4aca4a304c6c012df3b9c1920c06f9301691,",
+      "name": "KOSAF/Source/16/Regular/AUTO-Auto/PERCENT-0",
+      "font": {
+        "family": "Noto Sans KR",
+        "style": "Regular",
+        "variationSettings": {
+          "wght": 400
+        }
+      },
+      "size": 16,
+      "lineHeight": {
+        "unit": "AUTO"
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "boundVariables": {
+        "fontFamily": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:220:570"
+        }
+      },
+      "description": "Exact source typography; MOEAkEbXtwHdE3xveg2Gto node 1:86813. Retained to avoid layout reflow; canonical 9 styles remain recommended for new UI."
+    },
+    {
+      "id": "S:114e91760ba84c0d165e62004c4b5478683ff31e,",
+      "name": "KOSAF/Source/30/Medium/AUTO-Auto/PERCENT-0",
+      "font": {
+        "family": "Noto Sans KR",
+        "style": "Medium",
+        "variationSettings": {
+          "wght": 500
+        }
+      },
+      "size": 30,
+      "lineHeight": {
+        "unit": "AUTO"
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "boundVariables": {
+        "fontFamily": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:220:570"
+        }
+      },
+      "description": "Exact source typography; MOEAkEbXtwHdE3xveg2Gto node 1:86816. Retained to avoid layout reflow; canonical 9 styles remain recommended for new UI."
+    },
+    {
+      "id": "S:041c9e457748cd39113cd0e6477377cbaa08a575,",
+      "name": "KOSAF/Source/24/Regular/AUTO-Auto/PERCENT-0",
+      "font": {
+        "family": "Noto Sans KR",
+        "style": "Regular",
+        "variationSettings": {
+          "wght": 400
+        }
+      },
+      "size": 24,
+      "lineHeight": {
+        "unit": "AUTO"
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "boundVariables": {
+        "fontFamily": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:220:570"
+        }
+      },
+      "description": "Exact source typography; MOEAkEbXtwHdE3xveg2Gto node 1:86826. Retained to avoid layout reflow; canonical 9 styles remain recommended for new UI."
+    },
+    {
+      "id": "S:346d5e7fbb9b30f9ec3c27d22d1ea46d35d7a50c,",
+      "name": "KOSAF/Source/24/Regular/PIXELS-24/PERCENT-0",
+      "font": {
+        "family": "Noto Sans KR",
+        "style": "Regular",
+        "variationSettings": {
+          "wght": 400
+        }
+      },
+      "size": 24,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 24
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "boundVariables": {
+        "fontFamily": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:220:570"
+        }
+      },
+      "description": "Exact source typography; MOEAkEbXtwHdE3xveg2Gto node 1:86833. Retained to avoid layout reflow; canonical 9 styles remain recommended for new UI."
+    },
+    {
+      "id": "S:bbc2ee110c384c255a74f4a25de0e863a9949bd0,",
+      "name": "KOSAF/Source/22/Regular/AUTO-Auto/PERCENT-0",
+      "font": {
+        "family": "Noto Sans KR",
+        "style": "Regular",
+        "variationSettings": {
+          "wght": 400
+        }
+      },
+      "size": 22,
+      "lineHeight": {
+        "unit": "AUTO"
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "boundVariables": {
+        "fontFamily": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:220:570"
+        }
+      },
+      "description": "Exact source typography; MOEAkEbXtwHdE3xveg2Gto node 1:86849. Retained to avoid layout reflow; canonical 9 styles remain recommended for new UI."
+    },
+    {
+      "id": "S:3c38fc771d029b58209b6e53dc3388d311b72e5d,",
+      "name": "KOSAF/Source/18/Bold/PIXELS-18/PERCENT-0",
+      "font": {
+        "family": "Noto Sans KR",
+        "style": "Bold",
+        "variationSettings": {
+          "wght": 700
+        }
+      },
+      "size": 18,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 18
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "boundVariables": {
+        "fontFamily": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:220:570"
+        }
+      },
+      "description": "Exact source typography; MOEAkEbXtwHdE3xveg2Gto node 1:90861. Retained to avoid layout reflow; canonical 9 styles remain recommended for new UI."
+    },
+    {
+      "id": "S:37a2f564439561c033d5de922d0064d57ac82a48,",
+      "name": "KOSAF/Source/40/Medium/AUTO-Auto/PERCENT-0",
+      "font": {
+        "family": "Noto Sans KR",
+        "style": "Medium",
+        "variationSettings": {
+          "wght": 500
+        }
+      },
+      "size": 40,
+      "lineHeight": {
+        "unit": "AUTO"
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "boundVariables": {
+        "fontFamily": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:220:570"
+        }
+      },
+      "description": "Exact source typography; MOEAkEbXtwHdE3xveg2Gto node 1:87404. Retained to avoid layout reflow; canonical 9 styles remain recommended for new UI."
+    },
+    {
+      "id": "S:5cb1a02da66d79616a82cadfb24a293e60698dd7,",
+      "name": "KOSAF/Source/20/Regular/AUTO-Auto/PERCENT-0",
+      "font": {
+        "family": "Noto Sans KR",
+        "style": "Regular",
+        "variationSettings": {
+          "wght": 400
+        }
+      },
+      "size": 20,
+      "lineHeight": {
+        "unit": "AUTO"
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "boundVariables": {
+        "fontFamily": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:220:570"
+        }
+      },
+      "description": "Exact source typography; MOEAkEbXtwHdE3xveg2Gto node 1:87406. Retained to avoid layout reflow; canonical 9 styles remain recommended for new UI."
+    },
+    {
+      "id": "S:cc4c242f7509d0230986ca30eb57fca6a9236b03,",
+      "name": "KOSAF/Source/16/Regular/PIXELS-16/PERCENT-0",
+      "font": {
+        "family": "Noto Sans KR",
+        "style": "Regular",
+        "variationSettings": {
+          "wght": 400
+        }
+      },
+      "size": 16,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 16
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "boundVariables": {
+        "fontFamily": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:220:570"
+        }
+      },
+      "description": "Exact source typography; MOEAkEbXtwHdE3xveg2Gto node 1:88169. Retained to avoid layout reflow; canonical 9 styles remain recommended for new UI."
+    },
+    {
+      "id": "S:0aef0c413a341ff341680b51c48e6fb4de36d9d8,",
+      "name": "KOSAF/Source/20/Medium/PIXELS-52/PIXELS--0.4",
+      "font": {
+        "family": "Noto Sans KR",
+        "style": "Medium",
+        "variationSettings": {
+          "wght": 500
+        }
+      },
+      "size": 20,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 52
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -0.4000000059604645
+      },
+      "boundVariables": {
+        "fontFamily": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:220:570"
+        }
+      },
+      "description": "Exact source typography; MOEAkEbXtwHdE3xveg2Gto node 1:88174. Retained to avoid layout reflow; canonical 9 styles remain recommended for new UI."
+    },
+    {
+      "id": "S:e7d01b68fd2eedcda191a62d3ef66acc9fcef380,",
+      "name": "KOSAF/Source/24/Medium/AUTO-Auto/PERCENT-0",
+      "font": {
+        "family": "Noto Sans KR",
+        "style": "Medium",
+        "variationSettings": {
+          "wght": 500
+        }
+      },
+      "size": 24,
+      "lineHeight": {
+        "unit": "AUTO"
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "boundVariables": {
+        "fontFamily": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:220:570"
+        }
+      },
+      "description": "Exact source typography; MOEAkEbXtwHdE3xveg2Gto node 1:88279. Retained to avoid layout reflow; canonical 9 styles remain recommended for new UI."
+    },
+    {
+      "id": "S:beedcdd15d753d2d9969cc8b152f8bffbca894df,",
+      "name": "KOSAF/Source/24/Bold/PIXELS-24/PERCENT-0",
+      "font": {
+        "family": "Noto Sans KR",
+        "style": "Bold",
+        "variationSettings": {
+          "wght": 700
+        }
+      },
+      "size": 24,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 24
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "boundVariables": {
+        "fontFamily": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:220:570"
+        }
+      },
+      "description": "Exact source typography; MOEAkEbXtwHdE3xveg2Gto node 1:88297. Retained to avoid layout reflow; canonical 9 styles remain recommended for new UI."
+    },
+    {
+      "id": "S:298b225795ba57de222ea1a90ffca1c1d9cc6fc6,",
+      "name": "KOSAF/Source/18/Regular/PIXELS-18/PIXELS-0",
+      "font": {
+        "family": "Noto Sans KR",
+        "style": "Regular",
+        "variationSettings": {
+          "wght": 400
+        }
+      },
+      "size": 18,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 18
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": 0
+      },
+      "boundVariables": {
+        "fontFamily": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:220:570"
+        }
+      },
+      "description": "Exact source typography; MOEAkEbXtwHdE3xveg2Gto node 1:88378. Retained to avoid layout reflow; canonical 9 styles remain recommended for new UI."
+    },
+    {
+      "id": "S:98f616c66d7822392c07585f00d64c68eddd1417,",
+      "name": "KOSAF/Source/16/Bold/AUTO-Auto/PERCENT-0",
+      "font": {
+        "family": "Noto Sans KR",
+        "style": "Bold",
+        "variationSettings": {
+          "wght": 700
+        }
+      },
+      "size": 16,
+      "lineHeight": {
+        "unit": "AUTO"
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "boundVariables": {
+        "fontFamily": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:220:570"
+        }
+      },
+      "description": "Exact source typography; MOEAkEbXtwHdE3xveg2Gto node 1:89455. Retained to avoid layout reflow; canonical 9 styles remain recommended for new UI."
+    },
+    {
+      "id": "S:436386b728b538a8afcb21f24d9547c533792f62,",
+      "name": "KOSAF/Source/16/Medium/PERCENT-152.8/PERCENT-0",
+      "font": {
+        "family": "Noto Sans KR",
+        "style": "Medium",
+        "variationSettings": {
+          "wght": 500
+        }
+      },
+      "size": 16,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 152.7999997138977
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "boundVariables": {
+        "fontFamily": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:220:570"
+        }
+      },
+      "description": "Exact source typography; MOEAkEbXtwHdE3xveg2Gto node 1:90373. Retained to avoid layout reflow; canonical 9 styles remain recommended for new UI."
+    },
+    {
+      "id": "S:18e923873a0146fe9a1443a2b14668e904644d9f,",
+      "name": "KOSAF/Source/16/Bold/PERCENT-152.8/PERCENT-0",
+      "font": {
+        "family": "Noto Sans KR",
+        "style": "Bold",
+        "variationSettings": {
+          "wght": 700
+        }
+      },
+      "size": 16,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 152.7999997138977
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "boundVariables": {
+        "fontFamily": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:220:570"
+        }
+      },
+      "description": "Exact source typography; MOEAkEbXtwHdE3xveg2Gto node 1:90389. Retained to avoid layout reflow; canonical 9 styles remain recommended for new UI."
+    },
+    {
+      "id": "S:8f8ed611ec17f38b10d5baa27a6e8ae40b2b7f5d,",
+      "name": "KOSAF/Source/22/Bold/AUTO-Auto/PERCENT-0",
+      "font": {
+        "family": "Noto Sans KR",
+        "style": "Bold",
+        "variationSettings": {
+          "wght": 700
+        }
+      },
+      "size": 22,
+      "lineHeight": {
+        "unit": "AUTO"
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "boundVariables": {
+        "fontFamily": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:220:570"
+        }
+      },
+      "description": "Exact source typography; MOEAkEbXtwHdE3xveg2Gto node 1:90942. Retained to avoid layout reflow; canonical 9 styles remain recommended for new UI."
+    },
+    {
+      "id": "S:e7e1f5bac610a32c1dd952796f883c465207df86,",
+      "name": "KOSAF/Source/16/Regular/PIXELS-24/PIXELS--0.4",
+      "font": {
+        "family": "Noto Sans KR",
+        "style": "Regular",
+        "variationSettings": {
+          "wght": 400
+        }
+      },
+      "size": 16,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 24
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -0.4000000059604645
+      },
+      "boundVariables": {
+        "fontFamily": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:220:570"
+        }
+      },
+      "description": "Exact source typography; MOEAkEbXtwHdE3xveg2Gto node 1:91164. Retained to avoid layout reflow; canonical 9 styles remain recommended for new UI."
+    },
+    {
+      "id": "S:cd23644327e6d434ff11fd49e8fd584b2d29e827,",
+      "name": "KOSAF/Source/24/Regular/PIXELS-30/PIXELS--0.4",
+      "font": {
+        "family": "Noto Sans KR",
+        "style": "Regular",
+        "variationSettings": {
+          "wght": 400
+        }
+      },
+      "size": 24,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 30
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -0.4000000059604645
+      },
+      "boundVariables": {
+        "fontFamily": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:220:570"
+        }
+      },
+      "description": "Exact source typography; MOEAkEbXtwHdE3xveg2Gto node 1:91165. Retained to avoid layout reflow; canonical 9 styles remain recommended for new UI."
+    },
+    {
+      "id": "S:403970491ed99cf184422607c752c817ddbdcf17,",
+      "name": "KOSAF/Source/24/Bold/PIXELS-38/PIXELS--0.4",
+      "font": {
+        "family": "Noto Sans KR",
+        "style": "Bold",
+        "variationSettings": {
+          "wght": 700
+        }
+      },
+      "size": 24,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 38
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -0.4000000059604645
+      },
+      "boundVariables": {
+        "fontFamily": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:220:570"
+        }
+      },
+      "description": "Exact source typography; MOEAkEbXtwHdE3xveg2Gto node 1:91166. Retained to avoid layout reflow; canonical 9 styles remain recommended for new UI."
+    },
+    {
+      "id": "S:bb4123ea79b329e8be977f774e4a1d8c4ac1cde0,",
+      "name": "KOSAF/Source/15/Bold/PIXELS-38/PIXELS--0.4",
+      "font": {
+        "family": "Noto Sans KR",
+        "style": "Bold",
+        "variationSettings": {
+          "wght": 700
+        }
+      },
+      "size": 15,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 38
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -0.4000000059604645
+      },
+      "boundVariables": {
+        "fontFamily": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:220:570"
+        }
+      },
+      "description": "Exact source typography; MOEAkEbXtwHdE3xveg2Gto node 1:91166. Retained to avoid layout reflow; canonical 9 styles remain recommended for new UI."
+    },
+    {
+      "id": "S:2167bd05aa290e6c412f7420436300b211a14285,",
+      "name": "KOSAF/Source/14/Bold/AUTO-Auto/PERCENT-0",
+      "font": {
+        "family": "Noto Sans KR",
+        "style": "Bold",
+        "variationSettings": {
+          "wght": 700
+        }
+      },
+      "size": 14,
+      "lineHeight": {
+        "unit": "AUTO"
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "boundVariables": {
+        "fontFamily": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:220:570"
+        }
+      },
+      "description": "Exact source typography; MOEAkEbXtwHdE3xveg2Gto node 1:91518. Retained to avoid layout reflow; canonical 9 styles remain recommended for new UI."
+    },
+    {
+      "id": "S:c25106fe03b217ac4a24ddf977900b89939d6a77,",
+      "name": "KOSAF/Source/14/Regular/PIXELS-16/PERCENT-0",
+      "font": {
+        "family": "Noto Sans KR",
+        "style": "Regular",
+        "variationSettings": {
+          "wght": 400
+        }
+      },
+      "size": 14,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 16
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "boundVariables": {
+        "fontFamily": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:220:570"
+        }
+      },
+      "description": "Exact source typography; MOEAkEbXtwHdE3xveg2Gto node 1:91768. Retained to avoid layout reflow; canonical 9 styles remain recommended for new UI."
+    },
+    {
+      "id": "S:e8b15c2061763d307126b3d48840b89611026ee7,",
+      "name": "KOSAF/Source/12/Regular/PIXELS-15/PIXELS--0.4",
+      "font": {
+        "family": "Noto Sans KR",
+        "style": "Regular",
+        "variationSettings": {
+          "wght": 400
+        }
+      },
+      "size": 12,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 15
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -0.4000000059604645
+      },
+      "boundVariables": {
+        "fontFamily": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:220:570"
+        }
+      },
+      "description": "Exact source typography; MOEAkEbXtwHdE3xveg2Gto node 1:92160. Retained to avoid layout reflow; canonical 9 styles remain recommended for new UI."
+    },
+    {
+      "id": "S:07966ddd970e89922ee1472fafe72deac9630d74,",
+      "name": "KOSAF/Source/14/Regular/PIXELS-14/PIXELS-0",
+      "font": {
+        "family": "Noto Sans KR",
+        "style": "Regular",
+        "variationSettings": {
+          "wght": 400
+        }
+      },
+      "size": 14,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 14
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": 0
+      },
+      "boundVariables": {
+        "fontFamily": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:220:570"
+        }
+      },
+      "description": "Exact source typography; MOEAkEbXtwHdE3xveg2Gto node 1:92161. Retained to avoid layout reflow; canonical 9 styles remain recommended for new UI."
+    },
+    {
+      "id": "S:eeca3f1243272bd91a94da94677a9e1ebd356290,",
+      "name": "KOSAF/Source/14/Regular/PIXELS-12/PERCENT-0",
+      "font": {
+        "family": "Noto Sans KR",
+        "style": "Regular",
+        "variationSettings": {
+          "wght": 400
+        }
+      },
+      "size": 14,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 12
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "boundVariables": {
+        "fontFamily": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:220:570"
+        }
+      },
+      "description": "Exact source typography; MOEAkEbXtwHdE3xveg2Gto node 1:92179. Retained to avoid layout reflow; canonical 9 styles remain recommended for new UI."
+    },
+    {
+      "id": "S:5c86612863cee13937b153f2d63a414660f284be,",
+      "name": "KOSAF/Source/14/Medium/PIXELS-15/PERCENT-0",
+      "font": {
+        "family": "Noto Sans KR",
+        "style": "Medium",
+        "variationSettings": {
+          "wght": 500
+        }
+      },
+      "size": 14,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 15
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "boundVariables": {
+        "fontFamily": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:220:570"
+        }
+      },
+      "description": "Exact source typography; MOEAkEbXtwHdE3xveg2Gto node 1:92180. Retained to avoid layout reflow; canonical 9 styles remain recommended for new UI."
+    },
+    {
+      "id": "S:9de5ac9b6a21e58ac19bd01b118270e3f14f0c95,",
+      "name": "KOSAF/Source/20/Regular/PIXELS-52/PIXELS--0.4",
+      "font": {
+        "family": "Noto Sans KR",
+        "style": "Regular",
+        "variationSettings": {
+          "wght": 400
+        }
+      },
+      "size": 20,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 52
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -0.4000000059604645
+      },
+      "boundVariables": {
+        "fontFamily": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:220:570"
+        }
+      },
+      "description": "Exact source typography; MOEAkEbXtwHdE3xveg2Gto node 1:93126. Retained to avoid layout reflow; canonical 9 styles remain recommended for new UI."
+    },
+    {
+      "id": "S:0e875b5a7968ad695cdef8fbd4862e20ffb0e8f1,",
+      "name": "KOSAF/Source/24/Bold/PIXELS-30/PIXELS--0.4",
+      "font": {
+        "family": "Noto Sans KR",
+        "style": "Bold",
+        "variationSettings": {
+          "wght": 700
+        }
+      },
+      "size": 24,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 30
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -0.4000000059604645
+      },
+      "boundVariables": {
+        "fontFamily": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:220:570"
+        }
+      },
+      "description": "Exact source typography; MOEAkEbXtwHdE3xveg2Gto node 1:94289. Retained to avoid layout reflow; canonical 9 styles remain recommended for new UI."
+    },
+    {
+      "id": "S:05f1629a414e7b282bd45b89f864f6ffcf7bb5cb,",
+      "name": "KOSAF/Source/30/Regular/AUTO-Auto/PERCENT-0",
+      "font": {
+        "family": "Noto Sans KR",
+        "style": "Regular",
+        "variationSettings": {
+          "wght": 400
+        }
+      },
+      "size": 30,
+      "lineHeight": {
+        "unit": "AUTO"
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "boundVariables": {
+        "fontFamily": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:220:570"
+        }
+      },
+      "description": "Exact source typography; MOEAkEbXtwHdE3xveg2Gto node 1:96985. Retained to avoid layout reflow; canonical 9 styles remain recommended for new UI."
+    },
+    {
+      "id": "S:2484aa11431724fd1dfe200f8a44a11cb2729992,",
+      "name": "KOSAF/Source/16/Regular/PIXELS-19.5/PIXELS--0.4",
+      "font": {
+        "family": "Noto Sans KR",
+        "style": "Regular",
+        "variationSettings": {
+          "wght": 400
+        }
+      },
+      "size": 16,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 19.5
+      },
+      "letterSpacing": {
+        "unit": "PIXELS",
+        "value": -0.4000000059604645
+      },
+      "boundVariables": {
+        "fontFamily": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:220:570"
+        }
+      },
+      "description": "Exact source typography; MOEAkEbXtwHdE3xveg2Gto node 1:98143. Retained to avoid layout reflow; canonical 9 styles remain recommended for new UI."
+    },
+    {
+      "id": "S:329d93dadf73325af8adb63a0dc6caec92ad5536,",
+      "name": "KOSAF/Source/24/Regular/PIXELS-34/PERCENT-0",
+      "font": {
+        "family": "Noto Sans KR",
+        "style": "Regular",
+        "variationSettings": {
+          "wght": 400
+        }
+      },
+      "size": 24,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 34
+      },
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "boundVariables": {
+        "fontFamily": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:220:570"
+        }
+      },
+      "description": "Exact source typography; MOEAkEbXtwHdE3xveg2Gto node 1:99661. Retained to avoid layout reflow; canonical 9 styles remain recommended for new UI."
+    }
+  ],
+  "components": [
+    {
+      "id": "218:590",
+      "name": "KOSAF/Button",
+      "type": "COMPONENT_SET",
+      "parent": "218:570",
+      "variants": [
+        {
+          "id": "218:572",
+          "name": "Style=Primary, State=Default"
+        },
+        {
+          "id": "218:574",
+          "name": "Style=Primary, State=Hover"
+        },
+        {
+          "id": "218:576",
+          "name": "Style=Primary, State=Disabled"
+        },
+        {
+          "id": "218:578",
+          "name": "Style=Secondary, State=Default"
+        },
+        {
+          "id": "218:580",
+          "name": "Style=Secondary, State=Hover"
+        },
+        {
+          "id": "218:582",
+          "name": "Style=Secondary, State=Disabled"
+        },
+        {
+          "id": "218:584",
+          "name": "Style=Danger, State=Default"
+        },
+        {
+          "id": "218:586",
+          "name": "Style=Danger, State=Hover"
+        },
+        {
+          "id": "218:588",
+          "name": "Style=Danger, State=Disabled"
+        },
+        {
+          "id": "223:570",
+          "name": "Style=Primary, State=Focus"
+        },
+        {
+          "id": "223:572",
+          "name": "Style=Secondary, State=Focus"
+        }
+      ]
+    },
+    {
+      "id": "218:600",
+      "name": "KOSAF/Input",
+      "type": "COMPONENT_SET",
+      "parent": "218:570",
+      "variants": [
+        {
+          "id": "218:592",
+          "name": "State=Default"
+        },
+        {
+          "id": "218:594",
+          "name": "State=Focus"
+        },
+        {
+          "id": "218:596",
+          "name": "State=Error"
+        },
+        {
+          "id": "218:598",
+          "name": "State=Disabled"
+        }
+      ]
+    },
+    {
+      "id": "218:608",
+      "name": "KOSAF/Checkbox",
+      "type": "COMPONENT_SET",
+      "parent": "218:570",
+      "variants": [
+        {
+          "id": "218:603",
+          "name": "State=Unchecked"
+        },
+        {
+          "id": "218:604",
+          "name": "State=Checked"
+        },
+        {
+          "id": "218:606",
+          "name": "State=Focus"
+        },
+        {
+          "id": "218:607",
+          "name": "State=Disabled"
+        }
+      ]
+    },
+    {
+      "id": "218:614",
+      "name": "KOSAF/Radio",
+      "type": "COMPONENT_SET",
+      "parent": "218:570",
+      "variants": [
+        {
+          "id": "218:609",
+          "name": "State=Unchecked"
+        },
+        {
+          "id": "218:610",
+          "name": "State=Checked"
+        },
+        {
+          "id": "218:612",
+          "name": "State=Focus"
+        },
+        {
+          "id": "218:613",
+          "name": "State=Disabled"
+        }
+      ]
+    },
+    {
+      "id": "218:620",
+      "name": "KOSAF/Tab",
+      "type": "COMPONENT_SET",
+      "parent": "218:570",
+      "variants": [
+        {
+          "id": "218:616",
+          "name": "State=Default"
+        },
+        {
+          "id": "218:618",
+          "name": "State=Selected"
+        }
+      ]
+    },
+    {
+      "id": "218:631",
+      "name": "KOSAF/PaginationItem",
+      "type": "COMPONENT_SET",
+      "parent": "218:570",
+      "variants": [
+        {
+          "id": "218:623",
+          "name": "State=Default"
+        },
+        {
+          "id": "218:625",
+          "name": "State=Hover"
+        },
+        {
+          "id": "218:627",
+          "name": "State=Selected"
+        },
+        {
+          "id": "218:629",
+          "name": "State=Disabled"
+        }
+      ]
+    },
+    {
+      "id": "218:637",
+      "name": "KOSAF/TableRow",
+      "type": "COMPONENT_SET",
+      "parent": "218:570",
+      "variants": [
+        {
+          "id": "218:633",
+          "name": "Device=Desktop"
+        },
+        {
+          "id": "218:635",
+          "name": "Device=Mobile"
+        }
+      ]
+    },
+    {
+      "id": "218:601",
+      "name": "KOSAF/Search",
+      "type": "COMPONENT",
+      "parent": "218:570"
+    },
+    {
+      "id": "218:621",
+      "name": "KOSAF/Badge",
+      "type": "COMPONENT",
+      "parent": "218:570"
+    },
+    {
+      "id": "218:639",
+      "name": "KOSAF/Modal",
+      "type": "COMPONENT",
+      "parent": "218:570"
+    },
+    {
+      "id": "218:642",
+      "name": "KOSAF/Stepper",
+      "type": "COMPONENT",
+      "parent": "218:570"
+    }
+  ]
+}

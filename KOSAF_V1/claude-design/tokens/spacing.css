@@ -1,0 +1,26 @@
+/* KOSAF_V1 · Spacing & radius — KOSAF/Layout (216:572)
+   Generated from uploads/figma-inventory.json (Figma SZ7AweGiHxzEDmEmuNi3LY). Comments carry Figma VariableIDs. */
+:root {
+  --kosaf-spacing-4: 4px; /* VariableID:216:616 */
+  --kosaf-spacing-8: 8px; /* VariableID:216:617 */
+  --kosaf-spacing-10: 10px; /* VariableID:216:618 */
+  --kosaf-spacing-12: 12px; /* VariableID:216:619 */
+  --kosaf-spacing-16: 16px; /* VariableID:216:620 */
+  --kosaf-spacing-20: 20px; /* VariableID:216:621 */
+  --kosaf-spacing-24: 24px; /* VariableID:216:622 */
+  --kosaf-spacing-30: 30px; /* VariableID:216:623 */
+  --kosaf-spacing-32: 32px; /* VariableID:216:624 */
+  --kosaf-spacing-40: 40px; /* VariableID:216:625 */
+  --kosaf-spacing-50: 50px; /* VariableID:216:626 */
+  --kosaf-spacing-60: 60px; /* VariableID:216:627 */
+  --kosaf-radius-2: 2px; /* VariableID:216:628 */
+  --kosaf-radius-3: 3px; /* VariableID:216:629 */
+  --kosaf-radius-5: 5px; /* VariableID:216:630 */
+  --kosaf-radius-10: 10px; /* VariableID:216:631 */
+  --kosaf-radius-16: 16px; /* VariableID:216:632 */
+  --kosaf-radius-20: 20px; /* VariableID:216:633 */
+  --kosaf-radius-25: 25px; /* VariableID:216:634 */
+  --kosaf-radius-30: 30px; /* VariableID:216:635 */
+  --kosaf-radius-40: 40px; /* VariableID:216:636 */
+  --kosaf-radius-full: 999px; /* VariableID:216:637 */
+}

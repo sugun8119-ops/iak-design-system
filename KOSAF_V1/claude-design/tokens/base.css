@@ -1,0 +1,10 @@
+/* KOSAF_V1 · Minimal base — light mode only */
+:root { color-scheme: light; }
+body { margin: 0; font-family: var(--kosaf-font); font-size: 16px; line-height: 24px; color: var(--kosaf-color-text-primary); background: var(--kosaf-color-bg-canvas); -webkit-font-smoothing: antialiased; }
+a { color: var(--kosaf-color-action-primary); text-decoration: none; }
+a:hover { color: var(--kosaf-color-action-primary-hover); text-decoration: underline; }
+/* Placeholder colour of KOSAF/Input + KOSAF/Search (218:593, 218:602 = #707070). Pseudo-elements cannot be inlined, so components add class="kosaf-field". */
+.kosaf-field::placeholder { color: var(--kosaf-color-text-secondary); opacity: 1; }
+.kosaf-field:disabled::placeholder { color: var(--kosaf-color-text-disabled); }
+.kosaf-field[type=search]::-webkit-search-cancel-button { -webkit-appearance: none; }
+:focus-visible { outline: 2px solid var(--kosaf-color-state-focus); outline-offset: 1px; }

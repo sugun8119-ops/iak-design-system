@@ -1,0 +1,66 @@
+/* KOSAF_V1 · Typography — font-family variable (220:570) + 9 canonical KOSAF text styles
+   Generated from uploads/figma-inventory.json (Figma SZ7AweGiHxzEDmEmuNi3LY). Comments carry Figma VariableIDs. */
+:root {
+  --kosaf-typography-font-family: "Noto Sans KR", sans-serif; /* VariableID:220:570 */
+  --kosaf-font: var(--kosaf-typography-font-family);
+  --kosaf-weight-regular: 400;
+  --kosaf-weight-medium: 500;
+  --kosaf-weight-bold: 700;
+
+  /* KOSAF/Display/40 · S:96df98ed6081a4dde9a4b7c355d06870df65f2e6, */
+  --kosaf-type-display-40: 700 40px/52px var(--kosaf-font);
+  --kosaf-type-display-40-size: 40px;
+  --kosaf-type-display-40-line: 52px;
+  --kosaf-type-display-40-weight: 700;
+  /* KOSAF/Heading/H1 · S:55ef3e0b96b40c874a96c7f058f3e5e362f2717b, */
+  --kosaf-type-heading-h1: 700 30px/40px var(--kosaf-font);
+  --kosaf-type-heading-h1-size: 30px;
+  --kosaf-type-heading-h1-line: 40px;
+  --kosaf-type-heading-h1-weight: 700;
+  /* KOSAF/Heading/H2 · S:3329c0505c8b3c0876ceda5fdcfa77c1e380aafb, */
+  --kosaf-type-heading-h2: 700 24px/34px var(--kosaf-font);
+  --kosaf-type-heading-h2-size: 24px;
+  --kosaf-type-heading-h2-line: 34px;
+  --kosaf-type-heading-h2-weight: 700;
+  /* KOSAF/Heading/H3 · S:5a2ed6bcafbf8b3735348bb5f1be6a9647dc4850, */
+  --kosaf-type-heading-h3: 500 22px/34px var(--kosaf-font);
+  --kosaf-type-heading-h3-size: 22px;
+  --kosaf-type-heading-h3-line: 34px;
+  --kosaf-type-heading-h3-weight: 500;
+  /* KOSAF/Title/20 · S:048a80e6b9245b724da6d6a783a3056f53060685, */
+  --kosaf-type-title-20: 500 20px/30px var(--kosaf-font);
+  --kosaf-type-title-20-size: 20px;
+  --kosaf-type-title-20-line: 30px;
+  --kosaf-type-title-20-weight: 500;
+  /* KOSAF/Body/L · S:a6818915b7bdac3ac70525e07f502bee5f5ff16f, */
+  --kosaf-type-body-l: 400 18px/30px var(--kosaf-font);
+  --kosaf-type-body-l-size: 18px;
+  --kosaf-type-body-l-line: 30px;
+  --kosaf-type-body-l-weight: 400;
+  /* KOSAF/Body/M · S:1470f5b0bff3ad7ad873bd75a4096b6885ce28d8, */
+  --kosaf-type-body-m: 400 16px/24px var(--kosaf-font);
+  --kosaf-type-body-m-size: 16px;
+  --kosaf-type-body-m-line: 24px;
+  --kosaf-type-body-m-weight: 400;
+  /* KOSAF/Body/S · S:32e45730b4843af28351aedd9a193ad9dba3a70c, */
+  --kosaf-type-body-s: 400 14px/20px var(--kosaf-font);
+  --kosaf-type-body-s-size: 14px;
+  --kosaf-type-body-s-line: 20px;
+  --kosaf-type-body-s-weight: 400;
+  /* KOSAF/Caption · S:13110592d755de20c1f6bc567e0f2948d1ea3592, */
+  --kosaf-type-caption: 400 12px/16px var(--kosaf-font);
+  --kosaf-type-caption-size: 12px;
+  --kosaf-type-caption-line: 16px;
+  --kosaf-type-caption-weight: 400;
+}
+
+/* Utility classes for the canonical styles (use these for new UI) */
+.kosaf-display-40 { font: var(--kosaf-type-display-40); letter-spacing: 0; }
+.kosaf-heading-h1 { font: var(--kosaf-type-heading-h1); letter-spacing: 0; }
+.kosaf-heading-h2 { font: var(--kosaf-type-heading-h2); letter-spacing: 0; }
+.kosaf-heading-h3 { font: var(--kosaf-type-heading-h3); letter-spacing: 0; }
+.kosaf-title-20 { font: var(--kosaf-type-title-20); letter-spacing: 0; }
+.kosaf-body-l { font: var(--kosaf-type-body-l); letter-spacing: 0; }
+.kosaf-body-m { font: var(--kosaf-type-body-m); letter-spacing: 0; }
+.kosaf-body-s { font: var(--kosaf-type-body-s); letter-spacing: 0; }
+.kosaf-caption { font: var(--kosaf-type-caption); letter-spacing: 0; }

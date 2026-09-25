@@ -1,0 +1,24 @@
+/* KOSAF_V1 · Viewport, control & table dimensions — KOSAF/Layout (216:572)
+   Generated from uploads/figma-inventory.json (Figma SZ7AweGiHxzEDmEmuNi3LY). Comments carry Figma VariableIDs. */
+:root {
+  --kosaf-viewport-desktop: 1920px; /* VariableID:220:571 */
+  --kosaf-viewport-mobile: 390px; /* VariableID:220:572 */
+  --kosaf-viewport-mobile-wide: 391px; /* VariableID:220:573 */
+  --kosaf-control-compact: 34px; /* VariableID:220:574 */
+  --kosaf-control-form: 45px; /* VariableID:220:575 */
+  --kosaf-control-search: 50px; /* VariableID:220:576 */
+  --kosaf-control-mobile-action: 70px; /* VariableID:220:577 */
+  --kosaf-table-desktop-row: 70px; /* VariableID:220:578 */
+  --kosaf-table-mobile-row: 50px; /* VariableID:220:579 */
+  --kosaf-control-small: 42px; /* VariableID:225:595 */
+
+  /* Documented rules not stored as Figma variables (claude-system.md / figma-system.json) */
+  --kosaf-control-large: 50px;      /* Button 50 */
+  --kosaf-search-width: 579px;      /* Search 579x50 */
+  --kosaf-search-radius: 25px;
+  --kosaf-modal-width: 706px;       /* Modal shell representative 706x630 */
+  --kosaf-modal-height: 630px;
+  --kosaf-section-gap-sm: 20px;
+  --kosaf-section-gap-md: 30px;
+  --kosaf-section-gap-lg: 50px;
+}

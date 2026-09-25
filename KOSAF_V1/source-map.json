@@ -140,8 +140,18 @@
     "sourceCommit": "e384bfa01333984b61275d4537c70cc708bc3c7d",
     "variables": 81,
     "textStyles": 69,
-    "componentFamilies": 11,
+    "componentFamilies": 46,
     "geometryExport": "kosaf-component-geometry.json",
-    "verification": "Published checked; UI states available for team new projects. Native checker reports no issues; Core board content observed."
+    "verification": "Native published project expanded; 94 manifest card paths and 46 family companions exist. Representative published browser interactions verified; see QA limitations.",
+    "cards": 94,
+    "uiKitGroups": 10,
+    "uiKitPages": 22,
+    "nativeExportDirectory": "claude-design",
+    "qa": "claude-design-qa.json",
+    "sourceCoverage": "claude-design/docs/source-coverage.md",
+    "expansionVersion": "1.2.0",
+    "sourceInventory": "kosaf-source-patterns.json",
+    "expandedGeometry": "kosaf-expanded-geometry.json",
+    "sourceIcons": "kosaf-source-icons.json"
   }
 }

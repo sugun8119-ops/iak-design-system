@@ -1,0 +1,128 @@
+/* KOSAF_V1 · Typography — 60 KOSAF/Source styles (exact final-source combinations, preservation only)
+   Generated from uploads/figma-inventory.json (Figma SZ7AweGiHxzEDmEmuNi3LY). Comments carry Figma VariableIDs. */
+/* SEPARATE PRESERVATION EXCEPTION — not part of the canonical rule.
+   Canonical rule for new UI: Noto Sans KR 400/500/700 + the 9 styles in typography.css.
+   Use these only to keep existing final-source screens from reflowing. */
+:root {
+  --kosaf-type-source-18-regular-pixels-34-percent-0: 400 18px/34px var(--kosaf-font); /* ls 0 · src 1:85789 */
+  --kosaf-type-source-15-medium-pixels-15-pixels--0_4: 500 15px/15px var(--kosaf-font); /* ls -0.4px · src I1:85801;1938:67860 */
+  --kosaf-type-source-30-bold-auto-auto-percent-0: 700 30px/normal var(--kosaf-font); /* ls 0 · src 1:85803 */
+  --kosaf-type-source-18-bold-auto-auto-percent-0: 700 18px/normal var(--kosaf-font); /* ls 0 · src 1:85806 */
+  --kosaf-type-source-18-regular-auto-auto-percent-0: 400 18px/normal var(--kosaf-font); /* ls 0 · src 1:85806 */
+  --kosaf-type-source-14-medium-pixels-14-percent-0: 500 14px/14px var(--kosaf-font); /* ls 0 · src 1:85815 */
+  --kosaf-type-source-12-bold-auto-auto-percent-0: 700 12px/normal var(--kosaf-font); /* ls 0 · src 1:85876 */
+  --kosaf-type-source-20-bold-pixels-20-percent-0: 700 20px/20px var(--kosaf-font); /* ls 0 · src 1:85919 */
+  --kosaf-type-source-18-medium-auto-auto-percent-0: 500 18px/normal var(--kosaf-font); /* ls 0 · src 1:86012 */
+  --kosaf-type-source-15-regular-pixels-15-pixels--0_4: 400 15px/15px var(--kosaf-font); /* ls -0.4px · src 1:86033 */
+  --kosaf-type-source-14-regular-auto-auto-percent-0: 400 14px/normal var(--kosaf-font); /* ls 0 · src 1:86054 */
+  --kosaf-type-source-15-medium-auto-auto-percent-0: 500 15px/normal var(--kosaf-font); /* ls 0 · src 1:86060 */
+  --kosaf-type-source-20-bold-auto-auto-percent-0: 700 20px/normal var(--kosaf-font); /* ls 0 · src 1:86073 */
+  --kosaf-type-source-20-medium-auto-auto-percent-0: 500 20px/normal var(--kosaf-font); /* ls 0 · src 1:86073 */
+  --kosaf-type-source-15-regular-auto-auto-percent-0: 400 15px/normal var(--kosaf-font); /* ls 0 · src 1:86080 */
+  --kosaf-type-source-15-bold-auto-auto-percent-0: 700 15px/normal var(--kosaf-font); /* ls 0 · src 1:86080 */
+  --kosaf-type-source-24-bold-auto-auto-percent-0: 700 24px/normal var(--kosaf-font); /* ls 0 · src 1:86080 */
+  --kosaf-type-source-14-medium-auto-auto-percent-0: 500 14px/normal var(--kosaf-font); /* ls 0 · src 1:86094 */
+  --kosaf-type-source-24-medium-percent-152_8-percent-0: 500 24px/1.528 var(--kosaf-font); /* ls 0 · src 1:86103 */
+  --kosaf-type-source-40-bold-auto-auto-percent-0: 700 40px/normal var(--kosaf-font); /* ls 0 · src 1:86141 */
+  --kosaf-type-source-15-medium-pixels-15-percent-0: 500 15px/15px var(--kosaf-font); /* ls 0 · src 1:86226 */
+  --kosaf-type-source-20-medium-pixels-20-percent-0: 500 20px/20px var(--kosaf-font); /* ls 0 · src 1:86227 */
+  --kosaf-type-source-16-medium-pixels-16-percent-0: 500 16px/16px var(--kosaf-font); /* ls 0 · src 1:86236 */
+  --kosaf-type-source-22-medium-auto-auto-percent-0: 500 22px/normal var(--kosaf-font); /* ls 0 · src 1:87363 */
+  --kosaf-type-source-22-regular-pixels-34-percent-0: 400 22px/34px var(--kosaf-font); /* ls 0 · src 1:87379 */
+  --kosaf-type-source-18-medium-pixels-18-percent-0: 500 18px/18px var(--kosaf-font); /* ls 0 · src 1:87389 */
+  --kosaf-type-source-14-regular-pixels-14-percent-0: 400 14px/14px var(--kosaf-font); /* ls 0 · src 1:87492 */
+  --kosaf-type-source-16-medium-auto-auto-percent-0: 500 16px/normal var(--kosaf-font); /* ls 0 · src 1:86778 */
+  --kosaf-type-source-16-regular-auto-auto-percent-0: 400 16px/normal var(--kosaf-font); /* ls 0 · src 1:86813 */
+  --kosaf-type-source-30-medium-auto-auto-percent-0: 500 30px/normal var(--kosaf-font); /* ls 0 · src 1:86816 */
+  --kosaf-type-source-24-regular-auto-auto-percent-0: 400 24px/normal var(--kosaf-font); /* ls 0 · src 1:86826 */
+  --kosaf-type-source-24-regular-pixels-24-percent-0: 400 24px/24px var(--kosaf-font); /* ls 0 · src 1:86833 */
+  --kosaf-type-source-22-regular-auto-auto-percent-0: 400 22px/normal var(--kosaf-font); /* ls 0 · src 1:86849 */
+  --kosaf-type-source-18-bold-pixels-18-percent-0: 700 18px/18px var(--kosaf-font); /* ls 0 · src 1:90861 */
+  --kosaf-type-source-40-medium-auto-auto-percent-0: 500 40px/normal var(--kosaf-font); /* ls 0 · src 1:87404 */
+  --kosaf-type-source-20-regular-auto-auto-percent-0: 400 20px/normal var(--kosaf-font); /* ls 0 · src 1:87406 */
+  --kosaf-type-source-16-regular-pixels-16-percent-0: 400 16px/16px var(--kosaf-font); /* ls 0 · src 1:88169 */
+  --kosaf-type-source-20-medium-pixels-52-pixels--0_4: 500 20px/52px var(--kosaf-font); /* ls -0.4px · src 1:88174 */
+  --kosaf-type-source-24-medium-auto-auto-percent-0: 500 24px/normal var(--kosaf-font); /* ls 0 · src 1:88279 */
+  --kosaf-type-source-24-bold-pixels-24-percent-0: 700 24px/24px var(--kosaf-font); /* ls 0 · src 1:88297 */
+  --kosaf-type-source-18-regular-pixels-18-pixels-0: 400 18px/18px var(--kosaf-font); /* ls 0px · src 1:88378 */
+  --kosaf-type-source-16-bold-auto-auto-percent-0: 700 16px/normal var(--kosaf-font); /* ls 0 · src 1:89455 */
+  --kosaf-type-source-16-medium-percent-152_8-percent-0: 500 16px/1.528 var(--kosaf-font); /* ls 0 · src 1:90373 */
+  --kosaf-type-source-16-bold-percent-152_8-percent-0: 700 16px/1.528 var(--kosaf-font); /* ls 0 · src 1:90389 */
+  --kosaf-type-source-22-bold-auto-auto-percent-0: 700 22px/normal var(--kosaf-font); /* ls 0 · src 1:90942 */
+  --kosaf-type-source-16-regular-pixels-24-pixels--0_4: 400 16px/24px var(--kosaf-font); /* ls -0.4px · src 1:91164 */
+  --kosaf-type-source-24-regular-pixels-30-pixels--0_4: 400 24px/30px var(--kosaf-font); /* ls -0.4px · src 1:91165 */
+  --kosaf-type-source-24-bold-pixels-38-pixels--0_4: 700 24px/38px var(--kosaf-font); /* ls -0.4px · src 1:91166 */
+  --kosaf-type-source-15-bold-pixels-38-pixels--0_4: 700 15px/38px var(--kosaf-font); /* ls -0.4px · src 1:91166 */
+  --kosaf-type-source-14-bold-auto-auto-percent-0: 700 14px/normal var(--kosaf-font); /* ls 0 · src 1:91518 */
+  --kosaf-type-source-14-regular-pixels-16-percent-0: 400 14px/16px var(--kosaf-font); /* ls 0 · src 1:91768 */
+  --kosaf-type-source-12-regular-pixels-15-pixels--0_4: 400 12px/15px var(--kosaf-font); /* ls -0.4px · src 1:92160 */
+  --kosaf-type-source-14-regular-pixels-14-pixels-0: 400 14px/14px var(--kosaf-font); /* ls 0px · src 1:92161 */
+  --kosaf-type-source-14-regular-pixels-12-percent-0: 400 14px/12px var(--kosaf-font); /* ls 0 · src 1:92179 */
+  --kosaf-type-source-14-medium-pixels-15-percent-0: 500 14px/15px var(--kosaf-font); /* ls 0 · src 1:92180 */
+  --kosaf-type-source-20-regular-pixels-52-pixels--0_4: 400 20px/52px var(--kosaf-font); /* ls -0.4px · src 1:93126 */
+  --kosaf-type-source-24-bold-pixels-30-pixels--0_4: 700 24px/30px var(--kosaf-font); /* ls -0.4px · src 1:94289 */
+  --kosaf-type-source-30-regular-auto-auto-percent-0: 400 30px/normal var(--kosaf-font); /* ls 0 · src 1:96985 */
+  --kosaf-type-source-16-regular-pixels-19_5-pixels--0_4: 400 16px/19.5px var(--kosaf-font); /* ls -0.4px · src 1:98143 */
+  --kosaf-type-source-24-regular-pixels-34-percent-0: 400 24px/34px var(--kosaf-font); /* ls 0 · src 1:99661 */
+}
+
+.kosaf-source-18-regular-pixels-34-percent-0 { font: var(--kosaf-type-source-18-regular-pixels-34-percent-0); letter-spacing: 0; }
+.kosaf-source-15-medium-pixels-15-pixels--0_4 { font: var(--kosaf-type-source-15-medium-pixels-15-pixels--0_4); letter-spacing: -0.4px; }
+.kosaf-source-30-bold-auto-auto-percent-0 { font: var(--kosaf-type-source-30-bold-auto-auto-percent-0); letter-spacing: 0; }
+.kosaf-source-18-bold-auto-auto-percent-0 { font: var(--kosaf-type-source-18-bold-auto-auto-percent-0); letter-spacing: 0; }
+.kosaf-source-18-regular-auto-auto-percent-0 { font: var(--kosaf-type-source-18-regular-auto-auto-percent-0); letter-spacing: 0; }
+.kosaf-source-14-medium-pixels-14-percent-0 { font: var(--kosaf-type-source-14-medium-pixels-14-percent-0); letter-spacing: 0; }
+.kosaf-source-12-bold-auto-auto-percent-0 { font: var(--kosaf-type-source-12-bold-auto-auto-percent-0); letter-spacing: 0; }
+.kosaf-source-20-bold-pixels-20-percent-0 { font: var(--kosaf-type-source-20-bold-pixels-20-percent-0); letter-spacing: 0; }
+.kosaf-source-18-medium-auto-auto-percent-0 { font: var(--kosaf-type-source-18-medium-auto-auto-percent-0); letter-spacing: 0; }
+.kosaf-source-15-regular-pixels-15-pixels--0_4 { font: var(--kosaf-type-source-15-regular-pixels-15-pixels--0_4); letter-spacing: -0.4px; }
+.kosaf-source-14-regular-auto-auto-percent-0 { font: var(--kosaf-type-source-14-regular-auto-auto-percent-0); letter-spacing: 0; }
+.kosaf-source-15-medium-auto-auto-percent-0 { font: var(--kosaf-type-source-15-medium-auto-auto-percent-0); letter-spacing: 0; }
+.kosaf-source-20-bold-auto-auto-percent-0 { font: var(--kosaf-type-source-20-bold-auto-auto-percent-0); letter-spacing: 0; }
+.kosaf-source-20-medium-auto-auto-percent-0 { font: var(--kosaf-type-source-20-medium-auto-auto-percent-0); letter-spacing: 0; }
+.kosaf-source-15-regular-auto-auto-percent-0 { font: var(--kosaf-type-source-15-regular-auto-auto-percent-0); letter-spacing: 0; }
+.kosaf-source-15-bold-auto-auto-percent-0 { font: var(--kosaf-type-source-15-bold-auto-auto-percent-0); letter-spacing: 0; }
+.kosaf-source-24-bold-auto-auto-percent-0 { font: var(--kosaf-type-source-24-bold-auto-auto-percent-0); letter-spacing: 0; }
+.kosaf-source-14-medium-auto-auto-percent-0 { font: var(--kosaf-type-source-14-medium-auto-auto-percent-0); letter-spacing: 0; }
+.kosaf-source-24-medium-percent-152_8-percent-0 { font: var(--kosaf-type-source-24-medium-percent-152_8-percent-0); letter-spacing: 0; }
+.kosaf-source-40-bold-auto-auto-percent-0 { font: var(--kosaf-type-source-40-bold-auto-auto-percent-0); letter-spacing: 0; }
+.kosaf-source-15-medium-pixels-15-percent-0 { font: var(--kosaf-type-source-15-medium-pixels-15-percent-0); letter-spacing: 0; }
+.kosaf-source-20-medium-pixels-20-percent-0 { font: var(--kosaf-type-source-20-medium-pixels-20-percent-0); letter-spacing: 0; }
+.kosaf-source-16-medium-pixels-16-percent-0 { font: var(--kosaf-type-source-16-medium-pixels-16-percent-0); letter-spacing: 0; }
+.kosaf-source-22-medium-auto-auto-percent-0 { font: var(--kosaf-type-source-22-medium-auto-auto-percent-0); letter-spacing: 0; }
+.kosaf-source-22-regular-pixels-34-percent-0 { font: var(--kosaf-type-source-22-regular-pixels-34-percent-0); letter-spacing: 0; }
+.kosaf-source-18-medium-pixels-18-percent-0 { font: var(--kosaf-type-source-18-medium-pixels-18-percent-0); letter-spacing: 0; }
+.kosaf-source-14-regular-pixels-14-percent-0 { font: var(--kosaf-type-source-14-regular-pixels-14-percent-0); letter-spacing: 0; }
+.kosaf-source-16-medium-auto-auto-percent-0 { font: var(--kosaf-type-source-16-medium-auto-auto-percent-0); letter-spacing: 0; }
+.kosaf-source-16-regular-auto-auto-percent-0 { font: var(--kosaf-type-source-16-regular-auto-auto-percent-0); letter-spacing: 0; }
+.kosaf-source-30-medium-auto-auto-percent-0 { font: var(--kosaf-type-source-30-medium-auto-auto-percent-0); letter-spacing: 0; }
+.kosaf-source-24-regular-auto-auto-percent-0 { font: var(--kosaf-type-source-24-regular-auto-auto-percent-0); letter-spacing: 0; }
+.kosaf-source-24-regular-pixels-24-percent-0 { font: var(--kosaf-type-source-24-regular-pixels-24-percent-0); letter-spacing: 0; }
+.kosaf-source-22-regular-auto-auto-percent-0 { font: var(--kosaf-type-source-22-regular-auto-auto-percent-0); letter-spacing: 0; }
+.kosaf-source-18-bold-pixels-18-percent-0 { font: var(--kosaf-type-source-18-bold-pixels-18-percent-0); letter-spacing: 0; }
+.kosaf-source-40-medium-auto-auto-percent-0 { font: var(--kosaf-type-source-40-medium-auto-auto-percent-0); letter-spacing: 0; }
+.kosaf-source-20-regular-auto-auto-percent-0 { font: var(--kosaf-type-source-20-regular-auto-auto-percent-0); letter-spacing: 0; }
+.kosaf-source-16-regular-pixels-16-percent-0 { font: var(--kosaf-type-source-16-regular-pixels-16-percent-0); letter-spacing: 0; }
+.kosaf-source-20-medium-pixels-52-pixels--0_4 { font: var(--kosaf-type-source-20-medium-pixels-52-pixels--0_4); letter-spacing: -0.4px; }
+.kosaf-source-24-medium-auto-auto-percent-0 { font: var(--kosaf-type-source-24-medium-auto-auto-percent-0); letter-spacing: 0; }
+.kosaf-source-24-bold-pixels-24-percent-0 { font: var(--kosaf-type-source-24-bold-pixels-24-percent-0); letter-spacing: 0; }
+.kosaf-source-18-regular-pixels-18-pixels-0 { font: var(--kosaf-type-source-18-regular-pixels-18-pixels-0); letter-spacing: 0px; }
+.kosaf-source-16-bold-auto-auto-percent-0 { font: var(--kosaf-type-source-16-bold-auto-auto-percent-0); letter-spacing: 0; }
+.kosaf-source-16-medium-percent-152_8-percent-0 { font: var(--kosaf-type-source-16-medium-percent-152_8-percent-0); letter-spacing: 0; }
+.kosaf-source-16-bold-percent-152_8-percent-0 { font: var(--kosaf-type-source-16-bold-percent-152_8-percent-0); letter-spacing: 0; }
+.kosaf-source-22-bold-auto-auto-percent-0 { font: var(--kosaf-type-source-22-bold-auto-auto-percent-0); letter-spacing: 0; }
+.kosaf-source-16-regular-pixels-24-pixels--0_4 { font: var(--kosaf-type-source-16-regular-pixels-24-pixels--0_4); letter-spacing: -0.4px; }
+.kosaf-source-24-regular-pixels-30-pixels--0_4 { font: var(--kosaf-type-source-24-regular-pixels-30-pixels--0_4); letter-spacing: -0.4px; }
+.kosaf-source-24-bold-pixels-38-pixels--0_4 { font: var(--kosaf-type-source-24-bold-pixels-38-pixels--0_4); letter-spacing: -0.4px; }
+.kosaf-source-15-bold-pixels-38-pixels--0_4 { font: var(--kosaf-type-source-15-bold-pixels-38-pixels--0_4); letter-spacing: -0.4px; }
+.kosaf-source-14-bold-auto-auto-percent-0 { font: var(--kosaf-type-source-14-bold-auto-auto-percent-0); letter-spacing: 0; }
+.kosaf-source-14-regular-pixels-16-percent-0 { font: var(--kosaf-type-source-14-regular-pixels-16-percent-0); letter-spacing: 0; }
+.kosaf-source-12-regular-pixels-15-pixels--0_4 { font: var(--kosaf-type-source-12-regular-pixels-15-pixels--0_4); letter-spacing: -0.4px; }
+.kosaf-source-14-regular-pixels-14-pixels-0 { font: var(--kosaf-type-source-14-regular-pixels-14-pixels-0); letter-spacing: 0px; }
+.kosaf-source-14-regular-pixels-12-percent-0 { font: var(--kosaf-type-source-14-regular-pixels-12-percent-0); letter-spacing: 0; }
+.kosaf-source-14-medium-pixels-15-percent-0 { font: var(--kosaf-type-source-14-medium-pixels-15-percent-0); letter-spacing: 0; }
+.kosaf-source-20-regular-pixels-52-pixels--0_4 { font: var(--kosaf-type-source-20-regular-pixels-52-pixels--0_4); letter-spacing: -0.4px; }
+.kosaf-source-24-bold-pixels-30-pixels--0_4 { font: var(--kosaf-type-source-24-bold-pixels-30-pixels--0_4); letter-spacing: -0.4px; }
+.kosaf-source-30-regular-auto-auto-percent-0 { font: var(--kosaf-type-source-30-regular-auto-auto-percent-0); letter-spacing: 0; }
+.kosaf-source-16-regular-pixels-19_5-pixels--0_4 { font: var(--kosaf-type-source-16-regular-pixels-19_5-pixels--0_4); letter-spacing: -0.4px; }
+.kosaf-source-24-regular-pixels-34-percent-0 { font: var(--kosaf-type-source-24-regular-pixels-34-percent-0); letter-spacing: 0; }

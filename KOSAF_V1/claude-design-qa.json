@@ -1,0 +1,30 @@
+{
+  "date": "2026-09-25",
+  "componentFamilies": 46,
+  "manifestExportsIncludingHelpers": 55,
+  "cards": 94,
+  "uiKitGroups": 10,
+  "uiKitPages": 22,
+  "desktopCards": 11,
+  "mobileCards": 11,
+  "missingManifestCardFiles": 0,
+  "missingTypePromptCardCompanions": 0,
+  "nativeCheckerReportedIssues": 0,
+  "publishedBrowserChecks": [
+    "Mobile search renders; filter opens/closes; whole menu opens",
+    "PC product detail renders; logo and product images loaded; quantity 100 -> 101",
+    "Accordion independent card renders usage, source node, props, PC and mobile examples"
+  ],
+  "limits": [
+    "Representative browser checks only; not all 94 cards visually verified",
+    "Viewport override did not yield exact iframe CSS width; exact 1920/390 pixel verification remains pending",
+    "No production backend or complete accessibility audit"
+  ],
+  "sourceCoverage": {
+    "frames": 91,
+    "kit": 38,
+    "component": 8,
+    "patternOnly": 28,
+    "gap": 17
+  }
+}

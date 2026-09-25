@@ -79,3 +79,14 @@ Primary #059B00, Hover #02AC5A, Positive #17BF56, Text #333333/#707070/#888888, 
 - Original logos, icons and product photos are not included in the Claude package. No substitute icon library was applied. Mobile screen is explicitly a screenshot-based reference. Noto Sans KR loads from Google Fonts.
 - Measured disabled fill #EAEAEA versus semantic surface/disabled #D9D9D9 is a documented source exception. Incorrect contrast-conformance wording was removed.
 - This is a snapshot port from source commit e384bfa and supplied exports, not automatic bidirectional synchronization. The full React files generated inside Claude have not been exported back into this repository.
+
+
+## Claude Design expansion — 2026-09-25 / 1.2.0
+
+- Existing published KOSAF_V1 native system expanded from 11 to **46 independent component families**, each with source, types, usage prompt and preview card. No IAK visual assets copied.
+- **94 cards**: 46 components, 18 foundation/brand, 7 operating-document cards, 1 core board and **22 UI kit pages** (11 PC 1920 + 11 Mobile 390), grouped into 10 kits. Counts come from exported manifest; helpers are not component families.
+- Added navigation, forms, product commerce, tables/data display and feedback components; 11 original SVG icons, source logo and 2 product captures. Canonical Noto Sans KR and KOSAF colors preserved.
+- Full native archive snapshot is in `claude-design/`; original uploaded references and embedded `docs/source` are historical snapshots, not replacements for current root metadata. Figma still has 11 master families; this expansion did not mutate Figma.
+- Source frame coverage: 38 kit mappings, 8 component mappings, 28 composition-only mappings, 17 gaps. Mapping is not pixel-verified reproduction. See `claude-design/docs/source-coverage.md`.
+- QA: 94/94 manifest card files present; 46/46 family type/prompt/card companions present. Published mobile search filter/menu and PC detail quantity update verified; independent Accordion card rendered. Exact iframe viewport pixels and the remaining cards were not exhaustively verified. See `claude-design-qa.json`.
+- Remaining gaps: home, registration guidance/certificate registration, long seller registration forms, image zoom; custom calendar; complete icon/photo inventory; backend actions; exhaustive accessibility/pixel QA. Existing 832 unclassified raw colors and 40 brand text exceptions remain preserved.

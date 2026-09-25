@@ -1,0 +1,20 @@
+/* KOSAF_V1 · Source-observed colours (NOT Figma variables)
+   Raw fills measured in kosaf-expanded-geometry.json (1:85779 patterns). They are part of the
+   832 unclassified raw-paint set and are exposed here only so pattern components can match the source.
+   The 81 Figma variables in colors.css remain the canonical palette. */
+:root {
+  --kosaf-src-footer-bg: #202020;        /* Footer 1:86051 Rectangle 41 */
+  --kosaf-src-footer-text: #888888;      /* Footer text (= gray/600) */
+  --kosaf-src-login-bg: #F1F3F8;         /* 로그인 1:87393 frame fill */
+  --kosaf-src-panel-bg: #F5F5F5;         /* 알림 1:92553 list bg */
+  --kosaf-src-divider-thick: #EEEEEE;    /* 모바일 메뉴 1:93205 section gap 10–12px */
+  --kosaf-src-notice-box: #F7FEF8;       /* 휴면 계정 안내 1:103625 Box_Explain */
+  --kosaf-src-text-strong: #000000;      /* many source texts use pure black */
+  --kosaf-src-text-body: #444444;        /* filter/menu option text (= gray/850) */
+  --kosaf-src-placeholder: #CCCCCC;      /* Textarea placeholder 1:87378 */
+  --kosaf-src-counter: #68696B;          /* Textarea counter 1:87378 */
+  --kosaf-src-dropdown-idle: #ABABAB;    /* Drop down unselected options 1:98823 / 1:98859 (= gray/400) */
+  --kosaf-src-file-btn: #F8F8F8;         /* 첨부파일 찾아보기 1:89966 */
+  --kosaf-src-scrollbar: #515151;        /* Textarea scroll thumb */
+  --kosaf-src-metric-icon: #02AC5A;      /* MetricCard ellipse 1:87886 (= green/600) */
+}

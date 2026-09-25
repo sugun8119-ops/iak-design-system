@@ -1,0 +1,67 @@
+/* KOSAF_V1 · Color tokens — KOSAF/Primitives (216:570) + KOSAF/Semantic (216:571)
+   Generated from uploads/figma-inventory.json (Figma SZ7AweGiHxzEDmEmuNi3LY). Comments carry Figma VariableIDs. */
+:root {
+  /* Primitives */
+  --kosaf-green-700: #059B00; /* VariableID:216:573 */
+  --kosaf-green-600: #02AC5A; /* VariableID:216:574 */
+  --kosaf-green-500: #17BF56; /* VariableID:216:575 */
+  --kosaf-green-100: #EBFFE9; /* VariableID:216:576 */
+  --kosaf-lime-100: #D5FFBA; /* VariableID:216:577 */
+  --kosaf-black: #000000; /* VariableID:216:578 */
+  --kosaf-white: #FFFFFF; /* VariableID:216:579 */
+  --kosaf-gray-900: #333333; /* VariableID:216:580 */
+  --kosaf-gray-850: #444444; /* VariableID:216:581 */
+  --kosaf-gray-800: #666666; /* VariableID:216:582 */
+  --kosaf-gray-700: #707070; /* VariableID:216:583 */
+  --kosaf-gray-600: #888888; /* VariableID:216:584 */
+  --kosaf-gray-500: #A0A0A0; /* VariableID:216:585 */
+  --kosaf-gray-400: #ABABAB; /* VariableID:216:586 */
+  --kosaf-gray-350: #C1C1C1; /* VariableID:216:587 */
+  --kosaf-gray-300: #CCCCCC; /* VariableID:216:588 */
+  --kosaf-gray-250: #D9D9D9; /* VariableID:216:589 */
+  --kosaf-gray-200: #DDDDDD; /* VariableID:216:590 */
+  --kosaf-gray-150: #DFE0E4; /* VariableID:216:591 */
+  --kosaf-gray-100: #EAEAEA; /* VariableID:216:592 */
+  --kosaf-gray-050: #F7F7F7; /* VariableID:216:593 */
+  --kosaf-blue-600: #0047ED; /* VariableID:216:594 */
+  --kosaf-yellow-500: #FFE326; /* VariableID:216:595 */
+  --kosaf-red-600: #E23736; /* VariableID:216:596 */
+  --kosaf-red-500: #FF5858; /* VariableID:216:597 */
+  --kosaf-lavender-100: #F4EBFF; /* VariableID:216:598 */
+
+  /* Semantic (aliases) */
+  --kosaf-color-bg-canvas: var(--kosaf-white); /* VariableID:216:599 */
+  --kosaf-color-bg-subtle: var(--kosaf-gray-050); /* VariableID:216:600 */
+  --kosaf-color-surface-default: var(--kosaf-white); /* VariableID:216:601 */
+  --kosaf-color-surface-brand-soft: var(--kosaf-green-100); /* VariableID:216:602 */
+  --kosaf-color-text-primary: var(--kosaf-gray-900); /* VariableID:216:603 */
+  --kosaf-color-text-secondary: var(--kosaf-gray-700); /* VariableID:216:604 */
+  --kosaf-color-text-muted: var(--kosaf-gray-600); /* VariableID:216:605 */
+  --kosaf-color-text-inverse: var(--kosaf-white); /* VariableID:216:606 */
+  --kosaf-color-border-default: var(--kosaf-gray-200); /* VariableID:216:607 */
+  --kosaf-color-border-strong: var(--kosaf-gray-350); /* VariableID:216:608 */
+  --kosaf-color-action-primary: var(--kosaf-green-700); /* VariableID:216:609 */
+  --kosaf-color-action-primary-hover: var(--kosaf-green-600); /* VariableID:216:610 */
+  --kosaf-color-action-positive: var(--kosaf-green-500); /* VariableID:216:611 */
+  --kosaf-color-action-danger: var(--kosaf-red-600); /* VariableID:216:612 */
+  --kosaf-color-state-focus: var(--kosaf-blue-600); /* VariableID:216:613 */
+  --kosaf-color-state-warning: var(--kosaf-yellow-500); /* VariableID:216:614 */
+  --kosaf-color-state-info-soft: var(--kosaf-lavender-100); /* VariableID:216:615 */
+  --kosaf-color-text-disabled: var(--kosaf-gray-500); /* VariableID:220:580 */
+  --kosaf-color-surface-disabled: var(--kosaf-gray-250); /* VariableID:220:581 */
+  --kosaf-color-border-subtle: var(--kosaf-gray-100); /* VariableID:220:582 */
+  --kosaf-color-icon-default: var(--kosaf-gray-900); /* VariableID:220:583 */
+  --kosaf-color-action-danger-hover: var(--kosaf-red-500); /* VariableID:225:596 */
+
+  /* Convenience aliases (web-only, map 1:1 to semantic tokens above) */
+  --kosaf-primary: var(--kosaf-color-action-primary);
+  --kosaf-primary-hover: var(--kosaf-color-action-primary-hover);
+  --kosaf-positive: var(--kosaf-color-action-positive);
+  --kosaf-danger: var(--kosaf-color-action-danger);
+  --kosaf-danger-hover: var(--kosaf-color-action-danger-hover);
+  --kosaf-focus: var(--kosaf-color-state-focus);
+  --kosaf-text: var(--kosaf-color-text-primary);
+  --kosaf-text-2: var(--kosaf-color-text-secondary);
+  --kosaf-text-3: var(--kosaf-color-text-muted);
+  --kosaf-border: var(--kosaf-color-border-default);
+}

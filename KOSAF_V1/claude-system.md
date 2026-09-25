@@ -143,3 +143,7 @@ IAK GameofMind의 다크/오렌지 외형은 KOSAF에 적용하지 않는다. KO
 - Source 스타일은 최종본의 실제 서체 조합을 보존한다. 신규 화면에는 기본 9개를 우선한다.
 - 위 컴포넌트/패턴 설명에는 설계 방향도 포함된다. 실제 생성된 11개 family와 구현 상태는 [figma-system.json](figma-system.json)의 components/componentStates를 따른다. plannedComponents는 구현되지 않은 항목이다.
 - 원본의 소형 컨트롤과 브랜드 서체 예외는 유지되어 있으므로 터치 영역·대비·누락 서체를 자동 해결된 것으로 간주하지 않는다.
+
+
+## Native Claude Design library (1.2.0)
+Use the published KOSAF_V1 native library and its 46 component families in `claude-design/components/`. Follow component `.prompt.md` and `.d.ts` files; use the 10 UI kit groups for compositions. Reference `claude-design/docs/source-coverage.md` for explicit coverage and gaps. This package extends the 11 Figma masters; do not describe all 46 as Figma masters or claim all 91 source frames are reproduced. IAK Design Studio is an organizational reference only. Root migration/source-map files are current; embedded docs/source files are historical source snapshots.

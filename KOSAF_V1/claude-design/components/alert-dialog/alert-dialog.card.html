@@ -1,0 +1,22 @@
+<!-- @dsCard group="Components · Feedback & Overlay" viewport="700x560" name="AlertDialog" subtitle="Source-derived (1:85779) · 1:103625" -->
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>AlertDialog</title>
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+<script src="../../guidelines/card-kit.js"></script>
+<style>body{margin:0;background:#fff}</style>
+</head><body><div id="r"></div>
+<script type="text/babel">
+const { Button, Search, Badge, Input, Checkbox, Radio, Tab, PaginationItem, Stepper, TableRow, Modal, Icon, Header, Footer, MobileHeader, MobileMenu, SideNav, Breadcrumb, Select, Textarea, FormField, FileUpload, DateField, DateRange, QuantityStepper, SegmentedControl, FilterChip, FilterPanel, Pagination, ProductCard, ProductListItem, ProductTable, DescriptionList, MetricCard, EmptyState, Accordion, ReviewItem, Rating, NotificationList, OrderSummary, CartItem, BottomActionBar, AlertDialog, CompareTable, PriceTrend, ProgressSteps, IconRegistry, DealBadge } = window.KOSAFV1ProjectDesignSystem_f8c97b;
+const A = '../../assets/';
+const ROWS=[{no:10,item:'사과',variety:'부사',name:'사과/부사/특/20kg',deal:'입찰',producer:'김원생',qty:'300PT',remain:300,price:'-',deadline:'2023-05-05\n18:00',grade:'문경',region:'가락시장',ship:'2023\n05-05',liked:true},{no:9,item:'사과',variety:'부사',name:'사과/부사/특/20kg',deal:'정가',producer:'',qty:'300PT',remain:50,price:'50,000원',deadline:'2023-05-05\n18:00',grade:'문경',region:'가락시장',ship:'2023\n05-05'},{no:8,item:'사과',variety:'부사',name:'사과/부사/특/20kg',deal:'입찰',producer:'김원생',qty:'300PT',remain:300,price:'-',deadline:'2023-05-05\n18:00',grade:'문경',region:'가락시장',ship:'2023\n05-05',disabled:true},{no:7,item:'사과',variety:'부사',name:'사과/부사/특/20kg',deal:'정가',producer:'김원생',qty:'300PT',remain:50,price:'50,000원',deadline:'2023-05-05\n18:00',grade:'문경',region:'가락시장',ship:'2023\n05-05'}];
+const FAQ=[{title:'[배송] 배송기간은 얼마나 되나요?',content:'상품의 평균 배송일은 3~4일(주말, 공휴일 제외) 정도 소요됩니다.\n자세한 배송일자는 상품 상세 페이지에서 확인이 가능합니다.'},{title:'[회원] 회원탈퇴는 어떻게 해야 하나요?',content:'마이페이지 > 회원정보관리 > 회원탈퇴에서 신청할 수 있습니다.'},{title:'[배송] 배송조회는 어디에서 할 수 있나요?',content:'마이페이지 > 주문/배송내역에서 확인할 수 있습니다.'}];
+const META = {"name":"AlertDialog","prov":"source","node":"1:103625","use":"Notice/confirm popup (휴면 계정, 비밀번호 변경, 심사안내). Green title bar, icon circle, info box, 158×45 r2 buttons. Focus trap + Esc.","props":["open","inline","title","icon","message","details","primaryLabel","secondaryLabel","onPrimary","onSecondary","onClose","width"],"states":"Open · 1 or 2 actions"};
+function Demo(){return (<>
+<KSec label="PC · 570 (scaled 0.62)" align="flex-start"><KScale w={570} s={0.62}><AlertDialog inline message={'안녕하세요!\n회원님은 1년 이상 로그인하지 않아 휴면 계정으로 전환되었습니다.'} details={[['마지막 접속일','2022-05-04'],['휴면 전환일','2022-05-04']]} primaryLabel="휴면 해제하기" secondaryLabel="다음에 하기"/></KScale>{(()=>{const [o,s]=React.useState(false);return <><Button onClick={()=>s(true)}>live open</Button><AlertDialog open={o} onClose={()=>s(false)} onPrimary={()=>s(false)} icon={null} title="비밀번호 변경 안내" message="비밀번호를 변경한 지 90일이 지났습니다." primaryLabel="변경하기" secondaryLabel="다음에 하기" width={480}/></>})()}</KSec>
+</>);}
+ReactDOM.createRoot(document.getElementById('r')).render(<KCard meta={META}><Demo/></KCard>);
+</script></body></html>

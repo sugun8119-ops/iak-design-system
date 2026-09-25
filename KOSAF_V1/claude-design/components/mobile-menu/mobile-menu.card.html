@@ -1,0 +1,22 @@
+<!-- @dsCard group="Components · Navigation" viewport="700x620" name="MobileMenu" subtitle="Source-derived (1:85779) · 1:93205" -->
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>MobileMenu</title>
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+<script src="../../guidelines/card-kit.js"></script>
+<style>body{margin:0;background:#fff}</style>
+</head><body><div id="r"></div>
+<script type="text/babel">
+const { Button, Search, Badge, Input, Checkbox, Radio, Tab, PaginationItem, Stepper, TableRow, Modal, Icon, Header, Footer, MobileHeader, MobileMenu, SideNav, Breadcrumb, Select, Textarea, FormField, FileUpload, DateField, DateRange, QuantityStepper, SegmentedControl, FilterChip, FilterPanel, Pagination, ProductCard, ProductListItem, ProductTable, DescriptionList, MetricCard, EmptyState, Accordion, ReviewItem, Rating, NotificationList, OrderSummary, CartItem, BottomActionBar, AlertDialog, CompareTable, PriceTrend, ProgressSteps, IconRegistry, DealBadge } = window.KOSAFV1ProjectDesignSystem_f8c97b;
+const A = '../../assets/';
+const ROWS=[{no:10,item:'사과',variety:'부사',name:'사과/부사/특/20kg',deal:'입찰',producer:'김원생',qty:'300PT',remain:300,price:'-',deadline:'2023-05-05\n18:00',grade:'문경',region:'가락시장',ship:'2023\n05-05',liked:true},{no:9,item:'사과',variety:'부사',name:'사과/부사/특/20kg',deal:'정가',producer:'',qty:'300PT',remain:50,price:'50,000원',deadline:'2023-05-05\n18:00',grade:'문경',region:'가락시장',ship:'2023\n05-05'},{no:8,item:'사과',variety:'부사',name:'사과/부사/특/20kg',deal:'입찰',producer:'김원생',qty:'300PT',remain:300,price:'-',deadline:'2023-05-05\n18:00',grade:'문경',region:'가락시장',ship:'2023\n05-05',disabled:true},{no:7,item:'사과',variety:'부사',name:'사과/부사/특/20kg',deal:'정가',producer:'김원생',qty:'300PT',remain:50,price:'50,000원',deadline:'2023-05-05\n18:00',grade:'문경',region:'가락시장',ship:'2023\n05-05'}];
+const FAQ=[{title:'[배송] 배송기간은 얼마나 되나요?',content:'상품의 평균 배송일은 3~4일(주말, 공휴일 제외) 정도 소요됩니다.\n자세한 배송일자는 상품 상세 페이지에서 확인이 가능합니다.'},{title:'[회원] 회원탈퇴는 어떻게 해야 하나요?',content:'마이페이지 > 회원정보관리 > 회원탈퇴에서 신청할 수 있습니다.'},{title:'[배송] 배송조회는 어디에서 할 수 있나요?',content:'마이페이지 > 주문/배송내역에서 확인할 수 있습니다.'}];
+const META = {"name":"MobileMenu","prov":"source","node":"1:93205","use":"전체메뉴 drawer: accordion sections (open list on #F7F7F7), 입점 판매샵 목록, 4-col quick menu, bottom links. Esc closes.","props":["sections","quick","defaultOpen","onClose","onSelect","bottomLinks"],"states":"Section open · closed"};
+function Demo(){return (<>
+<KSec label="MOBILE · 390 (scaled 0.72)"><KScale w={390} s={0.72} frame><MobileMenu/></KScale><div style={{fontSize:12,color:'#707070',maxWidth:300}}>Click a section to toggle. Quick-menu icons other than 관심목록 were not exported → dashed slot.</div></KSec>
+</>);}
+ReactDOM.createRoot(document.getElementById('r')).render(<KCard meta={META}><Demo/></KCard>);
+</script></body></html>
