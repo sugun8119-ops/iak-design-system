@@ -1,0 +1,42 @@
+{
+  "id": "KOSAF_V1",
+  "extractedAt": "2026-09-25",
+  "sourceOfTruth": {
+    "file": "https://www.figma.com/design/MOEAkEbXtwHdE3xveg2Gto/",
+    "nodeId": "1:85779"
+  },
+  "managementFile": {
+    "file": "https://www.figma.com/design/SZ7AweGiHxzEDmEmuNi3LY/",
+    "nodes": {
+      "commonFinal": "1:69548",
+      "commonWip": "1:69947",
+      "interaction": "1:70749",
+      "mainReferences": "1:107843",
+      "dataReferences": "213:712"
+    }
+  },
+  "figmaGenerated": {
+    "foundationFrameId": "217:570",
+    "coreComponentsFrameId": "218:570",
+    "collections": [
+      "KOSAF/Primitives",
+      "KOSAF/Semantic",
+      "KOSAF/Layout"
+    ],
+    "componentSets": [
+      "KOSAF/Button",
+      "KOSAF/Input",
+      "KOSAF/Checkbox",
+      "KOSAF/Radio",
+      "KOSAF/Tab",
+      "KOSAF/PaginationItem",
+      "KOSAF/TableRow"
+    ],
+    "components": [
+      "KOSAF/Search",
+      "KOSAF/Badge",
+      "KOSAF/Modal",
+      "KOSAF/Stepper"
+    ]
+  }
+}
