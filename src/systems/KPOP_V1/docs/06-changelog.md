@@ -32,3 +32,7 @@ KPOP: 48px 기본 버튼, 44px 최소 터치 영역, 25~28px 비조작 배지. H
 콘텐츠 아트 방향: Music pink / Stage blue / Culture green. 이는 콘텐츠 그래픽 팔레트이며 브랜드와 상태 토큰은 기존 값을 유지한다. Main은 hero → Latest stories 2개 → ranking → 일정으로 구성한다. 제목·카테고리·읽기 시간은 상세 화면과 일치시킨다. 웹 일정은 월/일 블록과 내용 열, Figma 일정은 기존 ScheduleRow 인스턴스를 재사용한다.
 
 BottomNav는 자체 제작 compass/feed/bookmark 24px, stroke 1.75px 아이콘과 텍스트를 조합한다. SVG는 장식이고 접근 가능한 이름은 텍스트가 제공한다. active는 연분홍 배경과 aria-current로 표시하며 웹 링크 높이는64px, Figma 항목64px/전체96px다. 미디어 없음 변형은 그래픽 대신 중립 플레이스홀더를 유지한다.
+
+
+## Claude1.4 resume completed
+Session quota reset; resumed the existing project, completed pending implementation and final check_design_system (no issues). Published UI was verified after reload. Detailed evidence and limitations:07-quality-1.4-handoff.md and qa-results.json.

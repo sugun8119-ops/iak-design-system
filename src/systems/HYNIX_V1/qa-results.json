@@ -187,9 +187,31 @@
     ],
     "repositoryTests": "31 passed (shared repository tests, separate from visual checks)",
     "claudeDesign": {
-      "status": "partial / usage limit",
-      "verifiedComplete": false,
-      "remaining": "Finish documentation/template consistency and final visual/interaction/design-system verification in Claude"
+      "source": "Claude completion reports plus direct published UI verification",
+      "designSystemCheck": "No issues found",
+      "cards": 34,
+      "templates": 3,
+      "tokens": 105,
+      "font": "Pretendard",
+      "published": true,
+      "publishedUIVerified": true,
+      "directChecks": [
+        "Published checkbox enabled after reload",
+        "Live Main snapshot, numerator/denominator and offline notice visible",
+        "Main→Sub→Detail06 navigation verified",
+        "Offline controls disabled and last receipt09:38 shown",
+        "Main/Sub/Detail screenshots reviewed"
+      ],
+      "reportedChecks": [
+        "Main/Sub/Detail ×1440/900/375/320: no overflow",
+        "Long Korean text, keyboard focus, search, offline detail verified"
+      ],
+      "limits": [
+        "No physical device or screen-reader testing",
+        "Rendered examples share design rules but are not pixel-identical copies"
+      ],
+      "status": "completed",
+      "verifiedComplete": true
     }
   }
 }

@@ -193,9 +193,33 @@
     ],
     "repositoryTests": "31 passed (shared repository tests, separate from visual checks)",
     "claudeDesign": {
-      "status": "partial / usage limit",
-      "verifiedComplete": false,
-      "remaining": "Finish documentation/template consistency and final visual/interaction/design-system verification in Claude"
+      "source": "Claude completion reports plus direct published UI verification",
+      "designSystemCheck": "No issues found",
+      "cards": 47,
+      "templates": 3,
+      "tokens": 107,
+      "font": "Pretendard",
+      "published": true,
+      "publishedUIVerified": true,
+      "directChecks": [
+        "Published checkbox enabled after reload",
+        "Live Main contains Latest stories",
+        "Live BottomNav contains3SVG icons with text labels"
+      ],
+      "reportedChecks": [
+        "Main/UI kit and Sub/Detail templates checked at320/375/390/430",
+        "Search/filter/save/focus passed",
+        "StoryCard missing media and FeatureStory16:10 missing media visually checked",
+        "Fixed StoryCard grid image/text gap with align-content:start"
+      ],
+      "limits": [
+        "No physical device or screen-reader testing",
+        "Rendered examples share design rules but are not pixel-identical copies",
+        "FeatureStory4:5 missing-media not visually checked",
+        "Width stress tests set phone-frame widths; actual under600 browser viewport not retested in Claude"
+      ],
+      "status": "completed",
+      "verifiedComplete": true
     }
   }
 }
