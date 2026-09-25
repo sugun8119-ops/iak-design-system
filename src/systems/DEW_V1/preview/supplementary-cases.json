@@ -1,0 +1,56 @@
+{
+  "version": "1.5.0",
+  "scope": "supplementary compositions, not additions to IAK 138 inventory",
+  "baseCaseCount": 138,
+  "compositionCount": 3,
+  "cases": [
+    {
+      "id": "search-results",
+      "url": "scenarios.html#explore"
+    },
+    {
+      "id": "search-loading",
+      "url": "scenarios.html#explore"
+    },
+    {
+      "id": "search-empty",
+      "url": "scenarios.html#explore"
+    },
+    {
+      "id": "search-error-retry",
+      "url": "scenarios.html#explore"
+    },
+    {
+      "id": "detail-long-content",
+      "url": "scenarios.html#detail"
+    },
+    {
+      "id": "detail-missing-image",
+      "url": "scenarios.html#detail"
+    },
+    {
+      "id": "detail-scroll-table",
+      "url": "scenarios.html#detail"
+    },
+    {
+      "id": "form-validation",
+      "url": "scenarios.html#request"
+    },
+    {
+      "id": "form-pending",
+      "url": "scenarios.html#request"
+    },
+    {
+      "id": "form-error-retry",
+      "url": "scenarios.html#request"
+    },
+    {
+      "id": "form-success",
+      "url": "scenarios.html#request"
+    },
+    {
+      "id": "form-reset",
+      "url": "scenarios.html#request"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+(()=>{'use strict';
+ const $=s=>document.querySelector(s),all=s=>[...document.querySelectorAll(s)];
+ const data=JSON.parse($('#scenario-data').textContent);let searchTimer,submitTimer,busy=false;
+ const results=$('#results'),status=$('#search-status'),mode=$('#search-mode'),query=$('#query');
+ function button(label,fn){const b=document.createElement('button');b.type='button';b.textContent=label;b.addEventListener('click',fn);return b}
+ function text(tag,value){const e=document.createElement(tag);e.textContent=value;return e}
+ function recover(){mode.value='ready';runSearch()}
+ function renderResults(){results.replaceChildren();results.removeAttribute('aria-busy');const rows=data.items.filter(x=>(x.title+' '+x.category).includes(query.value.trim()));
+ if(!rows.length){status.textContent='검색 결과 0개';const box=text('div','');box.className='sc-state';box.append(text('h3','일치하는 결과가 없습니다.'),text('p','검색어를 줄이거나 전체 목록에서 다시 찾아보세요.'),button('검색 초기화',()=>{query.value='';recover();query.focus()}));results.append(box);return}
+ status.textContent='검색 결과 '+rows.length+'개';const grid=text('div','');grid.className='sc-cards';for(const [i,row]of rows.entries()){const card=text('article','');card.className='sc-card';const art=text('div',String(i+1).padStart(2,'0'));art.className='sc-art';art.setAttribute('aria-hidden','true');const a=text('a','자세히 읽기 →');a.href='#detail';card.append(art,text('p',row.category),text('h3',row.title),text('p',row.description),a);grid.append(card)}results.append(grid)}
+ function runSearch(){clearTimeout(searchTimer);results.replaceChildren();results.removeAttribute('aria-busy');const state=mode.value;
+ if(state==='error'){status.textContent='목록을 불러오지 못했습니다.';const box=text('div','');box.className='sc-state';box.append(text('h3','연결을 다시 확인해주세요.'),text('p','검색어는 그대로 남아 있습니다. 다시 시도하면 목록을 불러옵니다.'),button('다시 시도',recover));results.append(box);return}
+ if(state==='loading'){status.textContent='목록을 불러오는 중입니다.';results.setAttribute('aria-busy','true');const el=text('div','');el.className='sc-skeleton';el.setAttribute('aria-hidden','true');results.append(el);searchTimer=setTimeout(()=>{mode.value='ready';renderResults()},650);return}renderResults()}
+ $('#search-form').addEventListener('submit',e=>{e.preventDefault();runSearch()});mode.addEventListener('change',runSearch);$('#clear-search').addEventListener('click',()=>{query.value='';recover();query.focus()});runSearch();
+ const form=$('#request-form'),submit=$('#submit-request'),msg=$('#form-message'),message=$('#message'),email=$('#email'),agree=$('#agree'),outcome=$('#submit-mode');
+ message.addEventListener('input',()=>$('#message-count').textContent=message.value.length+' / 500');
+ function error(id,value){const field=$('#'+id),el=$('#'+id+'-error');el.textContent=value;el.hidden=!value;field.setAttribute('aria-invalid',String(!!value))}
+ function announce(value,isError=false){msg.textContent=value;msg.hidden=false;msg.setAttribute('role',isError?'alert':'status')}
+ function validate(){error('email',email.validity.valueMissing?'이메일을 입력해주세요.':email.validity.typeMismatch?'이메일 주소 형식을 확인해주세요.':'');error('message',message.value.trim().length<10?'내용을 10자 이상 입력해주세요.':'');error('agree',agree.checked?'':'필수 동의를 확인해주세요.');const first=form.querySelector('[aria-invalid="true"]');if(first){announce('입력한 내용을 확인해주세요. 오류가 있는 첫 항목으로 이동했습니다.',true);first.focus();return false}return true}
+ form.addEventListener('submit',e=>{e.preventDefault();if(busy||!validate())return;busy=true;submit.disabled=true;outcome.disabled=true;submit.textContent='처리 중…';form.setAttribute('aria-busy','true');announce('처리 중입니다. 잠시 기다려주세요.');const fail=outcome.value==='error';submitTimer=setTimeout(()=>{busy=false;submit.disabled=false;outcome.disabled=false;form.removeAttribute('aria-busy');if(fail){announce('전송하지 못했습니다. 입력 내용은 유지됩니다. 다시 시도하면 완료 상태를 확인할 수 있습니다.',true);outcome.value='success';submit.textContent='다시 시도'}else{announce(data.success);submit.textContent=data.submit;$('#form-fields').hidden=true;submit.hidden=true;$('#new-request').hidden=false;msg.tabIndex=-1;msg.focus()}},650)});
+ $('#new-request').addEventListener('click',()=>{form.reset();$('#message-count').textContent='0 / 500';all('[aria-invalid]').forEach(x=>x.setAttribute('aria-invalid','false'));all('.sc-error').forEach(x=>{x.hidden=true;x.textContent=''});msg.hidden=true;$('#form-fields').hidden=false;submit.hidden=false;$('#new-request').hidden=true;email.focus()});
+ window.addEventListener('pagehide',()=>{clearTimeout(searchTimer);clearTimeout(submitTimer)});
+})();

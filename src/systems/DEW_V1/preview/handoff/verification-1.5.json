@@ -1,0 +1,29 @@
+{
+  "version": "1.5.0",
+  "project": "DEW_V1",
+  "baseCasesUnchanged": 138,
+  "addedCompositions": 3,
+  "addedStates": 12,
+  "foundationUnchanged": true,
+  "tests": {
+    "suitePassed": 49,
+    "newFlowTestsPassed": 4,
+    "build": "passed"
+  },
+  "browser": {
+    "mobile375": "no document horizontal overflow",
+    "desktop": "no document horizontal overflow",
+    "KOREXFormRetry": "verified in browser",
+    "otherFlows": "automated DOM tests"
+  },
+  "figma": {
+    "boards": 6,
+    "representation": "static editable flow references",
+    "mobileExamplesVisuallyChecked": true
+  },
+  "limitations": [
+    "No server submission or persistence",
+    "Figma reference boards are not pixel-identical full-page captures",
+    "Claude live artifacts not updated"
+  ]
+}

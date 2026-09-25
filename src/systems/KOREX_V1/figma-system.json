@@ -1,7 +1,7 @@
 {
   "id": "KOREX_V1",
   "name": "KOREX Brand Web System",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "category": "Corporate / Brand / Product Web",
   "foundation": {
     "colors": {
@@ -874,5 +874,14 @@
     "offlineRuntime": "React 18.3.1 vendored with MIT license; no network required for library interactions",
     "runtimeTests": "tests/project-systems.test.mjs",
     "visualAuthority": "Existing approved foundation remains unchanged"
+  },
+  "supplementaryPatterns": {
+    "entry": "preview/scenarios.html",
+    "manifest": "preview/supplementary-cases.json",
+    "compositions": 3,
+    "states": 12,
+    "figma": "https://www.figma.com/design/MR9qvFSq9w5HAD2wnQObdn?node-id=66-2",
+    "baseCasesUnchanged": 138,
+    "source": "Project-specific derived compositions; not additional observed Behance or IAK cases."
   }
 }

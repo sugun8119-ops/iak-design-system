@@ -1,0 +1,38 @@
+{
+  "fileKey": "MR9qvFSq9w5HAD2wnQObdn",
+  "pageId": "66:2",
+  "url": "https://www.figma.com/design/MR9qvFSq9w5HAD2wnQObdn?node-id=66-2",
+  "boards": [
+    {
+      "id": "66:3",
+      "name": "KOREX/Search recovery/720",
+      "width": 720
+    },
+    {
+      "id": "66:27",
+      "name": "KOREX/Reading resilience/720",
+      "width": 720
+    },
+    {
+      "id": "66:43",
+      "name": "KOREX/Form completion/720",
+      "width": 720
+    },
+    {
+      "id": "66:69",
+      "name": "KOREX/Search recovery/375",
+      "width": 375
+    },
+    {
+      "id": "66:93",
+      "name": "KOREX/Reading resilience/375",
+      "width": 375
+    },
+    {
+      "id": "66:109",
+      "name": "KOREX/Form completion/375",
+      "width": 375
+    }
+  ],
+  "representation": "Editable static flow reference boards; working interactions and complete form controls are in scenarios.html. Not pixel-identical captures."
+}
