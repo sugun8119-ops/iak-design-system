@@ -1,0 +1,13 @@
+<!-- @dsCard group="ZEM · Components" viewport="1200x640" name="Select" subtitle="default · error · disabled · long option" -->
+<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ZEM_V1 · Select</title>
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script><script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script><script src="../lib/icons.js"></script><script src="../lib/zem-ui.js"></script><script src="../lib/card.js"></script></head><body><div id="root"></div><script>
+const h=React.createElement,X=ZEM;const {Icon,Button,TextField,Textarea,Select,Checkbox,Switch,Badge,Card,Skeleton,Dialog,Menu,Table,Pagination,ToastProvider,useToast,AlertDialog}=X;const W=(w,el)=>h('div',{style:{width:w,maxWidth:'100%'}},el);
+
+const O=()=>[h('option',{key:1,value:'active'},'진행 중'),h('option',{key:2,value:'review'},'검토 중'),h('option',{key:3,value:'done'},'완료')];
+const S=p=>W(260,h(Select,{label:'미션 상태',defaultValue:'active',...p},O()));
+ZEMCard.mount({name:'Select',group:'ZEM · Component · Input',description:'운영체제 native select · 높이 48 · radius 12 · periwinkle 셰브론. 커스텀 팝오버·검색·다중 선택은 코드에 없습니다.',meta:['API = zem/components/Select.d.ts','.zem-input 공유'],
+sections:[{title:'State',cases:[{id:'default',label:'default',el:S({})},{id:'hover',label:'hover',el:S({'data-preview-state':'hover'})},{id:'focus',label:'focus-visible',el:S({'data-preview-state':'focus'})},{id:'error',label:'error',el:S({error:'상태를 선택해 주세요.',defaultValue:''},)},{id:'disabled',label:'disabled',el:S({disabled:true})},{id:'description',label:'description',el:S({description:'완료로 바꾸면 알림이 발송됩니다.'})}]},
+{title:'Content',cases:[{id:'long-option',label:'긴 옵션 · 선택값 말줄임은 OS 처리',el:W(260,h(Select,{label:'담당 팀'},h('option',null,'브랜드 경험 디자인 및 고객 온보딩 운영 통합 팀'),h('option',null,'데이터')))},{id:'placeholder-option',tag:'native',label:'빈 option = placeholder',el:W(260,h(Select,{label:'지역',defaultValue:''},h('option',{value:'',disabled:true},'선택하세요'),h('option',null,'서울')))}]}],
+notInSource:['custom listbox / search / multi-select 없음','펼친 목록 스타일은 OS 기본 (디자인 불가)']});
+</script></body></html>

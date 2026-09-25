@@ -1,0 +1,56 @@
+{
+ "focus": {
+  "--focus-ring-width": {
+   "value": "2px",
+   "resolved": "2px",
+   "basis": "derived-extension"
+  },
+  "--focus-ring-offset": {
+   "value": "2px",
+   "resolved": "2px",
+   "basis": "derived-extension"
+  },
+  "--focus-ring-color": {
+   "value": "var(--kx-green-600)",
+   "resolved": "#1a7f5a",
+   "basis": "derived-extension"
+  },
+  "--focus-ring-on-brand": {
+   "value": "var(--kx-white)",
+   "resolved": "#ffffff",
+   "basis": "derived-extension"
+  }
+ },
+ "state": {
+  "--state-hover": {
+   "value": "rgb(20 100 72 / .06)",
+   "resolved": "rgb(20 100 72 / .06)",
+   "basis": "derived-extension"
+  },
+  "--state-pressed": {
+   "value": "rgb(20 100 72 / .12)",
+   "resolved": "rgb(20 100 72 / .12)",
+   "basis": "derived-extension"
+  },
+  "--state-selected": {
+   "value": "var(--kx-mint-100)",
+   "resolved": "#e6f4ee",
+   "basis": "derived-extension"
+  },
+  "--state-disabled-opacity": {
+   "value": ".45",
+   "resolved": ".45",
+   "basis": "derived-extension"
+  },
+  "--state-skeleton": {
+   "value": "linear-gradient(90deg,var(--kx-grey-100) 0%,var(--kx-grey-50) 50%,var(--kx-grey-100) 100%)",
+   "resolved": "linear-gradient(90deg,#eef0ef 0%,#f6f7f6 50%,#eef0ef 100%)",
+   "basis": "derived-extension"
+  },
+  "--state-dragging": {
+   "value": "var(--kx-mint-50)",
+   "resolved": "#f2faf6",
+   "basis": "derived-extension"
+  }
+ }
+}

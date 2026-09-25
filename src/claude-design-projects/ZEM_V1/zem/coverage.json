@@ -1,0 +1,981 @@
+{
+ "system": "ZEM_V1 · Project Design System",
+ "checked": "2026-09-25",
+ "totalItems": 62,
+ "summary": {
+  "font": "Nanum Barun Gothic 400 + 700 loaded (document.fonts.check) before measuring",
+  "cards": "138/138 cases rendered, 0 in-case overflow",
+  "patterns": "120/120 (40 states × 1440/834/375) no horizontal overflow; 375: 0 targets <32px, 0 text spilling outside its card",
+  "kits": "9/9 (3 × 3 viewports) no overflow",
+  "contrast": "16/16 pairs pass"
+ },
+ "note": "Results measured in this session by zem/qa.html. Historical IAK/RAIS QA scores are not used.",
+ "constraints": [
+  "Nanum Barun Gothic self-hosted (fonts/, SIL OFL 1.1): Regular 400 + Bold 700 only; no other weights used or synthesized",
+  "Exact source hex/font/size unconfirmed; colours are approximate pixel samples",
+  "Icons: generic Eva/Solar function icons (97 SVG); 9 names unresolved, see zem/foundations/icons.html",
+  "Patterns and UI kits are derived extensions, not claimed from source",
+  "Overlay behaviour (Dialog/Menu/Toast) is a preview approximation"
+ ],
+ "changedForContrast": [
+  "--zem-progress uses periwinkle-600 (observed 500 was 2.56:1 on track)",
+  "hover/highlight text on --zem-action-soft uses --zem-action-hover (base action 4.04:1)"
+ ],
+ "items": [
+  {
+   "name": "ZEM_V1 · Integrated preview",
+   "group": "ZEM · Hub",
+   "path": "zem/index.html",
+   "basis": "derived",
+   "verification": {
+    "method": "card loads; tokens only",
+    "result": "rendered (static)"
+   }
+  },
+  {
+   "name": "ZEM QA · live render check",
+   "group": "ZEM · Hub",
+   "path": "zem/qa.html",
+   "basis": "derived",
+   "verification": {
+    "method": "card loads; tokens only",
+    "result": "live checker"
+   }
+  },
+  {
+   "name": "Colors · Point accents & tiles",
+   "group": "ZEM · Colors",
+   "path": "zem/foundations/accents.html",
+   "basis": "observed role (hex estimated) + derived",
+   "verification": {
+    "method": "card loads; tokens only",
+    "result": "rendered (static)"
+   }
+  },
+  {
+   "name": "Borders",
+   "group": "ZEM · Spacing",
+   "path": "zem/foundations/borders.html",
+   "basis": "derived",
+   "verification": {
+    "method": "card loads; tokens only",
+    "result": "rendered (static)"
+   }
+  },
+  {
+   "name": "Brand identity rules",
+   "group": "ZEM · Brand",
+   "path": "zem/foundations/brand.html",
+   "basis": "derived",
+   "verification": {
+    "method": "card loads; tokens only",
+    "result": "rendered (static)"
+   }
+  },
+  {
+   "name": "Buttons overview",
+   "group": "ZEM · Overview",
+   "path": "zem/foundations/buttons.html",
+   "basis": "derived",
+   "verification": {
+    "method": "card loads; tokens only",
+    "result": "rendered (static)"
+   }
+  },
+  {
+   "name": "Cards overview",
+   "group": "ZEM · Overview",
+   "path": "zem/foundations/cards.html",
+   "basis": "derived",
+   "verification": {
+    "method": "card loads; tokens only",
+    "result": "rendered (static)"
+   }
+  },
+  {
+   "name": "Chips & status",
+   "group": "ZEM · Overview",
+   "path": "zem/foundations/chips.html",
+   "basis": "derived",
+   "verification": {
+    "method": "card loads; tokens only",
+    "result": "rendered (static)"
+   }
+  },
+  {
+   "name": "Colors · Ink neutrals",
+   "group": "ZEM · Colors",
+   "path": "zem/foundations/colors-neutral.html",
+   "basis": "observed role (hex estimated) + derived",
+   "verification": {
+    "method": "card loads; tokens only",
+    "result": "rendered (static)"
+   }
+  },
+  {
+   "name": "Colors · Periwinkle",
+   "group": "ZEM · Colors",
+   "path": "zem/foundations/colors-primary.html",
+   "basis": "observed role (hex estimated) + derived",
+   "verification": {
+    "method": "card loads; tokens only",
+    "result": "rendered (static)"
+   }
+  },
+  {
+   "name": "Colors · Semantic",
+   "group": "ZEM · Colors",
+   "path": "zem/foundations/colors-semantic.html",
+   "basis": "observed role (hex estimated) + derived",
+   "verification": {
+    "method": "card loads; tokens only",
+    "result": "rendered (static)"
+   }
+  },
+  {
+   "name": "Iconography",
+   "group": "ZEM · Brand",
+   "path": "zem/foundations/iconography.html",
+   "basis": "derived",
+   "verification": {
+    "method": "card loads; tokens only",
+    "result": "rendered (static)"
+   }
+  },
+  {
+   "name": "Icons · 97 SVG + 9 unresolved",
+   "group": "ZEM · Foundations",
+   "path": "zem/foundations/icons.html",
+   "basis": "derived",
+   "verification": {
+    "method": "card loads; tokens only",
+    "result": "rendered (static)"
+   }
+  },
+  {
+   "name": "Inputs overview",
+   "group": "ZEM · Overview",
+   "path": "zem/foundations/inputs.html",
+   "basis": "derived",
+   "verification": {
+    "method": "card loads; tokens only",
+    "result": "rendered (static)"
+   }
+  },
+  {
+   "name": "ZEM foundations",
+   "group": "ZEM · Foundations",
+   "path": "zem/foundations/layout-focus-motion.html",
+   "basis": "derived",
+   "verification": {
+    "method": "card loads; tokens only",
+    "result": "rendered (static)"
+   }
+  },
+  {
+   "name": "Motion",
+   "group": "ZEM · Foundations",
+   "path": "zem/foundations/motion.html",
+   "basis": "derived",
+   "verification": {
+    "method": "card loads; tokens only",
+    "result": "rendered (static)"
+   }
+  },
+  {
+   "name": "Namespace check · 16 exports",
+   "group": "ZEM · Hub",
+   "path": "zem/foundations/namespace.html",
+   "basis": "derived",
+   "verification": {
+    "method": "card loads; tokens only",
+    "result": "rendered (static)"
+   }
+  },
+  {
+   "name": "Props ↔ design-only map",
+   "group": "ZEM · Foundations",
+   "path": "zem/foundations/props-map.html",
+   "basis": "derived",
+   "verification": {
+    "method": "card loads; tokens only",
+    "result": "rendered (static)"
+   }
+  },
+  {
+   "name": "Radii & borders",
+   "group": "ZEM · Spacing",
+   "path": "zem/foundations/radii.html",
+   "basis": "derived",
+   "verification": {
+    "method": "card loads; tokens only",
+    "result": "rendered (static)"
+   }
+  },
+  {
+   "name": "Shadows",
+   "group": "ZEM · Spacing",
+   "path": "zem/foundations/shadows.html",
+   "basis": "derived",
+   "verification": {
+    "method": "card loads; tokens only",
+    "result": "rendered (static)"
+   }
+  },
+  {
+   "name": "Spacing",
+   "group": "ZEM · Spacing",
+   "path": "zem/foundations/spacing.html",
+   "basis": "derived",
+   "verification": {
+    "method": "card loads; tokens only",
+    "result": "rendered (static)"
+   }
+  },
+  {
+   "name": "Colors · Surfaces & header",
+   "group": "ZEM · Colors",
+   "path": "zem/foundations/surfaces.html",
+   "basis": "observed role (hex estimated) + derived",
+   "verification": {
+    "method": "card loads; tokens only",
+    "result": "rendered (static)"
+   }
+  },
+  {
+   "name": "Toasts overview",
+   "group": "ZEM · Overview",
+   "path": "zem/foundations/toasts.html",
+   "basis": "derived",
+   "verification": {
+    "method": "card loads; tokens only",
+    "result": "rendered (static)"
+   }
+  },
+  {
+   "name": "Type · Display",
+   "group": "ZEM · Type",
+   "path": "zem/foundations/type-display.html",
+   "basis": "observed role (hex estimated) + derived",
+   "verification": {
+    "method": "card loads; tokens only",
+    "result": "rendered (static)"
+   }
+  },
+  {
+   "name": "Type · Scale",
+   "group": "ZEM · Type",
+   "path": "zem/foundations/type-scale.html",
+   "basis": "derived",
+   "verification": {
+    "method": "card loads; tokens only",
+    "result": "rendered (static)"
+   }
+  },
+  {
+   "name": "Type · Specimens",
+   "group": "ZEM · Type",
+   "path": "zem/foundations/type-specimens.html",
+   "basis": "derived",
+   "verification": {
+    "method": "card loads; tokens only",
+    "result": "rendered (static)"
+   }
+  },
+  {
+   "name": "AlertDialog",
+   "group": "ZEM · Components",
+   "path": "zem/components/AlertDialog.html",
+   "basis": "derived",
+   "renderedCases": [
+    "default",
+    "danger",
+    "pending",
+    "error",
+    "long-text",
+    "live [preview-only]"
+   ],
+   "notImplemented": [
+    "아이콘/일러스트 슬롯 없음",
+    "입력 확인(이름 타이핑) 없음 — 제품에서 Dialog로 조합"
+   ],
+   "verification": {
+    "method": "zem/qa.html iframe 1200px",
+    "rendered": "6/6",
+    "overflow": "none",
+    "result": "pass"
+   }
+  },
+  {
+   "name": "Badge",
+   "group": "ZEM · Components",
+   "path": "zem/components/Badge.html",
+   "basis": "derived",
+   "renderedCases": [
+    "neutral",
+    "info",
+    "success",
+    "warning",
+    "error",
+    "with-icon [composition]",
+    "long-text",
+    "number",
+    "d-status-dot [design-only]",
+    "d-filter-chip [design-only]"
+   ],
+   "notImplemented": [
+    "클릭/닫기 가능한 chip 없음",
+    "size variant 없음"
+   ],
+   "verification": {
+    "method": "zem/qa.html iframe 1200px",
+    "rendered": "10/10",
+    "overflow": "none",
+    "result": "pass"
+   }
+  },
+  {
+   "name": "Button",
+   "group": "ZEM · Components",
+   "path": "zem/components/Button.html",
+   "basis": "derived",
+   "renderedCases": [
+    "primary",
+    "secondary",
+    "danger",
+    "text",
+    "size-sm",
+    "size-md",
+    "size-lg",
+    "default",
+    "hover",
+    "pressed",
+    "focus",
+    "disabled",
+    "loading",
+    "with-icon [composition]",
+    "icon-only [composition]",
+    "full-width [composition]",
+    "long-label",
+    "d-point [design-only]",
+    "d-on-header [design-only]"
+   ],
+   "notImplemented": [
+    "icon-only 전용 prop 없음 — children + aria-label로 조합",
+    "full-width prop 없음 — style/width로 조합"
+   ],
+   "verification": {
+    "method": "zem/qa.html iframe 1200px",
+    "rendered": "19/19",
+    "overflow": "none",
+    "result": "pass"
+   }
+  },
+  {
+   "name": "Card",
+   "group": "ZEM · Components",
+   "path": "zem/components/Card.html",
+   "basis": "derived",
+   "renderedCases": [
+    "full",
+    "body-only",
+    "long-title",
+    "loading [composition]",
+    "missing [composition]",
+    "error [composition]"
+   ],
+   "notImplemented": [
+    "중첩 카드용 radius prop 없음 — className/style로 조정",
+    "interactive/selectable card prop 없음"
+   ],
+   "verification": {
+    "method": "zem/qa.html iframe 1200px",
+    "rendered": "6/6",
+    "overflow": "none",
+    "result": "pass"
+   }
+  },
+  {
+   "name": "Checkbox",
+   "group": "ZEM · Components",
+   "path": "zem/components/Checkbox.html",
+   "basis": "derived",
+   "renderedCases": [
+    "unchecked",
+    "checked",
+    "focus",
+    "disabled",
+    "disabled-checked",
+    "long-label",
+    "group [composition]"
+   ],
+   "notImplemented": [
+    "indeterminate 스타일/prop 없음 (native ref로만 가능)",
+    "error 상태 없음",
+    "hover 스타일 없음"
+   ],
+   "verification": {
+    "method": "zem/qa.html iframe 1200px",
+    "rendered": "7/7",
+    "overflow": "none",
+    "result": "pass"
+   }
+  },
+  {
+   "name": "Dialog",
+   "group": "ZEM · Components",
+   "path": "zem/components/Dialog.html",
+   "basis": "derived",
+   "renderedCases": [
+    "size-sm",
+    "size-md",
+    "size-lg",
+    "no-description",
+    "long-content",
+    "focus-close",
+    "live [preview-only]"
+   ],
+   "notImplemented": [
+    "fullscreen/sheet(모바일 하단) variant 없음",
+    "loading 상태 없음 — 비동기 저장은 제품에서 footer Button loading으로 처리"
+   ],
+   "verification": {
+    "method": "zem/qa.html iframe 1200px",
+    "rendered": "7/7",
+    "overflow": "none",
+    "result": "pass"
+   }
+  },
+  {
+   "name": "Icon",
+   "group": "ZEM · Components",
+   "path": "zem/components/Icon.html",
+   "basis": "derived",
+   "renderedCases": [
+    "decorative",
+    "labeled",
+    "currentColor",
+    "unresolved"
+   ],
+   "notImplemented": [
+    "32px 이상 size 없음",
+    "duotone 색상 제어 없음 (단색 currentColor)"
+   ],
+   "verification": {
+    "method": "zem/qa.html iframe 1200px",
+    "rendered": "4/4",
+    "overflow": "none",
+    "result": "pass"
+   }
+  },
+  {
+   "name": "Menu",
+   "group": "ZEM · Components",
+   "path": "zem/components/Menu.html",
+   "basis": "derived",
+   "renderedCases": [
+    "rename",
+    "dup",
+    "export",
+    "archive",
+    "default",
+    "highlighted",
+    "disabled-item",
+    "danger",
+    "long-label",
+    "a",
+    "b",
+    "live [preview-only]"
+   ],
+   "notImplemented": [
+    "아이콘 슬롯·단축키 표시·체크 항목·서브메뉴 없음",
+    "검색형 메뉴 없음"
+   ],
+   "verification": {
+    "method": "zem/qa.html iframe 1200px",
+    "rendered": "12/12",
+    "overflow": "none",
+    "result": "pass"
+   }
+  },
+  {
+   "name": "Pagination",
+   "group": "ZEM · Components",
+   "path": "zem/components/Pagination.html",
+   "basis": "derived",
+   "renderedCases": [
+    "first",
+    "middle",
+    "last",
+    "single",
+    "disabled",
+    "hover",
+    "focus",
+    "live [preview-only]"
+   ],
+   "notImplemented": [
+    "번호 목록형(1 2 3 …) 없음",
+    "page size 선택 없음"
+   ],
+   "verification": {
+    "method": "zem/qa.html iframe 1200px",
+    "rendered": "8/8",
+    "overflow": "none",
+    "result": "pass"
+   }
+  },
+  {
+   "name": "Select",
+   "group": "ZEM · Components",
+   "path": "zem/components/Select.html",
+   "basis": "derived",
+   "renderedCases": [
+    "default",
+    "hover",
+    "focus",
+    "error",
+    "disabled",
+    "description",
+    "long-option",
+    "placeholder-option [native]"
+   ],
+   "notImplemented": [
+    "custom listbox / search / multi-select 없음",
+    "펼친 목록 스타일은 OS 기본 (디자인 불가)"
+   ],
+   "verification": {
+    "method": "zem/qa.html iframe 1200px",
+    "rendered": "8/8",
+    "overflow": "none",
+    "result": "pass"
+   }
+  },
+  {
+   "name": "Skeleton",
+   "group": "ZEM · Components",
+   "path": "zem/components/Skeleton.html",
+   "basis": "derived",
+   "renderedCases": [
+    "default",
+    "sized",
+    "circle",
+    "list-row [composition]"
+   ],
+   "notImplemented": [],
+   "verification": {
+    "method": "zem/qa.html iframe 1200px",
+    "rendered": "4/4",
+    "overflow": "none",
+    "result": "pass"
+   }
+  },
+  {
+   "name": "Switch",
+   "group": "ZEM · Components",
+   "path": "zem/components/Switch.html",
+   "basis": "derived",
+   "renderedCases": [
+    "off",
+    "on",
+    "focus",
+    "disabled-off",
+    "disabled-on",
+    "long-label"
+   ],
+   "notImplemented": [
+    "size variant 없음",
+    "label 위치(좌/우) 옵션 없음",
+    "loading 상태 없음"
+   ],
+   "verification": {
+    "method": "zem/qa.html iframe 1200px",
+    "rendered": "6/6",
+    "overflow": "none",
+    "result": "pass"
+   }
+  },
+  {
+   "name": "Table",
+   "group": "ZEM · Components",
+   "path": "zem/components/Table.html",
+   "basis": "derived",
+   "renderedCases": [
+    "default",
+    "sorted-asc",
+    "sorted-desc",
+    "paginated",
+    "loading",
+    "error",
+    "empty",
+    "focus-sort",
+    "missing-long",
+    "narrow",
+    "virtual"
+   ],
+   "notImplemented": [
+    "행 선택(체크박스)·행 hover 스타일 없음",
+    "서버 페이지네이션·컬럼 리사이즈·고정 열 없음",
+    "compact density 없음"
+   ],
+   "verification": {
+    "method": "zem/qa.html iframe 1200px",
+    "rendered": "11/11",
+    "overflow": "none",
+    "result": "pass"
+   }
+  },
+  {
+   "name": "TextField",
+   "group": "ZEM · Components",
+   "path": "zem/components/TextField.html",
+   "basis": "derived",
+   "renderedCases": [
+    "default",
+    "filled",
+    "hover",
+    "focus",
+    "error",
+    "disabled",
+    "description",
+    "required",
+    "readonly [native]",
+    "long-label",
+    "long-value",
+    "type-email [native]",
+    "d-floating [design-only]"
+   ],
+   "notImplemented": [
+    "success/valid 상태 스타일 없음",
+    "size variant 없음 (40px 고정)",
+    "prefix/suffix 아이콘 슬롯 없음"
+   ],
+   "verification": {
+    "method": "zem/qa.html iframe 1200px",
+    "rendered": "13/13",
+    "overflow": "none",
+    "result": "pass"
+   }
+  },
+  {
+   "name": "Textarea",
+   "group": "ZEM · Components",
+   "path": "zem/components/Textarea.html",
+   "basis": "derived",
+   "renderedCases": [
+    "default",
+    "filled",
+    "hover",
+    "focus",
+    "error",
+    "disabled",
+    "rows-2 [native]",
+    "long-text",
+    "description"
+   ],
+   "notImplemented": [
+    "글자 수 카운터 없음 (제품에서 description으로 조합)",
+    "auto-grow 없음"
+   ],
+   "verification": {
+    "method": "zem/qa.html iframe 1200px",
+    "rendered": "9/9",
+    "overflow": "none",
+    "result": "pass"
+   }
+  },
+  {
+   "name": "Toast",
+   "group": "ZEM · Components",
+   "path": "zem/components/Toast.html",
+   "basis": "derived",
+   "renderedCases": [
+    "description",
+    "action",
+    "long-text",
+    "focus-close",
+    "stack-3",
+    "live [preview-only]",
+    "d-snackbar-default [design-only]"
+   ],
+   "notImplemented": [
+    "위치 옵션(top/center) 없음",
+    "progress bar 없음",
+    "토스트 hover 스타일 없음"
+   ],
+   "verification": {
+    "method": "zem/qa.html iframe 1200px",
+    "rendered": "7/7",
+    "overflow": "none",
+    "result": "pass"
+   }
+  },
+  {
+   "name": "01 · Dashboard",
+   "group": "ZEM · Patterns",
+   "path": "zem/patterns/01-dashboard.html",
+   "basis": "derived",
+   "verification": {
+    "method": "zem/qa.html iframe 1440/834/375",
+    "states": [
+     "default",
+     "loading",
+     "empty",
+     "error"
+    ],
+    "result": "pass · no horizontal overflow at all 3 widths"
+   }
+  },
+  {
+   "name": "02 · Analytics",
+   "group": "ZEM · Patterns",
+   "path": "zem/patterns/02-analytics.html",
+   "basis": "derived",
+   "verification": {
+    "method": "zem/qa.html iframe 1440/834/375",
+    "states": [
+     "default",
+     "loading",
+     "empty",
+     "error"
+    ],
+    "result": "pass · no horizontal overflow at all 3 widths"
+   }
+  },
+  {
+   "name": "03 · Table",
+   "group": "ZEM · Patterns",
+   "path": "zem/patterns/03-table.html",
+   "basis": "derived",
+   "verification": {
+    "method": "zem/qa.html iframe 1440/834/375",
+    "states": [
+     "default",
+     "loading",
+     "empty",
+     "error",
+     "long-text"
+    ],
+    "result": "pass · no horizontal overflow at all 3 widths"
+   }
+  },
+  {
+   "name": "04 · Detail",
+   "group": "ZEM · Patterns",
+   "path": "zem/patterns/04-detail.html",
+   "basis": "derived",
+   "verification": {
+    "method": "zem/qa.html iframe 1440/834/375",
+    "states": [
+     "default",
+     "loading",
+     "missing-data",
+     "error"
+    ],
+    "result": "pass · no horizontal overflow at all 3 widths"
+   }
+  },
+  {
+   "name": "05 · Settings",
+   "group": "ZEM · Patterns",
+   "path": "zem/patterns/05-settings.html",
+   "basis": "derived",
+   "verification": {
+    "method": "zem/qa.html iframe 1440/834/375",
+    "states": [
+     "default",
+     "saving",
+     "error",
+     "success"
+    ],
+    "result": "pass · no horizontal overflow at all 3 widths"
+   }
+  },
+  {
+   "name": "06 · Billing",
+   "group": "ZEM · Patterns",
+   "path": "zem/patterns/06-billing.html",
+   "basis": "derived",
+   "verification": {
+    "method": "zem/qa.html iframe 1440/834/375",
+    "states": [
+     "default",
+     "loading",
+     "error",
+     "empty"
+    ],
+    "result": "pass · no horizontal overflow at all 3 widths"
+   }
+  },
+  {
+   "name": "07 · AI Chat",
+   "group": "ZEM · Patterns",
+   "path": "zem/patterns/07-chat.html",
+   "basis": "derived",
+   "verification": {
+    "method": "zem/qa.html iframe 1440/834/375",
+    "states": [
+     "default",
+     "streaming",
+     "empty",
+     "error"
+    ],
+    "result": "pass · no horizontal overflow at all 3 widths"
+   }
+  },
+  {
+   "name": "08 · Builder",
+   "group": "ZEM · Patterns",
+   "path": "zem/patterns/08-builder.html",
+   "basis": "derived",
+   "verification": {
+    "method": "zem/qa.html iframe 1440/834/375",
+    "states": [
+     "default",
+     "selected",
+     "dragging",
+     "empty"
+    ],
+    "result": "pass · no horizontal overflow at all 3 widths"
+   }
+  },
+  {
+   "name": "09 · Modal",
+   "group": "ZEM · Patterns",
+   "path": "zem/patterns/09-modal.html",
+   "basis": "derived",
+   "verification": {
+    "method": "zem/qa.html iframe 1440/834/375",
+    "states": [
+     "dialog",
+     "confirm",
+     "pending",
+     "error"
+    ],
+    "result": "pass · no horizontal overflow at all 3 widths"
+   }
+  },
+  {
+   "name": "10 · Empty",
+   "group": "ZEM · Patterns",
+   "path": "zem/patterns/10-empty.html",
+   "basis": "derived",
+   "verification": {
+    "method": "zem/qa.html iframe 1440/834/375",
+    "states": [
+     "first-run",
+     "no-results",
+     "no-access"
+    ],
+    "result": "pass · no horizontal overflow at all 3 widths"
+   }
+  },
+  {
+   "name": "UI kit · 활동용 · Activity",
+   "group": "ZEM · UI kits",
+   "path": "zem/ui_kits/activity.html",
+   "basis": "derived",
+   "verification": {
+    "method": "zem/qa.html iframe 1440/834/375",
+    "result": "pass · renders, no overflow"
+   }
+  },
+  {
+   "name": "UI kit · 부모용 · Parent",
+   "group": "ZEM · UI kits",
+   "path": "zem/ui_kits/parent.html",
+   "basis": "derived",
+   "verification": {
+    "method": "zem/qa.html iframe 1440/834/375",
+    "result": "pass · renders, no overflow"
+   }
+  },
+  {
+   "name": "UI kit · 일정용 · Schedule",
+   "group": "ZEM · UI kits",
+   "path": "zem/ui_kits/schedule.html",
+   "basis": "derived",
+   "verification": {
+    "method": "zem/qa.html iframe 1440/834/375",
+    "result": "pass · renders, no overflow"
+   }
+  },
+  {
+   "name": "00 · Rulebook",
+   "group": "ZEM · Docs",
+   "path": "zem/docs/00-rulebook.html",
+   "basis": "derived",
+   "verification": {
+    "method": "card loads; tokens only",
+    "result": "rendered (static)"
+   }
+  },
+  {
+   "name": "01 · Component guide",
+   "group": "ZEM · Docs",
+   "path": "zem/docs/01-components.html",
+   "basis": "derived",
+   "verification": {
+    "method": "card loads; tokens only",
+    "result": "rendered (static)"
+   }
+  },
+  {
+   "name": "02 · State system",
+   "group": "ZEM · Docs",
+   "path": "zem/docs/02-states.html",
+   "basis": "derived",
+   "verification": {
+    "method": "card loads; tokens only",
+    "result": "rendered (static)"
+   }
+  },
+  {
+   "name": "03 · Layout",
+   "group": "ZEM · Docs",
+   "path": "zem/docs/03-layout.html",
+   "basis": "derived",
+   "verification": {
+    "method": "card loads; tokens only",
+    "result": "rendered (static)"
+   }
+  },
+  {
+   "name": "04 · QA checklist",
+   "group": "ZEM · Docs",
+   "path": "zem/docs/04-qa-checklist.html",
+   "basis": "derived",
+   "verification": {
+    "method": "card loads; tokens only",
+    "result": "rendered (static)"
+   }
+  },
+  {
+   "name": "05 · AI prompt guide",
+   "group": "ZEM · Docs",
+   "path": "zem/docs/05-ai-prompt.html",
+   "basis": "derived",
+   "verification": {
+    "method": "card loads; tokens only",
+    "result": "rendered (static)"
+   }
+  },
+  {
+   "name": "06 · Changelog",
+   "group": "ZEM · Docs",
+   "path": "zem/docs/06-changelog.html",
+   "basis": "derived",
+   "verification": {
+    "method": "card loads; tokens only",
+    "result": "rendered (static)"
+   }
+  }
+ ],
+ "fixedThisRun": [
+  "display/KPI/wordmark weight 800 → 700 (no 800 file)",
+  "toast close 32 → 40px, toast action min-height 36px",
+  "QA: checkbox/switch measured by wrapping 44px label",
+  "card meta aligned to zem-ui.css (Dialog 400/560/760 · radius 28, Switch 48×28, Skeleton radius 8, Textarea 104, progress 600)",
+  "archived IAK/RAIS notes renamed .md → .md.txt and detached from usage notes; SKILL.md mirrors zem/claude-system.md"
+ ],
+ "colorNote": "Colour roles observed; hex values are approximate pixel samples, not source spec values."
+}

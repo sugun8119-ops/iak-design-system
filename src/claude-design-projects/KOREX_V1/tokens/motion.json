@@ -1,0 +1,24 @@
+{
+ "motion": {
+  "--motion-fast": {
+   "value": "140ms",
+   "resolved": "140ms",
+   "basis": "derived-extension"
+  },
+  "--motion-default": {
+   "value": "200ms",
+   "resolved": "200ms",
+   "basis": "derived-extension"
+  },
+  "--motion-slow": {
+   "value": "280ms",
+   "resolved": "280ms",
+   "basis": "derived-extension"
+  },
+  "--motion-ease": {
+   "value": "cubic-bezier(.2,0,0,1)",
+   "resolved": "cubic-bezier(.2,0,0,1)",
+   "basis": "derived-extension"
+  }
+ }
+}

@@ -1,0 +1,1860 @@
+{
+ "name": "ZEM_V1 · Project Design System",
+ "version": "1.0.0",
+ "theme": "light-only",
+ "generated": "2026-09-25",
+ "source": {
+  "reference": "https://www.behance.net/gallery/91978629/SKT-ZEM-Kids-Service-App-UI-Design",
+  "image": "https://mir-s3-cdn-cf.behance.net/project_modules/fs_webp/3b6c8a91978629.5e3ff70fe0fca.png",
+  "method": "pixel sampling, approx ±4/channel; image not stored",
+  "unconfirmed": [
+   "exact hex",
+   "sizes",
+   "weights used on board"
+  ],
+  "notCopied": [
+   "photos",
+   "characters",
+   "logo/wordmark",
+   "original copy",
+   "real data",
+   "map/gift imagery"
+  ],
+  "observations": "zem/source-observations.md",
+  "colorNote": "Colour roles observed; hex values are approximate pixel samples, not source spec values."
+ },
+ "tokens": {
+  "--zem-periwinkle-50": {
+   "value": "#F4F5FE",
+   "group": "brand",
+   "basis": "derived",
+   "note": "DER"
+  },
+  "--zem-periwinkle-100": {
+   "value": "#E6E9FC",
+   "group": "brand",
+   "basis": "derived",
+   "note": "DER"
+  },
+  "--zem-periwinkle-200": {
+   "value": "#C0C4F0",
+   "group": "brand",
+   "basis": "observed-role",
+   "note": "OBS panel",
+   "hex": "estimated pixel sample ±4, not source spec"
+  },
+  "--zem-periwinkle-300": {
+   "value": "#B4BCF0",
+   "group": "brand",
+   "basis": "observed-role",
+   "note": "OBS panel",
+   "hex": "estimated pixel sample ±4, not source spec"
+  },
+  "--zem-periwinkle-400": {
+   "value": "#9AABF7",
+   "group": "brand",
+   "basis": "derived",
+   "note": "DER"
+  },
+  "--zem-periwinkle-500": {
+   "value": "#708CF8",
+   "group": "brand",
+   "basis": "observed-role",
+   "note": "OBS primary",
+   "hex": "estimated pixel sample ±4, not source spec"
+  },
+  "--zem-periwinkle-600": {
+   "value": "#4368E2",
+   "group": "brand",
+   "basis": "observed-role",
+   "note": "OBS button (point sample)",
+   "hex": "estimated pixel sample ±4, not source spec"
+  },
+  "--zem-periwinkle-700": {
+   "value": "#3150B8",
+   "group": "brand",
+   "basis": "derived",
+   "note": "DER"
+  },
+  "--zem-periwinkle-800": {
+   "value": "#243A86",
+   "group": "brand",
+   "basis": "derived",
+   "note": "DER"
+  },
+  "--zem-cyan-100": {
+   "value": "#DDF6FB",
+   "group": "points",
+   "basis": "derived",
+   "note": "DER"
+  },
+  "--zem-cyan-500": {
+   "value": "#38C8E0",
+   "group": "points",
+   "basis": "observed-role",
+   "note": "OBS",
+   "hex": "estimated pixel sample ±4, not source spec"
+  },
+  "--zem-cyan-700": {
+   "value": "#0E7C8E",
+   "group": "points",
+   "basis": "derived",
+   "note": "DER text-on-light"
+  },
+  "--zem-lime-100": {
+   "value": "#F8F8B8",
+   "group": "points",
+   "basis": "observed-role",
+   "note": "OBS",
+   "hex": "estimated pixel sample ±4, not source spec"
+  },
+  "--zem-lime-300": {
+   "value": "#DFF696",
+   "group": "points",
+   "basis": "observed-role",
+   "note": "OBS",
+   "hex": "estimated pixel sample ±4, not source spec"
+  },
+  "--zem-lime-600": {
+   "value": "#A8DC3C",
+   "group": "points",
+   "basis": "observed-role",
+   "note": "OBS (small)",
+   "hex": "estimated pixel sample ±4, not source spec"
+  },
+  "--zem-lime-800": {
+   "value": "#4E6A0E",
+   "group": "points",
+   "basis": "derived",
+   "note": "DER text"
+  },
+  "--zem-mint-100": {
+   "value": "#DDF6EC",
+   "group": "points",
+   "basis": "derived",
+   "note": "DER"
+  },
+  "--zem-mint-500": {
+   "value": "#68D8A8",
+   "group": "points",
+   "basis": "observed-role",
+   "note": "OBS",
+   "hex": "estimated pixel sample ±4, not source spec"
+  },
+  "--zem-mint-700": {
+   "value": "#13704C",
+   "group": "points",
+   "basis": "derived",
+   "note": "DER text"
+  },
+  "--zem-sky-100": {
+   "value": "#E3EEFF",
+   "group": "points",
+   "basis": "derived",
+   "note": "DER"
+  },
+  "--zem-sky-500": {
+   "value": "#70A4FC",
+   "group": "points",
+   "basis": "observed-role",
+   "note": "OBS",
+   "hex": "estimated pixel sample ±4, not source spec"
+  },
+  "--zem-sky-700": {
+   "value": "#2450B8",
+   "group": "points",
+   "basis": "derived",
+   "note": "DER text"
+  },
+  "--zem-violet-100": {
+   "value": "#F1E8FF",
+   "group": "points",
+   "basis": "derived",
+   "note": "DER"
+  },
+  "--zem-violet-500": {
+   "value": "#BC90FC",
+   "group": "points",
+   "basis": "observed-role",
+   "note": "OBS (small)",
+   "hex": "estimated pixel sample ±4, not source spec"
+  },
+  "--zem-violet-700": {
+   "value": "#6A3BB8",
+   "group": "points",
+   "basis": "derived",
+   "note": "DER text"
+  },
+  "--zem-orange-100": {
+   "value": "#FFF0DC",
+   "group": "points",
+   "basis": "derived",
+   "note": "DER"
+  },
+  "--zem-orange-500": {
+   "value": "#FCB45C",
+   "group": "points",
+   "basis": "observed-role",
+   "note": "OBS (small)",
+   "hex": "estimated pixel sample ±4, not source spec"
+  },
+  "--zem-orange-700": {
+   "value": "#8A4B00",
+   "group": "points",
+   "basis": "derived",
+   "note": "DER text"
+  },
+  "--zem-coral-100": {
+   "value": "#FFE6E6",
+   "group": "points",
+   "basis": "derived",
+   "note": "DER"
+  },
+  "--zem-coral-500": {
+   "value": "#FC7878",
+   "group": "points",
+   "basis": "observed-role",
+   "note": "OBS",
+   "hex": "estimated pixel sample ±4, not source spec"
+  },
+  "--zem-coral-600": {
+   "value": "#E46880",
+   "group": "points",
+   "basis": "observed-role",
+   "note": "OBS",
+   "hex": "estimated pixel sample ±4, not source spec"
+  },
+  "--zem-coral-700": {
+   "value": "#B4233C",
+   "group": "points",
+   "basis": "derived",
+   "note": "DER text"
+  },
+  "--zem-ink-900": {
+   "value": "#1F2440",
+   "group": "neutrals",
+   "basis": "derived"
+  },
+  "--zem-ink-700": {
+   "value": "#3A4062",
+   "group": "neutrals",
+   "basis": "derived"
+  },
+  "--zem-ink-500": {
+   "value": "#5B6280",
+   "group": "neutrals",
+   "basis": "derived"
+  },
+  "--zem-ink-400": {
+   "value": "#6E7593",
+   "group": "neutrals",
+   "basis": "derived"
+  },
+  "--zem-ink-300": {
+   "value": "#A3A8C3",
+   "group": "neutrals",
+   "basis": "derived"
+  },
+  "--zem-ink-200": {
+   "value": "#CBD0EE",
+   "group": "neutrals",
+   "basis": "derived"
+  },
+  "--zem-ink-100": {
+   "value": "#E3E6F5",
+   "group": "neutrals",
+   "basis": "derived"
+  },
+  "--zem-white": {
+   "value": "#FFFFFF",
+   "group": "neutrals",
+   "basis": "derived"
+  },
+  "--zem-bg": {
+   "value": "var(--zem-periwinkle-50)",
+   "group": "roles",
+   "basis": "derived"
+  },
+  "--zem-surface": {
+   "value": "var(--zem-white)",
+   "group": "roles",
+   "basis": "derived"
+  },
+  "--zem-surface-tint": {
+   "value": "var(--zem-periwinkle-100)",
+   "group": "roles",
+   "basis": "derived"
+  },
+  "--zem-header": {
+   "value": "var(--zem-periwinkle-500)",
+   "group": "roles",
+   "basis": "derived"
+  },
+  "--zem-panel": {
+   "value": "var(--zem-periwinkle-200)",
+   "group": "roles",
+   "basis": "derived"
+  },
+  "--zem-fg": {
+   "value": "var(--zem-ink-900)",
+   "group": "roles",
+   "basis": "derived"
+  },
+  "--zem-fg-2": {
+   "value": "var(--zem-ink-500)",
+   "group": "roles",
+   "basis": "derived"
+  },
+  "--zem-fg-placeholder": {
+   "value": "var(--zem-ink-400)",
+   "group": "roles",
+   "basis": "derived"
+  },
+  "--zem-fg-disabled": {
+   "value": "var(--zem-ink-300)",
+   "group": "roles",
+   "basis": "derived"
+  },
+  "--zem-fg-on-brand": {
+   "value": "var(--zem-white)",
+   "group": "roles",
+   "basis": "derived"
+  },
+  "--zem-action": {
+   "value": "var(--zem-periwinkle-600)",
+   "group": "roles",
+   "basis": "derived"
+  },
+  "--zem-action-hover": {
+   "value": "var(--zem-periwinkle-700)",
+   "group": "roles",
+   "basis": "derived"
+  },
+  "--zem-action-pressed": {
+   "value": "var(--zem-periwinkle-800)",
+   "group": "roles",
+   "basis": "derived"
+  },
+  "--zem-action-soft": {
+   "value": "var(--zem-periwinkle-100)",
+   "group": "roles",
+   "basis": "derived"
+  },
+  "--zem-progress": {
+   "value": "var(--zem-periwinkle-600)",
+   "group": "roles",
+   "basis": "derived",
+   "note": "DER: 500 observed, 600 used for 3:1 on track"
+  },
+  "--zem-progress-track": {
+   "value": "var(--zem-periwinkle-100)",
+   "group": "roles",
+   "basis": "derived"
+  },
+  "--zem-point-cyan": {
+   "value": "var(--zem-cyan-500)",
+   "group": "roles",
+   "basis": "derived"
+  },
+  "--zem-point-lime": {
+   "value": "var(--zem-lime-300)",
+   "group": "roles",
+   "basis": "derived"
+  },
+  "--zem-point-done": {
+   "value": "var(--zem-mint-500)",
+   "group": "roles",
+   "basis": "derived"
+  },
+  "--zem-success": {
+   "value": "var(--zem-mint-700)",
+   "group": "roles",
+   "basis": "derived"
+  },
+  "--zem-success-bg": {
+   "value": "var(--zem-mint-100)",
+   "group": "roles",
+   "basis": "derived"
+  },
+  "--zem-warning": {
+   "value": "var(--zem-orange-700)",
+   "group": "roles",
+   "basis": "derived"
+  },
+  "--zem-warning-bg": {
+   "value": "var(--zem-orange-100)",
+   "group": "roles",
+   "basis": "derived"
+  },
+  "--zem-error": {
+   "value": "var(--zem-coral-700)",
+   "group": "roles",
+   "basis": "derived"
+  },
+  "--zem-error-bg": {
+   "value": "var(--zem-coral-100)",
+   "group": "roles",
+   "basis": "derived"
+  },
+  "--zem-info": {
+   "value": "var(--zem-sky-700)",
+   "group": "roles",
+   "basis": "derived"
+  },
+  "--zem-info-bg": {
+   "value": "var(--zem-sky-100)",
+   "group": "roles",
+   "basis": "derived"
+  },
+  "--zem-border": {
+   "value": "var(--zem-ink-100)",
+   "group": "roles",
+   "basis": "derived"
+  },
+  "--zem-border-strong": {
+   "value": "var(--zem-ink-200)",
+   "group": "roles",
+   "basis": "derived"
+  },
+  "--zem-overlay": {
+   "value": "rgb(31 36 64 / .48)",
+   "group": "roles",
+   "basis": "derived"
+  },
+  "--zem-state-hover": {
+   "value": "rgb(67 104 226 / .06)",
+   "group": "roles",
+   "basis": "derived"
+  },
+  "--zem-state-selected": {
+   "value": "var(--zem-periwinkle-100)",
+   "group": "roles",
+   "basis": "derived"
+  },
+  "--zem-font": {
+   "value": "\"Nanum Barun Gothic\",\"Apple SD Gothic Neo\",\"Malgun Gothic\",system-ui,sans-serif",
+   "group": "type",
+   "basis": "derived"
+  },
+  "--zem-font-mono": {
+   "value": "ui-monospace,SFMono-Regular,Menlo,monospace",
+   "group": "type",
+   "basis": "derived"
+  },
+  "--zem-text-display": {
+   "value": "700 28px/36px var(--zem-font)",
+   "group": "type",
+   "basis": "derived"
+  },
+  "--zem-text-h1": {
+   "value": "700 22px/30px var(--zem-font)",
+   "group": "type",
+   "basis": "derived"
+  },
+  "--zem-text-h2": {
+   "value": "700 18px/26px var(--zem-font)",
+   "group": "type",
+   "basis": "derived"
+  },
+  "--zem-text-title": {
+   "value": "700 16px/24px var(--zem-font)",
+   "group": "type",
+   "basis": "derived"
+  },
+  "--zem-text-body": {
+   "value": "400 15px/22px var(--zem-font)",
+   "group": "type",
+   "basis": "derived"
+  },
+  "--zem-text-body-strong": {
+   "value": "700 15px/22px var(--zem-font)",
+   "group": "type",
+   "basis": "derived"
+  },
+  "--zem-text-caption": {
+   "value": "400 13px/18px var(--zem-font)",
+   "group": "type",
+   "basis": "derived"
+  },
+  "--zem-text-overline": {
+   "value": "700 11px/16px var(--zem-font)",
+   "group": "type",
+   "basis": "derived"
+  },
+  "--zem-text-code": {
+   "value": "400 13px/20px var(--zem-font-mono)",
+   "group": "type",
+   "basis": "derived"
+  },
+  "--zem-space-1": {
+   "value": "4px",
+   "group": "spacing",
+   "basis": "derived"
+  },
+  "--zem-space-2": {
+   "value": "8px",
+   "group": "spacing",
+   "basis": "derived"
+  },
+  "--zem-space-3": {
+   "value": "12px",
+   "group": "spacing",
+   "basis": "derived"
+  },
+  "--zem-space-4": {
+   "value": "16px",
+   "group": "spacing",
+   "basis": "derived"
+  },
+  "--zem-space-5": {
+   "value": "20px",
+   "group": "spacing",
+   "basis": "derived"
+  },
+  "--zem-space-6": {
+   "value": "24px",
+   "group": "spacing",
+   "basis": "derived"
+  },
+  "--zem-space-8": {
+   "value": "32px",
+   "group": "spacing",
+   "basis": "derived"
+  },
+  "--zem-space-10": {
+   "value": "40px",
+   "group": "spacing",
+   "basis": "derived"
+  },
+  "--zem-radius-xs": {
+   "value": "6px",
+   "group": "radius",
+   "basis": "derived"
+  },
+  "--zem-radius-tile": {
+   "value": "10px",
+   "group": "radius",
+   "basis": "derived"
+  },
+  "--zem-radius-control": {
+   "value": "12px",
+   "group": "radius",
+   "basis": "derived"
+  },
+  "--zem-radius-card": {
+   "value": "20px",
+   "group": "radius",
+   "basis": "derived"
+  },
+  "--zem-radius-sheet": {
+   "value": "28px",
+   "group": "radius",
+   "basis": "derived"
+  },
+  "--zem-radius-pill": {
+   "value": "999px",
+   "group": "radius",
+   "basis": "derived"
+  },
+  "--zem-border-w": {
+   "value": "1px",
+   "group": "border & shadow",
+   "basis": "derived"
+  },
+  "--zem-shadow-card": {
+   "value": "0 6px 20px rgb(67 86 190 / .10)",
+   "group": "border & shadow",
+   "basis": "derived"
+  },
+  "--zem-shadow-raise": {
+   "value": "0 12px 32px rgb(67 86 190 / .18)",
+   "group": "border & shadow",
+   "basis": "derived"
+  },
+  "--zem-shadow-header": {
+   "value": "0 8px 24px rgb(67 86 190 / .22)",
+   "group": "border & shadow",
+   "basis": "derived"
+  },
+  "--zem-focus-color": {
+   "value": "var(--zem-periwinkle-600)",
+   "group": "focus",
+   "basis": "derived"
+  },
+  "--zem-focus-width": {
+   "value": "2px",
+   "group": "focus",
+   "basis": "derived"
+  },
+  "--zem-focus-offset": {
+   "value": "2px",
+   "group": "focus",
+   "basis": "derived"
+  },
+  "--zem-motion-fast": {
+   "value": "120ms",
+   "group": "motion",
+   "basis": "derived"
+  },
+  "--zem-motion-base": {
+   "value": "180ms",
+   "group": "motion",
+   "basis": "derived"
+  },
+  "--zem-motion-slow": {
+   "value": "240ms",
+   "group": "motion",
+   "basis": "derived"
+  },
+  "--zem-ease": {
+   "value": "cubic-bezier(.2,.8,.2,1)",
+   "group": "motion",
+   "basis": "derived"
+  },
+  "--zem-container-max": {
+   "value": "1200px",
+   "group": "layout",
+   "basis": "derived"
+  },
+  "--zem-pad": {
+   "value": "16px",
+   "group": "layout",
+   "basis": "derived"
+  },
+  "--zem-gutter": {
+   "value": "12px",
+   "group": "layout",
+   "basis": "derived"
+  },
+  "--zem-cols": {
+   "value": "4",
+   "group": "layout",
+   "basis": "derived"
+  },
+  "--zem-tabbar-h": {
+   "value": "64px",
+   "group": "layout",
+   "basis": "derived"
+  },
+  "--zem-header-h": {
+   "value": "56px",
+   "group": "layout",
+   "basis": "derived"
+  }
+ },
+ "breakpoints": {
+  "640": {
+   "--zem-pad": "24px",
+   "--zem-gutter": "16px",
+   "--zem-cols": 8
+  },
+  "1024": {
+   "--zem-gutter": "24px",
+   "--zem-cols": 12
+  },
+  "reduced-motion": {
+   "--zem-motion-*": "1ms"
+  }
+ },
+ "typography": {
+  "family": "Nanum Barun Gothic",
+  "files": {
+   "400": "fonts/NanumBarunGothic.ttf",
+   "700": "fonts/NanumBarunGothicBold.ttf"
+  },
+  "license": "SIL OFL 1.1 · fonts/OFL.txt",
+  "source": "https://hangeul.naver.com/hangeul_static/webfont/zips/nanum-barun-gothic.zip",
+  "weights": [
+   400,
+   700
+  ],
+  "fallback": [
+   "Apple SD Gothic Neo",
+   "Malgun Gothic",
+   "system-ui",
+   "sans-serif"
+  ],
+  "basis": "family label observed on board; sizes derived"
+ },
+ "components": {
+  "Button": {
+   "source": "zem/components/Button.jsx",
+   "types": "zem/components/Button.d.ts",
+   "preview": "zem/components/Button.html",
+   "api": [
+    "variant: 'primary'|'secondary'|'danger'|'text'",
+    "size: 'sm'|'md'|'lg'",
+    "loading: boolean}"
+   ],
+   "typescript": "import * as React from 'react';\nexport interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement>{variant?:'primary'|'secondary'|'danger'|'text';size?:'sm'|'md'|'lg';loading?:boolean};\nexport declare function Button(props:ButtonProps):React.ReactElement|null;",
+   "cases": [
+    {
+     "id": "primary",
+     "kind": "code",
+     "label": "variant=\"primary\""
+    },
+    {
+     "id": "secondary",
+     "kind": "code",
+     "label": "variant=\"secondary\""
+    },
+    {
+     "id": "danger",
+     "kind": "code",
+     "label": "variant=\"danger\""
+    },
+    {
+     "id": "text",
+     "kind": "code",
+     "label": "variant=\"text\""
+    },
+    {
+     "id": "size-sm",
+     "kind": "code",
+     "label": "size=\"sm\" · 32px"
+    },
+    {
+     "id": "size-md",
+     "kind": "code",
+     "label": "size=\"md\" · 44px"
+    },
+    {
+     "id": "size-lg",
+     "kind": "code",
+     "label": "size=\"lg\" · 52px"
+    },
+    {
+     "id": "default",
+     "kind": "code",
+     "label": "default"
+    },
+    {
+     "id": "hover",
+     "kind": "code",
+     "label": "hover · primary 700 / soft 배경"
+    },
+    {
+     "id": "pressed",
+     "kind": "code",
+     "label": "pressed · periwinkle-800 배경 · scale .98"
+    },
+    {
+     "id": "focus",
+     "kind": "code",
+     "label": "focus-visible · 2px/2px periwinkle-600"
+    },
+    {
+     "id": "disabled",
+     "kind": "code",
+     "label": "disabled · ink-100 배경 / ink-300 텍스트"
+    },
+    {
+     "id": "loading",
+     "kind": "code",
+     "label": "loading · aria-busy, 너비 유지"
+    },
+    {
+     "id": "with-icon",
+     "kind": "composition",
+     "label": "children = Icon + label"
+    },
+    {
+     "id": "icon-only",
+     "kind": "composition",
+     "label": "Icon only + aria-label (44px 원형)"
+    },
+    {
+     "id": "full-width",
+     "kind": "composition",
+     "label": "모바일 full-width CTA"
+    },
+    {
+     "id": "long-label",
+     "kind": "code",
+     "label": "긴 문구 · nowrap → 폭 제약 시 넘침 주의"
+    },
+    {
+     "id": "d-point",
+     "kind": "design-only",
+     "label": "Point (lime) → 대응 없음 · 보상/완료 강조 전용"
+    },
+    {
+     "id": "d-on-header",
+     "kind": "design-only",
+     "label": "On header (흰 반투명) → 대응: secondary"
+    }
+   ],
+   "notInSource": [
+    "icon-only 전용 prop 없음 — children + aria-label로 조합",
+    "full-width prop 없음 — style/width로 조합"
+   ],
+   "spec": "pill 버튼 — 원본의 둥근 \"수락하기\" CTA(관찰)에서 파생. primary = periwinkle-600 (hex ≈#4368E2, 버튼 픽셀 샘플 추정) + 흰 텍스트 4.86:1. md 44px로 모바일 터치 기준 충족."
+  },
+  "TextField": {
+   "source": "zem/components/TextField.jsx",
+   "types": "zem/components/TextField.d.ts",
+   "preview": "zem/components/TextField.html",
+   "api": [
+    "description: string",
+    "error: string}"
+   ],
+   "typescript": "import * as React from 'react';\nexport interface TextFieldProps extends React.InputHTMLAttributes<HTMLInputElement>{label:string;description?:string;error?:string};\nexport declare function TextField(props:TextFieldProps):React.ReactElement|null;",
+   "cases": [
+    {
+     "id": "default",
+     "kind": "code",
+     "label": "default · placeholder"
+    },
+    {
+     "id": "filled",
+     "kind": "code",
+     "label": "filled"
+    },
+    {
+     "id": "hover",
+     "kind": "code",
+     "label": "hover · border-strong"
+    },
+    {
+     "id": "focus",
+     "kind": "code",
+     "label": "focus-visible · 2px/2px"
+    },
+    {
+     "id": "error",
+     "kind": "code",
+     "label": "error · aria-invalid"
+    },
+    {
+     "id": "disabled",
+     "kind": "code",
+     "label": "disabled · opacity .5"
+    },
+    {
+     "id": "description",
+     "kind": "code",
+     "label": "description"
+    },
+    {
+     "id": "required",
+     "kind": "code",
+     "label": "required · 별표 aria-hidden"
+    },
+    {
+     "id": "readonly",
+     "kind": "native",
+     "label": "readOnly (전용 스타일 없음)"
+    },
+    {
+     "id": "long-label",
+     "kind": "code",
+     "label": "긴 레이블·도움말 줄바꿈"
+    },
+    {
+     "id": "long-value",
+     "kind": "code",
+     "label": "긴 값 · 입력 내부 스크롤"
+    },
+    {
+     "id": "type-email",
+     "kind": "native",
+     "label": "type=\"email\""
+    },
+    {
+     "id": "d-floating",
+     "kind": "design-only",
+     "label": "Floating label → 대응: label prop (상단 고정)"
+    }
+   ],
+   "notInSource": [
+    "success/valid 상태 스타일 없음",
+    "size variant 없음 (40px 고정)",
+    "prefix/suffix 아이콘 슬롯 없음"
+   ],
+   "spec": "label 필수. description/error는 aria-describedby, error는 aria-invalid + coral-700 테두리. 높이 48 · radius 12 · 1.5px 테두리."
+  },
+  "Textarea": {
+   "source": "zem/components/Textarea.jsx",
+   "types": "zem/components/Textarea.d.ts",
+   "preview": "zem/components/Textarea.html",
+   "api": [
+    "description: string",
+    "error: string}"
+   ],
+   "typescript": "import * as React from 'react';\nexport interface TextareaProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement>{label:string;description?:string;error?:string};\nexport declare function Textarea(props:TextareaProps):React.ReactElement|null;",
+   "cases": [
+    {
+     "id": "default",
+     "kind": "code",
+     "label": "default · placeholder"
+    },
+    {
+     "id": "filled",
+     "kind": "code",
+     "label": "filled"
+    },
+    {
+     "id": "hover",
+     "kind": "code",
+     "label": "hover"
+    },
+    {
+     "id": "focus",
+     "kind": "code",
+     "label": "focus-visible"
+    },
+    {
+     "id": "error",
+     "kind": "code",
+     "label": "error"
+    },
+    {
+     "id": "disabled",
+     "kind": "code",
+     "label": "disabled"
+    },
+    {
+     "id": "rows-2",
+     "kind": "native",
+     "label": "rows={2} (min-height 96 우선)"
+    },
+    {
+     "id": "long-text",
+     "kind": "code",
+     "label": "긴 문구 · 내부 스크롤"
+    },
+    {
+     "id": "description",
+     "kind": "code",
+     "label": "description"
+    }
+   ],
+   "notInSource": [
+    "글자 수 카운터 없음 (제품에서 description으로 조합)",
+    "auto-grow 없음"
+   ],
+   "spec": "TextField와 같은 FieldShell. 최소 높이 104px, resize: vertical, rows 기본 4."
+  },
+  "Select": {
+   "source": "zem/components/Select.jsx",
+   "types": "zem/components/Select.d.ts",
+   "preview": "zem/components/Select.html",
+   "api": [
+    "description: string",
+    "error: string}"
+   ],
+   "typescript": "import * as React from 'react';\nexport interface SelectProps extends React.SelectHTMLAttributes<HTMLSelectElement>{label:string;description?:string;error?:string};\nexport declare function Select(props:SelectProps):React.ReactElement|null;",
+   "cases": [
+    {
+     "id": "default",
+     "kind": "code",
+     "label": "default"
+    },
+    {
+     "id": "hover",
+     "kind": "code",
+     "label": "hover"
+    },
+    {
+     "id": "focus",
+     "kind": "code",
+     "label": "focus-visible"
+    },
+    {
+     "id": "error",
+     "kind": "code",
+     "label": "error"
+    },
+    {
+     "id": "disabled",
+     "kind": "code",
+     "label": "disabled"
+    },
+    {
+     "id": "description",
+     "kind": "code",
+     "label": "description"
+    },
+    {
+     "id": "long-option",
+     "kind": "code",
+     "label": "긴 옵션 · 선택값 말줄임은 OS 처리"
+    },
+    {
+     "id": "placeholder-option",
+     "kind": "native",
+     "label": "빈 option = placeholder"
+    }
+   ],
+   "notInSource": [
+    "custom listbox / search / multi-select 없음",
+    "펼친 목록 스타일은 OS 기본 (디자인 불가)"
+   ],
+   "spec": "운영체제 native select · 높이 48 · radius 12 · periwinkle 셰브론. 커스텀 팝오버·검색·다중 선택은 코드에 없습니다."
+  },
+  "Checkbox": {
+   "source": "zem/components/Checkbox.jsx",
+   "types": "zem/components/Checkbox.d.ts",
+   "preview": "zem/components/Checkbox.html",
+   "api": [],
+   "typescript": "import * as React from 'react';\nexport interface CheckboxProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>,'type'>{label:string};\nexport declare function Checkbox(props:CheckboxProps):React.ReactElement|null;",
+   "cases": [
+    {
+     "id": "unchecked",
+     "kind": "code",
+     "label": "unchecked"
+    },
+    {
+     "id": "checked",
+     "kind": "code",
+     "label": "checked"
+    },
+    {
+     "id": "focus",
+     "kind": "code",
+     "label": "focus-visible"
+    },
+    {
+     "id": "disabled",
+     "kind": "code",
+     "label": "disabled"
+    },
+    {
+     "id": "disabled-checked",
+     "kind": "code",
+     "label": "disabled + checked"
+    },
+    {
+     "id": "long-label",
+     "kind": "code",
+     "label": "긴 레이블 줄바꿈"
+    },
+    {
+     "id": "group",
+     "kind": "composition",
+     "label": "fieldset 그룹"
+    }
+   ],
+   "notInSource": [
+    "indeterminate 스타일/prop 없음 (native ref로만 가능)",
+    "error 상태 없음",
+    "hover 스타일 없음"
+   ],
+   "spec": "원형 24px 체크 — 원본의 mint 체크 원(관찰)을 선택 컨트롤로 파생. checked = mint-500 + 흰 체크, 행 최소 높이 44px."
+  },
+  "Switch": {
+   "source": "zem/components/Switch.jsx",
+   "types": "zem/components/Switch.d.ts",
+   "preview": "zem/components/Switch.html",
+   "api": [],
+   "typescript": "import * as React from 'react';\nexport interface SwitchProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>,'type'>{label:string};\nexport declare function Switch(props:SwitchProps):React.ReactElement|null;",
+   "cases": [
+    {
+     "id": "off",
+     "kind": "code",
+     "label": "off"
+    },
+    {
+     "id": "on",
+     "kind": "code",
+     "label": "on"
+    },
+    {
+     "id": "focus",
+     "kind": "code",
+     "label": "focus-visible (track)"
+    },
+    {
+     "id": "disabled-off",
+     "kind": "code",
+     "label": "disabled off"
+    },
+    {
+     "id": "disabled-on",
+     "kind": "code",
+     "label": "disabled on"
+    },
+    {
+     "id": "long-label",
+     "kind": "code",
+     "label": "긴 레이블"
+    }
+   ],
+   "notInSource": [
+    "size variant 없음",
+    "label 위치(좌/우) 옵션 없음",
+    "loading 상태 없음"
+   ],
+   "spec": "role=\"switch\" native checkbox. 트랙 48×28 · off ink-200 / on action · thumb 22 흰색. 이동 motion-base 180ms."
+  },
+  "Badge": {
+   "source": "zem/components/Badge.jsx",
+   "types": "zem/components/Badge.d.ts",
+   "preview": "zem/components/Badge.html",
+   "api": [
+    "tone: 'info'|'success'|'warning'|'error'|'neutral'}"
+   ],
+   "typescript": "import * as React from 'react';\nexport interface BadgeProps extends React.HTMLAttributes<HTMLSpanElement>{tone?:'info'|'success'|'warning'|'error'|'neutral'};\nexport declare function Badge(props:BadgeProps):React.ReactElement|null;",
+   "cases": [
+    {
+     "id": "neutral",
+     "kind": "code",
+     "label": "tone=\"neutral\""
+    },
+    {
+     "id": "info",
+     "kind": "code",
+     "label": "tone=\"info\""
+    },
+    {
+     "id": "success",
+     "kind": "code",
+     "label": "tone=\"success\""
+    },
+    {
+     "id": "warning",
+     "kind": "code",
+     "label": "tone=\"warning\""
+    },
+    {
+     "id": "error",
+     "kind": "code",
+     "label": "tone=\"error\""
+    },
+    {
+     "id": "with-icon",
+     "kind": "composition",
+     "label": "Icon 16 + 텍스트"
+    },
+    {
+     "id": "long-text",
+     "kind": "code",
+     "label": "긴 문구 줄바꿈"
+    },
+    {
+     "id": "number",
+     "kind": "code",
+     "label": "숫자"
+    },
+    {
+     "id": "d-status-dot",
+     "kind": "design-only",
+     "label": "Status dot → 대응: Badge tone + 텍스트"
+    },
+    {
+     "id": "d-filter-chip",
+     "kind": "design-only",
+     "label": "선택형 chip → 대응 없음 (Button text/secondary)"
+    }
+   ],
+   "notInSource": [
+    "클릭/닫기 가능한 chip 없음",
+    "size variant 없음"
+   ],
+   "spec": "pill radius · 12px/700 · 색 + 텍스트 함께. tone 색은 원본 관찰색(mint/orange/coral/sky)의 100 배경 + 700 텍스트(파생)로 4.5:1 이상."
+  },
+  "Card": {
+   "source": "zem/components/Card.jsx",
+   "types": "zem/components/Card.d.ts",
+   "preview": "zem/components/Card.html",
+   "api": [
+    "title: string",
+    "footer: React.ReactNode}"
+   ],
+   "typescript": "import * as React from 'react';\nexport interface CardProps extends Omit<React.HTMLAttributes<HTMLElement>,'title'>{title?:string;footer?:React.ReactNode};\nexport declare function Card(props:CardProps):React.ReactElement|null;",
+   "cases": [
+    {
+     "id": "full",
+     "kind": "code",
+     "label": "title + body + footer"
+    },
+    {
+     "id": "body-only",
+     "kind": "code",
+     "label": "body only"
+    },
+    {
+     "id": "long-title",
+     "kind": "code",
+     "label": "긴 제목 줄바꿈"
+    },
+    {
+     "id": "loading",
+     "kind": "composition",
+     "label": "loading · Skeleton + aria-busy"
+    },
+    {
+     "id": "missing",
+     "kind": "composition",
+     "label": "누락 데이터 · \"—\" + 사유"
+    },
+    {
+     "id": "error",
+     "kind": "composition",
+     "label": "error · 텍스트+아이콘+재시도"
+    }
+   ],
+   "notInSource": [
+    "중첩 카드용 radius prop 없음 — className/style로 조정",
+    "interactive/selectable card prop 없음"
+   ],
+   "spec": "흰색 카드 · radius 20 · padding 20 · shadow-card(periwinkle 틴트 그림자, 파생). 테두리 없이 그림자로 분리 — 원본 관찰(흰 둥근 카드). 카드 자체는 버튼이 아닙니다."
+  },
+  "Skeleton": {
+   "source": "zem/components/Skeleton.jsx",
+   "types": "zem/components/Skeleton.d.ts",
+   "preview": "zem/components/Skeleton.html",
+   "api": [
+    "width: string|number",
+    "height: string|number",
+    "circle: boolean}"
+   ],
+   "typescript": "import * as React from 'react';\nexport interface SkeletonProps extends React.HTMLAttributes<HTMLSpanElement>{width?:string|number;height?:string|number;circle?:boolean};\nexport declare function Skeleton(props:SkeletonProps):React.ReactElement|null;",
+   "cases": [
+    {
+     "id": "default",
+     "kind": "code",
+     "label": "default · 100% × 20"
+    },
+    {
+     "id": "sized",
+     "kind": "code",
+     "label": "width/height"
+    },
+    {
+     "id": "circle",
+     "kind": "code",
+     "label": "circle"
+    },
+    {
+     "id": "list-row",
+     "kind": "composition",
+     "label": "리스트 행"
+    }
+   ],
+   "notInSource": [],
+   "spec": "aria-hidden 자리 표시. periwinkle-100/50 shimmer 1.4s, prefers-reduced-motion에서 정지. 부모에 aria-busy 제공."
+  },
+  "Icon": {
+   "source": "zem/components/Icon.jsx",
+   "types": "zem/components/Icon.d.ts",
+   "preview": "zem/components/Icon.html",
+   "api": [
+    "size: 16|20|24",
+    "label: string}"
+   ],
+   "typescript": "import * as React from 'react';\n/** One of the 97 names in master/lib/icons.js. 9 original names are unresolved and render null. */\nexport type IconName=string;\nexport interface IconProps extends Omit<React.SVGProps<SVGSVGElement>,'name'>{name:IconName;size?:16|20|24;label?:string};\nexport declare function Icon(props:IconProps):React.ReactElement|null;",
+   "cases": [
+    {
+     "id": "decorative",
+     "kind": "code",
+     "label": "decorative · aria-hidden"
+    },
+    {
+     "id": "labeled",
+     "kind": "code",
+     "label": "label=\"완료\" · role=img"
+    },
+    {
+     "id": "currentColor",
+     "kind": "code",
+     "label": "currentColor · info / accent / error"
+    },
+    {
+     "id": "unresolved",
+     "kind": "code",
+     "label": "미해결 이름 solar:gem-bold → null"
+    }
+   ],
+   "notInSource": [
+    "32px 이상 size 없음",
+    "duotone 색상 제어 없음 (단색 currentColor)"
+   ],
+   "spec": "일반 기능 아이콘 97개(Eva/Solar 오픈소스). 원본 ZEM 아이콘/캐릭터는 복제하지 않음. 원본 이름 106개 중 9개는 SVG 없음 → null 반환. 색 역할은 아이콘 타일(cyan/periwinkle/violet/lime)로 부여."
+  },
+  "Dialog": {
+   "source": "zem/components/Dialog.jsx",
+   "types": "zem/components/Dialog.d.ts",
+   "preview": "zem/components/Dialog.html",
+   "api": [
+    "trigger: React.ReactElement",
+    "description: string",
+    "footer: React.ReactNode",
+    "open: boolean",
+    "defaultOpen: boolean",
+    "onOpenChange: (open:boolean)=>void",
+    "initialFocusRef: React.RefObject<HTMLElement|null>",
+    "closeOnOutside: boolean",
+    "closeLabel: string",
+    "size: 'sm'|'md'|'lg'",
+    "inline: boolean}"
+   ],
+   "typescript": "import * as React from 'react';\nexport interface DialogProps{trigger?:React.ReactElement;title:string;description?:string;children:React.ReactNode;footer?:React.ReactNode;open?:boolean;defaultOpen?:boolean;onOpenChange?:(open:boolean)=>void;initialFocusRef?:React.RefObject<HTMLElement|null>;closeOnOutside?:boolean;closeLabel?:string;size?:'sm'|'md'|'lg';/** preview-only */inline?:boolean};\nexport declare function Dialog(props:DialogProps):React.ReactElement|null;",
+   "cases": [
+    {
+     "id": "size-sm",
+     "kind": "code",
+     "label": "size=\"sm\" · 400"
+    },
+    {
+     "id": "size-md",
+     "kind": "code",
+     "label": "size=\"md\" · 560 (default)"
+    },
+    {
+     "id": "size-lg",
+     "kind": "code",
+     "label": "size=\"lg\" · 760"
+    },
+    {
+     "id": "no-description",
+     "kind": "code",
+     "label": "description 없음 · footer 없음"
+    },
+    {
+     "id": "long-content",
+     "kind": "code",
+     "label": "긴 본문 · 내부 스크롤"
+    },
+    {
+     "id": "focus-close",
+     "kind": "code",
+     "label": "focus-visible · 닫기 버튼"
+    },
+    {
+     "id": "live",
+     "kind": "preview-only",
+     "label": "trigger → open"
+    }
+   ],
+   "notInSource": [
+    "fullscreen/sheet(모바일 하단) variant 없음",
+    "loading 상태 없음 — 비동기 저장은 제품에서 footer Button loading으로 처리"
+   ],
+   "spec": "흰 시트 · radius 28 · padding 24 · 폭 400/560/760 · 모바일 좌우 16. overlay ink 48%. 닫기 버튼 36px 원형."
+  },
+  "Menu": {
+   "source": "zem/components/Menu.jsx",
+   "types": "zem/components/Menu.d.ts",
+   "preview": "zem/components/Menu.html",
+   "api": [
+    "disabled: boolean",
+    "danger: boolean",
+    "separatorBefore: boolean}\nexport interface MenuProps{trigger?:React.ReactElement",
+    "align: 'start'|'center'|'end'",
+    "open: boolean",
+    "onOpenChange: (open:boolean)=>void",
+    "inline: boolean",
+    "highlightedId: string}"
+   ],
+   "typescript": "import * as React from 'react';\nexport interface MenuItem{id:string;label:string;onSelect:()=>void;disabled?:boolean;danger?:boolean;separatorBefore?:boolean}\nexport interface MenuProps{trigger?:React.ReactElement;label:string;items:MenuItem[];align?:'start'|'center'|'end';open?:boolean;onOpenChange?:(open:boolean)=>void;/** preview-only */inline?:boolean;/** preview-only */highlightedId?:string};\nexport declare function Menu(props:MenuProps):React.ReactElement|null;",
+   "cases": [
+    {
+     "id": "rename",
+     "kind": "code",
+     "label": "이름 변경"
+    },
+    {
+     "id": "dup",
+     "kind": "code",
+     "label": "복제"
+    },
+    {
+     "id": "export",
+     "kind": "code",
+     "label": "내보내기 (권한 없음)"
+    },
+    {
+     "id": "archive",
+     "kind": "code",
+     "label": "보관"
+    },
+    {
+     "id": "default",
+     "kind": "code",
+     "label": "open · 기본"
+    },
+    {
+     "id": "highlighted",
+     "kind": "code",
+     "label": "data-highlighted (hover/키보드)"
+    },
+    {
+     "id": "disabled-item",
+     "kind": "code",
+     "label": "disabled 항목 · 선택 불가"
+    },
+    {
+     "id": "danger",
+     "kind": "code",
+     "label": "danger + separatorBefore"
+    },
+    {
+     "id": "long-label",
+     "kind": "code",
+     "label": "긴 항목 줄바꿈 (overflow-wrap)"
+    },
+    {
+     "id": "a",
+     "kind": "code",
+     "label": "선택한 12개 미션를 다른 워크스페이스로 이동"
+    },
+    {
+     "id": "b",
+     "kind": "code",
+     "label": "링크 복사"
+    },
+    {
+     "id": "live",
+     "kind": "preview-only",
+     "label": "trigger → open"
+    }
+   ],
+   "notInSource": [
+    "아이콘 슬롯·단축키 표시·체크 항목·서브메뉴 없음",
+    "검색형 메뉴 없음"
+   ],
+   "spec": "흰 팝오버 · radius 16 · 항목 44px 이상 · highlighted = periwinkle-100 배경 + action-hover(#3150B8) 텍스트 5.87:1. danger는 coral-700."
+  },
+  "Table": {
+   "source": "zem/components/Table.jsx",
+   "types": "zem/components/Table.d.ts",
+   "preview": "zem/components/Table.html",
+   "api": [
+    "sortValue: (row:T)=>string|number|null|undefined",
+    "align: 'left'|'right'}\nexport interface TableSort{columnId:string",
+    "page: number",
+    "onPageChange: (page:number)=>void}\nexport interface TableVirtualization{height?:number",
+    "rowHeight: number",
+    "overscan: number}\nexport interface TableProps<T=any>{caption:string",
+    "sort: TableSort|null",
+    "defaultSort: TableSort",
+    "onSortChange: (sort:TableSort)=>void",
+    "loading: boolean",
+    "error: string",
+    "emptyMessage: string",
+    "loadingMessage: string",
+    "minWidth: number",
+    "pagination: TablePagination",
+    "virtualization: TableVirtualization}"
+   ],
+   "typescript": "import * as React from 'react';\nexport interface TableColumn<T=any>{id:string;header:string;cell:(row:T)=>React.ReactNode;sortValue?:(row:T)=>string|number|null|undefined;align?:'left'|'right'}\nexport interface TableSort{columnId:string;direction:'ascending'|'descending'}\nexport interface TablePagination{pageSize:number;page?:number;onPageChange?:(page:number)=>void}\nexport interface TableVirtualization{height?:number;rowHeight?:number;overscan?:number}\nexport interface TableProps<T=any>{caption:string;columns:TableColumn<T>[];rows:T[];rowKey:(row:T)=>string;sort?:TableSort|null;defaultSort?:TableSort;onSortChange?:(sort:TableSort)=>void;loading?:boolean;error?:string;emptyMessage?:string;loadingMessage?:string;minWidth?:number;pagination?:TablePagination;virtualization?:TableVirtualization};\nexport declare function Table(props:TableProps):React.ReactElement|null;",
+   "cases": [
+    {
+     "id": "default",
+     "kind": "code",
+     "label": "default · 정렬 가능 열 ↕"
+    },
+    {
+     "id": "sorted-asc",
+     "kind": "code",
+     "label": "defaultSort 작업 수 ascending ↑"
+    },
+    {
+     "id": "sorted-desc",
+     "kind": "code",
+     "label": "sort 예산 descending ↓"
+    },
+    {
+     "id": "paginated",
+     "kind": "code",
+     "label": "pagination pageSize=5 · 1–5 / 12"
+    },
+    {
+     "id": "loading",
+     "kind": "code",
+     "label": "loading · 정렬 비활성"
+    },
+    {
+     "id": "error",
+     "kind": "code",
+     "label": "error"
+    },
+    {
+     "id": "empty",
+     "kind": "code",
+     "label": "empty"
+    },
+    {
+     "id": "focus-sort",
+     "kind": "code",
+     "label": "focus-visible · 정렬 버튼"
+    },
+    {
+     "id": "missing-long",
+     "kind": "code",
+     "label": "누락 데이터(—, 미지정) · 긴 문구 줄바꿈"
+    },
+    {
+     "id": "narrow",
+     "kind": "code",
+     "label": "좁은 폭 · 내부 가로 스크롤"
+    },
+    {
+     "id": "virtual",
+     "kind": "code",
+     "label": "virtualization height 320 · rowHeight 56 · 200행 (긴 셀 말줄임)"
+    }
+   ],
+   "notInSource": [
+    "행 선택(체크박스)·행 hover 스타일 없음",
+    "서버 페이지네이션·컬럼 리사이즈·고정 열 없음",
+    "compact density 없음"
+   ],
+   "spec": "caption 필수 · scope=col · aria-sort. 흰 카드 컨테이너 radius 20 · 헤더 periwinkle-50 · 셀 12/16. 375px에서는 가로 스크롤 영역(role=region)."
+  },
+  "Pagination": {
+   "source": "zem/components/Pagination.jsx",
+   "types": "zem/components/Pagination.d.ts",
+   "preview": "zem/components/Pagination.html",
+   "api": [
+    "disabled: boolean",
+    "label: string",
+    "previewState: 'hover'|'focus'}"
+   ],
+   "typescript": "import * as React from 'react';\nexport interface PaginationProps{page:number;pageCount:number;onPageChange:(page:number)=>void;disabled?:boolean;label?:string;/** preview-only */previewState?:'hover'|'focus'};\nexport declare function Pagination(props:PaginationProps):React.ReactElement|null;",
+   "cases": [
+    {
+     "id": "first",
+     "kind": "code",
+     "label": "page=1 · 이전 비활성"
+    },
+    {
+     "id": "middle",
+     "kind": "code",
+     "label": "page=3 / 12"
+    },
+    {
+     "id": "last",
+     "kind": "code",
+     "label": "page=12 · 다음 비활성"
+    },
+    {
+     "id": "single",
+     "kind": "code",
+     "label": "pageCount=1 · 모두 비활성"
+    },
+    {
+     "id": "disabled",
+     "kind": "code",
+     "label": "disabled (loading 중)"
+    },
+    {
+     "id": "hover",
+     "kind": "code",
+     "label": "hover · 다음 bg-field"
+    },
+    {
+     "id": "focus",
+     "kind": "code",
+     "label": "focus-visible · 다음"
+    },
+    {
+     "id": "live",
+     "kind": "preview-only",
+     "label": "상태 연결"
+    }
+   ],
+   "notInSource": [
+    "번호 목록형(1 2 3 …) 없음",
+    "page size 선택 없음"
+   ],
+   "spec": "«·이전·현재/전체·다음·». 44px pill 버튼 · periwinkle-200 테두리 · action 텍스트. 경계에서 해당 버튼 disabled."
+  },
+  "Toast": {
+   "source": "zem/components/Toast.jsx",
+   "types": "zem/components/Toast.d.ts",
+   "preview": "zem/components/Toast.html",
+   "api": [
+    "description: string",
+    "tone: ToastTone",
+    "id: string",
+    "duration: number",
+    "priority: 'polite'|'assertive'",
+    "action: {label:string",
+    "duration: number",
+    "label: string}\n/** Single static toast (preview-only view of one ToastProvider entry). Use ToastProvider + useToast in product code. */\nexport interface ToastProps extends ToastOptions{onClose?:()=>void}"
+   ],
+   "typescript": "import * as React from 'react';\nexport type ToastTone='success'|'warning'|'error'|'info';\nexport interface ToastOptions{title:string;description?:string;tone?:ToastTone;id?:string;duration?:number;priority?:'polite'|'assertive';action?:{label:string;altText:string;onClick:()=>void}}\nexport interface ToastProviderProps{children:React.ReactNode;duration?:number;label?:string}\n/** Single static toast (preview-only view of one ToastProvider entry). Use ToastProvider + useToast in product code. */\nexport interface ToastProps extends ToastOptions{onClose?:()=>void};\nexport declare function Toast(props:ToastProps):React.ReactElement|null;\nexport declare function ToastProvider(props:ToastProviderProps):React.ReactElement;\nexport declare function useToast():{notify:(o:ToastOptions)=>string|undefined;dismiss:(id:string)=>void;dismissAll:()=>void};",
+   "cases": [
+    {
+     "id": "description",
+     "kind": "code",
+     "label": "description"
+    },
+    {
+     "id": "action",
+     "kind": "code",
+     "label": "action {label, altText}"
+    },
+    {
+     "id": "long-text",
+     "kind": "code",
+     "label": "긴 문구 · overflow-wrap"
+    },
+    {
+     "id": "focus-close",
+     "kind": "code",
+     "label": "focus-visible · 닫기"
+    },
+    {
+     "id": "stack-3",
+     "kind": "code",
+     "label": "viewport · 최대 3개 표시"
+    },
+    {
+     "id": "live",
+     "kind": "preview-only",
+     "label": "Provider 연결 (화면 우하단)"
+    },
+    {
+     "id": "d-snackbar-default",
+     "kind": "design-only",
+     "label": "Compact snackbar (한 줄) → 대응: tone=\"info\" + title만"
+    }
+   ],
+   "notInSource": [
+    "위치 옵션(top/center) 없음",
+    "progress bar 없음",
+    "토스트 hover 스타일 없음"
+   ],
+   "spec": "ToastProvider + useToast().notify. 폭 360(모바일 좌우 12 전체폭) · radius 18 · 아이콘 36 rounded tile(10). 동시 3개 표시."
+  },
+  "AlertDialog": {
+   "source": "zem/components/AlertDialog.jsx",
+   "types": "zem/components/AlertDialog.d.ts",
+   "preview": "zem/components/AlertDialog.html",
+   "api": [
+    "trigger: React.ReactElement",
+    "confirmLabel: string",
+    "cancelLabel: string",
+    "danger: boolean",
+    "errorMessage: string",
+    "inline: boolean",
+    "previewState: 'pending'|'error'}"
+   ],
+   "typescript": "import * as React from 'react';\nexport interface AlertDialogProps{trigger?:React.ReactElement;title:string;description:string;confirmLabel?:string;cancelLabel?:string;danger?:boolean;onConfirm:()=>void|Promise<void>;errorMessage?:string;/** preview-only */inline?:boolean;/** preview-only */previewState?:'pending'|'error'};\nexport declare function AlertDialog(props:AlertDialogProps):React.ReactElement|null;",
+   "cases": [
+    {
+     "id": "default",
+     "kind": "code",
+     "label": "default · primary 확인"
+    },
+    {
+     "id": "danger",
+     "kind": "code",
+     "label": "danger"
+    },
+    {
+     "id": "pending",
+     "kind": "code",
+     "label": "pending · 확인 loading, 취소 disabled"
+    },
+    {
+     "id": "error",
+     "kind": "code",
+     "label": "error · role=alert, 재시도 가능"
+    },
+    {
+     "id": "long-text",
+     "kind": "code",
+     "label": "긴 제목·설명"
+    },
+    {
+     "id": "live",
+     "kind": "preview-only",
+     "label": "trigger → confirm"
+    }
+   ],
+   "notInSource": [
+    "아이콘/일러스트 슬롯 없음",
+    "입력 확인(이름 타이핑) 없음 — 제품에서 Dialog로 조합"
+   ],
+   "spec": "중요·되돌릴 수 없는 작업 확인. size sm 고정 · radius 28 시트 · 열릴 때 취소에 포커스 · 바깥 클릭으로 닫히지 않음. 확인 버튼은 primary(--zem-action) 또는 danger(coral-700)."
+  }
+ },
+ "patterns": {
+  "dashboard": {
+   "file": "zem/patterns/01-dashboard.html",
+   "live": "zem/patterns/screen.html?p=dashboard&s=<state>",
+   "states": [
+    "default",
+    "loading",
+    "empty",
+    "error"
+   ],
+   "viewports": [
+    375,
+    834,
+    1440
+   ],
+   "basis": "derived extension (not claimed from source)"
+  },
+  "analytics": {
+   "file": "zem/patterns/02-analytics.html",
+   "live": "zem/patterns/screen.html?p=analytics&s=<state>",
+   "states": [
+    "default",
+    "loading",
+    "empty",
+    "error"
+   ],
+   "viewports": [
+    375,
+    834,
+    1440
+   ],
+   "basis": "derived extension (not claimed from source)"
+  },
+  "table": {
+   "file": "zem/patterns/03-table.html",
+   "live": "zem/patterns/screen.html?p=table&s=<state>",
+   "states": [
+    "default",
+    "loading",
+    "empty",
+    "error",
+    "long-text"
+   ],
+   "viewports": [
+    375,
+    834,
+    1440
+   ],
+   "basis": "derived extension (not claimed from source)"
+  },
+  "detail": {
+   "file": "zem/patterns/04-detail.html",
+   "live": "zem/patterns/screen.html?p=detail&s=<state>",
+   "states": [
+    "default",
+    "loading",
+    "missing-data",
+    "error"
+   ],
+   "viewports": [
+    375,
+    834,
+    1440
+   ],
+   "basis": "derived extension (not claimed from source)"
+  },
+  "settings": {
+   "file": "zem/patterns/05-settings.html",
+   "live": "zem/patterns/screen.html?p=settings&s=<state>",
+   "states": [
+    "default",
+    "saving",
+    "error",
+    "success"
+   ],
+   "viewports": [
+    375,
+    834,
+    1440
+   ],
+   "basis": "derived extension (not claimed from source)"
+  },
+  "billing": {
+   "file": "zem/patterns/06-billing.html",
+   "live": "zem/patterns/screen.html?p=billing&s=<state>",
+   "states": [
+    "default",
+    "loading",
+    "error",
+    "empty"
+   ],
+   "viewports": [
+    375,
+    834,
+    1440
+   ],
+   "basis": "derived extension (not claimed from source)"
+  },
+  "chat": {
+   "file": "zem/patterns/07-chat.html",
+   "live": "zem/patterns/screen.html?p=chat&s=<state>",
+   "states": [
+    "default",
+    "streaming",
+    "empty",
+    "error"
+   ],
+   "viewports": [
+    375,
+    834,
+    1440
+   ],
+   "basis": "derived extension (not claimed from source)"
+  },
+  "builder": {
+   "file": "zem/patterns/08-builder.html",
+   "live": "zem/patterns/screen.html?p=builder&s=<state>",
+   "states": [
+    "default",
+    "selected",
+    "dragging",
+    "empty"
+   ],
+   "viewports": [
+    375,
+    834,
+    1440
+   ],
+   "basis": "derived extension (not claimed from source)"
+  },
+  "modal": {
+   "file": "zem/patterns/09-modal.html",
+   "live": "zem/patterns/screen.html?p=modal&s=<state>",
+   "states": [
+    "dialog",
+    "confirm",
+    "pending",
+    "error"
+   ],
+   "viewports": [
+    375,
+    834,
+    1440
+   ],
+   "basis": "derived extension (not claimed from source)"
+  },
+  "empty": {
+   "file": "zem/patterns/10-empty.html",
+   "live": "zem/patterns/screen.html?p=empty&s=<state>",
+   "states": [
+    "first-run",
+    "no-results",
+    "no-access"
+   ],
+   "viewports": [
+    375,
+    834,
+    1440
+   ],
+   "basis": "derived extension (not claimed from source)"
+  }
+ },
+ "uiKits": {
+  "parent": "zem/ui_kits/parent.html",
+  "schedule": "zem/ui_kits/schedule.html",
+  "activity": "zem/ui_kits/activity.html"
+ },
+ "references": {
+  "css": [
+   "styles.css",
+   "zem/lib/zem-tokens.css",
+   "zem/lib/zem-ui.css",
+   "zem/lib/zem-shell.css"
+  ],
+  "js": [
+   "zem/lib/zem-ui.js",
+   "zem/lib/icons.js",
+   "zem/lib/patterns.js",
+   "zem/ui_kits/kits.js"
+  ],
+  "rules": "zem/claude-system.md",
+  "coverage": "zem/coverage.json",
+  "archive": "archive/iak/ (inactive IAK/RAIS copy)"
+ }
+}

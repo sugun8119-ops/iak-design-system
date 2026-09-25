@@ -1,0 +1,1845 @@
+{
+ "$schema": "korex-figma-system/1",
+ "name": "KOREX_V1 · Project Design System",
+ "generatedAt": "2026-09-25",
+ "theme": "light-only",
+ "source": {
+  "primary": "https://www.behance.net/gallery/133721087/KOREX-Brand-Website-UXUI-Design",
+  "image": "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/aa4da1133721087.61c41571abe87.png",
+  "notes": "Qualitative observations only (master/source-observations.md). No original logo, photos, copy or data reused. All hex/px/ms/font values are derived-design-value."
+ },
+ "basisLegend": {
+  "observed": "seen in source image",
+  "derived-design-value": "value chosen because the exact source value could not be measured",
+  "derived-extension": "element/state not present in source, designed in KOREX style"
+ },
+ "counts": {
+  "tokens": 116,
+  "components": 16,
+  "componentCases": 105,
+  "patterns": 10,
+  "siteScreens": 3,
+  "screenStates": 49,
+  "tocItems": 62
+ },
+ "observations": [
+  {
+   "observed": "deep green hero / search panel / sidebar / left stat panel",
+   "tokens": "--bg-brand, --bg-brand-strong",
+   "usage": "Card tone=brand, stat-panel, site hero, console sidebar"
+  },
+  {
+   "observed": "white & light-grey page backgrounds",
+   "tokens": "--bg-surface, --bg-canvas, --bg-subtle",
+   "usage": "all surfaces"
+  },
+  {
+   "observed": "bold sans-serif Korean UI",
+   "tokens": "--font-ui (Noto Sans KR = derived substitute)",
+   "usage": "type scale"
+  },
+  {
+   "observed": "green rectangular search button",
+   "tokens": "--action, --radius-xs",
+   "usage": "Button variant=primary"
+  },
+  {
+   "observed": "pill category chips",
+   "tokens": "--radius-pill",
+   "usage": "Button variant=chip"
+  },
+  {
+   "observed": "mint rectangular category icon tiles",
+   "tokens": "--bg-mint, --kx-mint-*",
+   "usage": ".kx-icon-tile"
+  },
+  {
+   "observed": "listing card: image left / text right",
+   "tokens": "layout",
+   "usage": "Card composition \"listing\", SearchList"
+  },
+  {
+   "observed": "outline CTA (rectangular)",
+   "tokens": "--border-brand",
+   "usage": "Button variant=outline"
+  },
+  {
+   "observed": "outline heart save toggle",
+   "tokens": "--radius-pill",
+   "usage": "heart button (aria-pressed)"
+  }
+ ],
+ "tokens": {
+  "primitive/color": {
+   "--kx-green-950": {
+    "value": "#06261d",
+    "resolved": "#06261d",
+    "basis": "observed-role · derived-design-value"
+   },
+   "--kx-green-900": {
+    "value": "#0b3b2e",
+    "resolved": "#0b3b2e",
+    "basis": "observed-role · derived-design-value"
+   },
+   "--kx-green-800": {
+    "value": "#0f4d3b",
+    "resolved": "#0f4d3b",
+    "basis": "observed-role · derived-design-value"
+   },
+   "--kx-green-700": {
+    "value": "#146448",
+    "resolved": "#146448",
+    "basis": "observed-role · derived-design-value"
+   },
+   "--kx-green-600": {
+    "value": "#1a7f5a",
+    "resolved": "#1a7f5a",
+    "basis": "observed-role · derived-design-value"
+   },
+   "--kx-green-500": {
+    "value": "#23996c",
+    "resolved": "#23996c",
+    "basis": "observed-role · derived-design-value"
+   },
+   "--kx-green-400": {
+    "value": "#4fb58b",
+    "resolved": "#4fb58b",
+    "basis": "observed-role · derived-design-value"
+   },
+   "--kx-mint-300": {
+    "value": "#8fd1b4",
+    "resolved": "#8fd1b4",
+    "basis": "observed-role · derived-design-value"
+   },
+   "--kx-mint-200": {
+    "value": "#cdebdd",
+    "resolved": "#cdebdd",
+    "basis": "observed-role · derived-design-value"
+   },
+   "--kx-mint-100": {
+    "value": "#e6f4ee",
+    "resolved": "#e6f4ee",
+    "basis": "observed-role · derived-design-value"
+   },
+   "--kx-mint-50": {
+    "value": "#f2faf6",
+    "resolved": "#f2faf6",
+    "basis": "observed-role · derived-design-value"
+   },
+   "--kx-white": {
+    "value": "#ffffff",
+    "resolved": "#ffffff",
+    "basis": "observed-role · derived-design-value"
+   },
+   "--kx-grey-50": {
+    "value": "#f6f7f6",
+    "resolved": "#f6f7f6",
+    "basis": "observed-role · derived-design-value"
+   },
+   "--kx-grey-100": {
+    "value": "#eef0ef",
+    "resolved": "#eef0ef",
+    "basis": "observed-role · derived-design-value"
+   },
+   "--kx-grey-200": {
+    "value": "#e1e4e2",
+    "resolved": "#e1e4e2",
+    "basis": "observed-role · derived-design-value"
+   },
+   "--kx-grey-300": {
+    "value": "#c9cecb",
+    "resolved": "#c9cecb",
+    "basis": "observed-role · derived-design-value"
+   },
+   "--kx-grey-400": {
+    "value": "#a3aaa6",
+    "resolved": "#a3aaa6",
+    "basis": "observed-role · derived-design-value"
+   },
+   "--kx-grey-500": {
+    "value": "#7b847f",
+    "resolved": "#7b847f",
+    "basis": "observed-role · derived-design-value"
+   },
+   "--kx-grey-600": {
+    "value": "#5b645f",
+    "resolved": "#5b645f",
+    "basis": "observed-role · derived-design-value"
+   },
+   "--kx-grey-700": {
+    "value": "#414945",
+    "resolved": "#414945",
+    "basis": "observed-role · derived-design-value"
+   },
+   "--kx-grey-800": {
+    "value": "#2b322e",
+    "resolved": "#2b322e",
+    "basis": "observed-role · derived-design-value"
+   },
+   "--kx-grey-900": {
+    "value": "#151a17",
+    "resolved": "#151a17",
+    "basis": "observed-role · derived-design-value"
+   },
+   "--kx-red-600": {
+    "value": "#c8372d",
+    "resolved": "#c8372d",
+    "basis": "derived-extension"
+   },
+   "--kx-red-50": {
+    "value": "#fdecea",
+    "resolved": "#fdecea",
+    "basis": "derived-extension"
+   },
+   "--kx-amber-700": {
+    "value": "#9a5b00",
+    "resolved": "#9a5b00",
+    "basis": "derived-extension"
+   },
+   "--kx-amber-50": {
+    "value": "#fff4e0",
+    "resolved": "#fff4e0",
+    "basis": "derived-extension"
+   },
+   "--kx-blue-600": {
+    "value": "#2f6fb0",
+    "resolved": "#2f6fb0",
+    "basis": "derived-extension"
+   },
+   "--kx-blue-50": {
+    "value": "#eaf2fb",
+    "resolved": "#eaf2fb",
+    "basis": "derived-extension"
+   }
+  },
+  "semantic/color": {
+   "--bg-canvas": {
+    "value": "var(--kx-grey-50)",
+    "resolved": "#f6f7f6",
+    "basis": "observed-role · derived-design-value"
+   },
+   "--bg-surface": {
+    "value": "var(--kx-white)",
+    "resolved": "#ffffff",
+    "basis": "observed-role · derived-design-value"
+   },
+   "--bg-subtle": {
+    "value": "var(--kx-grey-100)",
+    "resolved": "#eef0ef",
+    "basis": "derived-design-value"
+   },
+   "--bg-field": {
+    "value": "var(--kx-white)",
+    "resolved": "#ffffff",
+    "basis": "derived-design-value"
+   },
+   "--bg-brand": {
+    "value": "var(--kx-green-900)",
+    "resolved": "#0b3b2e",
+    "basis": "observed-role · derived-design-value"
+   },
+   "--bg-brand-strong": {
+    "value": "var(--kx-green-950)",
+    "resolved": "#06261d",
+    "basis": "observed-role · derived-design-value"
+   },
+   "--bg-mint": {
+    "value": "var(--kx-mint-100)",
+    "resolved": "#e6f4ee",
+    "basis": "observed-role · derived-design-value"
+   },
+   "--bg-overlay": {
+    "value": "rgb(6 38 29 / .48)",
+    "resolved": "rgb(6 38 29 / .48)",
+    "basis": "derived-design-value"
+   },
+   "--fg-primary": {
+    "value": "var(--kx-grey-900)",
+    "resolved": "#151a17",
+    "basis": "derived-design-value"
+   },
+   "--fg-secondary": {
+    "value": "var(--kx-grey-600)",
+    "resolved": "#5b645f",
+    "basis": "derived-design-value"
+   },
+   "--fg-muted": {
+    "value": "var(--kx-grey-500)",
+    "resolved": "#7b847f",
+    "basis": "derived-design-value"
+   },
+   "--fg-on-brand": {
+    "value": "var(--kx-white)",
+    "resolved": "#ffffff",
+    "basis": "observed-role · derived-design-value"
+   },
+   "--fg-on-brand-muted": {
+    "value": "var(--kx-mint-200)",
+    "resolved": "#cdebdd",
+    "basis": "observed-role · derived-design-value"
+   },
+   "--fg-brand": {
+    "value": "var(--kx-green-700)",
+    "resolved": "#146448",
+    "basis": "observed-role · derived-design-value"
+   },
+   "--border-subtle": {
+    "value": "var(--kx-grey-100)",
+    "resolved": "#eef0ef",
+    "basis": "derived-design-value"
+   },
+   "--border-default": {
+    "value": "var(--kx-grey-200)",
+    "resolved": "#e1e4e2",
+    "basis": "derived-design-value"
+   },
+   "--border-strong": {
+    "value": "var(--kx-grey-300)",
+    "resolved": "#c9cecb",
+    "basis": "derived-design-value"
+   },
+   "--border-brand": {
+    "value": "var(--kx-green-700)",
+    "resolved": "#146448",
+    "basis": "derived-design-value"
+   },
+   "--action": {
+    "value": "var(--kx-green-600)",
+    "resolved": "#1a7f5a",
+    "basis": "observed-role · derived-design-value"
+   },
+   "--action-hover": {
+    "value": "var(--kx-green-700)",
+    "resolved": "#146448",
+    "basis": "derived-design-value"
+   },
+   "--action-pressed": {
+    "value": "var(--kx-green-800)",
+    "resolved": "#0f4d3b",
+    "basis": "derived-design-value"
+   },
+   "--action-fg": {
+    "value": "var(--kx-white)",
+    "resolved": "#ffffff",
+    "basis": "derived-design-value"
+   },
+   "--data-1": {
+    "value": "var(--kx-green-700)",
+    "resolved": "#146448",
+    "basis": "derived-design-value"
+   },
+   "--data-2": {
+    "value": "var(--kx-mint-300)",
+    "resolved": "#8fd1b4",
+    "basis": "derived-design-value"
+   },
+   "--data-3": {
+    "value": "var(--kx-grey-300)",
+    "resolved": "#c9cecb",
+    "basis": "derived-design-value"
+   },
+   "--status-success": {
+    "value": "var(--kx-green-600)",
+    "resolved": "#1a7f5a",
+    "basis": "derived-extension"
+   },
+   "--status-success-bg": {
+    "value": "var(--kx-mint-100)",
+    "resolved": "#e6f4ee",
+    "basis": "derived-extension"
+   },
+   "--status-error": {
+    "value": "var(--kx-red-600)",
+    "resolved": "#c8372d",
+    "basis": "derived-extension"
+   },
+   "--status-error-bg": {
+    "value": "var(--kx-red-50)",
+    "resolved": "#fdecea",
+    "basis": "derived-extension"
+   },
+   "--status-warning": {
+    "value": "var(--kx-amber-700)",
+    "resolved": "#9a5b00",
+    "basis": "derived-extension"
+   },
+   "--status-warning-bg": {
+    "value": "var(--kx-amber-50)",
+    "resolved": "#fff4e0",
+    "basis": "derived-extension"
+   },
+   "--status-info": {
+    "value": "var(--kx-blue-600)",
+    "resolved": "#2f6fb0",
+    "basis": "derived-extension"
+   },
+   "--status-info-bg": {
+    "value": "var(--kx-blue-50)",
+    "resolved": "#eaf2fb",
+    "basis": "derived-extension"
+   }
+  },
+  "radius": {
+   "--radius-xs": {
+    "value": "2px",
+    "resolved": "2px",
+    "basis": "derived-design-value"
+   },
+   "--radius-sm": {
+    "value": "4px",
+    "resolved": "4px",
+    "basis": "derived-design-value"
+   },
+   "--radius-md": {
+    "value": "6px",
+    "resolved": "6px",
+    "basis": "derived-design-value"
+   },
+   "--radius-pill": {
+    "value": "999px",
+    "resolved": "999px",
+    "basis": "observed-role · derived-design-value"
+   }
+  },
+  "border": {
+   "--border-width": {
+    "value": "1px",
+    "resolved": "1px",
+    "basis": "derived-design-value"
+   },
+   "--border-dashed": {
+    "value": "1px dashed var(--kx-grey-300)",
+    "resolved": "1px dashed #c9cecb",
+    "basis": "derived-design-value"
+   }
+  },
+  "shadow": {
+   "--shadow-none": {
+    "value": "none",
+    "resolved": "none",
+    "basis": "derived-extension"
+   },
+   "--shadow-raised": {
+    "value": "0 2px 8px rgb(11 59 46 / .06)",
+    "resolved": "0 2px 8px rgb(11 59 46 / .06)",
+    "basis": "derived-extension"
+   },
+   "--shadow-overlay": {
+    "value": "0 16px 40px rgb(11 59 46 / .16)",
+    "resolved": "0 16px 40px rgb(11 59 46 / .16)",
+    "basis": "derived-extension"
+   }
+  },
+  "focus": {
+   "--focus-ring-width": {
+    "value": "2px",
+    "resolved": "2px",
+    "basis": "derived-extension"
+   },
+   "--focus-ring-offset": {
+    "value": "2px",
+    "resolved": "2px",
+    "basis": "derived-extension"
+   },
+   "--focus-ring-color": {
+    "value": "var(--kx-green-600)",
+    "resolved": "#1a7f5a",
+    "basis": "derived-extension"
+   },
+   "--focus-ring-on-brand": {
+    "value": "var(--kx-white)",
+    "resolved": "#ffffff",
+    "basis": "derived-extension"
+   }
+  },
+  "spacing": {
+   "--space-0": {
+    "value": "0",
+    "resolved": "0",
+    "basis": "derived-design-value"
+   },
+   "--space-1": {
+    "value": "4px",
+    "resolved": "4px",
+    "basis": "derived-design-value"
+   },
+   "--space-2": {
+    "value": "8px",
+    "resolved": "8px",
+    "basis": "derived-design-value"
+   },
+   "--space-3": {
+    "value": "12px",
+    "resolved": "12px",
+    "basis": "derived-design-value"
+   },
+   "--space-4": {
+    "value": "16px",
+    "resolved": "16px",
+    "basis": "derived-design-value"
+   },
+   "--space-5": {
+    "value": "20px",
+    "resolved": "20px",
+    "basis": "derived-design-value"
+   },
+   "--space-6": {
+    "value": "24px",
+    "resolved": "24px",
+    "basis": "derived-design-value"
+   },
+   "--space-8": {
+    "value": "32px",
+    "resolved": "32px",
+    "basis": "derived-design-value"
+   },
+   "--space-10": {
+    "value": "40px",
+    "resolved": "40px",
+    "basis": "derived-design-value"
+   },
+   "--space-12": {
+    "value": "48px",
+    "resolved": "48px",
+    "basis": "derived-design-value"
+   },
+   "--space-16": {
+    "value": "64px",
+    "resolved": "64px",
+    "basis": "derived-design-value"
+   },
+   "--space-20": {
+    "value": "80px",
+    "resolved": "80px",
+    "basis": "derived-design-value"
+   }
+  },
+  "typography": {
+   "--font-ui": {
+    "value": "\"Noto Sans KR\",system-ui,-apple-system,\"Apple SD Gothic Neo\",sans-serif",
+    "resolved": "\"Noto Sans KR\",system-ui,-apple-system,\"Apple SD Gothic Neo\",sans-serif",
+    "basis": "observed-role · derived-design-value"
+   },
+   "--font-mono": {
+    "value": "\"IBM Plex Mono\",ui-monospace,monospace",
+    "resolved": "\"IBM Plex Mono\",ui-monospace,monospace",
+    "basis": "derived-design-value"
+   },
+   "--text-display": {
+    "value": "900 56px/64px var(--font-ui)",
+    "resolved": "900 56px/64px \"Noto Sans KR\",system-ui,-apple-system,\"Apple SD Gothic Neo\",sans-serif",
+    "basis": "observed-role · derived-design-value"
+   },
+   "--text-h1": {
+    "value": "800 36px/46px var(--font-ui)",
+    "resolved": "800 36px/46px \"Noto Sans KR\",system-ui,-apple-system,\"Apple SD Gothic Neo\",sans-serif",
+    "basis": "observed-role · derived-design-value"
+   },
+   "--text-h2": {
+    "value": "700 26px/34px var(--font-ui)",
+    "resolved": "700 26px/34px \"Noto Sans KR\",system-ui,-apple-system,\"Apple SD Gothic Neo\",sans-serif",
+    "basis": "observed-role · derived-design-value"
+   },
+   "--text-title": {
+    "value": "700 18px/26px var(--font-ui)",
+    "resolved": "700 18px/26px \"Noto Sans KR\",system-ui,-apple-system,\"Apple SD Gothic Neo\",sans-serif",
+    "basis": "derived-design-value"
+   },
+   "--text-body-lg": {
+    "value": "400 17px/28px var(--font-ui)",
+    "resolved": "400 17px/28px \"Noto Sans KR\",system-ui,-apple-system,\"Apple SD Gothic Neo\",sans-serif",
+    "basis": "derived-design-value"
+   },
+   "--text-body": {
+    "value": "400 15px/24px var(--font-ui)",
+    "resolved": "400 15px/24px \"Noto Sans KR\",system-ui,-apple-system,\"Apple SD Gothic Neo\",sans-serif",
+    "basis": "derived-design-value"
+   },
+   "--text-body-strong": {
+    "value": "600 15px/24px var(--font-ui)",
+    "resolved": "600 15px/24px \"Noto Sans KR\",system-ui,-apple-system,\"Apple SD Gothic Neo\",sans-serif",
+    "basis": "derived-design-value"
+   },
+   "--text-button": {
+    "value": "700 15px/20px var(--font-ui)",
+    "resolved": "700 15px/20px \"Noto Sans KR\",system-ui,-apple-system,\"Apple SD Gothic Neo\",sans-serif",
+    "basis": "observed-role · derived-design-value"
+   },
+   "--text-caption": {
+    "value": "400 13px/20px var(--font-ui)",
+    "resolved": "400 13px/20px \"Noto Sans KR\",system-ui,-apple-system,\"Apple SD Gothic Neo\",sans-serif",
+    "basis": "derived-design-value"
+   },
+   "--text-overline": {
+    "value": "700 12px/16px var(--font-ui)",
+    "resolved": "700 12px/16px \"Noto Sans KR\",system-ui,-apple-system,\"Apple SD Gothic Neo\",sans-serif",
+    "basis": "derived-design-value"
+   },
+   "--text-code": {
+    "value": "400 13px/20px var(--font-mono)",
+    "resolved": "400 13px/20px \"IBM Plex Mono\",ui-monospace,monospace",
+    "basis": "derived-design-value"
+   },
+   "--text-price": {
+    "value": "800 22px/28px var(--font-ui)",
+    "resolved": "800 22px/28px \"Noto Sans KR\",system-ui,-apple-system,\"Apple SD Gothic Neo\",sans-serif",
+    "basis": "derived-design-value"
+   }
+  },
+  "layout": {
+   "--container-max": {
+    "value": "1280px",
+    "resolved": "1280px",
+    "basis": "derived-design-value"
+   },
+   "--container-pad": {
+    "value": "40px",
+    "resolved": "40px",
+    "basis": "derived-design-value"
+   },
+   "--grid-cols": {
+    "value": "12",
+    "resolved": "12",
+    "basis": "derived-design-value"
+   },
+   "--grid-gutter": {
+    "value": "24px",
+    "resolved": "24px",
+    "basis": "derived-design-value"
+   },
+   "--section-gap": {
+    "value": "48px",
+    "resolved": "48px",
+    "basis": "derived-design-value"
+   },
+   "--card-gap": {
+    "value": "24px",
+    "resolved": "24px",
+    "basis": "derived-design-value"
+   }
+  },
+  "motion": {
+   "--motion-fast": {
+    "value": "140ms",
+    "resolved": "140ms",
+    "basis": "derived-extension"
+   },
+   "--motion-default": {
+    "value": "200ms",
+    "resolved": "200ms",
+    "basis": "derived-extension"
+   },
+   "--motion-slow": {
+    "value": "280ms",
+    "resolved": "280ms",
+    "basis": "derived-extension"
+   },
+   "--motion-ease": {
+    "value": "cubic-bezier(.2,0,0,1)",
+    "resolved": "cubic-bezier(.2,0,0,1)",
+    "basis": "derived-extension"
+   }
+  },
+  "state": {
+   "--state-hover": {
+    "value": "rgb(20 100 72 / .06)",
+    "resolved": "rgb(20 100 72 / .06)",
+    "basis": "derived-extension"
+   },
+   "--state-pressed": {
+    "value": "rgb(20 100 72 / .12)",
+    "resolved": "rgb(20 100 72 / .12)",
+    "basis": "derived-extension"
+   },
+   "--state-selected": {
+    "value": "var(--kx-mint-100)",
+    "resolved": "#e6f4ee",
+    "basis": "derived-extension"
+   },
+   "--state-disabled-opacity": {
+    "value": ".45",
+    "resolved": ".45",
+    "basis": "derived-extension"
+   },
+   "--state-skeleton": {
+    "value": "linear-gradient(90deg,var(--kx-grey-100) 0%,var(--kx-grey-50) 50%,var(--kx-grey-100) 100%)",
+    "resolved": "linear-gradient(90deg,#eef0ef 0%,#f6f7f6 50%,#eef0ef 100%)",
+    "basis": "derived-extension"
+   },
+   "--state-dragging": {
+    "value": "var(--kx-mint-50)",
+    "resolved": "#f2faf6",
+    "basis": "derived-extension"
+   }
+  }
+ },
+ "components": [
+  {
+   "name": "Button",
+   "group": "KOREX · Component · Actions",
+   "description": "주 행동은 녹색 채움(primary), 보조 CTA는 직사각형 녹색 outline, 카테고리·필터는 pill chip. 반경 2px, pill은 chip 전용.",
+   "api": [
+    "master/lib/kx-ui.js · Button",
+    "variant: primary|secondary|outline|chip|danger|text",
+    "size: sm 32|md 40|lg 48",
+    "selected → aria-pressed",
+    "radius 2 · chip pill"
+   ],
+   "source": "master/lib/kx-ui.js · Button",
+   "export": "master/preview/Button.jsx + .d.ts",
+   "card": "master/preview/Button.html",
+   "cases": [
+    {
+     "section": "Variant",
+     "id": "primary",
+     "label": "primary — 검색 버튼 (observed)",
+     "tag": "observed"
+    },
+    {
+     "section": "Variant",
+     "id": "outline",
+     "label": "outline — 직사각형 CTA (observed)",
+     "tag": "observed"
+    },
+    {
+     "section": "Variant",
+     "id": "chip",
+     "label": "chip — pill 카테고리 (observed)",
+     "tag": "observed"
+    },
+    {
+     "section": "Variant",
+     "id": "secondary",
+     "label": "secondary",
+     "tag": "code"
+    },
+    {
+     "section": "Variant",
+     "id": "danger",
+     "label": "danger",
+     "tag": "code"
+    },
+    {
+     "section": "Variant",
+     "id": "text",
+     "label": "text",
+     "tag": "code"
+    },
+    {
+     "section": "Size",
+     "id": "sm",
+     "label": "sm · 32",
+     "tag": "code"
+    },
+    {
+     "section": "Size",
+     "id": "md",
+     "label": "md · 40",
+     "tag": "code"
+    },
+    {
+     "section": "Size",
+     "id": "lg",
+     "label": "lg · 48",
+     "tag": "code"
+    },
+    {
+     "section": "State",
+     "id": "default",
+     "label": "default",
+     "tag": "code"
+    },
+    {
+     "section": "State",
+     "id": "hover",
+     "label": "hover",
+     "tag": "preview-only"
+    },
+    {
+     "section": "State",
+     "id": "focus",
+     "label": "focus · 2px outline + 2px offset",
+     "tag": "preview-only"
+    },
+    {
+     "section": "State",
+     "id": "pressed",
+     "label": "pressed",
+     "tag": "preview-only"
+    },
+    {
+     "section": "State",
+     "id": "selected",
+     "label": "selected (chip)",
+     "tag": "code"
+    },
+    {
+     "section": "State",
+     "id": "disabled",
+     "label": "disabled",
+     "tag": "native"
+    },
+    {
+     "section": "State",
+     "id": "loading",
+     "label": "loading",
+     "tag": "code"
+    },
+    {
+     "section": "State",
+     "id": "long",
+     "label": "긴 문구 · nowrap → 컨테이너에서 줄바꿈 없이 확장",
+     "tag": "code"
+    },
+    {
+     "section": "State",
+     "id": "on-brand",
+     "label": "deep-green 면 위 outline",
+     "tag": "code"
+    }
+   ],
+   "notApplicable": [
+    "empty / error / success: 버튼 자체 상태가 아님 — 폼·토스트에서 표현"
+   ]
+  },
+  {
+   "name": "TextField",
+   "group": "KOREX · Component · Inputs",
+   "description": "label·description·error가 연결된 입력. 44px 높이, 반경 2px, 회색 테두리.",
+   "api": [
+    "label (필수)",
+    "description",
+    "error → aria-invalid",
+    "required",
+    "native input attrs"
+   ],
+   "source": "master/lib/kx-ui.js · TextField",
+   "export": "master/preview/TextField.jsx + .d.ts",
+   "card": "master/preview/TextField.html",
+   "cases": [
+    {
+     "section": "State",
+     "id": "default",
+     "label": "default",
+     "tag": "code"
+    },
+    {
+     "section": "State",
+     "id": "filled",
+     "label": "filled",
+     "tag": "code"
+    },
+    {
+     "section": "State",
+     "id": "hover",
+     "label": "hover",
+     "tag": "preview-only"
+    },
+    {
+     "section": "State",
+     "id": "focus",
+     "label": "focus",
+     "tag": "preview-only"
+    },
+    {
+     "section": "State",
+     "id": "description",
+     "label": "description",
+     "tag": "code"
+    },
+    {
+     "section": "State",
+     "id": "required",
+     "label": "required",
+     "tag": "code"
+    },
+    {
+     "section": "State",
+     "id": "error",
+     "label": "error",
+     "tag": "code"
+    },
+    {
+     "section": "State",
+     "id": "disabled",
+     "label": "disabled",
+     "tag": "native"
+    },
+    {
+     "section": "State",
+     "id": "success",
+     "label": "success (description 문구로 표현)",
+     "tag": "composition"
+    },
+    {
+     "section": "State",
+     "id": "long",
+     "label": "긴 값·긴 오류",
+     "tag": "code"
+    }
+   ],
+   "notApplicable": [
+    "loading: 입력 자체에는 없음 (검색 버튼 loading 사용)"
+   ]
+  },
+  {
+   "name": "Textarea",
+   "group": "KOREX · Component · Inputs",
+   "description": "여러 줄 입력. 최소 104px, 세로 리사이즈.",
+   "api": [
+    "TextField와 같은 props",
+    "rows 기본 4"
+   ],
+   "source": "master/lib/kx-ui.js · Textarea",
+   "export": "master/preview/Textarea.jsx + .d.ts",
+   "card": "master/preview/Textarea.html",
+   "cases": [
+    {
+     "section": "State",
+     "id": "default",
+     "label": "default",
+     "tag": "code"
+    },
+    {
+     "section": "State",
+     "id": "filled",
+     "label": "filled",
+     "tag": "code"
+    },
+    {
+     "section": "State",
+     "id": "focus",
+     "label": "focus",
+     "tag": "preview-only"
+    },
+    {
+     "section": "State",
+     "id": "error",
+     "label": "error",
+     "tag": "code"
+    },
+    {
+     "section": "State",
+     "id": "disabled",
+     "label": "disabled",
+     "tag": "native"
+    },
+    {
+     "section": "State",
+     "id": "long",
+     "label": "긴 문구",
+     "tag": "code"
+    }
+   ],
+   "notApplicable": []
+  },
+  {
+   "name": "Select",
+   "group": "KOREX · Component · Inputs",
+   "description": "native select + KOREX 화살표. 검색 패널의 매물유형/거래유형 선택에 사용.",
+   "api": [
+    "TextField props + children <option>"
+   ],
+   "source": "master/lib/kx-ui.js · Select",
+   "export": "master/preview/Select.jsx + .d.ts",
+   "card": "master/preview/Select.html",
+   "cases": [
+    {
+     "section": "State",
+     "id": "default",
+     "label": "default",
+     "tag": "code"
+    },
+    {
+     "section": "State",
+     "id": "selected",
+     "label": "selected value",
+     "tag": "code"
+    },
+    {
+     "section": "State",
+     "id": "focus",
+     "label": "focus",
+     "tag": "preview-only"
+    },
+    {
+     "section": "State",
+     "id": "error",
+     "label": "error",
+     "tag": "code"
+    },
+    {
+     "section": "State",
+     "id": "disabled",
+     "label": "disabled",
+     "tag": "native"
+    },
+    {
+     "section": "State",
+     "id": "long",
+     "label": "긴 옵션",
+     "tag": "code"
+    }
+   ],
+   "notApplicable": []
+  },
+  {
+   "name": "Checkbox",
+   "group": "KOREX · Component · Inputs",
+   "description": "필터 조건 선택. accent-color = action green.",
+   "api": [
+    "label",
+    "native checkbox attrs"
+   ],
+   "source": "master/lib/kx-ui.js · Checkbox",
+   "export": "master/preview/Checkbox.jsx + .d.ts",
+   "card": "master/preview/Checkbox.html",
+   "cases": [
+    {
+     "section": "State",
+     "id": "unchecked",
+     "label": "unchecked",
+     "tag": "code"
+    },
+    {
+     "section": "State",
+     "id": "checked",
+     "label": "checked (selected)",
+     "tag": "code"
+    },
+    {
+     "section": "State",
+     "id": "focus",
+     "label": "focus",
+     "tag": "preview-only"
+    },
+    {
+     "section": "State",
+     "id": "disabled",
+     "label": "disabled",
+     "tag": "native"
+    },
+    {
+     "section": "State",
+     "id": "long",
+     "label": "긴 문구",
+     "tag": "code"
+    }
+   ],
+   "notApplicable": [
+    "indeterminate / error: 현재 API 없음"
+   ]
+  },
+  {
+   "name": "Switch",
+   "group": "KOREX · Component · Inputs",
+   "description": "즉시 적용되는 설정. role=\"switch\".",
+   "api": [
+    "label",
+    "checked/defaultChecked/disabled"
+   ],
+   "source": "master/lib/kx-ui.js · Switch",
+   "export": "master/preview/Switch.jsx + .d.ts",
+   "card": "master/preview/Switch.html",
+   "cases": [
+    {
+     "section": "State",
+     "id": "off",
+     "label": "off",
+     "tag": "code"
+    },
+    {
+     "section": "State",
+     "id": "on",
+     "label": "on (selected)",
+     "tag": "code"
+    },
+    {
+     "section": "State",
+     "id": "focus",
+     "label": "focus",
+     "tag": "preview-only"
+    },
+    {
+     "section": "State",
+     "id": "disabled",
+     "label": "disabled",
+     "tag": "native"
+    },
+    {
+     "section": "State",
+     "id": "long",
+     "label": "긴 문구",
+     "tag": "code"
+    }
+   ],
+   "notApplicable": []
+  },
+  {
+   "name": "Badge",
+   "group": "KOREX · Component · Display",
+   "description": "매물 상태 표기. 반경 2px 사각 라벨 — pill은 카테고리 chip(Button)만.",
+   "api": [
+    "tone: neutral|success|warning|error|info|brand"
+   ],
+   "source": "master/lib/kx-ui.js · Badge",
+   "export": "master/preview/Badge.jsx + .d.ts",
+   "card": "master/preview/Badge.html",
+   "cases": [
+    {
+     "section": "Tone",
+     "id": "neutral",
+     "label": "neutral",
+     "tag": "code"
+    },
+    {
+     "section": "Tone",
+     "id": "success",
+     "label": "success",
+     "tag": "code"
+    },
+    {
+     "section": "Tone",
+     "id": "warning",
+     "label": "warning",
+     "tag": "code"
+    },
+    {
+     "section": "Tone",
+     "id": "error",
+     "label": "error",
+     "tag": "code"
+    },
+    {
+     "section": "Tone",
+     "id": "info",
+     "label": "info",
+     "tag": "code"
+    },
+    {
+     "section": "Tone",
+     "id": "brand",
+     "label": "brand (KOREX 추천)",
+     "tag": "code"
+    },
+    {
+     "section": "Tone",
+     "id": "icon",
+     "label": "icon + text",
+     "tag": "composition"
+    },
+    {
+     "section": "Tone",
+     "id": "long",
+     "label": "긴 문구",
+     "tag": "code"
+    }
+   ],
+   "notApplicable": []
+  },
+  {
+   "name": "Card",
+   "group": "KOREX · Component · Display",
+   "description": "흰 면 + 회색 1px 테두리, 반경 6. tone=brand는 녹색 통계 패널(observed), tone=mint는 연민트 강조면.",
+   "api": [
+    "title",
+    "footer",
+    "tone: default|brand|mint",
+    "children"
+   ],
+   "source": "master/lib/kx-ui.js · Card",
+   "export": "master/preview/Card.jsx + .d.ts",
+   "card": "master/preview/Card.html",
+   "cases": [
+    {
+     "section": "Tone",
+     "id": "default",
+     "label": "default",
+     "tag": "code"
+    },
+    {
+     "section": "Tone",
+     "id": "brand",
+     "label": "brand — 녹색 통계 패널 (observed)",
+     "tag": "observed"
+    },
+    {
+     "section": "Tone",
+     "id": "mint",
+     "label": "mint",
+     "tag": "code"
+    },
+    {
+     "section": "Composition",
+     "id": "listing",
+     "label": "listing — 사진 좌 / 글 우 (observed)",
+     "tag": "observed"
+    },
+    {
+     "section": "Composition",
+     "id": "loading",
+     "label": "loading",
+     "tag": "code"
+    },
+    {
+     "section": "Composition",
+     "id": "empty",
+     "label": "empty",
+     "tag": "code"
+    },
+    {
+     "section": "Composition",
+     "id": "missing",
+     "label": "누락 데이터",
+     "tag": "code"
+    },
+    {
+     "section": "Composition",
+     "id": "long",
+     "label": "긴 제목",
+     "tag": "code"
+    }
+   ],
+   "notApplicable": []
+  },
+  {
+   "name": "Skeleton",
+   "group": "KOREX · Component · Feedback",
+   "description": "로딩 자리 표시. 회색 쉬머, reduced-motion 시 정지.",
+   "api": [
+    "width",
+    "height",
+    "circle"
+   ],
+   "source": "master/lib/kx-ui.js · Skeleton",
+   "export": "master/preview/Skeleton.jsx + .d.ts",
+   "card": "master/preview/Skeleton.html",
+   "cases": [
+    {
+     "section": "Shape",
+     "id": "line",
+     "label": "line",
+     "tag": "code"
+    },
+    {
+     "section": "Shape",
+     "id": "circle",
+     "label": "circle",
+     "tag": "code"
+    },
+    {
+     "section": "Shape",
+     "id": "listing",
+     "label": "listing row",
+     "tag": "composition"
+    }
+   ],
+   "notApplicable": []
+  },
+  {
+   "name": "Icon",
+   "group": "KOREX · Component · Display",
+   "description": "KOREX 선형 아이콘 (자체 제작, derived-extension). 연민트 사각 타일(observed)과 outline heart(observed)를 포함.",
+   "api": [
+    "name: kx:*",
+    "size (기본 20)",
+    "label → role=img"
+   ],
+   "source": "master/lib/kx-ui.js · Icon",
+   "export": "master/preview/Icon.jsx + .d.ts",
+   "card": "master/preview/Icon.html",
+   "cases": [
+    {
+     "section": "Size & usage",
+     "id": "sizes",
+     "label": "16 / 20 / 24",
+     "tag": "code"
+    },
+    {
+     "section": "Size & usage",
+     "id": "tile",
+     "label": "연민트 사각 타일 (observed)",
+     "tag": "observed"
+    },
+    {
+     "section": "Size & usage",
+     "id": "heart",
+     "label": "outline heart → 저장됨 (observed)",
+     "tag": "observed"
+    },
+    {
+     "section": "Size & usage",
+     "id": "labelled",
+     "label": "label → role=\"img\"",
+     "tag": "code"
+    },
+    {
+     "section": "Size & usage",
+     "id": "unknown",
+     "label": "없는 이름 → null",
+     "tag": "code"
+    }
+   ],
+   "notApplicable": []
+  },
+  {
+   "name": "Dialog",
+   "group": "KOREX · Component · Overlay",
+   "description": "모달. 흰 면, 반경 6, 딥그린 오버레이. focus trap + Esc.",
+   "api": [
+    "title",
+    "description",
+    "footer",
+    "size: sm|md|lg",
+    "open/defaultOpen/onOpenChange",
+    "inline (preview-only)"
+   ],
+   "source": "master/lib/kx-ui.js · Dialog",
+   "export": "master/preview/Dialog.jsx + .d.ts",
+   "card": "master/preview/Dialog.html",
+   "cases": [
+    {
+     "section": "Size",
+     "id": "md",
+     "label": "md · 상담 신청",
+     "tag": "code"
+    },
+    {
+     "section": "Size",
+     "id": "sm",
+     "label": "sm",
+     "tag": "code"
+    },
+    {
+     "section": "Size",
+     "id": "long",
+     "label": "긴 제목",
+     "tag": "code"
+    },
+    {
+     "section": "Size",
+     "id": "focus-close",
+     "label": "close focus",
+     "tag": "preview-only"
+    }
+   ],
+   "notApplicable": []
+  },
+  {
+   "name": "Menu",
+   "group": "KOREX · Component · Overlay",
+   "description": "행 더보기 메뉴. 강조 항목은 연민트.",
+   "api": [
+    "trigger",
+    "label",
+    "items[] {id,label,onSelect,disabled,danger,separatorBefore}",
+    "align: start|center|end"
+   ],
+   "source": "master/lib/kx-ui.js · Menu",
+   "export": "master/preview/Menu.jsx + .d.ts",
+   "card": "master/preview/Menu.html",
+   "cases": [
+    {
+     "section": "State",
+     "id": "trigger",
+     "label": "trigger (클릭해 열기)",
+     "tag": "code"
+    },
+    {
+     "section": "State",
+     "id": "open",
+     "label": "open · highlighted · disabled · danger",
+     "tag": "code"
+    },
+    {
+     "section": "State",
+     "id": "long",
+     "label": "긴 항목",
+     "tag": "code"
+    }
+   ],
+   "notApplicable": []
+  },
+  {
+   "name": "Table",
+   "group": "KOREX · Component · Data",
+   "description": "딥그린 2px 상단 룰 + 회색 헤더. 정렬·페이지·가상 스크롤·loading/error/empty 내장.",
+   "api": [
+    "caption",
+    "columns[] {id,header,cell,sortValue,align}",
+    "rows · rowKey",
+    "sort/defaultSort/onSortChange",
+    "loading · error · emptyMessage",
+    "pagination {pageSize}",
+    "virtualization"
+   ],
+   "source": "master/lib/kx-ui.js · Table",
+   "export": "master/preview/Table.jsx + .d.ts",
+   "card": "master/preview/Table.html",
+   "cases": [
+    {
+     "section": "State",
+     "id": "default",
+     "label": "default · sorted",
+     "tag": "code"
+    },
+    {
+     "section": "State",
+     "id": "paginated",
+     "label": "pagination",
+     "tag": "code"
+    },
+    {
+     "section": "State",
+     "id": "loading",
+     "label": "loading",
+     "tag": "code"
+    },
+    {
+     "section": "State",
+     "id": "error",
+     "label": "error",
+     "tag": "code"
+    },
+    {
+     "section": "State",
+     "id": "empty",
+     "label": "empty",
+     "tag": "code"
+    },
+    {
+     "section": "State",
+     "id": "long",
+     "label": "긴 문구·누락(협의)",
+     "tag": "code"
+    },
+    {
+     "section": "State",
+     "id": "sort-focus",
+     "label": "sort focus",
+     "tag": "preview-only"
+    }
+   ],
+   "notApplicable": []
+  },
+  {
+   "name": "Pagination",
+   "group": "KOREX · Component · Data",
+   "description": "번호형 페이지. 현재 페이지 = 딥그린 채움(selected).",
+   "api": [
+    "page",
+    "pageCount",
+    "onPageChange",
+    "disabled",
+    "label"
+   ],
+   "source": "master/lib/kx-ui.js · Pagination",
+   "export": "master/preview/Pagination.jsx + .d.ts",
+   "card": "master/preview/Pagination.html",
+   "cases": [
+    {
+     "section": "State",
+     "id": "default",
+     "label": "default (클릭 가능)",
+     "tag": "code"
+    },
+    {
+     "section": "State",
+     "id": "first",
+     "label": "first page",
+     "tag": "code"
+    },
+    {
+     "section": "State",
+     "id": "hover",
+     "label": "hover",
+     "tag": "preview-only"
+    },
+    {
+     "section": "State",
+     "id": "focus",
+     "label": "focus",
+     "tag": "preview-only"
+    },
+    {
+     "section": "State",
+     "id": "disabled",
+     "label": "disabled",
+     "tag": "code"
+    },
+    {
+     "section": "State",
+     "id": "single",
+     "label": "1 page",
+     "tag": "code"
+    }
+   ],
+   "notApplicable": []
+  },
+  {
+   "name": "Toast",
+   "group": "KOREX · Component · Feedback",
+   "description": "왼쪽 4px 상태 룰 + 사각 아이콘 타일(반경 4). 최대 3개, 기본 5초.",
+   "api": [
+    "ToastProvider {duration,label}",
+    "useToast().notify({title,description,tone,action,duration})",
+    "tone: success|warning|error|info"
+   ],
+   "source": "master/lib/kx-ui.js · Toast",
+   "export": "master/preview/Toast.jsx + .d.ts",
+   "card": "master/preview/Toast.html",
+   "cases": [
+    {
+     "section": "Tone",
+     "id": "success",
+     "label": "success",
+     "tag": "code"
+    },
+    {
+     "section": "Tone",
+     "id": "info",
+     "label": "info",
+     "tag": "code"
+    },
+    {
+     "section": "Tone",
+     "id": "warning",
+     "label": "warning",
+     "tag": "code"
+    },
+    {
+     "section": "Tone",
+     "id": "error",
+     "label": "error",
+     "tag": "code"
+    },
+    {
+     "section": "Tone",
+     "id": "long",
+     "label": "긴 문구",
+     "tag": "code"
+    },
+    {
+     "section": "Tone",
+     "id": "close-focus",
+     "label": "close focus",
+     "tag": "preview-only"
+    },
+    {
+     "section": "Tone",
+     "id": "live",
+     "label": "live provider",
+     "tag": "composition"
+    }
+   ],
+   "notApplicable": []
+  },
+  {
+   "name": "AlertDialog",
+   "group": "KOREX · Component · Overlay",
+   "description": "되돌릴 수 없는 작업 확인. pending/error 흐름 내장.",
+   "api": [
+    "title",
+    "description",
+    "confirmLabel",
+    "cancelLabel",
+    "danger",
+    "onConfirm (async)",
+    "errorMessage",
+    "previewState (preview-only)"
+   ],
+   "source": "master/lib/kx-ui.js · AlertDialog",
+   "export": "master/preview/AlertDialog.jsx + .d.ts",
+   "card": "master/preview/AlertDialog.html",
+   "cases": [
+    {
+     "section": "State",
+     "id": "default",
+     "label": "danger · default",
+     "tag": "code"
+    },
+    {
+     "section": "State",
+     "id": "pending",
+     "label": "pending",
+     "tag": "code"
+    },
+    {
+     "section": "State",
+     "id": "error",
+     "label": "error",
+     "tag": "code"
+    },
+    {
+     "section": "State",
+     "id": "trigger",
+     "label": "trigger (실제 열기)",
+     "tag": "code"
+    }
+   ],
+   "notApplicable": []
+  }
+ ],
+ "patterns": [
+  {
+   "id": "dashboard",
+   "label": "Dashboard",
+   "states": [
+    "default",
+    "loading",
+    "empty",
+    "error"
+   ],
+   "kind": "derived-extension pattern",
+   "url": "master/patterns/screen.html?p=dashboard&s=<state>",
+   "viewports": [
+    1440,
+    834,
+    375
+   ]
+  },
+  {
+   "id": "analytics",
+   "label": "Analytics",
+   "states": [
+    "default",
+    "loading",
+    "empty",
+    "error"
+   ],
+   "kind": "derived-extension pattern",
+   "url": "master/patterns/screen.html?p=analytics&s=<state>",
+   "viewports": [
+    1440,
+    834,
+    375
+   ]
+  },
+  {
+   "id": "table",
+   "label": "Table",
+   "states": [
+    "default",
+    "loading",
+    "empty",
+    "error",
+    "long-text"
+   ],
+   "kind": "derived-extension pattern",
+   "url": "master/patterns/screen.html?p=table&s=<state>",
+   "viewports": [
+    1440,
+    834,
+    375
+   ]
+  },
+  {
+   "id": "detail",
+   "label": "Detail",
+   "states": [
+    "default",
+    "loading",
+    "missing-data",
+    "error"
+   ],
+   "kind": "derived-extension pattern",
+   "url": "master/patterns/screen.html?p=detail&s=<state>",
+   "viewports": [
+    1440,
+    834,
+    375
+   ]
+  },
+  {
+   "id": "settings",
+   "label": "Settings",
+   "states": [
+    "default",
+    "saving",
+    "error",
+    "success"
+   ],
+   "kind": "derived-extension pattern",
+   "url": "master/patterns/screen.html?p=settings&s=<state>",
+   "viewports": [
+    1440,
+    834,
+    375
+   ]
+  },
+  {
+   "id": "billing",
+   "label": "Billing",
+   "states": [
+    "default",
+    "loading",
+    "error",
+    "empty"
+   ],
+   "kind": "derived-extension pattern",
+   "url": "master/patterns/screen.html?p=billing&s=<state>",
+   "viewports": [
+    1440,
+    834,
+    375
+   ]
+  },
+  {
+   "id": "chat",
+   "label": "AI Chat",
+   "states": [
+    "default",
+    "streaming",
+    "empty",
+    "error"
+   ],
+   "kind": "derived-extension pattern",
+   "url": "master/patterns/screen.html?p=chat&s=<state>",
+   "viewports": [
+    1440,
+    834,
+    375
+   ]
+  },
+  {
+   "id": "builder",
+   "label": "Builder",
+   "states": [
+    "default",
+    "selected",
+    "dragging",
+    "empty"
+   ],
+   "kind": "derived-extension pattern",
+   "url": "master/patterns/screen.html?p=builder&s=<state>",
+   "viewports": [
+    1440,
+    834,
+    375
+   ]
+  },
+  {
+   "id": "modal",
+   "label": "Modal",
+   "states": [
+    "dialog",
+    "confirm",
+    "pending",
+    "error"
+   ],
+   "kind": "derived-extension pattern",
+   "url": "master/patterns/screen.html?p=modal&s=<state>",
+   "viewports": [
+    1440,
+    834,
+    375
+   ]
+  },
+  {
+   "id": "empty",
+   "label": "Empty",
+   "states": [
+    "first-run",
+    "no-results",
+    "no-access"
+   ],
+   "kind": "derived-extension pattern",
+   "url": "master/patterns/screen.html?p=empty&s=<state>",
+   "viewports": [
+    1440,
+    834,
+    375
+   ]
+  },
+  {
+   "id": "home",
+   "label": "ProductHome",
+   "states": [
+    "default",
+    "loading"
+   ],
+   "kind": "KOREX site screen (observed-inspired)",
+   "url": "master/patterns/screen.html?p=home&s=<state>",
+   "viewports": [
+    1440,
+    834,
+    375
+   ]
+  },
+  {
+   "id": "search",
+   "label": "SearchList",
+   "states": [
+    "default",
+    "loading",
+    "empty",
+    "long-text"
+   ],
+   "kind": "KOREX site screen (observed-inspired)",
+   "url": "master/patterns/screen.html?p=search&s=<state>",
+   "viewports": [
+    1440,
+    834,
+    375
+   ]
+  },
+  {
+   "id": "product",
+   "label": "ProductDetail",
+   "states": [
+    "default",
+    "missing-data",
+    "saved"
+   ],
+   "kind": "KOREX site screen (observed-inspired)",
+   "url": "master/patterns/screen.html?p=product&s=<state>",
+   "viewports": [
+    1440,
+    834,
+    375
+   ]
+  }
+ ],
+ "layout": {
+  "containerMax": 1280,
+  "padding": {
+   "desktop": 40,
+   "tablet": 24,
+   "mobile": 16
+  },
+  "columns": {
+   "desktop": 12,
+   "≤1024": 8,
+   "≤640": 4
+  },
+  "gutter": {
+   "desktop": 24,
+   "tablet": 20,
+   "mobile": 16
+  },
+  "verifyWidths": [
+   1440,
+   834,
+   375
+  ],
+  "basis": "wide whitespace observed; numbers derived-design-value"
+ },
+ "rules": {
+  "radius": "2 buttons/inputs/badges · 4 tiles/toast icon · 6 cards/dialogs (derived-design-value) · pill chips/heart/switch (observed)",
+  "focus": "2px outline + 2px offset, :focus-visible only; white on deep green (derived-extension)",
+  "motion": "140/200/280ms · reduced-motion 1ms (derived-extension)",
+  "color": "green = action + brand surfaces; mint = tint/selected; semantic red/amber/blue = derived-extension",
+  "identity": "text wordmark \"KOREX\" only (no original logo)"
+ },
+ "sourceReferences": {
+  "tokens": "colors_and_type.css",
+  "tokensJson": "tokens/*.json",
+  "componentsCss": "master/lib/kx-ui.css",
+  "componentsJs": "master/lib/kx-ui.js",
+  "icons": "master/lib/kx-icons.js (self-drawn line set, derived-extension)",
+  "shell": "master/lib/kx-shell.css",
+  "patterns": "master/lib/kx-patterns.js",
+  "cardSpecs": "master/lib/kx-specs.js",
+  "archive": "archive/iak-master/ (previous system, inactive)"
+ }
+}

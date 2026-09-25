@@ -1,0 +1,4 @@
+/* live WCAG contrast annotate for swatch cards */
+window.ZEMContrast={lum(c){const m=c.match(/\d+(\.\d+)?/g).map(Number);const f=v=>{v/=255;return v<=.03928?v/12.92:Math.pow((v+.055)/1.055,2.4)};return .2126*f(m[0])+.7152*f(m[1])+.0722*f(m[2])},ratio(a,b){const x=this.lum(a),y=this.lum(b);return (Math.max(x,y)+.05)/(Math.min(x,y)+.05)},
+hex(c){const m=c.match(/\d+/g).slice(0,3).map(Number);return '#'+m.map(v=>v.toString(16).padStart(2,'0')).join('').toUpperCase()},
+annotate(){document.querySelectorAll('.sw').forEach(f=>{const c=getComputedStyle(f.querySelector('i')).backgroundColor;f.querySelector('.hx').textContent=this.hex(c);const w=this.ratio(c,'rgb(255,255,255)'),k=this.ratio(c,'rgb(31,36,64)');f.querySelector('.cr').textContent='white '+w.toFixed(1)+' · ink '+k.toFixed(1)})}};

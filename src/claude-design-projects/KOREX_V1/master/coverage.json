@@ -1,0 +1,449 @@
+{
+ "generatedAt": "2026-09-25",
+ "system": "KOREX_V1 · Project Design System",
+ "total": 62,
+ "verification": "master/qa.html live run 2026-09-25: card cases 105/105 rendered, 147/147 screen·state·viewport (1440/834/375) without horizontal overflow, 16/17 contrast pairs ≥4.5:1 (--fg-muted 3.85:1 restricted to icons/disabled)",
+ "items": [
+  {
+   "group": "Foundations",
+   "name": "Colors · Primary (green)",
+   "path": "preview/colors-primary.html",
+   "basis": "observed role · derived-design-value hex",
+   "verification": "card opens; token values read live"
+  },
+  {
+   "group": "Foundations",
+   "name": "Colors · Grey",
+   "path": "preview/colors-grey.html",
+   "basis": "observed role · derived-design-value hex",
+   "verification": "card opens; token values read live"
+  },
+  {
+   "group": "Foundations",
+   "name": "Colors · Semantic",
+   "path": "preview/colors-semantic.html",
+   "basis": "derived-extension",
+   "verification": "card opens; token values read live"
+  },
+  {
+   "group": "Foundations",
+   "name": "Surfaces",
+   "path": "preview/surfaces.html",
+   "basis": "observed",
+   "verification": "card opens; token values read live"
+  },
+  {
+   "group": "Foundations",
+   "name": "Type · Display",
+   "path": "preview/type-display.html",
+   "basis": "observed (bold sans) · derived-design-value size/font",
+   "verification": "card opens; token values read live"
+  },
+  {
+   "group": "Foundations",
+   "name": "Type · Scale",
+   "path": "preview/type-scale.html",
+   "basis": "derived-design-value",
+   "verification": "card opens; token values read live"
+  },
+  {
+   "group": "Foundations",
+   "name": "Type · Specimens",
+   "path": "preview/type-specimens.html",
+   "basis": "derived-design-value (Noto Sans KR substitute)",
+   "verification": "card opens; token values read live"
+  },
+  {
+   "group": "Foundations",
+   "name": "Spacing",
+   "path": "preview/spacing.html",
+   "basis": "observed (wide whitespace) · derived-design-value",
+   "verification": "card opens; token values read live"
+  },
+  {
+   "group": "Foundations",
+   "name": "Radii",
+   "path": "preview/radii.html",
+   "basis": "pill observed · 2/4/6 derived-design-value",
+   "verification": "card opens; token values read live"
+  },
+  {
+   "group": "Foundations",
+   "name": "Shadows",
+   "path": "preview/shadows.html",
+   "basis": "derived-design-value",
+   "verification": "card opens; token values read live"
+  },
+  {
+   "group": "Foundations",
+   "name": "Emphasis layers",
+   "path": "preview/glows.html",
+   "basis": "derived-extension",
+   "verification": "card opens; token values read live"
+  },
+  {
+   "group": "Foundations",
+   "name": "Foundations",
+   "path": "master/preview/foundations.html",
+   "basis": "mixed — per token basis in figma-system.json",
+   "verification": "card opens; token values read live"
+  },
+  {
+   "group": "Foundations",
+   "name": "Icons",
+   "path": "master/preview/icons.html",
+   "basis": "mint tile + outline heart observed · icon set derived-extension",
+   "verification": "card opens; token values read live"
+  },
+  {
+   "group": "Foundations",
+   "name": "Design ↔ Code mapping",
+   "path": "master/preview/mapping.html",
+   "basis": "documentation",
+   "verification": "card opens; token values read live"
+  },
+  {
+   "group": "Components",
+   "name": "Button",
+   "path": "master/preview/Button.html",
+   "basis": "primary/outline/chip observed; others derived-extension",
+   "verification": "qa.html: 18/18 cases rendered, no case overflow"
+  },
+  {
+   "group": "Components",
+   "name": "TextField",
+   "path": "master/preview/TextField.html",
+   "basis": "derived-extension (KOREX style)",
+   "verification": "qa.html: 10/10 cases rendered, no case overflow"
+  },
+  {
+   "group": "Components",
+   "name": "Textarea",
+   "path": "master/preview/Textarea.html",
+   "basis": "derived-extension (KOREX style)",
+   "verification": "qa.html: 6/6 cases rendered, no case overflow"
+  },
+  {
+   "group": "Components",
+   "name": "Select",
+   "path": "master/preview/Select.html",
+   "basis": "derived-extension (KOREX style)",
+   "verification": "qa.html: 6/6 cases rendered, no case overflow"
+  },
+  {
+   "group": "Components",
+   "name": "Checkbox",
+   "path": "master/preview/Checkbox.html",
+   "basis": "derived-extension (KOREX style)",
+   "verification": "qa.html: 5/5 cases rendered, no case overflow"
+  },
+  {
+   "group": "Components",
+   "name": "Switch",
+   "path": "master/preview/Switch.html",
+   "basis": "derived-extension (KOREX style)",
+   "verification": "qa.html: 5/5 cases rendered, no case overflow"
+  },
+  {
+   "group": "Components",
+   "name": "Badge",
+   "path": "master/preview/Badge.html",
+   "basis": "derived-extension (KOREX style)",
+   "verification": "qa.html: 8/8 cases rendered, no case overflow"
+  },
+  {
+   "group": "Components",
+   "name": "Card",
+   "path": "master/preview/Card.html",
+   "basis": "brand panel + listing observed; rest derived-extension",
+   "verification": "qa.html: 8/8 cases rendered, no case overflow"
+  },
+  {
+   "group": "Components",
+   "name": "Skeleton",
+   "path": "master/preview/Skeleton.html",
+   "basis": "derived-extension (KOREX style)",
+   "verification": "qa.html: 3/3 cases rendered, no case overflow"
+  },
+  {
+   "group": "Components",
+   "name": "Icon",
+   "path": "master/preview/Icon.html",
+   "basis": "tile + heart observed",
+   "verification": "qa.html: 5/5 cases rendered, no case overflow"
+  },
+  {
+   "group": "Components",
+   "name": "Dialog",
+   "path": "master/preview/Dialog.html",
+   "basis": "derived-extension (KOREX style)",
+   "verification": "qa.html: 4/4 cases rendered, no case overflow"
+  },
+  {
+   "group": "Components",
+   "name": "Menu",
+   "path": "master/preview/Menu.html",
+   "basis": "derived-extension (KOREX style)",
+   "verification": "qa.html: 3/3 cases rendered, no case overflow"
+  },
+  {
+   "group": "Components",
+   "name": "Table",
+   "path": "master/preview/Table.html",
+   "basis": "derived-extension (KOREX style)",
+   "verification": "qa.html: 7/7 cases rendered, no case overflow"
+  },
+  {
+   "group": "Components",
+   "name": "Pagination",
+   "path": "master/preview/Pagination.html",
+   "basis": "derived-extension (KOREX style)",
+   "verification": "qa.html: 6/6 cases rendered, no case overflow"
+  },
+  {
+   "group": "Components",
+   "name": "Toast",
+   "path": "master/preview/Toast.html",
+   "basis": "derived-extension (KOREX style)",
+   "verification": "qa.html: 7/7 cases rendered, no case overflow"
+  },
+  {
+   "group": "Components",
+   "name": "AlertDialog",
+   "path": "master/preview/AlertDialog.html",
+   "basis": "derived-extension (KOREX style)",
+   "verification": "qa.html: 4/4 cases rendered, no case overflow"
+  },
+  {
+   "group": "Legacy previews",
+   "name": "Buttons",
+   "path": "preview/buttons.html",
+   "basis": "observed + derived",
+   "verification": "static card; uses kx-ui.css classes"
+  },
+  {
+   "group": "Legacy previews",
+   "name": "Cards",
+   "path": "preview/cards.html",
+   "basis": "observed + derived",
+   "verification": "static card; uses kx-ui.css classes"
+  },
+  {
+   "group": "Legacy previews",
+   "name": "Chips & Status",
+   "path": "preview/chips.html",
+   "basis": "observed + derived",
+   "verification": "static card; uses kx-ui.css classes"
+  },
+  {
+   "group": "Legacy previews",
+   "name": "Inputs",
+   "path": "preview/inputs.html",
+   "basis": "derived-extension",
+   "verification": "static card; uses kx-ui.css classes"
+  },
+  {
+   "group": "Legacy previews",
+   "name": "Toasts",
+   "path": "preview/toasts.html",
+   "basis": "derived-extension",
+   "verification": "static card; uses kx-ui.css classes"
+  },
+  {
+   "group": "Patterns",
+   "name": "dashboard",
+   "path": "master/patterns/01-dashboard.html",
+   "basis": "derived-extension (not claimed to exist in source)",
+   "verification": "qa.html: 4 states × 3 viewports = 12/12 no overflow"
+  },
+  {
+   "group": "Patterns",
+   "name": "analytics",
+   "path": "master/patterns/02-analytics.html",
+   "basis": "derived-extension (not claimed to exist in source)",
+   "verification": "qa.html: 4 states × 3 viewports = 12/12 no overflow"
+  },
+  {
+   "group": "Patterns",
+   "name": "table",
+   "path": "master/patterns/03-table.html",
+   "basis": "derived-extension (not claimed to exist in source)",
+   "verification": "qa.html: 5 states × 3 viewports = 15/15 no overflow"
+  },
+  {
+   "group": "Patterns",
+   "name": "detail",
+   "path": "master/patterns/04-detail.html",
+   "basis": "derived-extension (not claimed to exist in source)",
+   "verification": "qa.html: 4 states × 3 viewports = 12/12 no overflow"
+  },
+  {
+   "group": "Patterns",
+   "name": "settings",
+   "path": "master/patterns/05-settings.html",
+   "basis": "derived-extension (not claimed to exist in source)",
+   "verification": "qa.html: 4 states × 3 viewports = 12/12 no overflow"
+  },
+  {
+   "group": "Patterns",
+   "name": "billing",
+   "path": "master/patterns/06-billing.html",
+   "basis": "derived-extension (not claimed to exist in source)",
+   "verification": "qa.html: 4 states × 3 viewports = 12/12 no overflow"
+  },
+  {
+   "group": "Patterns",
+   "name": "chat",
+   "path": "master/patterns/07-chat.html",
+   "basis": "derived-extension (not claimed to exist in source)",
+   "verification": "qa.html: 4 states × 3 viewports = 12/12 no overflow"
+  },
+  {
+   "group": "Patterns",
+   "name": "builder",
+   "path": "master/patterns/08-builder.html",
+   "basis": "derived-extension (not claimed to exist in source)",
+   "verification": "qa.html: 4 states × 3 viewports = 12/12 no overflow"
+  },
+  {
+   "group": "Patterns",
+   "name": "modal",
+   "path": "master/patterns/09-modal.html",
+   "basis": "derived-extension (not claimed to exist in source)",
+   "verification": "qa.html: 4 states × 3 viewports = 12/12 no overflow"
+  },
+  {
+   "group": "Patterns",
+   "name": "empty",
+   "path": "master/patterns/10-empty.html",
+   "basis": "derived-extension (not claimed to exist in source)",
+   "verification": "qa.html: 3 states × 3 viewports = 9/9 no overflow"
+  },
+  {
+   "group": "UI kits",
+   "name": "Site · ProductHome / SearchList / ProductDetail",
+   "path": "ui_kits/korex-site/index.html",
+   "basis": "observed-inspired (hero, search panel, chips, listing cards, heart)",
+   "verification": "qa.html: home 2, search 4 (incl. long-text), product 3 states × 3 viewports = 27/27 no overflow"
+  },
+  {
+   "group": "UI kits",
+   "name": "Partner console",
+   "path": "ui_kits/korex-console/index.html",
+   "basis": "derived-extension",
+   "verification": "reuses dashboard/table/detail/settings screens (verified above)"
+  },
+  {
+   "group": "UI kits",
+   "name": "Inquiry & AI assist",
+   "path": "ui_kits/korex-inquiry/index.html",
+   "basis": "derived-extension",
+   "verification": "reuses chat/builder/modal/billing screens (verified above)"
+  },
+  {
+   "group": "Brand · Docs",
+   "name": "Brand rules",
+   "path": "preview/brand.html",
+   "basis": "documentation",
+   "verification": "card opens"
+  },
+  {
+   "group": "Brand · Docs",
+   "name": "Iconography",
+   "path": "preview/iconography.html",
+   "basis": "documentation",
+   "verification": "card opens"
+  },
+  {
+   "group": "Brand · Docs",
+   "name": "Documentation viewer",
+   "path": "docs.html",
+   "basis": "documentation",
+   "verification": "card opens"
+  },
+  {
+   "group": "Brand · Docs",
+   "name": "Docs UI",
+   "path": "docs/document-ui.html",
+   "basis": "documentation",
+   "verification": "card opens"
+  },
+  {
+   "group": "Brand · Docs",
+   "name": "Information architecture",
+   "path": "docs/information-architecture.html",
+   "basis": "documentation",
+   "verification": "card opens"
+  },
+  {
+   "group": "Brand · Docs",
+   "name": "System Hub",
+   "path": "index.html",
+   "basis": "documentation",
+   "verification": "card opens"
+  },
+  {
+   "group": "QA · Hub",
+   "name": "Hub & integrated preview",
+   "path": "master/index.html",
+   "basis": "tooling",
+   "verification": "computes results live when opened; no stored scores"
+  },
+  {
+   "group": "QA · Hub",
+   "name": "QA render check",
+   "path": "master/qa.html",
+   "basis": "tooling",
+   "verification": "computes results live when opened; no stored scores"
+  },
+  {
+   "group": "QA · Hub",
+   "name": "Namespace check",
+   "path": "master/preview/namespace.html",
+   "basis": "tooling",
+   "verification": "computes results live when opened; no stored scores"
+  },
+  {
+   "group": "QA · Hub",
+   "name": "Structural audit",
+   "path": "docs/structural-audit.html",
+   "basis": "tooling",
+   "verification": "computes results live when opened; no stored scores"
+  },
+  {
+   "group": "QA · Hub",
+   "name": "Locks 01–03",
+   "path": "docs/tp-01-03-bundle.html",
+   "basis": "tooling",
+   "verification": "computes results live when opened; no stored scores"
+  },
+  {
+   "group": "QA · Hub",
+   "name": "Locks 04–10",
+   "path": "docs/tp-04-10-bundle.html",
+   "basis": "tooling",
+   "verification": "computes results live when opened; no stored scores"
+  },
+  {
+   "group": "QA · Hub",
+   "name": "Variant stress test",
+   "path": "docs/variant-stress-test.html",
+   "basis": "tooling",
+   "verification": "computes results live when opened; no stored scores"
+  },
+  {
+   "group": "QA · Hub",
+   "name": "Regeneration stability",
+   "path": "docs/regeneration-stability-test.html",
+   "basis": "tooling",
+   "verification": "computes results live when opened; no stored scores"
+  }
+ ],
+ "notImplemented": [
+  "Checkbox indeterminate/error",
+  "TextField/Select size variants",
+  "Button empty/error/success (expressed in forms/toasts)",
+  "Real backend, routing, auth, payments, AI calls — out of scope"
+ ],
+ "archive": "archive/iak-master/ — previous IAK/RAIS system, dsCard markers disabled"
+}

@@ -1,0 +1,1361 @@
+{
+ "system": "DEW_V1 · Project Design System",
+ "generated": "2026-09-25",
+ "method": "Live iframe render in dew/qa.html (1200×900 and 375×812 per item; patterns 1440/834/375). Past scores not reused. Fixed items re-probed individually at 375 (and Table at 1200) after the fix.",
+ "summary": {
+  "baseline_items": 62,
+  "project_files": 62,
+  "qa_run_before_fixes": "items 60/61 pass (only fail: dew/preview-app.html @375) · patterns 120/120 no overflow",
+  "after_fixes": "61/61 pass + qa runner · patterns 120/120",
+  "user_reported_failures_fixed": [
+   "dew/preview/toasts.html @375",
+   "dew/components/AlertDialog.html @375",
+   "dew/components/Dialog.html @375",
+   "dew/components/Table.html @1200/@375",
+   "dew/components/Toast.html @375"
+  ],
+  "basis_counts": {
+   "derived-extension": 26,
+   "derived": 27,
+   "observed + derived": 9
+  }
+ },
+ "items": [
+  {
+   "n": 1,
+   "baseline": {
+    "group": "Brand",
+    "name": "Documentation viewer",
+    "path": "archive/docs.html"
+   },
+   "project_file": "dew/docs/viewer.html",
+   "name": "Documentation viewer",
+   "group": "Brand",
+   "basis": "derived-extension",
+   "verification": {
+    "status": "pass",
+    "loaded": true,
+    "cases_rendered": "all",
+    "tokens_linked": true,
+    "overflow_1200": false,
+    "overflow_375": false
+   }
+  },
+  {
+   "n": 2,
+   "baseline": {
+    "group": "Brand",
+    "name": "Docs UI · Document Site",
+    "path": "archive/docs/document-ui.html"
+   },
+   "project_file": "dew/docs/document-site.html",
+   "name": "Docs UI · Document Site",
+   "group": "Brand",
+   "basis": "derived-extension",
+   "verification": {
+    "status": "pass",
+    "loaded": true,
+    "cases_rendered": "all",
+    "tokens_linked": true,
+    "overflow_1200": false,
+    "overflow_375": false
+   }
+  },
+  {
+   "n": 3,
+   "baseline": {
+    "group": "Brand",
+    "name": "Information Architecture",
+    "path": "archive/docs/information-architecture.html"
+   },
+   "project_file": "dew/docs/information-architecture.html",
+   "name": "Information Architecture",
+   "group": "Brand",
+   "basis": "derived-extension",
+   "verification": {
+    "status": "pass",
+    "loaded": true,
+    "cases_rendered": "all",
+    "tokens_linked": true,
+    "overflow_1200": false,
+    "overflow_375": false
+   }
+  },
+  {
+   "n": 4,
+   "baseline": {
+    "group": "Brand",
+    "name": "Regeneration Stability Test",
+    "path": "archive/docs/regeneration-stability-test.html"
+   },
+   "project_file": "dew/docs/regeneration-test.html",
+   "name": "Regeneration Stability Test",
+   "group": "Brand",
+   "basis": "derived-extension",
+   "verification": {
+    "status": "pass",
+    "loaded": true,
+    "cases_rendered": "all",
+    "tokens_linked": true,
+    "overflow_1200": false,
+    "overflow_375": false
+   }
+  },
+  {
+   "n": 5,
+   "baseline": {
+    "group": "Brand",
+    "name": "Structural Audit",
+    "path": "archive/docs/structural-audit.html"
+   },
+   "project_file": "dew/docs/structural-audit.html",
+   "name": "Structural Audit",
+   "group": "Brand",
+   "basis": "derived-extension",
+   "verification": {
+    "status": "pass",
+    "loaded": true,
+    "cases_rendered": "all",
+    "tokens_linked": true,
+    "overflow_1200": false,
+    "overflow_375": false
+   }
+  },
+  {
+   "n": 6,
+   "baseline": {
+    "group": "Brand",
+    "name": "TP 01–03 · Stability Bundle",
+    "path": "archive/docs/tp-01-03-bundle.html"
+   },
+   "project_file": "dew/docs/locks-01-03.html",
+   "name": "Locks 01–03 · Grid · Focus · Spacing",
+   "group": "Brand",
+   "basis": "derived-extension",
+   "verification": {
+    "status": "pass",
+    "loaded": true,
+    "cases_rendered": "all",
+    "tokens_linked": true,
+    "overflow_1200": false,
+    "overflow_375": false
+   }
+  },
+  {
+   "n": 7,
+   "baseline": {
+    "group": "Brand",
+    "name": "TP 04–10 · Final Bundle",
+    "path": "archive/docs/tp-04-10-bundle.html"
+   },
+   "project_file": "dew/docs/locks-04-10.html",
+   "name": "Locks 04–10 · Motion · QA · AI · Docs",
+   "group": "Brand",
+   "basis": "derived-extension",
+   "verification": {
+    "status": "pass",
+    "loaded": true,
+    "cases_rendered": "all",
+    "tokens_linked": true,
+    "overflow_1200": false,
+    "overflow_375": false
+   }
+  },
+  {
+   "n": 8,
+   "baseline": {
+    "group": "Brand",
+    "name": "Variant Stress Test",
+    "path": "archive/docs/variant-stress-test.html"
+   },
+   "project_file": "dew/docs/variant-stress.html",
+   "name": "Variant Stress Test",
+   "group": "Brand",
+   "basis": "derived-extension",
+   "verification": {
+    "status": "pass",
+    "loaded": true,
+    "cases_rendered": "all",
+    "tokens_linked": true,
+    "overflow_1200": false,
+    "overflow_375": false
+   }
+  },
+  {
+   "n": 9,
+   "baseline": {
+    "group": "Brand",
+    "name": "System Hub",
+    "path": "archive/index.html"
+   },
+   "project_file": "dew/index.html",
+   "name": "System Hub",
+   "group": "Brand",
+   "basis": "derived-extension",
+   "verification": {
+    "status": "pass",
+    "loaded": true,
+    "cases_rendered": "all",
+    "tokens_linked": true,
+    "overflow_1200": false,
+    "overflow_375": false
+   }
+  },
+  {
+   "n": 10,
+   "baseline": {
+    "group": "Brand",
+    "name": "Brand mark",
+    "path": "archive/preview/brand.html"
+   },
+   "project_file": "dew/preview/brand.html",
+   "name": "Brand · DEW wordmark",
+   "group": "Brand",
+   "basis": "derived",
+   "verification": {
+    "status": "pass",
+    "loaded": true,
+    "cases_rendered": "all",
+    "tokens_linked": true,
+    "overflow_1200": false,
+    "overflow_375": false
+   }
+  },
+  {
+   "n": 11,
+   "baseline": {
+    "group": "Brand",
+    "name": "Iconography",
+    "path": "archive/preview/iconography.html"
+   },
+   "project_file": "dew/preview/iconography.html",
+   "name": "Iconography",
+   "group": "Brand",
+   "basis": "derived",
+   "verification": {
+    "status": "pass",
+    "loaded": true,
+    "cases_rendered": "all",
+    "tokens_linked": true,
+    "overflow_1200": false,
+    "overflow_375": false
+   }
+  },
+  {
+   "n": 12,
+   "baseline": {
+    "group": "Colors",
+    "name": "Colors · Grey scale",
+    "path": "archive/preview/colors-grey.html"
+   },
+   "project_file": "dew/preview/colors-grey.html",
+   "name": "Colors · Grey scale",
+   "group": "Colors",
+   "basis": "observed + derived",
+   "verification": {
+    "status": "pass",
+    "loaded": true,
+    "cases_rendered": "all",
+    "tokens_linked": true,
+    "overflow_1200": false,
+    "overflow_375": false
+   }
+  },
+  {
+   "n": 13,
+   "baseline": {
+    "group": "Colors",
+    "name": "Colors · Primary",
+    "path": "archive/preview/colors-primary.html"
+   },
+   "project_file": "dew/preview/colors-primary.html",
+   "name": "Colors · Action red",
+   "group": "Colors",
+   "basis": "observed + derived",
+   "verification": {
+    "status": "pass",
+    "loaded": true,
+    "cases_rendered": "all",
+    "tokens_linked": true,
+    "overflow_1200": false,
+    "overflow_375": false
+   }
+  },
+  {
+   "n": 14,
+   "baseline": {
+    "group": "Colors",
+    "name": "Colors · Semantic",
+    "path": "archive/preview/colors-semantic.html"
+   },
+   "project_file": "dew/preview/colors-semantic.html",
+   "name": "Colors · Semantic",
+   "group": "Colors",
+   "basis": "derived-extension",
+   "verification": {
+    "status": "pass",
+    "loaded": true,
+    "cases_rendered": "all",
+    "tokens_linked": true,
+    "overflow_1200": false,
+    "overflow_375": false
+   }
+  },
+  {
+   "n": 15,
+   "baseline": {
+    "group": "Colors",
+    "name": "Colors · Surfaces",
+    "path": "archive/preview/surfaces.html"
+   },
+   "project_file": "dew/preview/surfaces.html",
+   "name": "Colors · Surfaces",
+   "group": "Colors",
+   "basis": "observed + derived",
+   "verification": {
+    "status": "pass",
+    "loaded": true,
+    "cases_rendered": "all",
+    "tokens_linked": true,
+    "overflow_1200": false,
+    "overflow_375": false
+   }
+  },
+  {
+   "n": 16,
+   "baseline": {
+    "group": "Components",
+    "name": "Buttons",
+    "path": "archive/preview/buttons.html"
+   },
+   "project_file": "dew/preview/buttons.html",
+   "name": "Buttons",
+   "group": "Components",
+   "basis": "derived",
+   "verification": {
+    "status": "pass",
+    "loaded": true,
+    "cases_rendered": "all",
+    "tokens_linked": true,
+    "overflow_1200": false,
+    "overflow_375": false
+   }
+  },
+  {
+   "n": 17,
+   "baseline": {
+    "group": "Components",
+    "name": "Cards",
+    "path": "archive/preview/cards.html"
+   },
+   "project_file": "dew/preview/cards.html",
+   "name": "Cards",
+   "group": "Components",
+   "basis": "derived",
+   "verification": {
+    "status": "pass",
+    "loaded": true,
+    "cases_rendered": "all",
+    "tokens_linked": true,
+    "overflow_1200": false,
+    "overflow_375": false
+   }
+  },
+  {
+   "n": 18,
+   "baseline": {
+    "group": "Components",
+    "name": "Chips & Status",
+    "path": "archive/preview/chips.html"
+   },
+   "project_file": "dew/preview/chips.html",
+   "name": "Chips & Status",
+   "group": "Components",
+   "basis": "derived",
+   "verification": {
+    "status": "pass",
+    "loaded": true,
+    "cases_rendered": "all",
+    "tokens_linked": true,
+    "overflow_1200": false,
+    "overflow_375": false
+   }
+  },
+  {
+   "n": 19,
+   "baseline": {
+    "group": "Components",
+    "name": "Inputs",
+    "path": "archive/preview/inputs.html"
+   },
+   "project_file": "dew/preview/inputs.html",
+   "name": "Inputs",
+   "group": "Components",
+   "basis": "derived",
+   "verification": {
+    "status": "pass",
+    "loaded": true,
+    "cases_rendered": "all",
+    "tokens_linked": true,
+    "overflow_1200": false,
+    "overflow_375": false
+   }
+  },
+  {
+   "n": 20,
+   "baseline": {
+    "group": "Components",
+    "name": "Toasts",
+    "path": "archive/preview/toasts.html"
+   },
+   "project_file": "dew/preview/toasts.html",
+   "name": "Toasts",
+   "group": "Components",
+   "basis": "derived",
+   "verification": {
+    "status": "pass",
+    "loaded": true,
+    "cases_rendered": "all",
+    "tokens_linked": true,
+    "overflow_1200": false,
+    "overflow_375": false,
+    "fix_this_turn": "card grid min 360 → min(360px,100%)"
+   }
+  },
+  {
+   "n": 21,
+   "baseline": {
+    "group": "Master · Components",
+    "name": "AlertDialog",
+    "path": "archive/master/preview/AlertDialog.html"
+   },
+   "project_file": "dew/components/AlertDialog.html",
+   "name": "AlertDialog",
+   "group": "DEW · Components",
+   "basis": "derived",
+   "verification": {
+    "status": "pass",
+    "loaded": true,
+    "cases_rendered": "all",
+    "tokens_linked": true,
+    "overflow_1200": false,
+    "overflow_375": false,
+    "fix_this_turn": "section min 520 → min(520px,100%) in card.js"
+   }
+  },
+  {
+   "n": 22,
+   "baseline": {
+    "group": "Master · Components",
+    "name": "Badge",
+    "path": "archive/master/preview/Badge.html"
+   },
+   "project_file": "dew/components/Badge.html",
+   "name": "Badge",
+   "group": "DEW · Components",
+   "basis": "derived",
+   "verification": {
+    "status": "pass",
+    "loaded": true,
+    "cases_rendered": "all",
+    "tokens_linked": true,
+    "overflow_1200": false,
+    "overflow_375": false
+   }
+  },
+  {
+   "n": 23,
+   "baseline": {
+    "group": "Master · Components",
+    "name": "Button",
+    "path": "archive/master/preview/Button.html"
+   },
+   "project_file": "dew/components/Button.html",
+   "name": "Button",
+   "group": "DEW · Components",
+   "basis": "derived",
+   "verification": {
+    "status": "pass",
+    "loaded": true,
+    "cases_rendered": "all",
+    "tokens_linked": true,
+    "overflow_1200": false,
+    "overflow_375": false
+   }
+  },
+  {
+   "n": 24,
+   "baseline": {
+    "group": "Master · Components",
+    "name": "Card",
+    "path": "archive/master/preview/Card.html"
+   },
+   "project_file": "dew/components/Card.html",
+   "name": "Card",
+   "group": "DEW · Components",
+   "basis": "derived",
+   "verification": {
+    "status": "pass",
+    "loaded": true,
+    "cases_rendered": "all",
+    "tokens_linked": true,
+    "overflow_1200": false,
+    "overflow_375": false
+   }
+  },
+  {
+   "n": 25,
+   "baseline": {
+    "group": "Master · Components",
+    "name": "Checkbox",
+    "path": "archive/master/preview/Checkbox.html"
+   },
+   "project_file": "dew/components/Checkbox.html",
+   "name": "Checkbox",
+   "group": "DEW · Components",
+   "basis": "derived",
+   "verification": {
+    "status": "pass",
+    "loaded": true,
+    "cases_rendered": "all",
+    "tokens_linked": true,
+    "overflow_1200": false,
+    "overflow_375": false
+   }
+  },
+  {
+   "n": 26,
+   "baseline": {
+    "group": "Master · Components",
+    "name": "Dialog",
+    "path": "archive/master/preview/Dialog.html"
+   },
+   "project_file": "dew/components/Dialog.html",
+   "name": "Dialog",
+   "group": "DEW · Components",
+   "basis": "derived",
+   "verification": {
+    "status": "pass",
+    "loaded": true,
+    "cases_rendered": "all",
+    "tokens_linked": true,
+    "overflow_1200": false,
+    "overflow_375": false,
+    "fix_this_turn": "section min 560 → min(560px,100%) in card.js"
+   }
+  },
+  {
+   "n": 27,
+   "baseline": {
+    "group": "Master · Components",
+    "name": "Icon",
+    "path": "archive/master/preview/Icon.html"
+   },
+   "project_file": "dew/components/Icon.html",
+   "name": "Icon",
+   "group": "DEW · Components",
+   "basis": "derived",
+   "verification": {
+    "status": "pass",
+    "loaded": true,
+    "cases_rendered": "all",
+    "tokens_linked": true,
+    "overflow_1200": false,
+    "overflow_375": false
+   }
+  },
+  {
+   "n": 28,
+   "baseline": {
+    "group": "Master · Components",
+    "name": "Menu",
+    "path": "archive/master/preview/Menu.html"
+   },
+   "project_file": "dew/components/Menu.html",
+   "name": "Menu",
+   "group": "DEW · Components",
+   "basis": "derived",
+   "verification": {
+    "status": "pass",
+    "loaded": true,
+    "cases_rendered": "all",
+    "tokens_linked": true,
+    "overflow_1200": false,
+    "overflow_375": false
+   }
+  },
+  {
+   "n": 29,
+   "baseline": {
+    "group": "Master · Components",
+    "name": "Pagination",
+    "path": "archive/master/preview/Pagination.html"
+   },
+   "project_file": "dew/components/Pagination.html",
+   "name": "Pagination",
+   "group": "DEW · Components",
+   "basis": "derived",
+   "verification": {
+    "status": "pass",
+    "loaded": true,
+    "cases_rendered": "all",
+    "tokens_linked": true,
+    "overflow_1200": false,
+    "overflow_375": false
+   }
+  },
+  {
+   "n": 30,
+   "baseline": {
+    "group": "Master · Components",
+    "name": "Select",
+    "path": "archive/master/preview/Select.html"
+   },
+   "project_file": "dew/components/Select.html",
+   "name": "Select",
+   "group": "DEW · Components",
+   "basis": "derived",
+   "verification": {
+    "status": "pass",
+    "loaded": true,
+    "cases_rendered": "all",
+    "tokens_linked": true,
+    "overflow_1200": false,
+    "overflow_375": false
+   }
+  },
+  {
+   "n": 31,
+   "baseline": {
+    "group": "Master · Components",
+    "name": "Skeleton",
+    "path": "archive/master/preview/Skeleton.html"
+   },
+   "project_file": "dew/components/Skeleton.html",
+   "name": "Skeleton",
+   "group": "DEW · Components",
+   "basis": "derived",
+   "verification": {
+    "status": "pass",
+    "loaded": true,
+    "cases_rendered": "all",
+    "tokens_linked": true,
+    "overflow_1200": false,
+    "overflow_375": false
+   }
+  },
+  {
+   "n": 32,
+   "baseline": {
+    "group": "Master · Components",
+    "name": "Switch",
+    "path": "archive/master/preview/Switch.html"
+   },
+   "project_file": "dew/components/Switch.html",
+   "name": "Switch",
+   "group": "DEW · Components",
+   "basis": "derived",
+   "verification": {
+    "status": "pass",
+    "loaded": true,
+    "cases_rendered": "all",
+    "tokens_linked": true,
+    "overflow_1200": false,
+    "overflow_375": false
+   }
+  },
+  {
+   "n": 33,
+   "baseline": {
+    "group": "Master · Components",
+    "name": "Table",
+    "path": "archive/master/preview/Table.html"
+   },
+   "project_file": "dew/components/Table.html",
+   "name": "Table",
+   "group": "DEW · Components",
+   "basis": "derived",
+   "verification": {
+    "status": "pass",
+    "loaded": true,
+    "cases_rendered": "all",
+    "tokens_linked": true,
+    "overflow_1200": false,
+    "overflow_375": false,
+    "fix_this_turn": "section min 560 → min(560px,100%); unbreakable description at 1200 fixed (spaced · + overflow-wrap). Table min-width 560 + inner horizontal scroll kept"
+   }
+  },
+  {
+   "n": 34,
+   "baseline": {
+    "group": "Master · Components",
+    "name": "Textarea",
+    "path": "archive/master/preview/Textarea.html"
+   },
+   "project_file": "dew/components/Textarea.html",
+   "name": "Textarea",
+   "group": "DEW · Components",
+   "basis": "derived",
+   "verification": {
+    "status": "pass",
+    "loaded": true,
+    "cases_rendered": "all",
+    "tokens_linked": true,
+    "overflow_1200": false,
+    "overflow_375": false
+   }
+  },
+  {
+   "n": 35,
+   "baseline": {
+    "group": "Master · Components",
+    "name": "TextField",
+    "path": "archive/master/preview/TextField.html"
+   },
+   "project_file": "dew/components/TextField.html",
+   "name": "TextField",
+   "group": "DEW · Components",
+   "basis": "derived",
+   "verification": {
+    "status": "pass",
+    "loaded": true,
+    "cases_rendered": "all",
+    "tokens_linked": true,
+    "overflow_1200": false,
+    "overflow_375": false
+   }
+  },
+  {
+   "n": 36,
+   "baseline": {
+    "group": "Master · Components",
+    "name": "Toast",
+    "path": "archive/master/preview/Toast.html"
+   },
+   "project_file": "dew/components/Toast.html",
+   "name": "Toast",
+   "group": "DEW · Components",
+   "basis": "derived",
+   "verification": {
+    "status": "pass",
+    "loaded": true,
+    "cases_rendered": "all",
+    "tokens_linked": true,
+    "overflow_1200": false,
+    "overflow_375": false,
+    "fix_this_turn": "section min 380 → min(380px,100%) in card.js"
+   }
+  },
+  {
+   "n": 37,
+   "baseline": {
+    "group": "Master · Foundations",
+    "name": "Master foundations",
+    "path": "archive/master/preview/foundations.html"
+   },
+   "project_file": "dew/preview/foundations.html",
+   "name": "DEW foundations",
+   "group": "DEW · Foundations",
+   "basis": "derived",
+   "verification": {
+    "status": "pass",
+    "loaded": true,
+    "cases_rendered": "all",
+    "tokens_linked": true,
+    "overflow_1200": false,
+    "overflow_375": false
+   }
+  },
+  {
+   "n": 38,
+   "baseline": {
+    "group": "Master · Foundations",
+    "name": "Icons · 97 local SVG + 9 unresolved",
+    "path": "archive/master/preview/icons.html"
+   },
+   "project_file": "dew/preview/icons.html",
+   "name": "Icons · 97 SVG + 9 unresolved",
+   "group": "DEW · Foundations",
+   "basis": "derived",
+   "verification": {
+    "status": "pass",
+    "loaded": true,
+    "cases_rendered": "all",
+    "tokens_linked": true,
+    "overflow_1200": false,
+    "overflow_375": false
+   }
+  },
+  {
+   "n": 39,
+   "baseline": {
+    "group": "Master · Foundations",
+    "name": "Design ↔ Code mapping",
+    "path": "archive/master/preview/mapping.html"
+   },
+   "project_file": "dew/preview/mapping.html",
+   "name": "Design ↔ Code mapping",
+   "group": "DEW · Foundations",
+   "basis": "derived",
+   "verification": {
+    "status": "pass",
+    "loaded": true,
+    "cases_rendered": "all",
+    "tokens_linked": true,
+    "overflow_1200": false,
+    "overflow_375": false
+   }
+  },
+  {
+   "n": 40,
+   "baseline": {
+    "group": "Master · Hub",
+    "name": "[archived] Master V1 · Hub & integrated preview",
+    "path": "archive/master/index.html"
+   },
+   "project_file": "dew/preview-app.html",
+   "name": "Hub & integrated preview",
+   "group": "DEW · Hub",
+   "basis": "derived-extension",
+   "verification": {
+    "status": "pass",
+    "loaded": true,
+    "cases_rendered": "all",
+    "tokens_linked": true,
+    "overflow_1200": false,
+    "overflow_375": false,
+    "fix_this_turn": "state segment row wraps at 375"
+   }
+  },
+  {
+   "n": 41,
+   "baseline": {
+    "group": "Master · Hub",
+    "name": "Namespace check · 16 exports",
+    "path": "archive/master/preview/namespace.html"
+   },
+   "project_file": "dew/preview/namespace.html",
+   "name": "Namespace check · 16 exports",
+   "group": "DEW · Hub",
+   "basis": "derived",
+   "verification": {
+    "status": "pass",
+    "loaded": true,
+    "cases_rendered": "all",
+    "tokens_linked": true,
+    "overflow_1200": false,
+    "overflow_375": false
+   }
+  },
+  {
+   "n": 42,
+   "baseline": {
+    "group": "Master · Hub",
+    "name": "Master QA · render check",
+    "path": "archive/master/qa.html"
+   },
+   "project_file": "dew/qa.html",
+   "name": "QA · render check",
+   "group": "DEW · Hub",
+   "basis": "derived-extension",
+   "verification": {
+    "status": "runner",
+    "note": "Runs the checks for the other 61 items; not self-scored"
+   }
+  },
+  {
+   "n": 43,
+   "baseline": {
+    "group": "Master · Patterns",
+    "name": "01 · Dashboard",
+    "path": "archive/master/patterns/01-dashboard.html"
+   },
+   "project_file": "dew/patterns/01-dashboard.html",
+   "name": "01 · Dashboard",
+   "group": "DEW · Patterns",
+   "basis": "derived-extension",
+   "verification": {
+    "status": "pass",
+    "loaded": true,
+    "cases_rendered": "all",
+    "tokens_linked": true,
+    "overflow_1200": false,
+    "overflow_375": false
+   }
+  },
+  {
+   "n": 44,
+   "baseline": {
+    "group": "Master · Patterns",
+    "name": "02 · Analytics",
+    "path": "archive/master/patterns/02-analytics.html"
+   },
+   "project_file": "dew/patterns/02-analytics.html",
+   "name": "02 · Analytics",
+   "group": "DEW · Patterns",
+   "basis": "derived-extension",
+   "verification": {
+    "status": "pass",
+    "loaded": true,
+    "cases_rendered": "all",
+    "tokens_linked": true,
+    "overflow_1200": false,
+    "overflow_375": false
+   }
+  },
+  {
+   "n": 45,
+   "baseline": {
+    "group": "Master · Patterns",
+    "name": "03 · Table",
+    "path": "archive/master/patterns/03-table.html"
+   },
+   "project_file": "dew/patterns/03-table.html",
+   "name": "03 · Table",
+   "group": "DEW · Patterns",
+   "basis": "derived-extension",
+   "verification": {
+    "status": "pass",
+    "loaded": true,
+    "cases_rendered": "all",
+    "tokens_linked": true,
+    "overflow_1200": false,
+    "overflow_375": false
+   }
+  },
+  {
+   "n": 46,
+   "baseline": {
+    "group": "Master · Patterns",
+    "name": "04 · Detail",
+    "path": "archive/master/patterns/04-detail.html"
+   },
+   "project_file": "dew/patterns/04-detail.html",
+   "name": "04 · Detail",
+   "group": "DEW · Patterns",
+   "basis": "derived-extension",
+   "verification": {
+    "status": "pass",
+    "loaded": true,
+    "cases_rendered": "all",
+    "tokens_linked": true,
+    "overflow_1200": false,
+    "overflow_375": false
+   }
+  },
+  {
+   "n": 47,
+   "baseline": {
+    "group": "Master · Patterns",
+    "name": "05 · Settings",
+    "path": "archive/master/patterns/05-settings.html"
+   },
+   "project_file": "dew/patterns/05-settings.html",
+   "name": "05 · Settings",
+   "group": "DEW · Patterns",
+   "basis": "derived-extension",
+   "verification": {
+    "status": "pass",
+    "loaded": true,
+    "cases_rendered": "all",
+    "tokens_linked": true,
+    "overflow_1200": false,
+    "overflow_375": false
+   }
+  },
+  {
+   "n": 48,
+   "baseline": {
+    "group": "Master · Patterns",
+    "name": "06 · Billing",
+    "path": "archive/master/patterns/06-billing.html"
+   },
+   "project_file": "dew/patterns/06-billing.html",
+   "name": "06 · Billing",
+   "group": "DEW · Patterns",
+   "basis": "derived-extension",
+   "verification": {
+    "status": "pass",
+    "loaded": true,
+    "cases_rendered": "all",
+    "tokens_linked": true,
+    "overflow_1200": false,
+    "overflow_375": false
+   }
+  },
+  {
+   "n": 49,
+   "baseline": {
+    "group": "Master · Patterns",
+    "name": "07 · AI Chat",
+    "path": "archive/master/patterns/07-chat.html"
+   },
+   "project_file": "dew/patterns/07-chat.html",
+   "name": "07 · AI Chat",
+   "group": "DEW · Patterns",
+   "basis": "derived-extension",
+   "verification": {
+    "status": "pass",
+    "loaded": true,
+    "cases_rendered": "all",
+    "tokens_linked": true,
+    "overflow_1200": false,
+    "overflow_375": false
+   }
+  },
+  {
+   "n": 50,
+   "baseline": {
+    "group": "Master · Patterns",
+    "name": "08 · Builder",
+    "path": "archive/master/patterns/08-builder.html"
+   },
+   "project_file": "dew/patterns/08-builder.html",
+   "name": "08 · Builder",
+   "group": "DEW · Patterns",
+   "basis": "derived-extension",
+   "verification": {
+    "status": "pass",
+    "loaded": true,
+    "cases_rendered": "all",
+    "tokens_linked": true,
+    "overflow_1200": false,
+    "overflow_375": false
+   }
+  },
+  {
+   "n": 51,
+   "baseline": {
+    "group": "Master · Patterns",
+    "name": "09 · Modal",
+    "path": "archive/master/patterns/09-modal.html"
+   },
+   "project_file": "dew/patterns/09-modal.html",
+   "name": "09 · Modal",
+   "group": "DEW · Patterns",
+   "basis": "derived-extension",
+   "verification": {
+    "status": "pass",
+    "loaded": true,
+    "cases_rendered": "all",
+    "tokens_linked": true,
+    "overflow_1200": false,
+    "overflow_375": false
+   }
+  },
+  {
+   "n": 52,
+   "baseline": {
+    "group": "Master · Patterns",
+    "name": "10 · Empty",
+    "path": "archive/master/patterns/10-empty.html"
+   },
+   "project_file": "dew/patterns/10-empty.html",
+   "name": "10 · Empty",
+   "group": "DEW · Patterns",
+   "basis": "derived-extension",
+   "verification": {
+    "status": "pass",
+    "loaded": true,
+    "cases_rendered": "all",
+    "tokens_linked": true,
+    "overflow_1200": false,
+    "overflow_375": false
+   }
+  },
+  {
+   "n": 53,
+   "baseline": {
+    "group": "Spacing",
+    "name": "Glows",
+    "path": "archive/preview/glows.html"
+   },
+   "project_file": "dew/preview/glows.html",
+   "name": "Emphasis · Rules (glows retired)",
+   "group": "Spacing",
+   "basis": "derived-extension",
+   "verification": {
+    "status": "pass",
+    "loaded": true,
+    "cases_rendered": "all",
+    "tokens_linked": true,
+    "overflow_1200": false,
+    "overflow_375": false
+   }
+  },
+  {
+   "n": 54,
+   "baseline": {
+    "group": "Spacing",
+    "name": "Radii",
+    "path": "archive/preview/radii.html"
+   },
+   "project_file": "dew/preview/radii.html",
+   "name": "Radii",
+   "group": "Spacing",
+   "basis": "observed + derived",
+   "verification": {
+    "status": "pass",
+    "loaded": true,
+    "cases_rendered": "all",
+    "tokens_linked": true,
+    "overflow_1200": false,
+    "overflow_375": false
+   }
+  },
+  {
+   "n": 55,
+   "baseline": {
+    "group": "Spacing",
+    "name": "Shadows",
+    "path": "archive/preview/shadows.html"
+   },
+   "project_file": "dew/preview/shadows.html",
+   "name": "Shadows",
+   "group": "Spacing",
+   "basis": "observed + derived",
+   "verification": {
+    "status": "pass",
+    "loaded": true,
+    "cases_rendered": "all",
+    "tokens_linked": true,
+    "overflow_1200": false,
+    "overflow_375": false
+   }
+  },
+  {
+   "n": 56,
+   "baseline": {
+    "group": "Spacing",
+    "name": "Spacing",
+    "path": "archive/preview/spacing.html"
+   },
+   "project_file": "dew/preview/spacing.html",
+   "name": "Spacing",
+   "group": "Spacing",
+   "basis": "observed + derived",
+   "verification": {
+    "status": "pass",
+    "loaded": true,
+    "cases_rendered": "all",
+    "tokens_linked": true,
+    "overflow_1200": false,
+    "overflow_375": false
+   }
+  },
+  {
+   "n": 57,
+   "baseline": {
+    "group": "Type",
+    "name": "Type · Display",
+    "path": "archive/preview/type-display.html"
+   },
+   "project_file": "dew/preview/type-display.html",
+   "name": "Type · Display",
+   "group": "Type",
+   "basis": "observed + derived",
+   "verification": {
+    "status": "pass",
+    "loaded": true,
+    "cases_rendered": "all",
+    "tokens_linked": true,
+    "overflow_1200": false,
+    "overflow_375": false
+   }
+  },
+  {
+   "n": 58,
+   "baseline": {
+    "group": "Type",
+    "name": "Type · Scale",
+    "path": "archive/preview/type-scale.html"
+   },
+   "project_file": "dew/preview/type-scale.html",
+   "name": "Type · Scale",
+   "group": "Type",
+   "basis": "observed + derived",
+   "verification": {
+    "status": "pass",
+    "loaded": true,
+    "cases_rendered": "all",
+    "tokens_linked": true,
+    "overflow_1200": false,
+    "overflow_375": false
+   }
+  },
+  {
+   "n": 59,
+   "baseline": {
+    "group": "Type",
+    "name": "Type · Specimens",
+    "path": "archive/preview/type-specimens.html"
+   },
+   "project_file": "dew/preview/type-specimens.html",
+   "name": "Type · Specimens",
+   "group": "Type",
+   "basis": "observed + derived",
+   "verification": {
+    "status": "pass",
+    "loaded": true,
+    "cases_rendered": "all",
+    "tokens_linked": true,
+    "overflow_1200": false,
+    "overflow_375": false
+   }
+  },
+  {
+   "n": 60,
+   "baseline": {
+    "group": "UI Kit — Ai Crm",
+    "name": "AI CRM · Main",
+    "path": "archive/ui_kits/ai-crm/index.html"
+   },
+   "project_file": "dew/kits/reader-crm.html",
+   "name": "Kit · Reader CRM",
+   "group": "UI Kits",
+   "basis": "derived-extension",
+   "verification": {
+    "status": "pass",
+    "loaded": true,
+    "cases_rendered": "all",
+    "tokens_linked": true,
+    "overflow_1200": false,
+    "overflow_375": false
+   }
+  },
+  {
+   "n": 61,
+   "baseline": {
+    "group": "UI Kit — Rais Audit",
+    "name": "Audit Dashboard",
+    "path": "archive/ui_kits/rais-audit/index v2.html"
+   },
+   "project_file": "dew/kits/editorial-audit.html",
+   "name": "Kit · Editorial Audit",
+   "group": "UI Kits",
+   "basis": "derived-extension",
+   "verification": {
+    "status": "pass",
+    "loaded": true,
+    "cases_rendered": "all",
+    "tokens_linked": true,
+    "overflow_1200": false,
+    "overflow_375": false
+   }
+  },
+  {
+   "n": 62,
+   "baseline": {
+    "group": "UI Kit — Rais Dashboard",
+    "name": "RAIS Dashboard — UI kit",
+    "path": "archive/ui_kits/rais-dashboard/index.html"
+   },
+   "project_file": "dew/kits/front-page.html",
+   "name": "Kit · Webzine (EditorialHome · ArticleList · StoryDetail)",
+   "group": "UI Kits",
+   "basis": "derived-extension",
+   "verification": {
+    "status": "pass",
+    "loaded": true,
+    "cases_rendered": "all",
+    "tokens_linked": true,
+    "overflow_1200": false,
+    "overflow_375": false,
+    "fix_this_turn": "rebuilt as editorial kit; grid track minmax(0,1fr)"
+   }
+  }
+ ],
+ "editorial_library": {
+  "source": "dew/lib/editorial.js + dew/editorial.css (window.DEW_ED)",
+  "shown_in": "dew/kits/front-page.html (baseline item 60 slot; ?view=home|list|story|parts)",
+  "pages": {
+   "EditorialHome": "?view=home",
+   "ArticleList": "?view=list (states: default · loading · empty via select)",
+   "StoryDetail": "?view=story"
+  },
+  "parts": [
+   "EditorialHeader",
+   "CategoryNav",
+   "FeatureStory",
+   "StoryCard",
+   "MediaCard",
+   "EditorialGrid",
+   "QuoteBlock",
+   "ImageCaption",
+   "ArticleMeta",
+   "EditorialCTA",
+   "Footer"
+  ],
+  "part_states": {
+   "StoryCard": [
+    "stack",
+    "row",
+    "loading",
+    "long title",
+    "missing author"
+   ],
+   "MediaCard": [
+    "photo",
+    "gallery",
+    "video",
+    "caption+credit",
+    "no caption"
+   ],
+   "EditorialCTA": [
+    "dark",
+    "light",
+    "error",
+    "success"
+   ],
+   "ImageCaption": [
+    "caption+credit",
+    "missing caption"
+   ],
+   "ArticleMeta": [
+    "full",
+    "missing author"
+   ],
+   "EditorialHeader": [
+    "masthead",
+    "compact"
+   ]
+  },
+  "basis": "observed layout language (masthead, asymmetric cover, black/white/grey/red) + derived-extension parts",
+  "verification": {
+   "overflow_375": {
+    "home": false,
+    "list": false,
+    "story": false,
+    "parts": false
+   },
+   "overflow_834_story": false,
+   "overflow_1440_parts": false
+  },
+  "note": "Not bundled into _ds_bundle.js: kept as a kit library so the 62-card baseline stays unchanged."
+ },
+ "not_implemented": [
+  "Big Caslon (source font) is not used: Libre Caslon Display/Text is the approved actual-use family (lighter strokes, narrower capitals than Big Caslon)",
+  "Real DEW photographs not used: photo slots are labelled placeholders",
+  "9 of 106 original icon names have no SVG (returns null; see dew/preview/icons.html)",
+  "Exact source hex/size values were not published; all numeric tokens are derived"
+ ],
+ "font_qa_2026_09_25": {
+  "method": "Each of the 62 card files was loaded in an iframe at 375, 834 and 1440px (186 renders). document.fonts was read after fonts.ready, and document scrollWidth was compared to the viewport width.",
+  "fonts": {
+   "family_stack": "Libre Caslon Display · Libre Caslon Text · Roboto · Noto Sans KR (no Big Caslon in any token)",
+   "loaded_on_cards": {
+    "Libre Caslon Display": "62/62",
+    "Roboto": "62/62",
+    "Noto Sans KR": "62/62",
+    "Libre Caslon Text": "32/62 used; loadable on 62/62 (lazy-loaded only where the text is set)"
+   },
+   "big_caslon_in_computed_heading_stack": "0/186"
+  },
+  "overflow": {
+   "horizontal_document_overflow": "0/186 renders (375/834/1440)",
+   "table_internal_scroll": "kept (.dc-scroll / table wrapper)"
+  },
+  "long_text": "long-copy cases inside the cards wrap at all 3 widths without causing page overflow",
+  "check_design_system": "No issues found · 62 cards · manifest in sync"
+ }
+}

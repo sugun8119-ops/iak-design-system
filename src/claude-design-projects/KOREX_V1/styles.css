@@ -1,0 +1,4 @@
+/* KOREX_V1 · Project Design System — single entry stylesheet. */
+@import url("./colors_and_type.css");
+@import url("./master/lib/kx-ui.css");
+@import url("./master/lib/kx-shell.css");

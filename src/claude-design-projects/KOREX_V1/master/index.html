@@ -1,0 +1,55 @@
+<!-- @dsCard group="Master · Hub" viewport="1440x1100" name="KOREX_V1 · Hub & integrated preview" subtitle="10 patterns + 3 site screens × states × 1440/834/375 · 16 component cards · spec files" -->
+<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KOREX_V1 · Project Design System</title>
+<link rel="stylesheet" href="../styles.css">
+<style>
+.hub{max-width:1440px;margin:0 auto;padding:32px var(--container-pad) 64px;display:flex;flex-direction:column;gap:40px}
+.hub-top{display:flex;align-items:flex-end;gap:24px;flex-wrap:wrap;background:var(--bg-brand);color:var(--fg-on-brand);padding:32px;border-radius:var(--radius-md)}
+.hub-top h1{font:var(--text-h1);margin-top:8px}.hub-top .grow{flex:1;min-width:260px}.hub-top p{color:var(--fg-on-brand-muted);margin-top:8px;max-width:640px}
+.hub-top .mc-meta code{background:rgb(255 255 255 / .08);border-color:rgb(255 255 255 / .16);color:var(--kx-mint-200)}
+.ctl{display:flex;gap:16px;flex-wrap:wrap;align-items:flex-end}.ctl .kx-field{min-width:220px}
+.seg{display:flex;gap:6px;flex-wrap:wrap}
+.stage{border:1px solid var(--border-default);border-radius:var(--radius-md);background:var(--bg-surface);padding:16px;overflow:hidden}
+.frame-wrap{margin:0 auto;overflow:hidden;border-radius:var(--radius-sm);border:1px solid var(--border-strong);background:var(--bg-canvas)}
+.frame-wrap iframe{border:0;transform-origin:0 0;display:block}
+.stat{display:flex;gap:12px;flex-wrap:wrap;align-items:center;font:var(--text-caption);color:var(--fg-secondary);margin-bottom:12px}
+.cg{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px}
+.cl{display:flex;flex-direction:column;gap:4px;padding:16px;border:1px solid var(--border-default);border-radius:var(--radius-md);background:var(--bg-surface);text-decoration:none;color:var(--fg-primary);transition:border-color var(--motion-fast) var(--motion-ease)}
+.cl:hover{border-color:var(--fg-brand);color:var(--fg-primary)}.cl b{font-weight:700}.cl small{color:var(--fg-secondary)}
+</style></head><body>
+<div class="hub">
+<header class="hub-top"><div class="grow"><span class="kx-wordmark">KOREX</span><h1>KOREX_V1 · Project Design System</h1><p>딥그린 · 흰 면 · 굵은 한글 산세리프 · 정돈된 매물 탐색. observed 항목과 derived 확장을 구분해 기록합니다. 이전 시스템 파일은 archive/에 보관(비활성).</p></div><div class="mc-meta" id="counts"></div></header>
+<section class="mc-sec" aria-labelledby="pv"><header><h2 id="pv">통합 미리보기</h2><p>실제 렌더링 화면. 화면·상태·뷰포트를 선택하세요. 01–10은 파트너 콘솔(derived-extension), 11–13은 KOREX 고유 사이트 화면.</p></header>
+<div class="ctl"><div class="kx-field"><label for="scr">화면</label><select id="scr" class="kx-input"></select></div><div class="kx-field"><label id="stl">상태</label><div class="seg" id="st" role="group" aria-labelledby="stl"></div></div><div class="kx-field"><label id="vwl">뷰포트</label><div class="seg" id="vw" role="group" aria-labelledby="vwl"></div></div><a class="kx-button kx-button--outline kx-button--md" id="open" href="#" target="_blank"><span>새 탭에서 열기</span></a></div>
+<div class="stage"><div class="stat" id="stat">로드 중…</div><div class="frame-wrap" id="fw"><iframe id="fr" title="패턴 미리보기"></iframe></div></div></section>
+<section class="mc-sec"><header><h2>컴포넌트 카드 · 16</h2><p>master/lib/kx-ui.js의 실제 React 컴포넌트.</p></header><div class="cg" id="cards"></div></section>
+<section class="mc-sec"><header><h2>기초 · 대응표 · 검사</h2></header><div class="cg">
+<a class="cl" href="preview/foundations.html"><b>Foundations</b><small>색 역할 · 폰트 · radius · focus · grid · motion</small></a>
+<a class="cl" href="preview/icons.html"><b>Icons</b><small>KOREX 선형 아이콘 (derived)</small></a>
+<a class="cl" href="preview/mapping.html"><b>Design ↔ Code</b><small>observed / derived / props 대응</small></a>
+<a class="cl" href="qa.html"><b>QA · 현재 렌더 검사</b><small>카드 · 패턴 · 대비 · 375px</small></a></div></section>
+<section class="mc-sec"><header><h2>파일</h2><p>Figma로 이어가기 위한 명세 (Figma 작업은 이번 단계에서 하지 않음)</p></header><div class="cg">
+<a class="cl" href="figma-system.json"><b>figma-system.json</b><small>토큰 · 컴포넌트 API/상태 · 패턴 · 출처</small></a>
+<a class="cl" href="claude-system.md"><b>claude-system.md</b><small>생성 규칙</small></a>
+<a class="cl" href="coverage.json"><b>coverage.json</b><small>62항목 → 경로 → observed/derived → 검증</small></a>
+<a class="cl" href="source-observations.md"><b>source-observations.md</b><small>Behance 원본 관찰 기록</small></a>
+<a class="cl" href="../index.html"><b>System Hub</b><small>전체 62항목 목차</small></a></div></section>
+</div>
+<script>
+const PAT=[['dashboard','Dashboard',['default','loading','empty','error']],['analytics','Analytics',['default','loading','empty','error']],['table','Table',['default','loading','empty','error','long-text']],['detail','Detail',['default','loading','missing-data','error']],['settings','Settings',['default','saving','error','success']],['billing','Billing',['default','loading','error','empty']],['chat','AI Chat',['default','streaming','empty','error']],['builder','Builder',['default','selected','dragging','empty']],['modal','Modal',['dialog','confirm','pending','error']],['empty','Empty',['first-run','no-results','no-access']],['home','ProductHome',['default','loading']],['search','SearchList',['default','loading','empty','long-text']],['product','ProductDetail',['default','missing-data','saved']]];
+const VWS=[[1440,900,'Desktop 1440'],[834,1112,'Tablet 834'],[375,812,'Mobile 375']];
+const $=id=>document.getElementById(id);const KEY='korex-hub-preview';
+let cur=Object.assign({p:'home',s:'default',w:1440},JSON.parse(localStorage.getItem(KEY)||'{}'));
+$('scr').innerHTML=PAT.map(([k,l],i)=>`<option value="${k}">${String(i+1).padStart(2,'0')} · ${l}</option>`).join('');
+$('vw').innerHTML=VWS.map(([w,,l])=>`<button type="button" class="kx-button kx-button--chip kx-button--sm" data-w="${w}">${l}</button>`).join('');
+function render(){const pat=PAT.find(x=>x[0]===cur.p)||PAT[0];if(!pat[2].includes(cur.s))cur.s=pat[2][0];localStorage.setItem(KEY,JSON.stringify(cur));
+ $('scr').value=pat[0];$('st').innerHTML=pat[2].map(s=>`<button type="button" class="kx-button kx-button--chip kx-button--sm" data-s="${s}" aria-pressed="${s===cur.s}">${s}</button>`).join('');
+ [...$('vw').children].forEach(b=>b.setAttribute('aria-pressed',+b.dataset.w===cur.w));
+ const url=`patterns/screen.html?p=${pat[0]}&s=${cur.s}`;$('open').href=url;const fr=$('fr');if(fr.dataset.src!==url+cur.w){fr.dataset.src=url+cur.w;fr.src=url;$('stat').textContent='로드 중…'}fit()}
+function fit(){const [w,hh]=VWS.find(v=>v[0]===cur.w)||VWS[0];const avail=$('fw').parentNode.clientWidth-32;const sc=Math.min(1,avail/w);const fr=$('fr');fr.style.width=w+'px';fr.style.height=hh+'px';fr.style.transform=`scale(${sc})`;$('fw').style.width=w*sc+'px';$('fw').style.height=hh*sc+'px';fr.dataset.scale=Math.round(sc*100)}
+$('scr').onchange=e=>{cur.p=e.target.value;cur.s='';render()};$('st').onclick=e=>{const b=e.target.closest('button');if(b){cur.s=b.dataset.s;render()}};$('vw').onclick=e=>{const b=e.target.closest('button');if(b){cur.w=+b.dataset.w;render()}};
+addEventListener('resize',fit);
+addEventListener('message',e=>{const d=e.data;if(!d||d.type!=='kx-pattern')return;$('stat').innerHTML=`<span class="mc-tag" data-t="code">${d.p} · ${d.s}</span><span>렌더 폭 ${d.width}px · 표시 ${$('fr').dataset.scale}%</span><span style="color:${d.overflowX?'var(--status-error)':'var(--kx-green-700)'};font-weight:700">${d.overflowX?'가로 넘침 있음':'가로 넘침 없음'}</span>`});
+fetch('figma-system.json').then(r=>r.json()).then(j=>{const c=j.counts;$('counts').innerHTML=[`토큰 ${c.tokens}`,`카드 ${c.cards}`,`컴포넌트 ${c.components}`,`패턴 ${c.patterns}+${c.siteScreens}`,`아이콘 ${c.icons}`].map(t=>`<code>${t}</code>`).join('');
+ $('cards').innerHTML=j.components.map(k=>`<a class="cl" href="preview/${k.name}.html"><b>${k.name}</b><small>${k.states.join(' · ')}</small></a>`).join('')}).catch(()=>{});
+render();
+</script></body></html>

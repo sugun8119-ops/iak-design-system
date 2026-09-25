@@ -1,0 +1,379 @@
+{
+ "note": "Baseline: 62 @dsCard entries of the IAK Master copy as compiled before the DEW conversion (read from _ds_manifest.json, 2026-09-25). Source files now live under archive/.",
+ "cards": [
+  {
+   "group": "Brand",
+   "name": "Documentation viewer",
+   "path": "docs.html",
+   "subtitle": "All seven docs as accordion-style HTML, no raw markdown"
+  },
+  {
+   "group": "Brand",
+   "name": "Docs UI · Document Site",
+   "path": "docs/document-ui.html",
+   "subtitle": "Markdown · tables · preview · playground"
+  },
+  {
+   "group": "Brand",
+   "name": "Information Architecture",
+   "path": "docs/information-architecture.html",
+   "subtitle": "32 → 22 items, 6 pillars, all renames + merges receipted"
+  },
+  {
+   "group": "Brand",
+   "name": "Regeneration Stability Test",
+   "path": "docs/regeneration-stability-test.html",
+   "subtitle": "3-run comparison · 88/100 · Pass"
+  },
+  {
+   "group": "Brand",
+   "name": "Structural Audit",
+   "path": "docs/structural-audit.html",
+   "subtitle": "5-area Pass/Fail · 11 patches applied to source structure"
+  },
+  {
+   "group": "Brand",
+   "name": "TP 01–03 · Stability Bundle",
+   "path": "docs/tp-01-03-bundle.html",
+   "subtitle": "Grid · Focus · Spacing locks landed"
+  },
+  {
+   "group": "Brand",
+   "name": "TP 04–10 · Final Bundle",
+   "path": "docs/tp-04-10-bundle.html",
+   "subtitle": "Final 7 priorities · 98/100 predicted"
+  },
+  {
+   "group": "Brand",
+   "name": "Variant Stress Test",
+   "path": "docs/variant-stress-test.html",
+   "subtitle": "60 variants · 0 dupes · 0 conflicts · Pass"
+  },
+  {
+   "group": "Brand",
+   "name": "System Hub",
+   "path": "index.html",
+   "subtitle": "RAIS Design System — navigable hub for tokens, docs, previews, kits"
+  },
+  {
+   "group": "Brand",
+   "name": "Brand mark",
+   "path": "preview/brand.html",
+   "subtitle": "Flat documentation, no decorative overlays"
+  },
+  {
+   "group": "Brand",
+   "name": "Iconography",
+   "path": "preview/iconography.html",
+   "subtitle": "Minimal Web canonical · Eva + Solar solid · 16 / 20 / 24 px"
+  },
+  {
+   "group": "Colors",
+   "name": "Colors · Grey scale",
+   "path": "preview/colors-grey.html",
+   "subtitle": "100 → 1000"
+  },
+  {
+   "group": "Colors",
+   "name": "Colors · Primary",
+   "path": "preview/colors-primary.html",
+   "subtitle": "Orange accent + secondary docs pair"
+  },
+  {
+   "group": "Colors",
+   "name": "Colors · Semantic",
+   "path": "preview/colors-semantic.html",
+   "subtitle": "Info / Success / Warning / Error"
+  },
+  {
+   "group": "Colors",
+   "name": "Colors · Surfaces",
+   "path": "preview/surfaces.html",
+   "subtitle": "Layered black canvas tokens"
+  },
+  {
+   "group": "Components",
+   "name": "Buttons",
+   "path": "preview/buttons.html",
+   "subtitle": "Contained · Outlined · Text · Soft"
+  },
+  {
+   "group": "Components",
+   "name": "Cards",
+   "path": "preview/cards.html",
+   "subtitle": "Metric / Insight pattern"
+  },
+  {
+   "group": "Components",
+   "name": "Chips & Status",
+   "path": "preview/chips.html",
+   "subtitle": "Soft chips + status dots"
+  },
+  {
+   "group": "Components",
+   "name": "Inputs",
+   "path": "preview/inputs.html",
+   "subtitle": "Default · Filled · Focused · Error · Disabled"
+  },
+  {
+   "group": "Components",
+   "name": "Toasts",
+   "path": "preview/toasts.html",
+   "subtitle": "Snackbar 420×46 — 5 severities"
+  },
+  {
+   "group": "Master · Components",
+   "name": "AlertDialog",
+   "path": "master/preview/AlertDialog.html",
+   "subtitle": "primary · danger · pending · error · live"
+  },
+  {
+   "group": "Master · Components",
+   "name": "Badge",
+   "path": "master/preview/Badge.html",
+   "subtitle": "tone 5 · icon · long text · design-only 2"
+  },
+  {
+   "group": "Master · Components",
+   "name": "Button",
+   "path": "master/preview/Button.html",
+   "subtitle": "variant 4 · size 3 · states · design-only 2"
+  },
+  {
+   "group": "Master · Components",
+   "name": "Card",
+   "path": "master/preview/Card.html",
+   "subtitle": "title·footer · loading · missing · error"
+  },
+  {
+   "group": "Master · Components",
+   "name": "Checkbox",
+   "path": "master/preview/Checkbox.html",
+   "subtitle": "checked · focus · disabled · long label"
+  },
+  {
+   "group": "Master · Components",
+   "name": "Dialog",
+   "path": "master/preview/Dialog.html",
+   "subtitle": "size sm/md/lg · long content · live trigger"
+  },
+  {
+   "group": "Master · Components",
+   "name": "Icon",
+   "path": "master/preview/Icon.html",
+   "subtitle": "size 16/20/24 · label · currentColor · unresolved"
+  },
+  {
+   "group": "Master · Components",
+   "name": "Menu",
+   "path": "master/preview/Menu.html",
+   "subtitle": "default · highlighted · disabled · danger · long"
+  },
+  {
+   "group": "Master · Components",
+   "name": "Pagination",
+   "path": "master/preview/Pagination.html",
+   "subtitle": "first · middle · last · single · disabled · hover/focus"
+  },
+  {
+   "group": "Master · Components",
+   "name": "Select",
+   "path": "master/preview/Select.html",
+   "subtitle": "native select · error · disabled · long option"
+  },
+  {
+   "group": "Master · Components",
+   "name": "Skeleton",
+   "path": "master/preview/Skeleton.html",
+   "subtitle": "line · circle · composed · reduced motion"
+  },
+  {
+   "group": "Master · Components",
+   "name": "Switch",
+   "path": "master/preview/Switch.html",
+   "subtitle": "on/off · focus · disabled · long label"
+  },
+  {
+   "group": "Master · Components",
+   "name": "Table",
+   "path": "master/preview/Table.html",
+   "subtitle": "sort · pagination · loading/error/empty · missing · long · virtual"
+  },
+  {
+   "group": "Master · Components",
+   "name": "Textarea",
+   "path": "master/preview/Textarea.html",
+   "subtitle": "rows · error · disabled · long text"
+  },
+  {
+   "group": "Master · Components",
+   "name": "TextField",
+   "path": "master/preview/TextField.html",
+   "subtitle": "label·description·error·disabled · hover/focus · long text"
+  },
+  {
+   "group": "Master · Components",
+   "name": "Toast",
+   "path": "master/preview/Toast.html",
+   "subtitle": "tone 4 · description · action · long · stack · live"
+  },
+  {
+   "group": "Master · Foundations",
+   "name": "Master foundations",
+   "path": "master/preview/foundations.html",
+   "subtitle": "dark only · Pretendard 100–900 · action orange / data blue · radius · focus 2/2 · grid 12/8/4 · motion"
+  },
+  {
+   "group": "Master · Foundations",
+   "name": "Icons · 97 local SVG + 9 unresolved",
+   "path": "master/preview/icons.html",
+   "subtitle": "Eva nav + Solar objects · solid · currentColor · 16/20/24"
+  },
+  {
+   "group": "Master · Foundations",
+   "name": "Design ↔ Code mapping",
+   "path": "master/preview/mapping.html",
+   "subtitle": "design-only variants → real props · preview-only API · props per component (from figma-system.json)"
+  },
+  {
+   "group": "Master · Hub",
+   "name": "IAK Master V1 · Hub & integrated preview",
+   "path": "master/index.html",
+   "subtitle": "10 patterns × states × 1440/834/375 · 16 component cards · figma-system.json / claude-system.md / coverage.json"
+  },
+  {
+   "group": "Master · Hub",
+   "name": "Namespace check · 16 exports",
+   "path": "master/preview/namespace.html",
+   "subtitle": "Loads _ds_bundle.js and renders every component from window.RAISDesignSystem_019e07"
+  },
+  {
+   "group": "Master · Hub",
+   "name": "Master QA · render check",
+   "path": "master/qa.html",
+   "subtitle": "Loads every component card + 40 pattern states × 1440/834/375 now; reports rendered cases and horizontal overflow"
+  },
+  {
+   "group": "Master · Patterns",
+   "name": "01 · Dashboard",
+   "path": "master/patterns/01-dashboard.html",
+   "subtitle": "default · loading · empty · error · 1440/834/375"
+  },
+  {
+   "group": "Master · Patterns",
+   "name": "02 · Analytics",
+   "path": "master/patterns/02-analytics.html",
+   "subtitle": "default · loading · empty · error · 1440/834/375"
+  },
+  {
+   "group": "Master · Patterns",
+   "name": "03 · Table",
+   "path": "master/patterns/03-table.html",
+   "subtitle": "default · loading · empty · error · long-text · 1440/834/375"
+  },
+  {
+   "group": "Master · Patterns",
+   "name": "04 · Detail",
+   "path": "master/patterns/04-detail.html",
+   "subtitle": "default · loading · missing-data · error · 1440/834/375"
+  },
+  {
+   "group": "Master · Patterns",
+   "name": "05 · Settings",
+   "path": "master/patterns/05-settings.html",
+   "subtitle": "default · saving · error · success · 1440/834/375"
+  },
+  {
+   "group": "Master · Patterns",
+   "name": "06 · Billing",
+   "path": "master/patterns/06-billing.html",
+   "subtitle": "default · loading · error · empty · 1440/834/375"
+  },
+  {
+   "group": "Master · Patterns",
+   "name": "07 · AI Chat",
+   "path": "master/patterns/07-chat.html",
+   "subtitle": "default · streaming · empty · error · 1440/834/375"
+  },
+  {
+   "group": "Master · Patterns",
+   "name": "08 · Builder",
+   "path": "master/patterns/08-builder.html",
+   "subtitle": "default · selected · dragging · empty · 1440/834/375"
+  },
+  {
+   "group": "Master · Patterns",
+   "name": "09 · Modal",
+   "path": "master/patterns/09-modal.html",
+   "subtitle": "dialog · confirm · pending · error · 1440/834/375"
+  },
+  {
+   "group": "Master · Patterns",
+   "name": "10 · Empty",
+   "path": "master/patterns/10-empty.html",
+   "subtitle": "first-run · no-results · no-access · 1440/834/375"
+  },
+  {
+   "group": "Spacing",
+   "name": "Glows",
+   "path": "preview/glows.html",
+   "subtitle": "Colored umbra under accent surfaces"
+  },
+  {
+   "group": "Spacing",
+   "name": "Radii",
+   "path": "preview/radii.html",
+   "subtitle": "4 / 6 / 8 / 12 / 16 / 24 / pill"
+  },
+  {
+   "group": "Spacing",
+   "name": "Shadows",
+   "path": "preview/shadows.html",
+   "subtitle": "Card · Soft · Toast"
+  },
+  {
+   "group": "Spacing",
+   "name": "Spacing",
+   "path": "preview/spacing.html",
+   "subtitle": "4-px base scale"
+  },
+  {
+   "group": "Type",
+   "name": "Type · Display",
+   "path": "preview/type-display.html",
+   "subtitle": "Roboto 64/80 — canonical specimen"
+  },
+  {
+   "group": "Type",
+   "name": "Type · Scale",
+   "path": "preview/type-scale.html",
+   "subtitle": "Display → Overline"
+  },
+  {
+   "group": "Type",
+   "name": "Type · Specimens",
+   "path": "preview/type-specimens.html",
+   "subtitle": "Roboto · Barlow · Public Sans"
+  },
+  {
+   "group": "UI Kit — Ai Crm",
+   "name": "AI CRM · Main",
+   "path": "ui_kits/ai-crm/index.html",
+   "subtitle": "Pipeline · KPIs · AI Copilot · Activity"
+  },
+  {
+   "group": "UI Kit — Rais Audit",
+   "name": "Audit Dashboard",
+   "path": "ui_kits/rais-audit/index v2.html",
+   "subtitle": ""
+  },
+  {
+   "group": "UI Kit — Rais Dashboard",
+   "name": "RAIS Dashboard — UI kit",
+   "path": "ui_kits/rais-dashboard/index.html",
+   "subtitle": "Sidebar + topbar + KPI row + mailing flow"
+  }
+ ],
+ "tokenCount": 162,
+ "componentCount": 17
+}

@@ -1,0 +1,13 @@
+{
+  "cardPathsVerified": 186,
+  "literalLocalReferencesChecked": 652,
+  "missingLiteralReferences": [],
+  "javascriptFilesParsed": 71,
+  "javascriptParseErrors": 0,
+  "note": "Dynamic template URLs require runtime verification; not counted as literal links.",
+  "repositoryTests": {
+    "passed": 31,
+    "failed": 0
+  },
+  "repositoryBuild": "passed"
+}

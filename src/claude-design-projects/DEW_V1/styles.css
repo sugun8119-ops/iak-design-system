@@ -1,0 +1,5 @@
+/* DEW_V1 · Project Design System — single entry stylesheet. IAK/RAIS originals are archived in archive/ and not imported. */
+@import url("./dew/tokens.css");
+@import url("./dew/dew-ui.css");
+@import url("./dew/dew-site.css");
+@import url("./dew/editorial.css");

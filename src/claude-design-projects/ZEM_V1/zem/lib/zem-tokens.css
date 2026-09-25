@@ -1,0 +1,74 @@
+/* ZEM_V1 · tokens. Light only. OBS = colour ROLE observed on source board; its hex is an approximate pixel sample (±4/channel), NOT a source spec value. DER = derived for ZEM_V1 (unverified vs source). See zem/source-observations.md */
+@font-face{font-family:"Nanum Barun Gothic";src:url("../../fonts/NanumBarunGothic.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Nanum Barun Gothic";src:url("../../fonts/NanumBarunGothicBold.ttf") format("truetype");font-weight:700;font-style:normal;font-display:swap}
+:root{
+/* brand · periwinkle */
+--zem-periwinkle-50:#F4F5FE;/* DER */
+--zem-periwinkle-100:#E6E9FC;/* DER */
+--zem-periwinkle-200:#C0C4F0;/* OBS panel */
+--zem-periwinkle-300:#B4BCF0;/* OBS panel */
+--zem-periwinkle-400:#9AABF7;/* DER */
+--zem-periwinkle-500:#708CF8;/* OBS primary */
+--zem-periwinkle-600:#4368E2;/* OBS button (point sample) */
+--zem-periwinkle-700:#3150B8;/* DER */
+--zem-periwinkle-800:#243A86;/* DER */
+/* points */
+--zem-cyan-100:#DDF6FB;/* DER */
+--zem-cyan-500:#38C8E0;/* OBS */
+--zem-cyan-700:#0E7C8E;/* DER text-on-light */
+--zem-lime-100:#F8F8B8;/* OBS */
+--zem-lime-300:#DFF696;/* OBS */
+--zem-lime-600:#A8DC3C;/* OBS (small) */
+--zem-lime-800:#4E6A0E;/* DER text */
+--zem-mint-100:#DDF6EC;/* DER */
+--zem-mint-500:#68D8A8;/* OBS */
+--zem-mint-700:#13704C;/* DER text */
+--zem-sky-100:#E3EEFF;/* DER */
+--zem-sky-500:#70A4FC;/* OBS */
+--zem-sky-700:#2450B8;/* DER text */
+--zem-violet-100:#F1E8FF;/* DER */
+--zem-violet-500:#BC90FC;/* OBS (small) */
+--zem-violet-700:#6A3BB8;/* DER text */
+--zem-orange-100:#FFF0DC;/* DER */
+--zem-orange-500:#FCB45C;/* OBS (small) */
+--zem-orange-700:#8A4B00;/* DER text */
+--zem-coral-100:#FFE6E6;/* DER */
+--zem-coral-500:#FC7878;/* OBS */
+--zem-coral-600:#E46880;/* OBS */
+--zem-coral-700:#B4233C;/* DER text */
+/* neutrals · DER (board shows black titles, pale grey-lavender sub text) */
+--zem-ink-900:#1F2440;--zem-ink-700:#3A4062;--zem-ink-500:#5B6280;--zem-ink-400:#6E7593;--zem-ink-300:#A3A8C3;--zem-ink-200:#CBD0EE;--zem-ink-100:#E3E6F5;--zem-white:#FFFFFF;
+/* roles */
+--zem-bg:var(--zem-periwinkle-50);--zem-surface:var(--zem-white);--zem-surface-tint:var(--zem-periwinkle-100);--zem-header:var(--zem-periwinkle-500);--zem-panel:var(--zem-periwinkle-200);
+--zem-fg:var(--zem-ink-900);--zem-fg-2:var(--zem-ink-500);--zem-fg-placeholder:var(--zem-ink-400);--zem-fg-disabled:var(--zem-ink-300);--zem-fg-on-brand:var(--zem-white);
+--zem-action:var(--zem-periwinkle-600);--zem-action-hover:var(--zem-periwinkle-700);--zem-action-pressed:var(--zem-periwinkle-800);--zem-action-soft:var(--zem-periwinkle-100);
+--zem-progress:var(--zem-periwinkle-600);/* DER: 500 observed, 600 used for 3:1 on track */--zem-progress-track:var(--zem-periwinkle-100);
+--zem-point-cyan:var(--zem-cyan-500);--zem-point-lime:var(--zem-lime-300);--zem-point-done:var(--zem-mint-500);
+--zem-success:var(--zem-mint-700);--zem-success-bg:var(--zem-mint-100);--zem-warning:var(--zem-orange-700);--zem-warning-bg:var(--zem-orange-100);--zem-error:var(--zem-coral-700);--zem-error-bg:var(--zem-coral-100);--zem-info:var(--zem-sky-700);--zem-info-bg:var(--zem-sky-100);
+--zem-border:var(--zem-ink-100);--zem-border-strong:var(--zem-ink-200);--zem-overlay:rgb(31 36 64 / .48);
+--zem-state-hover:rgb(67 104 226 / .06);--zem-state-selected:var(--zem-periwinkle-100);
+/* type · DER sizes; family label OBS ("Nanum Barun Gothic" on board); self-hosted fonts/NanumBarunGothic.ttf 400 + NanumBarunGothicBold.ttf 700 only (SIL OFL 1.1, fonts/OFL.txt) */
+--zem-font:"Nanum Barun Gothic","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+--zem-font-mono:ui-monospace,SFMono-Regular,Menlo,monospace;
+--zem-text-display:700 28px/36px var(--zem-font);--zem-text-h1:700 22px/30px var(--zem-font);--zem-text-h2:700 18px/26px var(--zem-font);--zem-text-title:700 16px/24px var(--zem-font);
+--zem-text-body:400 15px/22px var(--zem-font);--zem-text-body-strong:700 15px/22px var(--zem-font);--zem-text-caption:400 13px/18px var(--zem-font);--zem-text-overline:700 11px/16px var(--zem-font);--zem-text-code:400 13px/20px var(--zem-font-mono);
+/* spacing · DER 4-base */
+--zem-space-1:4px;--zem-space-2:8px;--zem-space-3:12px;--zem-space-4:16px;--zem-space-5:20px;--zem-space-6:24px;--zem-space-8:32px;--zem-space-10:40px;
+/* radius · DER from observed rounded cards / pill CTA / rounded-bottom header */
+--zem-radius-xs:6px;--zem-radius-tile:10px;--zem-radius-control:12px;--zem-radius-card:20px;--zem-radius-sheet:28px;--zem-radius-pill:999px;
+/* border & shadow · DER */
+--zem-border-w:1px;--zem-shadow-card:0 6px 20px rgb(67 86 190 / .10);--zem-shadow-raise:0 12px 32px rgb(67 86 190 / .18);--zem-shadow-header:0 8px 24px rgb(67 86 190 / .22);
+/* focus · DER */
+--zem-focus-color:var(--zem-periwinkle-600);--zem-focus-width:2px;--zem-focus-offset:2px;
+/* motion · DER */
+--zem-motion-fast:120ms;/* @kind other */
+--zem-motion-base:180ms;/* @kind other */
+--zem-motion-slow:240ms;/* @kind other */
+--zem-ease:cubic-bezier(.2,.8,.2,1);/* @kind other */
+/* layout · DER mobile-first */
+--zem-container-max:1200px;--zem-pad:16px;--zem-gutter:12px;--zem-cols:4;/* @kind other */
+--zem-tabbar-h:64px;--zem-header-h:56px;
+}
+@media(min-width:640px){:root{--zem-pad:24px;--zem-gutter:16px;--zem-cols:8;/* @kind other */}}
+@media(min-width:1024px){:root{--zem-gutter:24px;--zem-cols:12;/* @kind other */}}
+@media(prefers-reduced-motion:reduce){:root{--zem-motion-fast:1ms;/* @kind other */--zem-motion-base:1ms;/* @kind other */--zem-motion-slow:1ms;/* @kind other */}}

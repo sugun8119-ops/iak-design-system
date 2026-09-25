@@ -1,0 +1,67 @@
+/* DEW_V1 · Project Design System — tokens.
+   Source basis: DEW Webzine Behance module (TYPOGRAPHY/COLORS section) as observed by the user 2026-09-25.
+   Observed: fonts "Notosans CJK kr / Roboto & Big Calson(=Big Caslon)"; palette bar BLACK → mid grey → light grey → WHITE → RED.
+   No hex/size values were published → every value below is a DERIVED design value (see source-observations.md). */
+@import url("https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Noto+Sans+KR:wght@100..900&family=Roboto:ital,wght@0,100..900;1,400&display=swap");
+:root{
+/* palette · 5 observed roles, derived hex */
+--dew-black:#111111;--dew-grey-mid:#8C8C8C;--dew-grey-light:#DADADA;--dew-white:#FFFFFF;--dew-red:#E1261C;
+/* grey ramp · derived interpolation between observed stops */
+--dew-grey-50:#F6F6F6;--dew-grey-100:#EFEFEF;--dew-grey-200:#DADADA;--dew-grey-300:#C4C4C4;--dew-grey-400:#A6A6A6;--dew-grey-500:#8C8C8C;--dew-grey-600:#6B6B6B;--dew-grey-700:#4D4D4D;--dew-grey-800:#2E2E2E;--dew-grey-900:#111111;
+/* red ramp · derived */
+--dew-red-50:#FDECEA;--dew-red-100:#F9D3CF;--dew-red-500:#E1261C;--dew-red-600:#C21E15;--dew-red-700:#9E1811;
+/* semantic · derived extension (not in observed palette) */
+--dew-success:#1D6B3F;--dew-success-bg:#E8F2EC;--dew-warning:#8A5300;--dew-warning-bg:#FBF1E0;--dew-error:#C21E15;--dew-error-bg:#FDECEA;--dew-info:#111111;--dew-info-bg:#EFEFEF;
+/* roles */
+--dew-canvas:#FFFFFF;--dew-surface:#FFFFFF;--dew-surface-alt:#F6F6F6;--dew-surface-sunk:#EFEFEF;--dew-overlay:rgb(17 17 17 / .56);
+--dew-fg:#111111;--dew-fg-2:#4D4D4D;--dew-fg-3:#6B6B6B;--dew-fg-disabled:#A6A6A6;--dew-fg-inverse:#FFFFFF;
+--dew-line:#DADADA;--dew-line-strong:#111111;--dew-line-mid:#A6A6A6;
+--dew-action:#E1261C;--dew-action-hover:#C21E15;--dew-action-pressed:#9E1811;--dew-action-fg:#FFFFFF;
+--dew-data-1:#111111;--dew-data-2:#6B6B6B;--dew-data-3:#A6A6A6;--dew-data-4:#DADADA;--dew-data-accent:#E1261C;
+--dew-hover:#F6F6F6;--dew-pressed:#EFEFEF;--dew-selected:#111111;--dew-selected-fg:#FFFFFF;--dew-skeleton:linear-gradient(90deg,#EFEFEF 0%,#F6F6F6 50%,#EFEFEF 100%);/* @kind color */
+/* type · confirmed actual-use families (user-approved 2026-09-25): Libre Caslon Display/Text substitute the observed Big Caslon; Roboto; Noto Sans KR for Noto Sans CJK KR */
+--dew-font-display:"Libre Caslon Display","Libre Caslon Text","Noto Sans KR",serif;
+--dew-font-serif:"Libre Caslon Text","Noto Sans KR",serif;
+--dew-font-sans:"Roboto","Noto Sans KR","Noto Sans CJK KR",system-ui,sans-serif;
+--dew-font-kr:"Noto Sans KR","Noto Sans CJK KR","Roboto",sans-serif;
+--dew-font-mono:ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;
+--dew-text-masthead:400 128px/.9 var(--dew-font-display);
+--dew-text-display:400 88px/.95 var(--dew-font-display);
+--dew-text-h1:400 56px/1.02 var(--dew-font-display);
+--dew-text-h2:400 36px/1.1 var(--dew-font-display);
+--dew-text-h3:400 26px/1.2 var(--dew-font-display);
+--dew-text-kr-head:700 28px/1.3 var(--dew-font-kr);
+--dew-text-title:500 18px/1.4 var(--dew-font-sans);
+--dew-text-lead:300 20px/1.6 var(--dew-font-sans);
+--dew-text-body:400 16px/1.65 var(--dew-font-sans);
+--dew-text-body-strong:500 16px/1.65 var(--dew-font-sans);
+--dew-text-small:400 14px/1.55 var(--dew-font-sans);
+--dew-text-small-strong:500 14px/1.55 var(--dew-font-sans);
+--dew-text-caption:400 12px/1.5 var(--dew-font-sans);
+--dew-text-overline:500 11px/1.4 var(--dew-font-sans);
+--dew-text-numeral:400 56px/1 var(--dew-font-display);
+--dew-text-code:400 13px/1.6 var(--dew-font-mono);
+--dew-tracking-overline:.18em;/* @kind other */--dew-tracking-masthead:-.02em;/* @kind other */--dew-tracking-display:-.015em;/* @kind other */
+/* space · 4px base */
+--dew-space-0:0;--dew-space-1:4px;--dew-space-2:8px;--dew-space-3:12px;--dew-space-4:16px;--dew-space-5:20px;--dew-space-6:24px;--dew-space-8:32px;--dew-space-10:40px;--dew-space-12:48px;--dew-space-16:64px;--dew-space-20:80px;--dew-space-24:96px;
+/* radius · angular editorial */
+--dew-radius-0:0;--dew-radius-hair:2px;--dew-radius-round:50%;
+--dew-radius-control:0;--dew-radius-card:0;--dew-radius-overlay:0;
+/* line */
+--dew-rule-hair:1px solid #DADADA;/* @kind other */--dew-rule:1px solid #111111;/* @kind other */--dew-rule-heavy:3px solid #111111;/* @kind other */--dew-rule-dash:1px dashed #A6A6A6;/* @kind other */
+/* elevation · minimal */
+--dew-shadow-none:none;--dew-shadow-menu:0 8px 24px rgb(17 17 17 / .10);--dew-shadow-overlay:0 24px 64px rgb(17 17 17 / .18);--dew-shadow-toast:0 12px 32px rgb(17 17 17 / .14);
+/* focus */
+--dew-focus-width:2px;/* @kind other */--dew-focus-offset:2px;/* @kind other */--dew-focus-color:#111111;--dew-focus-color-inverse:#FFFFFF;
+/* motion */
+--dew-motion-fast:120ms;/* @kind other */--dew-motion-base:180ms;/* @kind other */--dew-motion-slow:240ms;/* @kind other */--dew-ease:cubic-bezier(.2,0,0,1);/* @kind other */
+/* layout */
+--dew-container-max:1440px;--dew-container-pad:24px;--dew-gutter:24px;--dew-cols:12;/* @kind other */--dew-section-gap:48px;
+/* control sizes */
+--dew-control-sm:32px;--dew-control-md:40px;--dew-control-lg:48px;
+/* z */
+--dew-z-nav:50;/* @kind other */--dew-z-menu:1010;/* @kind other */--dew-z-overlay:1000;/* @kind other */--dew-z-toast:1100;/* @kind other */
+}
+@media(max-width:1024px){:root{--dew-cols:8;/* @kind other */--dew-text-masthead:400 96px/.9 var(--dew-font-display);--dew-text-display:400 64px/.95 var(--dew-font-display);--dew-text-h1:400 44px/1.05 var(--dew-font-display)}}
+@media(max-width:640px){:root{--dew-cols:4;/* @kind other */--dew-container-pad:16px;--dew-gutter:16px;--dew-section-gap:32px;--dew-text-masthead:400 64px/.92 var(--dew-font-display);--dew-text-display:400 48px/1 var(--dew-font-display);--dew-text-h1:400 36px/1.08 var(--dew-font-display);--dew-text-h2:400 28px/1.15 var(--dew-font-display);--dew-text-numeral:400 40px/1 var(--dew-font-display)}}
+@media(prefers-reduced-motion:reduce){:root{--dew-motion-fast:1ms;/* @kind other */--dew-motion-base:1ms;/* @kind other */--dew-motion-slow:1ms;/* @kind other */}}

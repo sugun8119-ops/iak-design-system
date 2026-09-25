@@ -1,0 +1,72 @@
+{
+  "version": 1,
+  "recordedAt": "2026-09-25",
+  "systems": [
+    {
+      "id": "DEW_V1",
+      "claudeDesign": "https://claude.ai/design/p/848e82a9-a8a7-4fd8-8fa5-ab8dd2abd5f2",
+      "claudePublishStatus": "unverified",
+      "figma": "https://www.figma.com/design/qDaMlSX00Eow0b7aDYKKsf",
+      "preview": "DEW_V1/dew/index.html",
+      "rules": "DEW_V1/dew/claude-system.md",
+      "tokens": "DEW_V1/dew/figma-system.json",
+      "cards": 62,
+      "sourceTokens": 126,
+      "sourceComponentExports": 17,
+      "componentFamilies": 16,
+      "manifest": "DEW_V1/_ds_manifest.json",
+      "source": "Downloaded Claude Design handoff, 2026-09-25",
+      "coverageAuthority": "IAK Master 62-item checklist only; project-specific visual style",
+      "figmaStatus": "shared_legacy_style_reconciliation_in_other_task; no_full_parity_claim"
+    },
+    {
+      "id": "KOREX_V1",
+      "claudeDesign": "https://claude.ai/design/p/4c2367d9-3500-4aff-ad74-7fb5e9ac2156",
+      "claudePublishStatus": "published",
+      "figma": "https://www.figma.com/design/MR9qvFSq9w5HAD2wnQObdn",
+      "preview": "KOREX_V1/master/index.html",
+      "rules": "KOREX_V1/master/claude-system.md",
+      "tokens": "KOREX_V1/master/figma-system.json",
+      "cards": 62,
+      "sourceTokens": 116,
+      "sourceComponentExports": 17,
+      "componentFamilies": 16,
+      "manifest": "KOREX_V1/_ds_manifest.json",
+      "source": "Downloaded Claude Design handoff, 2026-09-25",
+      "coverageAuthority": "IAK Master 62-item checklist only; project-specific visual style",
+      "figmaStatus": "shared_legacy_style_reconciliation_in_other_task; no_full_parity_claim"
+    },
+    {
+      "id": "ZEM_V1",
+      "claudeDesign": "https://claude.ai/design/p/46c1af8b-ed1c-400c-847f-d2e7639aa42e",
+      "claudePublishStatus": "published",
+      "figma": "https://www.figma.com/design/5vO2JNCOxMHUm6PFc2erZE",
+      "preview": "ZEM_V1/zem/index.html",
+      "rules": "ZEM_V1/zem/claude-system.md",
+      "tokens": "ZEM_V1/zem/figma-system.json",
+      "cards": 62,
+      "sourceTokens": 114,
+      "sourceComponentExports": 17,
+      "componentFamilies": 16,
+      "manifest": "ZEM_V1/_ds_manifest.json",
+      "source": "Downloaded Claude Design handoff, 2026-09-25",
+      "coverageAuthority": "IAK Master 62-item checklist only; project-specific visual style",
+      "figmaStatus": "native_library_and_3_mobile_compositions_verified",
+      "nativeVariantSets": 18,
+      "nativeVariants": 156,
+      "nativeIcons": 97,
+      "nativeVariables": 260,
+      "nativeTextStyles": 9,
+      "nativeEffectStyles": 3,
+      "figmaFontSubstitution": "Nanum Barun Gothic → Noto Sans KR (user approved; Claude keeps original self-hosted family)",
+      "figmaFrames": {
+        "parent": "10:2",
+        "schedule": "10:3",
+        "activity": "10:4"
+      },
+      "remaining": "10 patterns and all 138 source cases are documented in Claude; full native Figma case-by-case parity is not yet verified."
+    }
+  ],
+  "scope": "Current three-project batch; not completion of all 22 portfolio projects",
+  "isolation": "Separate from src/systems/DEW_V1 and KOREX_V1; legacy approved styles preserved by coordinated task."
+}

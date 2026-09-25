@@ -1,0 +1,44 @@
+/* KOREX_V1 · Project Design System — tokens.
+   Source: source-observations.md. Qualitative roles are OBSERVED (Behance KOREX Brand Website, image aa4da1133721087.61c41571abe87.png);
+   every hex / px / ms value below is a DERIVED-DESIGN-VALUE (exact values were not measurable). Light theme only. */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=IBM+Plex+Mono:wght@400;500;600&display=swap");
+:root{
+/* green — observed role: deep-green hero / search panel / sidebar / left stat panel; green search button + selected chip */
+--kx-green-950:#06261d;--kx-green-900:#0b3b2e;--kx-green-800:#0f4d3b;--kx-green-700:#146448;--kx-green-600:#1a7f5a;--kx-green-500:#23996c;--kx-green-400:#4fb58b;
+/* mint — observed role: light-mint square icon tiles */
+--kx-mint-300:#8fd1b4;--kx-mint-200:#cdebdd;--kx-mint-100:#e6f4ee;--kx-mint-50:#f2faf6;
+/* neutrals — observed role: white / light-grey page surfaces */
+--kx-white:#ffffff;--kx-grey-50:#f6f7f6;--kx-grey-100:#eef0ef;--kx-grey-200:#e1e4e2;--kx-grey-300:#c9cecb;--kx-grey-400:#a3aaa6;--kx-grey-500:#7b847f;--kx-grey-600:#5b645f;--kx-grey-700:#414945;--kx-grey-800:#2b322e;--kx-grey-900:#151a17;
+/* semantic — derived-extension (not visible in source) */
+--kx-red-600:#c8372d;--kx-red-50:#fdecea;--kx-amber-700:#9a5b00;--kx-amber-50:#fff4e0;--kx-blue-600:#2f6fb0;--kx-blue-50:#eaf2fb;
+/* roles */
+--bg-canvas:var(--kx-grey-50);--bg-surface:var(--kx-white);--bg-subtle:var(--kx-grey-100);--bg-field:var(--kx-white);--bg-brand:var(--kx-green-900);--bg-brand-strong:var(--kx-green-950);--bg-mint:var(--kx-mint-100);--bg-overlay:rgb(6 38 29 / .48);
+--fg-primary:var(--kx-grey-900);--fg-secondary:var(--kx-grey-600);--fg-muted:var(--kx-grey-500);--fg-on-brand:var(--kx-white);--fg-on-brand-muted:var(--kx-mint-200);--fg-brand:var(--kx-green-700);
+--border-subtle:var(--kx-grey-100);--border-default:var(--kx-grey-200);--border-strong:var(--kx-grey-300);--border-brand:var(--kx-green-700);
+--action:var(--kx-green-600);--action-hover:var(--kx-green-700);--action-pressed:var(--kx-green-800);--action-fg:var(--kx-white);
+--data-1:var(--kx-green-700);--data-2:var(--kx-mint-300);--data-3:var(--kx-grey-300);
+--status-success:var(--kx-green-600);--status-success-bg:var(--kx-mint-100);--status-error:var(--kx-red-600);--status-error-bg:var(--kx-red-50);--status-warning:var(--kx-amber-700);--status-warning-bg:var(--kx-amber-50);--status-info:var(--kx-blue-600);--status-info-bg:var(--kx-blue-50);
+/* radius — 2/4/6 derived-design-value; pill OBSERVED (category chips) — used for chips, heart/save toggle, switch track */
+--radius-xs:2px;--radius-sm:4px;--radius-md:6px;--radius-pill:999px;
+/* border / shadow — derived */
+--border-width:1px;--border-dashed:1px dashed var(--kx-grey-300);
+--shadow-none:none;--shadow-raised:0 2px 8px rgb(11 59 46 / .06);--shadow-overlay:0 16px 40px rgb(11 59 46 / .16);
+/* focus — derived (2px outline + 2px offset) */
+--focus-ring-width:2px;--focus-ring-offset:2px;--focus-ring-color:var(--kx-green-600);--focus-ring-on-brand:var(--kx-white);
+/* spacing 4-base */
+--space-0:0;--space-1:4px;--space-2:8px;--space-3:12px;--space-4:16px;--space-5:20px;--space-6:24px;--space-8:32px;--space-10:40px;--space-12:48px;--space-16:64px;--space-20:80px;
+/* type — observed: bold sans Korean UI; family is derived (exact face not identified) */
+--font-ui:"Noto Sans KR",system-ui,-apple-system,"Apple SD Gothic Neo",sans-serif;--font-mono:"IBM Plex Mono",ui-monospace,monospace;
+--text-display:900 56px/64px var(--font-ui);--text-h1:800 36px/46px var(--font-ui);--text-h2:700 26px/34px var(--font-ui);--text-title:700 18px/26px var(--font-ui);
+--text-body-lg:400 17px/28px var(--font-ui);--text-body:400 15px/24px var(--font-ui);--text-body-strong:600 15px/24px var(--font-ui);--text-button:700 15px/20px var(--font-ui);--text-caption:400 13px/20px var(--font-ui);--text-overline:700 12px/16px var(--font-ui);--text-code:400 13px/20px var(--font-mono);--text-price:800 22px/28px var(--font-ui);
+/* layout — derived: wide whitespace */
+--container-max:1280px;--container-pad:40px;--grid-cols:12;/* @kind other */--grid-gutter:24px;--section-gap:48px;--card-gap:24px;
+/* motion — derived */
+--motion-fast:140ms;/* @kind other */--motion-default:200ms;/* @kind other */--motion-slow:280ms;/* @kind other */--motion-ease:cubic-bezier(.2,0,0,1);/* @kind other */
+/* state layers */
+--state-hover:rgb(20 100 72 / .06);--state-pressed:rgb(20 100 72 / .12);--state-selected:var(--kx-mint-100);--state-disabled-opacity:.45;/* @kind other */--state-skeleton:linear-gradient(90deg,var(--kx-grey-100) 0%,var(--kx-grey-50) 50%,var(--kx-grey-100) 100%);--state-dragging:var(--kx-mint-50);
+}
+@media(max-width:1024px){:root{--container-pad:24px;--grid-cols:8;/* @kind other */--grid-gutter:20px;--section-gap:40px}}
+@media(max-width:640px){:root{--container-pad:16px;--grid-cols:4;/* @kind other */--grid-gutter:16px;--section-gap:32px;--text-display:900 36px/44px var(--font-ui);--text-h1:800 28px/36px var(--font-ui)}}
+@media(prefers-reduced-motion:reduce){:root{--motion-fast:1ms;/* @kind other */--motion-default:1ms;/* @kind other */--motion-slow:1ms;/* @kind other */}}
+@keyframes kx-skeleton{0%{background-position:100% 0}100%{background-position:-100% 0}}

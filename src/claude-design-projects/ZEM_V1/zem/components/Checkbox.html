@@ -1,0 +1,12 @@
+<!-- @dsCard group="ZEM · Components" viewport="1200x560" name="Checkbox" subtitle="default · checked · focus · disabled · long label" -->
+<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ZEM_V1 · Checkbox</title>
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script><script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script><script src="../lib/icons.js"></script><script src="../lib/zem-ui.js"></script><script src="../lib/card.js"></script></head><body><div id="root"></div><script>
+const h=React.createElement,X=ZEM;const {Icon,Button,TextField,Textarea,Select,Checkbox,Switch,Badge,Card,Skeleton,Dialog,Menu,Table,Pagination,ToastProvider,useToast,AlertDialog}=X;const W=(w,el)=>h('div',{style:{width:w,maxWidth:'100%'}},el);
+
+const K=p=>h(Checkbox,{label:'알림 받기',...p});
+ZEMCard.mount({name:'Checkbox',group:'ZEM · Component · Selection',description:'원형 24px 체크 — 원본의 mint 체크 원(관찰)을 선택 컨트롤로 파생. checked = mint-500 + 흰 체크, 행 최소 높이 44px.',meta:['API = zem/components/Checkbox.d.ts','appearance:none · 24px 원형 · checked --zem-point-done'],
+sections:[{title:'State',cases:[{id:'unchecked',label:'unchecked',el:K({})},{id:'checked',label:'checked',el:K({defaultChecked:true})},{id:'focus',label:'focus-visible',el:K({'data-preview-state':'focus',defaultChecked:true})},{id:'disabled',label:'disabled',el:K({disabled:true})},{id:'disabled-checked',label:'disabled + checked',el:K({disabled:true,defaultChecked:true})}]},
+{title:'Content',cases:[{id:'long-label',label:'긴 레이블 줄바꿈',el:W(260,K({label:'마케팅 정보 수신에 동의합니다. 언제든지 설정에서 철회할 수 있습니다.'}))},{id:'group',tag:'composition',label:'fieldset 그룹',el:h('fieldset',{style:{border:0,padding:0,margin:0,display:'flex',flexDirection:'column',gap:4}},h('legend',{className:'ov',style:{marginBottom:4}},'알림 채널'),K({label:'이메일',defaultChecked:true}),K({label:'SMS'}),K({label:'푸시'}))}]}],
+notInSource:['indeterminate 스타일/prop 없음 (native ref로만 가능)','error 상태 없음','hover 스타일 없음']});
+</script></body></html>

@@ -1,0 +1,1266 @@
+{
+ "name": "DEW_V1 · Project Design System",
+ "version": "1.0.0",
+ "generated": "2026-09-25",
+ "mode": "light",
+ "counts": {
+  "tokens": 126,
+  "baselineItems": 62,
+  "components": 16,
+  "patterns": 10,
+  "patternStates": 40,
+  "iconsAvailable": 97,
+  "iconsUnresolved": 9
+ },
+ "principles": [
+  "white paper canvas, black editorial type",
+  "red = single primary action / section label / latest-data accent",
+  "large serif masthead, sans UI",
+  "asymmetric photo layouts (7/5, 8/4), grey placeholders until real photos",
+  "angular: radius 0; thin rules instead of shadows",
+  "focus 2px solid black + 2px offset"
+ ],
+ "fonts": {
+  "display": {
+   "family": "Libre Caslon Display",
+   "serifText": "Libre Caslon Text",
+   "source": "Google Fonts",
+   "status": "confirmed actual-use (user-approved substitute)",
+   "observedInSource": "Big Caslon"
+  },
+  "sans": {
+   "specified": "Roboto",
+   "rendered": "Roboto"
+  },
+  "kr": {
+   "specified": "Noto Sans CJK KR",
+   "rendered": "Noto Sans KR"
+  },
+  "caslon_difference": "Libre Caslon Display is lighter and narrower than the observed Big Caslon. Big Caslon is recorded as a source observation only and is not in any token."
+ },
+ "layout": {
+  "containerMax": 1440,
+  "padding": {
+   "desktop": 24,
+   "mobile": 16
+  },
+  "gutter": {
+   "desktop": 24,
+   "mobile": 16
+  },
+  "columns": {
+   ">1024": 12,
+   "641-1024": 8,
+   "<=640": 4
+  }
+ },
+ "motion": {
+  "fast": 120,
+  "base": 180,
+  "slow": 240,
+  "reduced": 1,
+  "ease": "cubic-bezier(.2,0,0,1)"
+ },
+ "tokens": {
+  "color": {
+   "--dew-black": {
+    "value": "#111111",
+    "basis": "observed-role · derived-value"
+   },
+   "--dew-grey-mid": {
+    "value": "#8C8C8C",
+    "basis": "observed-role · derived-value"
+   },
+   "--dew-grey-light": {
+    "value": "#DADADA",
+    "basis": "observed-role · derived-value"
+   },
+   "--dew-white": {
+    "value": "#FFFFFF",
+    "basis": "observed-role · derived-value"
+   },
+   "--dew-red": {
+    "value": "#E1261C",
+    "basis": "observed-role · derived-value"
+   },
+   "--dew-grey-50": {
+    "value": "#F6F6F6",
+    "basis": "derived"
+   },
+   "--dew-grey-100": {
+    "value": "#EFEFEF",
+    "basis": "derived"
+   },
+   "--dew-grey-200": {
+    "value": "#DADADA",
+    "basis": "derived"
+   },
+   "--dew-grey-300": {
+    "value": "#C4C4C4",
+    "basis": "derived"
+   },
+   "--dew-grey-400": {
+    "value": "#A6A6A6",
+    "basis": "derived"
+   },
+   "--dew-grey-500": {
+    "value": "#8C8C8C",
+    "basis": "derived"
+   },
+   "--dew-grey-600": {
+    "value": "#6B6B6B",
+    "basis": "derived"
+   },
+   "--dew-grey-700": {
+    "value": "#4D4D4D",
+    "basis": "derived"
+   },
+   "--dew-grey-800": {
+    "value": "#2E2E2E",
+    "basis": "derived"
+   },
+   "--dew-grey-900": {
+    "value": "#111111",
+    "basis": "derived"
+   },
+   "--dew-red-50": {
+    "value": "#FDECEA",
+    "basis": "derived"
+   },
+   "--dew-red-100": {
+    "value": "#F9D3CF",
+    "basis": "derived"
+   },
+   "--dew-red-500": {
+    "value": "#E1261C",
+    "basis": "derived"
+   },
+   "--dew-red-600": {
+    "value": "#C21E15",
+    "basis": "derived"
+   },
+   "--dew-red-700": {
+    "value": "#9E1811",
+    "basis": "derived"
+   },
+   "--dew-success": {
+    "value": "#1D6B3F",
+    "basis": "derived"
+   },
+   "--dew-success-bg": {
+    "value": "#E8F2EC",
+    "basis": "derived"
+   },
+   "--dew-warning": {
+    "value": "#8A5300",
+    "basis": "derived"
+   },
+   "--dew-warning-bg": {
+    "value": "#FBF1E0",
+    "basis": "derived"
+   },
+   "--dew-error": {
+    "value": "#C21E15",
+    "basis": "derived"
+   },
+   "--dew-error-bg": {
+    "value": "#FDECEA",
+    "basis": "derived"
+   },
+   "--dew-info": {
+    "value": "#111111",
+    "basis": "derived"
+   },
+   "--dew-info-bg": {
+    "value": "#EFEFEF",
+    "basis": "derived"
+   },
+   "--dew-canvas": {
+    "value": "#FFFFFF",
+    "basis": "derived"
+   },
+   "--dew-surface": {
+    "value": "#FFFFFF",
+    "basis": "derived"
+   },
+   "--dew-surface-alt": {
+    "value": "#F6F6F6",
+    "basis": "derived"
+   },
+   "--dew-surface-sunk": {
+    "value": "#EFEFEF",
+    "basis": "derived"
+   },
+   "--dew-overlay": {
+    "value": "rgb(17 17 17 / .56)",
+    "basis": "derived"
+   },
+   "--dew-fg": {
+    "value": "#111111",
+    "basis": "derived"
+   },
+   "--dew-fg-2": {
+    "value": "#4D4D4D",
+    "basis": "derived"
+   },
+   "--dew-fg-3": {
+    "value": "#6B6B6B",
+    "basis": "derived"
+   },
+   "--dew-fg-disabled": {
+    "value": "#A6A6A6",
+    "basis": "derived"
+   },
+   "--dew-fg-inverse": {
+    "value": "#FFFFFF",
+    "basis": "derived"
+   },
+   "--dew-line": {
+    "value": "#DADADA",
+    "basis": "derived"
+   },
+   "--dew-line-strong": {
+    "value": "#111111",
+    "basis": "derived"
+   },
+   "--dew-line-mid": {
+    "value": "#A6A6A6",
+    "basis": "derived"
+   },
+   "--dew-action": {
+    "value": "#E1261C",
+    "basis": "derived"
+   },
+   "--dew-action-hover": {
+    "value": "#C21E15",
+    "basis": "derived"
+   },
+   "--dew-action-pressed": {
+    "value": "#9E1811",
+    "basis": "derived"
+   },
+   "--dew-action-fg": {
+    "value": "#FFFFFF",
+    "basis": "derived"
+   },
+   "--dew-data-1": {
+    "value": "#111111",
+    "basis": "derived"
+   },
+   "--dew-data-2": {
+    "value": "#6B6B6B",
+    "basis": "derived"
+   },
+   "--dew-data-3": {
+    "value": "#A6A6A6",
+    "basis": "derived"
+   },
+   "--dew-data-4": {
+    "value": "#DADADA",
+    "basis": "derived"
+   },
+   "--dew-data-accent": {
+    "value": "#E1261C",
+    "basis": "derived"
+   },
+   "--dew-hover": {
+    "value": "#F6F6F6",
+    "basis": "derived"
+   },
+   "--dew-pressed": {
+    "value": "#EFEFEF",
+    "basis": "derived"
+   },
+   "--dew-selected": {
+    "value": "#111111",
+    "basis": "derived"
+   },
+   "--dew-selected-fg": {
+    "value": "#FFFFFF",
+    "basis": "derived"
+   },
+   "--dew-skeleton": {
+    "value": "linear-gradient(90deg,#EFEFEF 0%,#F6F6F6 50%,#EFEFEF 100%)",
+    "basis": "derived"
+   },
+   "--dew-focus-color": {
+    "value": "#111111",
+    "basis": "derived"
+   },
+   "--dew-focus-color-inverse": {
+    "value": "#FFFFFF",
+    "basis": "derived"
+   }
+  },
+  "typography": {
+   "--dew-font-display": {
+    "value": "\"Libre Caslon Display\",\"Libre Caslon Text\",\"Noto Sans KR\",serif",
+    "basis": "derived · approved substitute for observed Big Caslon"
+   },
+   "--dew-font-serif": {
+    "value": "\"Libre Caslon Text\",\"Noto Sans KR\",serif",
+    "basis": "derived · approved substitute for observed Big Caslon"
+   },
+   "--dew-font-sans": {
+    "value": "\"Roboto\",\"Noto Sans KR\",\"Noto Sans CJK KR\",system-ui,sans-serif",
+    "basis": "observed-spec · rendered-fallback"
+   },
+   "--dew-font-kr": {
+    "value": "\"Noto Sans KR\",\"Noto Sans CJK KR\",\"Roboto\",sans-serif",
+    "basis": "observed-spec · rendered-fallback"
+   },
+   "--dew-font-mono": {
+    "value": "ui-monospace,\"SFMono-Regular\",Menlo,Consolas,monospace",
+    "basis": "derived"
+   },
+   "--dew-text-masthead": {
+    "value": "400 128px/.9 var(--dew-font-display)",
+    "basis": "derived"
+   },
+   "--dew-text-display": {
+    "value": "400 88px/.95 var(--dew-font-display)",
+    "basis": "derived"
+   },
+   "--dew-text-h1": {
+    "value": "400 56px/1.02 var(--dew-font-display)",
+    "basis": "derived"
+   },
+   "--dew-text-h2": {
+    "value": "400 36px/1.1 var(--dew-font-display)",
+    "basis": "derived"
+   },
+   "--dew-text-h3": {
+    "value": "400 26px/1.2 var(--dew-font-display)",
+    "basis": "derived"
+   },
+   "--dew-text-kr-head": {
+    "value": "700 28px/1.3 var(--dew-font-kr)",
+    "basis": "derived"
+   },
+   "--dew-text-title": {
+    "value": "500 18px/1.4 var(--dew-font-sans)",
+    "basis": "derived"
+   },
+   "--dew-text-lead": {
+    "value": "300 20px/1.6 var(--dew-font-sans)",
+    "basis": "derived"
+   },
+   "--dew-text-body": {
+    "value": "400 16px/1.65 var(--dew-font-sans)",
+    "basis": "derived"
+   },
+   "--dew-text-body-strong": {
+    "value": "500 16px/1.65 var(--dew-font-sans)",
+    "basis": "derived"
+   },
+   "--dew-text-small": {
+    "value": "400 14px/1.55 var(--dew-font-sans)",
+    "basis": "derived"
+   },
+   "--dew-text-small-strong": {
+    "value": "500 14px/1.55 var(--dew-font-sans)",
+    "basis": "derived"
+   },
+   "--dew-text-caption": {
+    "value": "400 12px/1.5 var(--dew-font-sans)",
+    "basis": "derived"
+   },
+   "--dew-text-overline": {
+    "value": "500 11px/1.4 var(--dew-font-sans)",
+    "basis": "derived"
+   },
+   "--dew-text-numeral": {
+    "value": "400 56px/1 var(--dew-font-display)",
+    "basis": "derived"
+   },
+   "--dew-text-code": {
+    "value": "400 13px/1.6 var(--dew-font-mono)",
+    "basis": "derived"
+   },
+   "--dew-tracking-overline": {
+    "value": ".18em",
+    "basis": "derived"
+   },
+   "--dew-tracking-masthead": {
+    "value": "-.02em",
+    "basis": "derived"
+   },
+   "--dew-tracking-display": {
+    "value": "-.015em",
+    "basis": "derived"
+   }
+  },
+  "spacing": {
+   "--dew-space-0": {
+    "value": "0",
+    "basis": "derived"
+   },
+   "--dew-space-1": {
+    "value": "4px",
+    "basis": "derived"
+   },
+   "--dew-space-2": {
+    "value": "8px",
+    "basis": "derived"
+   },
+   "--dew-space-3": {
+    "value": "12px",
+    "basis": "derived"
+   },
+   "--dew-space-4": {
+    "value": "16px",
+    "basis": "derived"
+   },
+   "--dew-space-5": {
+    "value": "20px",
+    "basis": "derived"
+   },
+   "--dew-space-6": {
+    "value": "24px",
+    "basis": "derived"
+   },
+   "--dew-space-8": {
+    "value": "32px",
+    "basis": "derived"
+   },
+   "--dew-space-10": {
+    "value": "40px",
+    "basis": "derived"
+   },
+   "--dew-space-12": {
+    "value": "48px",
+    "basis": "derived"
+   },
+   "--dew-space-16": {
+    "value": "64px",
+    "basis": "derived"
+   },
+   "--dew-space-20": {
+    "value": "80px",
+    "basis": "derived"
+   },
+   "--dew-space-24": {
+    "value": "96px",
+    "basis": "derived"
+   },
+   "--dew-radius-control": {
+    "value": "0",
+    "basis": "derived"
+   },
+   "--dew-container-max": {
+    "value": "1440px",
+    "basis": "derived"
+   },
+   "--dew-container-pad": {
+    "value": "24px",
+    "basis": "derived"
+   },
+   "--dew-gutter": {
+    "value": "24px",
+    "basis": "derived"
+   },
+   "--dew-section-gap": {
+    "value": "48px",
+    "basis": "derived"
+   },
+   "--dew-control-sm": {
+    "value": "32px",
+    "basis": "derived"
+   },
+   "--dew-control-md": {
+    "value": "40px",
+    "basis": "derived"
+   },
+   "--dew-control-lg": {
+    "value": "48px",
+    "basis": "derived"
+   }
+  },
+  "radius": {
+   "--dew-radius-0": {
+    "value": "0",
+    "basis": "derived"
+   },
+   "--dew-radius-hair": {
+    "value": "2px",
+    "basis": "derived"
+   },
+   "--dew-radius-round": {
+    "value": "50%",
+    "basis": "derived"
+   },
+   "--dew-radius-card": {
+    "value": "0",
+    "basis": "derived"
+   },
+   "--dew-radius-overlay": {
+    "value": "0",
+    "basis": "derived"
+   }
+  },
+  "line": {
+   "--dew-rule-hair": {
+    "value": "1px solid #DADADA",
+    "basis": "derived"
+   },
+   "--dew-rule": {
+    "value": "1px solid #111111",
+    "basis": "derived"
+   },
+   "--dew-rule-heavy": {
+    "value": "3px solid #111111",
+    "basis": "derived"
+   },
+   "--dew-rule-dash": {
+    "value": "1px dashed #A6A6A6",
+    "basis": "derived"
+   }
+  },
+  "shadow": {
+   "--dew-shadow-none": {
+    "value": "none",
+    "basis": "derived"
+   },
+   "--dew-shadow-menu": {
+    "value": "0 8px 24px rgb(17 17 17 / .10)",
+    "basis": "derived"
+   },
+   "--dew-shadow-overlay": {
+    "value": "0 24px 64px rgb(17 17 17 / .18)",
+    "basis": "derived"
+   },
+   "--dew-shadow-toast": {
+    "value": "0 12px 32px rgb(17 17 17 / .14)",
+    "basis": "derived"
+   }
+  },
+  "focus": {
+   "--dew-focus-width": {
+    "value": "2px",
+    "basis": "derived"
+   },
+   "--dew-focus-offset": {
+    "value": "2px",
+    "basis": "derived"
+   }
+  },
+  "motion": {
+   "--dew-motion-fast": {
+    "value": "120ms",
+    "basis": "derived"
+   },
+   "--dew-motion-base": {
+    "value": "180ms",
+    "basis": "derived"
+   },
+   "--dew-motion-slow": {
+    "value": "240ms",
+    "basis": "derived"
+   },
+   "--dew-ease": {
+    "value": "cubic-bezier(.2,0,0,1)",
+    "basis": "derived"
+   }
+  },
+  "layout": {
+   "--dew-cols": {
+    "value": "12",
+    "basis": "derived"
+   }
+  },
+  "z": {
+   "--dew-z-nav": {
+    "value": "50",
+    "basis": "derived"
+   },
+   "--dew-z-menu": {
+    "value": "1010",
+    "basis": "derived"
+   },
+   "--dew-z-overlay": {
+    "value": "1000",
+    "basis": "derived"
+   },
+   "--dew-z-toast": {
+    "value": "1100",
+    "basis": "derived"
+   }
+  }
+ },
+ "components": [
+  {
+   "name": "Button",
+   "card": "dew/components/Button.html",
+   "export": "dew/components/Button.jsx",
+   "types": "dew/components/Button.d.ts",
+   "api": "export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement>{variant?:'primary'|'secondary'|'danger'|'text';size?:'sm'|'md'|'lg';loading?:boolean};\nexport declare function Button(props:ButtonProps):React.ReactElement|null;",
+   "source": "uploads/IAK-Master-source/packages/ui/src/index.tsx",
+   "spec": {
+    "sizes": {
+     "sm": 32,
+     "md": 40,
+     "lg": 48
+    },
+    "radius": 0,
+    "variants": [
+     "primary",
+     "secondary",
+     "danger",
+     "text"
+    ],
+    "states": [
+     "default",
+     "hover",
+     "pressed",
+     "focus",
+     "disabled",
+     "loading"
+    ],
+    "designOnly": [
+     {
+      "name": "Editorial arrow link",
+      "maps": "variant=\"text\" + Icon"
+     },
+     {
+      "name": "Inverse on photo",
+      "maps": null
+     }
+    ]
+   }
+  },
+  {
+   "name": "TextField",
+   "card": "dew/components/TextField.html",
+   "export": "dew/components/TextField.jsx",
+   "types": "dew/components/TextField.d.ts",
+   "api": "export interface TextFieldProps extends React.InputHTMLAttributes<HTMLInputElement>{label:string;description?:string;error?:string};\nexport declare function TextField(props:TextFieldProps):React.ReactElement|null;",
+   "source": "uploads/IAK-Master-source/packages/ui/src/index.tsx",
+   "spec": {
+    "height": 40,
+    "radius": 0,
+    "states": [
+     "default",
+     "hover",
+     "focus",
+     "error",
+     "disabled",
+     "long"
+    ]
+   }
+  },
+  {
+   "name": "Textarea",
+   "card": "dew/components/Textarea.html",
+   "export": "dew/components/Textarea.jsx",
+   "types": "dew/components/Textarea.d.ts",
+   "api": "export interface TextareaProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement>{label:string;description?:string;error?:string};\nexport declare function Textarea(props:TextareaProps):React.ReactElement|null;",
+   "source": "uploads/IAK-Master-source/packages/ui/src/index.tsx",
+   "spec": {
+    "minHeight": 112,
+    "states": [
+     "default",
+     "focus",
+     "error",
+     "disabled",
+     "long"
+    ]
+   }
+  },
+  {
+   "name": "Select",
+   "card": "dew/components/Select.html",
+   "export": "dew/components/Select.jsx",
+   "types": "dew/components/Select.d.ts",
+   "api": "export interface SelectProps extends React.SelectHTMLAttributes<HTMLSelectElement>{label:string;description?:string;error?:string};\nexport declare function Select(props:SelectProps):React.ReactElement|null;",
+   "source": "uploads/IAK-Master-source/packages/ui/src/index.tsx",
+   "spec": {
+    "height": 40,
+    "states": [
+     "default",
+     "focus",
+     "error",
+     "disabled",
+     "long"
+    ]
+   }
+  },
+  {
+   "name": "Checkbox",
+   "card": "dew/components/Checkbox.html",
+   "export": "dew/components/Checkbox.jsx",
+   "types": "dew/components/Checkbox.d.ts",
+   "api": "export interface CheckboxProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>,'type'>{label:string};\nexport declare function Checkbox(props:CheckboxProps):React.ReactElement|null;",
+   "source": "uploads/IAK-Master-source/packages/ui/src/index.tsx",
+   "spec": {
+    "box": 18,
+    "states": [
+     "unchecked",
+     "checked",
+     "hover",
+     "focus",
+     "disabled",
+     "long"
+    ]
+   }
+  },
+  {
+   "name": "Switch",
+   "card": "dew/components/Switch.html",
+   "export": "dew/components/Switch.jsx",
+   "types": "dew/components/Switch.d.ts",
+   "api": "export interface SwitchProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>,'type'>{label:string};\nexport declare function Switch(props:SwitchProps):React.ReactElement|null;",
+   "source": "uploads/IAK-Master-source/packages/ui/src/index.tsx",
+   "spec": {
+    "track": [
+     40,
+     22
+    ],
+    "knob": 14,
+    "states": [
+     "off",
+     "on",
+     "focus",
+     "disabled",
+     "long"
+    ]
+   }
+  },
+  {
+   "name": "Badge",
+   "card": "dew/components/Badge.html",
+   "export": "dew/components/Badge.jsx",
+   "types": "dew/components/Badge.d.ts",
+   "api": "export interface BadgeProps extends React.HTMLAttributes<HTMLSpanElement>{tone?:'info'|'success'|'warning'|'error'|'neutral'};\nexport declare function Badge(props:BadgeProps):React.ReactElement|null;",
+   "source": "uploads/IAK-Master-source/packages/ui/src/index.tsx",
+   "spec": {
+    "tones": [
+     "neutral",
+     "success",
+     "warning",
+     "error",
+     "info"
+    ],
+    "designOnly": [
+     {
+      "name": "Section label (red overline)",
+      "maps": null
+     },
+     {
+      "name": "Issue number",
+      "maps": "tone=\"info\""
+     }
+    ]
+   }
+  },
+  {
+   "name": "Card",
+   "card": "dew/components/Card.html",
+   "export": "dew/components/Card.jsx",
+   "types": "dew/components/Card.d.ts",
+   "api": "export interface CardProps extends Omit<React.HTMLAttributes<HTMLElement>,'title'>{title?:string;footer?:React.ReactNode};\nexport declare function Card(props:CardProps):React.ReactElement|null;",
+   "source": "uploads/IAK-Master-source/packages/ui/src/index.tsx",
+   "spec": {
+    "padding": 24,
+    "radius": 0,
+    "states": [
+     "default",
+     "loading",
+     "missing",
+     "error",
+     "long"
+    ],
+    "designOnly": [
+     {
+      "name": "Story card (photo)",
+      "maps": "Card + image children"
+     }
+    ]
+   }
+  },
+  {
+   "name": "Skeleton",
+   "card": "dew/components/Skeleton.html",
+   "export": "dew/components/Skeleton.jsx",
+   "types": "dew/components/Skeleton.d.ts",
+   "api": "export interface SkeletonProps extends React.HTMLAttributes<HTMLSpanElement>{width?:string|number;height?:string|number;circle?:boolean};\nexport declare function Skeleton(props:SkeletonProps):React.ReactElement|null;",
+   "source": "uploads/IAK-Master-source/packages/ui/src/index.tsx",
+   "spec": {
+    "states": [
+     "line",
+     "circle",
+     "composed",
+     "reduced-motion"
+    ]
+   }
+  },
+  {
+   "name": "Icon",
+   "card": "dew/components/Icon.html",
+   "export": "dew/components/Icon.jsx",
+   "types": "dew/components/Icon.d.ts",
+   "api": "/** One of the 97 names in master/lib/icons.js. 9 original names are unresolved and render null. */\nexport type IconName=string;\nexport interface IconProps extends Omit<React.SVGProps<SVGSVGElement>,'name'>{name:IconName;size?:16|20|24;label?:string};\nexport declare function Icon(props:IconProps):React.ReactElement|null;",
+   "source": "uploads/IAK-Master-source/packages/ui/src/index.tsx",
+   "spec": {
+    "sizes": [
+     16,
+     20,
+     24
+    ],
+    "available": 97,
+    "unresolved": 9
+   }
+  },
+  {
+   "name": "Dialog",
+   "card": "dew/components/Dialog.html",
+   "export": "dew/components/Dialog.jsx",
+   "types": "dew/components/Dialog.d.ts",
+   "api": "export interface DialogProps{trigger?:React.ReactElement;title:string;description?:string;children:React.ReactNode;footer?:React.ReactNode;open?:boolean;defaultOpen?:boolean;onOpenChange?:(open:boolean)=>void;initialFocusRef?:React.RefObject<HTMLElement|null>;closeOnOutside?:boolean;closeLabel?:string;size?:'sm'|'md'|'lg';/** preview-only */inline?:boolean};\nexport declare function Dialog(props:DialogProps):React.ReactElement|null;",
+   "source": "uploads/IAK-Master-source/packages/ui/src/composites.tsx",
+   "spec": {
+    "widths": {
+     "sm": 480,
+     "md": 640,
+     "lg": 880
+    },
+    "radius": 0,
+    "states": [
+     "open",
+     "long"
+    ],
+    "previewOnly": [
+     "inline"
+    ]
+   }
+  },
+  {
+   "name": "Menu",
+   "card": "dew/components/Menu.html",
+   "export": "dew/components/Menu.jsx",
+   "types": "dew/components/Menu.d.ts",
+   "api": "export interface MenuItem{id:string;label:string;onSelect:()=>void;disabled?:boolean;danger?:boolean;separatorBefore?:boolean}\nexport interface MenuProps{trigger?:React.ReactElement;label:string;items:MenuItem[];align?:'start'|'center'|'end';open?:boolean;onOpenChange?:(open:boolean)=>void;/** preview-only */inline?:boolean;/** preview-only */highlightedId?:string};\nexport declare function Menu(props:MenuProps):React.ReactElement|null;",
+   "source": "uploads/IAK-Master-source/packages/ui/src/composites.tsx",
+   "spec": {
+    "minWidth": 208,
+    "states": [
+     "highlighted",
+     "danger",
+     "disabled",
+     "long"
+    ],
+    "previewOnly": [
+     "inline",
+     "highlightedId"
+    ]
+   }
+  },
+  {
+   "name": "Table",
+   "card": "dew/components/Table.html",
+   "export": "dew/components/Table.jsx",
+   "types": "dew/components/Table.d.ts",
+   "api": "export interface TableColumn<T=any>{id:string;header:string;cell:(row:T)=>React.ReactNode;sortValue?:(row:T)=>string|number|null|undefined;align?:'left'|'right'}\nexport interface TableSort{columnId:string;direction:'ascending'|'descending'}\nexport interface TablePagination{pageSize:number;page?:number;onPageChange?:(page:number)=>void}\nexport interface TableVirtualization{height?:number;rowHeight?:number;overscan?:number}\nexport interface TableProps<T=any>{caption:string;columns:TableColumn<T>[];rows:T[];rowKey:(row:T)=>string;sort?:TableSort|null;defaultSort?:TableSort;onSortChange?:(sort:TableSort)=>void;loading?:boolean;error?:string;emptyMessage?:string;loadingMessage?:string;minWidth?:number;pagination?:TablePagination;virtualization?:TableVirtualization};\nexport declare function Table(props:TableProps):React.ReactElement|null;",
+   "source": "uploads/IAK-Master-source/packages/ui/src/table.tsx",
+   "spec": {
+    "states": [
+     "default",
+     "sorted",
+     "paginated",
+     "loading",
+     "error",
+     "empty",
+     "missing",
+     "long",
+     "virtual"
+    ]
+   }
+  },
+  {
+   "name": "Pagination",
+   "card": "dew/components/Pagination.html",
+   "export": "dew/components/Pagination.jsx",
+   "types": "dew/components/Pagination.d.ts",
+   "api": "export interface PaginationProps{page:number;pageCount:number;onPageChange:(page:number)=>void;disabled?:boolean;label?:string;/** preview-only */previewState?:'hover'|'focus'};\nexport declare function Pagination(props:PaginationProps):React.ReactElement|null;",
+   "source": "uploads/IAK-Master-source/packages/ui/src/table.tsx",
+   "spec": {
+    "button": 40,
+    "states": [
+     "first",
+     "middle",
+     "last",
+     "single",
+     "disabled",
+     "hover",
+     "focus"
+    ],
+    "previewOnly": [
+     "previewState"
+    ]
+   }
+  },
+  {
+   "name": "Toast",
+   "card": "dew/components/Toast.html",
+   "export": "dew/components/Toast.jsx",
+   "types": "dew/components/Toast.d.ts",
+   "api": "export type ToastTone='success'|'warning'|'error'|'info';\nexport interface ToastOptions{title:string;description?:string;tone?:ToastTone;id?:string;duration?:number;priority?:'polite'|'assertive';action?:{label:string;altText:string;onClick:()=>void}}\nexport interface ToastProviderProps{children:React.ReactNode;duration?:number;label?:string}\n/** Single static toast (preview-only view of one ToastProvider entry). Use ToastProvider + useToast in product code. */\nexport interface ToastProps extends ToastOptions{onClose?:()=>void};\nexport declare function Toast(props:ToastProps):React.ReactElement|null;\nexport declare function ToastProvider(props:ToastProviderProps):React.ReactElement;\nexport declare function useToast():{notify:(o:ToastOptions)=>string|undefined;dismiss:(id:string)=>void;dismissAll:()=>void};",
+   "source": "uploads/IAK-Master-source/packages/ui/src/toast.tsx",
+   "spec": {
+    "width": 380,
+    "iconBox": 32,
+    "tones": [
+     "info",
+     "success",
+     "warning",
+     "error"
+    ],
+    "states": [
+     "description",
+     "action",
+     "long",
+     "stack"
+    ],
+    "previewOnly": [
+     "ToastView"
+    ]
+   }
+  },
+  {
+   "name": "AlertDialog",
+   "card": "dew/components/AlertDialog.html",
+   "export": "dew/components/AlertDialog.jsx",
+   "types": "dew/components/AlertDialog.d.ts",
+   "api": "export interface AlertDialogProps{trigger?:React.ReactElement;title:string;description:string;confirmLabel?:string;cancelLabel?:string;danger?:boolean;onConfirm:()=>void|Promise<void>;errorMessage?:string;/** preview-only */inline?:boolean;/** preview-only */previewState?:'pending'|'error'};\nexport declare function AlertDialog(props:AlertDialogProps):React.ReactElement|null;",
+   "source": "uploads/IAK-Master-source/packages/ui/src/alert-dialog.tsx",
+   "spec": {
+    "states": [
+     "primary",
+     "danger",
+     "pending",
+     "error"
+    ],
+    "previewOnly": [
+     "inline",
+     "previewState"
+    ]
+   }
+  }
+ ],
+ "patterns": [
+  {
+   "id": "dashboard",
+   "card": "dew/patterns/01-dashboard.html",
+   "render": "dew/patterns/screen.html?p=dashboard&s=<state>",
+   "states": [
+    "default",
+    "loading",
+    "empty",
+    "error"
+   ],
+   "viewports": [
+    1440,
+    834,
+    375
+   ],
+   "basis": "derived-extension"
+  },
+  {
+   "id": "analytics",
+   "card": "dew/patterns/02-analytics.html",
+   "render": "dew/patterns/screen.html?p=analytics&s=<state>",
+   "states": [
+    "default",
+    "loading",
+    "empty",
+    "error"
+   ],
+   "viewports": [
+    1440,
+    834,
+    375
+   ],
+   "basis": "derived-extension"
+  },
+  {
+   "id": "table",
+   "card": "dew/patterns/03-table.html",
+   "render": "dew/patterns/screen.html?p=table&s=<state>",
+   "states": [
+    "default",
+    "loading",
+    "empty",
+    "error",
+    "long-text"
+   ],
+   "viewports": [
+    1440,
+    834,
+    375
+   ],
+   "basis": "derived-extension"
+  },
+  {
+   "id": "detail",
+   "card": "dew/patterns/04-detail.html",
+   "render": "dew/patterns/screen.html?p=detail&s=<state>",
+   "states": [
+    "default",
+    "loading",
+    "missing-data",
+    "error"
+   ],
+   "viewports": [
+    1440,
+    834,
+    375
+   ],
+   "basis": "derived-extension"
+  },
+  {
+   "id": "settings",
+   "card": "dew/patterns/05-settings.html",
+   "render": "dew/patterns/screen.html?p=settings&s=<state>",
+   "states": [
+    "default",
+    "saving",
+    "error",
+    "success"
+   ],
+   "viewports": [
+    1440,
+    834,
+    375
+   ],
+   "basis": "derived-extension"
+  },
+  {
+   "id": "billing",
+   "card": "dew/patterns/06-billing.html",
+   "render": "dew/patterns/screen.html?p=billing&s=<state>",
+   "states": [
+    "default",
+    "loading",
+    "error",
+    "empty"
+   ],
+   "viewports": [
+    1440,
+    834,
+    375
+   ],
+   "basis": "derived-extension"
+  },
+  {
+   "id": "chat",
+   "card": "dew/patterns/07-chat.html",
+   "render": "dew/patterns/screen.html?p=chat&s=<state>",
+   "states": [
+    "default",
+    "streaming",
+    "empty",
+    "error"
+   ],
+   "viewports": [
+    1440,
+    834,
+    375
+   ],
+   "basis": "derived-extension"
+  },
+  {
+   "id": "builder",
+   "card": "dew/patterns/08-builder.html",
+   "render": "dew/patterns/screen.html?p=builder&s=<state>",
+   "states": [
+    "default",
+    "selected",
+    "dragging",
+    "empty"
+   ],
+   "viewports": [
+    1440,
+    834,
+    375
+   ],
+   "basis": "derived-extension"
+  },
+  {
+   "id": "modal",
+   "card": "dew/patterns/09-modal.html",
+   "render": "dew/patterns/screen.html?p=modal&s=<state>",
+   "states": [
+    "dialog",
+    "confirm",
+    "pending",
+    "error"
+   ],
+   "viewports": [
+    1440,
+    834,
+    375
+   ],
+   "basis": "derived-extension"
+  },
+  {
+   "id": "empty",
+   "card": "dew/patterns/10-empty.html",
+   "render": "dew/patterns/screen.html?p=empty&s=<state>",
+   "states": [
+    "first-run",
+    "no-results",
+    "no-access"
+   ],
+   "viewports": [
+    1440,
+    834,
+    375
+   ],
+   "basis": "derived-extension"
+  }
+ ],
+ "sources": {
+  "reference": "https://www.behance.net/gallery/110574641/DEW-Webzine-Editorial-Web-Experience-Design",
+  "moduleImage": "https://mir-s3-cdn-cf.behance.net/project_modules/fs_webp/114287110574641.5ff1768d53080.png",
+  "observations": "dew/source-observations.md",
+  "componentApi": "uploads/IAK-Master-source/packages/ui/src",
+  "icons": "uploads/IAK-Master-source/data/developer/icons.json",
+  "archive": "archive/ (IAK/RAIS originals, not active)"
+ },
+ "limitations": [
+  "exact hex, sizes and spacing not published in the source → derived",
+  "Big Caslon (source font) replaced by Libre Caslon Display/Text by approval; metrics differ slightly",
+  "no source photos → placeholders",
+  "9 icon names unresolved",
+  "bundle namespace name is set by the compiler (inherited identifier)"
+ ],
+ "editorial": {
+  "library": "dew/lib/editorial.js",
+  "css": "dew/editorial.css",
+  "global": "window.DEW_ED",
+  "basis": "derived-extension on observed DEW layout language",
+  "preview": "dew/kits/front-page.html",
+  "pages": [
+   {
+    "name": "EditorialHome",
+    "view": "home"
+   },
+   {
+    "name": "ArticleList",
+    "view": "list",
+    "states": [
+     "default",
+     "loading",
+     "empty"
+    ]
+   },
+   {
+    "name": "StoryDetail",
+    "view": "story"
+   }
+  ],
+  "parts": {
+   "EditorialHeader": {
+    "props": {
+     "issue": "string",
+     "tagline": "string",
+     "title": "string",
+     "compact": "boolean"
+    }
+   },
+   "CategoryNav": {
+    "props": {
+     "items": "string[]",
+     "current": "string",
+     "onSelect": "(item)=>void",
+     "label": "string"
+    },
+    "states": [
+     "default",
+     "hover",
+     "current (red 2px underline)",
+     "focus 2/2"
+    ]
+   },
+   "FeatureStory": {
+    "props": {
+     "story": "Story",
+     "reverse": "boolean"
+    },
+    "layout": "8/4 split, 12 cols; stacked ≤1024"
+   },
+   "StoryCard": {
+    "props": {
+     "story": "Story",
+     "layout": "\"stack\"|\"row\"",
+     "loading": "boolean"
+    },
+    "states": [
+     "default",
+     "hover (title → red)",
+     "focus",
+     "loading",
+     "long title",
+     "missing author/title"
+    ]
+   },
+   "MediaCard": {
+    "props": {
+     "label": "string",
+     "ratio": "string",
+     "tone": "\"light\"|\"mid\"|\"dark\"",
+     "kind": "\"video\"|\"gallery\"",
+     "caption": "string",
+     "credit": "string"
+    }
+   },
+   "EditorialGrid": {
+    "props": {
+     "asymmetric": "boolean",
+     "children": "node"
+    },
+    "layout": "5/4/3 staggered (64/24px offsets); 6/6 ≤1024; 12 ≤640"
+   },
+   "QuoteBlock": {
+    "props": {
+     "quote": "string",
+     "cite": "string"
+    },
+    "type": "serif italic 40/1.2 (28 ≤640)"
+   },
+   "ImageCaption": {
+    "props": {
+     "caption": "string",
+     "credit": "string"
+    },
+    "states": [
+     "caption+credit",
+     "missing caption"
+    ]
+   },
+   "ArticleMeta": {
+    "props": {
+     "category": "string",
+     "author": "string",
+     "photographer": "string",
+     "date": "string",
+     "read": "string"
+    },
+    "states": [
+     "full",
+     "missing author"
+    ]
+   },
+   "EditorialCTA": {
+    "props": {
+     "title": "string",
+     "body": "string",
+     "tone": "\"dark\"|\"light\"",
+     "state": "\"default\"|\"error\"|\"success\""
+    }
+   },
+   "Footer": {
+    "props": {}
+   }
+  }
+ }
+}

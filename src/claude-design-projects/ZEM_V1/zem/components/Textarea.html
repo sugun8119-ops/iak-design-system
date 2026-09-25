@@ -1,0 +1,12 @@
+<!-- @dsCard group="ZEM · Components" viewport="1200x760" name="Textarea" subtitle="rows · error · disabled · long text" -->
+<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ZEM_V1 · Textarea</title>
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script><script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script><script src="../lib/icons.js"></script><script src="../lib/zem-ui.js"></script><script src="../lib/card.js"></script></head><body><div id="root"></div><script>
+const h=React.createElement,X=ZEM;const {Icon,Button,TextField,Textarea,Select,Checkbox,Switch,Badge,Card,Skeleton,Dialog,Menu,Table,Pagination,ToastProvider,useToast,AlertDialog}=X;const W=(w,el)=>h('div',{style:{width:w,maxWidth:'100%'}},el);
+
+const T=p=>W(300,h(Textarea,{label:'미션 설명',...p}));
+ZEMCard.mount({name:'Textarea',group:'ZEM · Component · Input',description:'TextField와 같은 FieldShell. 최소 높이 104px, resize: vertical, rows 기본 4.',meta:['API = zem/components/Textarea.d.ts','rows=4','min-height 104'],
+sections:[{title:'State',cases:[{id:'default',label:'default · placeholder',el:T({placeholder:'목표와 범위를 적어 주세요'})},{id:'filled',label:'filled',el:T({defaultValue:'신규 파트너 대상 온보딩 흐름을 정리합니다.'})},{id:'hover',label:'hover',el:T({'data-preview-state':'hover',defaultValue:'메모'})},{id:'focus',label:'focus-visible',el:T({'data-preview-state':'focus',defaultValue:'메모'})},{id:'error',label:'error',el:T({defaultValue:'짧음',error:'20자 이상 입력해 주세요.'})},{id:'disabled',label:'disabled',el:T({disabled:true,defaultValue:'보관된 미션는 수정할 수 없습니다.'})}]},
+{title:'Content',cases:[{id:'rows-2',tag:'native',label:'rows={2} (min-height 96 우선)',el:T({rows:2})},{id:'long-text',label:'긴 문구 · 내부 스크롤',el:T({rows:4,defaultValue:'1단계: 기존 고객 세그먼트 분석\n2단계: 메시지 테스트 3종\n3단계: 랜딩 페이지 개편\n4단계: 파트너 교육 자료 배포\n5단계: 성과 리뷰 및 다음 분기 계획 수립\n6단계: 회고'})},{id:'description',label:'description',el:T({description:'마크다운은 지원하지 않습니다.'})}]}],
+notInSource:['글자 수 카운터 없음 (제품에서 description으로 조합)','auto-grow 없음']});
+</script></body></html>
