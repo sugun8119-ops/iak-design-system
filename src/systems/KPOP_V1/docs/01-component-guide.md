@@ -24,3 +24,7 @@
 KPOP: 48px 기본 버튼, 44px 최소 터치 영역, 25~28px 비조작 배지. Hero 4:5 / Detail 16:10 / 목록 1:1. 이미지의 이중 패딩 제거, 목록 88px 썸네일 + 16px 간격과 hairline 구분. 본문 16/26, 문단 사이24. 자체 링·캡슐 SVG를 중앙 크롭한다.
 
 타이포: Display32/40, Heading24/32, Title18/26, Body16/26, Meta12/17. Pretendard 실제 파일 사용. IAK30항목과 프로젝트 고유 색상·13컴포넌트·Main/Sub/Detail을 유지한다.
+
+
+## Quality 1.4
+BottomNav: original24px/1.75px icons + label, pale selected background, 64px item target. StoryCard examples map Music pink/Stage blue/Culture green; use identical category/title/reading-time in Detail. No new component set required.

@@ -158,5 +158,44 @@
     },
     "build": "passed",
     "keyboardFocus": "2px visible outline verified in local preview"
+  },
+  "qualityRevision14": {
+    "version": "1.4.0",
+    "date": "2026-09-26",
+    "localPreview": {
+      "pages": [
+        "Main",
+        "Sub",
+        "Detail"
+      ],
+      "widths": [
+        430,
+        390,
+        375,
+        320
+      ],
+      "combinations": 12,
+      "horizontalOverflow": 0
+    },
+    "figma": "Main/Sub/Detail visual review and PNG export completed",
+    "build": "passed",
+    "notVerified": [
+      "Physical devices",
+      "VoiceOver/TalkBack",
+      "Cross-browser rendering"
+    ],
+    "interactions": [
+      "Music filter returns 2",
+      "Unmatched search shows empty",
+      "Stage article category/title match",
+      "Save sets aria-pressed=true",
+      "All bottom nav targets measure64px"
+    ],
+    "repositoryTests": "31 passed (shared repository tests, separate from visual checks)",
+    "claudeDesign": {
+      "status": "partial / usage limit",
+      "verifiedComplete": false,
+      "remaining": "Finish documentation/template consistency and final visual/interaction/design-system verification in Claude"
+    }
   }
 }

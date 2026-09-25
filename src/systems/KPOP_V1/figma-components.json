@@ -258,19 +258,19 @@
           "id": "5:207",
           "name": "active=discover",
           "width": 390,
-          "height": 86
+          "height": 96
         },
         {
           "id": "5:208",
           "name": "active=feed",
           "width": 390,
-          "height": 86
+          "height": 96
         },
         {
           "id": "5:209",
           "name": "active=story",
           "width": 390,
-          "height": 86
+          "height": 96
         }
       ],
       "source": "preview/components.html",
@@ -436,5 +436,5 @@
     }
   },
   "note": "Native Figma local components. This is a source map, not a published Figma Code Connect integration.",
-  "qualityRevision": "1.3"
+  "qualityRevision": "1.4"
 }

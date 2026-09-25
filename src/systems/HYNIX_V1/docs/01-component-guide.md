@@ -24,3 +24,7 @@
 HYNIX: 균등한 요약·장비 카드, 44px 버튼, 25px 비조작 상태 배지. 네이비 그리드와 자체 제작 모듈 도식. Raised 4/4/12, inset 2/2/6. 선택/포커스 파랑, 실행 주황을 유지한다.
 
 타이포: Display32/40, Heading24/32, Title18/26, Body14/20, Meta12/17. Pretendard 실제 파일 사용. IAK30항목과 프로젝트 고유 색상·13컴포넌트·Main/Sub/Detail을 유지한다.
+
+
+## Quality 1.4
+DeviceTile: metadata includes Zone + Snapshot time; offline uses Unavailable. MetricCard uses total/unit context. Compose the attention summary from existing primitives. Event rows align time/severity/message; messages wrap below on narrow screens.
