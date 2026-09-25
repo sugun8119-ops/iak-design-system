@@ -154,6 +154,18 @@ UI/MCP 0.9.1, 사이트/스킬 0.12.0입니다. React 19 소비자에서 발견�
 
 등록 CLI와 입력 형식은 [템플릿 운영 가이드](src/developer/template-workflow.md)를 참고하세요. 커스텀 템플릿은 제작자가 검토한 정적 HTML·CSS·JavaScript를 등록합니다. 템플릿 수와 디자인 자산은 제작자가 직접 늘릴 수 있으며, 이 작업 흐름이 전체 컴포넌트 라이브러리를 자동 생성하지는 않습니다.
 
+## KOSAF_V1 · Public / Enterprise Commerce Design System
+
+`KOSAF_V1`은 농산물 온라인 도매시장 최종 수정 Figma(`MOEAkEbXtwHdE3xveg2Gto / 1:85779`)를 Source of Truth로 삼아 역추출한 디자인 시스템입니다. 기존 IAK의 Foundation → Semantic Token → Component → State → Pattern 운영 구조를 따르되, 시각값은 KOSAF 최종본을 우선합니다.
+
+- Claude guide: [KOSAF_V1/claude-system.md](KOSAF_V1/claude-system.md)
+- Figma/token spec: [KOSAF_V1/figma-system.json](KOSAF_V1/figma-system.json)
+- Source map: [KOSAF_V1/source-map.json](KOSAF_V1/source-map.json)
+- Figma generated collections: `KOSAF/Primitives`, `KOSAF/Semantic`, `KOSAF/Layout`
+- Figma generated core components: Button, Input, Search, Checkbox, Radio, Tab, Badge, PaginationItem, TableRow, Modal, Stepper
+
+기존 관리 파일의 Typography, Button, Button Status, Tab, Mobile/PC Component, Table, Pagination, Interaction 영역은 KOSAF_V1 기준으로 점진적으로 교체합니다.
+
 ## HYNIX_V1 · KPOP_V1 독립 디자인 시스템
 
 [시스템 선택](src/systems/README.md) · [공개 미리보기](https://sugun8119-ops.github.io/iak-design-system/systems/)
