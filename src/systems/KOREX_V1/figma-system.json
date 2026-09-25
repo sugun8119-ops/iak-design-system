@@ -1,7 +1,7 @@
 {
   "id": "KOREX_V1",
   "name": "KOREX Brand Web System",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "category": "Corporate / Brand / Product Web",
   "foundation": {
     "colors": {
@@ -553,49 +553,73 @@
         "name": "color/canvas",
         "resolvedType": "COLOR",
         "value": "#F5F6F2",
-        "source": "foundation.colors.canvas"
+        "source": "foundation.colors.canvas",
+        "codeSyntax": {
+          "WEB": "var(--canvas)"
+        }
       },
       {
         "name": "color/surface",
         "resolvedType": "COLOR",
         "value": "#FFFFFF",
-        "source": "foundation.colors.surface"
+        "source": "foundation.colors.surface",
+        "codeSyntax": {
+          "WEB": "var(--surface)"
+        }
       },
       {
         "name": "color/textPrimary",
         "resolvedType": "COLOR",
         "value": "#172019",
-        "source": "foundation.colors.textPrimary"
+        "source": "foundation.colors.textPrimary",
+        "codeSyntax": {
+          "WEB": "var(--textPrimary)"
+        }
       },
       {
         "name": "color/textSecondary",
         "resolvedType": "COLOR",
         "value": "#677068",
-        "source": "foundation.colors.textSecondary"
+        "source": "foundation.colors.textSecondary",
+        "codeSyntax": {
+          "WEB": "var(--textSecondary)"
+        }
       },
       {
         "name": "color/border",
         "resolvedType": "COLOR",
         "value": "#D9DED8",
-        "source": "foundation.colors.border"
+        "source": "foundation.colors.border",
+        "codeSyntax": {
+          "WEB": "var(--border)"
+        }
       },
       {
         "name": "color/primary",
         "resolvedType": "COLOR",
         "value": "#07523D",
-        "source": "foundation.colors.primary"
+        "source": "foundation.colors.primary",
+        "codeSyntax": {
+          "WEB": "var(--primary)"
+        }
       },
       {
         "name": "color/primaryDark",
         "resolvedType": "COLOR",
         "value": "#04382B",
-        "source": "foundation.colors.primaryDark"
+        "source": "foundation.colors.primaryDark",
+        "codeSyntax": {
+          "WEB": "var(--primaryDark)"
+        }
       },
       {
         "name": "color/primarySoft",
         "resolvedType": "COLOR",
         "value": "#DCE8E3",
-        "source": "foundation.colors.primarySoft"
+        "source": "foundation.colors.primarySoft",
+        "codeSyntax": {
+          "WEB": "var(--primarySoft)"
+        }
       },
       {
         "name": "color/overlay",
@@ -603,79 +627,118 @@
         "value": "#172019",
         "alpha": 0.56,
         "source": "derivedTokens.overlay",
-        "status": "derived-extension"
+        "status": "derived-extension",
+        "codeSyntax": {
+          "WEB": "var(--overlay)"
+        }
       },
       {
         "name": "space/4",
         "resolvedType": "FLOAT",
         "value": 4,
-        "source": "foundation.spacing"
+        "source": "foundation.spacing",
+        "codeSyntax": {
+          "WEB": "var(--space-4)"
+        }
       },
       {
         "name": "space/8",
         "resolvedType": "FLOAT",
         "value": 8,
-        "source": "foundation.spacing"
+        "source": "foundation.spacing",
+        "codeSyntax": {
+          "WEB": "var(--space-8)"
+        }
       },
       {
         "name": "space/16",
         "resolvedType": "FLOAT",
         "value": 16,
-        "source": "foundation.spacing"
+        "source": "foundation.spacing",
+        "codeSyntax": {
+          "WEB": "var(--space-16)"
+        }
       },
       {
         "name": "space/24",
         "resolvedType": "FLOAT",
         "value": 24,
-        "source": "foundation.spacing"
+        "source": "foundation.spacing",
+        "codeSyntax": {
+          "WEB": "var(--space-24)"
+        }
       },
       {
         "name": "space/32",
         "resolvedType": "FLOAT",
         "value": 32,
-        "source": "foundation.spacing"
+        "source": "foundation.spacing",
+        "codeSyntax": {
+          "WEB": "var(--space-32)"
+        }
       },
       {
         "name": "space/48",
         "resolvedType": "FLOAT",
         "value": 48,
-        "source": "foundation.spacing"
+        "source": "foundation.spacing",
+        "codeSyntax": {
+          "WEB": "var(--space-48)"
+        }
       },
       {
         "name": "space/64",
         "resolvedType": "FLOAT",
         "value": 64,
-        "source": "foundation.spacing"
+        "source": "foundation.spacing",
+        "codeSyntax": {
+          "WEB": "var(--space-64)"
+        }
       },
       {
         "name": "space/80",
         "resolvedType": "FLOAT",
         "value": 80,
-        "source": "foundation.spacing"
+        "source": "foundation.spacing",
+        "codeSyntax": {
+          "WEB": "var(--space-80)"
+        }
       },
       {
         "name": "space/96",
         "resolvedType": "FLOAT",
         "value": 96,
-        "source": "foundation.spacing"
+        "source": "foundation.spacing",
+        "codeSyntax": {
+          "WEB": "var(--space-96)"
+        }
       },
       {
         "name": "radius/sm",
         "resolvedType": "FLOAT",
         "value": 2,
-        "source": "foundation.radius.sm"
+        "source": "foundation.radius.sm",
+        "codeSyntax": {
+          "WEB": "var(--radius-sm)"
+        }
       },
       {
         "name": "radius/md",
         "resolvedType": "FLOAT",
         "value": 4,
-        "source": "foundation.radius.md"
+        "source": "foundation.radius.md",
+        "codeSyntax": {
+          "WEB": "var(--radius-md)"
+        }
       },
       {
         "name": "radius/lg",
         "resolvedType": "FLOAT",
         "value": 6,
-        "source": "foundation.radius.lg"
+        "source": "foundation.radius.lg",
+        "codeSyntax": {
+          "WEB": "var(--radius-lg)"
+        }
       }
     ],
     "textStyles": [
@@ -801,5 +864,15 @@
       "preview-only": 5,
       "design-only": 7
     }
+  },
+  "quality": {
+    "version": "1.4.0",
+    "entry": "preview/library.html",
+    "rules": "preview/handoff/usage-rules.json",
+    "figmaGuide": "https://www.figma.com/design/MR9qvFSq9w5HAD2wnQObdn?node-id=61-2",
+    "caseIdsPreserved": true,
+    "offlineRuntime": "React 18.3.1 vendored with MIT license; no network required for library interactions",
+    "runtimeTests": "tests/project-systems.test.mjs",
+    "visualAuthority": "Existing approved foundation remains unchanged"
   }
 }

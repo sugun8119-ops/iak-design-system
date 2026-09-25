@@ -11,3 +11,7 @@ A modal on the warm `canvas`, framed by a 1px `textPrimary` rule with square cor
 **Don't** use a rounded card, drop shadow or a dark panel. Status: **derived-extension**.
 
 **IAK cases (v1.3):** all 7 cases render in the `CoverageDialog` card (anchors `case-dialog-<id>`).
+
+
+### 1.4 quality update
+입력 상태 갱신, 대화상자 초점/스크롤 관리, 확인 오류 표시, 메뉴 키보드 진입을 보완했습니다. 실제 검증 범위는 preview/handoff/quality-1.4.json과 저장소 tests/project-systems.test.mjs를 참조하세요.

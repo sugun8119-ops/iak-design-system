@@ -9,3 +9,7 @@
 - `contained`는 문서 미리보기용(프레임 안에 그리기)이다.
 - **제공할 것**: `open`, `onClose`, `title`, `description`, `size`, `children`, `footer`, `dismissible`.
 - **v1.3 (derived-extension)**: `initialFocus="close"`(열릴 때 닫기 버튼으로 포커스), `closeState`(focus 표시). description이 없으면 `aria-describedby`를 두지 않는다.
+
+
+### 1.4 quality update
+입력 상태 갱신, 대화상자 초점/스크롤 관리, 확인 오류 표시, 메뉴 키보드 진입을 보완했습니다. 실제 검증 범위는 preview/handoff/quality-1.4.json과 저장소 tests/project-systems.test.mjs를 참조하세요.

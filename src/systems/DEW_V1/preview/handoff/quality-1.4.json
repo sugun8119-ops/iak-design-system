@@ -1,0 +1,96 @@
+{
+  "version": "1.4.0",
+  "caseCount": 138,
+  "foundationUnchanged": true,
+  "contrastPairs": [
+    {
+      "foreground": "textPrimary",
+      "background": "canvas",
+      "ratio": 17.05,
+      "threshold": 4.5,
+      "pass": true
+    },
+    {
+      "foreground": "textPrimary",
+      "background": "surface",
+      "ratio": 18.88,
+      "threshold": 4.5,
+      "pass": true
+    },
+    {
+      "foreground": "textSecondary",
+      "background": "canvas",
+      "ratio": 4.84,
+      "threshold": 4.5,
+      "pass": true
+    },
+    {
+      "foreground": "textSecondary",
+      "background": "surface",
+      "ratio": 5.36,
+      "threshold": 4.5,
+      "pass": true
+    },
+    {
+      "foreground": "surface",
+      "background": "textPrimary",
+      "ratio": 18.88,
+      "threshold": 4.5,
+      "pass": true
+    }
+  ],
+  "runtimeRegressionTests": 12,
+  "runtimeChecks": [
+    "textarea counter updates",
+    "sync confirmation failure is shown",
+    "Shift+Tab remains inside modal",
+    "modal scroll lock and restoration",
+    "menu keyboard entry skips disabled items",
+    "named fields participate in native FormData"
+  ],
+  "browserChecks": {
+    "DEW": {
+      "searchFocus": 10,
+      "designOnlyFilter": 7,
+      "textareaInput": "5 / 500자",
+      "mobileWidth": 375,
+      "mobileScrollWidth": 360,
+      "desktopWidth": 1440,
+      "desktopScrollWidth": 1425,
+      "duplicateIds": 0
+    },
+    "KOREX": {
+      "mobileWidth": 375,
+      "mobileScrollWidth": 360,
+      "desktopWidth": 1440,
+      "desktopScrollWidth": 1425,
+      "designOnlyFilter": 7,
+      "emptySearch": 0,
+      "modalWidthAt375": 343,
+      "modalScrollLock": true,
+      "focusReturned": true,
+      "consoleErrors": 0
+    }
+  },
+  "figma": {
+    "caseCount": 138,
+    "caseLabels": 138,
+    "guide": "https://www.figma.com/design/qDaMlSX00Eow0b7aDYKKsf?node-id=46-2",
+    "coreTokenSyntaxCount": 20,
+    "unboundPaints": 0,
+    "emptyDescriptions": 0,
+    "duplicateVariants": 0
+  },
+  "limits": [
+    "Figma examples represent states; no interaction prototype or published team library.",
+    "Case screenshots are representative native examples, not pixel-identical copies of all web samples.",
+    "Seven design-only samples have no runtime API.",
+    "Font widths vary between web fallback stack and Figma.",
+    "Accessibility checks cover selected color pairs and interactions; they are not a full WCAG certification."
+  ],
+  "repositoryChecks": {
+    "testsPassed": 45,
+    "projectChecksPassed": 14,
+    "build": "passed"
+  }
+}

@@ -11,3 +11,7 @@ A button-triggered list of actions or single choices: `surface` panel, 1px `text
 **Relationship:** Menu for sort/share/save actions above an EditorialGrid; CategoryNav stays the topic filter. Status: **derived-extension**.
 
 **IAK cases (v1.3):** all 6 cases render in the `CoverageMenu` card (anchors `case-menu-<id>`).
+
+
+### 1.4 quality update
+입력 상태 갱신, 대화상자 초점/스크롤 관리, 확인 오류 표시, 메뉴 키보드 진입을 보완했습니다. 실제 검증 범위는 preview/handoff/quality-1.4.json과 저장소 tests/project-systems.test.mjs를 참조하세요.

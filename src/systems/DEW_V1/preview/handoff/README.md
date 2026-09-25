@@ -1,3 +1,7 @@
+# 1.4 품질 개선
+
+현재 시작점은 [디자인 라이브러리](../library.html)와 [Figma Guide](https://www.figma.com/design/qDaMlSX00Eow0b7aDYKKsf?node-id=46-2)입니다. 검증은 [quality-1.4.json](quality-1.4.json)을 확인하세요. 아래 1.3 기록은 이전 전달 이력입니다. 현재 미리보기는 vendor/ 런타임을 포함하여 인터넷 연결 없이 동작합니다.
+
 # DEW_V1 · 1.3.0
 
 IAK는 사례 항목만 정하며, 시각 스타일은 이 프로젝트의 기존 정규화 foundation을 유지합니다.

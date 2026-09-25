@@ -7,3 +7,7 @@
 - 상태 표현은 TextField와 동일(error = 잉크 2px + 아이콘 + “오류” 문장).
 - **제공할 것**: `label`, `value`/`defaultValue`, `onChange`, `rows`, `maxLength`, `description`, `error`, `required`, `readOnly`, `disabled`.
 - **v1.3 (derived-extension)**: `state="hover"`, `rows`를 주면 최소 높이 120을 풀어 네이티브 행 수를 따른다(rows-2).
+
+
+### 1.4 quality update
+입력 상태 갱신, 대화상자 초점/스크롤 관리, 확인 오류 표시, 메뉴 키보드 진입을 보완했습니다. 실제 검증 범위는 preview/handoff/quality-1.4.json과 저장소 tests/project-systems.test.mjs를 참조하세요.

@@ -9,3 +9,7 @@
 - 네비게이션 링크 목록에는 Menu를 쓰지 않는다(GlobalHeader/CategoryNav 사용).
 - **제공할 것**: `label`, `items` `[{label, value, icon, description, selected, disabled, disabledReason, danger, divider}]`, `onSelect`, `open`/`defaultOpen`, `disabled`.
 - **v1.3 (derived-extension)**: 항목 `href` → `<a role="menuitem">`. 트리거에서 ↓로 열고 Esc로 닫는다(Coverage의 Menu.a 라이브 미리보기).
+
+
+### 1.4 quality update
+입력 상태 갱신, 대화상자 초점/스크롤 관리, 확인 오류 표시, 메뉴 키보드 진입을 보완했습니다. 실제 검증 범위는 preview/handoff/quality-1.4.json과 저장소 tests/project-systems.test.mjs를 참조하세요.

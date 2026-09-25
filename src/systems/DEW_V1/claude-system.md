@@ -105,3 +105,16 @@ JSON을 변경하면 `preview/styles.css`의 대응 CSS 변수도 갱신한다. 
 ## v1.3.0 인계 기준
 
 기존 프로젝트 스타일을 유지한다. IAK는 138개 사례 목록의 기준이다. 없는 폰트만 유사 서체로 대체하고 변경 내역을 기록한다. Figma의 Coverage 138 페이지와 preview/case-coverage.json을 대응표로 사용한다. 다른 design/p 버전의 스타일과 혼합하지 않는다. 동작 예시는 preview/coverage-live.html에서 열 수 있다(React CDN 연결 필요).
+
+
+## Quality contract · 1.4
+
+- 시작점은 preview/library.html. 138개 사례의 family/id를 변경하거나 임의로 합치지 않는다.
+- 토큰과 스타일은 이 프로젝트의 foundation을 그대로 사용한다. IAK 스타일이나 다른 프로젝트 스타일을 섞지 않는다.
+- preview/handoff/usage-rules.json의 구성요소별 사용 규칙을 따른다.
+- 글자 수는 입력과 함께 갱신한다. 확인 작업의 동기 오류와 비동기 오류 모두 화면에 표시한다.
+- 대화상자는 초점·배경 스크롤을 관리하고 닫히면 복귀시킨다. AlertDialog는 취소 버튼에 먼저 초점을 둔다.
+- 키보드 메뉴는 첫 활성 항목으로 들어가며 비활성 항목을 건너뛴다. 폼 요소의 name을 실제 입력 요소에 전달한다.
+- 긴 문구·375px 화면·키보드 조작을 확인하고 기존 스타일을 바꾸는 새 효과나 장식은 추가하지 않는다.
+- vendor/의 라이선스 파일을 유지한다. design-only 사례를 동작하는 API라고 설명하지 않는다.
+- Figma와 웹의 글자 폭 차이, 정적 상태 예시와 실제 동작의 차이를 숨기지 않는다.

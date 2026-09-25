@@ -251,7 +251,7 @@
     var v = useControlled(p.value, p.defaultValue || '');
     return h(Field, Object.assign({}, p, { id: id, render: function (desc) {
       return h('input', {
-        id: id, type: p.type || 'text', className: cx('kx-input', 'kx-control', p.size === 'sm' && 'kx-control-sm', stateClass(p.state)),
+        id: id, name: p.name, type: p.type || 'text', className: cx('kx-input', 'kx-control', p.size === 'sm' && 'kx-control-sm', stateClass(p.state)),
         value: v[0], placeholder: p.placeholder, required: p.required, readOnly: p.readOnly, disabled: p.disabled,
         'aria-invalid': p.error ? 'true' : undefined, 'aria-describedby': desc, autoComplete: p.autoComplete || 'off', inputMode: p.inputMode,
         onChange: function (e) { v[1](e.target.value); if (p.onChange) p.onChange(e.target.value); }
@@ -265,7 +265,7 @@
     var counter = p.maxLength ? (v[0].length + ' / ' + p.maxLength + '자') : null;
     return h(Field, Object.assign({}, p, { id: id, counter: counter, render: function (desc) {
       return h('textarea', {
-        id: id, className: cx('kx-input', 'kx-control', 'kx-textarea', stateClass(p.state)), rows: p.rows || 4, style: p.rows ? { minHeight: 0 } : undefined,
+        id: id, name: p.name, className: cx('kx-input', 'kx-control', 'kx-textarea', stateClass(p.state)), rows: p.rows || 4, style: p.rows ? { minHeight: 0 } : undefined,
         value: v[0], placeholder: p.placeholder, required: p.required, readOnly: p.readOnly, disabled: p.disabled, maxLength: p.maxLength,
         'aria-invalid': p.error ? 'true' : undefined, 'aria-describedby': desc,
         onChange: function (e) { v[1](e.target.value); if (p.onChange) p.onChange(e.target.value); }
@@ -279,7 +279,7 @@
     return h(Field, Object.assign({}, p, { id: id, render: function (desc) {
       return h('div', { className: 'kx-select-wrap' },
         h('select', {
-          id: id, className: cx('kx-select', 'kx-control', stateClass(p.state)), value: v[0], required: p.required, disabled: p.disabled || p.readOnly,
+          id: id, name: p.name, className: cx('kx-select', 'kx-control', stateClass(p.state)), value: v[0], required: p.required, disabled: p.disabled || p.readOnly,
           'aria-invalid': p.error ? 'true' : undefined, 'aria-describedby': desc,
           onChange: function (e) { v[1](e.target.value); if (p.onChange) p.onChange(e.target.value); }
         },
@@ -300,7 +300,7 @@
       h('div', { className: 'kx-check-row' },
         h('span', { className: cx('kx-check-box', on && 'is-on', p.indeterminate && 'is-mixed', p.state === 'focus' && 'is-focus') },
           h('input', {
-            ref: ref, id: id, type: 'checkbox', className: 'kx-check-input', checked: on, disabled: p.disabled, required: p.required,
+            ref: ref, id: id, name: p.name, value: p.value, type: 'checkbox', className: 'kx-check-input', checked: on, disabled: p.disabled, required: p.required,
             'aria-invalid': p.error ? 'true' : undefined, 'aria-describedby': [descId, msgId].filter(Boolean).join(' ') || undefined,
             onChange: function (e) { v[1](e.target.checked); if (p.onChange) p.onChange(e.target.checked); }
           }),
@@ -367,24 +367,25 @@
     var panel = React.useRef(null);
     React.useEffect(function () {
       if (!p.open || p.contained || !panel.current) return;
-      var prev = document.activeElement;
+      var prev = document.activeElement, previousOverflow = document.body.style.overflow;
+      document.body.style.overflow = 'hidden';
       var first = panel.current.querySelector('[data-autofocus]') || panel.current;
       first.focus();
-      return function () { if (prev && prev.focus) prev.focus(); };
+      return function () { document.body.style.overflow = previousOverflow; if (prev && prev.focus && document.contains(prev)) prev.focus(); };
     }, [p.open, p.contained]);
     if (!p.open) return null;
     function close() { if (p.onClose && !p.busy) p.onClose(); }
     function keys(e) {
       if (e.key === 'Escape') { e.stopPropagation(); close(); return; }
       if (e.key !== 'Tab' || !panel.current) return;
-      var f = panel.current.querySelectorAll(FOCUSABLE); if (!f.length) return;
+      var f = panel.current.querySelectorAll(FOCUSABLE); if (!f.length) { e.preventDefault(); return; }
       var a = f[0], z = f[f.length - 1];
-      if (e.shiftKey && document.activeElement === a) { e.preventDefault(); z.focus(); }
+      if (e.shiftKey && (document.activeElement === a || document.activeElement === panel.current)) { e.preventDefault(); z.focus(); }
       else if (!e.shiftKey && document.activeElement === z) { e.preventDefault(); a.focus(); }
     }
     return h('div', { className: cx('kx', 'kx-overlay', p.contained && 'is-contained', p.className), onMouseDown: function (e) { if (e.target === e.currentTarget && p.dismissible !== false) close(); } },
       h('div', {
-        ref: panel, role: p.role || 'dialog', 'aria-modal': 'true', 'aria-labelledby': id + '-t', 'aria-describedby': p.description ? id + '-d' : undefined,
+        ref: panel, role: p.role || 'dialog', 'aria-modal': p.contained ? undefined : 'true', 'aria-labelledby': id + '-t', 'aria-describedby': p.description ? id + '-d' : undefined,
         tabIndex: -1, className: cx('kx-dialog', 'kx-dialog-' + (p.size || 'md')), onKeyDown: keys
       },
         h('div', { className: 'kx-dialog-head' },
@@ -404,7 +405,7 @@
     var pending = !!p.loading || st[0].pending, err = p.error || st[0].error;
     function confirm() {
       if (!p.onConfirm || pending) return;
-      var r = p.onConfirm();
+      var r; try { r = p.onConfirm(); } catch(e) { st[1]({pending:false,error:(e && e.message) || p.errorText || '처리하지 못했습니다. 다시 시도해 주세요.'}); return; }
       if (r && typeof r.then === 'function') {
         st[1]({ pending: true, error: null });
         r.then(function () { st[1]({ pending: false, error: null }); if (p.onResolved) p.onResolved(); },
@@ -426,11 +427,12 @@
     var id = useId(p.id, 'kx-menu');
     var o = useControlled(p.open, !!p.defaultOpen);
     var open = o[0];
-    var wrap = React.useRef(null), trig = React.useRef(null);
+    var wrap = React.useRef(null), trig = React.useRef(null), keyboardOpen = React.useRef(false);
     var items = p.items || [];
     function setOpen(v) { o[1](v); if (p.onOpenChange) p.onOpenChange(v); }
     React.useEffect(function () {
       if (!open || p.inline) return;
+      if (keyboardOpen.current && wrap.current) { var first = wrap.current.querySelector('[role^="menuitem"]:not([aria-disabled="true"])'); if(first) first.focus(); keyboardOpen.current=false; }
       function away(e) { if (wrap.current && !wrap.current.contains(e.target)) setOpen(false); }
       document.addEventListener('mousedown', away);
       return function () { document.removeEventListener('mousedown', away); };
@@ -445,12 +447,13 @@
       else if (e.key === 'Home') { e.preventDefault(); list[0] && list[0].focus(); }
       else if (e.key === 'End') { e.preventDefault(); list[list.length - 1] && list[list.length - 1].focus(); }
       else if (e.key === 'Escape') { setOpen(false); if (trig.current) trig.current.focus(); }
+      else if(e.key === 'Tab') setOpen(false);
     }
     return h('div', { className: cx('kx', 'kx-menu', p.inline && 'is-inline', p.className), ref: wrap, onKeyDown: move },
       h(Button, {
         id: id + '-btn', variant: p.triggerVariant || 'secondary', size: p.size || 'md', iconEnd: 'chevron-down', haspopup: 'menu', expanded: open ? 'true' : 'false', controls: open ? id : undefined,
         buttonRef: trig, disabled: p.disabled, onClick: function () { setOpen(!open); },
-        onKeyDown: function (e) { if (e.key === 'ArrowDown' && !open) { e.preventDefault(); setOpen(true); } }
+        onKeyDown: function (e) { if (e.key === 'ArrowDown' && !open) { e.preventDefault(); keyboardOpen.current=true; setOpen(true); } }
       }, p.label),
       open ? h('ul', { id: id, role: 'menu', 'aria-labelledby': id + '-btn', className: 'kx-menu-list' }, items.map(function (it, i) {
         if (it.divider) return h('li', { key: 'd' + i, role: 'separator', className: 'kx-menu-sep' });
@@ -460,7 +463,7 @@
           type: asLink ? undefined : 'button', href: asLink ? it.href : undefined, role: selectable ? 'menuitemradio' : 'menuitem', 'aria-checked': selectable ? String(!!it.selected) : undefined,
           'aria-disabled': it.disabled ? 'true' : undefined, tabIndex: -1,
           className: cx('kx-menu-item', it.danger && 'is-danger', it.selected && 'is-selected', stateClass(it.state)),
-          onClick: function () { if (it.disabled) return; if (p.onSelect) p.onSelect(it.value); if (!p.inline) setOpen(false); }
+          onClick: function () { if (it.disabled) return; if (p.onSelect) p.onSelect(it.value); if (!p.inline) {setOpen(false); if(trig.current) trig.current.focus();} }
         },
           h('span', { className: 'kx-menu-icon' }, it.selected ? h(Icon, { name: 'check', size: 16 }) : (it.icon ? h(Icon, { name: it.icon, size: 16 }) : null)),
           h('span', { className: 'kx-menu-text' }, h('span', { className: 'kx-menu-label' }, it.label), it.description ? h('span', { className: 'kx-menu-desc' }, it.description) : null),

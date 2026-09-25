@@ -1,10 +1,10 @@
-# DEW_V1 · 1.4
+# KOREX_V1 · 1.4
 
 첫 화면: **library.html** — 기본 규칙, 검색, 구성요소/유형 필터, 138개 사례, 사례별 Figma 링크.
 
 - 페이지 예시: index.html
 - 전체 사례: coverage-138.html
-- Figma 가이드: https://www.figma.com/design/qDaMlSX00Eow0b7aDYKKsf?node-id=46-2
+- Figma 가이드: https://www.figma.com/design/MR9qvFSq9w5HAD2wnQObdn?node-id=61-2
 - 상태별 컴포넌트: Figma의 Coverage 138 페이지
 - 토큰/컴포넌트 규격: ../figma-system.json
 - AI 제작 규칙: ../claude-system.md

@@ -268,7 +268,7 @@
 
   var FAMILIES = ['Button', 'TextField', 'Textarea', 'Select', 'Checkbox', 'Switch', 'Badge', 'Card', 'Skeleton', 'Icon', 'Dialog', 'Menu', 'Table', 'Pagination', 'Toast', 'AlertDialog'];
   function anchor(cs) { return 'c-' + cs.family.toLowerCase() + '-' + cs.id; }
-  function origin(cs) { return OBSERVED[cs.family + '.' + cs.id] ? 'observed' : 'derived-extension'; }
+  function origin(cs) { return 'derived-extension'; }
   C.forEach(function (cs) { cs.anchor = anchor(cs); cs.origin = origin(cs); });
 
   function CaseBox(p) {

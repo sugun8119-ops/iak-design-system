@@ -241,10 +241,11 @@
   }
   function Textarea(p) {
     var gen = useId('ta'), id = p.id || gen;
-    var len = String(p.value != null ? p.value : (p.defaultValue || '')).length;
+    var local = React.useState(p.defaultValue || '');
+    var len = String(p.value != null ? p.value : local[0]).length;
     var counter = p.maxLength ? len + ' / ' + p.maxLength + '자' : null;
     return Field(Object.assign({}, p, { id: id, counter: counter }), function (describedBy) {
-      return h('textarea', { id: id, className: cx('dew-input', 'dew-textarea', forced(p.state)), rows: p.rows || 4, name: p.name, placeholder: p.placeholder, defaultValue: p.defaultValue, value: p.value, onChange: p.onChange, readOnly: p.readOnly, disabled: p.disabled, required: p.required, maxLength: p.maxLength, 'aria-invalid': p.error ? 'true' : undefined, 'aria-describedby': describedBy });
+      return h('textarea', { id: id, className: cx('dew-input', 'dew-textarea', forced(p.state)), rows: p.rows || 4, name: p.name, placeholder: p.placeholder, defaultValue: p.defaultValue, value: p.value, onChange: function(e) { local[1](e.target.value); if(p.onChange) p.onChange(e); }, readOnly: p.readOnly, disabled: p.disabled, required: p.required, maxLength: p.maxLength, 'aria-invalid': p.error ? 'true' : undefined, 'aria-describedby': describedBy });
     });
   }
   function Select(p) {
@@ -347,8 +348,9 @@
     latest.current = p;
     React.useEffect(function () {
       if (!p.open || p.inline) return;
-      var back = document.activeElement;
-      if (panel.current) panel.current.focus();
+      var back = document.activeElement, previousOverflow = document.body.style.overflow;
+      document.body.style.overflow = 'hidden';
+      if (panel.current) { var initial = p.role === 'alertdialog' ? panel.current.querySelector('button:not([disabled])') : null; (initial || panel.current).focus(); }
       function onKey(e) {
         var q = latest.current;
         if (e.key === 'Escape' && q.onClose) { e.preventDefault(); q.onClose(); return; }
@@ -360,7 +362,7 @@
         }
       }
       document.addEventListener('keydown', onKey);
-      return function () { document.removeEventListener('keydown', onKey); if (back && back.focus && document.contains(back)) back.focus(); };
+      return function () { document.removeEventListener('keydown', onKey); document.body.style.overflow = previousOverflow; if (back && back.focus && document.contains(back)) back.focus(); };
     }, [p.open, p.inline]);
     if (!p.open) return null;
     return h('div', { className: cx('dew', 'dew-dialog', p.inline && 'dew-dialog--inline', p.className), onMouseDown: function (e) { if (e.target === e.currentTarget && p.onClose && p.dismissable !== false) p.onClose(); } },
@@ -384,8 +386,8 @@
     React.useEffect(function () { alive.current = true; return function () { alive.current = false; }; }, []);
     function run() {
       var fn = err ? (p.onRetry || p.onConfirm) : p.onConfirm;
-      if (!fn) return;
-      var r = fn();
+      if (!fn || pending) return;
+      var r; try { r = fn(); } catch(e) { es[1]((e && e.message) || '요청을 처리하지 못했습니다.'); return; }
       if (r && typeof r.then === 'function') {
         ps[1](true); es[1](null);
         r.then(function (v) { if (!alive.current) return; ps[1](false); if (p.onResolved) p.onResolved(v); },
@@ -421,6 +423,7 @@
     }, [open, p.inline]);
     function onKey(e) {
       var items = enabled(), i = items.indexOf(document.activeElement);
+      if (!items.length && /^(ArrowDown|ArrowUp|Home|End)$/.test(e.key)) { e.preventDefault(); return; }
       if (e.key === 'ArrowDown') { e.preventDefault(); (items[i + 1] || items[0]).focus(); }
       else if (e.key === 'ArrowUp') { e.preventDefault(); (items[i - 1] || items[items.length - 1]).focus(); }
       else if (e.key === 'Home') { e.preventDefault(); items[0].focus(); }
@@ -592,5 +595,5 @@
   Toast.Region = ToastRegion;
 
   Object.assign(DEW, { Button: Button, TextField: TextField, Textarea: Textarea, Select: Select, Checkbox: Checkbox, Switch: Switch, Badge: Badge, Card: Card, Skeleton: Skeleton, Icon: Icon, Dialog: Dialog, Menu: Menu, Table: Table, Pagination: Pagination, Toast: Toast, ToastRegion: ToastRegion, AlertDialog: AlertDialog });
-  DEW.version = '1.3';
+  DEW.version = '1.4';
 })();

@@ -45,14 +45,14 @@ type Forced3 = 'hover' | 'focus' | 'pressed';
 type FieldState = 'hover' | 'focus';
 export interface ButtonProps { /** 'text' is the IAK name; 'ghost' is kept as an alias */ variant?: 'primary' | 'secondary' | 'text' | 'ghost' | 'danger'; autoFocusMark?: boolean; size?: 'sm' | 'md' | 'lg'; state?: Forced3; icon?: IconName; iconEnd?: IconName; iconOnly?: boolean; label?: string; loading?: boolean; loadingLabel?: React.ReactNode; disabled?: boolean; block?: boolean; href?: string; type?: 'button' | 'submit'; onClick?: React.MouseEventHandler; children?: React.ReactNode; className?: string }
 export declare function Button(props: ButtonProps): React.ReactElement;
-interface FieldBase { label: React.ReactNode; description?: React.ReactNode; error?: React.ReactNode; success?: React.ReactNode; required?: boolean; readOnly?: boolean; disabled?: boolean; state?: FieldState; id?: string; className?: string }
+interface FieldBase { name?: string; label: React.ReactNode; description?: React.ReactNode; error?: React.ReactNode; success?: React.ReactNode; required?: boolean; readOnly?: boolean; disabled?: boolean; state?: FieldState; id?: string; className?: string }
 export interface TextFieldProps extends FieldBase { value?: string; defaultValue?: string; onChange?: (v: string) => void; placeholder?: string; type?: string; size?: 'sm' | 'md'; autoComplete?: string; inputMode?: string }
 export declare function TextField(props: TextFieldProps): React.ReactElement;
 export interface TextareaProps extends FieldBase { value?: string; defaultValue?: string; onChange?: (v: string) => void; placeholder?: string; rows?: number; maxLength?: number }
 export declare function Textarea(props: TextareaProps): React.ReactElement;
 export interface SelectProps extends FieldBase { options: { value: string; label: string; disabled?: boolean }[]; value?: string; defaultValue?: string; onChange?: (v: string) => void; placeholder?: string }
 export declare function Select(props: SelectProps): React.ReactElement;
-export interface CheckboxProps { label: React.ReactNode; checked?: boolean; defaultChecked?: boolean; onChange?: (v: boolean) => void; indeterminate?: boolean; description?: React.ReactNode; error?: React.ReactNode; required?: boolean; disabled?: boolean; state?: 'focus'; id?: string; className?: string }
+export interface CheckboxProps { name?: string; value?: string; label: React.ReactNode; checked?: boolean; defaultChecked?: boolean; onChange?: (v: boolean) => void; indeterminate?: boolean; description?: React.ReactNode; error?: React.ReactNode; required?: boolean; disabled?: boolean; state?: 'focus'; id?: string; className?: string }
 export declare function Checkbox(props: CheckboxProps): React.ReactElement;
 export interface SwitchProps { label: React.ReactNode; checked?: boolean; defaultChecked?: boolean; onChange?: (v: boolean) => void; description?: React.ReactNode; disabled?: boolean; loading?: boolean; onLabel?: string; offLabel?: string; state?: 'hover' | 'focus'; id?: string; className?: string }
 export declare function Switch(props: SwitchProps): React.ReactElement;
