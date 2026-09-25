@@ -77,3 +77,7 @@ Main은 그룹/가동 요약과 타일, Sub는 검색 가능한 장비 목록, D
 ## Quick Start for Claude
 이 문서와 figma-system.json을 함께 컨텍스트로 제공한다. 요청 페이지를 Default Pages 중 선택한 뒤 기존 preview 구조를 재사용한다. 토큰·비율·정보 순서를 유지하고 프로젝트 콘텐츠만 교체한다. 런타임은 정적 HTML/CSS/JS로 시작한다.
 `preview/index.html`을 브라우저에서 직접 열면 된다. 설치·빌드 불필요. 데모 상태는 새로고침 시 초기화된다.
+
+## Registered design resources
+
+실제 Figma 파일과 Claude Design 등록 상태는 `integrations.json`, 컴포넌트별 링크는 `figma-components.json`을 참고한다. Figma에서 Templates 페이지의 Main/Sub/Detail 프레임을 복제해 시작한다. 네이티브 Figma는 편집 가능한 로컬 컴포넌트이며 팀 라이브러리 게시는 별도다. HTML preview와 Figma는 동일 토큰과 컴포넌트 계약을 따르는 별도 렌더링 예시이며 픽셀 단위 복제본은 아니다.

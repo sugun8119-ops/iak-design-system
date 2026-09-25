@@ -1,0 +1,403 @@
+{
+  "system": "KPOP_V1",
+  "fileKey": "VR9GFAKIFEjLWuQonbJVYv",
+  "components": {
+    "Button": {
+      "nodeId": "5:17",
+      "url": "https://www.figma.com/design/VR9GFAKIFEjLWuQonbJVYv?node-id=5-17",
+      "variants": [
+        {
+          "id": "5:2",
+          "name": "variant=primary, state=default",
+          "width": 101,
+          "height": 64
+        },
+        {
+          "id": "5:3",
+          "name": "variant=primary, state=hover",
+          "width": 103,
+          "height": 64
+        },
+        {
+          "id": "5:4",
+          "name": "variant=primary, state=pressed",
+          "width": 101,
+          "height": 64
+        },
+        {
+          "id": "5:5",
+          "name": "variant=primary, state=focus",
+          "width": 105,
+          "height": 64
+        },
+        {
+          "id": "5:6",
+          "name": "variant=primary, state=disabled",
+          "width": 101,
+          "height": 64
+        },
+        {
+          "id": "5:7",
+          "name": "variant=secondary, state=default",
+          "width": 101,
+          "height": 64
+        },
+        {
+          "id": "5:8",
+          "name": "variant=secondary, state=hover",
+          "width": 103,
+          "height": 64
+        },
+        {
+          "id": "5:9",
+          "name": "variant=secondary, state=pressed",
+          "width": 101,
+          "height": 64
+        },
+        {
+          "id": "5:10",
+          "name": "variant=secondary, state=focus",
+          "width": 105,
+          "height": 64
+        },
+        {
+          "id": "5:11",
+          "name": "variant=secondary, state=disabled",
+          "width": 101,
+          "height": 64
+        },
+        {
+          "id": "5:12",
+          "name": "variant=quiet, state=default",
+          "width": 101,
+          "height": 64
+        },
+        {
+          "id": "5:13",
+          "name": "variant=quiet, state=hover",
+          "width": 103,
+          "height": 64
+        },
+        {
+          "id": "5:14",
+          "name": "variant=quiet, state=pressed",
+          "width": 101,
+          "height": 64
+        },
+        {
+          "id": "5:15",
+          "name": "variant=quiet, state=focus",
+          "width": 105,
+          "height": 64
+        },
+        {
+          "id": "5:16",
+          "name": "variant=quiet, state=disabled",
+          "width": 101,
+          "height": 64
+        }
+      ],
+      "source": "preview/components.html",
+      "specification": "figma-system.json#/components"
+    },
+    "Field": {
+      "nodeId": "5:74",
+      "url": "https://www.figma.com/design/VR9GFAKIFEjLWuQonbJVYv?node-id=5-74",
+      "variants": [
+        {
+          "id": "5:70",
+          "name": "state=default",
+          "width": 320,
+          "height": 105
+        },
+        {
+          "id": "5:71",
+          "name": "state=focus",
+          "width": 320,
+          "height": 107
+        },
+        {
+          "id": "5:72",
+          "name": "state=error",
+          "width": 320,
+          "height": 105
+        },
+        {
+          "id": "5:73",
+          "name": "state=disabled",
+          "width": 320,
+          "height": 105
+        }
+      ],
+      "source": "preview/components.html",
+      "specification": "figma-system.json#/components"
+    },
+    "AppHeader": {
+      "nodeId": "5:98",
+      "url": "https://www.figma.com/design/VR9GFAKIFEjLWuQonbJVYv?node-id=5-98",
+      "variants": [
+        {
+          "id": "5:96",
+          "name": "variant=brand",
+          "width": 390,
+          "height": 67
+        },
+        {
+          "id": "5:97",
+          "name": "variant=back",
+          "width": 390,
+          "height": 67
+        }
+      ],
+      "source": "preview/components.html",
+      "specification": "figma-system.json#/components"
+    },
+    "CategoryTabs": {
+      "nodeId": "5:110",
+      "url": "https://www.figma.com/design/VR9GFAKIFEjLWuQonbJVYv?node-id=5-110",
+      "variants": [
+        {
+          "id": "5:106",
+          "name": "selected=all",
+          "width": 350,
+          "height": 53
+        },
+        {
+          "id": "5:107",
+          "name": "selected=music",
+          "width": 350,
+          "height": 53
+        },
+        {
+          "id": "5:108",
+          "name": "selected=culture",
+          "width": 350,
+          "height": 53
+        },
+        {
+          "id": "5:109",
+          "name": "selected=stage",
+          "width": 350,
+          "height": 53
+        }
+      ],
+      "source": "preview/components.html",
+      "specification": "figma-system.json#/components"
+    },
+    "AuthorMeta": {
+      "nodeId": "5:154",
+      "url": "https://www.figma.com/design/VR9GFAKIFEjLWuQonbJVYv?node-id=5-154",
+      "variants": [
+        {
+          "id": "5:152",
+          "name": "variant=compact",
+          "width": 302,
+          "height": 32
+        },
+        {
+          "id": "5:153",
+          "name": "variant=full",
+          "width": 302,
+          "height": 32
+        }
+      ],
+      "source": "preview/components.html",
+      "specification": "figma-system.json#/components"
+    },
+    "RankingRow": {
+      "nodeId": "5:170",
+      "url": "https://www.figma.com/design/VR9GFAKIFEjLWuQonbJVYv?node-id=5-170",
+      "variants": [
+        {
+          "id": "5:167",
+          "name": "trend=up",
+          "width": 350,
+          "height": 76
+        },
+        {
+          "id": "5:168",
+          "name": "trend=down",
+          "width": 350,
+          "height": 76
+        },
+        {
+          "id": "5:169",
+          "name": "trend=new",
+          "width": 350,
+          "height": 76
+        }
+      ],
+      "source": "preview/components.html",
+      "specification": "figma-system.json#/components"
+    },
+    "ScheduleRow": {
+      "nodeId": "5:193",
+      "url": "https://www.figma.com/design/VR9GFAKIFEjLWuQonbJVYv?node-id=5-193",
+      "variants": [
+        {
+          "id": "5:191",
+          "name": "state=upcoming",
+          "width": 350,
+          "height": 84
+        },
+        {
+          "id": "5:192",
+          "name": "state=ended",
+          "width": 350,
+          "height": 84
+        }
+      ],
+      "source": "preview/components.html",
+      "specification": "figma-system.json#/components"
+    },
+    "BottomNav": {
+      "nodeId": "5:210",
+      "url": "https://www.figma.com/design/VR9GFAKIFEjLWuQonbJVYv?node-id=5-210",
+      "variants": [
+        {
+          "id": "5:207",
+          "name": "active=discover",
+          "width": 390,
+          "height": 83
+        },
+        {
+          "id": "5:208",
+          "name": "active=feed",
+          "width": 390,
+          "height": 83
+        },
+        {
+          "id": "5:209",
+          "name": "active=story",
+          "width": 390,
+          "height": 83
+        }
+      ],
+      "source": "preview/components.html",
+      "specification": "figma-system.json#/components"
+    },
+    "FeatureStory": {
+      "nodeId": "6:6",
+      "url": "https://www.figma.com/design/VR9GFAKIFEjLWuQonbJVYv?node-id=6-6",
+      "variants": [
+        {
+          "id": "6:2",
+          "name": "variant=hero, state=ready",
+          "width": 350,
+          "height": 550.5
+        },
+        {
+          "id": "6:3",
+          "name": "variant=hero, state=media-missing",
+          "width": 350,
+          "height": 550.5
+        },
+        {
+          "id": "6:4",
+          "name": "variant=detail, state=ready",
+          "width": 350,
+          "height": 351.75
+        },
+        {
+          "id": "6:5",
+          "name": "variant=detail, state=media-missing",
+          "width": 350,
+          "height": 351.75
+        }
+      ],
+      "source": "preview/components.html",
+      "specification": "figma-system.json#/components"
+    },
+    "StoryCard": {
+      "nodeId": "6:48",
+      "url": "https://www.figma.com/design/VR9GFAKIFEjLWuQonbJVYv?node-id=6-48",
+      "variants": [
+        {
+          "id": "6:42",
+          "name": "variant=list, state=ready",
+          "width": 350,
+          "height": 120
+        },
+        {
+          "id": "6:43",
+          "name": "variant=list, state=saved",
+          "width": 350,
+          "height": 120
+        },
+        {
+          "id": "6:44",
+          "name": "variant=list, state=media-missing",
+          "width": 350,
+          "height": 120
+        },
+        {
+          "id": "6:45",
+          "name": "variant=grid, state=ready",
+          "width": 350,
+          "height": 279
+        },
+        {
+          "id": "6:46",
+          "name": "variant=grid, state=saved",
+          "width": 350,
+          "height": 279
+        },
+        {
+          "id": "6:47",
+          "name": "variant=grid, state=media-missing",
+          "width": 350,
+          "height": 279
+        }
+      ],
+      "source": "preview/components.html",
+      "specification": "figma-system.json#/components"
+    },
+    "ReactionBar": {
+      "nodeId": "6:95",
+      "url": "https://www.figma.com/design/VR9GFAKIFEjLWuQonbJVYv?node-id=6-95",
+      "variants": [
+        {
+          "id": "6:93",
+          "name": "saved=true",
+          "width": 350,
+          "height": 96
+        },
+        {
+          "id": "6:94",
+          "name": "saved=false",
+          "width": 350,
+          "height": 96
+        }
+      ],
+      "source": "preview/components.html",
+      "specification": "figma-system.json#/components"
+    },
+    "MobileShell": {
+      "nodeId": "6:112",
+      "url": "https://www.figma.com/design/VR9GFAKIFEjLWuQonbJVYv?node-id=6-112",
+      "variants": [
+        {
+          "id": "6:109",
+          "name": "width=390, state=ready",
+          "width": 390,
+          "height": 385
+        },
+        {
+          "id": "6:110",
+          "name": "width=390, state=empty",
+          "width": 390,
+          "height": 329
+        },
+        {
+          "id": "6:111",
+          "name": "width=390, state=error",
+          "width": 390,
+          "height": 329
+        }
+      ],
+      "source": "preview/components.html",
+      "specification": "figma-system.json#/components"
+    }
+  },
+  "note": "Native Figma local components. This is a source map, not a published Figma Code Connect integration."
+}

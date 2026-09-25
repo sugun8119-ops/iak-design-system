@@ -5,3 +5,6 @@
 .tree{margin-top:24px;font-size:12px}.tree summary{cursor:pointer;padding:12px 0;min-height:44px}.tree a{display:block;padding:12px 0 12px 12px;min-height:44px;border-left:1px solid var(--border)}
 
 :root{--space-0:0px;--space-4:4px;--space-8:8px;--space-12:12px;--space-16:16px;--space-20:20px;--space-24:24px;--space-32:32px;--space-48:48px;--space-64:64px;--radius-sm:4px;--radius-md:8px;--radius-lg:16px;--radius-xl:24px;}
+
+/* Figma Dev Mode token aliases */
+:root{--font-size-display:32px;--line-height-display:46px;--font-size-heading:24px;--line-height-heading:35px;--font-size-title:18px;--line-height-title:26px;--font-size-body:14px;--line-height-body:20px;--font-size-meta:12px;--line-height-meta:17px;--font-family:Arial,"Apple SD Gothic Neo","Noto Sans KR",sans-serif;--duration-quick:160ms;}

@@ -1,0 +1,439 @@
+{
+  "system": "HYNIX_V1",
+  "fileKey": "Nh9NILHBye8VS0jGtph3UB",
+  "components": {
+    "Button": {
+      "nodeId": "4:17",
+      "url": "https://www.figma.com/design/Nh9NILHBye8VS0jGtph3UB?node-id=4-17",
+      "variants": [
+        {
+          "id": "4:2",
+          "name": "variant=primary, state=default",
+          "width": 92,
+          "height": 64
+        },
+        {
+          "id": "4:3",
+          "name": "variant=primary, state=hover",
+          "width": 94,
+          "height": 64
+        },
+        {
+          "id": "4:4",
+          "name": "variant=primary, state=pressed",
+          "width": 92,
+          "height": 64
+        },
+        {
+          "id": "4:5",
+          "name": "variant=primary, state=focus",
+          "width": 96,
+          "height": 64
+        },
+        {
+          "id": "4:6",
+          "name": "variant=primary, state=disabled",
+          "width": 92,
+          "height": 64
+        },
+        {
+          "id": "4:7",
+          "name": "variant=secondary, state=default",
+          "width": 92,
+          "height": 64
+        },
+        {
+          "id": "4:8",
+          "name": "variant=secondary, state=hover",
+          "width": 94,
+          "height": 64
+        },
+        {
+          "id": "4:9",
+          "name": "variant=secondary, state=pressed",
+          "width": 92,
+          "height": 64
+        },
+        {
+          "id": "4:10",
+          "name": "variant=secondary, state=focus",
+          "width": 96,
+          "height": 64
+        },
+        {
+          "id": "4:11",
+          "name": "variant=secondary, state=disabled",
+          "width": 92,
+          "height": 64
+        },
+        {
+          "id": "4:12",
+          "name": "variant=quiet, state=default",
+          "width": 92,
+          "height": 64
+        },
+        {
+          "id": "4:13",
+          "name": "variant=quiet, state=hover",
+          "width": 94,
+          "height": 64
+        },
+        {
+          "id": "4:14",
+          "name": "variant=quiet, state=pressed",
+          "width": 92,
+          "height": 64
+        },
+        {
+          "id": "4:15",
+          "name": "variant=quiet, state=focus",
+          "width": 96,
+          "height": 64
+        },
+        {
+          "id": "4:16",
+          "name": "variant=quiet, state=disabled",
+          "width": 92,
+          "height": 64
+        }
+      ],
+      "source": "preview/components.html",
+      "specification": "figma-system.json#/components"
+    },
+    "Field": {
+      "nodeId": "4:74",
+      "url": "https://www.figma.com/design/Nh9NILHBye8VS0jGtph3UB?node-id=4-74",
+      "variants": [
+        {
+          "id": "4:70",
+          "name": "state=default",
+          "width": 320,
+          "height": 99
+        },
+        {
+          "id": "4:71",
+          "name": "state=focus",
+          "width": 320,
+          "height": 101
+        },
+        {
+          "id": "4:72",
+          "name": "state=error",
+          "width": 320,
+          "height": 99
+        },
+        {
+          "id": "4:73",
+          "name": "state=disabled",
+          "width": 320,
+          "height": 99
+        }
+      ],
+      "source": "preview/components.html",
+      "specification": "figma-system.json#/components"
+    },
+    "StatusBadge": {
+      "nodeId": "4:100",
+      "url": "https://www.figma.com/design/Nh9NILHBye8VS0jGtph3UB?node-id=4-100",
+      "variants": [
+        {
+          "id": "4:96",
+          "name": "status=online",
+          "width": 63,
+          "height": 64
+        },
+        {
+          "id": "4:97",
+          "name": "status=warning",
+          "width": 73,
+          "height": 64
+        },
+        {
+          "id": "4:98",
+          "name": "status=offline",
+          "width": 64,
+          "height": 64
+        },
+        {
+          "id": "4:99",
+          "name": "status=unknown",
+          "width": 81,
+          "height": 64
+        }
+      ],
+      "source": "preview/components.html",
+      "specification": "figma-system.json#/components"
+    },
+    "EquipmentTree": {
+      "nodeId": "4:118",
+      "url": "https://www.figma.com/design/Nh9NILHBye8VS0jGtph3UB?node-id=4-118",
+      "variants": [
+        {
+          "id": "4:114",
+          "name": "expanded=true, selected=true",
+          "width": 208,
+          "height": 258
+        },
+        {
+          "id": "4:115",
+          "name": "expanded=true, selected=false",
+          "width": 208,
+          "height": 258
+        },
+        {
+          "id": "4:116",
+          "name": "expanded=false, selected=true",
+          "width": 208,
+          "height": 90
+        },
+        {
+          "id": "4:117",
+          "name": "expanded=false, selected=false",
+          "width": 208,
+          "height": 90
+        }
+      ],
+      "source": "preview/components.html",
+      "specification": "figma-system.json#/components"
+    },
+    "SessionBar": {
+      "nodeId": "4:147",
+      "url": "https://www.figma.com/design/Nh9NILHBye8VS0jGtph3UB?node-id=4-147",
+      "variants": [
+        {
+          "id": "4:144",
+          "name": "connection=connected",
+          "width": 720,
+          "height": 65
+        },
+        {
+          "id": "4:145",
+          "name": "connection=reconnecting",
+          "width": 720,
+          "height": 65
+        },
+        {
+          "id": "4:146",
+          "name": "connection=disconnected",
+          "width": 720,
+          "height": 65
+        }
+      ],
+      "source": "preview/components.html",
+      "specification": "figma-system.json#/components"
+    },
+    "MetricCard": {
+      "nodeId": "4:168",
+      "url": "https://www.figma.com/design/Nh9NILHBye8VS0jGtph3UB?node-id=4-168",
+      "variants": [
+        {
+          "id": "4:165",
+          "name": "state=normal",
+          "width": 240,
+          "height": 139
+        },
+        {
+          "id": "4:166",
+          "name": "state=warning",
+          "width": 240,
+          "height": 139
+        },
+        {
+          "id": "4:167",
+          "name": "state=unavailable",
+          "width": 240,
+          "height": 139
+        }
+      ],
+      "source": "preview/components.html",
+      "specification": "figma-system.json#/components"
+    },
+    "TrendChart": {
+      "nodeId": "4:187",
+      "url": "https://www.figma.com/design/Nh9NILHBye8VS0jGtph3UB?node-id=4-187",
+      "variants": [
+        {
+          "id": "4:183",
+          "name": "state=ready",
+          "width": 520,
+          "height": 279
+        },
+        {
+          "id": "4:184",
+          "name": "state=loading",
+          "width": 520,
+          "height": 279
+        },
+        {
+          "id": "4:185",
+          "name": "state=empty",
+          "width": 520,
+          "height": 279
+        },
+        {
+          "id": "4:186",
+          "name": "state=error",
+          "width": 520,
+          "height": 279
+        }
+      ],
+      "source": "preview/components.html",
+      "specification": "figma-system.json#/components"
+    },
+    "ViewerPanel": {
+      "nodeId": "4:223",
+      "url": "https://www.figma.com/design/Nh9NILHBye8VS0jGtph3UB?node-id=4-223",
+      "variants": [
+        {
+          "id": "4:220",
+          "name": "state=connected",
+          "width": 560,
+          "height": 429
+        },
+        {
+          "id": "4:221",
+          "name": "state=loading",
+          "width": 560,
+          "height": 429
+        },
+        {
+          "id": "4:222",
+          "name": "state=disconnected",
+          "width": 560,
+          "height": 429
+        }
+      ],
+      "source": "preview/components.html",
+      "specification": "figma-system.json#/components"
+    },
+    "EventRow": {
+      "nodeId": "4:250",
+      "url": "https://www.figma.com/design/Nh9NILHBye8VS0jGtph3UB?node-id=4-250",
+      "variants": [
+        {
+          "id": "4:247",
+          "name": "severity=info",
+          "width": 640,
+          "height": 65
+        },
+        {
+          "id": "4:248",
+          "name": "severity=warning",
+          "width": 640,
+          "height": 65
+        },
+        {
+          "id": "4:249",
+          "name": "severity=error",
+          "width": 640,
+          "height": 65
+        }
+      ],
+      "source": "preview/components.html",
+      "specification": "figma-system.json#/components"
+    },
+    "DeviceTile": {
+      "nodeId": "4:273",
+      "url": "https://www.figma.com/design/Nh9NILHBye8VS0jGtph3UB?node-id=4-273",
+      "variants": [
+        {
+          "id": "4:268",
+          "name": "state=default",
+          "width": 256,
+          "height": 315
+        },
+        {
+          "id": "4:269",
+          "name": "state=hover",
+          "width": 256,
+          "height": 317
+        },
+        {
+          "id": "4:270",
+          "name": "state=selected",
+          "width": 256,
+          "height": 319
+        },
+        {
+          "id": "4:271",
+          "name": "state=offline",
+          "width": 256,
+          "height": 315
+        },
+        {
+          "id": "4:272",
+          "name": "state=loading",
+          "width": 256,
+          "height": 315
+        }
+      ],
+      "source": "preview/components.html",
+      "specification": "figma-system.json#/components"
+    },
+    "CommandPanel": {
+      "nodeId": "4:338",
+      "url": "https://www.figma.com/design/Nh9NILHBye8VS0jGtph3UB?node-id=4-338",
+      "variants": [
+        {
+          "id": "4:332",
+          "name": "state=idle",
+          "width": 320,
+          "height": 322
+        },
+        {
+          "id": "4:333",
+          "name": "state=confirming",
+          "width": 320,
+          "height": 322
+        },
+        {
+          "id": "4:334",
+          "name": "state=pending",
+          "width": 320,
+          "height": 322
+        },
+        {
+          "id": "4:335",
+          "name": "state=success",
+          "width": 320,
+          "height": 322
+        },
+        {
+          "id": "4:336",
+          "name": "state=error",
+          "width": 320,
+          "height": 322
+        },
+        {
+          "id": "4:337",
+          "name": "state=disabled",
+          "width": 320,
+          "height": 322
+        }
+      ],
+      "source": "preview/components.html",
+      "specification": "figma-system.json#/components"
+    },
+    "AppShell": {
+      "nodeId": "4:418",
+      "url": "https://www.figma.com/design/Nh9NILHBye8VS0jGtph3UB?node-id=4-418",
+      "variants": [
+        {
+          "id": "4:416",
+          "name": "density=comfortable",
+          "width": 960,
+          "height": 430
+        },
+        {
+          "id": "4:417",
+          "name": "density=compact",
+          "width": 960,
+          "height": 414
+        }
+      ],
+      "source": "preview/components.html",
+      "specification": "figma-system.json#/components"
+    }
+  },
+  "note": "Native Figma local components. This is a source map, not a published Figma Code Connect integration."
+}

@@ -577,5 +577,34 @@
     "runtime": "Plain HTML/CSS/JS. No build, database, router, external fonts or network requests.",
     "data": "Fictional static fixtures only",
     "persistence": "None; refresh resets state"
+  },
+  "integrations": {
+    "figma": {
+      "url": "https://www.figma.com/design/Nh9NILHBye8VS0jGtph3UB",
+      "status": "native_file_created",
+      "team": "Test",
+      "libraryPublished": false,
+      "collections": 2,
+      "primitiveVariables": 38,
+      "semanticVariables": 38,
+      "textStyles": 5,
+      "effectStyles": 2,
+      "componentSets": 12,
+      "variants": 56,
+      "templates": {
+        "Main": "https://www.figma.com/design/Nh9NILHBye8VS0jGtph3UB?node-id=6-2",
+        "Sub": "https://www.figma.com/design/Nh9NILHBye8VS0jGtph3UB?node-id=6-110",
+        "Detail": "https://www.figma.com/design/Nh9NILHBye8VS0jGtph3UB?node-id=6-247"
+      },
+      "font": "Noto Sans KR (available family from the source fallback stack)"
+    },
+    "claudeDesign": {
+      "url": "https://claude.ai/design/p/e80718a5-1ce2-4e2c-8305-66e1c569290b",
+      "status": "published",
+      "note": "팀의 신규 프로젝트에서 선택 가능. 조직 기본값은 변경하지 않음."
+    },
+    "github": "https://github.com/sugun8119-ops/iak-design-system/tree/main/src/systems/HYNIX_V1",
+    "preview": "https://sugun8119-ops.github.io/iak-design-system/systems/HYNIX_V1/preview/index.html",
+    "updatedAt": "2026-09-25"
   }
 }
