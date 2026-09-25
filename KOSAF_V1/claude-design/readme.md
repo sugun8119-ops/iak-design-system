@@ -19,9 +19,10 @@ Direct Figma access was not used; the exports above are the ground truth. Where 
 - `components/<name>/` — 46 React components, one folder each: `.jsx|.tsx` + `.d.ts` + `.prompt.md` + its own `@dsCard` (use, source node, props, states, PC/Mobile examples)
 - `guidelines/docs/` — **Start here** cards: 01 시작 가이드, 02 카테고리 인덱스, 03 상태 매트릭스, 04 레이아웃 가이드, 05 QA, 06 AI 생성 가이드, 07 변경 이력
 - `guidelines/` — foundation specimen cards; `card-kit.js` (card chrome)
-- `ui_kits/` — 10 product UI kits × PC 1920 (`index*.html`) + Mobile 390 (`mobile*.html`), plus `core-components/` board 218:570; see `ui_kits/README.md`
+- `ui_kits/` — 10 product UI kits → 22 kit cards (11 PC 1920 `index*.html` + 11 Mobile 390 `mobile*.html`), plus `core-components/` board 218:570; see `ui_kits/README.md`
 - `docs/source-coverage.md` (all 91 frames mapped), `docs/source-map.md`, `docs/migration-qa.md`, `docs/changelog.md`, `docs/source/` (raw exports)
 - `assets/` — `icons/` (11 source SVGs), `brand/` (logo 1:86099), `products/` (1:91190, 1:91522), `reference/` captures; provenance in `assets/README.md`
+- `docs/quality-refinement.md` — 1.3.0 visual refinement log (what changed / verified / remaining)
 - `SKILL.md` — Agent Skill entry
 
 ## Components

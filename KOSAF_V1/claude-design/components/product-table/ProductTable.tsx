@@ -41,7 +41,7 @@ export function ProductTable({ rows = [], columns = PRODUCT_TABLE_COLUMNS, devic
   const th = { background: 'var(--kosaf-color-bg-subtle)', fontSize: 14, fontWeight: 500, lineHeight: '20px', padding: '0 6px', whiteSpace: 'pre-line', borderBottom: '1px solid var(--kosaf-color-border-default)', borderLeft: '1px solid var(--kosaf-color-border-default)', color: 'var(--kosaf-color-text-primary)' };
   return (
     <div style={{ width: '100%', overflowX: 'auto', ...style }}>
-      <table style={{ width: '100%', minWidth: columns.reduce((s, c) => s + c.width, 0), borderCollapse: 'collapse', tableLayout: 'fixed', fontFamily: F, textAlign: 'center', borderTop: '2px solid var(--kosaf-color-border-default)' }}>
+      <table style={{ width: '100%', minWidth: columns.reduce((s, c) => s + c.width, 0), borderCollapse: 'collapse', tableLayout: 'fixed', fontFamily: F, fontVariantNumeric: 'tabular-nums', textAlign: 'center', borderTop: '2px solid var(--kosaf-color-border-default)' }}>
         <colgroup>{columns.map((c) => <col key={c.key} style={{ width: c.width }} />)}</colgroup>
         <thead>
           <tr style={{ height: 50 }}>{groups.map((g, i) => g.group ? <th key={i} colSpan={g.span} scope="colgroup" style={{ ...th, borderLeft: i ? th.borderLeft : 0 }}>{g.group}</th> : <th key={i} rowSpan={2} scope="col" style={{ ...th, borderLeft: i ? th.borderLeft : 0 }}>{g.col.label}</th>)}</tr>

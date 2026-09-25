@@ -1,4 +1,4 @@
-<!-- @dsCard group="Components · Commerce" viewport="700x640" name="FilterPanel" subtitle="Source-derived (1:85779) · 1:97566 · 1:93119" -->
+<!-- @dsCard group="Components · Commerce" viewport="700x920" name="FilterPanel" subtitle="검색 필터 · PC: 녹색 라벨열 + 4열 카테고리 + 칩 + 적용태그" -->
 <!DOCTYPE html>
 <html><head><meta charset="utf-8"><title>FilterPanel</title>
 <link rel="stylesheet" href="../../styles.css">
@@ -14,10 +14,11 @@ const { Button, Search, Badge, Input, Checkbox, Radio, Tab, PaginationItem, Step
 const A = '../../assets/';
 const ROWS=[{no:10,item:'사과',variety:'부사',name:'사과/부사/특/20kg',deal:'입찰',producer:'김원생',qty:'300PT',remain:300,price:'-',deadline:'2023-05-05\n18:00',grade:'문경',region:'가락시장',ship:'2023\n05-05',liked:true},{no:9,item:'사과',variety:'부사',name:'사과/부사/특/20kg',deal:'정가',producer:'',qty:'300PT',remain:50,price:'50,000원',deadline:'2023-05-05\n18:00',grade:'문경',region:'가락시장',ship:'2023\n05-05'},{no:8,item:'사과',variety:'부사',name:'사과/부사/특/20kg',deal:'입찰',producer:'김원생',qty:'300PT',remain:300,price:'-',deadline:'2023-05-05\n18:00',grade:'문경',region:'가락시장',ship:'2023\n05-05',disabled:true},{no:7,item:'사과',variety:'부사',name:'사과/부사/특/20kg',deal:'정가',producer:'김원생',qty:'300PT',remain:50,price:'50,000원',deadline:'2023-05-05\n18:00',grade:'문경',region:'가락시장',ship:'2023\n05-05'}];
 const FAQ=[{title:'[배송] 배송기간은 얼마나 되나요?',content:'상품의 평균 배송일은 3~4일(주말, 공휴일 제외) 정도 소요됩니다.\n자세한 배송일자는 상품 상세 페이지에서 확인이 가능합니다.'},{title:'[회원] 회원탈퇴는 어떻게 해야 하나요?',content:'마이페이지 > 회원정보관리 > 회원탈퇴에서 신청할 수 있습니다.'},{title:'[배송] 배송조회는 어디에서 할 수 있나요?',content:'마이페이지 > 주문/배송내역에서 확인할 수 있습니다.'}];
-const META = {"name":"FilterPanel","prov":"source","node":"1:97566 · 1:93119","use":"통합검색 filters. PC: green label column + 4 category lists + chip rows + 전체해제/applied tags + 닫기. Mobile: accordion checkbox lists + 초기화.","props":["device","groups","value","onChange","keyword","onSearch","onClose","onlyOnSale"],"states":"Option selected · Section open (mobile) · Applied tags"};
+const META = {"name":"FilterPanel","prov":"source","node":"1:97566 · 1:93119","use":"PC: 녹색 라벨열 + 4열 카테고리 + 칩 + 적용태그. 모바일: 아코디언 체크 목록","props":["device","groups","value","onChange","keyword","onSearch","onClose","onlyOnSale"],"states":"선택·섹션 열림·적용 태그","ko":"검색 필터 · FilterPanel"};
 function Demo(){return (<>
-<KSec label="PC · 1596 (scaled 0.41)"><KScale w={1596} s={0.41}><FilterPanel defaultValue={{sort:['농산물'],class:['사과','포도'],seller:['위탁']}} keyword="사과" onlyOnSale onClose={()=>{}}/></KScale></KSec>
-<KSec label="MOBILE · 390 (scaled 0.6)"><KScale w={390} s={0.6} frame><FilterPanel device="mobile" defaultValue={{sort:['농산물','축산물','임산물','수산물']}}/></KScale></KSec>
+<KSec label="PC · 실제 크기 (좌측 상단)"><KCrop w={1596} h={260}><FilterPanel defaultValue={{sort:['농산물'],class:['사과']}} keyword="사과"/></KCrop></KSec>
+<KSec label="PC · 전체 1596 (축소 0.41)"><KScale w={1596} s={0.41}><FilterPanel defaultValue={{sort:['농산물'],class:['사과','포도'],seller:['위탁']}} keyword="사과" onlyOnSale onClose={()=>{}}/></KScale></KSec>
+<KSec label="모바일 · 390 (축소 0.6)"><KScale w={390} s={0.6} frame><FilterPanel device="mobile" defaultValue={{sort:['농산물','축산물','임산물','수산물']}}/></KScale></KSec>
 </>);}
 ReactDOM.createRoot(document.getElementById('r')).render(<KCard meta={META}><Demo/></KCard>);
 </script></body></html>

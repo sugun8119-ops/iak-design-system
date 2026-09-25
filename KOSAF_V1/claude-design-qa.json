@@ -26,5 +26,33 @@
     "component": 8,
     "patternOnly": 28,
     "gap": 17
+  },
+  "qualityRefinement": {
+    "date": "2026-09-26",
+    "version": "1.3.0",
+    "changedFiles": 100,
+    "cards": 94,
+    "families": 46,
+    "allManifestCardPathsExist": true,
+    "publishedChecks": [
+      "Mobile product detail: real apple image, matching name/price, Noto Sans KR computed font; quantity10→11 and total520000→572000",
+      "ProductCard: desktop and mobile apple images visibly loaded after reload, Korean meta header, aligned rows, non-apple placeholders; console errors0",
+      "Mobile seller signup: title, steps, form alignment visually inspected",
+      "Mobile login visually inspected; empty submit displays 아이디와 비밀번호를 입력해주세요."
+    ],
+    "preservedTokenFiles": [
+      "colors.css",
+      "typography.css",
+      "typography-source.css",
+      "spacing.css",
+      "layout.css",
+      "fonts.css",
+      "source-extended.css"
+    ],
+    "limitations": [
+      "Claude stopped at usage limit after pass2 files/checker were saved; no final generation summary",
+      "Representative visual checks, not an exhaustive 94-card/22-screen audit",
+      "Original17 frame gaps and Figma migration exceptions remain"
+    ]
   }
 }

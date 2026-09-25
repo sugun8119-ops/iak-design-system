@@ -1,4 +1,4 @@
-<!-- @dsCard group="Components · Forms" viewport="700x260" name="Input" subtitle="Figma master (218:570) · 218:600" -->
+<!-- @dsCard group="Components · Forms" viewport="700x260" name="Input" subtitle="입력 · 한 줄 입력 287×45 r5, 좌우 14" -->
 <!DOCTYPE html>
 <html><head><meta charset="utf-8"><title>Input</title>
 <link rel="stylesheet" href="../../styles.css">
@@ -14,10 +14,10 @@ const { Button, Search, Badge, Input, Checkbox, Radio, Tab, PaginationItem, Step
 const A = '../../assets/';
 const ROWS=[{no:10,item:'사과',variety:'부사',name:'사과/부사/특/20kg',deal:'입찰',producer:'김원생',qty:'300PT',remain:300,price:'-',deadline:'2023-05-05\n18:00',grade:'문경',region:'가락시장',ship:'2023\n05-05',liked:true},{no:9,item:'사과',variety:'부사',name:'사과/부사/특/20kg',deal:'정가',producer:'',qty:'300PT',remain:50,price:'50,000원',deadline:'2023-05-05\n18:00',grade:'문경',region:'가락시장',ship:'2023\n05-05'},{no:8,item:'사과',variety:'부사',name:'사과/부사/특/20kg',deal:'입찰',producer:'김원생',qty:'300PT',remain:300,price:'-',deadline:'2023-05-05\n18:00',grade:'문경',region:'가락시장',ship:'2023\n05-05',disabled:true},{no:7,item:'사과',variety:'부사',name:'사과/부사/특/20kg',deal:'정가',producer:'김원생',qty:'300PT',remain:50,price:'50,000원',deadline:'2023-05-05\n18:00',grade:'문경',region:'가락시장',ship:'2023\n05-05'}];
 const FAQ=[{title:'[배송] 배송기간은 얼마나 되나요?',content:'상품의 평균 배송일은 3~4일(주말, 공휴일 제외) 정도 소요됩니다.\n자세한 배송일자는 상품 상세 페이지에서 확인이 가능합니다.'},{title:'[회원] 회원탈퇴는 어떻게 해야 하나요?',content:'마이페이지 > 회원정보관리 > 회원탈퇴에서 신청할 수 있습니다.'},{title:'[배송] 배송조회는 어디에서 할 수 있나요?',content:'마이페이지 > 주문/배송내역에서 확인할 수 있습니다.'}];
-const META = {"name":"Input","prov":"master","node":"218:600","use":"Single-line text entry, 287×45 r5, inset 14, Regular 14.","props":["state","value","onChange","placeholder","errorMessage","disabled","width"],"states":"Default · Focus · Error (+message) · Disabled"};
+const META = {"name":"Input","prov":"master","node":"218:600","use":"한 줄 입력 287×45 r5, 좌우 14","props":["state","value","onChange","placeholder","errorMessage","disabled","width"],"states":"기본·포커스·오류(+문구)·비활성","ko":"입력 · Input"};
 function Demo(){return (<>
-<KSec label="STATE MATRIX" align="flex-start"><Input width={287}/><Input state="focus" width={287}/><Input state="error" width={287} errorMessage="필수항목을 입력해주세요."/><Input state="disabled" placeholder="Disabled" width={287}/></KSec>
-<KSec label="MOBILE · 100%"><div style={{width:350}}><Input width="100%" placeholder="아이디"/></div></KSec>
+<KSec label="상태 매트릭스" align="flex-start"><Input width={287}/><Input state="focus" width={287}/><Input state="error" width={287} errorMessage="필수항목을 입력해주세요."/><Input state="disabled" placeholder="Disabled" width={287}/></KSec>
+<KSec label="모바일 · 100%"><div style={{width:350}}><Input width="100%" placeholder="아이디"/></div></KSec>
 </>);}
 ReactDOM.createRoot(document.getElementById('r')).render(<KCard meta={META}><Demo/></KCard>);
 </script></body></html>

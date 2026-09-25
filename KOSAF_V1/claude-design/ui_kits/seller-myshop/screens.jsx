@@ -7,7 +7,7 @@ const SELLER_NAV = [
   { label: '통계', items: ['기간별 주문내역', '품목별 주문내역'] },
   { label: '정산관리', items: ['정산예정', '정산내역', '세금계산서'] },
 ];
-const DEALS = [['2023-04-23', '사과/부사/특/20kg', '100', '1,000,000원', '결제완료'], ['2023-04-22', '배/신고/특/15kg', '20', '400,000원', '가격협상'], ['2023-04-21', '포도/캠벨/5kg', '50', '250,000원', '배송준비중']];
+const DEALS = [[PRODUCTS[0], 10, '2023-05-08', '결제완료'], [PRODUCTS[2], 4, '2023-05-06', '가격협상'], [PRODUCTS[3], 5, '2023-05-02', '배송준비중']].map(([p, q, d, s]) => [d, p.name, num(q), won(p.price * q), s]);
 
 function ShopInfo({ mobile }) {
   return <KS.DescriptionList device={mobile ? 'mobile' : 'desktop'} labelWidth={mobile ? 100 : 200} items={[{ label: '판매자', value: '서울청과' }, { label: '경매사', value: '김환수' }, { label: '판매자 의견', value: '당일 경매 물량 기준으로 출고합니다. (예시)' }, { label: '경매사 의견', value: '상품 상태 양호. (예시)' }, { label: '이미지 파일', value: <span style={{ color: 'var(--kosaf-color-text-muted)' }}>파일 없음</span> }]} />;
@@ -23,7 +23,7 @@ function SellerShopPC() {
       <div style={{ display: 'flex', gap: 60 }}>
         <KS.SideNav title="마이샵관리" groups={SELLER_NAV} active={nav} onSelect={setNav} />
         <div style={{ flex: 1, minWidth: 0, display: 'flex', flexDirection: 'column', gap: 50 }}>
-          <PageTitle size={30}>마이샵 홈</PageTitle>
+          <PageHead size={30} title="마이샵 홈" desc="정산 예정금액과 진행 중인 거래를 확인하고 상세를 처리합니다." style={{ marginBottom: 0 }} />
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 20 }}>{[['정산예정', '10,000', 'analytics'], ['정가거래', '12', 'purchase'], ['입찰거래', '3'], ['가격협상', '2']].map(([l, v, ic]) => <KS.MetricCard key={l} width="100%" label={l} unit={l === '정산예정' ? '(만원)' : '(건)'} value={v} icon={ic ? <KS.Icon name={ic} size={34} style={{ filter: 'brightness(0) invert(1)' }} /> : null} />)}</div>
           <div><SectionTitle size={24}>판매정보</SectionTitle><ShopInfo /></div>
           <div>
@@ -45,11 +45,11 @@ function SellerShopMo() {
   const [tab, setTab] = React.useState(0);
   return (
     <MoPage>
-      <div style={{ padding: 20 }}><PageTitle size={20}>마이샵 홈</PageTitle></div>
-      <div style={{ padding: '0 20px 20px', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>{[['정산예정', '10,000'], ['정가거래', '12']].map(([l, v]) => <KS.MetricCard key={l} width="100%" label={l} value={v} icon={<KS.Icon name="analytics" size={34} style={{ filter: 'brightness(0) invert(1)' }} />} />)}</div>
-      <div role="tablist" style={{ display: 'flex', gap: 8, padding: '0 20px 16px' }}>{['판매정보', '거래목록'].map((t, i) => <KS.Tab key={t} selected={tab === i} onClick={() => setTab(i)} width={120}>{t}</KS.Tab>)}</div>
+      <div style={{ padding: '20px 16px 0' }}><PageHead mobile title="마이샵 홈" /></div>
+      <div style={{ padding: '0 16px 20px', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>{[['정산예정', '10,000'], ['정가거래', '12']].map(([l, v]) => <KS.MetricCard key={l} width="100%" label={l} value={v} icon={<KS.Icon name="analytics" size={34} style={{ filter: 'brightness(0) invert(1)' }} />} />)}</div>
+      <div role="tablist" style={{ display: 'flex', gap: 8, padding: '0 16px 16px' }}>{['판매정보', '거래목록'].map((t, i) => <KS.Tab key={t} selected={tab === i} onClick={() => setTab(i)} width={120}>{t}</KS.Tab>)}</div>
       {tab === 0 ? <ShopInfo mobile /> : <div role="table">{DEALS.map((d, i) => <KS.TableRow key={i} device="mobile" cells={[d[1], d[4]]} style={{ borderTop: i ? 0 : undefined }} />)}</div>}
-      <div style={{ padding: 20 }}><DemoNote>수치·목록은 예시</DemoNote></div>
+      <div style={{ padding: '20px 16px 32px' }}><DemoNote>수치·목록은 예시 데이터입니다</DemoNote></div>
     </MoPage>
   );
 }

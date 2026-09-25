@@ -27,4 +27,5 @@ export interface ProductCardProps {
   style?: React.CSSProperties;
 }
 export declare function ProductCard(props: ProductCardProps): JSX.Element | null;
+export declare function ImageSlot(props: { src?: string; alt?: string; width?: number | string; height?: number | string; ratio?: string; radius?: number; label?: string; dim?: boolean; style?: React.CSSProperties }): JSX.Element;
 export declare function DealBadge(props: { type?: string; size?: 'md' | 'sm'; muted?: boolean }): JSX.Element;

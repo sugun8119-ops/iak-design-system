@@ -1,7 +1,7 @@
 // 구매자 마이페이지 홈 — Source: 1:88132 (PC 1920×2622), 1:87784 (Mo 390×2203), LNB 1:90423, MetricCard 1:87886
 const METRICS = [['여신금액', '10,000', 'purchase'], ['사용금액', '1,000', 'analytics'], ['한도금액', '9,000'], ['사용가능금액', '8,800']];
-const FLOW = [['주문', 0], ['상품준비', 0], ['출고', 0], ['인수', 0], ['구매확정', 0]];
-const QNA = [['답변대기', '주문한지 1주가 지났는데 아직 배송이...', '2023-03-24'], ['답변완료', '주문한지 1주가 지났는데 아직 배송이...', '2023-03-24'], ['답변완료', '주문한지 1주가 지났는데 아직 배송이...', '2023-03-24']];
+const FLOW = [['주문', 2], ['상품준비', 1], ['출고', 1], ['인수', 0], ['구매확정', 3]];
+const QNA = [['답변대기', '주문한지 1주가 지났는데 아직 배송이 시작되지 않았어요.', '2023-05-08'], ['답변완료', '납품장소를 변경할 수 있나요?', '2023-04-28'], ['답변완료', '세금계산서 발행 일정이 궁금합니다.', '2023-04-21']];
 const icoW = (n) => (n ? <KS.Icon name={n} size={34} style={{ filter: 'brightness(0) invert(1)' }} /> : null);
 
 function Welcome({ mobile }) {
@@ -29,11 +29,11 @@ function BuyerMyPC() {
       <div style={{ display: 'flex', gap: 60 }}>
         <KS.SideNav title="마이페이지" active={nav} onSelect={setNav} />
         <div style={{ flex: 1, minWidth: 0, display: 'flex', flexDirection: 'column', gap: 50 }}>
-          <PageTitle size={30}>마이페이지 홈</PageTitle>
+          <PageHead size={30} title="마이페이지 홈" desc="여신 한도와 주문·문의 현황을 한눈에 확인합니다." style={{ marginBottom: 0 }} />
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 2fr', gap: 30 }}><Welcome /><div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 20 }}>{METRICS.map(([l, v, ic]) => <KS.MetricCard key={l} width="100%" label={l} value={v} icon={icoW(ic)} />)}</div></div>
           <div><SectionTitle size={24} right={<a href="#" style={{ fontSize: 14, color: 'var(--kosaf-color-text-secondary)', textDecoration: 'underline' }}>더보기 &gt;</a>}>주문배송내역</SectionTitle><Flow /></div>
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 40 }}>
-            <div><SectionTitle size={24}>최근 주문</SectionTitle><div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}><KS.ProductListItem device="desktop" imageSrc={IMG_M} status="배송준비중" date="2023-06-14" title="거창농산 13브릭스이상 당도좋은 아삭사과 껍질째먹는 꿀 햇 부사..." price="13,950원" /><KS.ProductListItem device="desktop" imageSrc={IMG_M} status="배송완료" statusTone="done" date="2023-06-14" title="거창농산 13브릭스이상 당도좋은 아삭사과" price="13,950원" /></div></div>
+            <div><SectionTitle size={24}>최근 주문</SectionTitle><div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}><KS.ProductListItem device="desktop" imageSrc={IMG_M} status="배송준비중" date="2023-05-08" title={PRODUCTS[0].name + ' · 10박스'} price={won(PRODUCTS[0].price * 10)} /><KS.ProductListItem device="desktop" status="배송완료" statusTone="done" date="2023-04-27" title={PRODUCTS[2].name + ' · 4박스'} price={won(PRODUCTS[2].price * 4)} /></div></div>
             <div><SectionTitle size={24}>문의내역</SectionTitle><QnaList /></div>
           </div>
         </div>
@@ -45,12 +45,12 @@ function BuyerMyPC() {
 function BuyerMyMo() {
   return (
     <MoPage>
-      <div style={{ padding: 20 }}><PageTitle size={20} style={{ marginBottom: 14 }}>마이페이지 홈</PageTitle><Welcome mobile /></div>
+      <div style={{ padding: '20px 16px' }}><PageHead mobile title="마이페이지 홈" /><Welcome mobile /></div>
       <div style={{ background: 'var(--kosaf-color-bg-subtle)', padding: 20, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16, borderTop: '1px solid var(--kosaf-color-border-default)' }}>{METRICS.map(([l, v, ic]) => <KS.MetricCard key={l} width="100%" label={l} value={v} icon={icoW(ic)} />)}</div>
       <div style={{ padding: '24px 0 0' }}><div style={{ padding: '0 20px 14px', fontSize: 20, fontWeight: 500 }}>서비스바로가기</div>{['거래관리', '주문관리', '정산관리', '관심목록', 'Q&A'].map((s) => <button key={s} style={{ width: '100%', height: 73, display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0 20px', border: 0, borderTop: '1px solid var(--kosaf-color-border-default)', background: '#fff', fontFamily: 'inherit', fontSize: 20, cursor: 'pointer' }}>{s}<KS.Icon name="navigate" rotate={180} size={20} /></button>)}</div>
       <div style={{ height: 8, background: 'var(--kosaf-color-border-default)' }}></div>
       <div style={{ padding: 20 }}><div style={{ fontSize: 16, fontWeight: 500, marginBottom: 12 }}>주문배송내역</div><Flow mobile /></div>
-      <div style={{ padding: '0 20px 20px', display: 'flex', flexDirection: 'column', gap: 20 }}><KS.ProductListItem imageSrc={IMG_M} status="배송준비중" date="2023-06-14" title="거창농산 13브릭스이상 당도좋은 아삭사과 껍질째먹는 꿀 햇 부사..." price="13,950원" /><KS.ProductListItem imageSrc={IMG_M} status="배송완료" statusTone="done" date="2023-06-14" title="거창농산 13브릭스이상 당도좋은 아삭사과" price="13,950원" /></div>
+      <div style={{ padding: '0 16px 20px', display: 'flex', flexDirection: 'column', gap: 20 }}><KS.ProductListItem imageSrc={IMG_M} status="배송준비중" date="2023-05-08" title={PRODUCTS[0].name + ' · 10박스'} price={won(PRODUCTS[0].price * 10)} /><KS.ProductListItem status="배송완료" statusTone="done" date="2023-04-27" title={PRODUCTS[2].name + ' · 4박스'} price={won(PRODUCTS[2].price * 4)} /></div>
       <div style={{ padding: '0 20px 30px' }}><div style={{ fontSize: 16, fontWeight: 500, marginBottom: 8 }}>문의내역</div><QnaList mobile /></div>
     </MoPage>
   );

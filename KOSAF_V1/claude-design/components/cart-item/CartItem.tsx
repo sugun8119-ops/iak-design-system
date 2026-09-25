@@ -3,6 +3,7 @@ import { Checkbox } from '../checkbox/Checkbox.jsx';
 import { QuantityStepper } from '../quantity-stepper/QuantityStepper.tsx';
 import { DateField } from '../date-field/DateField.tsx';
 import { CloseX } from '../mobile-menu/MobileMenu.tsx';
+import { ImageSlot } from '../product-card/ProductCard.tsx';
 
 const F = 'var(--kosaf-font)';
 
@@ -15,12 +16,12 @@ export function CartItem({ imageSrc, title = '프리미엄 부사 꿀사과 5kg'
     <article aria-label={title} style={{ fontFamily: F, color: 'var(--kosaf-color-text-primary)', ...style }}>
       <div style={{ display: 'flex', gap: m ? 12 : 24, alignItems: 'flex-start' }}>
         {selectable ? <Checkbox checked={!!selected} onChange={onSelect} aria-label={title + ' 선택'} style={{ marginTop: m ? 38 : 50 }} /> : null}
-        <div style={{ flex: '0 0 ' + (m ? 100 : 120) + 'px', height: m ? 100 : 120, background: 'var(--kosaf-gray-100)', overflow: 'hidden' }}>{imageSrc ? <img src={imageSrc} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} /> : null}</div>
+        <ImageSlot src={imageSrc} alt={title} width={m ? 100 : 120} height={m ? 100 : 120} radius={5} />
         <div style={{ flex: 1, minWidth: 0 }}>
           <div style={{ fontSize: m ? 14 : 18, fontWeight: 700, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{title}</div>
-          <div style={{ fontSize: m ? 16 : 20, fontWeight: 700, margin: '2px 0 4px' }}>{price}</div>
+          <div style={{ fontVariantNumeric: 'tabular-nums', fontSize: m ? 16 : 20, fontWeight: 700, margin: '2px 0 4px' }}>{price}</div>
           <dl style={{ margin: 0, display: 'grid', gridTemplateColumns: 'auto 1fr', columnGap: 10, fontSize: m ? 13 : 14, lineHeight: m ? '20px' : '22px' }}>
-            {specs.map(([k, v]) => <React.Fragment key={k}><dt style={{ color: 'var(--kosaf-color-text-primary)' }}>{k}</dt><dd style={{ margin: 0 }}>{v}</dd></React.Fragment>)}
+            {specs.map(([k, v]) => <React.Fragment key={k}><dt style={{ color: 'var(--kosaf-color-text-secondary)', whiteSpace: 'nowrap' }}>{k}</dt><dd style={{ margin: 0, fontVariantNumeric: 'tabular-nums' }}>{v}</dd></React.Fragment>)}
           </dl>
         </div>
         {onRemove ? <button type="button" aria-label={title + ' 삭제'} onClick={onRemove} style={{ width: 32, height: 32, background: 'none', border: 0, cursor: 'pointer', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}><CloseX size={14} /></button> : null}
@@ -29,7 +30,7 @@ export function CartItem({ imageSrc, title = '프리미엄 부사 꿀사과 5kg'
         <div style={row}><span style={{ whiteSpace: 'nowrap' }}>주문수량</span>{editableQuantity ? <QuantityStepper value={quantity ?? 1} onChange={onQuantity} /> : <strong style={{ fontSize: 18, color: 'var(--kosaf-color-text-muted)' }}>{quantity}</strong>}</div>
         <div style={row}>{req('납품기일')}<DateField size="sm" width={160} value={deliveryDate} onChange={onDeliveryDate} aria-label="납품기일" /></div>
         <div style={row}>{req('납품장소')}<span style={{ display: 'inline-flex', alignItems: 'center', gap: 10 }}><strong style={{ fontSize: m ? 17 : 18, whiteSpace: 'nowrap' }}>{place}</strong><button type="button" onClick={onChangePlace} style={{ height: 32, padding: '0 12px', border: '1px solid var(--kosaf-color-action-primary)', borderRadius: 3, background: '#fff', color: 'var(--kosaf-color-action-primary)', fontFamily: F, fontSize: 14, cursor: 'pointer' }}>배송지 변경</button></span></div>
-        <div style={row}><span style={{ whiteSpace: 'nowrap' }}>운임</span><span><span style={{ fontSize: 12, color: 'var(--kosaf-color-text-muted)' }}>{freightNote} </span><strong style={{ fontSize: 18 }}>{freight}</strong></span></div>
+        <div style={row}><span style={{ whiteSpace: 'nowrap' }}>운임</span><span><span style={{ fontSize: 12, color: 'var(--kosaf-color-text-muted)' }}>{freightNote} </span><strong style={{ fontSize: 18, fontVariantNumeric: 'tabular-nums' }}>{freight}</strong></span></div>
       </div>
     </article>
   );

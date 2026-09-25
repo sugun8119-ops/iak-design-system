@@ -1,4 +1,4 @@
-/* @ds-bundle: {"format":4,"namespace":"KOSAFV1ProjectDesignSystem_f8c97b","components":[{"name":"Accordion","sourcePath":"components/accordion/Accordion.tsx"},{"name":"AlertDialog","sourcePath":"components/alert-dialog/AlertDialog.tsx"},{"name":"Badge","sourcePath":"components/badge/Badge.jsx"},{"name":"BottomActionBar","sourcePath":"components/bottom-action-bar/BottomActionBar.tsx"},{"name":"Breadcrumb","sourcePath":"components/breadcrumb/Breadcrumb.tsx"},{"name":"Button","sourcePath":"components/button/Button.jsx"},{"name":"CartItem","sourcePath":"components/cart-item/CartItem.tsx"},{"name":"Checkbox","sourcePath":"components/checkbox/Checkbox.jsx"},{"name":"CompareTable","sourcePath":"components/compare-table/CompareTable.tsx"},{"name":"DateField","sourcePath":"components/date-field/DateField.tsx"},{"name":"DateRange","sourcePath":"components/date-range/DateRange.tsx"},{"name":"DescriptionList","sourcePath":"components/description-list/DescriptionList.tsx"},{"name":"EmptyState","sourcePath":"components/empty-state/EmptyState.tsx"},{"name":"FileUpload","sourcePath":"components/file-upload/FileUpload.tsx"},{"name":"FilterChip","sourcePath":"components/filter-chip/FilterChip.tsx"},{"name":"DEFAULT_FILTER_GROUPS","sourcePath":"components/filter-panel/FilterPanel.tsx"},{"name":"FilterPanel","sourcePath":"components/filter-panel/FilterPanel.tsx"},{"name":"Footer","sourcePath":"components/footer/Footer.tsx"},{"name":"FormField","sourcePath":"components/form-field/FormField.tsx"},{"name":"Header","sourcePath":"components/header/Header.tsx"},{"name":"IconRegistry","sourcePath":"components/icon/Icon.tsx"},{"name":"Icon","sourcePath":"components/icon/Icon.tsx"},{"name":"KOSAF_ICONS","sourcePath":"components/icon/icons.data.js"},{"name":"Input","sourcePath":"components/input/Input.jsx"},{"name":"MetricCard","sourcePath":"components/metric-card/MetricCard.tsx"},{"name":"MobileHeader","sourcePath":"components/mobile-header/MobileHeader.tsx"},{"name":"CloseX","sourcePath":"components/mobile-menu/MobileMenu.tsx"},{"name":"MobileMenu","sourcePath":"components/mobile-menu/MobileMenu.tsx"},{"name":"Modal","sourcePath":"components/modal/Modal.jsx"},{"name":"SAMPLE_NOTIFICATIONS","sourcePath":"components/notification-list/NotificationList.tsx"},{"name":"NotificationList","sourcePath":"components/notification-list/NotificationList.tsx"},{"name":"OrderSummary","sourcePath":"components/order-summary/OrderSummary.tsx"},{"name":"PaginationItem","sourcePath":"components/pagination-item/PaginationItem.jsx"},{"name":"Pagination","sourcePath":"components/pagination/Pagination.tsx"},{"name":"EXAMPLE_PRICE_SERIES","sourcePath":"components/price-trend/PriceTrend.tsx"},{"name":"PriceTrend","sourcePath":"components/price-trend/PriceTrend.tsx"},{"name":"DealBadge","sourcePath":"components/product-card/ProductCard.tsx"},{"name":"ProductCard","sourcePath":"components/product-card/ProductCard.tsx"},{"name":"ProductListItem","sourcePath":"components/product-list-item/ProductListItem.tsx"},{"name":"PRODUCT_TABLE_COLUMNS","sourcePath":"components/product-table/ProductTable.tsx"},{"name":"ProductTable","sourcePath":"components/product-table/ProductTable.tsx"},{"name":"ProgressSteps","sourcePath":"components/progress-steps/ProgressSteps.tsx"},{"name":"QuantityStepper","sourcePath":"components/quantity-stepper/QuantityStepper.tsx"},{"name":"Radio","sourcePath":"components/radio/Radio.jsx"},{"name":"Rating","sourcePath":"components/rating/Rating.tsx"},{"name":"ReviewItem","sourcePath":"components/review-item/ReviewItem.tsx"},{"name":"Search","sourcePath":"components/search/Search.jsx"},{"name":"SegmentedControl","sourcePath":"components/segmented-control/SegmentedControl.tsx"},{"name":"Select","sourcePath":"components/select/Select.tsx"},{"name":"BUYER_NAV","sourcePath":"components/side-nav/SideNav.tsx"},{"name":"SideNav","sourcePath":"components/side-nav/SideNav.tsx"},{"name":"Stepper","sourcePath":"components/stepper/Stepper.jsx"},{"name":"Tab","sourcePath":"components/tab/Tab.jsx"},{"name":"TableRow","sourcePath":"components/table-row/TableRow.jsx"},{"name":"Textarea","sourcePath":"components/textarea/Textarea.tsx"}],"sourceHashes":{"components/accordion/Accordion.tsx":"8560aa05e22e","components/alert-dialog/AlertDialog.tsx":"44425b4ef882","components/badge/Badge.jsx":"edfca979276b","components/bottom-action-bar/BottomActionBar.tsx":"57a5f94d4436","components/breadcrumb/Breadcrumb.tsx":"3546712a7b5d","components/button/Button.jsx":"77ef0cb16c7c","components/cart-item/CartItem.tsx":"c384b071a854","components/checkbox/Checkbox.jsx":"748aefc9df7d","components/compare-table/CompareTable.tsx":"568055e4cf3b","components/date-field/DateField.tsx":"fcf7f48512e1","components/date-range/DateRange.tsx":"5566407845f5","components/description-list/DescriptionList.tsx":"c9fb6d111868","components/empty-state/EmptyState.tsx":"06faa6297076","components/file-upload/FileUpload.tsx":"4e450c291a73","components/filter-chip/FilterChip.tsx":"55952a0eb31d","components/filter-panel/FilterPanel.tsx":"29bf2a7843dc","components/footer/Footer.tsx":"c7ab7c05ec89","components/form-field/FormField.tsx":"ae08c11e587d","components/header/Header.tsx":"c4bdac51314d","components/icon/Icon.tsx":"21804f08e5bf","components/icon/icons.data.js":"1f82893c6d66","components/input/Input.jsx":"3532a15127cf","components/metric-card/MetricCard.tsx":"ec800656185f","components/mobile-header/MobileHeader.tsx":"402cca9d49f8","components/mobile-menu/MobileMenu.tsx":"d37309ac207d","components/modal/Modal.jsx":"629455cea605","components/notification-list/NotificationList.tsx":"9ffa759a8284","components/order-summary/OrderSummary.tsx":"33c085486b10","components/pagination-item/PaginationItem.jsx":"7e2ef2fb0efa","components/pagination/Pagination.tsx":"7e5a64dee005","components/price-trend/PriceTrend.tsx":"70e1b798e407","components/product-card/ProductCard.tsx":"7951e5fb881f","components/product-list-item/ProductListItem.tsx":"4e4541af76a7","components/product-table/ProductTable.tsx":"e399db5a70b0","components/progress-steps/ProgressSteps.tsx":"52c10c6d4b2a","components/quantity-stepper/QuantityStepper.tsx":"72e69440df7c","components/radio/Radio.jsx":"611574d2b25b","components/rating/Rating.tsx":"f46fd79aca51","components/review-item/ReviewItem.tsx":"0566eacd93b3","components/search/Search.jsx":"99eb34ed21a7","components/segmented-control/SegmentedControl.tsx":"886ff4520da5","components/select/Select.tsx":"58f4f7169a9e","components/side-nav/SideNav.tsx":"058b075d3562","components/stepper/Stepper.jsx":"dc152d73de22","components/tab/Tab.jsx":"72cfb7408f43","components/table-row/TableRow.jsx":"63a4c3cdf9de","components/textarea/Textarea.tsx":"7d0862d8af5a","guidelines/card-kit.js":"254902519f38","guidelines/source-styles.js":"ce6425475665","ui_kits/_shared/shell.jsx":"3cdeb3f50120","ui_kits/buyer-mypage/screens.jsx":"8a62621b11c2","ui_kits/cart/screens.jsx":"56ebe1ebd1c9","ui_kits/checkout/screens.jsx":"1fe214d7b884","ui_kits/login/screens.jsx":"f3c0d4900aed","ui_kits/product-detail/screens.jsx":"a5cf657fee07","ui_kits/search-results/screens.jsx":"dfe9ab4d99bf","ui_kits/seller-myshop/screens.jsx":"a376e8a1337c","ui_kits/seller-signup/screens.jsx":"a4d3e52d3c8b","ui_kits/support/screens.jsx":"c91f530c1623"},"inlinedExternals":[],"unexposedExports":[]} */
+/* @ds-bundle: {"format":4,"namespace":"KOSAFV1ProjectDesignSystem_f8c97b","components":[{"name":"Accordion","sourcePath":"components/accordion/Accordion.tsx"},{"name":"AlertDialog","sourcePath":"components/alert-dialog/AlertDialog.tsx"},{"name":"Badge","sourcePath":"components/badge/Badge.jsx"},{"name":"BottomActionBar","sourcePath":"components/bottom-action-bar/BottomActionBar.tsx"},{"name":"Breadcrumb","sourcePath":"components/breadcrumb/Breadcrumb.tsx"},{"name":"Button","sourcePath":"components/button/Button.jsx"},{"name":"CartItem","sourcePath":"components/cart-item/CartItem.tsx"},{"name":"Checkbox","sourcePath":"components/checkbox/Checkbox.jsx"},{"name":"CompareTable","sourcePath":"components/compare-table/CompareTable.tsx"},{"name":"DateField","sourcePath":"components/date-field/DateField.tsx"},{"name":"DateRange","sourcePath":"components/date-range/DateRange.tsx"},{"name":"DescriptionList","sourcePath":"components/description-list/DescriptionList.tsx"},{"name":"EmptyState","sourcePath":"components/empty-state/EmptyState.tsx"},{"name":"FileUpload","sourcePath":"components/file-upload/FileUpload.tsx"},{"name":"FilterChip","sourcePath":"components/filter-chip/FilterChip.tsx"},{"name":"DEFAULT_FILTER_GROUPS","sourcePath":"components/filter-panel/FilterPanel.tsx"},{"name":"FilterPanel","sourcePath":"components/filter-panel/FilterPanel.tsx"},{"name":"Footer","sourcePath":"components/footer/Footer.tsx"},{"name":"FormField","sourcePath":"components/form-field/FormField.tsx"},{"name":"Header","sourcePath":"components/header/Header.tsx"},{"name":"IconRegistry","sourcePath":"components/icon/Icon.tsx"},{"name":"Icon","sourcePath":"components/icon/Icon.tsx"},{"name":"KOSAF_ICONS","sourcePath":"components/icon/icons.data.js"},{"name":"Input","sourcePath":"components/input/Input.jsx"},{"name":"MetricCard","sourcePath":"components/metric-card/MetricCard.tsx"},{"name":"MobileHeader","sourcePath":"components/mobile-header/MobileHeader.tsx"},{"name":"CloseX","sourcePath":"components/mobile-menu/MobileMenu.tsx"},{"name":"MobileMenu","sourcePath":"components/mobile-menu/MobileMenu.tsx"},{"name":"Modal","sourcePath":"components/modal/Modal.jsx"},{"name":"SAMPLE_NOTIFICATIONS","sourcePath":"components/notification-list/NotificationList.tsx"},{"name":"NotificationList","sourcePath":"components/notification-list/NotificationList.tsx"},{"name":"OrderSummary","sourcePath":"components/order-summary/OrderSummary.tsx"},{"name":"PaginationItem","sourcePath":"components/pagination-item/PaginationItem.jsx"},{"name":"Pagination","sourcePath":"components/pagination/Pagination.tsx"},{"name":"EXAMPLE_PRICE_SERIES","sourcePath":"components/price-trend/PriceTrend.tsx"},{"name":"PriceTrend","sourcePath":"components/price-trend/PriceTrend.tsx"},{"name":"ImageSlot","sourcePath":"components/product-card/ProductCard.tsx"},{"name":"DealBadge","sourcePath":"components/product-card/ProductCard.tsx"},{"name":"ProductCard","sourcePath":"components/product-card/ProductCard.tsx"},{"name":"ProductListItem","sourcePath":"components/product-list-item/ProductListItem.tsx"},{"name":"PRODUCT_TABLE_COLUMNS","sourcePath":"components/product-table/ProductTable.tsx"},{"name":"ProductTable","sourcePath":"components/product-table/ProductTable.tsx"},{"name":"ProgressSteps","sourcePath":"components/progress-steps/ProgressSteps.tsx"},{"name":"QuantityStepper","sourcePath":"components/quantity-stepper/QuantityStepper.tsx"},{"name":"Radio","sourcePath":"components/radio/Radio.jsx"},{"name":"Rating","sourcePath":"components/rating/Rating.tsx"},{"name":"ReviewItem","sourcePath":"components/review-item/ReviewItem.tsx"},{"name":"Search","sourcePath":"components/search/Search.jsx"},{"name":"SegmentedControl","sourcePath":"components/segmented-control/SegmentedControl.tsx"},{"name":"Select","sourcePath":"components/select/Select.tsx"},{"name":"BUYER_NAV","sourcePath":"components/side-nav/SideNav.tsx"},{"name":"SideNav","sourcePath":"components/side-nav/SideNav.tsx"},{"name":"Stepper","sourcePath":"components/stepper/Stepper.jsx"},{"name":"Tab","sourcePath":"components/tab/Tab.jsx"},{"name":"TableRow","sourcePath":"components/table-row/TableRow.jsx"},{"name":"Textarea","sourcePath":"components/textarea/Textarea.tsx"}],"sourceHashes":{"components/accordion/Accordion.tsx":"8560aa05e22e","components/alert-dialog/AlertDialog.tsx":"44425b4ef882","components/badge/Badge.jsx":"edfca979276b","components/bottom-action-bar/BottomActionBar.tsx":"57a5f94d4436","components/breadcrumb/Breadcrumb.tsx":"3546712a7b5d","components/button/Button.jsx":"77ef0cb16c7c","components/cart-item/CartItem.tsx":"9977c13eb016","components/checkbox/Checkbox.jsx":"748aefc9df7d","components/compare-table/CompareTable.tsx":"02479305a67a","components/date-field/DateField.tsx":"fcf7f48512e1","components/date-range/DateRange.tsx":"5566407845f5","components/description-list/DescriptionList.tsx":"621ef105b820","components/empty-state/EmptyState.tsx":"06faa6297076","components/file-upload/FileUpload.tsx":"4e450c291a73","components/filter-chip/FilterChip.tsx":"55952a0eb31d","components/filter-panel/FilterPanel.tsx":"29bf2a7843dc","components/footer/Footer.tsx":"c7ab7c05ec89","components/form-field/FormField.tsx":"ae08c11e587d","components/header/Header.tsx":"c4bdac51314d","components/icon/Icon.tsx":"21804f08e5bf","components/icon/icons.data.js":"1f82893c6d66","components/input/Input.jsx":"3532a15127cf","components/metric-card/MetricCard.tsx":"5201fb65d364","components/mobile-header/MobileHeader.tsx":"402cca9d49f8","components/mobile-menu/MobileMenu.tsx":"d37309ac207d","components/modal/Modal.jsx":"629455cea605","components/notification-list/NotificationList.tsx":"9ffa759a8284","components/order-summary/OrderSummary.tsx":"dbfb64437d95","components/pagination-item/PaginationItem.jsx":"7e2ef2fb0efa","components/pagination/Pagination.tsx":"7e5a64dee005","components/price-trend/PriceTrend.tsx":"70e1b798e407","components/product-card/ProductCard.tsx":"3637ada2bf50","components/product-list-item/ProductListItem.tsx":"048cdc35efd6","components/product-table/ProductTable.tsx":"bbde1160dcd9","components/progress-steps/ProgressSteps.tsx":"52c10c6d4b2a","components/quantity-stepper/QuantityStepper.tsx":"36be6baac8ee","components/radio/Radio.jsx":"611574d2b25b","components/rating/Rating.tsx":"f46fd79aca51","components/review-item/ReviewItem.tsx":"0566eacd93b3","components/search/Search.jsx":"99eb34ed21a7","components/segmented-control/SegmentedControl.tsx":"886ff4520da5","components/select/Select.tsx":"58f4f7169a9e","components/side-nav/SideNav.tsx":"058b075d3562","components/stepper/Stepper.jsx":"dc152d73de22","components/tab/Tab.jsx":"72cfb7408f43","components/table-row/TableRow.jsx":"63a4c3cdf9de","components/textarea/Textarea.tsx":"7d0862d8af5a","guidelines/card-kit.js":"21b95b145371","guidelines/source-styles.js":"ce6425475665","ui_kits/_shared/shell.jsx":"7f10fd1d8720","ui_kits/buyer-mypage/screens.jsx":"8a62621b11c2","ui_kits/cart/screens.jsx":"80e203746f97","ui_kits/checkout/screens.jsx":"9f15fa716dac","ui_kits/login/screens.jsx":"f3c0d4900aed","ui_kits/product-detail/screens.jsx":"f0545c564b1d","ui_kits/search-results/screens.jsx":"4f492314e13e","ui_kits/seller-myshop/screens.jsx":"a376e8a1337c","ui_kits/seller-signup/screens.jsx":"0d168b0f0615","ui_kits/support/screens.jsx":"c91f530c1623"},"inlinedExternals":[],"unexposedExports":[]} */
 
 (() => {
 
@@ -483,107 +483,6 @@ function Checkbox({
 Object.assign(__ds_scope, { Checkbox });
 })(); } catch (e) { __ds_ns.__errors.push({ path: "components/checkbox/Checkbox.jsx", error: String((e && e.message) || e) }); }
 
-// components/compare-table/CompareTable.tsx
-try { (() => {
-const F = 'var(--kosaf-font)';
-
-/** KOSAF CompareTable — Source-derived from 상품 비교하기 1:90204 (modal 1004 wide: thumbnails row 780×270, 결제정보 900×272, actions 260×45). Attributes as rows, products as columns. */
-function CompareTable({
-  products = [],
-  rows = [],
-  highlightDiff = true,
-  style
-}) {
-  const diff = key => highlightDiff && new Set(products.map(p => String(p[key] ?? ''))).size > 1;
-  return /*#__PURE__*/React.createElement("div", {
-    style: {
-      width: '100%',
-      overflowX: 'auto',
-      fontFamily: F,
-      ...style
-    }
-  }, /*#__PURE__*/React.createElement("table", {
-    style: {
-      width: '100%',
-      borderCollapse: 'collapse',
-      tableLayout: 'fixed',
-      minWidth: 160 + products.length * 200
-    }
-  }, /*#__PURE__*/React.createElement("colgroup", null, /*#__PURE__*/React.createElement("col", {
-    style: {
-      width: 160
-    }
-  }), products.map((p, i) => /*#__PURE__*/React.createElement("col", {
-    key: i
-  }))), /*#__PURE__*/React.createElement("thead", null, /*#__PURE__*/React.createElement("tr", null, /*#__PURE__*/React.createElement("th", {
-    scope: "col",
-    style: {
-      borderBottom: '1px solid var(--kosaf-color-border-default)'
-    }
-  }, /*#__PURE__*/React.createElement("span", {
-    style: {
-      position: 'absolute',
-      width: 1,
-      height: 1,
-      overflow: 'hidden',
-      clip: 'rect(0 0 0 0)'
-    }
-  }, "\uD56D\uBAA9")), products.map((p, i) => /*#__PURE__*/React.createElement("th", {
-    key: i,
-    scope: "col",
-    style: {
-      padding: '0 10px 16px',
-      verticalAlign: 'top',
-      borderBottom: '1px solid var(--kosaf-color-border-default)',
-      fontWeight: 500,
-      fontSize: 16,
-      textAlign: 'left'
-    }
-  }, /*#__PURE__*/React.createElement("div", {
-    style: {
-      aspectRatio: '1 / 1',
-      maxWidth: 240,
-      borderRadius: 10,
-      overflow: 'hidden',
-      background: 'var(--kosaf-gray-100)',
-      marginBottom: 10
-    }
-  }, p.imageSrc ? /*#__PURE__*/React.createElement("img", {
-    src: p.imageSrc,
-    alt: "",
-    style: {
-      width: '100%',
-      height: '100%',
-      objectFit: 'cover',
-      display: 'block'
-    }
-  }) : null), p.name)))), /*#__PURE__*/React.createElement("tbody", null, rows.map(r => /*#__PURE__*/React.createElement("tr", {
-    key: r.key
-  }, /*#__PURE__*/React.createElement("th", {
-    scope: "row",
-    style: {
-      height: 60,
-      padding: '0 20px',
-      textAlign: 'left',
-      background: 'var(--kosaf-color-bg-subtle)',
-      borderBottom: '1px solid var(--kosaf-color-border-default)',
-      fontSize: 16,
-      fontWeight: 500
-    }
-  }, r.label), products.map((p, i) => /*#__PURE__*/React.createElement("td", {
-    key: i,
-    style: {
-      padding: '0 16px',
-      borderBottom: '1px solid var(--kosaf-color-border-default)',
-      fontSize: 16,
-      fontWeight: diff(r.key) ? 700 : 400,
-      color: diff(r.key) ? 'var(--kosaf-color-action-primary)' : 'var(--kosaf-color-text-primary)'
-    }
-  }, p[r.key])))))));
-}
-Object.assign(__ds_scope, { CompareTable });
-})(); } catch (e) { __ds_ns.__errors.push({ path: "components/compare-table/CompareTable.tsx", error: String((e && e.message) || e) }); }
-
 // components/date-field/DateField.tsx
 try { (() => {
 /** KOSAF DateField — Source-derived look from Calender 1:94245 (287×50 r10, 18/34 text, 24px inset). Behaviour = native <input type="date"|"time"> (custom calendar popover is unverified / not built). */
@@ -711,7 +610,7 @@ function DescriptionList({
   style
 }) {
   const m = device === 'mobile';
-  const lw = labelWidth ?? (m ? 110 : 293);
+  const lw = labelWidth ?? (m ? 124 : 293);
   return /*#__PURE__*/React.createElement("dl", {
     style: {
       display: 'grid',
@@ -729,7 +628,8 @@ function DescriptionList({
       minHeight: m ? 50 : 70,
       display: 'flex',
       alignItems: 'center',
-      padding: m ? '10px 16px' : '0 30px',
+      padding: m ? '10px 12px 10px 16px' : '0 30px',
+      wordBreak: 'keep-all',
       background: 'var(--kosaf-color-bg-subtle)',
       borderBottom: '1px solid var(--kosaf-color-border-default)',
       fontSize: m ? 14 : 18,
@@ -756,6 +656,8 @@ function DescriptionList({
       borderBottom: '1px solid var(--kosaf-color-border-default)',
       fontSize: m ? 14 : 18,
       lineHeight: m ? '20px' : '26px',
+      fontVariantNumeric: 'tabular-nums',
+      minWidth: 0,
       color: 'var(--kosaf-color-text-primary)'
     }
   }, it.value))));
@@ -1691,6 +1593,7 @@ function MetricCard({
       fontSize: 20,
       fontWeight: 500,
       lineHeight: '27px',
+      fontVariantNumeric: 'tabular-nums',
       color: 'var(--kosaf-src-text-strong)',
       ...style
     }
@@ -2764,6 +2667,7 @@ function OrderSummary({
         background: 'var(--kosaf-color-bg-subtle)',
         border: '1px solid var(--kosaf-color-border-default)',
         fontFamily: F,
+        fontVariantNumeric: 'tabular-nums',
         ...style
       }
     }, rows.map(([l, v], i) => /*#__PURE__*/React.createElement(React.Fragment, {
@@ -2779,6 +2683,7 @@ function OrderSummary({
       borderRadius: 10,
       background: '#fff',
       fontFamily: F,
+      fontVariantNumeric: 'tabular-nums',
       ...style
     }
   }, /*#__PURE__*/React.createElement("div", {
@@ -2981,11 +2886,81 @@ Object.assign(__ds_scope, { Pagination });
 // components/product-card/ProductCard.tsx
 try { (() => {
 const F = 'var(--kosaf-font)';
+const NUM = {
+  fontVariantNumeric: 'tabular-nums'
+};
 const DEAL = {
   입찰거래: 'var(--kosaf-color-action-danger)',
   정가거래: 'var(--kosaf-color-state-focus)',
   계약거래: 'var(--kosaf-color-action-primary)'
 };
+
+/** Image with an explicit, same-ratio fallback (missing src OR load error). Web refinement: fallback = #F7F7F7 + 1px #EAEAEA + label. */
+function ImageSlot({
+  src,
+  alt = '',
+  width = '100%',
+  height,
+  ratio = '1 / 1',
+  radius = 10,
+  label = '이미지 준비중',
+  dim,
+  style
+}) {
+  const [failed, setFailed] = React.useState(false);
+  React.useEffect(() => setFailed(false), [src]);
+  const box = {
+    boxSizing: 'border-box',
+    position: 'relative',
+    width,
+    height,
+    aspectRatio: height ? undefined : ratio,
+    borderRadius: radius,
+    overflow: 'hidden',
+    flex: '0 0 auto',
+    ...style
+  };
+  if (!src || failed) {
+    return /*#__PURE__*/React.createElement("div", {
+      role: "img",
+      "aria-label": alt ? alt + ' (' + label + ')' : label,
+      style: {
+        ...box,
+        background: 'var(--kosaf-color-bg-subtle)',
+        border: '1px solid var(--kosaf-gray-100)',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center'
+      }
+    }, /*#__PURE__*/React.createElement("span", {
+      style: {
+        fontFamily: F,
+        fontSize: 12,
+        lineHeight: '18px',
+        color: 'var(--kosaf-color-text-muted)',
+        textAlign: 'center',
+        padding: 6
+      }
+    }, label));
+  }
+  return /*#__PURE__*/React.createElement("div", {
+    style: {
+      ...box,
+      background: '#fff'
+    }
+  }, /*#__PURE__*/React.createElement("img", {
+    src: src,
+    alt: alt,
+    onError: () => setFailed(true),
+    style: {
+      display: 'block',
+      width: '100%',
+      height: '100%',
+      objectFit: 'cover',
+      opacity: dim ? 0.45 : 1
+    }
+  }));
+}
 function DealBadge({
   type = '정가거래',
   size = 'md',
@@ -2995,10 +2970,11 @@ function DealBadge({
   const md = size === 'md';
   return /*#__PURE__*/React.createElement("span", {
     style: {
+      boxSizing: 'border-box',
       display: 'inline-flex',
       alignItems: 'center',
       height: md ? 30 : 24,
-      padding: md ? '0 16px' : '0 12px',
+      padding: md ? '0 16px' : '0 10px',
       borderRadius: md ? 10 : 20,
       border: '1px solid ' + c,
       background: '#fff',
@@ -3006,13 +2982,19 @@ function DealBadge({
       fontFamily: F,
       fontSize: md ? 16 : 12,
       fontWeight: 500,
+      lineHeight: 1,
       whiteSpace: 'nowrap'
     }
   }, type);
 }
+const split = m => {
+  const i = m.indexOf(':');
+  return i < 0 ? [m, ''] : [m.slice(0, i).trim(), m.slice(i + 1).trim()];
+};
 
-/** KOSAF ProductCard — Source-derived. desktop = List_Card_02 1:91180 (278×582: img 278 r10, badge 94×30 r10, title 24/30, meta 16/24, 278×50 r60 구매하기).
- *  mobile = Card_01 1:91517 (176×354: img 155 r10 inset 11, badge 73×24 r20 12/500, title 14, price 16/700). */
+/** KOSAF ProductCard — Source-derived. desktop = List_Card_02 1:91180 (278 wide: img 278 r10, badge 30 r10, title 24/30, meta 16/24, 278×50 r60 구매하기).
+ *  mobile = Card_01 1:91517 (176 wide: img 155 r10 inset 11, badge 24 r20 12/500, title 14, price 16/700).
+ *  Web refinement: 2-line title clamp with reserved height, label/value meta grid, tabular prices, image fallback. */
 function ProductCard({
   device = 'desktop',
   imageSrc,
@@ -3032,78 +3014,62 @@ function ProductCard({
   style
 }) {
   const m = device === 'mobile';
-  const W = m ? 176 : 278,
-    IMG = m ? 155 : 278;
+  const IMG = m ? 155 : 278;
   const iconBtn = {
-    width: 32,
-    height: 32,
+    width: 36,
+    height: 36,
     display: 'inline-flex',
     alignItems: 'center',
     justifyContent: 'center',
     background: 'none',
     border: 0,
     padding: 0,
-    cursor: 'pointer',
+    borderRadius: 3,
+    cursor: soldOut ? 'not-allowed' : 'pointer',
     opacity: soldOut ? 0.4 : 1
   };
+  const heart = /*#__PURE__*/React.createElement(__ds_scope.Icon, {
+    name: "heart",
+    size: m ? 20 : 22,
+    style: {
+      filter: liked ? 'none' : 'grayscale(1) brightness(1.6)'
+    }
+  });
+  const fg = soldOut ? 'var(--kosaf-color-text-disabled)' : 'var(--kosaf-src-text-strong)';
   return /*#__PURE__*/React.createElement("article", {
     "aria-label": title,
     style: {
       boxSizing: 'border-box',
-      width: W + (m ? 0 : 20),
-      padding: m ? 0 : 9,
-      border: selected ? '2px solid var(--kosaf-color-action-primary)' : '2px solid transparent',
+      width: m ? 176 : 298,
+      padding: m ? 0 : 8,
+      border: '2px solid ' + (selected ? 'var(--kosaf-color-action-primary)' : 'transparent'),
       borderRadius: 10,
       background: '#fff',
       fontFamily: F,
-      color: soldOut ? 'var(--kosaf-color-text-disabled)' : 'var(--kosaf-src-text-strong)',
+      color: fg,
+      display: 'flex',
+      flexDirection: 'column',
       ...style
     }
   }, /*#__PURE__*/React.createElement("div", {
     style: {
       position: 'relative',
-      width: m ? W : IMG,
-      padding: m ? 11 : 0,
-      boxSizing: 'border-box'
+      padding: m ? 11 : 0
     }
-  }, /*#__PURE__*/React.createElement("div", {
-    style: {
-      width: IMG,
-      height: IMG,
-      borderRadius: 10,
-      overflow: 'hidden',
-      background: 'var(--kosaf-gray-100)',
-      opacity: soldOut ? 0.45 : 1
-    }
-  }, imageSrc ? /*#__PURE__*/React.createElement("img", {
+  }, /*#__PURE__*/React.createElement(ImageSlot, {
     src: imageSrc,
-    alt: "",
+    alt: title,
     width: IMG,
     height: IMG,
-    style: {
-      display: 'block',
-      width: '100%',
-      height: '100%',
-      objectFit: 'cover'
-    }
-  }) : /*#__PURE__*/React.createElement("div", {
-    style: {
-      width: '100%',
-      height: '100%',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      fontSize: 12,
-      color: 'var(--kosaf-color-text-muted)'
-    }
-  }, "\uC0C1\uD488 \uC774\uBBF8\uC9C0")), compare !== undefined && !m ? /*#__PURE__*/React.createElement("div", {
+    dim: soldOut
+  }), compare !== undefined && !m ? /*#__PURE__*/React.createElement("div", {
     style: {
       position: 'absolute',
       left: 8,
       top: 8,
-      padding: '2px 8px',
+      padding: '3px 8px',
       background: '#fff',
-      border: '1px solid var(--kosaf-color-border-strong)',
+      border: '1px solid var(--kosaf-color-border-default)',
       borderRadius: 3
     }
   }, /*#__PURE__*/React.createElement(__ds_scope.Checkbox, {
@@ -3116,8 +3082,8 @@ function ProductCard({
   }, "\uC0C1\uD488\uBE44\uAD50")) : null, m ? /*#__PURE__*/React.createElement("div", {
     style: {
       position: 'absolute',
-      left: 21,
-      top: 21
+      left: 19,
+      top: 19
     }
   }, /*#__PURE__*/React.createElement(DealBadge, {
     type: deal,
@@ -3127,40 +3093,55 @@ function ProductCard({
     style: {
       ...iconBtn,
       position: 'absolute',
-      left: 95,
-      top: 130
+      right: 15,
+      bottom: 15,
+      background: 'rgba(255,255,255,.85)',
+      borderRadius: 18
     },
     "aria-pressed": !!liked,
     "aria-label": "\uAD00\uC2EC\uC0C1\uD488",
-    onClick: onLike
-  }, /*#__PURE__*/React.createElement(__ds_scope.Icon, {
-    name: "heart",
-    size: 22,
+    onClick: onLike,
+    disabled: soldOut
+  }, heart) : null, soldOut ? /*#__PURE__*/React.createElement("span", {
     style: {
-      filter: liked ? 'none' : 'grayscale(1) brightness(1.6)'
+      position: 'absolute',
+      left: '50%',
+      top: '50%',
+      transform: 'translate(-50%,-50%)',
+      padding: '4px 12px',
+      background: 'var(--kosaf-color-text-secondary)',
+      color: '#fff',
+      borderRadius: 3,
+      fontSize: m ? 12 : 14,
+      fontWeight: 500
     }
-  })) : null, deadline && !m ? /*#__PURE__*/React.createElement("div", {
+  }, "\uD310\uB9E4\uC885\uB8CC") : null, deadline && !m ? /*#__PURE__*/React.createElement("div", {
     style: {
       position: 'absolute',
       left: 0,
       right: 0,
       bottom: 0,
       height: 34,
+      borderRadius: '0 0 10px 10px',
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
-      background: 'rgba(255,255,255,.9)',
+      gap: 6,
+      background: 'rgba(255,255,255,.92)',
       fontSize: 14,
       fontWeight: 500
     }
-  }, "\uC785\uCC30 \uB9C8\uAC10\uC2DC\uAC04\xA0", /*#__PURE__*/React.createElement("span", {
+  }, "\uC785\uCC30 \uB9C8\uAC10\uC2DC\uAC04", /*#__PURE__*/React.createElement("span", {
     style: {
+      ...NUM,
       color: 'var(--kosaf-color-action-danger)'
     }
   }, deadline)) : null), /*#__PURE__*/React.createElement("div", {
     style: {
-      padding: m ? '10px 11px 16px 14px' : '0',
-      marginTop: m ? 0 : 14
+      padding: m ? '2px 11px 16px' : '14px 0 0',
+      display: 'flex',
+      flexDirection: 'column',
+      flex: 1
     }
   }, !m ? /*#__PURE__*/React.createElement("div", {
     style: {
@@ -3174,20 +3155,16 @@ function ProductCard({
     muted: soldOut
   }), /*#__PURE__*/React.createElement("span", {
     style: {
-      display: 'flex'
+      display: 'flex',
+      marginRight: -6
     }
   }, /*#__PURE__*/React.createElement("button", {
     style: iconBtn,
     "aria-pressed": !!liked,
     "aria-label": "\uAD00\uC2EC\uC0C1\uD488",
-    onClick: onLike
-  }, /*#__PURE__*/React.createElement(__ds_scope.Icon, {
-    name: "heart",
-    size: 22,
-    style: {
-      filter: liked ? 'none' : 'grayscale(1) brightness(1.6)'
-    }
-  })), /*#__PURE__*/React.createElement("button", {
+    onClick: onLike,
+    disabled: soldOut
+  }, heart), /*#__PURE__*/React.createElement("button", {
     style: iconBtn,
     "aria-label": "\uC7A5\uBC14\uAD6C\uB2C8 \uB2F4\uAE30",
     onClick: onCart,
@@ -3196,40 +3173,75 @@ function ProductCard({
     name: "cart",
     size: 22
   })))) : null, /*#__PURE__*/React.createElement("div", {
+    title: title,
     style: {
       fontSize: m ? 14 : 24,
-      lineHeight: m ? '21px' : '30px'
+      lineHeight: m ? '21px' : '30px',
+      minHeight: m ? 42 : 60,
+      display: '-webkit-box',
+      WebkitLineClamp: 2,
+      WebkitBoxOrient: 'vertical',
+      overflow: 'hidden',
+      wordBreak: 'keep-all'
     }
   }, title), /*#__PURE__*/React.createElement("div", {
     style: {
+      ...NUM,
       fontSize: m ? 16 : 20,
       fontWeight: 700,
-      lineHeight: m ? '25px' : '30px',
-      margin: m ? '6px 0 8px' : '4px 0 10px'
+      lineHeight: m ? '24px' : '30px',
+      margin: m ? '4px 0 8px' : '4px 0 10px'
     }
-  }, price, m ? '원' : /*#__PURE__*/React.createElement("span", {
-    style: {
-      fontSize: 16,
-      fontWeight: 500
-    }
-  }, " \uC6D0")), /*#__PURE__*/React.createElement("div", {
+  }, price, /*#__PURE__*/React.createElement("span", {
     style: {
       fontSize: m ? 14 : 16,
-      lineHeight: m ? '20px' : '24px',
-      color: soldOut ? 'inherit' : 'var(--kosaf-color-text-primary)',
-      whiteSpace: 'pre-line'
+      fontWeight: 500,
+      marginLeft: 2
     }
-  }, meta.join('\n')), !m ? /*#__PURE__*/React.createElement("button", {
+  }, "\uC6D0")), /*#__PURE__*/React.createElement("dl", {
+    style: {
+      margin: 0,
+      display: 'grid',
+      gridTemplateColumns: 'auto 1fr',
+      columnGap: 6,
+      fontSize: m ? 13 : 16,
+      lineHeight: m ? '20px' : '24px',
+      color: soldOut ? 'inherit' : 'var(--kosaf-color-text-primary)'
+    }
+  }, meta.map((x, i) => {
+    const [k, v] = split(x);
+    return /*#__PURE__*/React.createElement(React.Fragment, {
+      key: i
+    }, /*#__PURE__*/React.createElement("dt", {
+      style: {
+        color: soldOut ? 'inherit' : 'var(--kosaf-color-text-secondary)',
+        whiteSpace: 'nowrap'
+      }
+    }, k), /*#__PURE__*/React.createElement("dd", {
+      style: {
+        ...NUM,
+        margin: 0,
+        minWidth: 0,
+        overflow: 'hidden',
+        textOverflow: 'ellipsis',
+        whiteSpace: 'nowrap'
+      }
+    }, v));
+  })), !m ? /*#__PURE__*/React.createElement("button", {
     type: "button",
     disabled: soldOut,
     onClick: onBuy,
     style: {
       width: 278,
       height: 50,
-      marginTop: 16,
+      marginTop: 'auto',
+      paddingTop: 0,
+      position: 'relative',
+      top: 16,
+      marginBottom: 16,
       borderRadius: 60,
       border: '1px solid ' + (soldOut ? 'var(--kosaf-color-border-default)' : 'var(--kosaf-color-action-primary)'),
-      background: '#fff',
+      background: soldOut ? 'var(--kosaf-gray-100)' : '#fff',
       color: soldOut ? 'var(--kosaf-color-text-disabled)' : 'var(--kosaf-color-action-primary)',
       fontFamily: F,
       fontSize: 18,
@@ -3238,8 +3250,98 @@ function ProductCard({
     }
   }, soldOut ? 'Sold Out' : '구매하기') : null));
 }
-Object.assign(__ds_scope, { DealBadge, ProductCard });
+Object.assign(__ds_scope, { ImageSlot, DealBadge, ProductCard });
 })(); } catch (e) { __ds_ns.__errors.push({ path: "components/product-card/ProductCard.tsx", error: String((e && e.message) || e) }); }
+
+// components/compare-table/CompareTable.tsx
+try { (() => {
+const F = 'var(--kosaf-font)';
+
+/** KOSAF CompareTable — Source-derived from 상품 비교하기 1:90204 (modal 1004 wide: thumbnails row 780×270, 결제정보 900×272, actions 260×45). Attributes as rows, products as columns. */
+function CompareTable({
+  products = [],
+  rows = [],
+  highlightDiff = true,
+  style
+}) {
+  const diff = key => highlightDiff && new Set(products.map(p => String(p[key] ?? ''))).size > 1;
+  return /*#__PURE__*/React.createElement("div", {
+    style: {
+      width: '100%',
+      overflowX: 'auto',
+      fontFamily: F,
+      ...style
+    }
+  }, /*#__PURE__*/React.createElement("table", {
+    style: {
+      width: '100%',
+      borderCollapse: 'collapse',
+      tableLayout: 'fixed',
+      minWidth: 160 + products.length * 200
+    }
+  }, /*#__PURE__*/React.createElement("colgroup", null, /*#__PURE__*/React.createElement("col", {
+    style: {
+      width: 160
+    }
+  }), products.map((p, i) => /*#__PURE__*/React.createElement("col", {
+    key: i
+  }))), /*#__PURE__*/React.createElement("thead", null, /*#__PURE__*/React.createElement("tr", null, /*#__PURE__*/React.createElement("th", {
+    scope: "col",
+    style: {
+      borderBottom: '1px solid var(--kosaf-color-border-default)'
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      position: 'absolute',
+      width: 1,
+      height: 1,
+      overflow: 'hidden',
+      clip: 'rect(0 0 0 0)'
+    }
+  }, "\uD56D\uBAA9")), products.map((p, i) => /*#__PURE__*/React.createElement("th", {
+    key: i,
+    scope: "col",
+    style: {
+      padding: '0 10px 16px',
+      verticalAlign: 'top',
+      borderBottom: '1px solid var(--kosaf-color-border-default)',
+      fontWeight: 500,
+      fontSize: 16,
+      textAlign: 'left'
+    }
+  }, /*#__PURE__*/React.createElement(__ds_scope.ImageSlot, {
+    src: p.imageSrc,
+    alt: p.name,
+    style: {
+      maxWidth: 200,
+      marginBottom: 10
+    }
+  }), p.name)))), /*#__PURE__*/React.createElement("tbody", null, rows.map(r => /*#__PURE__*/React.createElement("tr", {
+    key: r.key
+  }, /*#__PURE__*/React.createElement("th", {
+    scope: "row",
+    style: {
+      height: 60,
+      padding: '0 20px',
+      textAlign: 'left',
+      background: 'var(--kosaf-color-bg-subtle)',
+      borderBottom: '1px solid var(--kosaf-color-border-default)',
+      fontSize: 16,
+      fontWeight: 500
+    }
+  }, r.label), products.map((p, i) => /*#__PURE__*/React.createElement("td", {
+    key: i,
+    style: {
+      padding: '0 16px',
+      borderBottom: '1px solid var(--kosaf-color-border-default)',
+      fontSize: 16,
+      fontWeight: diff(r.key) ? 700 : 400,
+      color: diff(r.key) ? 'var(--kosaf-color-action-primary)' : 'var(--kosaf-color-text-primary)'
+    }
+  }, p[r.key])))))));
+}
+Object.assign(__ds_scope, { CompareTable });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/compare-table/CompareTable.tsx", error: String((e && e.message) || e) }); }
 
 // components/product-list-item/ProductListItem.tsx
 try { (() => {
@@ -3278,24 +3380,13 @@ function ProductListItem({
       display: 'flex',
       gap: m ? 20 : 30
     }
-  }, /*#__PURE__*/React.createElement("div", {
-    style: {
-      flex: '0 0 ' + T + 'px',
-      height: m ? 105 : T,
-      borderRadius: m ? 0 : 10,
-      overflow: 'hidden',
-      background: 'var(--kosaf-gray-100)'
-    }
-  }, imageSrc ? /*#__PURE__*/React.createElement("img", {
+  }, /*#__PURE__*/React.createElement(__ds_scope.ImageSlot, {
     src: imageSrc,
-    alt: "",
-    style: {
-      width: '100%',
-      height: '100%',
-      objectFit: 'cover',
-      display: 'block'
-    }
-  }) : null), /*#__PURE__*/React.createElement("div", {
+    alt: title,
+    width: m ? 105 : T,
+    height: m ? 105 : T,
+    radius: m ? 5 : 10
+  }), /*#__PURE__*/React.createElement("div", {
     style: {
       minWidth: 0,
       display: 'flex',
@@ -3304,6 +3395,7 @@ function ProductListItem({
     }
   }, date ? /*#__PURE__*/React.createElement("span", {
     style: {
+      fontVariantNumeric: 'tabular-nums',
       fontSize: 12,
       color: 'var(--kosaf-color-text-primary)'
     }
@@ -3318,6 +3410,7 @@ function ProductListItem({
     }
   }, title), price ? /*#__PURE__*/React.createElement("span", {
     style: {
+      fontVariantNumeric: 'tabular-nums',
       fontSize: m ? 18 : 20,
       fontWeight: 700,
       lineHeight: '28px'
@@ -3512,6 +3605,7 @@ function ProductTable({
       borderCollapse: 'collapse',
       tableLayout: 'fixed',
       fontFamily: F,
+      fontVariantNumeric: 'tabular-nums',
       textAlign: 'center',
       borderTop: '2px solid var(--kosaf-color-border-default)'
     }
@@ -3769,6 +3863,7 @@ function QuantityStepper({
       borderLeft: '1px solid var(--kosaf-color-border-default)',
       borderRight: '1px solid var(--kosaf-color-border-default)',
       textAlign: 'center',
+      fontVariantNumeric: 'tabular-nums',
       fontFamily: F,
       fontSize: size === 'lg' ? 18 : 14,
       color: 'var(--kosaf-color-text-primary)',
@@ -3850,23 +3945,13 @@ function CartItem({
     style: {
       marginTop: m ? 38 : 50
     }
-  }) : null, /*#__PURE__*/React.createElement("div", {
-    style: {
-      flex: '0 0 ' + (m ? 100 : 120) + 'px',
-      height: m ? 100 : 120,
-      background: 'var(--kosaf-gray-100)',
-      overflow: 'hidden'
-    }
-  }, imageSrc ? /*#__PURE__*/React.createElement("img", {
+  }) : null, /*#__PURE__*/React.createElement(__ds_scope.ImageSlot, {
     src: imageSrc,
-    alt: "",
-    style: {
-      width: '100%',
-      height: '100%',
-      objectFit: 'cover',
-      display: 'block'
-    }
-  }) : null), /*#__PURE__*/React.createElement("div", {
+    alt: title,
+    width: m ? 100 : 120,
+    height: m ? 100 : 120,
+    radius: 5
+  }), /*#__PURE__*/React.createElement("div", {
     style: {
       flex: 1,
       minWidth: 0
@@ -3881,6 +3966,7 @@ function CartItem({
     }
   }, title), /*#__PURE__*/React.createElement("div", {
     style: {
+      fontVariantNumeric: 'tabular-nums',
       fontSize: m ? 16 : 20,
       fontWeight: 700,
       margin: '2px 0 4px'
@@ -3898,11 +3984,13 @@ function CartItem({
     key: k
   }, /*#__PURE__*/React.createElement("dt", {
     style: {
-      color: 'var(--kosaf-color-text-primary)'
+      color: 'var(--kosaf-color-text-secondary)',
+      whiteSpace: 'nowrap'
     }
   }, k), /*#__PURE__*/React.createElement("dd", {
     style: {
-      margin: 0
+      margin: 0,
+      fontVariantNumeric: 'tabular-nums'
     }
   }, v))))), onRemove ? /*#__PURE__*/React.createElement("button", {
     type: "button",
@@ -3988,7 +4076,8 @@ function CartItem({
     }
   }, freightNote, " "), /*#__PURE__*/React.createElement("strong", {
     style: {
-      fontSize: 18
+      fontSize: 18,
+      fontVariantNumeric: 'tabular-nums'
     }
   }, freight)))));
 }
@@ -5357,24 +5446,25 @@ Object.assign(__ds_scope, { Textarea });
 
 // guidelines/card-kit.js
 try { (() => {
-/* KOSAF card kit — shared chrome for component cards (plain JS, no JSX). */
+/* KOSAF card kit — shared chrome for component cards (plain JS, no JSX).
+   Layout: compact Korean meta header → showcase sections (PC 실제 크기 / 전체 축소 / Mobile) → collapsible API notes. */
 (function () {
   var h = React.createElement;
   var PROV = {
     master: {
-      t: 'Figma master · 218:570',
-      bg: '#EBFFE9',
-      fg: '#059B00'
+      t: 'Figma 마스터',
+      fg: '#059B00',
+      bg: '#EBFFE9'
     },
     source: {
-      t: 'Source-derived · 1:85779',
-      bg: '#FFFFFF',
-      fg: '#0047ED'
+      t: '원본 파생',
+      fg: '#0047ED',
+      bg: '#FFFFFF'
     },
     extension: {
-      t: 'KOSAF extension',
-      bg: '#F7F7F7',
-      fg: '#707070'
+      t: 'KOSAF 확장',
+      fg: '#707070',
+      bg: '#F7F7F7'
     }
   };
   var mono = {
@@ -5389,25 +5479,28 @@ try { (() => {
       style: {
         fontFamily: 'var(--kosaf-font)',
         color: '#333',
-        padding: '14px 18px 18px'
+        padding: '14px 20px 16px',
+        boxSizing: 'border-box'
       }
     }, h('div', {
       style: {
         display: 'flex',
-        alignItems: 'center',
+        alignItems: 'baseline',
         gap: 8,
         flexWrap: 'wrap'
       }
     }, h('span', {
       style: {
-        fontSize: 16,
-        fontWeight: 700
+        fontSize: 15,
+        fontWeight: 700,
+        lineHeight: '22px'
       }
-    }, m.name), h('span', {
+    }, m.ko || m.name), h('span', {
       style: {
         fontSize: 11,
         fontWeight: 500,
-        padding: '1px 8px',
+        lineHeight: '16px',
+        padding: '0 6px',
         borderRadius: 3,
         border: '1px solid ' + pv.fg,
         background: pv.bg,
@@ -5422,47 +5515,54 @@ try { (() => {
         fontSize: 13,
         lineHeight: '19px',
         color: '#707070',
-        marginTop: 4
+        marginTop: 2
       }
-    }, m.use), h('div', {
+    }, m.use, m.states ? h('span', {
+      style: {
+        color: '#888'
+      }
+    }, ' · 상태: ' + m.states) : null), h('div', {
+      style: {
+        marginTop: 12,
+        paddingTop: 14,
+        borderTop: '1px solid #EAEAEA',
+        display: 'flex',
+        flexDirection: 'column',
+        gap: 16
+      }
+    }, p.children), m.props && m.props.length ? h('details', {
+      style: {
+        marginTop: 14,
+        borderTop: '1px solid #EAEAEA',
+        paddingTop: 8,
+        fontSize: 12,
+        color: '#707070'
+      }
+    }, h('summary', {
+      style: {
+        cursor: 'pointer',
+        fontWeight: 500,
+        color: '#333'
+      }
+    }, 'Props · 사용 노트 (' + m.name + '.prompt.md)'), h('div', {
       style: {
         display: 'flex',
-        gap: 6,
+        gap: 4,
         flexWrap: 'wrap',
-        marginTop: 8
+        marginTop: 6
       }
-    }, (m.props || []).map(function (x) {
+    }, m.props.map(function (x) {
       return h('code', {
         key: x,
         style: Object.assign({
-          padding: '1px 6px',
+          padding: '0 5px',
           background: '#F7F7F7',
           border: '1px solid #EAEAEA',
           borderRadius: 3,
           color: '#444'
         }, mono)
       }, x);
-    })), m.states ? h('div', {
-      style: {
-        fontSize: 12,
-        marginTop: 6,
-        color: '#707070'
-      }
-    }, h('b', {
-      style: {
-        color: '#333',
-        fontWeight: 500
-      }
-    }, 'States '), m.states) : null, h('div', {
-      style: {
-        borderTop: '1px solid #DDDDDD',
-        marginTop: 12,
-        paddingTop: 14,
-        display: 'flex',
-        flexDirection: 'column',
-        gap: 14
-      }
-    }, p.children));
+    }))) : null);
   }
   function KSec(p) {
     return h('section', {
@@ -5475,7 +5575,7 @@ try { (() => {
       style: {
         fontSize: 11,
         fontWeight: 500,
-        letterSpacing: '.02em',
+        lineHeight: '16px',
         color: '#888'
       }
     }, p.label), h('div', {
@@ -5487,6 +5587,7 @@ try { (() => {
       }, p.style)
     }, p.children));
   }
+  /* Whole-component overview, scaled. */
   function KScale(p) {
     var ref = React.useRef(null),
       st = React.useState(0),
@@ -5510,6 +5611,7 @@ try { (() => {
         width: p.w * p.s,
         height: hh,
         overflow: 'hidden',
+        flex: '0 0 auto',
         border: p.frame ? '1px solid #EAEAEA' : 0
       }
     }, h('div', {
@@ -5521,9 +5623,44 @@ try { (() => {
       }
     }, p.children));
   }
+  /* Real-size (1:1) crop of a wide component so text stays readable. x/y = offset into the component. */
+  function KCrop(p) {
+    return h('div', {
+      style: {
+        width: p.vw || 660,
+        maxWidth: '100%',
+        height: p.h,
+        overflow: 'hidden',
+        position: 'relative',
+        border: '1px solid #EAEAEA',
+        flex: '0 0 auto'
+      }
+    }, h('div', {
+      style: {
+        position: 'absolute',
+        left: -(p.x || 0),
+        top: -(p.y || 0),
+        width: p.w
+      }
+    }, p.children));
+  }
+  /* Mobile viewport frame (390 or given width), content not clipped horizontally. */
+  function KPhone(p) {
+    return h('div', {
+      style: {
+        width: p.w || 390,
+        border: '1px solid #EAEAEA',
+        background: '#fff',
+        flex: '0 0 auto',
+        overflow: 'hidden'
+      }
+    }, p.children);
+  }
   window.KCard = KCard;
   window.KSec = KSec;
   window.KScale = KScale;
+  window.KCrop = KCrop;
+  window.KPhone = KPhone;
 })();
 })(); } catch (e) { __ds_ns.__errors.push({ path: "guidelines/card-kit.js", error: String((e && e.message) || e) }); }
 
@@ -6014,55 +6151,161 @@ window.KOSAF_SOURCE_STYLES = [{
 
 // ui_kits/_shared/shell.jsx
 try { (() => {
-// Shared UI-kit shell: page frames + demo data. Loaded before each kit's screens.jsx.
-const KS = window.KOSAFV1ProjectDesignSystem_f8c97b;
+// Shared UI-kit shell: page frames + ONE consistent demo catalogue. Loaded before each kit's screens.jsx.
+/* Pre-compile guard: ImageSlot ships in the next bundle; this local copy is used only if the bundle predates it. */
+function ImageSlotFallback({
+  src,
+  alt = '',
+  width = '100%',
+  height,
+  radius = 10,
+  label = '이미지 준비중',
+  style
+}) {
+  const [bad, setBad] = React.useState(false);
+  const box = {
+    boxSizing: 'border-box',
+    width,
+    height,
+    aspectRatio: height ? undefined : '1 / 1',
+    borderRadius: radius,
+    overflow: 'hidden',
+    flex: '0 0 auto',
+    ...style
+  };
+  return !src || bad ? /*#__PURE__*/React.createElement("div", {
+    role: "img",
+    "aria-label": label,
+    style: {
+      ...box,
+      background: '#F7F7F7',
+      border: '1px solid #EAEAEA',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      fontSize: 12,
+      color: '#888'
+    }
+  }, label) : /*#__PURE__*/React.createElement("div", {
+    style: box
+  }, /*#__PURE__*/React.createElement("img", {
+    src: src,
+    alt: alt,
+    onError: () => setBad(true),
+    style: {
+      display: 'block',
+      width: '100%',
+      height: '100%',
+      objectFit: 'cover'
+    }
+  }));
+}
+const KS = Object.assign({
+  ImageSlot: ImageSlotFallback
+}, window.KOSAFV1ProjectDesignSystem_f8c97b);
 const ASSET = '../../assets/';
 const LOGO = ASSET + 'brand/logo-wordmark__1-86099@2x.png';
-const IMG_D = ASSET + 'products/product-desktop__1-91190.png';
-const IMG_M = ASSET + 'products/product-mobile__1-91522.png';
+const IMG_D = ASSET + 'products/product-desktop__1-91190.png'; // 1:91190 — apple, desktop 278
+const IMG_M = ASSET + 'products/product-mobile__1-91522.png'; // 1:91522 — apple, mobile 155
+const won = n => n.toLocaleString('ko-KR') + '원';
+const num = n => n.toLocaleString('ko-KR');
+
+/* Demo catalogue. Only 사과 items use the two supplied apple photos; everything else renders ImageSlot fallback. Prices are illustrative (데모). */
+const PRODUCTS = [{
+  id: 'p1',
+  item: '사과',
+  variety: '부사',
+  name: '사과/부사/특/10kg',
+  unit: '10kg 박스',
+  grade: '특 (30과)',
+  price: 52000,
+  deal: '정가거래',
+  seller: '대야청과',
+  producer: '김원생',
+  qty: 300,
+  remain: 120,
+  apple: true
+}, {
+  id: 'p2',
+  item: '사과',
+  variety: '홍로',
+  name: '사과/홍로/상/5kg',
+  unit: '5kg 박스',
+  grade: '상 (18과)',
+  price: 31000,
+  deal: '입찰거래',
+  seller: '서울청과',
+  producer: '이정호',
+  qty: 200,
+  remain: 200,
+  deadline: '2023-05-05 18:00',
+  apple: true
+}, {
+  id: 'p3',
+  item: '배',
+  variety: '신고',
+  name: '배/신고/특/7.5kg',
+  unit: '7.5kg 박스',
+  grade: '특 (12과)',
+  price: 45000,
+  deal: '정가거래',
+  seller: '대야청과',
+  producer: '박성민',
+  qty: 150,
+  remain: 40
+}, {
+  id: 'p4',
+  item: '포도',
+  variety: '캠벨',
+  name: '포도/캠벨얼리/상/5kg',
+  unit: '5kg 박스',
+  grade: '상',
+  price: 28000,
+  deal: '계약거래',
+  seller: '동부청과',
+  producer: '최영수',
+  qty: 100,
+  remain: 0,
+  soldOut: true
+}, {
+  id: 'p5',
+  item: '복숭아',
+  variety: '천중도',
+  name: '복숭아/천중도/특/4.5kg',
+  unit: '4.5kg 박스',
+  grade: '특 (15과)',
+  price: 39000,
+  deal: '입찰거래',
+  seller: '서울청과',
+  producer: '정미경',
+  qty: 80,
+  remain: 80,
+  deadline: '2023-05-06 14:00'
+}];
+const imgFor = (p, mobile) => p.apple ? mobile ? IMG_M : IMG_D : undefined;
+const cardMeta = p => ['판매자 : ' + p.seller, '생산자 : ' + p.producer, '거래수량 : ' + num(p.qty), '잔여수량 : ' + num(p.remain)];
 const KD = {
-  rows: Array.from({
-    length: 10
-  }, (_, i) => {
-    const no = 10 - i,
-      fixed = no % 2 === 1;
-    return {
-      no,
-      item: '사과',
-      variety: '부사',
-      name: '사과/부사/특/20kg',
-      deal: fixed ? '정가' : '입찰',
-      producer: no === 9 ? '' : '김원생',
-      qty: '300PT',
-      remain: fixed ? 50 : 300,
-      price: fixed ? '50,000원' : '-',
-      deadline: '2023-05-05\n18:00',
-      grade: '문경',
-      region: '가락시장',
-      ship: '2023\n05-05',
-      liked: no === 10,
-      disabled: no === 8
-    };
-  }),
-  cards: [{
-    deal: '입찰거래',
-    title: '파프리카 3kg',
-    deadline: '2023-05-05 18:00',
-    img: true
-  }, {
-    deal: '정가거래',
-    title: '배 5kg'
-  }, {
-    deal: '계약거래',
-    title: '포도 5kg',
-    soldOut: true
-  }, {
-    deal: '정가거래',
-    title: '배 5kg'
-  }, {
-    deal: '계약거래',
-    title: '포도 5kg'
-  }],
+  products: PRODUCTS,
+  rows: PRODUCTS.concat(PRODUCTS.map(p => ({
+    ...p,
+    id: p.id + 'b'
+  }))).map((p, i, arr) => ({
+    no: arr.length - i,
+    item: p.item,
+    variety: p.variety,
+    name: p.name,
+    deal: p.deal.slice(0, 2),
+    producer: p.producer,
+    qty: num(p.qty) + '박스',
+    remain: num(p.remain),
+    price: p.deal === '입찰거래' ? '-' : won(p.price),
+    deadline: p.deadline ? p.deadline.replace(' ', '\n') : '-',
+    grade: p.grade.split(' ')[0],
+    region: '가락시장',
+    ship: '2023\n05-08',
+    liked: i === 0,
+    disabled: !!p.soldOut
+  })),
   faq: [{
     title: '[배송] 배송기간은 얼마나 되나요?',
     content: '상품의 평균 배송일은 3~4일(주말, 공휴일 제외) 정도 소요됩니다.\n자세한 배송일자는 상품 상세 페이지에서 확인이 가능합니다.'
@@ -6100,27 +6343,46 @@ function PCPage({
     }
   }, children), /*#__PURE__*/React.createElement(KS.Footer, null));
 }
+
+/* Mobile frame: 100% up to 391, clips horizontal overflow (tables scroll inside their own wrapper), reserves room for the fixed CTA. */
 function MoPage({
   children,
   title,
   back,
   bottom,
+  bottomHeight = 71,
   header = true
 }) {
   const [menu, setMenu] = React.useState(false);
+  const overlay = {
+    position: 'fixed',
+    top: 0,
+    bottom: 0,
+    left: '50%',
+    transform: 'translateX(-50%)',
+    width: '100%',
+    maxWidth: 391,
+    zIndex: 100,
+    overflowY: 'auto',
+    background: '#fff'
+  };
   return /*#__PURE__*/React.createElement("div", {
     style: {
-      width: 390,
+      boxSizing: 'border-box',
+      width: '100%',
+      maxWidth: 391,
       margin: '0 auto',
       minHeight: '100vh',
       background: '#fff',
       fontFamily: 'var(--kosaf-font)',
       color: 'var(--kosaf-color-text-primary)',
       position: 'relative',
-      paddingBottom: bottom ? 90 : 0
+      overflowX: 'clip',
+      paddingBottom: bottom ? bottomHeight + 24 : 0
     }
   }, header ? /*#__PURE__*/React.createElement(KS.MobileHeader, {
     title: title,
+    logoSrc: title ? undefined : LOGO,
     back: back,
     onMenu: () => setMenu(true),
     cartCount: 2
@@ -6132,24 +6394,60 @@ function MoPage({
       bottom: 0,
       left: '50%',
       transform: 'translateX(-50%)',
-      width: 390,
-      zIndex: 40
-    }
-  }, bottom) : null, menu ? /*#__PURE__*/React.createElement("div", {
-    style: {
-      position: 'fixed',
-      top: 0,
-      bottom: 0,
-      left: '50%',
-      transform: 'translateX(-50%)',
-      width: 390,
-      zIndex: 100,
-      overflowY: 'auto',
+      width: '100%',
+      maxWidth: 391,
+      zIndex: 40,
+      paddingBottom: 'env(safe-area-inset-bottom)',
       background: '#fff'
     }
+  }, bottom) : null, menu ? /*#__PURE__*/React.createElement("div", {
+    style: overlay
   }, /*#__PURE__*/React.createElement(KS.MobileMenu, {
     onClose: () => setMenu(false)
   })) : null);
+}
+
+/* Title → description → content → action hierarchy. */
+function PageHead({
+  title,
+  desc,
+  right,
+  size = 40,
+  mobile,
+  align = 'left',
+  style
+}) {
+  return /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      alignItems: mobile ? 'flex-start' : 'flex-end',
+      justifyContent: 'space-between',
+      gap: 20,
+      flexDirection: mobile && right ? 'column' : 'row',
+      textAlign: align,
+      marginBottom: mobile ? 20 : 30,
+      ...style
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      flex: 1,
+      minWidth: 0
+    }
+  }, /*#__PURE__*/React.createElement("h1", {
+    style: {
+      margin: 0,
+      fontSize: mobile ? 22 : size,
+      fontWeight: 700,
+      lineHeight: 1.3
+    }
+  }, title), desc ? /*#__PURE__*/React.createElement("p", {
+    style: {
+      margin: mobile ? '6px 0 0' : '10px 0 0',
+      fontSize: mobile ? 14 : 18,
+      lineHeight: mobile ? '20px' : '28px',
+      color: 'var(--kosaf-color-text-secondary)'
+    }
+  }, desc) : null), right);
 }
 function PageTitle({
   children,
@@ -6178,6 +6476,7 @@ function DemoNote({
       gap: 6,
       alignItems: 'center',
       fontSize: 12,
+      lineHeight: '18px',
       color: 'var(--kosaf-color-text-secondary)',
       border: '1px dashed var(--kosaf-color-border-strong)',
       borderRadius: 3,
@@ -6193,23 +6492,31 @@ function DemoNote({
 function SectionTitle({
   children,
   right,
-  size = 30
+  size = 30,
+  desc
 }) {
   return /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'flex',
-      alignItems: 'center',
+      alignItems: 'flex-end',
       justifyContent: 'space-between',
+      gap: 16,
       margin: '0 0 20px'
     }
-  }, /*#__PURE__*/React.createElement("h2", {
+  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h2", {
     style: {
       margin: 0,
       fontSize: size,
       fontWeight: 700,
-      lineHeight: 1.4
+      lineHeight: 1.35
     }
-  }, children), right);
+  }, children), desc ? /*#__PURE__*/React.createElement("p", {
+    style: {
+      margin: '4px 0 0',
+      fontSize: 14,
+      color: 'var(--kosaf-color-text-secondary)'
+    }
+  }, desc) : null), right);
 }
 Object.assign(window, {
   KS,
@@ -6218,8 +6525,14 @@ Object.assign(window, {
   IMG_D,
   IMG_M,
   KD,
+  PRODUCTS,
+  imgFor,
+  cardMeta,
+  won,
+  num,
   PCPage,
   MoPage,
+  PageHead,
   PageTitle,
   DemoNote,
   SectionTitle
@@ -6551,70 +6864,53 @@ Object.assign(window, {
 
 // ui_kits/cart/screens.jsx
 try { (() => {
-// 장바구니 — Source: 상품 있음 1:103657 (PC) / 1:103945 (Mo), 상품 없음 1:104584
+// 장바구니 — Source: 상품 있음 1:103657 (PC) / 1:103945 (Mo), 상품 없음 1:104584. Totals = Σ(단가 × 수량), from shared PRODUCTS.
+const P = Object.fromEntries(PRODUCTS.map(p => [p.id, p]));
 const CART_INIT = [{
-  seller: '서울청과',
+  seller: '대야청과',
   items: [{
-    id: 1,
-    title: '사과/부사/특20kg',
-    price: '10,000원',
-    qty: 100,
+    id: 'p1',
+    qty: 10,
     sel: true
   }, {
-    id: 2,
-    title: '사과/부사/특20kg',
-    price: '20,000원',
-    qty: 20,
-    sel: true,
-    specs: [['단위/포장', '5kg망'], ['등급/크기', '중 (20개)'], ['남은수량', '300']]
+    id: 'p3',
+    qty: 4,
+    sel: true
   }]
 }, {
   seller: '서울청과',
   items: [{
-    id: 3,
-    title: '프리미엄 부사 꿀사과 5kg',
-    price: '10,000원',
-    qty: 100,
+    id: 'p2',
+    qty: 6,
     sel: false
   }]
 }];
-const won = n => n.toLocaleString() + '원';
-const priceOf = it => parseInt(it.price.replace(/\D/g, ''), 10);
+const specsOf = p => [['단위/포장', p.unit], ['등급/크기', p.grade], ['남은수량', num(p.remain) + '박스']];
 function useCart(empty) {
   const [groups, setGroups] = React.useState(empty ? [] : CART_INIT);
-  const upd = (id, patch) => setGroups(groups.map(g => ({
+  const map = fn => setGroups(groups.map(g => ({
     ...g,
-    items: g.items.map(it => it.id === id ? {
-      ...it,
-      ...patch
-    } : it)
-  })));
-  const remove = id => setGroups(groups.map(g => ({
-    ...g,
-    items: g.items.filter(it => it.id !== id)
+    items: fn(g.items)
   })).filter(g => g.items.length));
   const all = groups.flatMap(g => g.items);
-  const total = all.filter(i => i.sel).reduce((s, i) => s + priceOf(i) * i.qty, 0);
-  const allSel = all.length > 0 && all.every(i => i.sel);
-  const selectAll = v => setGroups(groups.map(g => ({
-    ...g,
-    items: g.items.map(it => ({
-      ...it,
-      sel: v
-    }))
-  })));
+  const total = all.filter(i => i.sel).reduce((s, i) => s + P[i.id].price * i.qty, 0);
+  const selCount = all.filter(i => i.sel).length;
   return {
     groups,
-    upd,
-    remove,
     total,
-    allSel,
-    selectAll,
-    clear: () => setGroups([]),
-    removeSel: () => setGroups(groups.map(g => ({
-      ...g,
-      items: g.items.filter(i => !i.sel)
-    })).filter(g => g.items.length))
+    selCount,
+    count: all.length,
+    allSel: all.length > 0 && selCount === all.length,
+    upd: (id, patch) => map(items => items.map(it => it.id === id ? {
+      ...it,
+      ...patch
+    } : it)),
+    remove: id => map(items => items.filter(it => it.id !== id)),
+    selectAll: v => map(items => items.map(it => ({
+      ...it,
+      sel: v
+    }))),
+    removeSel: () => map(items => items.filter(i => !i.sel))
   };
 }
 function CartBar({
@@ -6624,6 +6920,7 @@ function CartBar({
   const link = {
     background: 'none',
     border: 0,
+    padding: '4px 0',
     cursor: 'pointer',
     fontFamily: 'inherit',
     fontSize: mobile ? 13 : 16,
@@ -6633,130 +6930,132 @@ function CartBar({
     style: {
       display: 'flex',
       alignItems: 'center',
-      gap: mobile ? 10 : 20,
-      padding: mobile ? '12px 16px' : '20px 0'
+      gap: mobile ? 12 : 20,
+      padding: mobile ? '12px 16px' : '0 0 20px',
+      borderBottom: '1px solid var(--kosaf-color-border-default)',
+      marginBottom: mobile ? 16 : 30
     }
   }, /*#__PURE__*/React.createElement(KS.Checkbox, {
     checked: c.allSel,
     onChange: c.selectAll,
     style: {
       fontSize: mobile ? 14 : 18,
-      fontWeight: 700
+      fontWeight: 500
     }
-  }, "\uC804\uCCB4 \uC120\uD0DD"), /*#__PURE__*/React.createElement("span", {
+  }, "\uC804\uCCB4 \uC120\uD0DD (", c.selCount, "/", c.count, ")"), /*#__PURE__*/React.createElement("span", {
     style: {
       flex: 1
     }
   }), /*#__PURE__*/React.createElement("button", {
     style: link,
-    onClick: c.removeSel
-  }, "\uC120\uD0DD \uC0AD\uC81C"), /*#__PURE__*/React.createElement("button", {
-    style: link,
-    onClick: c.clear
-  }, "\uD488\uC808/\uD310\uB9E4\uC885\uB8CC \uC0C1\uD488 \uC804\uCCB4\uC0AD\uC81C"));
+    onClick: c.removeSel,
+    disabled: !c.selCount
+  }, "\uC120\uD0DD \uC0AD\uC81C"));
 }
-function CartPC({
-  empty
-}) {
-  const c = useCart(empty);
-  return /*#__PURE__*/React.createElement(PCPage, null, /*#__PURE__*/React.createElement("div", {
-    style: {
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'space-between'
-    }
-  }, /*#__PURE__*/React.createElement(PageTitle, null, "\uC7A5\uBC14\uAD6C\uB2C8"), /*#__PURE__*/React.createElement(KS.Stepper, {
-    current: 0,
-    itemWidth: 150
-  })), c.groups.length === 0 ? /*#__PURE__*/React.createElement("div", {
-    style: {
-      marginTop: 40
-    }
-  }, /*#__PURE__*/React.createElement(KS.EmptyState, {
-    actionLabel: "\uC0C1\uD488\uAC80\uC0C9"
-  })) : /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(CartBar, {
-    c: c
-  }), c.groups.map((g, gi) => /*#__PURE__*/React.createElement("section", {
-    key: gi,
-    style: {
-      border: '1px solid var(--kosaf-color-border-default)',
-      borderRadius: 10,
-      padding: 30,
-      marginBottom: 20
-    }
-  }, /*#__PURE__*/React.createElement("h2", {
-    style: {
-      margin: '0 0 20px',
-      fontSize: 24,
-      fontWeight: 700
-    }
-  }, g.seller), /*#__PURE__*/React.createElement("div", {
-    style: {
-      display: 'grid',
-      gridTemplateColumns: 'repeat(2, 1fr)',
-      gap: 40
-    }
-  }, g.items.map(it => /*#__PURE__*/React.createElement(KS.CartItem, {
+const lineItem = (c, it, mobile) => {
+  const p = P[it.id];
+  return /*#__PURE__*/React.createElement(KS.CartItem, {
     key: it.id,
-    device: "desktop",
-    imageSrc: IMG_M,
-    title: it.title,
-    price: it.price,
-    specs: it.specs,
+    device: mobile ? 'mobile' : 'desktop',
+    imageSrc: imgFor(p, true),
+    title: p.name,
+    price: won(p.price),
+    specs: specsOf(p),
     quantity: it.qty,
     onQuantity: q => c.upd(it.id, {
       qty: q
     }),
-    deliveryDate: "2022-03-23",
+    deliveryDate: "2023-05-10",
     selectable: true,
     selected: it.sel,
     onSelect: v => c.upd(it.id, {
       sel: v
     }),
     onRemove: () => c.remove(it.id)
-  }))))), /*#__PURE__*/React.createElement(KS.OrderSummary, {
+  });
+};
+const sumRows = t => [['총 주문금액', won(t)], ['운임', '0원'], ['부가세', '0원']];
+function CartPC({
+  empty
+}) {
+  const c = useCart(empty);
+  return /*#__PURE__*/React.createElement(PCPage, null, /*#__PURE__*/React.createElement(PageHead, {
+    title: "\uC7A5\uBC14\uAD6C\uB2C8",
+    desc: "\uD310\uB9E4\uC0F5\uBCC4\uB85C \uB2F4\uAE34 \uC0C1\uD488\uC744 \uD655\uC778\uD558\uACE0 \uC8FC\uBB38\uD560 \uC0C1\uD488\uC744 \uC120\uD0DD\uD558\uC138\uC694.",
+    right: /*#__PURE__*/React.createElement(KS.Stepper, {
+      current: 0,
+      itemWidth: 150
+    })
+  }), c.groups.length === 0 ? /*#__PURE__*/React.createElement(KS.EmptyState, {
+    actionLabel: "\uC0C1\uD488\uAC80\uC0C9"
+  }) : /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(CartBar, {
+    c: c
+  }), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      flexDirection: 'column',
+      gap: 30
+    }
+  }, c.groups.map(g => /*#__PURE__*/React.createElement("section", {
+    key: g.seller,
+    style: {
+      border: '1px solid var(--kosaf-color-border-default)',
+      borderRadius: 10,
+      padding: 30
+    }
+  }, /*#__PURE__*/React.createElement("h2", {
+    style: {
+      margin: '0 0 20px',
+      paddingBottom: 16,
+      borderBottom: '1px solid var(--kosaf-color-border-default)',
+      fontSize: 24,
+      fontWeight: 700
+    }
+  }, g.seller), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'grid',
+      gridTemplateColumns: 'repeat(2, minmax(0, 1fr))',
+      gap: '30px 60px'
+    }
+  }, g.items.map(it => lineItem(c, it)))))), /*#__PURE__*/React.createElement(KS.OrderSummary, {
     layout: "horizontal",
     total: won(c.total),
-    rows: [['총 주문금액', won(c.total)], ['운임', '0원'], ['부가세', '0원']],
+    rows: sumRows(c.total),
     style: {
-      marginTop: 20
+      marginTop: 50
     }
   }), /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'flex',
       justifyContent: 'center',
       gap: 10,
-      marginTop: 40
+      marginTop: 30
     }
   }, /*#__PURE__*/React.createElement(KS.Button, {
     variant: "secondary",
     size: 50,
     width: 200
-  }, "\uC0C1\uD488\uAC80\uC0C9"), /*#__PURE__*/React.createElement(KS.Button, {
+  }, "\uACC4\uC18D \uC1FC\uD551\uD558\uAE30"), /*#__PURE__*/React.createElement(KS.Button, {
     size: 50,
     width: 200,
     disabled: !c.total
-  }, "\uAD6C\uB9E4\uD558\uAE30"))));
+  }, "\uC120\uD0DD\uC0C1\uD488 \uC8FC\uBB38\uD558\uAE30"))));
 }
 function CartMo({
   empty
 }) {
   const c = useCart(empty);
   return /*#__PURE__*/React.createElement(MoPage, {
+    title: "\uC7A5\uBC14\uAD6C\uB2C8",
+    back: true,
     bottom: c.groups.length ? /*#__PURE__*/React.createElement(KS.BottomActionBar, {
       variant: "full",
-      primaryLabel: '구매하기 ' + won(c.total),
+      primaryLabel: c.total ? won(c.total) + ' 주문하기' : '주문할 상품을 선택하세요',
       disabled: !c.total
     }) : null
   }, /*#__PURE__*/React.createElement("div", {
     style: {
-      padding: '10px 16px 0'
-    }
-  }, /*#__PURE__*/React.createElement(PageTitle, {
-    size: 24
-  }, "\uC7A5\uBC14\uAD6C\uB2C8"), /*#__PURE__*/React.createElement("div", {
-    style: {
-      marginTop: 14
+      padding: '12px 16px 4px'
     }
   }, /*#__PURE__*/React.createElement(KS.Stepper, {
     current: 0,
@@ -6764,7 +7063,7 @@ function CartMo({
     style: {
       gap: 3
     }
-  }))), c.groups.length === 0 ? /*#__PURE__*/React.createElement("div", {
+  })), c.groups.length === 0 ? /*#__PURE__*/React.createElement("div", {
     style: {
       padding: 16
     }
@@ -6774,8 +7073,8 @@ function CartMo({
   })) : /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(CartBar, {
     c: c,
     mobile: true
-  }), c.groups.map((g, gi) => /*#__PURE__*/React.createElement("section", {
-    key: gi,
+  }), c.groups.map(g => /*#__PURE__*/React.createElement("section", {
+    key: g.seller,
     style: {
       margin: '0 16px 16px',
       border: '1px solid var(--kosaf-color-border-default)',
@@ -6784,10 +7083,10 @@ function CartMo({
     }
   }, /*#__PURE__*/React.createElement("h2", {
     style: {
-      margin: '0 0 14px',
+      margin: '0 0 16px',
       paddingBottom: 12,
-      borderBottom: '2px solid var(--kosaf-color-border-default)',
-      fontSize: 20,
+      borderBottom: '1px solid var(--kosaf-color-border-default)',
+      fontSize: 18,
       fontWeight: 700
     }
   }, g.seller), g.items.map((it, i) => /*#__PURE__*/React.createElement("div", {
@@ -6797,29 +7096,13 @@ function CartMo({
       marginTop: i ? 20 : 0,
       borderTop: i ? '1px solid var(--kosaf-color-border-default)' : 0
     }
-  }, /*#__PURE__*/React.createElement(KS.CartItem, {
-    imageSrc: IMG_M,
-    title: it.title,
-    price: it.price,
-    specs: it.specs,
-    quantity: it.qty,
-    onQuantity: q => c.upd(it.id, {
-      qty: q
-    }),
-    deliveryDate: "2022-03-23",
-    selectable: true,
-    selected: it.sel,
-    onSelect: v => c.upd(it.id, {
-      sel: v
-    }),
-    onRemove: () => c.remove(it.id)
-  }))))), /*#__PURE__*/React.createElement("div", {
+  }, lineItem(c, it, true))))), /*#__PURE__*/React.createElement("div", {
     style: {
-      padding: '0 16px 30px'
+      padding: '0 16px 20px'
     }
   }, /*#__PURE__*/React.createElement(KS.OrderSummary, {
     total: won(c.total),
-    rows: [['총 주문금액', won(c.total)], ['부가세', '0원'], ['운임', '0원']]
+    rows: sumRows(c.total)
   }))));
 }
 Object.assign(window, {
@@ -6830,85 +7113,101 @@ Object.assign(window, {
 
 // ui_kits/checkout/screens.jsx
 try { (() => {
-// 주문·결제 — Source: 1:85780 (PC), 1:104139 (Mo). 완료화면 — 1:104312 (PC), 1:104518 (Mo)
+// 주문·결제 — Source: 1:85780 (PC), 1:104139 (Mo). 완료화면 — 1:104312 (PC), 1:104518 (Mo). Order = 사과/부사 10박스 + 배/신고 4박스.
+const ORDER = [{
+  p: PRODUCTS[0],
+  qty: 10
+}, {
+  p: PRODUCTS[2],
+  qty: 4
+}];
+const ORDER_TOTAL = ORDER.reduce((s, o) => s + o.p.price * o.qty, 0);
+const orderRows = [['상품금액', won(ORDER_TOTAL)], ['운임', '0원'], ['부가세', '0원']];
 function PayMethod({
-  mobile
+  mobile,
+  value,
+  onChange
 }) {
-  const [p, setP] = React.useState('a');
   return /*#__PURE__*/React.createElement("div", {
     role: "radiogroup",
     "aria-label": "\uACB0\uC81C\uBC29\uBC95",
     style: {
       display: 'flex',
-      gap: 30,
-      padding: mobile ? '16px 20px' : '24px 30px',
+      flexDirection: mobile ? 'column' : 'row',
+      gap: mobile ? 16 : 40,
+      padding: mobile ? 16 : '24px 30px',
       border: '1px solid var(--kosaf-color-border-default)',
       borderRadius: 10
     }
   }, /*#__PURE__*/React.createElement(KS.Radio, {
     name: 'pay' + (mobile ? 'm' : 'p'),
     value: "a",
-    checked: p === 'a',
-    onChange: setP
-  }, "\uC815\uC0B0\uC18C (\uD604\uAE08, \uC5F0\uC2E0)"), /*#__PURE__*/React.createElement(KS.Radio, {
+    checked: value === 'a',
+    onChange: onChange
+  }, "\uC815\uC0B0\uC18C (\uD604\uAE08, \uC5EC\uC2E0)"), /*#__PURE__*/React.createElement(KS.Radio, {
     name: 'pay' + (mobile ? 'm' : 'p'),
     value: "b",
-    checked: p === 'b',
-    onChange: setP
+    checked: value === 'b',
+    onChange: onChange
   }, "\uAC1C\uBCC4\uC57D\uC815"));
 }
 function CompleteBody({
   mobile,
+  pay,
   onRestart
 }) {
-  const check = /*#__PURE__*/React.createElement(KS.Icon, {
-    name: "check",
-    size: mobile ? 34 : 44
-  });
   return /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
-      gap: mobile ? 16 : 24,
-      padding: mobile ? '40px 20px' : '80px 0 0',
+      gap: mobile ? 12 : 20,
+      padding: mobile ? '32px 16px' : '60px 0 0',
       textAlign: 'center'
     }
   }, /*#__PURE__*/React.createElement("span", {
     style: {
-      width: mobile ? 70 : 90,
-      height: mobile ? 70 : 90,
+      width: mobile ? 64 : 90,
+      height: mobile ? 64 : 90,
       borderRadius: '50%',
       background: 'var(--kosaf-color-action-primary)',
       display: 'inline-flex',
       alignItems: 'center',
       justifyContent: 'center'
     }
-  }, check), /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/React.createElement(KS.Icon, {
+    name: "check",
+    size: mobile ? 30 : 44
+  })), /*#__PURE__*/React.createElement("h2", {
     style: {
-      fontSize: mobile ? 22 : 30,
+      margin: mobile ? '8px 0 0' : '10px 0 0',
+      fontSize: mobile ? 20 : 30,
       fontWeight: 700
     }
-  }, "\uAC10\uC0AC\uD569\uB2C8\uB2E4. \uC8FC\uBB38\uC774 \uC644\uB8CC\uB418\uC5C8\uC2B5\uB2C8\uB2E4."), /*#__PURE__*/React.createElement("div", {
+  }, "\uC8FC\uBB38\uC774 \uC644\uB8CC\uB418\uC5C8\uC2B5\uB2C8\uB2E4."), /*#__PURE__*/React.createElement("p", {
     style: {
+      margin: 0,
       fontSize: mobile ? 14 : 18,
-      color: 'var(--kosaf-color-text-secondary)',
-      whiteSpace: 'pre-line'
+      lineHeight: mobile ? '20px' : '28px',
+      color: 'var(--kosaf-color-text-secondary)'
     }
-  }, '마이페이지 > 주문/배송내역에서\n상세정보를 확인할 수 있습니다.'), /*#__PURE__*/React.createElement("div", {
+  }, "\uB9C8\uC774\uD398\uC774\uC9C0 > \uC8FC\uBB38/\uBC30\uC1A1\uB0B4\uC5ED\uC5D0\uC11C \uC0C1\uC138\uC815\uBCF4\uB97C \uD655\uC778\uD560 \uC218 \uC788\uC2B5\uB2C8\uB2E4."), /*#__PURE__*/React.createElement("div", {
     style: {
       width: '100%',
-      maxWidth: mobile ? 350 : 1596,
+      maxWidth: mobile ? undefined : 1000,
       textAlign: 'left',
-      marginTop: mobile ? 10 : 30
+      marginTop: mobile ? 20 : 30
     }
   }, /*#__PURE__*/React.createElement(SectionTitle, {
-    size: mobile ? 20 : 30
+    size: mobile ? 18 : 24
   }, "\uACB0\uC81C\uC815\uBCF4"), /*#__PURE__*/React.createElement(KS.DescriptionList, {
     device: mobile ? 'mobile' : 'desktop',
     items: [{
-      label: '총상품가격',
-      value: '9,400,000원'
+      label: '주문번호',
+      value: '2023050800012 (예시)'
+    }, {
+      label: '상품금액',
+      value: won(ORDER_TOTAL)
     }, {
       label: '운임',
       value: '0원'
@@ -6917,93 +7216,110 @@ function CompleteBody({
       value: '0원'
     }, {
       label: '결제방법',
-      value: '정산소'
+      value: pay === 'b' ? '개별약정' : '정산소'
     }, {
-      label: '총 결제방법',
+      label: '총 결제금액',
       value: /*#__PURE__*/React.createElement("b", {
         style: {
           color: 'var(--kosaf-color-action-primary)',
           fontSize: mobile ? 18 : 24
         }
-      }, "9,400,000\uC6D0")
+      }, won(ORDER_TOTAL))
     }]
   })), /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'flex',
       gap: 10,
-      marginTop: 20
+      marginTop: mobile ? 16 : 30,
+      width: mobile ? '100%' : undefined
     }
   }, /*#__PURE__*/React.createElement(KS.Button, {
     variant: "secondary",
     size: mobile ? 45 : 50,
-    width: mobile ? 150 : 200,
+    width: mobile ? undefined : 200,
+    style: mobile ? {
+      flex: 1
+    } : undefined,
     onClick: onRestart
   }, "\uC0C1\uD488\uAC80\uC0C9"), /*#__PURE__*/React.createElement(KS.Button, {
     size: mobile ? 45 : 50,
-    width: mobile ? 150 : 200
+    width: mobile ? undefined : 200,
+    style: mobile ? {
+      flex: 1
+    } : undefined
   }, "\uC8FC\uBB38/\uBC30\uC1A1\uB0B4\uC5ED")));
 }
 function CheckoutPC({
   startDone
 }) {
   const [done, setDone] = React.useState(!!startDone);
-  return /*#__PURE__*/React.createElement(PCPage, null, /*#__PURE__*/React.createElement("div", {
+  const [pay, setPay] = React.useState('a');
+  return /*#__PURE__*/React.createElement(PCPage, null, /*#__PURE__*/React.createElement(PageHead, {
+    title: done ? '주문완료' : '주문/결제',
+    desc: done ? null : '납품기일과 납품장소를 확인한 뒤 결제방법을 선택하세요.',
+    right: /*#__PURE__*/React.createElement(KS.Stepper, {
+      current: done ? 2 : 1,
+      itemWidth: 150
+    })
+  }), done ? /*#__PURE__*/React.createElement(CompleteBody, {
+    pay: pay,
+    onRestart: () => setDone(false)
+  }) : /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'space-between'
+      flexDirection: 'column',
+      gap: 50
     }
-  }, /*#__PURE__*/React.createElement(PageTitle, null, done ? '주문완료' : '주문/결제'), /*#__PURE__*/React.createElement(KS.Stepper, {
-    current: done ? 2 : 1,
-    itemWidth: 150
-  })), done ? /*#__PURE__*/React.createElement(CompleteBody, {
-    onRestart: () => setDone(false)
-  }) : /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("div", {
-    style: {
-      marginTop: 50
-    }
-  }, /*#__PURE__*/React.createElement(SectionTitle, null, "\uC0C1\uD488\uC815\uBCF4")), /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/React.createElement("section", null, /*#__PURE__*/React.createElement(SectionTitle, {
+    size: 24
+  }, "\uC0C1\uD488\uC815\uBCF4"), /*#__PURE__*/React.createElement("div", {
     style: {
       border: '1px solid var(--kosaf-color-border-default)',
       borderRadius: 10,
-      padding: 30,
+      padding: 30
+    }
+  }, /*#__PURE__*/React.createElement("h3", {
+    style: {
+      margin: '0 0 20px',
+      paddingBottom: 16,
+      borderBottom: '1px solid var(--kosaf-color-border-default)',
+      fontSize: 20,
+      fontWeight: 700
+    }
+  }, "\uB300\uC57C\uCCAD\uACFC"), /*#__PURE__*/React.createElement("div", {
+    style: {
       display: 'grid',
-      gridTemplateColumns: '1fr 1fr',
-      gap: 40
+      gridTemplateColumns: 'repeat(2, minmax(0, 1fr))',
+      gap: '30px 60px'
     }
-  }, /*#__PURE__*/React.createElement(KS.CartItem, {
+  }, ORDER.map(({
+    p,
+    qty
+  }) => /*#__PURE__*/React.createElement(KS.CartItem, {
+    key: p.id,
     device: "desktop",
-    imageSrc: IMG_M,
-    title: "\uC0AC\uACFC/\uBD80\uC0AC/\uD2B920kg",
-    quantity: 100,
+    imageSrc: imgFor(p, true),
+    title: p.name,
+    price: won(p.price),
+    specs: [['단위/포장', p.unit], ['등급/크기', p.grade], ['금액', won(p.price * qty)]],
+    quantity: qty,
     editableQuantity: false,
-    deliveryDate: "2022-03-23"
-  }), /*#__PURE__*/React.createElement(KS.CartItem, {
-    device: "desktop",
-    imageSrc: IMG_M,
-    title: "\uC0AC\uACFC/\uD64D\uC625/15KG",
-    price: "20,000\uC6D0",
-    quantity: 20,
-    editableQuantity: false,
-    deliveryDate: "2022-03-23",
-    specs: [['판매자', '대구경북능금농협'], ['거래수량', '상(20개)'], ['단위/포장', '5kg망']]
-  })), /*#__PURE__*/React.createElement("div", {
-    style: {
-      marginTop: 50
-    }
-  }, /*#__PURE__*/React.createElement(SectionTitle, null, "\uACB0\uC81C\uC815\uBCF4"), /*#__PURE__*/React.createElement(PayMethod, null)), /*#__PURE__*/React.createElement(KS.OrderSummary, {
+    deliveryDate: "2023-05-10"
+  }))))), /*#__PURE__*/React.createElement("section", null, /*#__PURE__*/React.createElement(SectionTitle, {
+    size: 24
+  }, "\uACB0\uC81C\uC815\uBCF4"), /*#__PURE__*/React.createElement(PayMethod, {
+    value: pay,
+    onChange: setPay
+  })), /*#__PURE__*/React.createElement("section", null, /*#__PURE__*/React.createElement(KS.OrderSummary, {
     layout: "horizontal",
-    total: "4,000,000\uC6D0",
-    rows: [['상품 금액', '4,000,000원'], ['운임', '0원'], ['부가세', '0원']],
-    style: {
-      marginTop: 30
-    }
+    total: won(ORDER_TOTAL),
+    rows: orderRows
   }), /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'flex',
       justifyContent: 'center',
       gap: 10,
-      marginTop: 40
+      marginTop: 30
     }
   }, /*#__PURE__*/React.createElement(KS.Button, {
     variant: "secondary",
@@ -7013,61 +7329,76 @@ function CheckoutPC({
     size: 50,
     width: 200,
     onClick: () => setDone(true)
-  }, "\uACB0\uC81C\uD558\uAE30"))));
+  }, won(ORDER_TOTAL), " \uACB0\uC81C\uD558\uAE30")), /*#__PURE__*/React.createElement("div", {
+    style: {
+      textAlign: 'center',
+      marginTop: 16
+    }
+  }, /*#__PURE__*/React.createElement(DemoNote, null, "\uACB0\uC81C\uB294 \uC2E4\uC81C\uB85C \uCC98\uB9AC\uB418\uC9C0 \uC54A\uC2B5\uB2C8\uB2E4")))));
 }
 function CheckoutMo({
   startDone
 }) {
   const [done, setDone] = React.useState(!!startDone);
+  const [pay, setPay] = React.useState('a');
   return /*#__PURE__*/React.createElement(MoPage, {
     header: false,
     bottom: done ? null : /*#__PURE__*/React.createElement(KS.BottomActionBar, {
       variant: "full",
-      primaryLabel: "\uACB0\uC81C\uD558\uAE30",
+      primaryLabel: won(ORDER_TOTAL) + ' 결제하기',
       onPrimary: () => setDone(true)
-    })
+    }),
+    bottomHeight: 70
   }, /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'space-between',
-      height: 74,
-      padding: '0 20px',
+      height: 60,
+      padding: '0 16px',
       borderBottom: '1px solid var(--kosaf-color-border-default)'
     }
-  }, /*#__PURE__*/React.createElement(PageTitle, {
-    size: 24
+  }, /*#__PURE__*/React.createElement("h1", {
+    style: {
+      margin: 0,
+      fontSize: 20,
+      fontWeight: 700
+    }
   }, done ? '주문완료' : '주문/결제'), /*#__PURE__*/React.createElement("button", {
     "aria-label": "\uB2EB\uAE30",
     style: {
       width: 44,
       height: 44,
-      marginRight: -10,
+      marginRight: -12,
       border: 0,
       background: 'none',
-      cursor: 'pointer'
+      cursor: 'pointer',
+      display: 'inline-flex',
+      alignItems: 'center',
+      justifyContent: 'center'
     }
   }, /*#__PURE__*/React.createElement(KS.CloseX, {
-    size: 20
+    size: 18
   }))), /*#__PURE__*/React.createElement("div", {
     style: {
       padding: '16px 16px 0'
     }
   }, /*#__PURE__*/React.createElement(KS.Stepper, {
     current: done ? 2 : 1,
-    itemWidth: 119,
+    itemWidth: 116,
     style: {
-      gap: 0
+      gap: 3
     }
   })), done ? /*#__PURE__*/React.createElement(CompleteBody, {
     mobile: true,
+    pay: pay,
     onRestart: () => setDone(false)
   }) : /*#__PURE__*/React.createElement("div", {
     style: {
       padding: 16,
       display: 'flex',
       flexDirection: 'column',
-      gap: 16
+      gap: 20
     }
   }, /*#__PURE__*/React.createElement("section", {
     style: {
@@ -7077,39 +7408,43 @@ function CheckoutMo({
     }
   }, /*#__PURE__*/React.createElement("h2", {
     style: {
-      margin: '0 0 14px',
+      margin: '0 0 16px',
       paddingBottom: 12,
-      borderBottom: '2px solid var(--kosaf-color-border-default)',
-      fontSize: 20,
+      borderBottom: '1px solid var(--kosaf-color-border-default)',
+      fontSize: 18,
       fontWeight: 700
     }
-  }, "\uC11C\uC6B8\uCCAD\uACFC"), /*#__PURE__*/React.createElement(KS.CartItem, {
-    imageSrc: IMG_M,
-    quantity: 100,
+  }, "\uB300\uC57C\uCCAD\uACFC"), ORDER.map(({
+    p,
+    qty
+  }, i) => /*#__PURE__*/React.createElement("div", {
+    key: p.id,
+    style: {
+      paddingTop: i ? 20 : 0,
+      marginTop: i ? 20 : 0,
+      borderTop: i ? '1px solid var(--kosaf-color-border-default)' : 0
+    }
+  }, /*#__PURE__*/React.createElement(KS.CartItem, {
+    imageSrc: imgFor(p, true),
+    title: p.name,
+    price: won(p.price),
+    specs: [['단위/포장', p.unit], ['금액', won(p.price * qty)]],
+    quantity: qty,
     editableQuantity: false,
-    deliveryDate: "2022-03-23"
-  }), /*#__PURE__*/React.createElement("div", {
+    deliveryDate: "2023-05-10"
+  })))), /*#__PURE__*/React.createElement(KS.OrderSummary, {
+    total: won(ORDER_TOTAL),
+    rows: orderRows
+  }), /*#__PURE__*/React.createElement("section", null, /*#__PURE__*/React.createElement("h2", {
     style: {
-      borderTop: '1px solid var(--kosaf-color-border-default)',
-      marginTop: 16,
-      paddingTop: 16
-    }
-  }, /*#__PURE__*/React.createElement(KS.OrderSummary, {
-    title: "\uD310\uB9E4\uC0F5 \uD569\uACC4",
-    total: "1,100,000\uC6D0",
-    rows: [['상품 금액', '1,100,000원'], ['운임비', '0원'], ['부가세', '0원']],
-    style: {
-      border: 0,
-      padding: 0
-    }
-  }))), /*#__PURE__*/React.createElement(KS.OrderSummary, null), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
-    style: {
-      fontSize: 20,
-      fontWeight: 500,
-      margin: '10px 0 14px'
+      fontSize: 18,
+      fontWeight: 700,
+      margin: '0 0 12px'
     }
   }, "\uACB0\uC81C\uC815\uBCF4"), /*#__PURE__*/React.createElement(PayMethod, {
-    mobile: true
+    mobile: true,
+    value: pay,
+    onChange: setPay
   }))));
 }
 Object.assign(window, {
@@ -7374,73 +7709,84 @@ Object.assign(window, {
 
 // ui_kits/product-detail/screens.jsx
 try { (() => {
-// 상품상세 — Source: 정가 1:86264 (PC), 1:87593 (Mo), 시세동향 1:86445/1:86729, 확대 1:86964, 구매후기 1:102483
-const PD_INFO = [{
+// 상품상세 — Source: 정가 1:86264 (PC), 1:87593 (Mo), 시세동향 1:86445/1:86729, 구매후기 1:102483. Product = PRODUCTS[0] (사과, supplied photo).
+const PD = PRODUCTS[0];
+const PD_TABS = ['속성정보', '상세정보', '구매후기', '상품문의', '배송/반품/교환정보'];
+const pdInfo = mobile => [{
   label: '품목',
   value: '과실류 > 사과'
 }, {
   label: '품종',
-  value: '홍옥'
+  value: PD.variety
 }, {
-  label: '단위/포장/크기',
-  value: '15kg/박스/6내'
+  label: mobile ? '단위/포장' : '단위/포장/크기',
+  value: PD.unit
+}, {
+  label: '등급',
+  value: PD.grade
 }, {
   label: '판매단가',
   value: /*#__PURE__*/React.createElement("b", {
     style: {
-      fontSize: 24
+      fontSize: mobile ? 16 : 22
     }
-  }, "40,000\uC6D0")
+  }, won(PD.price))
 }, {
-  label: '거래수량\n(잔여수량)',
-  value: '300개 (50)'
+  label: mobile ? '거래(잔여)수량' : '거래수량\n(잔여수량)',
+  value: num(PD.qty) + '박스 (' + num(PD.remain) + ')'
 }, {
   label: '최소구매수량',
-  value: '1개'
+  value: '1박스'
 }, {
   label: '운임',
-  value: '판매자부담'
-}, {
-  label: '배송가능지역',
-  value: /*#__PURE__*/React.createElement("span", {
-    style: {
-      color: 'var(--kosaf-color-state-focus)'
-    }
-  }, "\uC11C\uC6B8 \uC885\uB85C\uAD6C \uC678 2\uAC74")
+  value: '판매자 부담'
 }, {
   label: '배송출발일',
-  value: '2023-03-23'
+  value: '2023-05-08'
 }];
-const PD_TABS = ['속성정보', '상세정보', '구매후기', '상품문의', '배송/반품/교환정보'];
 function PDTabs({
   tab,
   setTab,
   mobile
 }) {
+  const refs = React.useRef([]);
+  const key = (e, i) => {
+    const d = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+    if (!d) return;
+    const n = (i + d + PD_TABS.length) % PD_TABS.length;
+    setTab(n);
+    refs.current[n] && refs.current[n].focus();
+  };
   return /*#__PURE__*/React.createElement("div", {
     role: "tablist",
+    "aria-label": "\uC0C1\uD488 \uC815\uBCF4",
     style: {
       display: 'flex',
       borderBottom: '1px solid var(--kosaf-color-border-default)',
       overflowX: 'auto',
       gap: mobile ? 20 : 0,
-      padding: mobile ? '0 20px' : 0
+      padding: mobile ? '0 16px' : 0,
+      scrollbarWidth: 'none'
     }
   }, PD_TABS.map((t, i) => /*#__PURE__*/React.createElement("button", {
     key: t,
+    ref: el => refs.current[i] = el,
     role: "tab",
     "aria-selected": tab === i,
+    tabIndex: tab === i ? 0 : -1,
+    onKeyDown: e => key(e, i),
     onClick: () => setTab(i),
     style: {
       flex: mobile ? '0 0 auto' : 1,
-      height: mobile ? 44 : 70,
+      height: mobile ? 46 : 70,
       border: 0,
       borderBottom: '2px solid ' + (tab === i ? 'var(--kosaf-color-action-primary)' : 'transparent'),
       background: 'none',
       cursor: 'pointer',
       fontFamily: 'inherit',
-      fontSize: mobile ? 14 : 20,
+      fontSize: mobile ? 15 : 20,
       fontWeight: tab === i ? 700 : 400,
+      whiteSpace: 'nowrap',
       color: tab === i ? 'var(--kosaf-color-action-primary)' : 'var(--kosaf-color-text-primary)'
     }
   }, t)));
@@ -7449,110 +7795,126 @@ function PDTabBody({
   tab,
   mobile
 }) {
+  const pad = mobile ? '20px 16px' : '40px 0';
   if (tab === 2) return /*#__PURE__*/React.createElement("div", {
     style: {
-      padding: mobile ? '0 20px' : 0
+      padding: mobile ? '0 16px' : 0
     }
   }, /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'flex',
       alignItems: 'center',
       gap: 12,
-      padding: '20px 0'
+      padding: '20px 0',
+      borderBottom: '1px solid var(--kosaf-color-border-default)'
     }
-  }, "\uD3C9\uADE0\uBCC4\uC810 ", /*#__PURE__*/React.createElement(KS.Rating, {
-    value: 4.4,
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontSize: mobile ? 15 : 18,
+      fontWeight: 500
+    }
+  }, "\uD3C9\uADE0\uBCC4\uC810"), /*#__PURE__*/React.createElement(KS.Rating, {
+    value: 4.5,
     showValue: true,
     size: mobile ? 18 : 24
-  })), [0, 1].map(i => /*#__PURE__*/React.createElement(KS.ReviewItem, {
-    key: i,
+  }), /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontSize: 14,
+      color: 'var(--kosaf-color-text-secondary)'
+    }
+  }, "\uD6C4\uAE30 2\uAC74")), /*#__PURE__*/React.createElement(KS.ReviewItem, {
     device: mobile ? 'mobile' : 'desktop',
+    product: PD.name,
+    rating: 5,
     tags: ['품질 만족', '배송 만족'],
-    images: i ? [] : [IMG_M],
+    images: [IMG_M],
     actions: [{
       label: '신고하기'
     }]
-  })), /*#__PURE__*/React.createElement(KS.Pagination, {
+  }), /*#__PURE__*/React.createElement(KS.ReviewItem, {
     device: mobile ? 'mobile' : 'desktop',
-    total: 3,
-    style: {
-      margin: '24px 0'
-    }
+    author: "kim***",
+    date: "2023-04-20",
+    product: PD.name,
+    rating: 4,
+    body: "\uD06C\uAE30\uAC00 \uACE0\uB974\uACE0 \uB2F9\uB3C4\uAC00 \uC88B\uC2B5\uB2C8\uB2E4. \uC7AC\uAD6C\uB9E4 \uC758\uC0AC \uC788\uC5B4\uC694.",
+    actions: [{
+      label: '신고하기'
+    }]
   }));
   if (tab === 0) return /*#__PURE__*/React.createElement("div", {
     style: {
-      padding: mobile ? '20px' : '40px 0'
+      padding: pad
     }
   }, /*#__PURE__*/React.createElement(KS.DescriptionList, {
     device: mobile ? 'mobile' : 'desktop',
     items: [{
       label: '원산지',
-      value: '국내산 (예시)'
+      value: '경북 청송 (예시)'
     }, {
       label: '보관방법',
-      value: '냉장 보관 (예시)'
+      value: '0~2℃ 냉장 보관 (예시)'
+    }, {
+      label: '출하 형태',
+      value: PD.unit
     }]
   }));
   return /*#__PURE__*/React.createElement("div", {
     style: {
-      padding: 40
+      padding: pad
     }
   }, /*#__PURE__*/React.createElement(KS.EmptyState, {
     device: mobile ? 'mobile' : 'desktop',
-    message: "\uC774 \uD0ED\uC758 \uC0C1\uC138 \uCF58\uD150\uCE20\uB294 \uC6D0\uBCF8 \uC774\uBBF8\uC9C0/\uBCF8\uBB38\uC774 \uC81C\uACF5\uB418\uC9C0 \uC54A\uC558\uC2B5\uB2C8\uB2E4.",
+    message: "\uC6D0\uBCF8\uC5D0\uC11C \uC774 \uD0ED\uC758 \uBCF8\uBB38\uC774 \uC81C\uACF5\uB418\uC9C0 \uC54A\uC558\uC2B5\uB2C8\uB2E4.",
+    description: "\uC0C1\uC138 \uC774\uBBF8\uC9C0\xB7\uBB38\uC758\xB7\uBC30\uC1A1 \uC548\uB0B4 \uBCF8\uBB38\uC740 \uC2E4\uC81C \uB370\uC774\uD130\uB85C \uCC44\uC6CC \uC8FC\uC138\uC694.",
     style: {
-      minHeight: 200
+      minHeight: mobile ? 180 : 240
     }
   }));
 }
 function ProductDetailPC() {
-  const [qty, setQty] = React.useState(100);
-  const [tab, setTab] = React.useState(2);
+  const [qty, setQty] = React.useState(10);
+  const [tab, setTab] = React.useState(0);
   const [trend, setTrend] = React.useState(false);
   const [liked, setLiked] = React.useState(false);
   return /*#__PURE__*/React.createElement(PCPage, {
     active: "\uAC70\uB798\uBC29\uC2DD\uBCC4"
   }, /*#__PURE__*/React.createElement(KS.Breadcrumb, {
-    items: ['홈', '거래방식별', '정가거래', '상품상세']
+    items: ['홈', '거래방식별', '정가거래', '과실류', '사과']
   }), /*#__PURE__*/React.createElement("div", {
     style: {
-      display: 'flex',
+      display: 'grid',
+      gridTemplateColumns: '700px 1fr',
       gap: 60,
-      marginTop: 30
+      marginTop: 30,
+      alignItems: 'start'
     }
-  }, /*#__PURE__*/React.createElement("div", {
-    style: {
-      flex: '0 0 700px'
-    }
-  }, /*#__PURE__*/React.createElement("img", {
+  }, /*#__PURE__*/React.createElement(KS.ImageSlot, {
     src: IMG_D,
-    alt: "\uC0AC\uACFC \uC0C1\uD488 \uC774\uBBF8\uC9C0 (1:91190)",
+    alt: PD.name,
+    width: 700,
+    height: 700
+  }), /*#__PURE__*/React.createElement("div", {
     style: {
-      width: 700,
-      height: 700,
-      objectFit: 'cover',
-      borderRadius: 10,
-      display: 'block'
+      minWidth: 0,
+      display: 'flex',
+      flexDirection: 'column',
+      gap: 30
     }
-  })), /*#__PURE__*/React.createElement("div", {
-    style: {
-      flex: 1,
-      minWidth: 0
-    }
-  }, /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'flex',
       alignItems: 'center',
       gap: 12
     }
   }, /*#__PURE__*/React.createElement(KS.DealBadge, {
-    type: "\uC815\uAC00\uAC70\uB798"
+    type: PD.deal
   }), /*#__PURE__*/React.createElement("span", {
     style: {
       fontSize: 18,
       color: 'var(--kosaf-color-text-secondary)'
     }
-  }, "\uCCAD\uC1A1\uD648\uACE8\uB18D\uC6D0"), /*#__PURE__*/React.createElement("span", {
+  }, PD.seller), /*#__PURE__*/React.createElement("span", {
     style: {
       flex: 1
     }
@@ -7560,22 +7922,23 @@ function ProductDetailPC() {
     variant: "secondary",
     size: 42,
     onClick: () => setTrend(true)
-  }, "\uAC00\uACA9\uC2DC\uC138\uD604\uD669")), /*#__PURE__*/React.createElement("h1", {
+  }, "\uD488\uC885 \uC2DC\uC138\uB3D9\uD5A5\uBCF4\uAE30")), /*#__PURE__*/React.createElement("h1", {
     style: {
-      margin: '16px 0 24px',
+      margin: '16px 0 0',
       fontSize: 30,
       fontWeight: 700,
       lineHeight: '40px'
     }
-  }, "\uC0C8\uBCBD\uC774\uC2AC \uC0AC\uACFC \uD31C\uB9DB\uD0F1 23\uB144 \uD587 \uC5EC\uB984 \uCCAD\uC0AC\uACFC 2KG g \uD55C\uC785(17\uACFC\uB0B4)...\uC81C\uBAA9\uC740 \uAE38\uC5B4\uC9C8\uC218 \uC788\uC74C"), /*#__PURE__*/React.createElement(KS.DescriptionList, {
-    items: PD_INFO,
+  }, PD.name)), /*#__PURE__*/React.createElement(KS.DescriptionList, {
+    items: pdInfo(false),
     labelWidth: 220
   }), /*#__PURE__*/React.createElement("div", {
     style: {
-      display: 'flex',
+      display: 'grid',
+      gridTemplateColumns: 'auto auto 1fr auto',
       alignItems: 'center',
-      gap: 20,
-      padding: '24px 0',
+      columnGap: 20,
+      padding: '4px 0 24px',
       borderBottom: '1px solid var(--kosaf-color-border-default)'
     }
   }, /*#__PURE__*/React.createElement("span", {
@@ -7583,40 +7946,39 @@ function ProductDetailPC() {
       fontSize: 18,
       fontWeight: 500
     }
-  }, "\uC218\uB7C9"), /*#__PURE__*/React.createElement(KS.QuantityStepper, {
+  }, "\uC8FC\uBB38\uC218\uB7C9"), /*#__PURE__*/React.createElement(KS.QuantityStepper, {
     size: "lg",
     value: qty,
     onChange: setQty,
-    max: 300
+    max: PD.remain
   }), /*#__PURE__*/React.createElement("span", {
     style: {
-      flex: 1
-    }
-  }), /*#__PURE__*/React.createElement("span", {
-    style: {
+      justifySelf: 'end',
       fontSize: 18
     }
-  }, "\uCD1D\uD569\uACC4\uAE08\uC561 ", /*#__PURE__*/React.createElement("small", {
+  }, "\uCD1D \uC0C1\uD488\uAE08\uC561 ", /*#__PURE__*/React.createElement("small", {
     style: {
+      fontSize: 14,
       color: 'var(--kosaf-color-text-muted)'
     }
-  }, "(\uBD80\uAC00\uC138\uD3EC\uD568)")), /*#__PURE__*/React.createElement("b", {
+  }, "(", won(PD.price), " \xD7 ", qty, ")")), /*#__PURE__*/React.createElement("b", {
     style: {
       fontSize: 30,
-      color: 'var(--kosaf-color-action-primary)'
+      color: 'var(--kosaf-color-action-primary)',
+      fontVariantNumeric: 'tabular-nums'
     }
-  }, (40000 * qty).toLocaleString(), "\uC6D0")), /*#__PURE__*/React.createElement("div", {
+  }, won(PD.price * qty))), /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'grid',
-      gridTemplateColumns: '1fr 1fr 1fr 1fr',
-      gap: 10,
-      marginTop: 24
+      gridTemplateColumns: '1fr 1fr 1fr 2fr',
+      gap: 10
     }
   }, /*#__PURE__*/React.createElement(KS.Button, {
     variant: "secondary",
     size: 70,
+    "aria-pressed": liked,
     onClick: () => setLiked(!liked)
-  }, liked ? '관심상품 ✓' : '관심상품'), /*#__PURE__*/React.createElement(KS.Button, {
+  }, liked ? '관심상품 해제' : '관심상품'), /*#__PURE__*/React.createElement(KS.Button, {
     variant: "secondary",
     size: 70
   }, "\uAC00\uACA9\uD611\uC0C1"), /*#__PURE__*/React.createElement(KS.Button, {
@@ -7643,62 +8005,110 @@ function ProductDetailPC() {
   })));
 }
 function ProductDetailMo() {
-  const [qty, setQty] = React.useState(100);
+  const [qty, setQty] = React.useState(10);
   const [tab, setTab] = React.useState(0);
   const [liked, setLiked] = React.useState(false);
   const [nego, setNego] = React.useState(false);
   return /*#__PURE__*/React.createElement(MoPage, {
+    back: true,
     bottom: /*#__PURE__*/React.createElement(KS.BottomActionBar, {
       liked: liked,
       onLike: () => setLiked(!liked),
-      onSecondary: () => setNego(true)
+      onSecondary: () => setNego(true),
+      primaryLabel: '구매하기'
     })
+  }, /*#__PURE__*/React.createElement(KS.ImageSlot, {
+    src: IMG_M,
+    alt: PD.name,
+    width: "100%",
+    radius: 0
+  }), /*#__PURE__*/React.createElement("div", {
+    style: {
+      padding: '20px 16px',
+      display: 'flex',
+      flexDirection: 'column',
+      gap: 8
+    }
   }, /*#__PURE__*/React.createElement("div", {
     style: {
-      padding: '10px 20px',
-      fontSize: 20,
-      fontWeight: 700
-    }
-  }, "\uC0C1\uD488\uC0C1\uC138\uD398\uC774\uC9C0"), /*#__PURE__*/React.createElement("img", {
-    src: IMG_D,
-    alt: "\uC0AC\uACFC \uC0C1\uD488 \uC774\uBBF8\uC9C0",
-    style: {
-      width: 390,
-      height: 390,
-      objectFit: 'cover',
-      display: 'block'
-    }
-  }), /*#__PURE__*/React.createElement("div", {
-    style: {
-      padding: '20px 20px 16px'
+      display: 'flex',
+      alignItems: 'center',
+      gap: 8
     }
   }, /*#__PURE__*/React.createElement(KS.DealBadge, {
-    type: "\uC815\uAC00\uAC70\uB798",
+    type: PD.deal,
     size: "sm"
-  }), /*#__PURE__*/React.createElement("div", {
+  }), /*#__PURE__*/React.createElement("span", {
     style: {
-      fontSize: 16,
-      lineHeight: '24px',
-      marginTop: 8
+      fontSize: 13,
+      color: 'var(--kosaf-color-text-secondary)'
     }
-  }, "\uC591\uD30C/\uD0DC\uADF9\uD669/15Kg\uB9DD(\uD30C\uB81B\uD2B8 \uD310\uB9E4) / 58~62\uAC1C"), /*#__PURE__*/React.createElement("div", {
+  }, PD.seller)), /*#__PURE__*/React.createElement("h1", {
+    style: {
+      margin: 0,
+      fontSize: 18,
+      fontWeight: 500,
+      lineHeight: '26px'
+    }
+  }, PD.name), /*#__PURE__*/React.createElement("div", {
     style: {
       fontSize: 24,
       fontWeight: 700,
-      lineHeight: '34px'
+      lineHeight: '32px',
+      fontVariantNumeric: 'tabular-nums'
     }
-  }, "190,000\uC6D0")), /*#__PURE__*/React.createElement(KS.DescriptionList, {
+  }, won(PD.price), /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontSize: 13,
+      fontWeight: 400,
+      color: 'var(--kosaf-color-text-secondary)',
+      marginLeft: 6
+    }
+  }, "/ 1\uBC15\uC2A4"))), /*#__PURE__*/React.createElement(KS.DescriptionList, {
     device: "mobile",
-    items: PD_INFO.slice(0, 7).concat([{
-      label: '수량',
-      value: /*#__PURE__*/React.createElement(KS.QuantityStepper, {
-        value: qty,
-        onChange: setQty
-      })
-    }])
+    items: pdInfo(true)
   }), /*#__PURE__*/React.createElement("div", {
     style: {
-      marginTop: 30
+      padding: '20px 16px',
+      display: 'flex',
+      flexDirection: 'column',
+      gap: 14,
+      borderBottom: '8px solid var(--kosaf-src-divider-thick)'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'space-between'
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontSize: 15,
+      fontWeight: 500
+    }
+  }, "\uC8FC\uBB38\uC218\uB7C9"), /*#__PURE__*/React.createElement(KS.QuantityStepper, {
+    value: qty,
+    onChange: setQty,
+    max: PD.remain
+  })), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      alignItems: 'baseline',
+      justifyContent: 'space-between'
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontSize: 15
+    }
+  }, "\uCD1D \uC0C1\uD488\uAE08\uC561"), /*#__PURE__*/React.createElement("b", {
+    style: {
+      fontSize: 22,
+      color: 'var(--kosaf-color-action-primary)',
+      fontVariantNumeric: 'tabular-nums'
+    }
+  }, won(PD.price * qty)))), /*#__PURE__*/React.createElement("div", {
+    style: {
+      marginTop: 8
     }
   }, /*#__PURE__*/React.createElement(PDTabs, {
     tab: tab,
@@ -7714,7 +8124,7 @@ function ProductDetailMo() {
     icon: null,
     title: "\uAC00\uACA9\uD611\uC0C1",
     width: 350,
-    message: "\uD76C\uB9DD \uB2E8\uAC00\uB85C \uAC00\uACA9\uD611\uC0C1\uC744 \uC694\uCCAD\uD569\uB2C8\uB2E4. (\uB370\uBAA8)",
+    message: '희망 단가로 가격협상을 요청합니다.\n(서버 연동 없는 데모)',
     primaryLabel: "\uC694\uCCAD\uD558\uAE30",
     secondaryLabel: "\uCDE8\uC18C"
   }));
@@ -7729,32 +8139,35 @@ Object.assign(window, {
 try { (() => {
 // 통합검색 결과 — Source: 1:97566 (table), 1:98635 / 1:98118 (card), Mo 1:92883 / 1:92625 / 1:93119 (filter)
 function SearchToolbar({
+  total,
   view,
   setView,
   onlyOnSale,
   setOnly,
   mobile,
-  onFilter
+  onFilter,
+  filterCount
 }) {
   return /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'flex',
       alignItems: 'center',
       gap: mobile ? 8 : 16,
-      flexWrap: 'wrap',
-      padding: mobile ? '12px 20px' : '14px 20px',
+      padding: mobile ? '12px 16px' : '14px 20px',
       border: mobile ? 0 : '1px solid var(--kosaf-color-border-default)',
       borderBottom: '1px solid var(--kosaf-color-border-default)'
     }
   }, /*#__PURE__*/React.createElement("span", {
     style: {
-      fontSize: mobile ? 14 : 18
+      fontSize: mobile ? 14 : 18,
+      whiteSpace: 'nowrap'
     }
-  }, "Total : ", /*#__PURE__*/React.createElement("b", {
+  }, "\uCD1D ", /*#__PURE__*/React.createElement("b", {
     style: {
-      color: 'var(--kosaf-color-action-primary)'
+      color: 'var(--kosaf-color-action-primary)',
+      fontVariantNumeric: 'tabular-nums'
     }
-  }, "00"), "\uAC1C"), !mobile ? /*#__PURE__*/React.createElement(KS.Checkbox, {
+  }, total), "\uAC1C"), !mobile ? /*#__PURE__*/React.createElement(KS.Checkbox, {
     checked: onlyOnSale,
     onChange: setOnly,
     style: {
@@ -7768,16 +8181,20 @@ function SearchToolbar({
     "aria-label": "\uC815\uB82C",
     options: ['등록일순', '가나다순', '인기순', '관심품목순'],
     defaultValue: "\uB4F1\uB85D\uC77C\uC21C",
-    width: mobile ? 130 : 272
+    width: mobile ? 124 : 200
   }), !mobile ? /*#__PURE__*/React.createElement(KS.Select, {
     "aria-label": "\uBCF4\uAE30 \uAC1C\uC218",
-    options: ['10개씩', '40개씩', '60개씩', '80개씩'],
-    placeholder: "10\uAC1C\uC529 \uBCF4\uAE30"
+    options: ['10개씩 보기', '40개씩 보기', '60개씩 보기', '80개씩 보기'],
+    defaultValue: "10\uAC1C\uC529 \uBCF4\uAE30",
+    width: 200
   }) : null, mobile ? /*#__PURE__*/React.createElement(KS.Button, {
     variant: "secondary",
     size: 42,
-    onClick: onFilter
-  }, "\uD544\uD130") : /*#__PURE__*/React.createElement(KS.SegmentedControl, {
+    onClick: onFilter,
+    style: {
+      padding: '0 14px'
+    }
+  }, "\uD544\uD130", filterCount ? ' ' + filterCount : '') : /*#__PURE__*/React.createElement(KS.SegmentedControl, {
     options: ['테이블', '카드'],
     value: view,
     onChange: setView,
@@ -7787,21 +8204,27 @@ function SearchToolbar({
 function SearchPC() {
   const [open, setOpen] = React.useState(true);
   const [view, setView] = React.useState('테이블');
-  const [only, setOnly] = React.useState(true);
+  const [only, setOnly] = React.useState(false);
   const [page, setPage] = React.useState(1);
   const [liked, setLiked] = React.useState({});
+  const rows = KD.rows.filter(r => !only || !r.disabled).map(r => ({
+    ...r,
+    liked: liked[r.no] ?? r.liked
+  }));
+  const cards = PRODUCTS.filter(p => !only || !p.soldOut);
   return /*#__PURE__*/React.createElement(PCPage, {
     active: "\uAC70\uB798\uBC29\uC2DD\uBCC4"
-  }, open ? /*#__PURE__*/React.createElement(KS.FilterPanel, {
+  }, /*#__PURE__*/React.createElement(PageHead, {
+    title: "\uD1B5\uD569\uAC80\uC0C9",
+    desc: '\u2018사과\u2019 검색 결과입니다. 카테고리와 거래 조건으로 결과를 좁힐 수 있습니다.'
+  }), open ? /*#__PURE__*/React.createElement(KS.FilterPanel, {
     keyword: "\uC0AC\uACFC",
     onlyOnSale: only,
     onOnlyOnSale: setOnly,
     defaultValue: {
       sort: ['농산물'],
-      class: ['사과', '포도'],
-      item: ['사과', '포도'],
-      variety: ['사과'],
-      seller: ['위탁']
+      class: ['사과'],
+      item: ['사과']
     },
     onClose: () => setOpen(false)
   }) : /*#__PURE__*/React.createElement("div", {
@@ -7810,102 +8233,115 @@ function SearchPC() {
       justifyContent: 'center'
     }
   }, /*#__PURE__*/React.createElement(KS.Button, {
+    variant: "secondary",
     onClick: () => setOpen(true)
   }, "\uCE74\uD14C\uACE0\uB9AC \uB0B4 \uAC80\uC0C9 \uC5F4\uAE30")), /*#__PURE__*/React.createElement("div", {
     style: {
       marginTop: 50
     }
   }, /*#__PURE__*/React.createElement(SearchToolbar, {
+    total: view === '테이블' ? rows.length : cards.length,
     view: view,
     setView: setView,
     onlyOnSale: only,
     setOnly: setOnly
   })), view === '테이블' ? /*#__PURE__*/React.createElement(KS.ProductTable, {
-    rows: KD.rows.map(r => ({
-      ...r,
-      liked: liked[r.no] ?? r.liked
-    })),
+    rows: rows,
     onLike: r => setLiked({
       ...liked,
-      [r.no]: !(liked[r.no] ?? r.liked)
+      [r.no]: !r.liked
     }),
     style: {
-      marginTop: 16
+      marginTop: 20
     }
   }) : /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'grid',
-      gridTemplateColumns: 'repeat(5, 1fr)',
-      gap: 20,
-      marginTop: 20
+      gridTemplateColumns: 'repeat(5, 298px)',
+      justifyContent: 'space-between',
+      rowGap: 30,
+      marginTop: 30
     }
-  }, KD.cards.concat(KD.cards).map((c, i) => /*#__PURE__*/React.createElement(KS.ProductCard, {
-    key: i,
-    imageSrc: c.soldOut ? undefined : IMG_D,
-    deal: c.deal,
-    title: c.title,
-    price: "50,000",
-    deadline: c.deadline,
-    soldOut: c.soldOut,
-    selected: i % 5 === 0,
+  }, cards.map((p, i) => /*#__PURE__*/React.createElement(KS.ProductCard, {
+    key: p.id,
+    imageSrc: imgFor(p),
+    deal: p.deal,
+    title: p.name,
+    price: num(p.price),
+    meta: cardMeta(p),
+    deadline: p.deadline,
+    soldOut: p.soldOut,
     compare: false
   }))), /*#__PURE__*/React.createElement(KS.Pagination, {
     page: page,
     onChange: setPage,
-    total: 10,
+    total: 3,
     style: {
-      marginTop: 40
+      marginTop: 50
     }
-  }));
+  }), /*#__PURE__*/React.createElement("div", {
+    style: {
+      marginTop: 20,
+      textAlign: 'center'
+    }
+  }, /*#__PURE__*/React.createElement(DemoNote, null, "\uC0C1\uD488\xB7\uAC00\uACA9\uC740 \uC608\uC2DC \uB370\uC774\uD130\uC774\uBA70, \uC0AC\uC9C4\uC740 \uC6D0\uBCF8\uC5D0\uC11C \uC81C\uACF5\uB41C \uC0AC\uACFC \uC774\uBBF8\uC9C0 2\uC885\uB9CC \uC0AC\uC6A9\uD569\uB2C8\uB2E4")));
 }
 function SearchMo() {
   const [filter, setFilter] = React.useState(false);
+  const [sel, setSel] = React.useState({
+    sort: ['농산물'],
+    class: ['사과']
+  });
   const [page, setPage] = React.useState(1);
+  const tags = Object.values(sel).flat();
   return /*#__PURE__*/React.createElement(MoPage, null, /*#__PURE__*/React.createElement("div", {
     style: {
-      padding: '10px 20px'
+      padding: '8px 16px 12px'
     }
   }, /*#__PURE__*/React.createElement(KS.Search, {
     width: "100%",
     placeholder: "\uAC80\uC0C9\uC5B4\uB97C \uC785\uB825\uD558\uC138\uC694",
     defaultValue: "\uC0AC\uACFC"
-  })), /*#__PURE__*/React.createElement("div", {
+  })), tags.length ? /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'flex',
-      gap: 10,
-      padding: '4px 20px 10px',
+      gap: 12,
+      padding: '0 16px 8px',
       flexWrap: 'wrap'
     }
-  }, /*#__PURE__*/React.createElement(KS.FilterChip, {
-    variant: "removable"
-  }, "\uC0AC\uACFC"), /*#__PURE__*/React.createElement(KS.FilterChip, {
-    variant: "removable"
-  }, "\uB18D\uC0B0\uBB3C")), /*#__PURE__*/React.createElement(SearchToolbar, {
+  }, tags.map(t => /*#__PURE__*/React.createElement(KS.FilterChip, {
+    key: t,
+    variant: "removable",
+    onRemove: () => setSel(Object.fromEntries(Object.entries(sel).map(([k, v]) => [k, v.filter(x => x !== t)])))
+  }, t))) : null, /*#__PURE__*/React.createElement(SearchToolbar, {
     mobile: true,
-    onFilter: () => setFilter(true)
+    total: PRODUCTS.length,
+    onFilter: () => setFilter(true),
+    filterCount: tags.length
   }), /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'grid',
-      gridTemplateColumns: '1fr 1fr',
-      justifyItems: 'center',
-      gap: '10px 0',
-      padding: '10px 10px'
+      gridTemplateColumns: 'repeat(2, 176px)',
+      justifyContent: 'space-evenly',
+      rowGap: 12,
+      padding: '12px 0'
     }
-  }, KD.cards.slice(0, 4).map((c, i) => /*#__PURE__*/React.createElement(KS.ProductCard, {
-    key: i,
+  }, PRODUCTS.slice(0, 4).map(p => /*#__PURE__*/React.createElement(KS.ProductCard, {
+    key: p.id,
     device: "mobile",
-    imageSrc: IMG_M,
-    deal: c.deal,
-    title: c.title,
-    price: "50,000",
-    meta: ['판매자 : 대야청과', '생산자 : 김원생', '거래수량 : 300']
+    imageSrc: imgFor(p, true),
+    deal: p.deal,
+    title: p.name,
+    price: num(p.price),
+    soldOut: p.soldOut,
+    meta: ['판매자 : ' + p.seller, '잔여수량 : ' + num(p.remain)]
   }))), /*#__PURE__*/React.createElement(KS.Pagination, {
     device: "mobile",
     page: page,
     onChange: setPage,
     total: 3,
     style: {
-      padding: '20px 0 40px'
+      padding: '12px 0 32px'
     }
   }), filter ? /*#__PURE__*/React.createElement("div", {
     style: {
@@ -7914,16 +8350,16 @@ function SearchMo() {
       bottom: 0,
       left: '50%',
       transform: 'translateX(-50%)',
-      width: 390,
+      width: '100%',
+      maxWidth: 391,
       zIndex: 100,
       background: '#fff',
       overflowY: 'auto'
     }
   }, /*#__PURE__*/React.createElement(KS.FilterPanel, {
     device: "mobile",
-    defaultValue: {
-      sort: ['농산물', '축산물', '임산물', '수산물']
-    },
+    value: sel,
+    onChange: setSel,
     onClose: () => setFilter(false)
   })) : null);
 }
@@ -8167,7 +8603,8 @@ function SignupForm({
     pw: '',
     pw2: '',
     type: '',
-    biz: ''
+    biz: '',
+    email: ''
   });
   const [tried, setTried] = React.useState(false);
   const set = k => e => setV({
@@ -8179,7 +8616,7 @@ function SignupForm({
   const W = mobile ? '100%' : 360;
   const submit = () => {
     setTried(true);
-    if (v.name && v.id && v.pw && v.pw === v.pw2 && v.type && v.biz) onDone();
+    if (v.name && v.id && v.pw && v.pw === v.pw2 && v.type && v.biz && v.email) onDone();
   };
   return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
     style: {
@@ -8213,9 +8650,10 @@ function SignupForm({
     htmlFor: "f-id"
   }, /*#__PURE__*/React.createElement(KS.Input, {
     id: "f-id",
-    width: mobile ? 220 : W,
+    width: mobile ? 230 : W,
     value: v.id,
     onChange: set('id'),
+    state: req('id') ? 'error' : undefined,
     placeholder: "\uC601\uBB38 \uC18C\uBB38\uC790, \uC22B\uC790 \uC911 6~20\uC790 \uC870\uD569."
   }), /*#__PURE__*/React.createElement(KS.Button, {
     variant: "secondary",
@@ -8232,12 +8670,13 @@ function SignupForm({
     width: W,
     value: v.pw,
     onChange: set('pw'),
+    state: req('pw') ? 'error' : undefined,
     placeholder: "\uC601\uBB38+\uC22B\uC790+\uD2B9\uC218\uBB38\uC790 8~24\uC790 \uC870\uD569."
   })), /*#__PURE__*/React.createElement(KS.FormField, {
     layout: L,
     label: "\uBE44\uBC00\uBC88\uD638 \uD655\uC778",
     required: true,
-    error: tried && v.pw !== v.pw2 ? '비밀번호가 일치하지 않습니다.' : undefined,
+    error: tried && (!v.pw2 || v.pw !== v.pw2) ? v.pw2 ? '비밀번호가 일치하지 않습니다.' : '필수항목을 입력해주세요.' : undefined,
     htmlFor: "f-pw2"
   }, /*#__PURE__*/React.createElement(KS.Input, {
     id: "f-pw2",
@@ -8245,7 +8684,8 @@ function SignupForm({
     width: W,
     value: v.pw2,
     onChange: set('pw2'),
-    placeholder: ""
+    state: tried && (!v.pw2 || v.pw !== v.pw2) ? 'error' : undefined,
+    placeholder: "\uBE44\uBC00\uBC88\uD638\uB97C \uD55C \uBC88 \uB354 \uC785\uB825\uD558\uC138\uC694."
   })), /*#__PURE__*/React.createElement(KS.FormField, {
     layout: L,
     label: "\uD310\uB9E4\uC790 \uC720\uD615",
@@ -8289,19 +8729,27 @@ function SignupForm({
   })), /*#__PURE__*/React.createElement(KS.FormField, {
     layout: L,
     label: "\uC774\uBA54\uC77C",
-    required: true
+    required: true,
+    error: req('email')
   }, /*#__PURE__*/React.createElement(KS.Input, {
-    width: mobile ? 140 : 200,
-    placeholder: ""
-  }), /*#__PURE__*/React.createElement("span", null, "@"), /*#__PURE__*/React.createElement(KS.Input, {
     width: mobile ? 150 : 200,
-    placeholder: ""
+    value: v.email,
+    onChange: set('email'),
+    state: req('email') ? 'error' : undefined,
+    placeholder: "",
+    "aria-label": "\uC774\uBA54\uC77C \uC544\uC774\uB514"
+  }), /*#__PURE__*/React.createElement("span", {
+    "aria-hidden": "true"
+  }, "@"), /*#__PURE__*/React.createElement(KS.Input, {
+    width: mobile ? 150 : 200,
+    placeholder: "",
+    "aria-label": "\uC774\uBA54\uC77C \uB3C4\uBA54\uC778"
   }), /*#__PURE__*/React.createElement(KS.Select, {
     size: "form",
-    width: 200,
-    placeholder: "\uC9C1\uC811\uC120\uD0DD",
-    options: ['naver.com', 'gmail.com'],
-    "aria-label": "\uB3C4\uBA54\uC778"
+    width: mobile ? '100%' : 200,
+    placeholder: "\uC9C1\uC811\uC785\uB825",
+    options: ['직접입력', 'naver.com', 'gmail.com'],
+    "aria-label": "\uB3C4\uBA54\uC778 \uC120\uD0DD"
   })), /*#__PURE__*/React.createElement(KS.FormField, {
     layout: L,
     label: "\uC0AC\uC5C5\uC790\uB4F1\uB85D\uBC88\uD638",
@@ -8311,7 +8759,9 @@ function SignupForm({
     width: W,
     value: v.biz,
     onChange: set('biz'),
-    placeholder: "12345"
+    state: req('biz') ? 'error' : undefined,
+    placeholder: "\uC22B\uC790 10\uC790\uB9AC",
+    "aria-label": "\uC0AC\uC5C5\uC790\uB4F1\uB85D\uBC88\uD638"
   })), /*#__PURE__*/React.createElement(KS.FormField, {
     layout: L,
     label: "\uD68C\uC0AC\uC8FC\uC18C",
@@ -8330,10 +8780,14 @@ function SignupForm({
     }
   }, /*#__PURE__*/React.createElement(KS.Input, {
     width: mobile ? 220 : W,
-    placeholder: ""
+    placeholder: "\uC6B0\uD3B8\uBC88\uD638",
+    "aria-label": "\uC6B0\uD3B8\uBC88\uD638"
   }), /*#__PURE__*/React.createElement(KS.Button, {
     variant: "secondary",
-    size: 45
+    size: 45,
+    style: {
+      flex: '0 0 auto'
+    }
   }, "\uC6B0\uD3B8\uBC88\uD638 \uAC80\uC0C9")), /*#__PURE__*/React.createElement(KS.Input, {
     width: W,
     placeholder: "\uAE30\uBCF8\uC8FC\uC18C"
@@ -8440,9 +8894,14 @@ function SignupPC() {
       margin: '0 auto',
       padding: '90px 0 120px'
     }
-  }, /*#__PURE__*/React.createElement(PageTitle, {
-    align: "center"
-  }, "\uD310\uB9E4\uC790 \uD68C\uC6D0\uAC00\uC785"), /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/React.createElement(PageHead, {
+    align: "center",
+    title: "\uD310\uB9E4\uC790 \uD68C\uC6D0\uAC00\uC785",
+    desc: "\uD310\uB9E4\uC790 \uAE30\uBCF8\uC815\uBCF4\uC640 \uC2EC\uC0AC\uC11C\uB958\uB97C \uC785\uB825\uD558\uBA74 \uC2EC\uC0AC \uD6C4 \uC2B9\uC778\uB429\uB2C8\uB2E4.",
+    style: {
+      justifyContent: 'center'
+    }
+  }), /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'flex',
       justifyContent: 'center',
@@ -8462,10 +8921,12 @@ function SignupMo() {
     style: {
       padding: '20px 20px 60px'
     }
-  }, /*#__PURE__*/React.createElement(PageTitle, {
-    size: 24,
-    align: "center"
-  }, "\uD310\uB9E4\uC790 \uD68C\uC6D0\uAC00\uC785"), /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/React.createElement(PageHead, {
+    mobile: true,
+    align: "center",
+    title: "\uD310\uB9E4\uC790 \uD68C\uC6D0\uAC00\uC785",
+    desc: "\uAE30\uBCF8\uC815\uBCF4\uC640 \uC2EC\uC0AC\uC11C\uB958\uB97C \uC785\uB825\uD558\uC138\uC694."
+  }), /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'flex',
       justifyContent: 'center',
@@ -8833,6 +9294,8 @@ __ds_ns.Pagination = __ds_scope.Pagination;
 __ds_ns.EXAMPLE_PRICE_SERIES = __ds_scope.EXAMPLE_PRICE_SERIES;
 
 __ds_ns.PriceTrend = __ds_scope.PriceTrend;
+
+__ds_ns.ImageSlot = __ds_scope.ImageSlot;
 
 __ds_ns.DealBadge = __ds_scope.DealBadge;
 

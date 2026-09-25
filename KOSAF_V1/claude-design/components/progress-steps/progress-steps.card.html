@@ -1,4 +1,4 @@
-<!-- @dsCard group="Components · Navigation" viewport="700x190" name="ProgressSteps" subtitle="Source-derived (1:85779) · 1:90125" -->
+<!-- @dsCard group="Components · Navigation" viewport="700x190" name="ProgressSteps" subtitle="가입 단계 · 01 이용약관 / 02 기본정보 입력 / 03 가입완료 61px pill" -->
 <!DOCTYPE html>
 <html><head><meta charset="utf-8"><title>ProgressSteps</title>
 <link rel="stylesheet" href="../../styles.css">
@@ -14,9 +14,9 @@ const { Button, Search, Badge, Input, Checkbox, Radio, Tab, PaginationItem, Step
 const A = '../../assets/';
 const ROWS=[{no:10,item:'사과',variety:'부사',name:'사과/부사/특/20kg',deal:'입찰',producer:'김원생',qty:'300PT',remain:300,price:'-',deadline:'2023-05-05\n18:00',grade:'문경',region:'가락시장',ship:'2023\n05-05',liked:true},{no:9,item:'사과',variety:'부사',name:'사과/부사/특/20kg',deal:'정가',producer:'',qty:'300PT',remain:50,price:'50,000원',deadline:'2023-05-05\n18:00',grade:'문경',region:'가락시장',ship:'2023\n05-05'},{no:8,item:'사과',variety:'부사',name:'사과/부사/특/20kg',deal:'입찰',producer:'김원생',qty:'300PT',remain:300,price:'-',deadline:'2023-05-05\n18:00',grade:'문경',region:'가락시장',ship:'2023\n05-05',disabled:true},{no:7,item:'사과',variety:'부사',name:'사과/부사/특/20kg',deal:'정가',producer:'김원생',qty:'300PT',remain:50,price:'50,000원',deadline:'2023-05-05\n18:00',grade:'문경',region:'가락시장',ship:'2023\n05-05'}];
 const FAQ=[{title:'[배송] 배송기간은 얼마나 되나요?',content:'상품의 평균 배송일은 3~4일(주말, 공휴일 제외) 정도 소요됩니다.\n자세한 배송일자는 상품 상세 페이지에서 확인이 가능합니다.'},{title:'[회원] 회원탈퇴는 어떻게 해야 하나요?',content:'마이페이지 > 회원정보관리 > 회원탈퇴에서 신청할 수 있습니다.'},{title:'[배송] 배송조회는 어디에서 할 수 있나요?',content:'마이페이지 > 주문/배송내역에서 확인할 수 있습니다.'}];
-const META = {"name":"ProgressSteps","prov":"source","node":"1:90125","use":"회원가입 step pill 01 이용약관 / 02 기본정보 입력 / 03 가입완료 (61px, 20px text).","props":["steps","current","device"],"states":"Current · Other"};
+const META = {"name":"ProgressSteps","prov":"source","node":"1:90125","use":"01 이용약관 / 02 기본정보 입력 / 03 가입완료 61px pill","props":["steps","current","device"],"states":"현재·기타","ko":"가입 단계 · ProgressSteps"};
 function Demo(){return (<>
-<KSec label="PC"><ProgressSteps current={1}/></KSec><KSec label="MOBILE"><ProgressSteps device="mobile" current={2}/></KSec>
+<KSec label="PC"><ProgressSteps current={1}/></KSec><KSec label="모바일"><ProgressSteps device="mobile" current={2}/></KSec>
 </>);}
 ReactDOM.createRoot(document.getElementById('r')).render(<KCard meta={META}><Demo/></KCard>);
 </script></body></html>

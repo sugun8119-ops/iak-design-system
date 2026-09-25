@@ -1,0 +1,13 @@
+/* KOSAF doc-card baseline — loaded last by foundation & Start-here cards so every card shares one hierarchy.
+   Not part of styles.css (consumers don't need it). */
+body{margin:0;padding:18px 20px 20px;background:#fff;font-family:var(--kosaf-font);color:var(--kosaf-color-text-primary);font-size:13px;line-height:19px;-webkit-font-smoothing:antialiased}
+h3{margin:0 0 6px;font-size:14px;line-height:20px;font-weight:700;color:var(--kosaf-color-text-primary)}
+p{margin:0;text-wrap:pretty}
+ul,ol{margin:0;padding-left:18px}li{margin:2px 0}
+code{font:11px/16px ui-monospace,Menlo,monospace;color:var(--kosaf-color-text-secondary)}
+table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums}
+th,td{border-bottom:1px solid var(--kosaf-gray-100);padding:4px 8px;text-align:left;vertical-align:top}
+th{background:var(--kosaf-color-bg-subtle);font-weight:500}
+a{color:var(--kosaf-color-action-primary)}a:hover{color:var(--kosaf-color-action-primary-hover)}
+.g{display:grid;gap:16px 20px}
+.m{font-size:12px;line-height:16px;color:var(--kosaf-color-text-muted)}

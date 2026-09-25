@@ -1,4 +1,4 @@
-<!-- @dsCard group="Components · Forms" viewport="700x390" name="Textarea" subtitle="Source-derived (1:85779) · 1:87378" -->
+<!-- @dsCard group="Components · Forms" viewport="700x390" name="Textarea" subtitle="여러 줄 입력 · 후기/문의 입력 925×204 r5, 22/34, 글자수 카운터" -->
 <!DOCTYPE html>
 <html><head><meta charset="utf-8"><title>Textarea</title>
 <link rel="stylesheet" href="../../styles.css">
@@ -14,9 +14,9 @@ const { Button, Search, Badge, Input, Checkbox, Radio, Tab, PaginationItem, Step
 const A = '../../assets/';
 const ROWS=[{no:10,item:'사과',variety:'부사',name:'사과/부사/특/20kg',deal:'입찰',producer:'김원생',qty:'300PT',remain:300,price:'-',deadline:'2023-05-05\n18:00',grade:'문경',region:'가락시장',ship:'2023\n05-05',liked:true},{no:9,item:'사과',variety:'부사',name:'사과/부사/특/20kg',deal:'정가',producer:'',qty:'300PT',remain:50,price:'50,000원',deadline:'2023-05-05\n18:00',grade:'문경',region:'가락시장',ship:'2023\n05-05'},{no:8,item:'사과',variety:'부사',name:'사과/부사/특/20kg',deal:'입찰',producer:'김원생',qty:'300PT',remain:300,price:'-',deadline:'2023-05-05\n18:00',grade:'문경',region:'가락시장',ship:'2023\n05-05',disabled:true},{no:7,item:'사과',variety:'부사',name:'사과/부사/특/20kg',deal:'정가',producer:'김원생',qty:'300PT',remain:50,price:'50,000원',deadline:'2023-05-05\n18:00',grade:'문경',region:'가락시장',ship:'2023\n05-05'}];
 const FAQ=[{title:'[배송] 배송기간은 얼마나 되나요?',content:'상품의 평균 배송일은 3~4일(주말, 공휴일 제외) 정도 소요됩니다.\n자세한 배송일자는 상품 상세 페이지에서 확인이 가능합니다.'},{title:'[회원] 회원탈퇴는 어떻게 해야 하나요?',content:'마이페이지 > 회원정보관리 > 회원탈퇴에서 신청할 수 있습니다.'},{title:'[배송] 배송조회는 어디에서 할 수 있나요?',content:'마이페이지 > 주문/배송내역에서 확인할 수 있습니다.'}];
-const META = {"name":"Textarea","prov":"source","node":"1:87378","use":"Long text (후기/문의). 925×204 r5, 22/34, #CCCCCC placeholder, live counter \"0/300\".","props":["value","onChange","placeholder","maxLength","height","size","disabled","error"],"states":"Default · Focus · Error · Disabled"};
+const META = {"name":"Textarea","prov":"source","node":"1:87378","use":"후기/문의 입력 925×204 r5, 22/34, 글자수 카운터","props":["value","onChange","placeholder","maxLength","height","size","disabled","error"],"states":"기본·포커스·오류·비활성","ko":"여러 줄 입력 · Textarea"};
 function Demo(){return (<>
-<KSec label="PC · lg (source)"><Textarea aria-label="후기" width={660}/></KSec><KSec label="MOBILE · md"><Textarea aria-label="후기" size="md" height={140} width={350} defaultValue="싱싱하고 맛있는 사과!!"/></KSec>
+<KSec label="PC · lg (source)"><Textarea aria-label="후기" width={660}/></KSec><KSec label="모바일 · md"><Textarea aria-label="후기" size="md" height={140} width={350} defaultValue="싱싱하고 맛있는 사과!!"/></KSec>
 </>);}
 ReactDOM.createRoot(document.getElementById('r')).render(<KCard meta={META}><Demo/></KCard>);
 </script></body></html>

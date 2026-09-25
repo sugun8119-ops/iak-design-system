@@ -16,7 +16,7 @@ export function QuantityStepper({ value, defaultValue = 1, onChange, min = 1, ma
       <input type="text" inputMode="numeric" role="spinbutton" aria-label={ariaLabel} aria-valuemin={min} aria-valuemax={max} aria-valuenow={v} disabled={disabled} value={v}
         onChange={(e) => set(parseInt(e.target.value.replace(/\D/g, ''), 10))}
         onKeyDown={(e) => { if (e.key === 'ArrowUp') { e.preventDefault(); set(v + step); } if (e.key === 'ArrowDown') { e.preventDefault(); set(v - step); } }}
-        style={{ width: size === 'lg' ? 80 : 50, border: 0, borderLeft: '1px solid var(--kosaf-color-border-default)', borderRight: '1px solid var(--kosaf-color-border-default)', textAlign: 'center', fontFamily: F, fontSize: size === 'lg' ? 18 : 14, color: 'var(--kosaf-color-text-primary)', outline: 'none', padding: 0 }} />
+        style={{ width: size === 'lg' ? 80 : 50, border: 0, borderLeft: '1px solid var(--kosaf-color-border-default)', borderRight: '1px solid var(--kosaf-color-border-default)', textAlign: 'center', fontVariantNumeric: 'tabular-nums', fontFamily: F, fontSize: size === 'lg' ? 18 : 14, color: 'var(--kosaf-color-text-primary)', outline: 'none', padding: 0 }} />
       <button type="button" aria-label="수량 증가" disabled={disabled || v >= max} onClick={() => set(v + step)} style={btn(disabled || v >= max)}>+</button>
     </div>
   );

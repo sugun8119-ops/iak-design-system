@@ -1,4 +1,4 @@
-<!-- @dsCard group="Components · Commerce" viewport="700x330" name="ProductListItem" subtitle="Source-derived (1:85779) · 1:87784 · 1:94265" -->
+<!-- @dsCard group="Components · Commerce" viewport="700x330" name="ProductListItem" subtitle="상품 목록 행 · 썸네일, 상태, 날짜, 2줄 제목, 가격, 상세보기" -->
 <!DOCTYPE html>
 <html><head><meta charset="utf-8"><title>ProductListItem</title>
 <link rel="stylesheet" href="../../styles.css">
@@ -14,9 +14,9 @@ const { Button, Search, Badge, Input, Checkbox, Radio, Tab, PaginationItem, Step
 const A = '../../assets/';
 const ROWS=[{no:10,item:'사과',variety:'부사',name:'사과/부사/특/20kg',deal:'입찰',producer:'김원생',qty:'300PT',remain:300,price:'-',deadline:'2023-05-05\n18:00',grade:'문경',region:'가락시장',ship:'2023\n05-05',liked:true},{no:9,item:'사과',variety:'부사',name:'사과/부사/특/20kg',deal:'정가',producer:'',qty:'300PT',remain:50,price:'50,000원',deadline:'2023-05-05\n18:00',grade:'문경',region:'가락시장',ship:'2023\n05-05'},{no:8,item:'사과',variety:'부사',name:'사과/부사/특/20kg',deal:'입찰',producer:'김원생',qty:'300PT',remain:300,price:'-',deadline:'2023-05-05\n18:00',grade:'문경',region:'가락시장',ship:'2023\n05-05',disabled:true},{no:7,item:'사과',variety:'부사',name:'사과/부사/특/20kg',deal:'정가',producer:'김원생',qty:'300PT',remain:50,price:'50,000원',deadline:'2023-05-05\n18:00',grade:'문경',region:'가락시장',ship:'2023\n05-05'}];
 const FAQ=[{title:'[배송] 배송기간은 얼마나 되나요?',content:'상품의 평균 배송일은 3~4일(주말, 공휴일 제외) 정도 소요됩니다.\n자세한 배송일자는 상품 상세 페이지에서 확인이 가능합니다.'},{title:'[회원] 회원탈퇴는 어떻게 해야 하나요?',content:'마이페이지 > 회원정보관리 > 회원탈퇴에서 신청할 수 있습니다.'},{title:'[배송] 배송조회는 어디에서 할 수 있나요?',content:'마이페이지 > 주문/배송내역에서 확인할 수 있습니다.'}];
-const META = {"name":"ProductListItem","prov":"source","node":"1:87784 · 1:94265","use":"Horizontal product row: thumb, status, date, 2-line title, price, outline 상세보기.","props":["imageSrc","status","statusTone","date","title","price","actionLabel","onAction","device"],"states":"status default / done"};
+const META = {"name":"ProductListItem","prov":"source","node":"1:87784 · 1:94265","use":"썸네일, 상태, 날짜, 2줄 제목, 가격, 상세보기","props":["imageSrc","status","statusTone","date","title","price","actionLabel","onAction","device"],"states":"상태 기본·완료","ko":"상품 목록 행 · ProductListItem"};
 function Demo(){return (<>
-<KSec label="MOBILE" align="flex-start" style={{flexDirection:'column'}}><div style={{width:350}}><ProductListItem imageSrc={A+'products/product-mobile__1-91522.png'} status="배송준비중" date="2023-06-14" title="거창농산 13브릭스이상 당도좋은 아삭사과 껍질째먹는 꿀 햇 부사..." price="13,950원"/></div><div style={{width:350}}><ProductListItem status="배송완료" statusTone="done" date="2023-06-14" title="거창농산 아삭사과" price="13,950원"/></div></KSec>
+<KSec label="모바일" align="flex-start" style={{flexDirection:'column'}}><div style={{width:350}}><ProductListItem imageSrc={A+'products/product-mobile__1-91522.png'} status="배송준비중" date="2023-06-14" title="거창농산 13브릭스이상 당도좋은 아삭사과 껍질째먹는 꿀 햇 부사..." price="13,950원"/></div><div style={{width:350}}><ProductListItem status="배송완료" statusTone="done" date="2023-06-14" title="거창농산 아삭사과" price="13,950원"/></div></KSec>
 <KSec label="PC"><div style={{width:640}}><ProductListItem device="desktop" imageSrc={A+'products/product-desktop__1-91190.png'} date="2023-06-14" title="사과/부사/특/20kg" price="50,000원"/></div></KSec>
 </>);}
 ReactDOM.createRoot(document.getElementById('r')).render(<KCard meta={META}><Demo/></KCard>);

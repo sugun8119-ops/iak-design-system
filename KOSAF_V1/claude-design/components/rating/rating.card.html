@@ -1,4 +1,4 @@
-<!-- @dsCard group="Components · Data Display" viewport="700x190" name="Rating" subtitle="KOSAF extension · ★ glyph" -->
+<!-- @dsCard group="Components · Data Display" viewport="700x190" name="Rating" subtitle="별점 · ★ 텍스트 글리프(#FFE326)" -->
 <!DOCTYPE html>
 <html><head><meta charset="utf-8"><title>Rating</title>
 <link rel="stylesheet" href="../../styles.css">
@@ -14,9 +14,9 @@ const { Button, Search, Badge, Input, Checkbox, Radio, Tab, PaginationItem, Step
 const A = '../../assets/';
 const ROWS=[{no:10,item:'사과',variety:'부사',name:'사과/부사/특/20kg',deal:'입찰',producer:'김원생',qty:'300PT',remain:300,price:'-',deadline:'2023-05-05\n18:00',grade:'문경',region:'가락시장',ship:'2023\n05-05',liked:true},{no:9,item:'사과',variety:'부사',name:'사과/부사/특/20kg',deal:'정가',producer:'',qty:'300PT',remain:50,price:'50,000원',deadline:'2023-05-05\n18:00',grade:'문경',region:'가락시장',ship:'2023\n05-05'},{no:8,item:'사과',variety:'부사',name:'사과/부사/특/20kg',deal:'입찰',producer:'김원생',qty:'300PT',remain:300,price:'-',deadline:'2023-05-05\n18:00',grade:'문경',region:'가락시장',ship:'2023\n05-05',disabled:true},{no:7,item:'사과',variety:'부사',name:'사과/부사/특/20kg',deal:'정가',producer:'김원생',qty:'300PT',remain:50,price:'50,000원',deadline:'2023-05-05\n18:00',grade:'문경',region:'가락시장',ship:'2023\n05-05'}];
 const FAQ=[{title:'[배송] 배송기간은 얼마나 되나요?',content:'상품의 평균 배송일은 3~4일(주말, 공휴일 제외) 정도 소요됩니다.\n자세한 배송일자는 상품 상세 페이지에서 확인이 가능합니다.'},{title:'[회원] 회원탈퇴는 어떻게 해야 하나요?',content:'마이페이지 > 회원정보관리 > 회원탈퇴에서 신청할 수 있습니다.'},{title:'[배송] 배송조회는 어디에서 할 수 있나요?',content:'마이페이지 > 주문/배송내역에서 확인할 수 있습니다.'}];
-const META = {"name":"Rating","prov":"extension","node":"★ glyph","use":"Star score. Star vectors not exported → ★ text glyph in #FFE326. Display or input (radio group, ←/→).","props":["value","onChange","max","size","showValue","readOnly"],"states":"Display (fractional) · Input · Hover"};
+const META = {"name":"Rating","prov":"extension","node":"★ glyph","use":"★ 텍스트 글리프(#FFE326). 표시 또는 입력(←/→). 별 벡터 미제공","props":["value","onChange","max","size","showValue","readOnly"],"states":"표시·입력·호버","ko":"별점 · Rating"};
 function Demo(){return (<>
-<KSec label="DISPLAY — 평균별점"><Rating value={4.4} showValue size={22}/><Rating value={2} size={16}/></KSec><KSec label="INPUT (후기 등록)">{(()=>{const [v,s]=React.useState(3);return <Rating value={v} onChange={s} size={28}/>})()}</KSec>
+<KSec label="표시 — 평균별점"><Rating value={4.4} showValue size={22}/><Rating value={2} size={16}/></KSec><KSec label="입력 (후기 등록)">{(()=>{const [v,s]=React.useState(3);return <Rating value={v} onChange={s} size={28}/>})()}</KSec>
 </>);}
 ReactDOM.createRoot(document.getElementById('r')).render(<KCard meta={META}><Demo/></KCard>);
 </script></body></html>

@@ -1,4 +1,4 @@
-<!-- @dsCard group="Components · Forms" viewport="700x190" name="Radio" subtitle="Figma master (218:570) · 218:614" -->
+<!-- @dsCard group="Components · Forms" viewport="700x190" name="Radio" subtitle="라디오 · 단일 선택 20×20, 10px 녹색 점" -->
 <!DOCTYPE html>
 <html><head><meta charset="utf-8"><title>Radio</title>
 <link rel="stylesheet" href="../../styles.css">
@@ -14,10 +14,10 @@ const { Button, Search, Badge, Input, Checkbox, Radio, Tab, PaginationItem, Step
 const A = '../../assets/';
 const ROWS=[{no:10,item:'사과',variety:'부사',name:'사과/부사/특/20kg',deal:'입찰',producer:'김원생',qty:'300PT',remain:300,price:'-',deadline:'2023-05-05\n18:00',grade:'문경',region:'가락시장',ship:'2023\n05-05',liked:true},{no:9,item:'사과',variety:'부사',name:'사과/부사/특/20kg',deal:'정가',producer:'',qty:'300PT',remain:50,price:'50,000원',deadline:'2023-05-05\n18:00',grade:'문경',region:'가락시장',ship:'2023\n05-05'},{no:8,item:'사과',variety:'부사',name:'사과/부사/특/20kg',deal:'입찰',producer:'김원생',qty:'300PT',remain:300,price:'-',deadline:'2023-05-05\n18:00',grade:'문경',region:'가락시장',ship:'2023\n05-05',disabled:true},{no:7,item:'사과',variety:'부사',name:'사과/부사/특/20kg',deal:'정가',producer:'김원생',qty:'300PT',remain:50,price:'50,000원',deadline:'2023-05-05\n18:00',grade:'문경',region:'가락시장',ship:'2023\n05-05'}];
 const FAQ=[{title:'[배송] 배송기간은 얼마나 되나요?',content:'상품의 평균 배송일은 3~4일(주말, 공휴일 제외) 정도 소요됩니다.\n자세한 배송일자는 상품 상세 페이지에서 확인이 가능합니다.'},{title:'[회원] 회원탈퇴는 어떻게 해야 하나요?',content:'마이페이지 > 회원정보관리 > 회원탈퇴에서 신청할 수 있습니다.'},{title:'[배송] 배송조회는 어디에서 할 수 있나요?',content:'마이페이지 > 주문/배송내역에서 확인할 수 있습니다.'}];
-const META = {"name":"Radio","prov":"master","node":"218:614","use":"Single-select 20×20 circle, 10px #059B00 dot. Parent-controlled.","props":["checked","onChange","state","disabled","name","value","children"],"states":"Unchecked · Checked · Focus · Disabled"};
+const META = {"name":"Radio","prov":"master","node":"218:614","use":"단일 선택 20×20, 10px 녹색 점. 부모가 값 제어","props":["checked","onChange","state","disabled","name","value","children"],"states":"해제·선택·포커스·비활성","ko":"라디오 · Radio"};
 function Demo(){return (<>
-<KSec label="STATE MATRIX"><Radio state="unchecked">Unchecked</Radio><Radio state="checked">Checked</Radio><Radio state="focus">Focus</Radio><Radio state="disabled">Disabled</Radio></KSec>
-<KSec label="LIVE — 결제정보 (1:104139)">{(()=>{const [v,s]=React.useState('a');return <><Radio name="pay" value="a" checked={v==='a'} onChange={s}>정산소 (현금, 연신)</Radio><Radio name="pay" value="b" checked={v==='b'} onChange={s}>개별약정</Radio></>})()}</KSec>
+<KSec label="상태 매트릭스"><Radio state="unchecked">Unchecked</Radio><Radio state="checked">Checked</Radio><Radio state="focus">Focus</Radio><Radio state="disabled">Disabled</Radio></KSec>
+<KSec label="실제 동작 — 결제정보 (1:104139)">{(()=>{const [v,s]=React.useState('a');return <><Radio name="pay" value="a" checked={v==='a'} onChange={s}>정산소 (현금, 연신)</Radio><Radio name="pay" value="b" checked={v==='b'} onChange={s}>개별약정</Radio></>})()}</KSec>
 </>);}
 ReactDOM.createRoot(document.getElementById('r')).render(<KCard meta={META}><Demo/></KCard>);
 </script></body></html>

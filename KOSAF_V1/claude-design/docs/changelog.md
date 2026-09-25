@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.3.0 — 2026-09-26 (quality refinement, partial)
+- See docs/quality-refinement.md. ImageSlot fallback, ProductCard alignment, tabular numbers, shared demo catalogue, mobile overflow/CTA spacing, Korean card meta + real-size crops.
+- Correction: kit cards = 11 PC + 11 Mobile = 22.
+
 ## 1.2.0 — 2026-09-25
 - +35 source-derived / extension components; 11 masters now have individual cards.
 - Assets: 11 SVG icons (ids preserved), logo 1:86099 (2×), product images 1:91190, 1:91522.

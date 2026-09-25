@@ -14,14 +14,14 @@ export function OrderSummary({ title = '총 결제 예정금액', total = '1,300
     );
     const op = (c) => <span aria-hidden="true" style={{ fontSize: 28, color: 'var(--kosaf-color-text-muted)' }}>{c}</span>;
     return (
-      <div style={{ boxSizing: 'border-box', width: '100%', minHeight: 105, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 48, padding: '16px 30px', background: 'var(--kosaf-color-bg-subtle)', border: '1px solid var(--kosaf-color-border-default)', fontFamily: F, ...style }}>
+      <div style={{ boxSizing: 'border-box', width: '100%', minHeight: 105, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 48, padding: '16px 30px', background: 'var(--kosaf-color-bg-subtle)', border: '1px solid var(--kosaf-color-border-default)', fontFamily: F, fontVariantNumeric: 'tabular-nums', ...style }}>
         {rows.map(([l, v], i) => <React.Fragment key={l}>{i ? op('+') : null}{cell(l, v)}</React.Fragment>)}
         {op('=')}{cell(title, total, true)}
       </div>
     );
   }
   return (
-    <section aria-label={title} style={{ boxSizing: 'border-box', padding: 20, border: '1px solid var(--kosaf-color-border-default)', borderRadius: 10, background: '#fff', fontFamily: F, ...style }}>
+    <section aria-label={title} style={{ boxSizing: 'border-box', padding: 20, border: '1px solid var(--kosaf-color-border-default)', borderRadius: 10, background: '#fff', fontFamily: F, fontVariantNumeric: 'tabular-nums', ...style }}>
       <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', gap: 10, paddingBottom: 14 }}>
         <span style={{ fontSize: 18, fontWeight: 500, color: 'var(--kosaf-color-text-primary)' }}>{title}</span>
         <strong style={{ fontSize: 26, fontWeight: 700, color: 'var(--kosaf-color-action-primary)' }}>{total}</strong>

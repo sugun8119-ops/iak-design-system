@@ -90,3 +90,10 @@ Primary #059B00, Hover #02AC5A, Positive #17BF56, Text #333333/#707070/#888888, 
 - Source frame coverage: 38 kit mappings, 8 component mappings, 28 composition-only mappings, 17 gaps. Mapping is not pixel-verified reproduction. See `claude-design/docs/source-coverage.md`.
 - QA: 94/94 manifest card files present; 46/46 family type/prompt/card companions present. Published mobile search filter/menu and PC detail quantity update verified; independent Accordion card rendered. Exact iframe viewport pixels and the remaining cards were not exhaustively verified. See `claude-design-qa.json`.
 - Remaining gaps: home, registration guidance/certificate registration, long seller registration forms, image zoom; custom calendar; complete icon/photo inventory; backend actions; exhaustive accessibility/pixel QA. Existing 832 unclassified raw colors and 40 brand text exceptions remain preserved.
+
+
+## Claude Design quality refinement — 2026-09-26 / 1.3.0
+
+100 native files changed (including regenerated files), 46 families / 94 cards retained. Product images and fallback slots, consistent demo catalogue and calculated totals, product title/meta alignment, tabular numbers, mobile insets and bottom-action clearance, page headings and form errors refined. All 46 cards use concise Korean metadata and collapsed API details; wide previews include readable crops. Pass2 saved changes to login/mypage/myshop/support and 25 foundation/guide cards.
+
+Published representative checks: mobile product detail image and price consistency, quantity/total update, ProductCard images/metadata, mobile signup alignment. All 94 manifest card paths exist; canonical token files unchanged. Claude hit its usage limit after pass2 saves/checker, so exhaustive visual QA remains incomplete. See `claude-design-qa.json`, `claude-design/docs/quality-refinement.md`, and `quality-changes-2026-09-26.json`. No Figma mutations in this quality pass.

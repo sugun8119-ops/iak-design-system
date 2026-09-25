@@ -11,14 +11,14 @@ function LoginForm({ mobile, onDormant }) {
         <h2 style={{ margin: '0 0 30px', fontSize: 24, fontWeight: 700 }}>일반 로그인</h2>
         <div style={{ display: 'flex', gap: 12 }}>
           <div style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: 12 }}>
-            <KS.Input width="100%" placeholder="아이디" value={id} onChange={(e) => setId(e.target.value)} aria-label="아이디" />
-            <KS.Input width="100%" type="password" placeholder="비밀번호" value={pw} onChange={(e) => setPw(e.target.value)} aria-label="비밀번호" errorMessage={err} />
+            <KS.Input width="100%" placeholder="아이디" value={id} onChange={(e) => setId(e.target.value)} aria-label="아이디" state={err && !id ? 'error' : undefined} />
+            <KS.Input width="100%" type="password" placeholder="비밀번호" value={pw} onChange={(e) => setPw(e.target.value)} aria-label="비밀번호" state={err && !pw ? 'error' : undefined} errorMessage={err} />
           </div>
           <KS.Button type="submit" size={mobile ? 102 : 102} width={mobile ? 90 : 125} style={{ height: 102, alignSelf: 'flex-start' }}>로그인</KS.Button>
         </div>
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 10, marginTop: 20, fontSize: 16 }}>
           <KS.Checkbox>아이디 저장</KS.Checkbox>
-          <span style={{ color: 'var(--kosaf-color-text-primary)' }}>회원가입 &nbsp;|&nbsp; 아이디 찾기 &nbsp;|&nbsp; 비밀번호 찾기</span>
+          <nav aria-label="계정 찾기" style={{ display: 'flex', alignItems: 'center', gap: 10, fontSize: mobile ? 14 : 16 }}>{['회원가입', '아이디 찾기', '비밀번호 찾기'].map((t, i) => <React.Fragment key={t}>{i ? <span aria-hidden="true" style={{ width: 1, height: 12, background: 'var(--kosaf-color-border-strong)' }}></span> : null}<a href="#" onClick={(e) => e.preventDefault()} style={{ color: 'var(--kosaf-color-text-primary)' }}>{t}</a></React.Fragment>)}</nav>
         </div>
       </form>
       <div style={card}>
@@ -41,9 +41,9 @@ function LoginPC() {
     <div style={{ minWidth: 1920, minHeight: 1080, background: 'var(--kosaf-src-login-bg)', fontFamily: 'var(--kosaf-font)', color: 'var(--kosaf-color-text-primary)' }}>
       <div style={{ maxWidth: 1596, margin: '0 auto', display: 'flex', justifyContent: 'space-between', paddingTop: 0 }}><span style={{ display: 'flex', gap: 20 }}><button style={link}>플랫폼 소개</button><button style={link}>도매시장 유통데이터</button></span><span style={{ display: 'flex', gap: 20 }}><button style={link}>로그인</button><button style={link}>회원가입</button><button style={link}>고객센터</button></span></div>
       <div style={{ textAlign: 'center', marginTop: 68 }}>
-        <div style={{ fontSize: 40, fontWeight: 500 }}>로그인</div>
-        <div style={{ fontSize: 24, fontWeight: 700, marginTop: 50 }}>농산물 온라인도매시장 품목도매관 로그인</div>
-        <div style={{ fontSize: 20, marginTop: 20, lineHeight: '29px' }}>로그인을 하시면 농산물 온라인도매시장에서 제공하는 다양한 서비스를 이용하실 수 있습니다.</div>
+        <h1 style={{ margin: 0, fontSize: 40, fontWeight: 700 }}>로그인</h1>
+        <div style={{ fontSize: 24, fontWeight: 700, marginTop: 30 }}>농산물 온라인도매시장 품목도매관 로그인</div>
+        <div style={{ fontSize: 18, marginTop: 10, lineHeight: '28px', color: 'var(--kosaf-color-text-secondary)' }}>로그인을 하시면 농산물 온라인도매시장에서 제공하는 다양한 서비스를 이용하실 수 있습니다.</div>
       </div>
       <div style={{ marginTop: 50 }}><LoginForm onDormant={() => setD(true)} /></div>
       <div style={{ textAlign: 'center', marginTop: 30 }}><DemoNote>로그인 시 휴면 계정 안내(1:103625) 팝업을 띄웁니다</DemoNote></div>
@@ -57,7 +57,7 @@ function LoginMo() {
   return (
     <MoPage>
       <div style={{ background: 'var(--kosaf-src-login-bg)', padding: '30px 20px 40px' }}>
-        <div style={{ textAlign: 'center', marginBottom: 24 }}><div style={{ fontSize: 28, fontWeight: 500 }}>로그인</div><div style={{ fontSize: 14, marginTop: 10, color: 'var(--kosaf-color-text-secondary)' }}>로그인을 하시면 다양한 서비스를 이용하실 수 있습니다.</div></div>
+        <div style={{ textAlign: 'center', marginBottom: 24 }}><h1 style={{ margin: 0, fontSize: 24, fontWeight: 700 }}>로그인</h1><div style={{ fontSize: 14, marginTop: 10, color: 'var(--kosaf-color-text-secondary)' }}>로그인을 하시면 다양한 서비스를 이용하실 수 있습니다.</div></div>
         <LoginForm mobile onDormant={() => setD(true)} />
       </div>
       <Dormant open={d} onClose={() => setD(false)} width={350} />

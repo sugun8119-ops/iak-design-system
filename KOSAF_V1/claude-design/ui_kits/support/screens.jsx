@@ -27,11 +27,11 @@ function ReviewBody({ mobile }) {
   return (
     <div>
       <div style={{ display: 'flex', alignItems: 'center', gap: 10, padding: mobile ? '0 16px 10px' : '0 0 16px', borderBottom: '1px solid var(--kosaf-color-border-default)' }}>
-        <span style={{ fontSize: mobile ? 14 : 18 }}>Total : <b style={{ color: 'var(--kosaf-color-action-primary)' }}>{empty ? '00' : '02'}</b>개</span><span style={{ flex: 1 }}></span>
+        <span style={{ fontSize: mobile ? 14 : 18, whiteSpace: 'nowrap' }}>총 <b style={{ color: 'var(--kosaf-color-action-primary)', fontVariantNumeric: 'tabular-nums' }}>{empty ? 0 : 2}</b>개</span><span style={{ flex: 1 }}></span>
         <KS.Select aria-label="정렬" width={mobile ? 120 : 200} options={['등록일순', '평점높은순', '평점낮은순']} defaultValue="등록일순" />
         <KS.Button variant="secondary" size={34} onClick={() => setEmpty(!empty)}>{empty ? '데이터 보기' : '결과없음 보기'}</KS.Button>
       </div>
-      {empty ? <KS.EmptyState device={mobile ? 'mobile' : 'desktop'} message="조회된 리뷰가 없습니다." style={{ borderTop: 0 }} /> : <div style={{ padding: mobile ? '0 16px' : 0 }}>{[5, 4].map((r) => <KS.ReviewItem key={r} rating={r} device={mobile ? 'mobile' : 'desktop'} tags={r === 5 ? ['품질 만족', '배송 만족', '포장상태 만족'] : []} actions={[{ label: mobile ? '수정' : '삭제' }]} />)}</div>}
+      {empty ? <KS.EmptyState device={mobile ? 'mobile' : 'desktop'} message="조회된 리뷰가 없습니다." style={{ borderTop: 0 }} /> : <div style={{ padding: mobile ? '0 16px' : 0 }}><KS.ReviewItem rating={5} device={mobile ? 'mobile' : 'desktop'} product={PRODUCTS[0].name} tags={['품질 만족', '배송 만족', '포장상태 만족']} actions={[{ label: '신고하기' }]} /><KS.ReviewItem rating={4} author="kim***" date="2023-04-20" device={mobile ? 'mobile' : 'desktop'} product={PRODUCTS[2].name} body="과육이 단단하고 포장이 꼼꼼했습니다." actions={[{ label: '신고하기' }]} /></div>}
     </div>
   );
 }
@@ -43,7 +43,7 @@ function SupportPC() {
       <div style={{ display: 'flex', gap: 60 }}>
         <KS.SideNav title="고객센터" groups={CS_NAV} active={nav} onSelect={setNav} />
         <div style={{ flex: 1, minWidth: 0 }}>
-          <PageTitle size={30} style={{ marginBottom: 30 }}>{nav === '이용후기' ? '이용후기(리뷰)' : nav}</PageTitle>
+          <PageHead size={30} title={nav === '이용후기' ? '이용후기(리뷰)' : nav} desc={{ FAQ: '자주 묻는 질문을 분류별로 확인하세요.', 공지사항: '서비스 운영 및 점검 안내입니다.', 이용후기: '구매 회원이 남긴 상품 후기입니다.' }[nav]} />
           {nav === 'FAQ' ? <FaqBody /> : nav === '공지사항' ? <NoticeBody /> : nav === '이용후기' ? <ReviewBody /> : <KS.EmptyState message="Q&A 화면은 이번 범위에서 재현하지 않았습니다." description="FAQ · 공지사항 · 이용후기를 선택하세요." />}
         </div>
       </div>
@@ -56,7 +56,7 @@ function SupportMo() {
   const [alarm, setAlarm] = React.useState(false);
   return (
     <MoPage>
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '10px 16px' }}><PageTitle size={20}>고객센터</PageTitle><KS.Button variant="secondary" size={34} onClick={() => setAlarm(true)}>알림 보기</KS.Button></div>
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '20px 16px 16px' }}><PageTitle size={22}>고객센터</PageTitle><KS.Button variant="secondary" size={34} onClick={() => setAlarm(true)}>알림 보기</KS.Button></div>
       <div role="tablist" style={{ display: 'flex', gap: 6, padding: '0 16px 16px' }}>{['FAQ', '공지사항', '이용후기'].map((x, i) => <KS.Tab key={x} selected={t === i} onClick={() => setT(i)} width={110}>{x}</KS.Tab>)}</div>
       {t === 0 ? <FaqBody mobile /> : t === 1 ? <NoticeBody mobile /> : <ReviewBody mobile />}
       {alarm ? <div style={{ position: 'fixed', top: 0, bottom: 0, left: '50%', transform: 'translateX(-50%)', width: 390, zIndex: 100, background: '#fff' }}><KS.NotificationList onClose={() => setAlarm(false)} /></div> : null}

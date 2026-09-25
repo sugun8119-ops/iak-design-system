@@ -52,7 +52,3 @@ White text: Primary 3.69:1, Hover 2.98:1, Positive 2.44:1, Danger 4.35:1. Report
 - Pre-compile harness render (source transpiled in-browser, not the published bundle): Search results PC, Product detail PC, Cart PC rendered without runtime errors; header/table widths measured at 1920 (no overflow).
 - **Not yet verified:** the published `_ds_bundle.js` build of the 35 new components (compiles after the generation turn), all 46 component cards, and the remaining 7 PC + 11 mobile kit pages. Treat these as unverified until checked in the browser.
 - No accessibility audit beyond native semantics + keyboard handlers.
-
-
-## Post-export verification by Codex
-Published mobile search filter/menu, desktop product quantity update and Accordion card were checked in the browser. Manifest paths and all family companion files verified locally. Remaining cards, exact viewport dimensions and accessibility remain unverified. Full result: `../../claude-design-qa.json` (parent KOSAF_V1 directory).

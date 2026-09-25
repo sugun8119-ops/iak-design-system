@@ -1,4 +1,5 @@
 import React from 'react';
+import { ImageSlot } from '../product-card/ProductCard.tsx';
 
 const F = 'var(--kosaf-font)';
 
@@ -14,7 +15,7 @@ export function CompareTable({ products = [], rows = [], highlightDiff = true, s
             <th scope="col" style={{ borderBottom: '1px solid var(--kosaf-color-border-default)' }}><span style={{ position: 'absolute', width: 1, height: 1, overflow: 'hidden', clip: 'rect(0 0 0 0)' }}>항목</span></th>
             {products.map((p, i) => (
               <th key={i} scope="col" style={{ padding: '0 10px 16px', verticalAlign: 'top', borderBottom: '1px solid var(--kosaf-color-border-default)', fontWeight: 500, fontSize: 16, textAlign: 'left' }}>
-                <div style={{ aspectRatio: '1 / 1', maxWidth: 240, borderRadius: 10, overflow: 'hidden', background: 'var(--kosaf-gray-100)', marginBottom: 10 }}>{p.imageSrc ? <img src={p.imageSrc} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} /> : null}</div>
+                <ImageSlot src={p.imageSrc} alt={p.name} style={{ maxWidth: 200, marginBottom: 10 }} />
                 {p.name}
               </th>
             ))}

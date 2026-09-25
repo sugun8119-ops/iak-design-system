@@ -1,4 +1,4 @@
-<!-- @dsCard group="Components · Forms" viewport="700x330" name="FormField" subtitle="Source-derived (1:85779) · 1:89853" -->
+<!-- @dsCard group="Components · Forms" viewport="700x330" name="FormField" subtitle="폼 항목 · 라벨 + 입력 행: 필수 *, 오류 문구, 도움말, 하단 구분선" -->
 <!DOCTYPE html>
 <html><head><meta charset="utf-8"><title>FormField</title>
 <link rel="stylesheet" href="../../styles.css">
@@ -14,10 +14,10 @@ const { Button, Search, Badge, Input, Checkbox, Radio, Tab, PaginationItem, Step
 const A = '../../assets/';
 const ROWS=[{no:10,item:'사과',variety:'부사',name:'사과/부사/특/20kg',deal:'입찰',producer:'김원생',qty:'300PT',remain:300,price:'-',deadline:'2023-05-05\n18:00',grade:'문경',region:'가락시장',ship:'2023\n05-05',liked:true},{no:9,item:'사과',variety:'부사',name:'사과/부사/특/20kg',deal:'정가',producer:'',qty:'300PT',remain:50,price:'50,000원',deadline:'2023-05-05\n18:00',grade:'문경',region:'가락시장',ship:'2023\n05-05'},{no:8,item:'사과',variety:'부사',name:'사과/부사/특/20kg',deal:'입찰',producer:'김원생',qty:'300PT',remain:300,price:'-',deadline:'2023-05-05\n18:00',grade:'문경',region:'가락시장',ship:'2023\n05-05',disabled:true},{no:7,item:'사과',variety:'부사',name:'사과/부사/특/20kg',deal:'정가',producer:'김원생',qty:'300PT',remain:50,price:'50,000원',deadline:'2023-05-05\n18:00',grade:'문경',region:'가락시장',ship:'2023\n05-05'}];
 const FAQ=[{title:'[배송] 배송기간은 얼마나 되나요?',content:'상품의 평균 배송일은 3~4일(주말, 공휴일 제외) 정도 소요됩니다.\n자세한 배송일자는 상품 상세 페이지에서 확인이 가능합니다.'},{title:'[회원] 회원탈퇴는 어떻게 해야 하나요?',content:'마이페이지 > 회원정보관리 > 회원탈퇴에서 신청할 수 있습니다.'},{title:'[배송] 배송조회는 어디에서 할 수 있나요?',content:'마이페이지 > 주문/배송내역에서 확인할 수 있습니다.'}];
-const META = {"name":"FormField","prov":"source","node":"1:89853","use":"Label + control row for 회원가입/등록 forms: required *, error text, help, bottom rule.","props":["label","required","error","help","htmlFor","layout","labelWidth","children"],"states":"Default · Required · Error · Help"};
+const META = {"name":"FormField","prov":"source","node":"1:89853","use":"라벨 + 입력 행: 필수 *, 오류 문구, 도움말, 하단 구분선","props":["label","required","error","help","htmlFor","layout","labelWidth","children"],"states":"기본·필수·오류·도움말","ko":"폼 항목 · FormField"};
 function Demo(){return (<>
 <KSec label="PC · horizontal (label 200 here)" gap={0} style={{flexDirection:'column',alignItems:'stretch',width:660}}><FormField label="회원 이름" required labelWidth={200} error="필수항목을 입력해주세요." htmlFor="n1"><Input id="n1" state="error" width={360}/></FormField><FormField label="아이디" required labelWidth={200}><Input width={360} placeholder="영문 소문자, 숫자 중 6~20자 조합."/><Button variant="secondary" size={45}>중복 확인</Button></FormField></KSec>
-<KSec label="MOBILE · vertical" style={{width:350,flexDirection:'column',alignItems:'stretch'}} gap={0}><FormField layout="vertical" label="이메일" required><Input width="100%"/></FormField></KSec>
+<KSec label="모바일 · vertical" style={{width:350,flexDirection:'column',alignItems:'stretch'}} gap={0}><FormField layout="vertical" label="이메일" required><Input width="100%"/></FormField></KSec>
 </>);}
 ReactDOM.createRoot(document.getElementById('r')).render(<KCard meta={META}><Demo/></KCard>);
 </script></body></html>

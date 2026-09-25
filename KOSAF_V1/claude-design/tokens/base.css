@@ -8,3 +8,6 @@ a:hover { color: var(--kosaf-color-action-primary-hover); text-decoration: under
 .kosaf-field:disabled::placeholder { color: var(--kosaf-color-text-disabled); }
 .kosaf-field[type=search]::-webkit-search-cancel-button { -webkit-appearance: none; }
 :focus-visible { outline: 2px solid var(--kosaf-color-state-focus); outline-offset: 1px; }
+/* Web refinement: disabled controls never show the pointer; numbers align in tables. */
+button:disabled { cursor: not-allowed; }
+table td, table th { font-variant-numeric: tabular-nums; }
