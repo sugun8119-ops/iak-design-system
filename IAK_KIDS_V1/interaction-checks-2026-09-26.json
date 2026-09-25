@@ -1,0 +1,32 @@
+{
+  "browser": "Chrome",
+  "source": "local v2.2 UI kits",
+  "checks": [
+    {
+      "case": "schedule empty name",
+      "result": "passed",
+      "evidence": "일정 이름을 입력해 주세요."
+    },
+    {
+      "case": "schedule add",
+      "result": "passed",
+      "evidence": "6→7 schedules, new item visible, dialog closed and trigger focus restored"
+    },
+    {
+      "case": "activity completion",
+      "result": "passed",
+      "evidence": "1/4→2/4, 25%→50%, 50P→150P"
+    },
+    {
+      "case": "parent accept request",
+      "result": "passed",
+      "evidence": "3→2 pending, accepted item removed, success status announced"
+    }
+  ],
+  "safari": {
+    "result": "not verified",
+    "reason": "Safari opened QA URL but native accessibility tree returned only menu and screenshot unavailable; no pass inferred"
+  },
+  "physicalDevice": "not tested",
+  "screenReader": "not tested"
+}
