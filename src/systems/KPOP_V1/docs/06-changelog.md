@@ -10,3 +10,7 @@
 ## 2026-09-25 최종 재검사 재개
 
 Claude Design TP01–TP10, 반경·Toast 9개 규격, check_design_system 통과를 확인했다. TP10은 104파일/33색상을 검사했다. 자동 검사의 폰트 경고 없음과 앱 상단 폰트 배너 잔존은 별도 상태로 기록한다. 의도적 OS local fallback을 유지하며 폰트 파일은 추가하지 않았다. 독립 AI 재생성 및 실기기 검증을 완료한 것으로 해석하지 않는다.
+
+## 사용자 승인 폰트 업데이트
+
+Pretendard 1.3.9를 기본 글꼴로 사용한다. 실제 WOFF2와 SIL OFL 라이선스를 assets/fonts/에 포함한다. 기존 크기·굵기·행간은 유지한다. Figma 자동화 환경에는 Pretendard가 없어 캔버스는 Noto Sans KR 대체이며, Pretendard 설치 환경에서 교체할 수 있다. 이전 OS-only 규칙을 대체한다.

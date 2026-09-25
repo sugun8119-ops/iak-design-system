@@ -46,13 +46,13 @@ Figma의 `22 Case Library`, `23 Project Guides`, `15 Toast`에서 같은 체계�
 
 각 파일의 Getting Started → Foundations → 컴포넌트별 페이지 → Templates 순서로 확인합니다. 두 컬렉션(Primitives 38개, Tokens 38개), 텍스트 스타일 5개, 효과 스타일 2개가 있습니다. Templates 프레임은 로컬 컴포넌트 인스턴스이며 주요 Main/Sub/Detail 이동이 연결되어 있습니다. 프레임을 복제하고 TEXT 속성·variant를 교체해 시작하세요. 팀 라이브러리 게시와 Code Connect는 수행하지 않았습니다.
 
-HTML과 Figma는 동일한 토큰·컴포넌트 계약을 사용하는 별도 구현입니다. 픽셀 단위 복제본이 아닙니다. Figma의 한국어 글꼴은 원본 fallback 스택에 있는 Noto Sans KR이며, HTML은 운영체제에 설치된 글꼴을 사용합니다.
+HTML과 Figma는 동일한 토큰·컴포넌트 계약을 사용하는 별도 구현입니다. 픽셀 단위 복제본이 아닙니다. 기본 권장 글꼴은 Pretendard 1.3.9입니다. HTML/Claude는 번들 WOFF2를 사용하고, 현재 Figma 자동화 환경은 Pretendard를 제공하지 않아 Noto Sans KR로 대체 표시합니다. 각 Foundations에 제한을 명시했습니다.
 
 ## Claude Design 사용
 
 HYNIX_V1은 Published 상태로 팀 신규 프로젝트에서 선택할 수 있습니다. Main/Sub/Detail을 실제 templates 항목으로 변환했고 디자인 시스템 구조 검사를 통과했습니다. 생성 과정의 추가 화면 점검은 완전한 기능 보증이 아닙니다.
 
-KPOP_V1도 Published로 등록해 팀 신규 프로젝트에서 선택할 수 있습니다. 30개 케이스, 7개 문서, 핵심 12개 + Toast, Main/Sub/Detail 템플릿을 갖췄습니다. OS 글꼴 fallback과 반경 수정 후 TP01–TP10 및 디자인 시스템 재검사를 완료했습니다. TP10은 104개 파일을 검사했고 반경·Toast 규격 9개도 통과했습니다. 자동 검사에서는 폰트 경고가 없었으나 앱 상단 Missing brand font 배너는 남아 있습니다. 고객 폰트 파일을 제공하지 않는 의도적 OS fallback입니다. 독립 재생성 비교와 실기기 화면 읽기 검사는 별도 미실행 항목입니다.
+KPOP_V1도 Published로 등록해 팀 신규 프로젝트에서 선택할 수 있습니다. 30개 케이스, 7개 문서, 핵심 12개 + Toast, Main/Sub/Detail 템플릿을 갖췄습니다. OS 글꼴 fallback과 반경 수정 후 TP01–TP10 및 디자인 시스템 재검사를 완료했습니다. TP10은 104개 파일을 검사했고 반경·Toast 규격 9개도 통과했습니다. 이후 사용자 승인으로 Pretendard 번들 정책으로 변경했고, 재검사를 통과했으며 앱의 폰트 경고 배너도 사라졌습니다. 독립 재생성 비교와 실기기 화면 읽기 검사는 별도 미실행 항목입니다.
 
 ## 확인
 
@@ -62,3 +62,7 @@ v1.0에서 저장소 검사 31개와 빌드를 통과했습니다. v1.1 검증 �
 
 
 v1.1 로컬 확인: 각 30개 케이스 경로·앵커, 문서 7개, 시각 토큰 원본 유지, 375px Main/Sub/Detail 가로 넘침 없음, Toast 닫기 및 다음 버튼 포커스. Figma 추가 30개 안내/7개 문서/Toast 5상태의 배치와 토큰 바인딩을 확인했습니다. 화면 읽기 도구 실기기 인증과 독립 AI 재생성 3회 비교는 미실행입니다.
+
+## 폰트 업데이트
+
+사용자 승인으로 HYNIX/KPOP 기본 글꼴을 Pretendard 1.3.9로 변경했습니다. assets/fonts/에 실제 WOFF2와 SIL OFL 라이선스가 포함됩니다. 글자 크기·굵기·행간과 각 프로젝트 스타일은 유지합니다. 375px Main/Sub/Detail에서 가로 넘침 없음을 확인했습니다.

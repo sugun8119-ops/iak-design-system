@@ -9,7 +9,7 @@
     "caseAnchors": 30,
     "missingLocalLinks": 0,
     "guideDocuments": 7,
-    "visualTokensUnchanged": true,
+    "visualTokensUnchanged": "Colors, sizes, spacing, radius and effects retained; font family intentionally updated by user authorization",
     "mobileWidth": 375,
     "mainSubDetailOverflow": false,
     "casePageOverflow": false,
@@ -47,7 +47,7 @@
     "structureCheck": "passed: check_design_system reported No issues found",
     "finalPostCorrectionCheck": "completed; TP01–TP10 and radius/Toast checks passed",
     "lastObservedChanges": "Radius control12/panel24 and AppHeader wrapper24 saved; TP10 scanned 104 files with 33 distinct allowed colors",
-    "font": "intentional local OS fallback; no font files bundled. Automatic check reported no warning; application header still displays Missing brand font.",
+    "font": "Pretendard 1.3.9 bundled WOFF2; font banner cleared after approved font update",
     "verificationSource": "Claude Design final response and rendered QA cards, observed 2026-09-25",
     "designSystemCheck": {
       "cards": 47,
@@ -62,5 +62,42 @@
     "testsPassed": 31,
     "testsFailed": 0,
     "scope": "Existing repository suite; not a claim that Claude background checks finished."
+  },
+  "fontRevision": {
+    "family": "Pretendard",
+    "version": "1.3.9",
+    "bundledFiles": [
+      {
+        "file": "assets/fonts/Pretendard-Regular.woff2",
+        "weight": 400,
+        "sha256": "fad853f7f47c6c8b103171e7193fa095708cdcd70850a71d93aa5379e8a61d63"
+      },
+      {
+        "file": "assets/fonts/Pretendard-Bold.woff2",
+        "weight": 700,
+        "sha256": "4609c3356e536fafe38f4add0daeceb3d8595d3057bce13c428c33ddbd43d362"
+      },
+      {
+        "file": "assets/fonts/Pretendard-Black.woff2",
+        "weight": 900,
+        "sha256": "c5fd0c3568fc1368a3edc0d0fbb36df029935954276e3573451b3bae09e27296"
+      }
+    ],
+    "figmaRendering": "Noto Sans KR fallback",
+    "checks": {
+      "woff2Signature": "wOF2 verified",
+      "mobile375MainSubDetail": "no horizontal overflow",
+      "computedFamily": "Pretendard first",
+      "serverFontRequests": "200",
+      "figmaPolicyNode": "24:2"
+    },
+    "authorization": "User permits modern system-like fonts; supersedes OS-only policy",
+    "claudeDesign": {
+      "check": "No issues found",
+      "published": true,
+      "activeFontWarningBanner": false,
+      "validation": "HYNIX: 18 width/page combinations reported without overflow; KPOP: long-content overflow fixed and checked",
+      "source": "Claude final response plus visible Published/UI font status"
+    }
   }
 }

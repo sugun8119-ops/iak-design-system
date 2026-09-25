@@ -7,3 +7,7 @@
 - 구식 Figma 미생성 문구 정정.
 - IAK 검증 점수의 상속 금지; 실제 검증은 별도 결과로 기록.
 - HYNIX 장비 그리드 4→2열 전환을 1200px로 수정하고 사이드바 900px 전환과 구분.
+
+## 사용자 승인 폰트 업데이트
+
+Pretendard 1.3.9를 기본 글꼴로 사용한다. 실제 WOFF2와 SIL OFL 라이선스를 assets/fonts/에 포함한다. 기존 크기·굵기·행간은 유지한다. Figma 자동화 환경에는 Pretendard가 없어 캔버스는 Noto Sans KR 대체이며, Pretendard 설치 환경에서 교체할 수 있다. 이전 OS-only 규칙을 대체한다.
