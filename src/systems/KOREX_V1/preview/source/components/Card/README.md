@@ -8,3 +8,4 @@
 - 제품 목록은 여전히 **ProductCard**를 쓰고, 안내·비교·선택처럼 본문/액션이 있는 묶음에 Card를 쓴다.
 - **제공할 것**: `title`, `meta`, `children`, `media` `{tone, missing, tall}`, `href`, `footer`, `variant`, `selected`, `loading`.
 - observed는 Behance 원본 정밀 추출이 아니라 정규화 preview에서 계승했다는 뜻이다.
+- **v1.3 (derived-extension)**: `title`을 생략하면 제목 요소를 만들지 않는다(body-only). error는 Card + Icon + Button 조합(composition, `role=alert` 문장 + 다시 시도).

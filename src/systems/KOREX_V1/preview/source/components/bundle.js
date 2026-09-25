@@ -41,7 +41,12 @@
   };
   var ICON_NAMES = Object.keys(PATHS);
   function Icon(p) {
-    var size = p.size || 20, list = PATHS[p.name] || PATHS.info;
+    var size = p.size || 20, list = PATHS[p.name];
+    if (!list) {
+      /* unresolved: never substitute another glyph — show an explicit marker */
+      var msg = '미해결 아이콘: ' + String(p.name);
+      return h('span', { className: cx('kx-icon', 'kx-icon-unresolved', p.className), style: { width: size, height: size }, 'data-unresolved': String(p.name), role: 'img', 'aria-label': p.label ? p.label + ' (' + msg + ')' : msg, title: msg }, '?');
+    }
     var kids = list.map(function (d, i) {
       if (d[0] === 'C') { var c = d.slice(1).trim().split(' ').map(Number); return h('circle', { key: i, cx: c[0], cy: c[1], r: c[2] }); }
       if (d[0] === 'R') { var r = d.slice(1).trim().split(' ').map(Number); return h('rect', { key: i, x: r[0], y: r[1], width: r[2], height: r[3], rx: 1 }); }
@@ -60,7 +65,8 @@
     var variant = p.variant || 'text';
     var lines = p.lines || (variant === 'text' ? 3 : 1);
     var parts = [];
-    if (variant === 'media') parts.push(h('span', { key: 'm', className: cx('kx-skel', 'kx-skel-media', p.tall && 'kx-skel-tall') }));
+    if (variant === 'circle') parts.push(h('span', { key: 'c', className: 'kx-skel kx-skel-circle', style: { width: p.size || 40, height: p.size || 40 } }));
+    else if (variant === 'media') parts.push(h('span', { key: 'm', className: cx('kx-skel', 'kx-skel-media', p.tall && 'kx-skel-tall') }));
     else if (variant === 'block') parts.push(h('span', { key: 'b', className: 'kx-skel kx-skel-block', style: { height: p.height || 48, width: p.width } }));
     else for (var i = 0; i < lines; i++) parts.push(h('span', { key: i, className: cx('kx-skel', 'kx-skel-line', p.size === 'title' && 'kx-skel-title', p.size === 'display' && 'kx-skel-display'), style: { width: i === lines - 1 && lines > 1 ? '62%' : (p.width || '100%') } }));
     return h('div', { className: cx('kx', 'kx-skeleton', p.className), role: p.silent ? undefined : 'status', 'aria-live': p.silent ? undefined : 'polite' },
@@ -208,8 +214,9 @@
   /* ---------- IAK coverage families, drawn in KOREX style ---------- */
   function Button(p) {
     var variant = p.variant || 'primary', size = p.size || 'md';
+    var vc = variant === 'text' ? 'ghost' : variant; /* 'text' is the IAK name; 'ghost' kept as alias */
     var busy = !!p.loading, off = !!p.disabled || busy;
-    var cls = cx('kx', 'kx-btn', 'kx-btn-' + variant, 'kx-btn-' + size, stateClass(p.state), busy && 'is-loading', p.iconOnly && 'kx-btn-icon', p.block && 'kx-btn-block', p.className);
+    var cls = cx('kx', 'kx-btn', 'kx-btn-' + vc, 'kx-btn-' + size, stateClass(p.state), busy && 'is-loading', p.iconOnly && 'kx-btn-icon', p.block && 'kx-btn-block', p.className);
     var iconSize = size === 'sm' ? 16 : 20;
     var content = [
       busy ? h(Icon, { key: 'sp', name: 'spinner', size: iconSize }) : (p.icon ? h(Icon, { key: 'i', name: p.icon, size: iconSize }) : null),
@@ -221,7 +228,7 @@
       type: p.type || 'button', className: cls, onClick: off ? undefined : p.onClick, disabled: off,
       'aria-busy': busy ? 'true' : undefined, 'aria-pressed': p.pressed != null ? String(!!p.pressed) : undefined,
       'aria-haspopup': p.haspopup, 'aria-expanded': p.expanded, 'aria-controls': p.controls, id: p.id, ref: p.buttonRef,
-      onKeyDown: p.onKeyDown
+      'data-autofocus': p.autoFocusMark ? '' : undefined, onKeyDown: p.onKeyDown
     }, content);
   }
 
@@ -244,7 +251,7 @@
     var v = useControlled(p.value, p.defaultValue || '');
     return h(Field, Object.assign({}, p, { id: id, render: function (desc) {
       return h('input', {
-        id: id, type: p.type || 'text', className: cx('kx-input', 'kx-control', p.size === 'sm' && 'kx-control-sm', p.state === 'focus' && 'is-focus'),
+        id: id, type: p.type || 'text', className: cx('kx-input', 'kx-control', p.size === 'sm' && 'kx-control-sm', stateClass(p.state)),
         value: v[0], placeholder: p.placeholder, required: p.required, readOnly: p.readOnly, disabled: p.disabled,
         'aria-invalid': p.error ? 'true' : undefined, 'aria-describedby': desc, autoComplete: p.autoComplete || 'off', inputMode: p.inputMode,
         onChange: function (e) { v[1](e.target.value); if (p.onChange) p.onChange(e.target.value); }
@@ -258,7 +265,7 @@
     var counter = p.maxLength ? (v[0].length + ' / ' + p.maxLength + '자') : null;
     return h(Field, Object.assign({}, p, { id: id, counter: counter, render: function (desc) {
       return h('textarea', {
-        id: id, className: cx('kx-input', 'kx-control', 'kx-textarea', p.state === 'focus' && 'is-focus'), rows: p.rows || 4,
+        id: id, className: cx('kx-input', 'kx-control', 'kx-textarea', stateClass(p.state)), rows: p.rows || 4, style: p.rows ? { minHeight: 0 } : undefined,
         value: v[0], placeholder: p.placeholder, required: p.required, readOnly: p.readOnly, disabled: p.disabled, maxLength: p.maxLength,
         'aria-invalid': p.error ? 'true' : undefined, 'aria-describedby': desc,
         onChange: function (e) { v[1](e.target.value); if (p.onChange) p.onChange(e.target.value); }
@@ -272,7 +279,7 @@
     return h(Field, Object.assign({}, p, { id: id, render: function (desc) {
       return h('div', { className: 'kx-select-wrap' },
         h('select', {
-          id: id, className: cx('kx-select', 'kx-control', p.state === 'focus' && 'is-focus'), value: v[0], required: p.required, disabled: p.disabled || p.readOnly,
+          id: id, className: cx('kx-select', 'kx-control', stateClass(p.state)), value: v[0], required: p.required, disabled: p.disabled || p.readOnly,
           'aria-invalid': p.error ? 'true' : undefined, 'aria-describedby': desc,
           onChange: function (e) { v[1](e.target.value); if (p.onChange) p.onChange(e.target.value); }
         },
@@ -325,11 +332,14 @@
   var TONE_WORD = { neutral: '일반', brand: '브랜드', info: '안내', success: '완료', warning: '주의', error: '오류' };
   function Badge(p) {
     var tone = p.tone || 'neutral';
-    var icon = p.icon === false ? null : (p.icon || TONE_ICON[tone]);
-    var title = typeof p.children === 'string' ? p.children : undefined;
-    return h('span', { className: cx('kx', 'kx-badge', 'kx-badge-' + tone, p.size === 'sm' && 'kx-badge-sm', p.className), title: title },
+    var isCount = typeof p.count === 'number';
+    var icon = p.icon === false ? null : (p.icon || (isCount ? null : TONE_ICON[tone]));
+    var max = p.max || 99;
+    var text = isCount ? (p.count > max ? max + '+' : String(p.count)) : p.children;
+    var title = typeof p.children === 'string' ? p.children : (isCount ? String(p.count) : undefined);
+    return h('span', { className: cx('kx', 'kx-badge', 'kx-badge-' + tone, p.size === 'sm' && 'kx-badge-sm', isCount && 'kx-badge-count', p.className), title: title, 'aria-label': isCount && p.countLabel ? p.countLabel(p.count) : undefined },
       icon ? h(Icon, { name: icon, size: 12 }) : null,
-      h('span', { className: 'kx-badge-text' }, p.children));
+      h('span', { className: 'kx-badge-text' }, text));
   }
 
   function Card(p) {
@@ -346,7 +356,7 @@
       p.selected ? h(Badge, { tone: 'brand', icon: 'check', className: 'kx-cardbox-flag' }, p.selectedLabel || '선택됨') : null,
       p.media ? h(Media, { tone: p.media.tone, tall: p.media.tall, missing: p.media.missing, label: p.media.label || (titleText ? titleText + ' 이미지 자리표시자' : undefined) }) : null,
       p.meta ? h('p', { className: 'kx-meta' }, p.meta) : null,
-      h('h3', { className: 'kx-title kx-clamp2', title: titleText }, title),
+      p.title != null ? h('h3', { className: 'kx-title kx-clamp2', title: titleText }, title) : null,
       p.children ? h('div', { className: 'kx-cardbox-body' }, p.children) : null,
       p.footer ? h('div', { className: 'kx-cardbox-foot' }, p.footer) : null);
   }
@@ -382,22 +392,34 @@
           h('div', { className: 'kx-dialog-titles' },
             h('h2', { id: id + '-t', className: 'kx-title' }, p.title),
             p.description ? h('p', { id: id + '-d', className: 'kx-dialog-desc' }, p.description) : null),
-          p.hideClose ? null : h(Button, { variant: 'ghost', size: 'md', iconOnly: true, icon: 'close', label: p.closeLabel || '닫기', onClick: close, className: 'kx-dialog-close' })),
+          p.hideClose ? null : h(Button, { variant: 'ghost', size: 'md', iconOnly: true, icon: 'close', label: p.closeLabel || '닫기', onClick: close, className: 'kx-dialog-close', state: p.closeState, autoFocusMark: p.initialFocus === 'close' })),
         p.children ? h('div', { className: 'kx-dialog-body' }, p.children) : null,
         p.footer ? h('div', { className: 'kx-dialog-foot' }, p.footer) : null));
   }
 
   function AlertDialog(p) {
     var danger = p.tone !== 'neutral';
+    var st = React.useState({ pending: false, error: null });
+    React.useEffect(function () { if (!p.open) st[1]({ pending: false, error: null }); }, [p.open]);
+    var pending = !!p.loading || st[0].pending, err = p.error || st[0].error;
+    function confirm() {
+      if (!p.onConfirm || pending) return;
+      var r = p.onConfirm();
+      if (r && typeof r.then === 'function') {
+        st[1]({ pending: true, error: null });
+        r.then(function () { st[1]({ pending: false, error: null }); if (p.onResolved) p.onResolved(); },
+          function (e) { st[1]({ pending: false, error: (e && e.message) || p.errorText || '처리하지 못했습니다. 다시 시도해 주세요.' }); });
+      }
+    }
     return h(Dialog, {
       open: p.open, contained: p.contained, size: 'sm', role: 'alertdialog', title: p.title, description: p.description,
-      onClose: p.onCancel, dismissible: false, hideClose: true, busy: p.loading, className: p.className,
+      onClose: p.onCancel, dismissible: false, hideClose: true, busy: pending, className: p.className,
       icon: h('span', { className: cx('kx-alert-mark', danger && 'is-danger') }, h(Icon, { name: danger ? 'alert' : 'info', size: 20 })),
       footer: [
-        h(Button, { key: 'c', variant: 'secondary', onClick: p.onCancel, disabled: p.loading, className: 'kx-alert-cancel' }, p.cancelLabel || '취소'),
-        h(Button, { key: 'o', variant: danger ? 'danger' : 'primary', icon: danger ? 'trash' : undefined, loading: p.loading, loadingLabel: p.loadingLabel || '처리 중…', onClick: p.onConfirm }, p.confirmLabel || '확인')
+        h(Button, { key: 'c', variant: 'secondary', onClick: p.onCancel, disabled: pending, className: 'kx-alert-cancel', autoFocusMark: true }, p.cancelLabel || '취소'),
+        h(Button, { key: 'o', variant: danger ? 'danger' : 'primary', icon: err ? 'refresh' : (danger ? 'trash' : undefined), loading: pending, loadingLabel: p.loadingLabel || '처리 중…', onClick: confirm, className: 'kx-alert-confirm' }, err ? (p.retryLabel || '다시 시도') : (p.confirmLabel || '확인'))
       ]
-    }, p.error ? h('p', { className: 'kx-msg kx-msg-error', role: 'alert' }, h(Icon, { name: 'alert', size: 16 }), h('span', null, h('strong', null, '오류 '), p.error)) : p.children);
+    }, err ? h('p', { className: 'kx-msg kx-msg-error', role: 'alert' }, h(Icon, { name: 'alert', size: 16 }), h('span', null, h('strong', null, '오류 '), err)) : p.children);
   }
 
   function Menu(p) {
@@ -414,7 +436,9 @@
       return function () { document.removeEventListener('mousedown', away); };
     });
     function move(e) {
+      if (e.defaultPrevented) return;
       var list = wrap.current ? Array.prototype.slice.call(wrap.current.querySelectorAll('[role^="menuitem"]:not([aria-disabled="true"])')) : [];
+      if (!list.length) { if (e.key === 'Escape' && open) setOpen(false); return; }
       var i = list.indexOf(document.activeElement);
       if (e.key === 'ArrowDown') { e.preventDefault(); (list[i + 1] || list[0]).focus(); }
       else if (e.key === 'ArrowUp') { e.preventDefault(); (list[i - 1] || list[list.length - 1]).focus(); }
@@ -431,8 +455,9 @@
       open ? h('ul', { id: id, role: 'menu', 'aria-labelledby': id + '-btn', className: 'kx-menu-list' }, items.map(function (it, i) {
         if (it.divider) return h('li', { key: 'd' + i, role: 'separator', className: 'kx-menu-sep' });
         var selectable = it.selected != null;
-        return h('li', { key: i, role: 'none' }, h('button', {
-          type: 'button', role: selectable ? 'menuitemradio' : 'menuitem', 'aria-checked': selectable ? String(!!it.selected) : undefined,
+        var asLink = it.href && !it.disabled;
+        return h('li', { key: i, role: 'none' }, h(asLink ? 'a' : 'button', {
+          type: asLink ? undefined : 'button', href: asLink ? it.href : undefined, role: selectable ? 'menuitemradio' : 'menuitem', 'aria-checked': selectable ? String(!!it.selected) : undefined,
           'aria-disabled': it.disabled ? 'true' : undefined, tabIndex: -1,
           className: cx('kx-menu-item', it.danger && 'is-danger', it.selected && 'is-selected', stateClass(it.state)),
           onClick: function () { if (it.disabled) return; if (p.onSelect) p.onSelect(it.value); if (!p.inline) setOpen(false); }
@@ -449,6 +474,9 @@
     var s = useControlled(p.sort, p.defaultSort || null);
     var sort = s[0];
     var rows = (p.rows || []).slice();
+    var pg = useControlled(p.page, 1);
+    var sc = React.useState(0), all = React.useState(false);
+    var vref = React.useRef(null);
     if (sort && !p.sort && !p.manualSort) {
       rows.sort(function (a, b) {
         var x = a[sort.key], y = b[sort.key];
@@ -465,12 +493,31 @@
       var active = sort && sort.key === c.key;
       var ariaSort = c.sortable ? (active ? (sort.dir === 'asc' ? 'ascending' : 'descending') : 'none') : undefined;
       return h('th', { key: c.key, scope: 'col', 'aria-sort': ariaSort, className: cx(c.align === 'end' && 'is-end'), style: { width: c.width } },
-        c.sortable ? h('button', { type: 'button', className: cx('kx-th-sort', active && 'is-active'), onClick: function () { toggle(c.key); }, disabled: p.state === 'loading' },
+        c.sortable ? h('button', { type: 'button', className: cx('kx-th-sort', active && 'is-active', stateClass(c.state)), onClick: function () { toggle(c.key); }, disabled: p.state === 'loading' },
           h('span', null, c.label), h(Icon, { name: active ? (sort.dir === 'asc' ? 'sort-asc' : 'sort-desc') : 'sort', size: 16 }),
           sr(active ? (sort.dir === 'asc' ? ' 오름차순 정렬됨' : ' 내림차순 정렬됨') : ' 정렬 가능')) : c.label);
     })));
     var body;
     var span = cols.length;
+    var total = rows.length, pages = 1, pageNo = 1, first = 0;
+    var ok = p.state !== 'loading' && p.state !== 'error' && p.state !== 'empty' && total > 0;
+    if (ok && p.pageSize) {
+      pages = Math.max(1, Math.ceil(total / p.pageSize)); pageNo = Math.min(Math.max(1, pg[0]), pages);
+      first = (pageNo - 1) * p.pageSize; rows = rows.slice(first, first + p.pageSize);
+    }
+    var V = ok && p.virtual && !all[0] ? { h: p.virtual.height || 336, r: p.virtual.rowHeight || 48, o: p.virtual.overscan || 4 } : null;
+    var vStart = 0, vEnd = rows.length;
+    if (V) {
+      vStart = Math.max(0, Math.floor(sc[0] / V.r) - V.o);
+      vEnd = Math.min(rows.length, Math.ceil((sc[0] + V.h) / V.r) + V.o);
+    }
+    function vKeys(e) {
+      if (!V || !vref.current) return;
+      var el = vref.current, max = el.scrollHeight - el.clientHeight, t = el.scrollTop;
+      var map = { ArrowDown: t + V.r, ArrowUp: t - V.r, PageDown: t + V.h - V.r, PageUp: t - V.h + V.r, Home: 0, End: max };
+      if (!(e.key in map)) return;
+      e.preventDefault(); el.scrollTop = Math.max(0, Math.min(max, map[e.key])); sc[1](el.scrollTop);
+    }
     if (p.state === 'loading') {
       body = h('tbody', null, Array.apply(null, Array(p.loadingRows || 3)).map(function (_, i) {
         return h('tr', { key: i, 'aria-hidden': 'true' }, cols.map(function (c, j) { return h('td', { key: c.key }, h('span', { className: 'kx-skel kx-skel-line', style: { width: (j === 0 ? 70 : 45 + ((i + j) % 3) * 15) + '%' } })); }));
@@ -485,9 +532,11 @@
             h('p', { className: 'kx-help' }, isErr ? (p.errorText || '잠시 후 다시 시도해 주세요.') : (p.emptyText || '조건을 바꾸거나 초기화해 주세요.'))),
           isErr && p.onRetry ? h(Button, { variant: 'secondary', size: 'sm', icon: 'refresh', onClick: p.onRetry }, p.retryLabel || '다시 시도') : (!isErr && p.emptyAction ? p.emptyAction : null)))));
     } else {
-      body = h('tbody', null, rows.map(function (r, i) {
+      var slice = V ? rows.slice(vStart, vEnd) : rows;
+      var trs = slice.map(function (r, k) {
+        var i = k + vStart;
         var key = p.rowKey ? r[p.rowKey] : i;
-        return h('tr', { key: key, 'aria-selected': p.selectedKey != null ? String(key === p.selectedKey) : undefined, className: cx(p.selectedKey != null && key === p.selectedKey && 'is-selected') }, cols.map(function (c, j) {
+        return h('tr', { key: key, 'aria-rowindex': V ? first + i + 2 : undefined, style: V ? { height: V.r } : undefined, 'aria-selected': p.selectedKey != null ? String(key === p.selectedKey) : undefined, className: cx(p.selectedKey != null && key === p.selectedKey && 'is-selected') }, cols.map(function (c, j) {
           var v = r[c.key];
           var cell = isMissing(v) ? [h('span', { key: 'm', 'aria-hidden': 'true', className: 'kx-missing' }, '—'), h('span', { key: 's', className: 'kx-sr' }, '값 없음')]
             : (c.render ? c.render(v, r) : v);
@@ -495,14 +544,28 @@
           return h(Tag, { key: c.key, scope: Tag === 'th' ? 'row' : undefined, className: cx(c.align === 'end' && 'is-end', c.truncate && 'is-truncate'), title: c.truncate && typeof v === 'string' ? v : undefined },
             c.truncate ? h('span', { className: 'kx-trunc' }, cell) : cell);
         }));
-      }));
+      });
+      if (V) {
+        if (vStart > 0) trs.unshift(h('tr', { key: 'vs-top', 'aria-hidden': 'true', className: 'kx-v-spacer' }, h('td', { colSpan: span, style: { height: vStart * V.r } })));
+        if (vEnd < rows.length) trs.push(h('tr', { key: 'vs-bot', 'aria-hidden': 'true', className: 'kx-v-spacer' }, h('td', { colSpan: span, style: { height: (rows.length - vEnd) * V.r } })));
+      }
+      body = h('tbody', null, trs);
     }
-    var table = h('table', { className: 'kx-table', style: { minWidth: p.minWidth }, 'aria-busy': p.state === 'loading' ? 'true' : undefined },
+    var table = h('table', { className: cx('kx-table', V && 'kx-table-virtual'), style: { minWidth: p.minWidth }, 'aria-busy': p.state === 'loading' ? 'true' : undefined, 'aria-rowcount': V ? total + 1 : undefined },
       p.caption ? h('caption', { className: cx(p.captionHidden && 'kx-sr') }, p.caption) : null, head, body);
     return h('div', { className: cx('kx', 'kx-table-block', p.className) },
       p.state === 'loading' ? h('p', { className: 'kx-sr', role: 'status' }, '표를 불러오는 중') : null,
-      h('div', { className: 'kx-table-wrap', tabIndex: p.minWidth ? 0 : undefined, role: p.minWidth ? 'region' : undefined, 'aria-label': p.minWidth ? (p.caption || '표') + ' — 좌우로 스크롤' : undefined }, table),
-      p.minWidth ? h('p', { className: 'kx-table-hint' }, h(Icon, { name: 'chevron-right', size: 16 }), '좁은 화면에서는 표를 좌우로 스크롤하세요') : null);
+      V ? h('div', { ref: vref, className: 'kx-table-wrap kx-table-vwrap', style: { height: V.h }, tabIndex: 0, role: 'region',
+          'aria-label': (p.caption || '표') + ' — 가상 스크롤, 방향키·PageUp·PageDown·Home·End로 이동',
+          onScroll: function (e) { sc[1](e.currentTarget.scrollTop); }, onKeyDown: vKeys }, table)
+        : h('div', { className: 'kx-table-wrap', tabIndex: p.minWidth ? 0 : undefined, role: p.minWidth ? 'region' : undefined, 'aria-label': p.minWidth ? (p.caption || '표') + ' — 좌우로 스크롤' : undefined }, table),
+      p.minWidth ? h('p', { className: 'kx-table-hint' }, h(Icon, { name: 'chevron-right', size: 16 }), '좁은 화면에서는 표를 좌우로 스크롤하세요') : null,
+      ok && p.virtual ? h('div', { className: 'kx-table-foot' },
+        h('p', { className: 'kx-table-count' }, all[0] ? '전체 ' + total + '행 표시 중' : '전체 ' + total + '행 · ' + (Math.floor(sc[0] / (p.virtual.rowHeight || 48)) + 1) + '행부터 표시 (가상 스크롤)'),
+        h(Button, { variant: 'secondary', size: 'sm', onClick: function () { all[1](!all[0]); sc[1](0); } }, all[0] ? '가상 스크롤로 보기' : '전체 ' + total + '행 한 번에 보기')) : null,
+      ok && p.pageSize ? h('div', { className: 'kx-table-foot' },
+        h('p', { className: 'kx-table-count' }, (first + 1) + '–' + (first + rows.length) + ' / ' + total + '행'),
+        h(Pagination, { total: pages, page: pageNo, onChange: function (n) { pg[1](n); if (p.onPageChange) p.onPageChange(n); }, label: (p.caption || '표') + ' 페이지' })) : null);
   }
 
   function pageList(page, total) {
@@ -527,7 +590,7 @@
         if (typeof n === 'string') return h('li', { key: n, className: 'kx-pager-gap', 'aria-hidden': 'true' }, '…');
         var on = n === page;
         return h('li', { key: n }, h('button', {
-          type: 'button', className: cx('kx-pager-num', on && 'is-current'), 'aria-current': on ? 'page' : undefined, disabled: off,
+          type: 'button', className: cx('kx-pager-num', on && 'is-current', p.statePage === n && stateClass(p.state)), 'aria-current': on ? 'page' : undefined, disabled: off,
           'aria-label': n + '페이지', onClick: function () { go(n); }
         }, n));
       })),
@@ -537,14 +600,29 @@
 
   function Toast(p) {
     var tone = p.tone || 'info';
-    return h('div', { className: cx('kx', 'kx-toast', 'kx-toast-' + tone, p.inline && 'is-inline', p.className), role: tone === 'error' ? 'alert' : 'status', 'aria-live': tone === 'error' ? 'assertive' : 'polite' },
+    var body = p.children != null ? p.children : p.description;
+    var live = p.silent ? {} : { role: tone === 'error' ? 'alert' : 'status', 'aria-live': tone === 'error' ? 'assertive' : 'polite' };
+    return h('div', Object.assign({ className: cx('kx', 'kx-toast', 'kx-toast-' + tone, p.inline && 'is-inline', p.className) }, live),
       h('span', { className: 'kx-toast-mark' }, h(Icon, { name: TONE_ICON[tone], size: 20 })),
       h('div', { className: 'kx-toast-body' },
         h('p', { className: 'kx-toast-tone' }, p.toneLabel || TONE_WORD[tone]),
         p.title ? h('p', { className: 'kx-toast-title' }, p.title) : null,
-        p.children ? h('p', { className: 'kx-toast-text' }, p.children) : null,
+        body ? h('p', { className: 'kx-toast-text' }, body) : null,
         p.action ? h('div', { className: 'kx-toast-action' }, p.action) : null),
-      p.onClose ? h(Button, { variant: 'ghost', iconOnly: true, icon: 'close', label: p.closeLabel || '알림 닫기', onClick: p.onClose, className: 'kx-toast-close' }) : null);
+      p.onClose ? h(Button, { variant: 'ghost', iconOnly: true, icon: 'close', label: p.closeLabel || '알림 닫기', onClick: p.onClose, className: 'kx-toast-close', state: p.closeState }) : null);
+  }
+
+  /* ToastStack: newest first, at most `max` visible, the rest counted; one polite live region */
+  function ToastStack(p) {
+    var items = p.toasts || [], max = p.max || 3;
+    var shown = items.slice(-max).reverse(), hidden = items.length - shown.length;
+    return h('section', { className: cx('kx', 'kx-toast-stack', p.inline && 'is-inline', p.className), 'aria-label': p.label || '알림' },
+      h('div', { className: 'kx-toast-stack-list', 'aria-live': 'polite', 'aria-relevant': 'additions text' },
+        shown.map(function (t) {
+          return h(Toast, { key: t.id, tone: t.tone, title: t.title, description: t.description, action: t.action, inline: true, silent: t.tone !== 'error',
+            onClose: p.onDismiss ? function () { p.onDismiss(t.id); } : undefined });
+        })),
+      hidden > 0 ? h('p', { className: 'kx-toast-more' }, '+' + hidden + '개 알림 더 있음') : null);
   }
 
   window.KOREX = Object.assign(window.KOREX || {}, {
@@ -553,6 +631,6 @@
     BrandStatement: BrandStatement, CTA: CTA, Footer: Footer,
     Button: Button, TextField: TextField, Textarea: Textarea, Select: Select, Checkbox: Checkbox, Switch: Switch,
     Badge: Badge, Card: Card, Skeleton: Skeleton, Icon: Icon, Dialog: Dialog, Menu: Menu, Table: Table,
-    Pagination: Pagination, Toast: Toast, AlertDialog: AlertDialog, ICON_NAMES: ICON_NAMES
+    Pagination: Pagination, Toast: Toast, ToastStack: ToastStack, AlertDialog: AlertDialog, ICON_NAMES: ICON_NAMES
   });
 })();

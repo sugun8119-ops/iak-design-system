@@ -365,3 +365,35 @@ body{margin:0;background:var(--canvas);font-family:var(--font-sans);color:var(--
   .kx-pager{justify-content:space-between}
   .kx-toast{max-width:none}
 }
+
+/* ===== v1.3 — IAK 138-case coverage additions (derived-extension) ===== */
+.kx-control:hover:not(:disabled):not([readonly]),.kx-control.is-hover{border-color:var(--textPrimary)}
+.kx-fieldset{border:0;margin:0;padding:0;min-width:0;display:flex;flex-direction:column;gap:var(--space-4)}
+.kx-fieldset legend{padding:0;margin-bottom:var(--space-8);font-weight:600}
+.kx-fieldset .kx-help{margin:0 0 var(--space-8)}
+.kx-badge-info{background:var(--surface);border-color:var(--textSecondary);color:var(--textPrimary)}
+.kx-badge-count{justify-content:center;min-width:24px;font-variant-numeric:tabular-nums}
+.kx-skel-circle{border-radius:50%;flex:none}
+.kx-icon-unresolved{display:inline-flex;align-items:center;justify-content:center;border:1px dashed currentColor;border-radius:var(--radius-sm);font-size:11px;line-height:1;font-weight:700;color:inherit}
+.kx-table-vwrap{overflow:auto;border-bottom:1px solid var(--border)}
+.kx-table-vwrap thead th{position:sticky;top:0;z-index:1;background:var(--canvas)}
+.kx-table-virtual tbody th,.kx-table-virtual tbody td{padding-top:0;padding-bottom:0;vertical-align:middle;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.kx-v-spacer td{padding:0!important;border:0!important}
+.kx-table-foot{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:var(--space-16);margin-top:var(--space-16)}
+.kx-table-count{margin:0;font-size:12px;line-height:18px;color:var(--textSecondary);font-variant-numeric:tabular-nums}
+.kx-table-foot .kx-pager{flex:1;justify-content:flex-end}
+.kx-pager-num.is-hover{border-color:var(--primary);color:var(--primary)}
+.kx-pager-num.is-focus{outline:2px solid var(--textPrimary);outline-offset:4px}
+.kx-toast-stack{position:fixed;right:var(--space-24);bottom:var(--space-24);z-index:60;width:min(440px,calc(100vw - 32px))}
+.kx-toast-stack.is-inline{position:static;width:auto;max-width:440px}
+.kx-toast-stack-list{display:flex;flex-direction:column;gap:var(--space-8)}
+.kx-toast-more{margin:var(--space-8) 0 0;font-size:12px;line-height:18px;font-weight:600;color:var(--textSecondary)}
+@media (max-width:767px){.kx-table-foot .kx-pager{justify-content:space-between}.kx-toast-stack{right:var(--space-16);bottom:var(--space-16)}}
+/* Pagination adapts to its container (table footers, narrow cards) */
+.kx-table-foot{container-type:inline-size}
+.kx-table-foot .kx-table-count{flex:1 1 100%}
+@container (max-width:520px){
+  .kx-pager{justify-content:space-between}
+  .kx-pager-list{order:3;flex-basis:100%;justify-content:center}
+  .kx-pager-status{display:block}
+}

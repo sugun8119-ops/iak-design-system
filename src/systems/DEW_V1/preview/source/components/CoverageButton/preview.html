@@ -1,0 +1,295 @@
+<!-- @dsCard group="Coverage 138" height=1300 page subtitle="Button · 19 cases" -->
+<!doctype html>
+<html lang="ko">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Coverage Button — DEW_V1</title></head>
+<body>
+<div id="root"></div>
+<script>
+/* DEW_V1 v1.3 — IAK 138-case coverage gallery. Case ids are stable: case-<family>-<id>. */
+(function () {
+  var D = window.DEW, h = React.createElement, F = React.Fragment;
+  var noop = function () {};
+  function row(kids, gap) { return h('div', { style: { display: 'flex', gap: (gap || 16) + 'px', alignItems: 'center', flexWrap: 'wrap' } }, kids); }
+  function frame(node) { return h('div', { className: 'dew-pv-frame' }, node); }
+  function K(list) { return list.map(function (n, i) { return h(F, { key: i }, n); }); }
+  var OPTS = [{ value: 'new', label: '최신순' }, { value: 'read', label: '읽기 시간 짧은 순' }, { value: 'az', label: '제목 가나다순' }];
+  var COLS = [{ key: 'title', label: '제목', sortable: true }, { key: 'topic', label: '주제', sortable: true }, { key: 'issue', label: '호', sortable: true, align: 'end' }, { key: 'time', label: '읽기', align: 'end' }];
+  var ROWS = [
+    { id: 1, title: '느린 오후의 색', topic: 'CULTURE', issue: '예시 03', time: '3분' },
+    { id: 2, title: '사물 사이의 여백', topic: 'OBJECTS', issue: '예시 01', time: '5분' },
+    { id: 3, title: '걷다 만난 작은 풍경', topic: 'PLACES', issue: '예시 02', time: '4분' }];
+  function sortRows(rows, s) { if (!s || !s.key) return rows; return rows.slice().sort(function (a, b) { var x = String(a[s.key] || ''), y = String(b[s.key] || ''); return (x < y ? -1 : x > y ? 1 : 0) * (s.direction === 'asc' ? 1 : -1); }); }
+  function many(n, prefix) { var a = []; for (var i = 1; i <= n; i++) { var k = ('000' + i).slice(-4); a.push({ id: i, title: (prefix || '예시 항목 ') + k, topic: ['CULTURE', 'OBJECTS', 'PLACES'][i % 3], issue: '예시 ' + ('0' + (1 + i % 12)).slice(-2), time: (2 + i % 9) + '분' }); } return a; }
+
+  /* ---- stateful demos (real behaviour, not screenshots) ---- */
+  function SortDemo(pr) {
+    var s = React.useState(pr.init || { key: 'title', direction: 'asc' });
+    return h(D.Table, { caption: pr.caption || '저널 목록', columns: pr.columns || COLS, rows: sortRows(ROWS, s[0]), sort: s[0], onSort: function (k, d) { s[1]({ key: k, direction: d }); } });
+  }
+  function PagedDemo() {
+    var pg = React.useState(2), rows = many(23);
+    return h(D.Table, { caption: '아카이브 색인', columns: COLS, rows: rows, pagination: { page: pg[0], pageSize: 5, onPageChange: pg[1] } });
+  }
+  function RetryTableDemo() {
+    var st = React.useState('error');
+    return h(D.Table, { caption: '저널 목록', columns: COLS, rows: ROWS, state: st[0], onRetry: function () { st[1]('loading'); setTimeout(function () { st[1]('ready'); }, 600); } });
+  }
+  function PagerLive() {
+    var p = React.useState(3);
+    return h('div', { style: { display: 'flex', flexDirection: 'column', gap: '8px' } },
+      h(D.Pagination, { page: p[0], total: 12, onChange: p[1], label: '라이브 페이지 이동' }),
+      h('p', { className: 'dew-meta', role: 'status', 'aria-live': 'polite', 'data-live': 'pagination' }, '현재 ' + p[0] + ' / 12 페이지'));
+  }
+  function ToastLive() {
+    var list = React.useState([]), n = React.useRef(0);
+    var tones = ['success', 'info', 'warning', 'error'];
+    function add() { n.current++; var k = n.current; list[1](function (l) { return l.concat([{ k: k, tone: tones[(k - 1) % 4] }]); }); }
+    function close(k) { list[1](function (l) { return l.filter(function (x) { return x.k !== k; }); }); }
+    return h('div', { style: { display: 'flex', flexDirection: 'column', gap: '16px' } },
+      row([h(D.Button, { key: 'a', variant: 'secondary', size: 'sm', icon: 'plus', onClick: add }, '알림 추가'), h('span', { key: 'b', className: 'dew-meta', 'data-live': 'toast-count' }, '표시 ' + Math.min(3, list[0].length) + ' / 누적 ' + list[0].length)]),
+      h(D.ToastRegion, { inline: true, max: 3, label: '라이브 알림' }, list[0].map(function (t) { return h(D.Toast, { key: t.k, tone: t.tone, title: '알림 ' + t.k, message: '최대 3개까지 쌓입니다.', onClose: function () { close(t.k); } }); })));
+  }
+  function ToastClosable(pr) {
+    var o = React.useState(true);
+    return o[0] ? h(D.Toast, { tone: 'info', title: '저장 위치가 바뀌었습니다', closeState: pr.closeState, onClose: function () { o[1](false); } }) : h(D.Button, { variant: 'text', size: 'sm', onClick: function () { o[1](true); } }, '다시 보이기');
+  }
+  function DialogLive() {
+    var o = React.useState(false);
+    return h('div', null,
+      h('span', { 'data-live': 'dialog-open' }, h(D.Button, { variant: 'secondary', onClick: function () { o[1](true); } }, '대화상자 열기')),
+      h(D.Dialog, { open: o[0], size: 'sm', title: '독자 편지', description: 'Tab은 대화상자 안에서만 순환하고, Esc로 닫으면 이 버튼으로 초점이 돌아옵니다.', onClose: function () { o[1](false); },
+        footer: K([h(D.Button, { variant: 'secondary', onClick: function () { o[1](false); } }, '취소'), h(D.Button, { onClick: function () { o[1](false); } }, '보내기')]) },
+        h(D.TextField, { label: '이름', placeholder: '예: 김하늘' })));
+  }
+  function AlertLive() {
+    var o = React.useState(false), tries = React.useRef(0), done = React.useState('');
+    return h('div', { style: { display: 'flex', flexDirection: 'column', gap: '8px' } },
+      h('span', { 'data-live': 'alert-open' }, h(D.Button, { variant: 'danger', icon: 'trash', onClick: function () { tries.current = 0; done[1](''); o[1](true); } }, '보관함 비우기')),
+      h('p', { className: 'dew-meta', role: 'status', 'aria-live': 'polite', 'data-live': 'alert-result' }, done[0]),
+      h(D.AlertDialog, { open: o[0], title: '보관함을 비울까요?', description: '첫 시도는 일부러 실패하고, 다시 시도하면 완료됩니다(예시 흐름).', confirmLabel: '비우기', loadingLabel: '비우는 중', errorTitle: '비우지 못했습니다',
+        onCancel: function () { o[1](false); },
+        onConfirm: function () { tries.current++; var t = tries.current; return new Promise(function (res, rej) { setTimeout(function () { t === 1 ? rej(new Error('연결이 끊겼습니다. 다시 시도하세요.')) : res(); }, 700); }); },
+        onResolved: function () { o[1](false); done[1]('보관함을 비웠습니다.'); } }));
+  }
+  function CheckGroup() {
+    return h('fieldset', { className: 'dew dew-fieldset' }, h('legend', null, '받아볼 주제'),
+      h('p', { className: 'dew-meta', style: { margin: '0 0 4px' } }, '하나 이상 선택하세요.'),
+      h(D.Checkbox, { label: '문화', defaultChecked: true, name: 'topic', value: 'c' }), h(D.Checkbox, { label: '사물', name: 'topic', value: 'o' }), h(D.Checkbox, { label: '공간', defaultChecked: true, name: 'topic', value: 'p' }));
+  }
+  function ListRow() { return h('div', { className: 'dew dew-skel-listrow', role: 'status', 'aria-label': '목록 항목 불러오는 중' }, h(D.Skeleton, { variant: 'circle', size: 40, decorative: true }), h(D.Skeleton, { variant: 'text', lines: 2, decorative: true })); }
+  function CardError() {
+    var ok = React.useState(false);
+    return h(D.Card, { variant: 'outlined', eyebrow: 'ISSUE 04', title: '특별호 소개' },
+      ok[0] ? h('p', { className: 'dew-ucard__desc' }, '다시 불러왔습니다.') :
+      h('div', { className: 'dew-ucard__error', role: 'alert' }, h(D.Icon, { name: 'error', size: 20, tone: 'accent' }),
+        h('div', { style: { display: 'flex', flexDirection: 'column', gap: '8px' } }, h('p', { style: { fontWeight: 600 } }, h('span', { className: 'dew-sr' }, '오류: '), '내용을 불러오지 못했습니다'),
+          h(D.Button, { variant: 'secondary', size: 'sm', icon: 'refresh', onClick: function () { ok[1](true); } }, '다시 시도'))));
+  }
+  function DSample(kind, text, extra) { return h('div', { className: 'dew-dsample-wrap', 'data-design-only': 'true', role: 'img', 'aria-label': '디자인 전용 시각 샘플: ' + text }, h('span', { className: 'dew-dsample ' + kind, 'aria-hidden': 'true' }, extra || text)); }
+
+  var LONG_KO = '이번 호의 모든 이야기를 한 번에 저장하고 나중에 천천히 읽기';
+  var LONG_MIX = 'A remarkably long English phrase mixed with 한국어 문장 to check wrapping without truncation';
+  var menuItems = [{ label: '최신순', selected: true }, { label: '읽기 시간 짧은 순', selected: false }, { label: '보관함에 저장', icon: 'bookmark' }];
+
+  /* [family, id, referenceType, export, props, render, opts] */
+  var C = [
+    // Button 19
+    ['Button', 'primary', 'code', 'DEW.Button', { variant: 'primary' }, function () { return h(D.Button, { variant: 'primary' }, '저장하기'); }],
+    ['Button', 'secondary', 'code', 'DEW.Button', { variant: 'secondary' }, function () { return h(D.Button, { variant: 'secondary' }, '저장하기'); }],
+    ['Button', 'danger', 'code', 'DEW.Button', { variant: 'danger', icon: 'trash' }, function () { return h(D.Button, { variant: 'danger', icon: 'trash' }, '삭제'); }],
+    ['Button', 'text', 'code', 'DEW.Button', { variant: 'text' }, function () { return h(D.Button, { variant: 'text' }, '자세히 보기'); }],
+    ['Button', 'size-sm', 'code', 'DEW.Button', { size: 'sm' }, function () { return h(D.Button, { size: 'sm' }, '구독'); }],
+    ['Button', 'size-md', 'code', 'DEW.Button', { size: 'md' }, function () { return h(D.Button, { size: 'md' }, '구독'); }],
+    ['Button', 'size-lg', 'code', 'DEW.Button', { size: 'lg' }, function () { return h(D.Button, { size: 'lg' }, '구독'); }],
+    ['Button', 'default', 'code', 'DEW.Button', {}, function () { return h(D.Button, null, '기본 버튼'); }],
+    ['Button', 'hover-primary', 'code', 'DEW.Button', { variant: 'primary', state: 'hover' }, function () { return h(D.Button, { state: 'hover' }, '저장하기'); }],
+    ['Button', 'pressed-primary', 'code', 'DEW.Button', { variant: 'primary', state: 'pressed' }, function () { return h(D.Button, { state: 'pressed' }, '저장하기'); }],
+    ['Button', 'focus', 'code', 'DEW.Button', { state: 'focus' }, function () { return h(D.Button, { state: 'focus', variant: 'secondary' }, '저장하기'); }],
+    ['Button', 'disabled', 'code', 'DEW.Button', { disabled: true }, function () { return h(D.Button, { disabled: true }, '저장하기'); }],
+    ['Button', 'loading', 'code', 'DEW.Button', { loading: true, loadingLabel: '저장 중' }, function () { return h(D.Button, { loading: true, loadingLabel: '저장 중' }, '저장하기'); }],
+    ['Button', 'with-icon', 'composition', 'DEW.Button + DEW.Icon', { icon: 'bookmark', iconPosition: 'start|end' }, function () { return row([h(D.Button, { key: 1, variant: 'secondary', icon: 'bookmark' }, '저장'), h(D.Button, { key: 2, icon: 'arrow-right', iconPosition: 'end' }, '다음')]); }],
+    ['Button', 'icon-only', 'composition', 'DEW.Button + DEW.Icon', { iconOnly: true, icon: 'search', label: '검색' }, function () { return row([h(D.Button, { key: 1, variant: 'secondary', iconOnly: true, icon: 'search', label: '검색', size: 'sm' }), h(D.Button, { key: 2, iconOnly: true, icon: 'plus', label: '추가' })]); }],
+    ['Button', 'long-label', 'code', 'DEW.Button', { children: 'long string' }, function () { return h('div', { style: { maxWidth: '260px' } }, h(D.Button, null, LONG_KO)); }],
+    ['Button', 'd-outlined', 'design-only', 'none (visual sample)', {}, function () { return DSample('dew-dsample--btn dew-dsample--outlined', '외곽선 버튼'); }],
+    ['Button', 'd-outlined-primary', 'design-only', 'none (visual sample)', {}, function () { return DSample('dew-dsample--btn dew-dsample--outlined-primary', '강조 외곽선 버튼'); }],
+    ['Button', 'd-soft', 'design-only', 'none (visual sample)', {}, function () { return DSample('dew-dsample--btn dew-dsample--soft', '소프트 버튼'); }],
+    // TextField 13
+    ['TextField', 'default', 'code', 'DEW.TextField', { label: '이름', placeholder: '…' }, function () { return h(D.TextField, { label: '이름', placeholder: '예: 김하늘' }); }],
+    ['TextField', 'filled', 'code', 'DEW.TextField', { defaultValue: '…' }, function () { return h(D.TextField, { label: '이름', defaultValue: '김하늘' }); }],
+    ['TextField', 'hover', 'code', 'DEW.TextField', { state: 'hover' }, function () { return h(D.TextField, { label: '이름', state: 'hover', placeholder: '예: 김하늘' }); }],
+    ['TextField', 'focus', 'code', 'DEW.TextField', { state: 'focus' }, function () { return h(D.TextField, { label: '이름', state: 'focus', defaultValue: '김하늘' }); }],
+    ['TextField', 'error', 'code', 'DEW.TextField', { error: '…' }, function () { return h(D.TextField, { label: '이메일', defaultValue: 'reader@', error: '@ 뒤에 도메인을 입력하세요.' }); }],
+    ['TextField', 'disabled', 'code', 'DEW.TextField', { disabled: true }, function () { return h(D.TextField, { label: '회원 번호', defaultValue: 'EX-0000', disabled: true }); }],
+    ['TextField', 'description', 'code', 'DEW.TextField', { description: '…' }, function () { return h(D.TextField, { label: '필명', description: '독자 편지에 표시됩니다.' }); }],
+    ['TextField', 'required', 'code', 'DEW.TextField', { required: true }, function () { return h(D.TextField, { label: '이메일', required: true, type: 'email' }); }],
+    ['TextField', 'readonly', 'native', 'DEW.TextField → <input readOnly>', { readOnly: true }, function () { return h(D.TextField, { label: '구독 주기', defaultValue: '매주 금요일', readOnly: true }); }],
+    ['TextField', 'long-label', 'code', 'DEW.TextField', { label: 'long string' }, function () { return h(D.TextField, { label: '받는 분 주소 (Recipient address for the printed special edition)', optional: true }); }],
+    ['TextField', 'long-value', 'code', 'DEW.TextField', { defaultValue: 'long string' }, function () { return h(D.TextField, { label: '주소', defaultValue: 'Extraordinarilylongstreetnamewithoutspaces-Building 2, 서울특별시 예시구 예시로 123' }); }],
+    ['TextField', 'type-email', 'native', 'DEW.TextField → <input type="email">', { type: 'email', autoComplete: 'email' }, function () { return h(D.TextField, { label: '이메일', type: 'email', autoComplete: 'email', placeholder: 'reader@example.com' }); }],
+    ['TextField', 'd-floating', 'design-only', 'none (visual sample)', {}, function () { return DSample('dew-dsample--floating', '플로팅 라벨 입력', [h('small', { key: 1 }, '이름'), h('span', { key: 2 }, '김하늘')]); }],
+    // Textarea 9
+    ['Textarea', 'default', 'code', 'DEW.Textarea', { label: '…' }, function () { return h(D.Textarea, { label: '독자 편지', placeholder: '짧은 감상을 남겨 주세요.' }); }],
+    ['Textarea', 'filled', 'code', 'DEW.Textarea', { defaultValue: '…' }, function () { return h(D.Textarea, { label: '독자 편지', defaultValue: '좋은 이야기였습니다.' }); }],
+    ['Textarea', 'hover', 'code', 'DEW.Textarea', { state: 'hover' }, function () { return h(D.Textarea, { label: '독자 편지', state: 'hover' }); }],
+    ['Textarea', 'focus', 'code', 'DEW.Textarea', { state: 'focus' }, function () { return h(D.Textarea, { label: '독자 편지', state: 'focus', defaultValue: '좋은 이야기였습니다.' }); }],
+    ['Textarea', 'error', 'code', 'DEW.Textarea', { error: '…', required: true }, function () { return h(D.Textarea, { label: '독자 편지', required: true, error: '10자 이상 입력하세요.' }); }],
+    ['Textarea', 'disabled', 'code', 'DEW.Textarea', { disabled: true }, function () { return h(D.Textarea, { label: '편집부 메모', disabled: true, defaultValue: '예시 메모' }); }],
+    ['Textarea', 'rows-2', 'native', 'DEW.Textarea → <textarea rows="2">', { rows: 2 }, function () { return h(D.Textarea, { label: '한 줄 소감', rows: 2 }); }],
+    ['Textarea', 'long-text', 'code', 'DEW.Textarea', { defaultValue: 'long', maxLength: 500 }, function () { return h(D.Textarea, { label: '긴 문구', rows: 5, maxLength: 500, defaultValue: LONG_MIX + ' — 오후의 빛이 빈 탁자 위에 내려앉는 장면을 기록했습니다. Extraordinarilylongunbrokenword.' }); }],
+    ['Textarea', 'description', 'code', 'DEW.Textarea', { description: '…', maxLength: 500 }, function () { return h(D.Textarea, { label: '독자 편지', description: '다음 호에 소개될 수 있습니다.', maxLength: 500 }); }],
+    // Select 8
+    ['Select', 'default', 'code', 'DEW.Select', { options: '[3]' }, function () { return h(D.Select, { label: '정렬', options: OPTS, defaultValue: 'new' }); }],
+    ['Select', 'hover', 'code', 'DEW.Select', { state: 'hover' }, function () { return h(D.Select, { label: '정렬', options: OPTS, defaultValue: 'new', state: 'hover' }); }],
+    ['Select', 'focus', 'code', 'DEW.Select', { state: 'focus' }, function () { return h(D.Select, { label: '정렬', options: OPTS, defaultValue: 'new', state: 'focus' }); }],
+    ['Select', 'error', 'code', 'DEW.Select', { error: '…' }, function () { return h(D.Select, { label: '발행 주기', placeholder: '선택', required: true, error: '발행 주기를 선택하세요.', options: [{ value: 'w', label: '매주' }] }); }],
+    ['Select', 'disabled', 'code', 'DEW.Select', { disabled: true }, function () { return h(D.Select, { label: '언어', disabled: true, defaultValue: 'ko', options: [{ value: 'ko', label: '한국어' }] }); }],
+    ['Select', 'description', 'code', 'DEW.Select', { description: '…' }, function () { return h(D.Select, { label: '정렬', description: '목록 순서만 바뀝니다.', options: OPTS, defaultValue: 'read' }); }],
+    ['Select', 'long-option', 'code', 'DEW.Select', { options: 'long label' }, function () { return h(D.Select, { label: 'Archive section', defaultValue: 'l', options: [{ value: 'l', label: 'Culture & Objects — 문화와 사물에 관한 아주 긴 섹션 이름 예시' }] }); }],
+    ['Select', 'placeholder-option', 'native', 'DEW.Select → <option value="" disabled>', { placeholder: '…' }, function () { return h(D.Select, { label: '주제', placeholder: '주제 선택', options: OPTS }); }],
+    // Checkbox 7
+    ['Checkbox', 'unchecked', 'code', 'DEW.Checkbox', {}, function () { return h(D.Checkbox, { label: '뉴스레터 받기' }); }],
+    ['Checkbox', 'checked', 'code', 'DEW.Checkbox', { defaultChecked: true }, function () { return h(D.Checkbox, { label: '새 이야기 알림', defaultChecked: true }); }],
+    ['Checkbox', 'focus', 'code', 'DEW.Checkbox', { state: 'focus' }, function () { return h(D.Checkbox, { label: '문화 주제 포함', state: 'focus' }); }],
+    ['Checkbox', 'disabled', 'code', 'DEW.Checkbox', { disabled: true }, function () { return h(D.Checkbox, { label: '인쇄본 받기 (준비 중)', disabled: true }); }],
+    ['Checkbox', 'disabled-checked', 'code', 'DEW.Checkbox', { disabled: true, defaultChecked: true }, function () { return h(D.Checkbox, { label: '기본 알림', disabled: true, defaultChecked: true }); }],
+    ['Checkbox', 'long-label', 'code', 'DEW.Checkbox', { label: 'long' }, function () { return h(D.Checkbox, { label: 'Send me the weekly digest — 이번 주에 발행된 모든 에세이와 사진 이야기를 한 통의 편지로 받아보기', defaultChecked: true }); }],
+    ['Checkbox', 'group', 'composition', '<fieldset.dew-fieldset> + DEW.Checkbox×3', { name: 'topic' }, function () { return h(CheckGroup); }],
+    // Switch 6
+    ['Switch', 'off', 'code', 'DEW.Switch', {}, function () { return h(D.Switch, { label: '본문 글자 크게' }); }],
+    ['Switch', 'on', 'code', 'DEW.Switch', { defaultChecked: true }, function () { return h(D.Switch, { label: '이미지 자동 재생', defaultChecked: true }); }],
+    ['Switch', 'focus', 'code', 'DEW.Switch', { state: 'focus' }, function () { return h(D.Switch, { label: '읽은 이야기 흐리게', state: 'focus' }); }],
+    ['Switch', 'disabled-off', 'code', 'DEW.Switch', { disabled: true }, function () { return h(D.Switch, { label: '오프라인 저장 (준비 중)', disabled: true }); }],
+    ['Switch', 'disabled-on', 'code', 'DEW.Switch', { disabled: true, defaultChecked: true }, function () { return h(D.Switch, { label: '필수 알림', disabled: true, defaultChecked: true }); }],
+    ['Switch', 'long-label', 'code', 'DEW.Switch', { label: 'long', description: '…' }, function () { return h(D.Switch, { label: 'Reduce motion — 페이지 전환과 이미지 효과를 줄입니다', description: '이 사이트에만 적용됩니다.' }); }],
+    // Badge 10
+    ['Badge', 'neutral', 'code', 'DEW.Badge', { tone: 'neutral' }, function () { return h(D.Badge, null, '예시 에세이'); }],
+    ['Badge', 'info', 'code', 'DEW.Badge', { tone: 'info' }, function () { return h(D.Badge, { tone: 'info' }, '새 이야기'); }],
+    ['Badge', 'success', 'code', 'DEW.Badge', { tone: 'success' }, function () { return h(D.Badge, { tone: 'success' }, '저장됨'); }],
+    ['Badge', 'warning', 'code', 'DEW.Badge', { tone: 'warning' }, function () { return h(D.Badge, { tone: 'warning' }, '수정 중'); }],
+    ['Badge', 'error', 'code', 'DEW.Badge', { tone: 'error' }, function () { return h(D.Badge, { tone: 'error' }, '게시 중단'); }],
+    ['Badge', 'with-icon', 'composition', 'DEW.Badge + DEW.Icon', { tone: 'neutral', icon: 'bookmark' }, function () { return h(D.Badge, { icon: 'bookmark' }, '저장한 이야기'); }],
+    ['Badge', 'long-text', 'code', 'DEW.Badge', { children: 'long' }, function () { return h('div', { style: { maxWidth: '220px' } }, h(D.Badge, { tone: 'info' }, 'Special edition — 연말 특별호 한정 이야기')); }],
+    ['Badge', 'number', 'code', 'DEW.Badge', { count: 12, srLabel: '새 편지 12통' }, function () { return row([h(D.Badge, { key: 1, count: 12, srLabel: '새 편지 12통' }), h(D.Badge, { key: 2, count: 140, srLabel: '새 편지 140통' })]); }],
+    ['Badge', 'd-status-dot', 'design-only', 'none (visual sample)', {}, function () { return DSample('dew-dsample--dot', '상태 점: 게시 중 / 중단', [h('i', { key: 1, className: 'is-ok' }), h('span', { key: 2 }, '게시 중'), h('i', { key: 3, style: { marginLeft: '16px' } }), h('span', { key: 4 }, '중단')]); }],
+    ['Badge', 'd-filter-chip', 'design-only', 'none (visual sample)', {}, function () { return DSample('dew-dsample--chip is-on', '필터 칩: 문화 선택됨', [h('span', { key: 1 }, '문화'), h(D.Icon, { key: 2, name: 'close', size: 16 })]); }],
+    // Card 6
+    ['Card', 'full', 'code', 'DEW.Card', { media: {}, eyebrow: '…', title: '…', description: '…', badges: '…', footer: '…' }, function () { return h(D.Card, { variant: 'outlined', media: { tone: 'mint' }, eyebrow: 'GUIDE', title: '읽기 안내', description: '긴 글은 저장해 두고 천천히 읽을 수 있습니다.', badges: h(D.Badge, { tone: 'info' }, '새 이야기'), footer: h(D.Button, { size: 'sm', variant: 'secondary' }, '자세히') }); }],
+    ['Card', 'body-only', 'code', 'DEW.Card', { children: '…' }, function () { return h(D.Card, { variant: 'outlined' }, h('p', null, '제목 없이 본문만 담는 카드입니다. 짧은 안내나 편집 노트에 씁니다.')); }],
+    ['Card', 'long-title', 'code', 'DEW.Card', { title: 'long' }, function () { return h(D.Card, { variant: 'plain', eyebrow: 'SPECIAL', title: 'A very long English headline about slow afternoons — 오래 남는 사물에 관한 아주 긴 제목', description: '말줄임 없이 줄바꿈합니다.' }); }],
+    ['Card', 'loading', 'composition', 'DEW.Card + DEW.Skeleton', { variant: 'outlined' }, function () { return h(D.Card, { variant: 'outlined' }, h(D.Skeleton, { variant: 'story', label: '카드를 불러오는 중' })); }],
+    ['Card', 'missing', 'composition', 'DEW.Card + media.missing', { media: { missing: true } }, function () { return h(D.Card, { href: '#', media: { missing: true, label: '표지 이미지' }, eyebrow: 'ISSUE 01', title: '여름호' }); }],
+    ['Card', 'error', 'composition', 'DEW.Card + DEW.Icon + DEW.Button', { variant: 'outlined' }, function () { return h(CardError); }],
+    // Skeleton 4
+    ['Skeleton', 'default', 'code', 'DEW.Skeleton', { variant: 'text' }, function () { return h(D.Skeleton, { variant: 'text' }); }],
+    ['Skeleton', 'sized', 'code', 'DEW.Skeleton', { variant: 'block', width: 240, height: 120 }, function () { return h(D.Skeleton, { variant: 'block', width: 240, height: 120, label: '이미지 영역 불러오는 중' }); }],
+    ['Skeleton', 'circle', 'code', 'DEW.Skeleton', { variant: 'circle', size: 48 }, function () { return h(D.Skeleton, { variant: 'circle', size: 48, label: '프로필 이미지 불러오는 중' }); }],
+    ['Skeleton', 'list-row', 'composition', 'DEW.Skeleton circle + text', { variant: ['circle', 'text'] }, function () { return h('div', { style: { display: 'flex', flexDirection: 'column', gap: '16px' } }, h(ListRow), h(ListRow)); }],
+    // Icon 7
+    ['Icon', 'size-16', 'code', 'DEW.Icon', { size: 16 }, function () { return row([h(D.Icon, { key: 1, name: 'bookmark', size: 16 }), h(D.Icon, { key: 2, name: 'search', size: 16 })]); }],
+    ['Icon', 'size-20', 'code', 'DEW.Icon', { size: 20 }, function () { return row([h(D.Icon, { key: 1, name: 'bookmark', size: 20 }), h(D.Icon, { key: 2, name: 'search', size: 20 })]); }],
+    ['Icon', 'size-24', 'code', 'DEW.Icon', { size: 24 }, function () { return row([h(D.Icon, { key: 1, name: 'bookmark', size: 24 }), h(D.Icon, { key: 2, name: 'search', size: 24 })]); }],
+    ['Icon', 'decorative', 'code', 'DEW.Icon', { label: undefined }, function () { return h('span', { style: { display: 'inline-flex', gap: '8px', alignItems: 'center' } }, h(D.Icon, { name: 'arrow-up-right' }), '이야기 읽기'); }],
+    ['Icon', 'labeled', 'code', 'DEW.Icon', { label: '저장됨' }, function () { return h(D.Icon, { name: 'check', size: 24, label: '저장됨' }); }],
+    ['Icon', 'currentColor', 'code', 'DEW.Icon', { tone: 'inherits color' }, function () { return row([h('span', { key: 1, style: { color: 'var(--textPrimary)' } }, h(D.Icon, { name: 'info', size: 24 })), h('span', { key: 2, style: { color: 'var(--textSecondary)' } }, h(D.Icon, { name: 'info', size: 24 })), h('span', { key: 3, style: { color: 'var(--accent)' } }, h(D.Icon, { name: 'alert', size: 24 }))]); }],
+    ['Icon', 'unresolved', 'code', 'DEW.Icon', { name: 'not-a-real-icon' }, function () { return row([h(D.Icon, { key: 1, name: 'not-a-real-icon', size: 24 }), h('span', { key: 2, className: 'dew-meta' }, 'name="not-a-real-icon" → 점선 표시, 대체 아이콘 없음')]); }],
+    // Dialog 7
+    ['Dialog', 'size-sm', 'code', 'DEW.Dialog', { size: 'sm', inline: true }, function () { return frame(h(D.Dialog, { open: true, inline: true, size: 'sm', title: '저장했습니다', description: '보관함에서 다시 볼 수 있습니다.', onClose: noop, footer: h(D.Button, null, '확인') })); }, { wide: true }],
+    ['Dialog', 'size-md', 'code', 'DEW.Dialog', { size: 'md', inline: true }, function () { return frame(h(D.Dialog, { open: true, inline: true, size: 'md', eyebrow: 'LETTER', title: '독자 편지 보내기', onClose: noop, footer: K([h(D.Button, { variant: 'secondary' }, '취소'), h(D.Button, null, '보내기')]) }, h(D.TextField, { label: '이름' }))); }, { wide: true }],
+    ['Dialog', 'size-lg', 'code', 'DEW.Dialog', { size: 'lg', inline: true }, function () { return frame(h(D.Dialog, { open: true, inline: true, size: 'lg', eyebrow: 'IMAGE', title: '이미지 정보', onClose: noop, footer: h(D.Button, { variant: 'secondary' }, '닫기') }, h(D.MediaCard, { tone: 'mint', caption: '예시 미디어' }), h('p', null, '큰 대화상자는 미디어와 설명을 5 : 7로 나눕니다.'))); }, { wide: true }],
+    ['Dialog', 'no-description', 'code', 'DEW.Dialog', { description: undefined }, function () { return frame(h(D.Dialog, { open: true, inline: true, size: 'sm', title: '보관함 정리', onClose: noop, footer: h(D.Button, null, '확인') }, h(D.Checkbox, { label: '읽은 이야기 숨기기' }))); }, { wide: true }],
+    ['Dialog', 'long-content', 'code', 'DEW.Dialog', { maxHeight: 420 }, function () { var ps = []; for (var i = 1; i <= 8; i++) ps.push(h('p', { key: i }, i + '. 긴 본문 문단입니다. 대화상자 머리와 버튼은 고정되고 이 영역만 스크롤됩니다. Long content scrolls inside the body region.')); return frame(h(D.Dialog, { open: true, inline: true, size: 'md', maxHeight: 420, title: '이용 안내 (예시)', description: '본문 영역은 키보드로도 스크롤할 수 있습니다.', onClose: noop, footer: h(D.Button, null, '확인') }, ps)); }, { wide: true }],
+    ['Dialog', 'focus-close', 'code', 'DEW.Dialog', { closeState: 'focus' }, function () { return frame(h(D.Dialog, { open: true, inline: true, size: 'sm', title: '닫기 버튼 포커스', description: '닫기 버튼에 2px 외곽선이 보입니다.', closeState: 'focus', onClose: noop, footer: h(D.Button, null, '확인') })); }, { wide: true }],
+    ['Dialog', 'live', 'preview-only', 'DEW.Dialog (modal)', { open: 'state', onClose: 'fn' }, function () { return h(DialogLive); }],
+    // Menu 6
+    ['Menu', 'default', 'code', 'DEW.Menu', { label: '…', items: '[3]' }, function () { return h('div', { style: { minHeight: '220px' } }, h(D.Menu, { label: '정렬: 최신순', items: menuItems })); }],
+    ['Menu', 'highlighted', 'code', 'DEW.Menu', { 'items[].state': 'highlighted' }, function () { return h(D.Menu, { label: '정렬', defaultOpen: true, inline: true, items: [{ label: '최신순', selected: true }, { label: '읽기 시간 짧은 순', selected: false, state: 'highlighted' }] }); }],
+    ['Menu', 'disabled-item', 'code', 'DEW.Menu', { 'items[].disabled': true }, function () { return h(D.Menu, { label: '더 보기', defaultOpen: true, inline: true, items: [{ label: '인쇄용 보기', icon: 'download' }, { label: '편집부 추천', disabled: true, disabledReason: '다음 호부터 제공' }] }); }],
+    ['Menu', 'danger', 'code', 'DEW.Menu', { 'items[].danger': true }, function () { return h(D.Menu, { label: '더 보기', defaultOpen: true, inline: true, items: [{ label: '보관함에 저장', icon: 'bookmark' }, { separator: true }, { label: '보관함에서 삭제', icon: 'trash', danger: true }] }); }],
+    ['Menu', 'long-label', 'code', 'DEW.Menu', { 'items[].label': 'long' }, function () { return h(D.Menu, { label: '공유', defaultOpen: true, inline: true, items: [{ label: 'Share this story — 이 이야기의 링크를 복사해서 다른 사람에게 보내기', icon: 'arrow-up-right', description: '긴 항목은 줄바꿈됩니다.' }] }); }],
+    ['Menu', 'a', 'preview-only', 'DEW.Menu items[].href → <a role="menuitem">', { 'items[].href': '#…' }, function () { return h(D.Menu, { label: '이동', defaultOpen: true, inline: true, items: [{ label: '기본 메뉴 사례로 이동', href: '#case-menu-default', icon: 'arrow-right' }, { label: '위험 항목 사례로 이동', href: '#case-menu-danger', icon: 'arrow-right' }] }); }],
+    // Table 11
+    ['Table', 'default', 'code', 'DEW.Table', { columns: '[4]', rows: '[3]' }, function () { return h(D.Table, { caption: '저널 목록', columns: COLS, rows: ROWS }); }, { wide: true }],
+    ['Table', 'sorted-asc', 'code', 'DEW.Table', { sort: { key: 'title', direction: 'asc' }, onSort: 'fn' }, function () { return h(SortDemo, { init: { key: 'title', direction: 'asc' } }); }, { wide: true }],
+    ['Table', 'sorted-desc', 'code', 'DEW.Table', { sort: { key: 'issue', direction: 'desc' }, onSort: 'fn' }, function () { return h(SortDemo, { init: { key: 'issue', direction: 'desc' } }); }, { wide: true }],
+    ['Table', 'paginated', 'code', 'DEW.Table + pagination prop (DEW.Pagination)', { pagination: { page: 2, pageSize: 5 } }, function () { return h(PagedDemo); }, { wide: true }],
+    ['Table', 'loading', 'code', 'DEW.Table', { state: 'loading' }, function () { return h(D.Table, { caption: '저널 목록', columns: COLS, state: 'loading' }); }, { wide: true }],
+    ['Table', 'error', 'code', 'DEW.Table', { state: 'error', onRetry: 'fn' }, function () { return h(RetryTableDemo); }, { wide: true }],
+    ['Table', 'empty', 'code', 'DEW.Table', { state: 'empty', emptyAction: '…' }, function () { return h(D.Table, { caption: '저널 목록', columns: COLS, state: 'empty', emptyAction: h(D.Button, { variant: 'secondary', size: 'sm' }, '필터 초기화') }); }, { wide: true }],
+    ['Table', 'focus-sort', 'code', 'DEW.Table', { 'columns[].state': 'focus' }, function () { return h(D.Table, { caption: '정렬 버튼 포커스', columns: [{ key: 'title', label: '제목', sortable: true, state: 'focus' }].concat(COLS.slice(1)), rows: ROWS.slice(0, 2) }); }, { wide: true }],
+    ['Table', 'missing-long', 'code', 'DEW.Table', { rows: 'null values + long text' }, function () { return h(D.Table, { caption: '누락값과 긴 문구', columns: COLS, rows: [{ id: 1, title: 'A remarkably long English title about the quiet hours between two seasons — 두 계절 사이의 조용한 시간에 관한 아주 긴 제목', topic: 'CULTURE & OBJECTS', issue: null, time: '' }, { id: 2, title: '사물 사이의 여백', topic: null, issue: '예시 01', time: '5분' }] }); }, { wide: true }],
+    ['Table', 'narrow', 'code', 'DEW.Table', { minWidth: 560 }, function () { return h('div', { style: { maxWidth: '343px' } }, h(D.Table, { caption: '좁은 화면', columns: COLS, rows: ROWS, minWidth: 560 })); }],
+    ['Table', 'virtual', 'code', 'DEW.Table virtual prop (VirtualTable)', { virtual: { height: 336, rowHeight: 56 }, rows: 1000 }, function () { return h(D.Table, { caption: '전체 아카이브 1,000행', columns: COLS, rows: many(1000, '아카이브 항목 '), virtual: { height: 336, rowHeight: 56 } }); }, { wide: true }],
+    // Pagination 8
+    ['Pagination', 'first', 'code', 'DEW.Pagination', { page: 1, total: 12 }, function () { return h(D.Pagination, { page: 1, total: 12, onChange: noop }); }, { wide: true }],
+    ['Pagination', 'middle', 'code', 'DEW.Pagination', { page: 6, total: 12 }, function () { return h(D.Pagination, { page: 6, total: 12, onChange: noop }); }, { wide: true }],
+    ['Pagination', 'last', 'code', 'DEW.Pagination', { page: 12, total: 12 }, function () { return h(D.Pagination, { page: 12, total: 12, onChange: noop }); }, { wide: true }],
+    ['Pagination', 'single', 'code', 'DEW.Pagination', { page: 1, total: 1 }, function () { return h(D.Pagination, { page: 1, total: 1 }); }, { wide: true }],
+    ['Pagination', 'disabled', 'code', 'DEW.Pagination', { disabled: true }, function () { return h(D.Pagination, { page: 3, total: 12, disabled: true }); }, { wide: true }],
+    ['Pagination', 'hover', 'code', 'DEW.Pagination', { forceState: { page: 4, state: 'hover' } }, function () { return h(D.Pagination, { page: 3, total: 12, onChange: noop, forceState: { page: 4, state: 'hover' } }); }, { wide: true }],
+    ['Pagination', 'focus', 'code', 'DEW.Pagination', { forceState: { page: 4, state: 'focus' } }, function () { return h(D.Pagination, { page: 3, total: 12, onChange: noop, forceState: { page: 4, state: 'focus' } }); }, { wide: true }],
+    ['Pagination', 'live', 'preview-only', 'DEW.Pagination + aria-live status', { onChange: 'fn' }, function () { return h(PagerLive); }, { wide: true }],
+    // Toast 11
+    ['Toast', 'success', 'code', 'DEW.Toast', { tone: 'success' }, function () { return h(D.Toast, { tone: 'success', title: '보관함에 저장했습니다' }); }],
+    ['Toast', 'warning', 'code', 'DEW.Toast', { tone: 'warning' }, function () { return h(D.Toast, { tone: 'warning', title: '연결이 느립니다' }); }],
+    ['Toast', 'error', 'code', 'DEW.Toast', { tone: 'error' }, function () { return h(D.Toast, { tone: 'error', title: '저장하지 못했습니다' }); }],
+    ['Toast', 'info', 'code', 'DEW.Toast', { tone: 'info' }, function () { return h(D.Toast, { tone: 'info', title: '새 이야기가 올라왔습니다' }); }],
+    ['Toast', 'description', 'code', 'DEW.Toast', { message: '…' }, function () { return h(D.Toast, { tone: 'info', title: '새 이야기가 올라왔습니다', message: '목록을 새로 고치면 볼 수 있습니다.' }); }],
+    ['Toast', 'action', 'code', 'DEW.Toast', { action: { label: '되돌리기' } }, function () { return h(D.Toast, { tone: 'success', title: '보관함에 저장했습니다', action: { label: '되돌리기', onClick: noop } }); }],
+    ['Toast', 'long-text', 'code', 'DEW.Toast', { title: 'long' }, function () { return h(D.Toast, { tone: 'info', title: 'Your reading list has been synced across devices — 모든 기기에 읽기 목록이 동기화되었습니다', message: '긴 문구도 닫기 버튼과 겹치지 않습니다.', onClose: noop }); }],
+    ['Toast', 'focus-close', 'code', 'DEW.Toast', { onClose: 'fn', closeState: 'focus' }, function () { return h(ToastClosable, { closeState: 'focus' }); }],
+    ['Toast', 'stack-3', 'code', 'DEW.ToastRegion', { inline: true, max: 3, children: 4 }, function () { return h(D.ToastRegion, { inline: true, max: 3 }, h(D.Toast, { tone: 'info', title: '1번 알림 (숨김)' }), h(D.Toast, { tone: 'success', title: '저장했습니다' }), h(D.Toast, { tone: 'warning', title: '연결이 느립니다' }), h(D.Toast, { tone: 'error', title: '일부 이미지를 불러오지 못했습니다' })); }],
+    ['Toast', 'live', 'preview-only', 'DEW.ToastRegion + DEW.Toast (role status/alert)', { max: 3 }, function () { return h(ToastLive); }],
+    ['Toast', 'd-snackbar-default', 'design-only', 'none (visual sample)', {}, function () { return DSample('dew-dsample--snackbar', '스낵바: 저장했습니다 · 되돌리기', [h('span', { key: 1 }, '저장했습니다'), h('u', { key: 2 }, '되돌리기')]); }],
+    // AlertDialog 6
+    ['AlertDialog', 'default', 'code', 'DEW.AlertDialog', { tone: 'default' }, function () { return frame(h(D.AlertDialog, { open: true, inline: true, tone: 'default', title: '구독을 일시 중지할까요?', description: '다음 호부터 편지가 발송되지 않습니다.', confirmLabel: '일시 중지', onCancel: noop, onConfirm: noop })); }, { wide: true }],
+    ['AlertDialog', 'danger', 'code', 'DEW.AlertDialog', { tone: 'danger' }, function () { return frame(h(D.AlertDialog, { open: true, inline: true, title: '저장한 이야기를 삭제할까요?', description: '되돌릴 수 없습니다.', confirmLabel: '삭제', onCancel: noop, onConfirm: noop })); }, { wide: true }],
+    ['AlertDialog', 'pending', 'code', 'DEW.AlertDialog', { loading: true }, function () { return frame(h(D.AlertDialog, { open: true, inline: true, title: '삭제하는 중', description: '잠시만 기다려 주세요.', confirmLabel: '삭제', loading: true, loadingLabel: '삭제 중', onCancel: noop, onConfirm: noop })); }, { wide: true }],
+    ['AlertDialog', 'error', 'code', 'DEW.AlertDialog', { error: '…', onRetry: 'fn' }, function () { return frame(h(D.AlertDialog, { open: true, inline: true, title: '저장한 이야기를 삭제할까요?', description: '되돌릴 수 없습니다.', error: '연결이 끊겨 삭제하지 못했습니다.', errorTitle: '삭제하지 못했습니다', onCancel: noop, onRetry: noop })); }, { wide: true }],
+    ['AlertDialog', 'long-text', 'code', 'DEW.AlertDialog', { title: 'long', description: 'long' }, function () { return frame(h(D.AlertDialog, { open: true, inline: true, title: 'Remove all 24 saved stories from this device?', description: '이 기기에 저장된 모든 이야기와 읽은 위치가 함께 지워집니다. 다른 기기에는 영향을 주지 않습니다.', confirmLabel: '모두 삭제', cancelLabel: '그대로 두기', onCancel: noop, onConfirm: noop })); }, { wide: true }],
+    ['AlertDialog', 'live', 'preview-only', 'DEW.AlertDialog (modal, onConfirm → Promise)', { onConfirm: '() => Promise', onResolved: 'fn' }, function () { return h(AlertLive); }]
+  ];
+
+  var FAMILIES = ['Button', 'TextField', 'Textarea', 'Select', 'Checkbox', 'Switch', 'Badge', 'Card', 'Skeleton', 'Icon', 'Dialog', 'Menu', 'Table', 'Pagination', 'Toast', 'AlertDialog'];
+  var TYPE_LABEL = { code: 'code', composition: 'composition', native: 'native', 'preview-only': 'preview-only · 미리보기 시연', 'design-only': 'design-only · 시각 샘플, 런타임 미지원' };
+  function anchor(f, id) { return 'case-' + f.toLowerCase() + '-' + id.toLowerCase(); }
+  var META = C.map(function (c) { return { family: c[0], id: c[1], referenceType: c[2], export: c[3], props: c[4], anchor: anchor(c[0], c[1]), wide: !!(c[6] && c[6].wide) }; });
+
+  function Case(c) {
+    var design = c[2] === 'design-only';
+    return h('section', { id: anchor(c[0], c[1]), className: 'dew-cov__case' + (c[6] && c[6].wide ? ' is-wide' : ''), 'data-family': c[0], 'data-case': c[1], 'data-type': c[2], 'aria-labelledby': anchor(c[0], c[1]) + '-h' },
+      h('div', { className: 'dew-cov__head' },
+        h('h3', { className: 'dew-cov__id', id: anchor(c[0], c[1]) + '-h' }, c[0] + ' · ' + c[1]),
+        h('span', { className: 'dew-cov__type' + (design ? ' is-design' : '') }, TYPE_LABEL[c[2]])),
+      h('p', { className: 'dew-cov__note' }, c[3]),
+      h('div', { className: 'dew-cov__stage' }, c[5]()));
+  }
+  function Family(pp) {
+    var f = typeof pp === 'string' ? pp : pp.f;
+    var list = C.filter(function (c) { return c[0] === f; });
+    return h('div', { className: 'dew dew-pv' },
+      h('p', { className: 'dew-meta dew-eyebrow' }, 'IAK COVERAGE · ' + f.toUpperCase() + ' · ' + list.length + ' CASES'),
+      h('div', { className: 'dew-cov', style: { marginTop: '24px' } }, list.map(function (c) { return h(Case, { key: c[1], 0: c[0], 1: c[1], 2: c[2], 3: c[3], 4: c[4], 5: c[5], 6: c[6] }); })));
+  }
+  function Index() {
+    var counts = {}; META.forEach(function (m) { counts[m.referenceType] = (counts[m.referenceType] || 0) + 1; });
+    return h('div', { className: 'dew dew-pv' },
+      h('p', { className: 'dew-meta dew-eyebrow' }, 'IAK = COVERAGE ONLY · DEW = VISUAL AUTHORITY'),
+      h('h2', { className: 'dew-heading', style: { margin: '8px 0 8px' } }, 'Coverage 138'),
+      h('p', { className: 'dew-lead' }, META.length + '개 케이스 · ' + Object.keys(counts).map(function (k) { return k + ' ' + counts[k]; }).join(' · ') + '. 모든 케이스는 family별 Coverage 카드에서 실제로 렌더링됩니다. 신규 케이스는 derived-extension.'),
+      h('div', { className: 'dew-cov-index', style: { marginTop: '32px' } }, FAMILIES.map(function (f) {
+        var ms = META.filter(function (m) { return m.family === f; });
+        return h('div', { key: f, className: 'dew-cov-index__fam' }, h('p', { className: 'dew-cov__id' }, f + ' (' + ms.length + ')'),
+          h('div', { className: 'dew-cov-index__ids' }, ms.map(function (m) { return h(window.__COV_LINK ? 'a' : 'span', { key: m.id, href: window.__COV_LINK ? '#' + m.anchor : undefined, className: m.referenceType === 'design-only' ? 'dew-cov__type is-design' : null }, m.id); })));
+      })));
+  }
+  function All() { return h(F, null, h(Index), FAMILIES.map(function (f) { return h('div', { key: f, id: 'family-' + f.toLowerCase() }, h(Family, { f: f })); })); }
+  window.__COV = { META: META, FAMILIES: FAMILIES, anchor: anchor, render: function (el, what) {
+    var node = what === 'index' ? h(Index) : what === 'all' ? h(All) : h(function (pp) { return Family(pp.f); }, { f: what });
+    ReactDOM.createRoot(el).render(node);
+  } };
+})();
+
+  window.__COV.render(document.getElementById('root'), 'Button');
+</script>
+</body>
+</html>

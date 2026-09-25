@@ -180,14 +180,33 @@ IAK 목록을 커버리지 기준으로 삼아 DEW 스타일로 새로 만든 fa
 
 상태 패널은 새 컴포넌트가 아니라 `Card(outlined)` + `Icon` + `heading` + `Button`/`EditorialCTA` 조합이다.
 
-## 검증 결과 (2026-09-25, 현재 버전)
+## v1.3 — IAK 138 케이스 대조 (derived-extension)
 
-- **라이브 카드:** 템플릿 17장(기본 3 + 상태 14) × 1440 / 834 / 390 / 375 = 68회, 컴포넌트 27장(editorial 11 + 공통 16) × 900 / 375 = 54회, 표지 1회 — 총 123회 렌더링. 가로 넘침 0, 스크립트 오류 0, `accent` 색 글자 0.
-- **정적 preview/:** HTML 18개 × 4폭 = 72회, 가로 넘침·오류·빨간 글자 0.
-- **대비(WCAG 2.1):** 글자 — `textPrimary` on canvas 17.05 / surface 18.88 / support 12.97 / border 12.56; `canvas` on `textPrimary` 17.05 (primary 버튼), on `textSecondary` 4.84 (pressed); `textSecondary` on canvas 4.84 / surface 5.36. 비텍스트 — `accent` 표시 canvas 4.19 / surface 4.64, 입력 경계 `textSecondary` 5.36, 포커스 외곽선 17.05. Disabled 상태(`textSecondary` on `border` 3.57)는 WCAG 예외.
-- 표의 좁은 화면(343px)은 가로 스크롤 영역으로 동작하며 페이지 전체는 넘치지 않는다.
-- 렌더링 환경에 Noto 서체가 없어 Georgia / Arial 대체 서체로 확인했다.
+IAK 16 family의 정확한 138개 케이스를 `family / id` 그대로 안정 ID로 쓰고, 모두 DEW 스타일로 렌더링한다. 목록은 **Coverage 138** 그룹의 `Coverage138`(색인)과 family별 카드 16장(`CoverageButton` … `CoverageAlertDialog`)에 있으며, 각 케이스의 앵커는 `case-<family>-<id>`다. 기계 판독용 목록은 다운로드의 `preview/case-coverage.json`(138행).
 
+| referenceType | 수 | 의미 |
+|---|---|---|
+| code | 114 | 공개 컴포넌트와 props로 직접 구현 |
+| composition | 8 | 둘 이상의 DEW 컴포넌트 조합(Button+Icon, fieldset+Checkbox, Card+Skeleton 등) |
+| native | 4 | DEW 컴포넌트가 네이티브 속성으로 처리(readOnly, type="email", rows="2", placeholder option) |
+| preview-only | 5 | 미리보기에서만 시연하는 동작 흐름(Dialog·AlertDialog·Pagination·Toast live, Menu 링크 항목) — 쓰인 컴포넌트는 실제 코드 |
+| design-only | 7 | `d-*` 시각 샘플. 컴포넌트 API가 아니며 런타임에서 지원하지 않는다 |
+
+이번에 코드로 보강한 것:
+
+- **Table** — `pagination` prop(내장 Pagination, "전체 N건 중 a–b" aria-live). `virtual` prop: 행 높이 고정 가상 스크롤(1,000행 중 화면 근처 행만 렌더), `role="grid"` + `aria-activedescendant`로 ↑ ↓ PageUp PageDown Home End 이동, "전체 목록 한 페이지로 보기" 대안. 가상 행은 높이가 고정이라 긴 셀은 한 줄로 줄이고 `title`과 전체 페이지 보기로 전문을 제공한다. 정렬 버튼 `state: 'focus'`.
+- **Toast** — `ToastRegion max`(최신 N개만 표시 + "이전 알림 n개 숨김"), 닫기 버튼 `closeState`, `aria-atomic`.
+- **AlertDialog** — `onConfirm`이 Promise를 반환하면 pending(aria-busy) → 실패 시 오류 상자 + "다시 시도" → 성공 시 `onResolved`까지 내부에서 처리한다.
+- **Dialog** — Tab 초점 가두기, 닫힐 때 원래 요소로 초점 복귀, `maxHeight`(본문만 스크롤, 키보드로 스크롤 가능한 영역), 설명 없는 대화상자는 `aria-describedby` 생략, 닫기 버튼 `closeState`.
+- **Menu** — 키보드로 열면 첫 항목에 포커스, Home/End, Esc 시 트리거로 복귀, 바깥 클릭으로 닫기, `items[].href` 링크 항목, `state: 'highlighted'`.
+- **Icon** — 알 수 없는 이름은 대체 아이콘을 그리지 않고 점선 사각 + `data-unresolved`로 **미해결을 명시**한다.
+- **Badge** — `count`(99+ 상한, 스크린리더 문장), `tone: 'error'`(danger와 같은 표현). **Skeleton** — `circle`(원형 미디어 자리 전용 모양, 이 경우만 원형), `block` 크기 지정. **Pagination** — `forceState`.
+- 새 토큰은 없다. 팔레트·타입·spacing·radius·grid와 editorial 11개·템플릿 3개는 그대로다.
+
+## 검증 결과 (v1.3)
+
+- **138 케이스 자동 검사:** 138 / 138 통과. 케이스마다 렌더링 크기, 공개 export 존재(design-only는 포커스 요소 0개인 시각 샘플인지), Tab 도달과 외곽선, 375px·1440px 넘침 없음을 확인했다. 59개 케이스는 동작까지 검사했다 — Dialog Tab 순환·Esc·초점 복귀, Menu 키보드 열기·이동·Esc, Table 정렬(Enter)·페이지 이동·재시도, 가상 스크롤 End → 1,000번째 행·Home·전체 페이지 전환, Toast 4개 중 3개 유지, AlertDialog pending → 오류 → 다시 시도 → 완료·초점 복귀, Switch·Checkbox Space 등. 행별 결과는 `case-coverage.json`의 `verification`에 있다.
+- **라이브 카드:** 템플릿 17장 × 1440/834/390/375, 컴포넌트 27장 × 900/375, Coverage 카드 17장 × 1440/375, 표지 — 가로 넘침·스크립트 오류·빨간 글자 0.
 
 ## Do
 
@@ -205,6 +224,6 @@ IAK 목록을 커버리지 기준으로 삼아 DEW 스타일로 새로 만든 fa
 - `accent` 글자(eyebrow·링크·본문 포함) — 빨강은 선과 장식에만.
 - KPI 패널, 통계 카드, 반복적인 대칭 SaaS 그리드.
 - 원본 로고·고유 카피·사진·실제 수치나 고객 데이터 재사용.
-- 새 색·타입·간격 값 추가(예외: 파생 `scrim` 1개), 다크 모드.
+- 새 색·타입·간격 값 추가(예외: 파생 `scrim` 1개), 다크 모드. v1.3도 새 토큰 없음.
 - IAK의 다크 테마·오렌지·Pretendard·둥근 SaaS 카드 스타일.
 - DB, Router, 인증, 결제, API — 기본 산출물은 정적 HTML/CSS다.

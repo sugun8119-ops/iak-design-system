@@ -70,3 +70,7 @@ IAK Design Studio는 **어떤 항목과 상태가 있어야 하는지**만 정�
 ## 가져오지 않은 IAK 요소
 
 다크 테마, 오렌지 계열, Pretendard, 둥근 SaaS 카드·그림자, IAK 기능 앱 화면 구성.
+
+## v1.3 — IAK 138 케이스
+
+정확한 138개 케이스(Button 19 · TextField 13 · Textarea 9 · Select 8 · Checkbox 7 · Switch 6 · Badge 10 · Card 6 · Skeleton 4 · Icon 7 · Dialog 7 · Menu 6 · Table 11 · Pagination 8 · Toast 11 · AlertDialog 6)를 모두 구현했다. referenceType: code 114 · composition 8 · native 4 · preview-only 5 · design-only 7. 신규 케이스는 모두 derived-extension이다. `d-*` 7개는 시각 샘플로만 있고 런타임 API가 아니다. 행별 export·props·예시 경로·앵커·검증 결과는 `preview/case-coverage.json`, 렌더링은 Coverage 138 카드와 `preview/coverage-138.html`에 있다.

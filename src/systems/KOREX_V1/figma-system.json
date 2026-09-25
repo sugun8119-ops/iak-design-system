@@ -1,7 +1,7 @@
 {
   "id": "KOREX_V1",
   "name": "KOREX Brand Web System",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "category": "Corporate / Brand / Product Web",
   "foundation": {
     "colors": {
@@ -734,15 +734,9 @@
     ]
   },
   "authority": {
-    "visual": "KOREX_V1 — foundation, component styling and templates in this file are the only visual source.",
-    "coverage": "IAK Design Studio 16 common families — used only as a checklist of items and states; no IAK visuals.",
-    "excluded": [
-      "IAK dark theme",
-      "orange accent",
-      "Pretendard",
-      "IAK logo",
-      "SaaS / dashboard skin"
-    ]
+    "coverage": "IAK Design Studio case inventory only",
+    "visual": "KOREX_V1 approved normalized v1.0 foundation",
+    "fontFallback": "Preserve appearance, weight and metrics; use a similar available font only when missing. Record substitutions."
   },
   "derivedTokens": [
     {
@@ -791,33 +785,21 @@
     ],
     "note": "Template states rendered and checked for horizontal overflow, single h1, 44px targets and console errors."
   },
-  "coverage": "coverage.md",
+  "coverage": "preview/coverage.md",
   "source": {
     "path": "preview/source/",
-    "note": "Public self-authored source copied from the live design-system artifact: components/bundle.js, bundle.css, index.d.ts, per-component preview.html and README.md, tokens.json, README.md, coverage.md, templates.js. No external uploads or secrets."
+    "note": "Public self-authored source copied from the live design-system artifact: components/bundle.js, bundle.css, index.d.ts, per-component preview.html and README.md, tokens.json, README.md, coverage.md, templates.js, coverage-cases.js (138-case spec + gallery). React is not included. No external uploads or secrets."
   },
-  "upstreamClaudeVersion": "1.1.1",
-  "normalization": {
-    "coverageAuthority": "IAK 16 common families; applicable cases translated to project vocabulary",
-    "visualAuthority": "KOREX_V1",
-    "sharedVisualTheme": false,
-    "preserveFoundation": true,
-    "referenceCaseCount": 138,
-    "referenceCasesAreNotNativeVariantCount": true
-  },
-  "handoff": {
-    "claudeDesign": "https://claude.ai/artifact/23zNuD35PBpF9wPangTXsz?org=fa3d9581-54d4-4425-bae4-42d8076030e7",
-    "figma": "https://www.figma.com/design/MR9qvFSq9w5HAD2wnQObdn",
-    "github": "https://github.com/sugun8119-ops/iak-design-system/tree/main/src/systems/KOREX_V1",
-    "coverage": "preview/coverage.md",
-    "nativeMapping": "preview/handoff/figma-components.json",
-    "source": "preview/source/",
-    "nativeCommonVariants": 175,
-    "nativeOriginalFamilies": 11,
-    "commonFamilies": 16,
-    "nativeTemplates": 3,
-    "figmaPrototypeInteractions": false,
-    "codeConnectPublished": false,
-    "teamLibraryPublished": false
+  "caseCoverage": {
+    "count": 138,
+    "manifest": "preview/case-coverage.json",
+    "figmaCaseCount": 138,
+    "referenceTypes": {
+      "code": 114,
+      "composition": 8,
+      "native": 4,
+      "preview-only": 5,
+      "design-only": 7
+    }
   }
 }

@@ -6,3 +6,4 @@
 - 카운터는 label 줄 오른쪽 `12/18` `textSecondary`, `aria-live="polite"`.
 - 상태 표현은 TextField와 동일(error = 잉크 2px + 아이콘 + “오류” 문장).
 - **제공할 것**: `label`, `value`/`defaultValue`, `onChange`, `rows`, `maxLength`, `description`, `error`, `required`, `readOnly`, `disabled`.
+- **v1.3 (derived-extension)**: `state="hover"`, `rows`를 주면 최소 높이 120을 풀어 네이티브 행 수를 따른다(rows-2).

@@ -1,0 +1,361 @@
+<!-- @dsCard group="Coverage" height=3380 subtitle="TextField — 13 cases" -->
+<!doctype html>
+<html lang="ko">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Coverage · TextField · KOREX_V1</title>
+<style>body{margin:0;background:var(--canvas);font-family:var(--font-sans);color:var(--textPrimary)}</style>
+</head>
+<body>
+<div id="root"></div>
+<script>
+/* KOREX_V1 v1.3 — IAK 138-case coverage spec + gallery.
+   IAK defines only the case list; every render below uses KOREX components, tokens and style.
+   referenceType: code · composition · native · preview-only · design-only (visual sample, NOT a runtime API). */
+(function () {
+  var K = window.KOREX, React = window.React, h = React.createElement, F = React.Fragment;
+  var OBSERVED = { 'Button.primary': 1, 'Button.secondary': 1, 'Button.text': 1, 'Button.size-md': 1, 'Button.default': 1, 'Button.hover-primary': 1, 'Button.focus': 1,
+    'TextField.default': 1, 'TextField.filled': 1, 'TextField.focus': 1, 'Select.default': 1, 'Select.focus': 1, 'Table.default': 1, 'Card.full': 1 };
+  var OPTS = [{ value: 'seating', label: '체어' }, { value: 'tables', label: '테이블' }, { value: 'lighting', label: '조명' }];
+  var COLS = [{ key: 'name', label: '제품명', sortable: true }, { key: 'cat', label: '분류', sortable: true }, { key: 'mat', label: '소재' }, { key: 'w', label: '폭(mm)', sortable: true, align: 'end' }];
+  var ROWS = [
+    { name: '모듈 체어', cat: 'SEATING', mat: '우드', w: 620 }, { name: '라운드 테이블', cat: 'TABLES', mat: '스톤', w: 1800 },
+    { name: '소프트 램프', cat: 'LIGHTING', mat: '패브릭', w: 420 }, { name: '사이드 테이블', cat: 'TABLES', mat: '우드', w: 480 }, { name: 'Lounge Chair', cat: 'SEATING', mat: 'Fabric', w: 780 }
+  ];
+  function many(n) {
+    var cats = ['SEATING', 'TABLES', 'LIGHTING', 'STORAGE'], mats = ['우드', '스톤', '패브릭', '스틸'], out = [];
+    for (var i = 1; i <= n; i++) out.push({ name: '예시 품목 ' + ('00' + i).slice(-3), cat: cats[i % 4], mat: mats[(i * 7) % 4], w: 300 + (i * 37) % 1500 });
+    return out;
+  }
+  var ROWS23 = many(23), ROWS500 = many(500);
+  function frame(hgt, child) { return h('div', { className: 'cv-frame', style: { '--h': hgt + 'px' } }, child); }
+  function sample(cls, inner, note) {
+    return h('div', { className: 'cv-dsample' }, h('div', { className: 'cv-dsample-art ' + cls, 'aria-hidden': 'true' }, inner),
+      h('p', { className: 'cv-dsample-note' }, note || '시각 샘플(design-only) — 런타임 컴포넌트·prop 아님'));
+  }
+  function noop() {}
+
+  /* ---------- live (preview-only) demos ---------- */
+  function LiveDialog() {
+    var s = React.useState(false);
+    return h('div', { className: 'cv-row' }, h(K.Button, { variant: 'secondary', onClick: function () { s[1](true); }, className: 'cv-open-dialog' }, '대화상자 열기'),
+      h(K.Dialog, { open: s[0], size: 'sm', title: '라이브 대화상자', description: 'Tab은 안에서 순환하고 Esc로 닫힙니다.', onClose: function () { s[1](false); },
+        footer: [h(K.Button, { key: 'a', variant: 'secondary', onClick: function () { s[1](false); } }, '닫기'), h(K.Button, { key: 'b', onClick: function () { s[1](false); } }, '확인')] }));
+  }
+  function FocusCloseDialog() {
+    var s = React.useState(false);
+    return h(F, null,
+      frame(220, h(K.Dialog, { open: true, contained: true, size: 'sm', title: '닫기 버튼 포커스', description: '닫기 버튼이 포커스된 상태(closeState).', closeState: 'focus', onClose: noop })),
+      h('div', { className: 'cv-row', style: { marginTop: 8 } }, h(K.Button, { size: 'sm', variant: 'secondary', onClick: function () { s[1](true); }, className: 'cv-open-focusclose' }, '열기 — 닫기 버튼에 초기 포커스'),
+        h(K.Dialog, { open: s[0], size: 'sm', title: '초기 포커스 = 닫기', initialFocus: 'close', onClose: function () { s[1](false); } }, h('p', null, '열리면 포커스가 닫기 버튼으로 갑니다.'))));
+  }
+  function LiveMenu() {
+    var s = React.useState('없음');
+    return h('div', { className: 'cv-row' },
+      h(K.Menu, { label: '바로가기', onSelect: function (v) { s[1](v); }, items: [
+        { label: 'Button 사례로 이동', value: 'btn', href: '#c-button-primary' }, { label: 'Table 사례로 이동', value: 'tbl', href: '#c-table-default' },
+        { divider: true }, { label: '선택만 기록', value: '기록', icon: 'check' }, { label: '비활성 링크', value: 'x', href: '#', disabled: true, disabledReason: '예시' }] }),
+      h('span', { className: 'cv-status', role: 'status' }, '마지막 선택: ' + s[0]));
+  }
+  function LivePager() {
+    var s = React.useState(3);
+    return h('div', null, h(K.Pagination, { total: 9, page: s[0], onChange: s[1], label: '라이브 페이지' }), h('p', { className: 'cv-status', role: 'status' }, '현재 ' + s[0] + '페이지'));
+  }
+  var seq = 0;
+  function LiveToast() {
+    var s = React.useState([]);
+    var tones = ['success', 'info', 'warning', 'error'];
+    function push() { seq++; var t = tones[(seq - 1) % 4]; s[1](s[0].concat([{ id: 'lt' + seq, tone: t, title: '알림 ' + seq + ' (' + t + ')', description: '라이브 영역에 추가됨' }])); }
+    return h('div', null, h('div', { className: 'cv-row' }, h(K.Button, { size: 'sm', onClick: push, className: 'cv-push-toast' }, '알림 추가'),
+      h(K.Button, { size: 'sm', variant: 'secondary', onClick: function () { s[1]([]); } }, '모두 지우기')),
+      h('div', { style: { marginTop: 8 } }, h(K.ToastStack, { inline: true, toasts: s[0], max: 3, onDismiss: function (id) { s[1](s[0].filter(function (t) { return t.id !== id; })); }, label: '라이브 알림' })));
+  }
+  function LiveAlert() {
+    var o = React.useState(false), done = React.useState(''), tries = React.useRef(0);
+    return h('div', null, h('div', { className: 'cv-row' }, h(K.Button, { variant: 'danger', icon: 'trash', onClick: function () { tries.current = 0; o[1](true); }, className: 'cv-open-alert' }, '비교 목록 비우기'),
+      h('span', { className: 'cv-status', role: 'status' }, done[0])),
+      h(K.AlertDialog, { open: o[0], title: '비교 목록을 비울까요?', description: '예시 동작: 첫 시도는 실패하고 다시 시도하면 성공합니다(네트워크 없음).', confirmLabel: '목록 비우기',
+        onCancel: function () { o[1](false); },
+        onConfirm: function () { tries.current++; var fail = tries.current === 1; return new Promise(function (res, rej) { setTimeout(function () { fail ? rej(new Error('예시 오류 — 목록을 비우지 못했습니다.')) : res(); }, 600); }); },
+        onResolved: function () { o[1](false); done[1]('완료: 목록을 비웠습니다(예시).'); } }));
+  }
+  function PendingAlert() {
+    return frame(300, h(K.AlertDialog, { open: true, contained: true, title: '비교 목록을 비울까요?', description: '처리 중에는 취소할 수 없습니다.', confirmLabel: '목록 비우기', onCancel: noop,
+      onConfirm: function () { return new Promise(function () {}); }, loading: true, loadingLabel: '비우는 중…' }));
+  }
+
+  /* ---------- the 138 cases ---------- */
+  var C = [];
+  function c(family, id, ref, exp, props, verify, render) { C.push({ family: family, id: id, referenceType: ref, export: exp, props: props, verify: verify, render: render }); }
+
+  /* Button 19 */
+  c('Button', 'primary', 'code', 'Button', "variant='primary'", 'renders; class kx-btn-primary', function () { return h(K.Button, { variant: 'primary' }, '저장 Save'); });
+  c('Button', 'secondary', 'code', 'Button', "variant='secondary'", 'renders; class kx-btn-secondary', function () { return h(K.Button, { variant: 'secondary' }, '취소'); });
+  c('Button', 'danger', 'code', 'Button', "variant='danger' icon='trash'", 'renders; class kx-btn-danger', function () { return h(K.Button, { variant: 'danger', icon: 'trash' }, '삭제'); });
+  c('Button', 'text', 'code', 'Button', "variant='text'", "renders; 'text' maps to text/ghost style", function () { return h(K.Button, { variant: 'text' }, '자세히 보기'); });
+  c('Button', 'size-sm', 'code', 'Button', "size='sm'", 'height 36, hit area 44', function () { return h(K.Button, { size: 'sm' }, '작게'); });
+  c('Button', 'size-md', 'code', 'Button', "size='md'", 'height 44', function () { return h(K.Button, { size: 'md' }, '보통'); });
+  c('Button', 'size-lg', 'code', 'Button', "size='lg'", 'height 56', function () { return h(K.Button, { size: 'lg' }, '크게'); });
+  c('Button', 'default', 'code', 'Button', '(no state)', 'renders without forced state', function () { return h(K.Button, null, '기본'); });
+  c('Button', 'hover-primary', 'code', 'Button', "variant='primary' state='hover'", 'class is-hover', function () { return h(K.Button, { state: 'hover' }, '호버'); });
+  c('Button', 'pressed-primary', 'code', 'Button', "variant='primary' state='pressed'", 'class is-pressed', function () { return h(K.Button, { state: 'pressed' }, '눌림'); });
+  c('Button', 'focus', 'code', 'Button', "state='focus'", 'class is-focus (2px outline)', function () { return h(K.Button, { state: 'focus' }, '포커스'); });
+  c('Button', 'disabled', 'code', 'Button', 'disabled', 'button[disabled]', function () { return h(K.Button, { disabled: true }, '비활성'); });
+  c('Button', 'loading', 'code', 'Button', "loading loadingLabel='저장 중…'", 'aria-busy=true, disabled', function () { return h(K.Button, { loading: true, loadingLabel: '저장 중…' }, '저장'); });
+  c('Button', 'with-icon', 'composition', 'Button + Icon', "icon='search' / iconEnd='arrow-up-right'", 'svg icon inside button', function () { return h('div', { className: 'cv-row' }, h(K.Button, { variant: 'secondary', icon: 'search' }, '찾기'), h(K.Button, { iconEnd: 'arrow-up-right' }, '컬렉션')); });
+  c('Button', 'icon-only', 'composition', 'Button + Icon', "iconOnly icon='more' label='더 보기'", 'accessible name from label', function () { return h(K.Button, { variant: 'secondary', iconOnly: true, icon: 'more', label: '더 보기' }); });
+  c('Button', 'long-label', 'code', 'Button', 'block, long children', 'label wraps inside 240px', function () { return h('div', { style: { maxWidth: 240 } }, h(K.Button, { block: true }, '변경 사항을 저장하고 다음 단계로 이동 — Save changes and continue')); });
+  c('Button', 'd-outlined', 'design-only', '(visual sample)', 'none — no runtime variant', 'visual sample only', function () { return sample('cv-d-btn cv-d-btn-outlined', '윤곽 버튼'); });
+  c('Button', 'd-outlined-primary', 'design-only', '(visual sample)', 'none — no runtime variant', 'visual sample only', function () { return sample('cv-d-btn cv-d-btn-outlined-primary', '브랜드 윤곽 버튼'); });
+  c('Button', 'd-soft', 'design-only', '(visual sample)', 'none — no runtime variant', 'visual sample only', function () { return sample('cv-d-btn cv-d-btn-soft', '소프트 버튼'); });
+
+  /* TextField 13 */
+  c('TextField', 'default', 'code', 'TextField', "label placeholder", 'label[for] → input', function () { return h(K.TextField, { label: '제품명', placeholder: '예: 모듈 체어' }); });
+  c('TextField', 'filled', 'code', 'TextField', "defaultValue", 'input has value', function () { return h(K.TextField, { label: '제품명', defaultValue: '라운드 테이블' }); });
+  c('TextField', 'hover', 'code', 'TextField', "state='hover'", 'class is-hover', function () { return h(K.TextField, { label: '제품명', state: 'hover', placeholder: '호버' }); });
+  c('TextField', 'focus', 'code', 'TextField', "state='focus'", 'class is-focus', function () { return h(K.TextField, { label: '제품명', state: 'focus', defaultValue: '포커스' }); });
+  c('TextField', 'error', 'code', 'TextField', "error='…'", 'aria-invalid + describedby → message', function () { return h(K.TextField, { label: '이메일', type: 'email', defaultValue: 'name@', error: '이메일 형식이 올바르지 않습니다.' }); });
+  c('TextField', 'disabled', 'code', 'TextField', 'disabled', 'input[disabled]', function () { return h(K.TextField, { label: '제품명', disabled: true, defaultValue: '편집 불가' }); });
+  c('TextField', 'description', 'code', 'TextField', "description='…'", 'aria-describedby → description', function () { return h(K.TextField, { label: '제품명', description: '목록과 상세에 노출됩니다.' }); });
+  c('TextField', 'required', 'code', 'TextField', 'required', 'required attr + “필수” text', function () { return h(K.TextField, { label: '담당자 이름', required: true }); });
+  c('TextField', 'readonly', 'native', 'TextField', 'readOnly (native readonly)', 'input[readonly] + “읽기 전용” text', function () { return h(K.TextField, { label: '등록 번호', readOnly: true, defaultValue: 'SAMPLE-0003' }); });
+  c('TextField', 'long-label', 'code', 'TextField', 'long label', 'label wraps', function () { return h(K.TextField, { label: '제품 상세 페이지 하단에 노출할 보조 설명 문구 (Secondary description shown under the detail)' }); });
+  c('TextField', 'long-value', 'code', 'TextField', 'long defaultValue', 'value scrolls inside input', function () { return h(K.TextField, { label: '설치 주소', defaultValue: '예시시 예시구 예시로 123, 예시빌딩 12층 1203-B호 (Sample Tower, Suite 1203-B, 12F)' }); });
+  c('TextField', 'type-email', 'native', 'TextField', "type='email' inputMode='email'", 'input[type=email]', function () { return h(K.TextField, { label: 'Email', type: 'email', inputMode: 'email', placeholder: 'name@example.com' }); });
+  c('TextField', 'd-floating', 'design-only', '(visual sample)', 'none — floating label is not a runtime option', 'visual sample only', function () { return sample('cv-d-float', h(F, null, h('span', { className: 'cv-d-float-label' }, '제품명'), h('span', { className: 'cv-d-float-value' }, '라운드 테이블'))); });
+
+  /* Textarea 9 */
+  c('Textarea', 'default', 'code', 'Textarea', 'label placeholder', 'label[for] → textarea', function () { return h(K.Textarea, { label: '문의 내용', placeholder: '필요한 제품과 공간을 알려주세요.' }); });
+  c('Textarea', 'filled', 'code', 'Textarea', 'defaultValue maxLength', 'value + counter', function () { return h(K.Textarea, { label: '문의 내용', maxLength: 200, defaultValue: '라운드 테이블 확장형 문의입니다.' }); });
+  c('Textarea', 'hover', 'code', 'Textarea', "state='hover'", 'class is-hover', function () { return h(K.Textarea, { label: '메모', state: 'hover', rows: 3 }); });
+  c('Textarea', 'focus', 'code', 'Textarea', "state='focus'", 'class is-focus', function () { return h(K.Textarea, { label: '메모', state: 'focus', rows: 3 }); });
+  c('Textarea', 'error', 'code', 'Textarea', "required error='…'", 'aria-invalid + message', function () { return h(K.Textarea, { label: '문의 내용', required: true, rows: 3, defaultValue: '짧음', error: '10자 이상 입력해 주세요.' }); });
+  c('Textarea', 'disabled', 'code', 'Textarea', 'disabled', 'textarea[disabled]', function () { return h(K.Textarea, { label: '문의 내용', disabled: true, rows: 3, defaultValue: '접수 마감' }); });
+  c('Textarea', 'rows-2', 'native', 'Textarea', 'rows={2} (native rows, min-height released)', 'textarea rows=2', function () { return h(K.Textarea, { label: '한 줄 요약', rows: 2 }); });
+  c('Textarea', 'long-text', 'code', 'Textarea', 'long defaultValue', 'wraps, resizable', function () { return h(K.Textarea, { label: 'Notes / 메모', rows: 4, defaultValue: '라운드 테이블은 1800mm 확장형을 원합니다. Please confirm whether the stone top can be matte-finished and delivered with the extension leaf packed separately. 설치 공간 폭은 약 3200mm입니다.' }); });
+  c('Textarea', 'description', 'code', 'Textarea', "description='…'", 'aria-describedby → description', function () { return h(K.Textarea, { label: '설치 요청', rows: 3, description: '방문 가능 시간과 출입 조건을 적어주세요.' }); });
+
+  /* Select 8 */
+  c('Select', 'default', 'code', 'Select', 'options defaultValue', 'native select', function () { return h(K.Select, { label: '제품 종류', defaultValue: 'tables', options: OPTS }); });
+  c('Select', 'hover', 'code', 'Select', "state='hover'", 'class is-hover', function () { return h(K.Select, { label: '제품 종류', state: 'hover', defaultValue: 'seating', options: OPTS }); });
+  c('Select', 'focus', 'code', 'Select', "state='focus'", 'class is-focus', function () { return h(K.Select, { label: '제품 종류', state: 'focus', defaultValue: 'seating', options: OPTS }); });
+  c('Select', 'error', 'code', 'Select', "required error='…'", 'aria-invalid + message', function () { return h(K.Select, { label: '설치 지역', required: true, placeholder: '선택하세요', error: '설치 지역을 선택해 주세요.', options: [{ value: 'a', label: '지역 A' }] }); });
+  c('Select', 'disabled', 'code', 'Select', 'disabled', 'select[disabled]', function () { return h(K.Select, { label: '분류', disabled: true, defaultValue: 'seating', options: OPTS }); });
+  c('Select', 'description', 'code', 'Select', "description='…'", 'aria-describedby → description', function () { return h(K.Select, { label: '정렬', description: '목록 순서를 바꿉니다.', defaultValue: 'seating', options: OPTS }); });
+  c('Select', 'long-option', 'code', 'Select', 'long option label', 'selected text truncated, full text in option', function () { return h(K.Select, { label: 'Collection', defaultValue: 'l', options: [{ value: 'l', label: '확장형 라운드 다이닝 테이블 컬렉션 — Extended Round Dining Table Collection 1800' }, { value: 's', label: 'Short' }] }); });
+  c('Select', 'placeholder-option', 'native', 'Select', "placeholder='선택하세요' (native disabled first option)", 'first option disabled, value ""', function () { return h(K.Select, { label: '소재', placeholder: '선택하세요', options: [{ value: 'wood', label: '우드' }, { value: 'stone', label: '스톤' }] }); });
+
+  /* Checkbox 7 */
+  c('Checkbox', 'unchecked', 'code', 'Checkbox', 'label', 'input unchecked', function () { return h(K.Checkbox, { label: '우드 소재만 보기' }); });
+  c('Checkbox', 'checked', 'code', 'Checkbox', 'defaultChecked', 'input checked', function () { return h(K.Checkbox, { label: '우드 소재만 보기', defaultChecked: true }); });
+  c('Checkbox', 'focus', 'code', 'Checkbox', "state='focus'", 'class is-focus', function () { return h(K.Checkbox, { label: '신제품 알림', state: 'focus' }); });
+  c('Checkbox', 'disabled', 'code', 'Checkbox', 'disabled', 'input[disabled]', function () { return h(K.Checkbox, { label: '품절 포함', disabled: true }); });
+  c('Checkbox', 'disabled-checked', 'code', 'Checkbox', 'disabled defaultChecked', 'disabled + checked', function () { return h(K.Checkbox, { label: '기본 옵션(고정)', disabled: true, defaultChecked: true }); });
+  c('Checkbox', 'long-label', 'code', 'Checkbox', 'long label', 'label wraps', function () { return h(K.Checkbox, { label: 'Include discontinued samples / 단종된 예시 제품도 목록에 포함하고 상세 화면에서 “판매 종료”로 표시' }); });
+  c('Checkbox', 'group', 'composition', 'fieldset.kx-fieldset + Checkbox ×3', 'legend + description + Checkbox', 'fieldset/legend groups 3 checkboxes', function () {
+    return h('fieldset', { className: 'kx kx-fieldset' }, h('legend', null, '소재'), h('p', { className: 'kx-help' }, '여러 개 선택할 수 있습니다.'),
+      h(K.Checkbox, { label: '우드', defaultChecked: true }), h(K.Checkbox, { label: '스톤' }), h(K.Checkbox, { label: '패브릭' }));
+  });
+
+  /* Switch 6 */
+  c('Switch', 'off', 'code', 'Switch', 'label', 'aria-checked=false', function () { return h(K.Switch, { label: '재고 있는 제품만' }); });
+  c('Switch', 'on', 'code', 'Switch', 'defaultChecked', 'aria-checked=true', function () { return h(K.Switch, { label: '재고 있는 제품만', defaultChecked: true }); });
+  c('Switch', 'focus', 'code', 'Switch', "state='focus'", 'class is-focus', function () { return h(K.Switch, { label: '알림', state: 'focus' }); });
+  c('Switch', 'disabled-off', 'code', 'Switch', 'disabled', 'button[disabled], off', function () { return h(K.Switch, { label: '자동 새로고침', disabled: true }); });
+  c('Switch', 'disabled-on', 'code', 'Switch', 'disabled defaultChecked', 'button[disabled], on', function () { return h(K.Switch, { label: '기본 노출(고정)', disabled: true, defaultChecked: true }); });
+  c('Switch', 'long-label', 'code', 'Switch', 'long label + description', 'label wraps', function () { return h(K.Switch, { label: 'Show dimensions in millimetres / 치수를 밀리미터 단위로 표시', description: '끄면 cm로 반올림합니다.', defaultChecked: true }); });
+
+  /* Badge 10 */
+  c('Badge', 'neutral', 'code', 'Badge', "tone='neutral'", 'class kx-badge-neutral', function () { return h(K.Badge, { tone: 'neutral' }, '예시 데이터'); });
+  c('Badge', 'info', 'code', 'Badge', "tone='info'", 'class kx-badge-info + info icon', function () { return h(K.Badge, { tone: 'info' }, '안내'); });
+  c('Badge', 'success', 'code', 'Badge', "tone='success'", 'class kx-badge-success + check', function () { return h(K.Badge, { tone: 'success' }, '재고 있음'); });
+  c('Badge', 'warning', 'code', 'Badge', "tone='warning'", 'class kx-badge-warning + alert', function () { return h(K.Badge, { tone: 'warning' }, '재고 적음'); });
+  c('Badge', 'error', 'code', 'Badge', "tone='error'", 'class kx-badge-error + close', function () { return h(K.Badge, { tone: 'error' }, '판매 종료'); });
+  c('Badge', 'with-icon', 'composition', 'Badge + Icon', "tone='neutral' icon='plus'", 'custom icon inside badge', function () { return h(K.Badge, { tone: 'neutral', icon: 'plus' }, '비교 담기'); });
+  c('Badge', 'long-text', 'code', 'Badge', 'long children', 'ellipsis at 240px + title', function () { return h(K.Badge, { tone: 'brand' }, '확장형 라운드 다이닝 테이블 전용 한정 컬렉션 — Limited edition'); });
+  c('Badge', 'number', 'code', 'Badge', "count={7} / count={128} max={99}", 'renders 7 and 99+', function () { return h('div', { className: 'cv-row' }, h(K.Badge, { tone: 'brand', count: 7, countLabel: function (n) { return '새 항목 ' + n + '개'; } }), h(K.Badge, { tone: 'neutral', count: 128, countLabel: function (n) { return '항목 ' + n + '개'; } })); });
+  c('Badge', 'd-status-dot', 'design-only', '(visual sample)', 'none — status dot is not a runtime option', 'visual sample only', function () { return sample('cv-d-dot', h(F, null, h('span', { className: 'cv-d-dot-mark' }), '판매 중')); });
+  c('Badge', 'd-filter-chip', 'design-only', '(visual sample)', 'none — filter chip is not a runtime component', 'visual sample only', function () { return sample('cv-d-chip', h(F, null, '우드', h('span', { className: 'cv-d-chip-x' }, '×'))); });
+
+  /* Card 6 */
+  c('Card', 'full', 'code', 'Card', 'media meta title children footer', 'all parts render', function () { return h(K.Card, { media: { tone: 'mint' }, meta: 'SEATING / 우드', title: '모듈 체어', footer: [h(K.Button, { key: 'a', size: 'sm', variant: 'secondary' }, '자세히')] }, '앉는 깊이를 조절할 수 있는 예시 제품입니다.'); });
+  c('Card', 'body-only', 'code', 'Card', 'children only', 'no media/title element', function () { return h(K.Card, null, '제목 없이 본문만 있는 안내 카드입니다. 소재 관리 방법은 상세 화면에서 확인하세요.'); });
+  c('Card', 'long-title', 'code', 'Card', 'long title (2-line clamp + title attr)', 'h3 clamped, title attr', function () { return h(K.Card, { href: '#c-card-long-title', meta: 'TABLES', title: '확장형 라운드 다이닝 테이블 1800 — Extended Round Dining Table with Separate Leaf and Matte Stone Top' }, '긴 제목은 두 줄까지 보입니다.'); });
+  c('Card', 'loading', 'composition', 'Card + Skeleton', 'loading', 'aria-busy + skeleton blocks', function () { return h(K.Card, { loading: true }); });
+  c('Card', 'missing', 'composition', 'Card + missing Media', "media={{ missing: true }}", 'image-off marker + “이미지 없음”', function () { return h(K.Card, { media: { missing: true }, meta: 'STORAGE', title: '오픈 선반' }, '대표 이미지가 아직 없습니다.'); });
+  c('Card', 'error', 'composition', 'Card + Icon + Button', 'children = error message + retry Button', 'role=alert message + retry button', function () {
+    return h(K.Card, { title: '추천 제품' }, h('div', { className: 'kx-msg kx-msg-error', role: 'alert' }, h(K.Icon, { name: 'alert', size: 16 }), h('span', null, h('strong', null, '오류 '), '카드 내용을 불러오지 못했습니다.')),
+      h('div', { style: { marginTop: 16 } }, h(K.Button, { size: 'sm', variant: 'secondary', icon: 'refresh' }, '다시 시도')));
+  });
+
+  /* Skeleton 4 */
+  c('Skeleton', 'default', 'code', 'Skeleton', 'lines={3}', 'role=status + 3 lines', function () { return h(K.Skeleton, { lines: 3 }); });
+  c('Skeleton', 'sized', 'code', 'Skeleton', "variant='block' width={240} height={120}", 'block 240×120', function () { return h(K.Skeleton, { variant: 'block', width: 240, height: 120, label: '미리보기 불러오는 중' }); });
+  c('Skeleton', 'circle', 'code', 'Skeleton', "variant='circle' size={48}", 'circle 48×48', function () { return h(K.Skeleton, { variant: 'circle', size: 48, label: '프로필 이미지 불러오는 중' }); });
+  c('Skeleton', 'list-row', 'composition', 'Skeleton circle + text ×3 rows', "variant='circle' + lines={2}", '3 rows, one status', function () {
+    return h('div', { role: 'status', 'aria-label': '목록 불러오는 중', className: 'cv-list-skel' }, [0, 1, 2].map(function (i) {
+      return h('div', { key: i, className: 'cv-list-row' }, h(K.Skeleton, { variant: 'circle', size: 40, silent: true }), h('div', { style: { flex: 1 } }, h(K.Skeleton, { lines: 2, silent: true })));
+    }));
+  });
+
+  /* Icon 7 */
+  c('Icon', 'size-16', 'code', 'Icon', "name='search' size={16}", 'svg 16×16', function () { return h(K.Icon, { name: 'search', size: 16 }); });
+  c('Icon', 'size-20', 'code', 'Icon', "name='search' size={20}", 'svg 20×20', function () { return h(K.Icon, { name: 'search', size: 20 }); });
+  c('Icon', 'size-24', 'code', 'Icon', "name='search' size={24}", 'svg 24×24', function () { return h(K.Icon, { name: 'search', size: 24 }); });
+  c('Icon', 'decorative', 'code', 'Icon', '(no label) → aria-hidden', 'aria-hidden=true', function () { return h('p', { className: 'kx-msg kx-msg-success' }, h(K.Icon, { name: 'check', size: 16 }), '저장되었습니다'); });
+  c('Icon', 'labeled', 'code', 'Icon', "label='완료'", 'role=img aria-label', function () { return h('span', { style: { color: 'var(--primary)' } }, h(K.Icon, { name: 'check', label: '완료' })); });
+  c('Icon', 'currentColor', 'code', 'Icon', 'name (colour inherited from parent CSS color via currentColor)', 'inherits parent color', function () { return h('div', { className: 'cv-row' }, h('span', { style: { color: 'var(--primary)' } }, h(K.Icon, { name: 'info' })), h('span', { style: { color: 'var(--textPrimary)' } }, h(K.Icon, { name: 'info' })), h('span', { className: 'cv-onink' }, h(K.Icon, { name: 'info' }))); });
+  c('Icon', 'unresolved', 'code', 'Icon', "name='sofa-outline' (not in set)", 'explicit unresolved marker, no substitute glyph', function () { return h('div', { className: 'cv-row' }, h(K.Icon, { name: 'sofa-outline', size: 24 }), h('span', { className: 'kx-help' }, '세트에 없는 이름 → 대체 아이콘 없이 “미해결” 표시')); });
+
+  /* Dialog 7 */
+  c('Dialog', 'size-sm', 'code', 'Dialog', "size='sm' contained", 'max-width 400', function () { return frame(260, h(K.Dialog, { open: true, contained: true, size: 'sm', title: '비교 목록에 담았습니다', description: '세션 동안 유지됩니다.', onClose: noop, footer: [h(K.Button, { key: 'a' }, '확인')] })); });
+  c('Dialog', 'size-md', 'code', 'Dialog', "size='md' contained", 'max-width 560', function () { return frame(300, h(K.Dialog, { open: true, contained: true, size: 'md', title: '제품 문의', description: '예시 폼 — 전송 기능 없음.', onClose: noop, footer: [h(K.Button, { key: 'a', variant: 'secondary' }, '취소'), h(K.Button, { key: 'b' }, '보내기')] }, h(K.TextField, { label: '이름' }))); });
+  c('Dialog', 'size-lg', 'code', 'Dialog', "size='lg' contained", 'max-width 800', function () { return frame(300, h(K.Dialog, { open: true, contained: true, size: 'lg', title: '소재 안내', description: '넓은 대화상자.', onClose: noop, footer: [h(K.Button, { key: 'a' }, '확인')] }, h('p', null, '표나 긴 설명처럼 넓은 내용을 담을 때 씁니다.'))); });
+  c('Dialog', 'no-description', 'code', 'Dialog', 'title only (no description)', 'no aria-describedby', function () { return frame(220, h(K.Dialog, { open: true, contained: true, size: 'sm', title: '설명 없는 대화상자', onClose: noop, footer: [h(K.Button, { key: 'a' }, '확인')] })); });
+  c('Dialog', 'long-content', 'code', 'Dialog', 'long children (panel scrolls)', 'panel scrollHeight > clientHeight', function () {
+    var ps = []; for (var i = 1; i <= 8; i++) ps.push(h('p', { key: i, style: { marginBottom: 12 } }, i + '. 긴 본문 예시 — 소재·치수·관리 방법을 설명하는 단락입니다. Long content scrolls inside the panel.'));
+    return frame(320, h(K.Dialog, { open: true, contained: true, size: 'md', title: '긴 내용 — Long content', onClose: noop, footer: [h(K.Button, { key: 'a' }, '확인')] }, ps));
+  });
+  c('Dialog', 'focus-close', 'code', 'Dialog', "closeState='focus' · initialFocus='close'", 'close button is-focus; opening moves focus to close', function () { return h(FocusCloseDialog); });
+  c('Dialog', 'live', 'preview-only', 'Dialog (live preview)', 'open/onClose state in preview', 'opens, traps Tab, Esc closes, focus returns', function () { return h(LiveDialog); });
+
+  /* Menu 6 */
+  c('Menu', 'default', 'code', 'Menu', 'inline open items', 'role=menu + menuitems', function () { return h(K.Menu, { inline: true, open: true, label: '작업', items: [{ label: '비교 목록에 담기', value: 'a', icon: 'plus' }, { label: '공유', value: 'b' }] }); });
+  c('Menu', 'highlighted', 'code', 'Menu', "items[i].state='hover'", 'item class is-hover', function () { return h(K.Menu, { inline: true, open: true, label: '정렬', items: [{ label: '최신순', value: 'n', selected: true }, { label: '이름순', value: 'm', selected: false, state: 'hover' }] }); });
+  c('Menu', 'disabled-item', 'code', 'Menu', 'items[i].disabled + disabledReason', 'aria-disabled=true, skipped by arrows', function () { return h(K.Menu, { inline: true, open: true, label: '작업', items: [{ label: '비교 담기', value: 'a' }, { label: '공유 링크 복사', value: 'b', disabled: true, disabledReason: '비활성' }] }); });
+  c('Menu', 'danger', 'code', 'Menu', 'items[i].danger (after divider)', 'item class is-danger', function () { return h(K.Menu, { inline: true, open: true, label: '더 보기', items: [{ label: '복제', value: 'd' }, { divider: true }, { label: '목록에서 삭제', value: 'x', icon: 'trash', danger: true, description: '되돌릴 수 없습니다' }] }); });
+  c('Menu', 'long-label', 'code', 'Menu', 'long item label', 'label wraps', function () { return h(K.Menu, { inline: true, open: true, label: 'Collection', items: [{ label: '확장형 라운드 다이닝 테이블 컬렉션 — Extended Round Dining Table Collection 1800', value: 'a' }, { label: '조명', value: 'b' }] }); });
+  c('Menu', 'a', 'preview-only', 'Menu (live preview, link items)', "items[i].href → <a role=menuitem>", 'opens by click/ArrowDown; link items are anchors', function () { return h(LiveMenu); });
+
+  /* Table 11 */
+  c('Table', 'default', 'code', 'Table', 'columns rows caption', 'rows render, row headers', function () { return h(K.Table, { caption: '예시 제품', columns: COLS, rows: ROWS.slice(0, 3) }); });
+  c('Table', 'sorted-asc', 'code', 'Table', "defaultSort={{ key: 'w', dir: 'asc' }}", 'aria-sort=ascending, ordered', function () { return h(K.Table, { caption: '폭 오름차순', columns: COLS, rows: ROWS, defaultSort: { key: 'w', dir: 'asc' } }); });
+  c('Table', 'sorted-desc', 'code', 'Table', "defaultSort={{ key: 'w', dir: 'desc' }}", 'aria-sort=descending, ordered', function () { return h(K.Table, { caption: '폭 내림차순', columns: COLS, rows: ROWS, defaultSort: { key: 'w', dir: 'desc' } }); });
+  c('Table', 'paginated', 'code', 'Table + Pagination (built in)', 'pageSize={5} (23 rows)', '5 rows/page, pager moves pages', function () { return h(K.Table, { caption: '페이지 표', columns: COLS, rows: ROWS23, pageSize: 5 }); });
+  c('Table', 'loading', 'code', 'Table', "state='loading'", 'aria-busy + skeleton rows', function () { return h(K.Table, { state: 'loading', columns: COLS, rows: [] }); });
+  c('Table', 'error', 'code', 'Table', "state='error' onRetry", 'role=alert + retry button', function () { return h(K.Table, { state: 'error', columns: COLS, rows: [], errorText: '예시 오류 상태입니다.', onRetry: noop }); });
+  c('Table', 'empty', 'code', 'Table', "state='empty' emptyAction", 'role=status + action', function () { return h(K.Table, { state: 'empty', columns: COLS, rows: [], emptyTitle: '조건에 맞는 제품이 없습니다.', emptyAction: h(K.Button, { size: 'sm', variant: 'secondary' }, '조건 초기화') }); });
+  c('Table', 'focus-sort', 'code', 'Table', "columns[i].state='focus'", 'sort button is-focus', function () { return h(K.Table, { caption: '정렬 포커스', columns: [{ key: 'name', label: '제품명', sortable: true, state: 'focus' }, COLS[1], COLS[3]], rows: ROWS.slice(0, 2) }); });
+  c('Table', 'missing-long', 'code', 'Table', 'null values + truncate column', '“—” + sr “값 없음”; ellipsis + title', function () {
+    return h(K.Table, { caption: '누락·긴 값', columns: [{ key: 'name', label: '제품명' }, { key: 'desc', label: '설명', truncate: true }, { key: 'w', label: '폭', align: 'end' }],
+      rows: [{ name: '라운드 테이블', desc: '확장형 상판 — Extended round dining table with separate leaf and matte stone top', w: 1800 }, { name: '소프트 램프', desc: null, w: null }] });
+  });
+  c('Table', 'narrow', 'code', 'Table', 'minWidth={640} in 320px container', 'scroll region + hint', function () { return h('div', { style: { maxWidth: 320 } }, h(K.Table, { caption: '좁은 표', minWidth: 640, columns: COLS, rows: ROWS.slice(0, 3) })); });
+  c('Table', 'virtual', 'code', 'Table', "virtual={{ height: 336, rowHeight: 48 }} (500 rows)", 'renders ≪500 rows, keyboard scroll, full-view toggle', function () { return h(K.Table, { caption: '가상 스크롤 표(500행)', columns: COLS, rows: ROWS500, virtual: { height: 336, rowHeight: 48 } }); });
+
+  /* Pagination 8 */
+  c('Pagination', 'first', 'code', 'Pagination', 'total={12} defaultPage={1}', 'prev disabled', function () { return h(K.Pagination, { total: 12, defaultPage: 1 }); });
+  c('Pagination', 'middle', 'code', 'Pagination', 'total={12} defaultPage={6}', 'both steps enabled, ellipses', function () { return h(K.Pagination, { total: 12, defaultPage: 6 }); });
+  c('Pagination', 'last', 'code', 'Pagination', 'total={12} defaultPage={12}', 'next disabled', function () { return h(K.Pagination, { total: 12, defaultPage: 12 }); });
+  c('Pagination', 'single', 'code', 'Pagination', 'total={1}', 'both steps disabled', function () { return h(K.Pagination, { total: 1 }); });
+  c('Pagination', 'disabled', 'code', 'Pagination', 'disabled', 'all buttons disabled', function () { return h(K.Pagination, { total: 12, defaultPage: 4, disabled: true }); });
+  c('Pagination', 'hover', 'code', 'Pagination', "state='hover' statePage={3}", 'page 3 is-hover', function () { return h(K.Pagination, { total: 5, defaultPage: 2, state: 'hover', statePage: 3 }); });
+  c('Pagination', 'focus', 'code', 'Pagination', "state='focus' statePage={3}", 'page 3 is-focus', function () { return h(K.Pagination, { total: 5, defaultPage: 2, state: 'focus', statePage: 3 }); });
+  c('Pagination', 'live', 'preview-only', 'Pagination (live preview)', 'page/onChange state in preview', 'click + keyboard change page, status updates', function () { return h(LivePager); });
+
+  /* Toast 11 */
+  c('Toast', 'success', 'code', 'Toast', "tone='success'", 'role=status + check + “완료”', function () { return h(K.Toast, { tone: 'success', title: '비교 목록에 담았습니다' }); });
+  c('Toast', 'warning', 'code', 'Toast', "tone='warning'", 'role=status + alert + “주의”', function () { return h(K.Toast, { tone: 'warning', title: '재고가 적습니다' }); });
+  c('Toast', 'error', 'code', 'Toast', "tone='error'", 'role=alert + “오류”', function () { return h(K.Toast, { tone: 'error', title: '목록을 불러오지 못했습니다' }); });
+  c('Toast', 'info', 'code', 'Toast', "tone='info'", 'role=status + “안내”', function () { return h(K.Toast, { tone: 'info', title: '예시 데이터입니다' }); });
+  c('Toast', 'description', 'code', 'Toast', "title + description", 'description text renders', function () { return h(K.Toast, { tone: 'info', title: '업데이트', description: '제품 정보가 새로 반영되었습니다(예시).' }); });
+  c('Toast', 'action', 'code', 'Toast', 'action={<Button/>}', 'action button inside', function () { return h(K.Toast, { tone: 'error', title: '저장하지 못했습니다', description: '잠시 후 다시 시도해 주세요.', action: h(K.Button, { size: 'sm', variant: 'secondary', icon: 'refresh' }, '다시 시도') }); });
+  c('Toast', 'long-text', 'code', 'Toast', 'long title/description', 'wraps, no truncation', function () { return h(K.Toast, { tone: 'success', title: 'Saved to comparison — 확장형 라운드 다이닝 테이블 1800 (Extended Round Dining Table)', description: '긴 제목과 본문은 줄바꿈되며 자르지 않습니다. Long titles wrap instead of truncating.', onClose: noop }); });
+  c('Toast', 'focus-close', 'code', 'Toast', "onClose closeState='focus'", 'close button is-focus', function () { return h(K.Toast, { tone: 'info', title: '닫기 버튼 포커스', onClose: noop, closeState: 'focus' }); });
+  c('Toast', 'stack-3', 'code', 'ToastStack', 'toasts=[4] max={3} inline', '3 visible, newest first, “+1개”', function () {
+    return h(K.ToastStack, { inline: true, max: 3, label: '알림 스택 예시', toasts: [
+      { id: 'a', tone: 'info', title: '1 · 안내' }, { id: 'b', tone: 'success', title: '2 · 완료' }, { id: 'c', tone: 'warning', title: '3 · 주의' }, { id: 'd', tone: 'error', title: '4 · 오류' }] });
+  });
+  c('Toast', 'live', 'preview-only', 'ToastStack (live preview)', 'toasts state + onDismiss in preview', 'push adds to aria-live region; max 3; dismiss', function () { return h(LiveToast); });
+  c('Toast', 'd-snackbar-default', 'design-only', '(visual sample)', 'none — snackbar is not a runtime variant', 'visual sample only', function () { return sample('cv-d-snack', h(F, null, h('span', null, '목록에서 삭제했습니다'), h('span', { className: 'cv-d-snack-action' }, '실행 취소'))); });
+
+  /* AlertDialog 6 */
+  c('AlertDialog', 'default', 'code', 'AlertDialog', "tone='neutral'", 'role=alertdialog, primary confirm', function () { return frame(280, h(K.AlertDialog, { open: true, contained: true, tone: 'neutral', title: '페이지를 나갈까요?', description: '작성 중인 내용은 저장되지 않습니다.', confirmLabel: '나가기', onCancel: noop, onConfirm: noop })); });
+  c('AlertDialog', 'danger', 'code', 'AlertDialog', "tone='danger' (default)", 'ink mark + danger confirm', function () { return frame(280, h(K.AlertDialog, { open: true, contained: true, title: '비교 목록을 비울까요?', description: '되돌릴 수 없습니다.', confirmLabel: '목록 비우기', onCancel: noop, onConfirm: noop })); });
+  c('AlertDialog', 'pending', 'code', 'AlertDialog', 'loading · or onConfirm returns a Promise', 'confirm aria-busy, cancel disabled', function () { return h(PendingAlert); });
+  c('AlertDialog', 'error', 'code', 'AlertDialog', "error='…' (or rejected Promise)", 'role=alert message, confirm = “다시 시도”', function () { return frame(320, h(K.AlertDialog, { open: true, contained: true, title: '비교 목록을 비울까요?', description: '담아 둔 예시 제품이 삭제됩니다.', error: '목록을 비우지 못했습니다. 다시 시도해 주세요.', confirmLabel: '목록 비우기', onCancel: noop, onConfirm: noop })); });
+  c('AlertDialog', 'long-text', 'code', 'AlertDialog', 'long title/description', 'wraps', function () { return frame(360, h(K.AlertDialog, { open: true, contained: true, title: 'Remove every sample product from the comparison list? / 비교 목록의 예시 제품을 모두 삭제할까요?', description: '삭제한 항목은 되돌릴 수 없으며, 필요하면 제품 상세 화면에서 다시 담을 수 있습니다. This cannot be undone.', confirmLabel: '모두 삭제', onCancel: noop, onConfirm: noop })); });
+  c('AlertDialog', 'live', 'preview-only', 'AlertDialog (live preview, async onConfirm)', 'onConfirm returns Promise (fails once, then resolves)', 'pending → error → retry → resolved & closed', function () { return h(LiveAlert); });
+
+  var FAMILIES = ['Button', 'TextField', 'Textarea', 'Select', 'Checkbox', 'Switch', 'Badge', 'Card', 'Skeleton', 'Icon', 'Dialog', 'Menu', 'Table', 'Pagination', 'Toast', 'AlertDialog'];
+  function anchor(cs) { return 'c-' + cs.family.toLowerCase() + '-' + cs.id; }
+  function origin(cs) { return OBSERVED[cs.family + '.' + cs.id] ? 'observed' : 'derived-extension'; }
+  C.forEach(function (cs) { cs.anchor = anchor(cs); cs.origin = origin(cs); });
+
+  function CaseBox(p) {
+    var cs = p.cs;
+    return h('article', { id: cs.anchor, className: 'cv-case', 'data-family': cs.family, 'data-case': cs.id, 'data-ref': cs.referenceType, 'aria-labelledby': cs.anchor + '-h' },
+      h('header', { className: 'cv-case-head' },
+        h('h3', { id: cs.anchor + '-h', className: 'cv-case-title' }, h('span', { className: 'cv-fam' }, cs.family + '.'), cs.id),
+        h('div', { className: 'cv-tags' },
+          h(K.Badge, { size: 'sm', icon: false, tone: cs.referenceType === 'design-only' ? 'warning' : (cs.referenceType === 'preview-only' ? 'info' : 'neutral') }, cs.referenceType),
+          h(K.Badge, { size: 'sm', icon: false, tone: cs.origin === 'observed' ? 'brand' : 'neutral' }, cs.origin))),
+      h('div', { className: 'cv-case-body' }, cs.render()),
+      h('p', { className: 'cv-case-api' }, h('code', null, cs.export), ' ', h('span', null, cs.props)));
+  }
+  function Gallery(p) {
+    var fams = p.family ? [p.family] : FAMILIES;
+    var list = C.filter(function (cs) { return fams.indexOf(cs.family) !== -1; });
+    var count = {}; list.forEach(function (cs) { count[cs.referenceType] = (count[cs.referenceType] || 0) + 1; });
+    return h('div', { className: 'kx cv' },
+      h('header', { className: 'cv-top' },
+        h('h1', { className: 'cv-h1' }, p.family ? 'Coverage · ' + p.family + ' (' + list.length + ')' : 'Coverage 138 — IAK 케이스 × KOREX 스타일'),
+        h('p', { className: 'cv-lead' }, 'IAK는 케이스 목록만 기준으로 삼고, 모든 렌더는 KOREX 컴포넌트·토큰으로 만든다. design-only는 시각 샘플이며 런타임 API가 아니다.'),
+        h('p', { className: 'cv-count' }, '케이스 ' + list.length + '개 · ' + Object.keys(count).sort().map(function (k) { return k + ' ' + count[k]; }).join(' · '))),
+      fams.map(function (f) {
+        var items = list.filter(function (cs) { return cs.family === f; });
+        return h('section', { key: f, className: 'cv-fam-sec', 'aria-labelledby': 'fam-' + f.toLowerCase() },
+          h('h2', { id: 'fam-' + f.toLowerCase(), className: 'cv-h2' }, f + ' (' + items.length + ')'),
+          h('div', { className: 'cv-grid' }, items.map(function (cs) { return h(CaseBox, { key: cs.anchor, cs: cs }); })));
+      }));
+  }
+  var CSS = [
+    '.cv{padding:24px;max-width:1392px;margin:0 auto}',
+    '.cv .cv-h1{font-size:32px;line-height:40px;font-weight:700;letter-spacing:-.025em;margin:0 0 8px}',
+    '.cv .cv-lead{color:var(--textSecondary);max-width:72ch;margin:0 0 8px}',
+    '.cv .cv-count{font-size:12px;line-height:18px;font-weight:600;letter-spacing:.06em;color:var(--textSecondary);margin:0 0 32px}',
+    '.cv .cv-h2{font-size:20px;line-height:28px;font-weight:600;margin:0 0 16px;padding-bottom:8px;border-bottom:1px solid var(--textSecondary)}',
+    '.cv-fam-sec{margin-bottom:48px}',
+    '.cv-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:24px;align-items:start}',
+    '.cv-case{min-width:0;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-md);display:flex;flex-direction:column}',
+    '.cv-case:target{outline:2px solid var(--primary);outline-offset:2px}',
+    '.cv-case-head{display:flex;justify-content:space-between;align-items:flex-start;gap:8px;padding:12px 16px;border-bottom:1px solid var(--border)}',
+    '.cv .cv-case-title{margin:0;font-size:15px;line-height:25px;font-weight:600;overflow-wrap:anywhere}',
+    '.cv-fam{color:var(--textSecondary);font-weight:500}',
+    '.cv-tags{display:flex;flex-wrap:wrap;gap:4px;justify-content:flex-end}',
+    '.cv-case-body{padding:16px;min-width:0;background:var(--canvas);container-type:inline-size}',
+    '.cv .cv-case-api{margin:0;padding:8px 16px;font-size:12px;line-height:18px;color:var(--textSecondary);border-top:1px solid var(--border);overflow-wrap:anywhere}',
+    '.cv-case-api code{color:var(--textPrimary);font-weight:600}',
+    '.cv-row{display:flex;flex-wrap:wrap;align-items:center;gap:12px}',
+    '.cv-status{font-size:12px;line-height:18px;color:var(--textSecondary)}',
+    '.cv-frame{position:relative;height:var(--h,300px);overflow:hidden;border:1px solid var(--border);border-radius:var(--radius-sm)}',
+    '.cv-frame .kx-overlay.is-contained{height:100%;padding:16px}',
+    '.cv-frame .kx-overlay.is-contained .kx-dialog{max-height:100%;padding:24px}',
+    '.cv-onink{display:inline-flex;padding:4px;background:var(--textPrimary);color:var(--surface);border-radius:var(--radius-sm)}',
+    '.cv-list-skel{display:flex;flex-direction:column;gap:16px}.cv-list-row{display:flex;gap:16px;align-items:center}',
+    '.cv-case-body .kx-menu.is-inline{display:block}',
+    /* design-only visual samples (not part of bundle.css — no runtime API) */
+    '.cv-dsample{display:flex;flex-direction:column;gap:8px;align-items:flex-start}',
+    '.cv .cv-dsample-note{margin:0;font-size:12px;line-height:18px;color:var(--textSecondary)}',
+    '.cv-d-btn{display:inline-flex;align-items:center;min-height:44px;padding:8px 24px;border-radius:var(--radius-md);font-weight:600}',
+    '.cv-d-btn-outlined{border:1px solid var(--textPrimary);color:var(--textPrimary);background:transparent}',
+    '.cv-d-btn-outlined-primary{border:2px solid var(--primary);color:var(--primary);background:transparent}',
+    '.cv-d-btn-soft{background:var(--primarySoft);color:var(--primary);border:1px solid var(--primarySoft)}',
+    '.cv-d-float{position:relative;width:260px;max-width:100%;min-height:56px;border:1px solid var(--textSecondary);border-radius:var(--radius-md);background:var(--surface);padding:24px 16px 6px}',
+    '.cv-d-float-label{position:absolute;left:16px;top:6px;font-size:12px;line-height:18px;font-weight:600;color:var(--textSecondary)}',
+    '.cv-d-dot{display:inline-flex;align-items:center;gap:8px;font-size:12px;line-height:18px;font-weight:600}',
+    '.cv-d-dot-mark{width:8px;height:8px;border-radius:50%;background:var(--primary)}',
+    '.cv-d-chip{display:inline-flex;align-items:center;gap:8px;min-height:32px;padding:0 12px;border:1px solid var(--primary);border-radius:var(--radius-sm);background:var(--primarySoft);color:var(--primary);font-weight:600}',
+    '.cv-d-chip-x{font-weight:700}',
+    '.cv-d-snack{display:flex;justify-content:space-between;gap:24px;width:320px;max-width:100%;padding:12px 16px;border-radius:var(--radius-md);background:var(--textPrimary);color:var(--surface)}',
+    '.cv-d-snack-action{font-weight:700;text-decoration:underline;text-underline-offset:4px}',
+    '@media (max-width:767px){.cv{padding:16px}.cv-grid{grid-template-columns:1fr}}'
+  ].join('\n');
+  window.KOREX_COVERAGE = { cases: C, families: FAMILIES, Gallery: Gallery, css: CSS };
+})();
+
+  (function () {
+    var s = document.createElement('style'); s.textContent = window.KOREX_COVERAGE.css; document.head.appendChild(s);
+    ReactDOM.createRoot(document.getElementById('root')).render(React.createElement(window.KOREX_COVERAGE.Gallery, { family: 'TextField' }));
+  })();
+</script>
+</body>
+</html>

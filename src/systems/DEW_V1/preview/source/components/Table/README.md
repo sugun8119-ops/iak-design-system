@@ -10,3 +10,5 @@ A quiet editorial index table: `meta` headers over a 1px `textPrimary` rule, `bo
 - Loading uses Skeleton rows; empty/error show an icon, a sentence and one Button.
 
 Use for archives, issue indexes and spec tables inside StoryDetail — not for KPI dashboards. Status: **derived-extension**.
+
+**IAK cases (v1.3):** all 11 cases render in the `CoverageTable` card (anchors `case-table-<id>`).

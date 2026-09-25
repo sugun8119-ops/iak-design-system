@@ -8,3 +8,4 @@
 - **모바일(<768)**: 이전/다음 + “3 / 12 페이지” 상태 줄, 번호 목록은 아래 줄로 내려 그대로 보인다.
 - 이전/다음은 아이콘만 쓰지 않고 텍스트를 함께 둔다.
 - **제공할 것**: `total`, `page`/`defaultPage`, `onChange`, `disabled`, `prevLabel`, `nextLabel`, `label`.
+- **v1.3 (derived-extension)**: `state`·`statePage`(특정 번호의 hover/focus 표시). 좁은 컨테이너(≤520px)에서는 컨테이너 쿼리로 상태 줄 + 번호 줄 배치.

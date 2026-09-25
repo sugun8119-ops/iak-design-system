@@ -1,39 +1,31 @@
 {
-  "staticHTMLCount": 47,
-  "errors": [],
-  "foundationUnchanged": true,
-  "contrast": {
-    "textPrimary/canvas": 15.39,
-    "textSecondary/canvas": 4.73,
-    "textSecondary/surface": 5.13
-  },
-  "sourceJavaScriptSyntax": "pass",
-  "browser": {
-    "mobileWidth": 375,
-    "mobileChecked": [
-      "home",
-      "list",
-      "detail",
-      "component index"
+  "version": "1.3.0",
+  "independentChecks": {
+    "manifest138": true,
+    "uniqueFigmaCases138": true,
+    "staticAnchors138": true,
+    "foundationUnchanged": true,
+    "figmaUnboundColorCount": 0,
+    "browserWidths": [
+      375,
+      1440
     ],
-    "homeDesktopWidth": 1440,
-    "horizontalOverflow": false
+    "pageHorizontalOverflow": false,
+    "asyncConfirm": [
+      "pending",
+      "error",
+      "retry",
+      "success"
+    ],
+    "virtualEndRow": 500,
+    "virtualRenderedRowsAtEnd": 10,
+    "KOREXToastLimit": "4 added / 3 shown / +1 overflow verified"
   },
-  "figma": {
-    "commonVariants": 175,
-    "unboundColors": 0,
-    "duplicateVariantNames": 0
-  },
-  "repositoryRegression": {
-    "tests": 31,
-    "passed": 31,
-    "scope": "existing IAK repository suite; not a certification of new DEW/KOREX runtime components"
-  },
-  "build": "pass",
-  "limitations": [
-    "Figma static state variants; runtime interactions use Claude/source",
-    "Figma and web font metrics differ; explicit font mapping retained",
-    "No Code Connect or team-library publication",
-    "Original Behance detail inaccessible; normalized approved tokens, not precise source extraction"
+  "upstreamVerification": "Case-level checks supplied by Claude are retained separately in case-coverage.json; not represented as independent tests.",
+  "limits": [
+    "Figma examples represent states; no prototype behavior or published team library.",
+    "React live previews require network access to jsDelivr.",
+    "Web and Figma font stacks differ; inspect final line breaks with production fonts.",
+    "The separate design/p Claude variants and their Figma additions are outside this normalized v1.3 handoff."
   ]
 }

@@ -9,3 +9,5 @@ A modal on the warm `canvas`, framed by a 1px `textPrimary` rule with square cor
 - Only token added for this family: `scrim` (derived-extension).
 
 **Don't** use a rounded card, drop shadow or a dark panel. Status: **derived-extension**.
+
+**IAK cases (v1.3):** all 7 cases render in the `CoverageDialog` card (anchors `case-dialog-<id>`).

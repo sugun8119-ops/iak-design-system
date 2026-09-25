@@ -66,7 +66,7 @@
 - pressed: 안쪽 2px 링. disabled: `border`/`canvas` 면 + `textSecondary`. loading: 스피너 + 진행형 라벨 또는 Skeleton, `aria-busy`. error: 잉크 2px 경계 + 아이콘 + “오류” + 해결 방법. empty: 제목 + 안내 + 초기화 버튼. success/selected: `primary` + 체크.
 - Dialog는 포커스를 패널로 옮기고 Tab을 순환시키며 Esc로 닫는다. Menu는 ↑↓·Home·End·Esc를 지원한다.
 
-## Components (27)
+## Components (27 + ToastStack)
 
 ### 브랜드·탐색 컴포넌트 (기존 11, 유지)
 
@@ -97,6 +97,29 @@
 | Foundations | Icon | 자체 20종, 20px, 1.5 선, square cap. |
 | Overlays | Dialog · AlertDialog · Menu | Dialog sm 400 / md 560 / lg 800. danger는 잉크 + 휴지통 + 구체 동사. |
 | Data | Table · Pagination | 정렬·누락 값(—, “값 없음”)·가로 스크롤. 페이지 번호 44px, 모바일은 상태 줄 + 번호. |
+
+## IAK 138 케이스 대조 (v1.3)
+
+IAK의 16 family · 138 케이스를 **전부** KOREX 스타일로 구현했다. IAK는 케이스 목록만 기준이며, foundation(8색 · 5 타입 · 9 간격 · 3 반경 · grid)과 전용 11개 컴포넌트·템플릿 3개는 바꾸지 않았다. 새로 만든 사례는 모두 **derived-extension**이다(정규화 preview에서 계승한 14개만 observed).
+
+| referenceType | 개수 | 뜻 |
+|---|---|---|
+| code | 114 | 컴포넌트 export + props로 직접 지원 |
+| composition | 8 | 기존 컴포넌트 조합(Button+Icon, fieldset+Checkbox, Card+Skeleton/Media/Icon+Button, Skeleton 행) |
+| native | 4 | 네이티브 속성(readonly, type=email, rows, placeholder option) |
+| preview-only | 5 | 미리보기 안의 라이브 데모(Dialog.live · Menu.a · Pagination.live · Toast.live · AlertDialog.live) |
+| design-only | 7 | `d-*` **시각 샘플** — 런타임 컴포넌트·prop이 아니다 |
+
+- **확인 위치**: Coverage 그룹의 **Coverage138** 카드(전체) + family별 카드 16개. 케이스마다 안정 앵커 `#c-<family>-<id>`(예: `#c-table-virtual`)와 referenceType·origin 배지, 사용한 export/props가 붙어 있다. 행 단위 기록은 패키지 `preview/case-coverage.json`(138행).
+- **이번에 보강한 API** (전부 derived-extension):
+  - Button `variant="text"`(ghost는 별칭) · 입력류 `state="hover"` · Textarea `rows`가 최소 높이를 해제.
+  - Badge `tone="info"`, `count`/`max`(99+) · Skeleton `variant="circle"`.
+  - Icon: 세트에 없는 이름이면 **대체 아이콘 없이** 점선 “?” 표식 + “미해결 아이콘: 이름”을 보인다.
+  - Card 제목 생략(body-only) · Dialog `initialFocus="close"`, `closeState` · Menu 항목 `href`(→ `<a role=menuitem>`).
+  - Table 열 `state`(정렬 버튼 focus 표시), `pageSize`(내장 Pagination), `virtual`(고정 높이 가상 스크롤 · ↑↓/PageUp/PageDown/Home/End · `aria-rowcount`/`aria-rowindex` · “전체 N행 한 번에 보기” 대안).
+  - Pagination `state`/`statePage` · Toast `description`, `closeState` · **ToastStack**(최대 3개, 최신 먼저, “+n개”, polite live 영역).
+  - AlertDialog: `onConfirm`이 Promise를 반환하면 pending(`aria-busy`) → 실패 시 `role=alert` 오류 + “다시 시도” → 성공 시 `onResolved`.
+- design-only 7개(`d-outlined`, `d-outlined-primary`, `d-soft`, `d-floating`, `d-status-dot`, `d-filter-chip`, `d-snackbar-default`)는 갤러리 전용 CSS로 그린 시각 샘플이며 bundle.css·index.d.ts에 없다.
 
 ## Templates (3)
 

@@ -182,7 +182,14 @@
     'loader': [P('M12 3a9 9 0 0 1 9 9')]
   };
   function Icon(p) {
-    var size = p.size || 20, spec = ICONS[p.name] || ICONS.info;
+    var size = p.size || 20, spec = ICONS[p.name];
+    if (!spec) {
+      /* unresolved name: explicit dashed marker, never a substitute glyph (v1.3) */
+      var un = p.label ? { role: 'img', 'aria-label': p.label + ' (아이콘 미해결: ' + String(p.name) + ')' } : { 'aria-hidden': 'true', focusable: 'false' };
+      return h('svg', Object.assign({ className: cx('dew-icon', 'dew-icon--unresolved', p.className), width: size, height: size, viewBox: '0 0 24 24', fill: 'none', 'data-unresolved': String(p.name) }, un),
+        h('title', null, 'Unresolved icon: ' + String(p.name)),
+        h('rect', { x: 3.5, y: 3.5, width: 17, height: 17, stroke: 'currentColor', strokeWidth: 1, strokeDasharray: '2 2' }));
+    }
     var kids = spec.map(function (s, i) {
       if (s[0] === 'p') return h('path', { key: i, d: s[1] });
       if (s[0] === 'c') return h('circle', { key: i, cx: s[1], cy: s[2], r: s[3] });
@@ -285,11 +292,16 @@
   /* ---------- Badge ---------- */
   var BADGE_ICON = { info: 'info', success: 'check', warning: 'alert', danger: 'error' };
   function Badge(p) {
-    var tone = p.tone || 'neutral';
-    var icon = p.icon === null ? null : (p.icon || BADGE_ICON[tone]);
-    return h('span', { className: cx('dew', 'dew-badge', 'dew-badge--' + tone, p.className) },
-      icon ? h(Icon, { name: icon, size: 16, tone: tone === 'danger' ? 'accent' : null }) : null,
-      h('span', null, p.label || p.children));
+    var tone = p.tone === 'error' ? 'danger' : (p.tone || 'neutral');
+    var isCount = p.count != null;
+    var icon = isCount || p.icon === null ? null : (p.icon || BADGE_ICON[tone]);
+    var content;
+    if (isCount) {
+      var max = p.max || 99, n = Number(p.count);
+      content = [h('span', { key: 'n', 'aria-hidden': 'true' }, n > max ? max + '+' : String(n)), h('span', { key: 's', className: 'dew-sr' }, p.srLabel || (n + '개'))];
+    } else content = h('span', null, p.label || p.children);
+    return h('span', { className: cx('dew', 'dew-badge', 'dew-badge--' + tone, isCount && 'dew-badge--count', p.className) },
+      icon ? h(Icon, { name: icon, size: 16, tone: tone === 'danger' ? 'accent' : null }) : null, content);
   }
 
   /* ---------- Card (utility container; StoryCard stays the editorial teaser) ---------- */
@@ -318,6 +330,7 @@
     var lines = p.lines || 3, kids;
     if (v === 'text') { kids = []; for (var i = 0; i < lines; i++) kids.push(Bone(i === lines - 1 ? '62%' : '100%', 16, 'dew-bone--line', i)); }
     else if (v === 'heading') kids = [Bone('88%', 40, null, 0), Bone('56%', 40, null, 1)];
+    else if (v === 'circle') kids = [Bone(p.size || 48, p.size || 48, 'dew-bone--circle', 0)];
     else if (v === 'media') kids = [h('span', { key: 0, className: cx('dew-bone', 'dew-bone--media', p.ratio === 'portrait' && 'dew-media--portrait', p.ratio === 'wide' && 'dew-media--wide') })];
     else if (v === 'story') kids = [h('span', { key: 0, className: cx('dew-bone', 'dew-bone--media', p.ratio === 'portrait' && 'dew-media--portrait') }), Bone('40%', 12, null, 1), Bone('82%', 22, null, 2), Bone('96px', 16, null, 3)];
     else if (v === 'feature') kids = [h('span', { key: 0, className: 'dew-skel__featuretext' }, Bone('45%', 12), Bone('92%', 64), Bone('70%', 64), Bone('80%', 16), Bone('60%', 16), Bone('140px', 16)), h('span', { key: 1, className: 'dew-bone dew-bone--media dew-media--portrait' })];
@@ -327,37 +340,64 @@
   }
 
   /* ---------- Dialog / AlertDialog ---------- */
+  var FOCUSABLE = 'a[href],button:not([disabled]),input:not([disabled]),select:not([disabled]),textarea:not([disabled]),[tabindex]:not([tabindex="-1"])';
   function Dialog(p) {
     var titleId = useId('dlg'), descId = titleId + '-d';
-    var panel = React.useRef(null);
+    var panel = React.useRef(null), latest = React.useRef(p);
+    latest.current = p;
     React.useEffect(function () {
       if (!p.open || p.inline) return;
+      var back = document.activeElement;
       if (panel.current) panel.current.focus();
-      function onKey(e) { if (e.key === 'Escape' && p.onClose) p.onClose(); }
+      function onKey(e) {
+        var q = latest.current;
+        if (e.key === 'Escape' && q.onClose) { e.preventDefault(); q.onClose(); return; }
+        if (e.key === 'Tab' && panel.current) {
+          var f = panel.current.querySelectorAll(FOCUSABLE); if (!f.length) { e.preventDefault(); return; }
+          var first = f[0], last = f[f.length - 1], a = document.activeElement;
+          if (e.shiftKey && (a === first || a === panel.current)) { e.preventDefault(); last.focus(); }
+          else if (!e.shiftKey && (a === last || !panel.current.contains(a))) { e.preventDefault(); first.focus(); }
+        }
+      }
       document.addEventListener('keydown', onKey);
-      return function () { document.removeEventListener('keydown', onKey); };
+      return function () { document.removeEventListener('keydown', onKey); if (back && back.focus && document.contains(back)) back.focus(); };
     }, [p.open, p.inline]);
     if (!p.open) return null;
     return h('div', { className: cx('dew', 'dew-dialog', p.inline && 'dew-dialog--inline', p.className), onMouseDown: function (e) { if (e.target === e.currentTarget && p.onClose && p.dismissable !== false) p.onClose(); } },
-      h('div', { ref: panel, tabIndex: -1, role: p.role || 'dialog', 'aria-modal': p.inline ? undefined : 'true', 'aria-labelledby': titleId, 'aria-describedby': p.description ? descId : undefined, className: cx('dew-dialog__panel', 'dew-dialog__panel--' + (p.size || 'md'), p.tone && 'dew-dialog__panel--' + p.tone) },
+      h('div', { ref: panel, tabIndex: -1, role: p.role || 'dialog', 'aria-modal': p.inline ? undefined : 'true', 'aria-labelledby': titleId, 'aria-describedby': p.description ? descId : undefined, 'aria-busy': p.busy ? 'true' : undefined, className: cx('dew-dialog__panel', 'dew-dialog__panel--' + (p.size || 'md'), p.tone && 'dew-dialog__panel--' + p.tone, p.maxHeight && 'is-bounded'), style: p.maxHeight ? { maxHeight: p.maxHeight } : null },
         h('div', { className: 'dew-dialog__head' },
           p.icon ? h(Icon, { name: p.icon, size: 24, tone: p.tone === 'danger' ? 'accent' : null, className: 'dew-dialog__icon' }) : null,
           p.eyebrow ? h('p', { className: 'dew-meta dew-eyebrow' }, p.eyebrow) : null,
           h('h2', { id: titleId, className: 'dew-heading dew-dialog__title' }, p.title),
-          p.onClose && p.closable !== false ? h(Button, { variant: 'text', iconOnly: true, icon: 'close', label: '닫기', className: 'dew-dialog__close', onClick: p.onClose }) : null),
+          p.onClose && p.closable !== false ? h(Button, { variant: 'text', iconOnly: true, icon: 'close', label: '닫기', className: 'dew-dialog__close', state: p.closeState, onClick: p.onClose }) : null),
         p.description ? h('p', { id: descId, className: 'dew-dialog__desc' }, p.description) : null,
-        p.children ? h('div', { className: 'dew-dialog__body' }, p.children) : null,
+        p.children ? h('div', { className: cx('dew-dialog__body', p.maxHeight && 'is-scroll'), tabIndex: p.maxHeight ? 0 : undefined, role: p.maxHeight ? 'region' : undefined, 'aria-label': p.maxHeight ? '대화상자 내용 (스크롤)' : undefined }, p.children) : null,
         p.footer ? h('div', { className: 'dew-dialog__foot' }, p.footer) : null));
   }
   function AlertDialog(p) {
     var danger = p.tone !== 'default';
-    var err = p.error;
+    var ps = React.useState(false), es = React.useState(null);
+    var pending = p.loading != null ? !!p.loading : ps[0];
+    var err = p.error != null ? p.error : es[0];
     var errId = useId('ad-err');
+    var alive = React.useRef(true);
+    React.useEffect(function () { alive.current = true; return function () { alive.current = false; }; }, []);
+    function run() {
+      var fn = err ? (p.onRetry || p.onConfirm) : p.onConfirm;
+      if (!fn) return;
+      var r = fn();
+      if (r && typeof r.then === 'function') {
+        ps[1](true); es[1](null);
+        r.then(function (v) { if (!alive.current) return; ps[1](false); if (p.onResolved) p.onResolved(v); },
+               function (e) { if (!alive.current) return; ps[1](false); es[1]((e && e.message) || '요청을 처리하지 못했습니다.'); });
+      }
+    }
     var confirm = err
-      ? h(Button, { key: 'o', variant: danger ? 'danger' : 'primary', icon: 'refresh', loading: p.loading, loadingLabel: p.loadingLabel, onClick: p.onRetry || p.onConfirm, 'aria-describedby': errId }, p.retryLabel || '다시 시도')
-      : h(Button, { key: 'o', variant: danger ? 'danger' : 'primary', icon: danger ? 'trash' : null, loading: p.loading, loadingLabel: p.loadingLabel, onClick: p.onConfirm }, p.confirmLabel || '확인');
-    return h(Dialog, { open: p.open, inline: p.inline, role: 'alertdialog', size: 'sm', tone: danger ? 'danger' : null, icon: danger ? 'alert' : 'info', eyebrow: p.eyebrow, title: p.title, description: p.description, onClose: p.onCancel, closable: false, dismissable: false,
-      footer: [h(Button, { key: 'c', variant: 'secondary', onClick: p.onCancel, disabled: p.loading }, p.cancelLabel || '취소'), confirm] },
+      ? h(Button, { key: 'o', variant: danger ? 'danger' : 'primary', icon: 'refresh', loading: pending, loadingLabel: p.loadingLabel, onClick: run, 'aria-describedby': errId }, p.retryLabel || '다시 시도')
+      : h(Button, { key: 'o', variant: danger ? 'danger' : 'primary', icon: danger ? 'trash' : null, loading: pending, loadingLabel: p.loadingLabel, onClick: run }, p.confirmLabel || '확인');
+    return h(Dialog, { open: p.open, inline: p.inline, role: 'alertdialog', size: 'sm', tone: danger ? 'danger' : null, icon: danger ? 'alert' : 'info', eyebrow: p.eyebrow, title: p.title, description: p.description, onClose: pending ? function () {} : p.onCancel, closable: false, dismissable: false, busy: pending,
+      footer: [h(Button, { key: 'c', variant: 'secondary', onClick: p.onCancel, disabled: pending }, p.cancelLabel || '취소'), confirm] },
+      h('p', { className: 'dew-sr', role: 'status', 'aria-live': 'polite' }, pending ? (p.loadingLabel || '처리 중') : ''),
       err ? h('div', { className: 'dew-alert__error', role: 'alert', id: errId },
         h(Icon, { name: 'error', size: 20, tone: 'accent' }),
         h('div', { className: 'dew-alert__errtext' },
@@ -369,41 +409,56 @@
   /* ---------- Menu ---------- */
   function Menu(p) {
     var st = React.useState(!!p.defaultOpen), open = p.open != null ? p.open : st[0];
-    var menuId = useId('menu'), listRef = React.useRef(null);
-    function setOpen(v) { st[1](v); if (p.onOpenChange) p.onOpenChange(v); }
+    var menuId = useId('menu'), listRef = React.useRef(null), rootRef = React.useRef(null), byKey = React.useRef(false);
+    function setOpen(v, restore) { st[1](v); if (p.onOpenChange) p.onOpenChange(v); if (!v && restore && rootRef.current) { var b = rootRef.current.querySelector('.dew-btn'); if (b) b.focus(); } }
+    function enabled() { return listRef.current ? Array.prototype.slice.call(listRef.current.querySelectorAll('[role^="menuitem"]:not([aria-disabled="true"])')) : []; }
+    React.useEffect(function () {
+      if (!open || p.inline) return;
+      if (byKey.current) { var f = enabled()[0]; if (f) f.focus(); byKey.current = false; }
+      function outside(e) { if (rootRef.current && !rootRef.current.contains(e.target)) setOpen(false); }
+      document.addEventListener('mousedown', outside);
+      return function () { document.removeEventListener('mousedown', outside); };
+    }, [open, p.inline]);
     function onKey(e) {
-      var items = listRef.current ? Array.prototype.slice.call(listRef.current.querySelectorAll('[role^="menuitem"]:not([aria-disabled="true"])')) : [];
-      var i = items.indexOf(document.activeElement);
+      var items = enabled(), i = items.indexOf(document.activeElement);
       if (e.key === 'ArrowDown') { e.preventDefault(); (items[i + 1] || items[0]).focus(); }
-      if (e.key === 'ArrowUp') { e.preventDefault(); (items[i - 1] || items[items.length - 1]).focus(); }
-      if (e.key === 'Escape') setOpen(false);
+      else if (e.key === 'ArrowUp') { e.preventDefault(); (items[i - 1] || items[items.length - 1]).focus(); }
+      else if (e.key === 'Home') { e.preventDefault(); items[0].focus(); }
+      else if (e.key === 'End') { e.preventDefault(); items[items.length - 1].focus(); }
+      else if (e.key === 'Escape') { e.preventDefault(); setOpen(false, true); }
+      else if (e.key === 'Tab') setOpen(false);
     }
     var items = p.items || [];
-    return h('div', { className: cx('dew', 'dew-menu', p.align === 'end' && 'dew-menu--end', p.className) },
-      h(Button, { variant: p.triggerVariant || 'secondary', size: p.size || 'md', icon: 'chevron-down', iconPosition: 'end', 'aria-haspopup': 'menu', 'aria-expanded': String(open), 'aria-controls': open ? menuId : undefined, onClick: function () { setOpen(!open); } }, p.label),
+    return h('div', { ref: rootRef, className: cx('dew', 'dew-menu', p.align === 'end' && 'dew-menu--end', p.className) },
+      h(Button, { variant: p.triggerVariant || 'secondary', size: p.size || 'md', icon: 'chevron-down', iconPosition: 'end', 'aria-haspopup': 'menu', 'aria-expanded': String(open), 'aria-controls': open ? menuId : undefined, onClick: function () { setOpen(!open); },
+        onKeyDown: function (e) { if ((e.key === 'ArrowDown' || e.key === 'Enter' || e.key === ' ') && !open) { e.preventDefault(); byKey.current = true; setOpen(true); } } }, p.label),
       open ? h('ul', { ref: listRef, id: menuId, role: 'menu', 'aria-label': p.menuLabel || (typeof p.label === 'string' ? p.label : '메뉴'), className: cx('dew-menu__list', p.inline && 'dew-menu__list--inline'), onKeyDown: onKey },
         items.map(function (it, i) {
           if (it.separator) return h('li', { key: i, role: 'separator', className: 'dew-menu__sep' });
           var role = it.selected != null ? 'menuitemradio' : 'menuitem';
-          return h('li', { key: i, role: role, tabIndex: it.disabled ? -1 : 0, 'aria-disabled': it.disabled ? 'true' : undefined, 'aria-checked': it.selected != null ? String(!!it.selected) : undefined,
-            className: cx('dew-menu__item', it.danger && 'is-danger', it.selected && 'is-selected', it.disabled && 'is-disabled', forced(it.state)),
-            onClick: function () { if (!it.disabled) { if (it.onSelect) it.onSelect(it); if (p.onSelect) p.onSelect(it); setOpen(false); } },
-            onKeyDown: function (e) { if ((e.key === 'Enter' || e.key === ' ') && !it.disabled) { e.preventDefault(); e.currentTarget.click(); } } },
-            h('span', { className: 'dew-menu__icon' }, it.selected ? h(Icon, { name: 'check', size: 20 }) : (it.icon ? h(Icon, { name: it.icon, size: 20, tone: it.danger ? 'accent' : null }) : null)),
-            h('span', { className: 'dew-menu__text' }, h('span', { className: 'dew-menu__label' }, it.label),
+          var cls = cx('dew-menu__item', it.danger && 'is-danger', it.selected && 'is-selected', it.disabled && 'is-disabled', forced(it.state === 'highlighted' ? 'hover' : it.state), it.href && 'is-link');
+          var kids = [h('span', { key: 'i', className: 'dew-menu__icon' }, it.selected ? h(Icon, { name: 'check', size: 20 }) : (it.icon ? h(Icon, { name: it.icon, size: 20, tone: it.danger ? 'accent' : null }) : null)),
+            h('span', { key: 't', className: 'dew-menu__text' }, h('span', { className: 'dew-menu__label' }, it.label),
               it.description ? h('span', { className: 'dew-meta' }, it.description) : null,
-              it.disabled && it.disabledReason ? h('span', { className: 'dew-meta' }, it.disabledReason) : null));
+              it.disabled && it.disabledReason ? h('span', { className: 'dew-meta' }, it.disabledReason) : null)];
+          var common = { role: role, tabIndex: it.disabled ? -1 : 0, 'aria-disabled': it.disabled ? 'true' : undefined, 'aria-checked': it.selected != null ? String(!!it.selected) : undefined, className: cls,
+            onClick: function (e) { if (it.disabled) { e.preventDefault(); return; } if (it.onSelect) it.onSelect(it); if (p.onSelect) p.onSelect(it); setOpen(false, true); } };
+          if (it.href) return h('li', { key: i, role: 'none' }, h('a', Object.assign({ href: it.disabled ? undefined : it.href }, common), kids));
+          return h('li', Object.assign({ key: i, onKeyDown: function (e) { if ((e.key === 'Enter' || e.key === ' ') && !it.disabled) { e.preventDefault(); e.currentTarget.click(); } } }, common), kids);
         })) : null);
   }
 
   /* ---------- Table ---------- */
   function Table(p) {
-    var cols = p.columns || [], rows = p.rows || [], sort = p.sort || {};
+    if (p.virtual) return h(VirtualTable, p);
+    var cols = p.columns || [], allRows = p.rows || [], sort = p.sort || {};
     var state = p.state || 'ready';
+    var pg = p.pagination, rows = allRows, pages = 1;
+    if (pg && state === 'ready') { pages = Math.max(1, Math.ceil(allRows.length / pg.pageSize)); var s0 = (Math.min(pg.page, pages) - 1) * pg.pageSize; rows = allRows.slice(s0, s0 + pg.pageSize); }
     function head(c) {
       var active = sort.key === c.key, dir = active ? sort.direction : null;
       var ariaSort = active ? (dir === 'asc' ? 'ascending' : 'descending') : (c.sortable ? 'none' : undefined);
-      var inner = c.sortable ? h('button', { type: 'button', className: 'dew-table__sort', onClick: function () { if (p.onSort) p.onSort(c.key, active && dir === 'asc' ? 'desc' : 'asc'); } },
+      var inner = c.sortable ? h('button', { type: 'button', className: cx('dew-table__sort', forced(c.state)), onClick: function () { if (p.onSort) p.onSort(c.key, active && dir === 'asc' ? 'desc' : 'asc'); } },
         h('span', null, c.label), h(Icon, { name: active ? (dir === 'asc' ? 'sort-asc' : 'sort-desc') : 'sort', size: 16 }), active ? h('span', { className: 'dew-sr' }, dir === 'asc' ? ' 오름차순 정렬됨' : ' 내림차순 정렬됨') : null) : c.label;
       return h('th', { key: c.key, scope: 'col', 'aria-sort': ariaSort, className: cx(c.align === 'end' && 'is-end', active && 'is-sorted'), style: c.width ? { width: c.width } : null }, inner);
     }
@@ -423,11 +478,65 @@
           h('p', { className: 'dew-meta' }, err ? (p.errorMessage || '잠시 후 다시 시도해 주세요.') : (p.emptyMessage || '필터를 바꾸거나 전체 목록으로 돌아가세요.')),
           err && p.onRetry ? h(Button, { variant: 'secondary', size: 'sm', icon: 'refresh', onClick: p.onRetry }, '다시 시도') : (!err && p.emptyAction ? p.emptyAction : null))));
     } else body = rows.map(function (r, i) { return h('tr', { key: r.id || i, 'aria-selected': r.selected ? 'true' : undefined, className: r.selected ? 'is-selected' : null }, cols.map(function (c) { return cell(r, c); })); });
-    return h('div', { className: cx('dew', 'dew-table-wrap', p.className), role: 'region', tabIndex: 0, 'aria-label': (p.caption || '표') + (p.scrollHint !== false ? ' (좁은 화면에서 가로 스크롤)' : ''), 'aria-busy': state === 'loading' ? 'true' : undefined },
+    var tableEl = h('div', { className: cx('dew', 'dew-table-wrap', !pg && p.className), role: 'region', tabIndex: 0, 'aria-label': (p.caption || '표') + (p.scrollHint !== false ? ' (좁은 화면에서 가로 스크롤)' : ''), 'aria-busy': state === 'loading' ? 'true' : undefined },
       h('table', { className: 'dew-table', style: p.minWidth ? { minWidth: p.minWidth } : null },
         p.caption ? h('caption', null, h('span', { className: 'dew-title' }, p.caption), p.summary ? h('span', { className: 'dew-meta dew-table__summary' }, p.summary) : null) : null,
         h('thead', null, h('tr', null, cols.map(head))),
         h('tbody', null, body)));
+    if (!pg) return tableEl;
+    var from = allRows.length ? (Math.min(pg.page, pages) - 1) * pg.pageSize + 1 : 0, to = Math.min(allRows.length, from + pg.pageSize - 1);
+    return h('div', { className: cx('dew', 'dew-table-block', p.className) }, tableEl,
+      h('div', { className: 'dew-table__pager' },
+        h('p', { className: 'dew-meta', 'aria-live': 'polite' }, '전체 ' + allRows.length + '건 중 ' + from + '–' + to),
+        h(Pagination, { page: Math.min(pg.page, pages), total: pages, onChange: pg.onPageChange, disabled: state !== 'ready', label: (p.caption || '표') + ' 페이지' })));
+  }
+
+  /* Virtualised table: fixed row height, windowed rows, keyboard row navigation, full-page alternative (v1.3) */
+  function VirtualTable(p) {
+    var cols = p.columns || [], rows = p.rows || [], v = p.virtual || {};
+    var rh = v.rowHeight || 56, height = v.height || 336, over = 4;
+    var sc = React.useState(0), top = sc[0];
+    var ac = React.useState(0), active = ac[0];
+    var fa = React.useState(false), full = fa[0];
+    var box = React.useRef(null), headRef = React.useRef(null);
+    var base = useId('vt');
+    if (full) {
+      return h('div', { className: cx('dew', 'dew-vt', p.className) },
+        h('div', { className: 'dew-vt__bar' }, h('p', { className: 'dew-meta', 'aria-live': 'polite' }, '전체 ' + rows.length + '행을 한 페이지에 표시 중'),
+          h(Button, { variant: 'secondary', size: 'sm', onClick: function () { fa[1](false); } }, '가상 스크롤로 돌아가기')),
+        h(Table, Object.assign({}, p, { virtual: null, className: null })));
+    }
+    var headH = headRef.current ? headRef.current.offsetHeight : 45;
+    var start = Math.max(0, Math.floor(top / rh) - over), end = Math.min(rows.length, Math.ceil((top + height) / rh) + over);
+    function move(n) {
+      n = Math.max(0, Math.min(rows.length - 1, n)); ac[1](n);
+      var el = box.current; if (!el) return;
+      var t = n * rh, b = t + rh, view = height - headH;
+      if (t < el.scrollTop) el.scrollTop = t; else if (b > el.scrollTop + view) el.scrollTop = b - view;
+    }
+    function onKey(e) {
+      var page = Math.max(1, Math.floor((height - headH) / rh) - 1);
+      var k = { ArrowDown: active + 1, ArrowUp: active - 1, PageDown: active + page, PageUp: active - page, Home: 0, End: rows.length - 1 }[e.key];
+      if (k != null) { e.preventDefault(); move(k); }
+    }
+    var trs = [];
+    if (start > 0) trs.push(h('tr', { key: 'top', 'aria-hidden': 'true', className: 'dew-vt__spacer', style: { height: start * rh } }));
+    for (var i = start; i < end; i++) (function (i) {
+      var r = rows[i];
+      trs.push(h('tr', { key: r.id || i, id: base + '-r' + i, role: 'row', 'aria-rowindex': i + 2, 'aria-selected': i === active ? 'true' : 'false', className: cx('dew-vt__row', i === active && 'is-active'), style: { height: rh }, onClick: function () { ac[1](i); } },
+        cols.map(function (c) { var val = r[c.key]; var miss = val == null || val === ''; return h('td', { key: c.key, role: 'gridcell', className: cx(c.align === 'end' && 'is-end', miss && 'is-missing'), title: miss ? '정보 없음' : String(val) }, miss ? '—' : val); })));
+    })(i);
+    if (end < rows.length) trs.push(h('tr', { key: 'bot', 'aria-hidden': 'true', className: 'dew-vt__spacer', style: { height: (rows.length - end) * rh } }));
+    return h('div', { className: cx('dew', 'dew-vt', p.className) },
+      h('div', { className: 'dew-vt__bar' },
+        h('p', { className: 'dew-meta', id: base + '-hint' }, '↑ ↓ PageUp PageDown Home End로 행 이동 · 행 높이 ' + rh + 'px 고정'),
+        h(Button, { variant: 'secondary', size: 'sm', onClick: function () { fa[1](true); } }, '전체 목록 한 페이지로 보기')),
+      h('div', { ref: box, className: 'dew-vt__scroll', style: { height: height }, tabIndex: 0, role: 'grid', 'aria-label': (p.caption || '표') + ' — 가상 스크롤', 'aria-rowcount': rows.length + 1, 'aria-colcount': cols.length, 'aria-describedby': base + '-hint', 'aria-activedescendant': base + '-r' + active,
+          onScroll: function (e) { sc[1](e.currentTarget.scrollTop); }, onKeyDown: onKey },
+        h('table', { className: 'dew-table dew-vt__table', role: 'presentation', style: p.minWidth ? { minWidth: p.minWidth } : null },
+          h('thead', { ref: headRef, role: 'rowgroup' }, h('tr', { role: 'row', 'aria-rowindex': 1 }, cols.map(function (c) { return h('th', { key: c.key, role: 'columnheader', className: c.align === 'end' ? 'is-end' : null }, c.label); }))),
+          h('tbody', { role: 'rowgroup' }, trs))),
+      h('p', { className: 'dew-meta dew-vt__status', 'aria-live': 'polite' }, (active + 1) + ' / ' + rows.length + '행 · 렌더링 ' + (end - start) + '행'));
   }
 
   /* ---------- Pagination ---------- */
@@ -438,12 +547,13 @@
   }
   function Pagination(p) {
     var total = Math.max(1, p.total || 1), page = Math.min(Math.max(1, p.page || 1), total), dis = !!p.disabled;
+    var fs = p.forceState || {};
     function go(n) { return function (e) { if (e) e.preventDefault(); if (!dis && p.onChange) p.onChange(n); }; }
     var href = p.hrefFor || function () { return '#'; };
     function step(dir) {
       var n = dir === 'prev' ? page - 1 : page + 1, off = dis || n < 1 || n > total;
       var kids = dir === 'prev' ? [h(Icon, { key: 'i', name: 'chevron-left', size: 20 }), h('span', { key: 'l' }, '이전')] : [h('span', { key: 'l' }, '다음'), h(Icon, { key: 'i', name: 'chevron-right', size: 20 })];
-      return off ? h('span', { className: 'dew-pg__step is-disabled', 'aria-disabled': 'true' }, kids) : h('a', { className: 'dew-pg__step', href: href(n), onClick: go(n), rel: dir }, kids);
+      return off ? h('span', { className: 'dew-pg__step is-disabled', 'aria-disabled': 'true' }, kids) : h('a', { className: cx('dew-pg__step', fs.page === dir && forced(fs.state)), href: href(n), onClick: go(n), rel: dir }, kids);
     }
     return h('nav', { className: cx('dew', 'dew-pg', dis && 'is-disabled', p.className), 'aria-label': p.label || '페이지 이동', 'aria-busy': dis ? 'true' : undefined },
       step('prev'),
@@ -452,7 +562,7 @@
         var cur = n === page;
         return h('li', { key: n }, cur ? h('span', { className: 'dew-pg__num is-current', 'aria-current': 'page' }, h('span', { className: 'dew-sr' }, '현재 페이지 '), n)
           : dis ? h('span', { className: 'dew-pg__num is-disabled', 'aria-disabled': 'true' }, n)
-          : h('a', { className: 'dew-pg__num', href: href(n), onClick: go(n) }, h('span', { className: 'dew-sr' }, '페이지 '), n));
+          : h('a', { className: cx('dew-pg__num', fs.page === n && forced(fs.state)), href: href(n), onClick: go(n) }, h('span', { className: 'dew-sr' }, '페이지 '), n));
       })),
       h('p', { className: 'dew-pg__status' }, h('span', { className: 'dew-sr' }, '현재 '), page, h('span', { 'aria-hidden': 'true' }, ' / '), h('span', { className: 'dew-sr' }, '페이지, 전체 '), total),
       step('next'));
@@ -463,17 +573,24 @@
   function Toast(p) {
     var tone = p.tone || 'info', t = TOAST[tone];
     var assertive = tone === 'error' || tone === 'warning';
-    return h('div', { className: cx('dew', 'dew-toast', 'dew-toast--' + tone, p.className), role: assertive ? 'alert' : 'status', 'aria-live': assertive ? 'assertive' : 'polite' },
+    return h('div', { className: cx('dew', 'dew-toast', 'dew-toast--' + tone, p.className), role: assertive ? 'alert' : 'status', 'aria-live': assertive ? 'assertive' : 'polite', 'aria-atomic': 'true' },
       h('span', { className: 'dew-toast__icon' }, h(Icon, { name: t[0], size: 20, tone: tone === 'error' ? 'accent' : null })),
       h('div', { className: 'dew-toast__body' },
         h('p', { className: 'dew-meta dew-toast__tone' }, p.toneLabel || t[1]),
         h('p', { className: 'dew-toast__title' }, p.title),
         p.message ? h('p', { className: 'dew-toast__msg' }, p.message) : null,
         p.action ? h(Button, { variant: 'text', size: 'sm', onClick: p.action.onClick, className: 'dew-toast__action' }, p.action.label) : null),
-      p.onClose ? h(Button, { variant: 'text', iconOnly: true, icon: 'close', label: '알림 닫기', size: 'sm', className: 'dew-toast__close', onClick: p.onClose }) : null);
+      p.onClose ? h(Button, { variant: 'text', iconOnly: true, icon: 'close', label: '알림 닫기', size: 'sm', className: 'dew-toast__close', state: p.closeState, onClick: p.onClose }) : null);
   }
-  function ToastRegion(p) { return h('div', { className: cx('dew', 'dew-toasts', p.inline && 'dew-toasts--inline', p.className), 'aria-label': '알림' }, p.children); }
+  /* ToastRegion: newest last; `max` keeps only the latest N visible and says how many are queued (v1.3) */
+  function ToastRegion(p) {
+    var kids = React.Children.toArray(p.children), max = p.max, hidden = max && kids.length > max ? kids.length - max : 0;
+    if (hidden) kids = kids.slice(-max);
+    return h('section', { className: cx('dew', 'dew-toasts', p.inline && 'dew-toasts--inline', p.className), 'aria-label': p.label || '알림' },
+      hidden ? h('p', { className: 'dew-meta dew-toasts__more' }, '이전 알림 ' + hidden + '개 숨김') : null, kids);
+  }
   Toast.Region = ToastRegion;
 
   Object.assign(DEW, { Button: Button, TextField: TextField, Textarea: Textarea, Select: Select, Checkbox: Checkbox, Switch: Switch, Badge: Badge, Card: Card, Skeleton: Skeleton, Icon: Icon, Dialog: Dialog, Menu: Menu, Table: Table, Pagination: Pagination, Toast: Toast, ToastRegion: ToastRegion, AlertDialog: AlertDialog });
+  DEW.version = '1.3';
 })();

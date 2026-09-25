@@ -1,15 +1,16 @@
 # DEW_V1 — component source
 
-이 폴더는 디자인 시스템 아티팩트 버전 1790332904-a708에 공개된 **자체 소스 파일 95개**의 사본이다. 파일별 sha256은 `SOURCE-MANIFEST.json`에 있다. 외부 업로드 자산, 비밀 파일, 아티팩트 런타임(type) 파일, 뷰어가 자동 생성하는 파일(tokens.css, api/, manifest.json)은 넣지 않았다.
+이 폴더는 디자인 시스템 아티팩트 버전 1790338405-7971에 공개된 **자체 소스 파일 130개**의 사본이다. 파일별 sha256은 `SOURCE-MANIFEST.json`에 있다. 외부 업로드 자산, 비밀 파일, 아티팩트 런타임(type) 파일, 뷰어가 자동 생성하는 파일(tokens.css, api/, manifest.json)은 넣지 않았다.
 
 | 경로 | 내용 |
 |---|---|
 | `components/bundle.js` | 27개 family 구현. 일반 스크립트 하나가 `window.DEW`를 만든다(import·네트워크·eval 없음) |
 | `components/bundle.css` | 컴포넌트 스타일(`dew-` 접두사). tokens의 CSS 변수를 사용 |
 | `components/index.d.ts` | props 타입(문서용) |
-| `components/<Name>/README.md` · `preview.html` | 가이드와 라이브 미리보기 원본 — 45개 폴더(family 27, 템플릿 3, 템플릿 상태 14, Cover) |
+| `components/<Name>/README.md` · `preview.html` | 가이드와 라이브 미리보기 원본 — 62개 폴더(family 27, 템플릿 3, 템플릿 상태 14, Coverage 17, Cover) |
 | `tokens.json` | 토큰 원본(색 8 = 7 + derived-extension `scrim`, 타입 5, spacing 9, radius 3) |
 | `README.md` · `coverage.md` | 브랜드북과 IAK → DEW 대응표 |
+| `coverage/cov_cases.js` | 138 케이스 갤러리 정의(Coverage 카드와 coverage-138.html의 원본) |
 
 ## 사용하려면
 

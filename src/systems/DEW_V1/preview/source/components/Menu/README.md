@@ -9,3 +9,5 @@ A button-triggered list of actions or single choices: `surface` panel, 1px `text
 - Long labels wrap within max 320px (or viewport − 48).
 
 **Relationship:** Menu for sort/share/save actions above an EditorialGrid; CategoryNav stays the topic filter. Status: **derived-extension**.
+
+**IAK cases (v1.3):** all 6 cases render in the `CoverageMenu` card (anchors `case-menu-<id>`).

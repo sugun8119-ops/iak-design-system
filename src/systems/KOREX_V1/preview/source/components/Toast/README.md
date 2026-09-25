@@ -8,3 +8,4 @@
 - 오류 토스트는 자동으로 사라지지 않고 “다시 시도” 같은 해결 액션을 둔다. 좌측 컬러 바 장식을 쓰지 않는다.
 - 긴 제목·본문은 줄바꿈. 모바일에서 폭 100%.
 - **제공할 것**: `tone`, `title`, `children`, `action`, `onClose`, `inline`, `toneLabel`.
+- **v1.3 (derived-extension)**: `description`(본문 별칭), `closeState`, `silent`. **ToastStack**: `toasts`·`max`(기본 3)·`onDismiss` — 최신 알림을 위에, 넘치는 수는 “+n개 알림 더 있음”, polite live 영역 1개. d-snackbar-default는 시각 샘플(design-only).

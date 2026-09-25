@@ -9,3 +9,5 @@ Page navigation under an ArticleList grid: text "이전 / 다음" with chevrons 
 - Mobile (<768): numbers collapse to "6 / 12" between the steps — same information, less width.
 
 Status: **derived-extension**.
+
+**IAK cases (v1.3):** all 8 cases render in the `CoveragePagination` card (anchors `case-pagination-<id>`).

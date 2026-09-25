@@ -10,3 +10,5 @@ Single-line input: `body` label above, optional `meta` description, `surface` fi
 - Long labels and values wrap; long unbroken strings break.
 
 Status: **derived-extension**.
+
+**IAK cases (v1.3):** all 13 cases render in the `CoverageTextField` card (anchors `case-textfield-<id>`).

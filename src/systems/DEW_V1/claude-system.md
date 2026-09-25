@@ -1,8 +1,8 @@
 # DEW_V1
 
-용도: **Editorial / Premium / Content Web** · v1.1
+용도: **Editorial / Premium / Content Web** · v1.3
 
-> **IAK = coverage only · DEW = visual authority.** IAK Design Studio의 16 공통 family는 “어떤 항목·상태가 있어야 하는가”의 체크리스트로만 쓴다. 색·서체·간격·모서리·그리드·구성은 모두 DEW 값이다. IAK 다크 테마·오렌지·Pretendard·둥근 SaaS 카드는 쓰지 않는다. 원본에 없던 모든 것은 **derived-extension**으로 표시한다(`preview/coverage.md`).
+> **IAK = coverage only · DEW = visual authority.** IAK Design Studio의 16 공통 family는 “어떤 항목·상태가 있어야 하는가”의 체크리스트로만 쓴다. 색·서체·간격·모서리·그리드·구성은 모두 DEW 값이다. IAK 다크 테마·오렌지·Pretendard·둥근 SaaS 카드는 쓰지 않는다. 원본에 없던 모든 것은 **derived-extension**으로 표시한다(`coverage.md`).
 
 ## 적용 규칙
 `figma-system.json`의 foundation 값을 기준으로 작업한다. 색·타입·간격을 임의로 늘리지 않는다. 브랜드명, 콘텐츠, 제품 정보는 새 프로젝트의 것으로 교체한다. 이 문서를 디자인 작업 지침으로 사용하고 JSON을 함께 제공한다.
@@ -38,6 +38,12 @@
 ## 계승과 확장
 - 계승(정규화본 v1.0): 팔레트 7, 타입 5, spacing 9, radius 3, 그리드·반응형, editorial 11, 템플릿 3. 공개 Behance 썸네일과 합의 방향을 바탕으로 정규화한 재사용 값이며 원본에서 정밀 추출한 값이 아니다.
 - derived-extension(v1.1): 공통 16 family, 템플릿 상태 14, 아이콘 27, `scrim`, 이미지 누락·로딩, AlertDialog 오류+재시도, ArticleList 정렬 Menu·Pagination, 컨트롤 높이·대화상자 폭·모션·한글 줄바꿈.
+
+## v1.3 — IAK 138 케이스 (derived-extension)
+- 16 family × 138 케이스를 모두 DEW 스타일로 구현했다. code 114 · composition 8 · native 4 · preview-only 5 · design-only 7.
+- `d-*` 7개(Button d-outlined / d-outlined-primary / d-soft, TextField d-floating, Badge d-status-dot / d-filter-chip, Toast d-snackbar-default)는 시각 샘플이다. 컴포넌트 API가 아니며 런타임에서 지원하지 않는다.
+- 코드 보강: Table `pagination`·`virtual`(고정 행 높이, 키보드 행 이동, 전체 페이지 대안), ToastRegion `max`, AlertDialog Promise 기반 pending/error/retry, Dialog 초점 가두기·복귀·`maxHeight`, Menu 키보드·링크 항목, Icon 미해결 표시(대체 아이콘 금지), Skeleton `circle`, Badge `count`.
+- 대응표 `preview/case-coverage.json`(138행), 정적 갤러리 `preview/coverage-138.html`, 디자인 시스템의 Coverage 138 카드(17장). 새 토큰 없음.
 
 ## Common families (16) — derived-extension
 | 이름 | DEW 규격 | 케이스 |
@@ -96,8 +102,6 @@ JSON을 변경하면 `preview/styles.css`의 대응 CSS 변수도 갱신한다. 
 상세 페이지 접근은 HTTP 403으로 제한되어 공개 썸네일과 이전 대화에서 확정된 방향을 기준으로 정규화했다. 색상·치수는 원본을 정밀 추출한 값이 아니라 이전에 합의한 재사용 토큰이다. 미리보기 카피와 도형은 이번 산출물용으로 새로 작성했다.
 
 
-## v1.2 인계 기준
+## v1.3.0 인계 기준
 
-IAK는 공통 항목·상태의 점검 기준이다. 이 프로젝트의 색상·서체 역할·간격·반경·레이아웃을 시각 기준으로 사용한다. 다른 프로젝트의 스킨을 섞지 않는다. 신규 공통 항목은 derived-extension이며 Behance에서 관찰한 원본이라고 표현하지 않는다.
-
-최신 연결 정보는 figma-system.json의 handoff에 있다. 정적 미리보기는 preview/, 실제 재사용 소스는 preview/source/에 있다. Figma는 편집 가능한 상태 변형 라이브러리이며 웹 런타임 동작·자동 반응형의 대체물이 아니다. 원본 페이지 상세가 접근 제한되어 이전 합의 토큰을 계승했으므로 원본 정밀 복제라고 주장하지 않는다.
+기존 프로젝트 스타일을 유지한다. IAK는 138개 사례 목록의 기준이다. 없는 폰트만 유사 서체로 대체하고 변경 내역을 기록한다. Figma의 Coverage 138 페이지와 preview/case-coverage.json을 대응표로 사용한다. 다른 design/p 버전의 스타일과 혼합하지 않는다. 동작 예시는 preview/coverage-live.html에서 열 수 있다(React CDN 연결 필요).

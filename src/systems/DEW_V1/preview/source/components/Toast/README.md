@@ -9,3 +9,5 @@ A brief, non-blocking notice: `surface` sheet, 1px `textPrimary` frame, square c
 - Don't use toasts for page-level errors — use the error panel in the template (see Template states).
 
 Status: **derived-extension**.
+
+**IAK cases (v1.3):** all 11 cases render in the `CoverageToast` card (anchors `case-toast-<id>`).

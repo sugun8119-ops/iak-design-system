@@ -1,12 +1,12 @@
-# 공통 규격 적용 결과
+# 프로젝트별 사례 대응표
 
-2026-09-25 · DEW_V1 / KOREX_V1 revision 1.2.0
+2026-09-25 · DEW_V1 / KOREX_V1 1.3.0
 
-두 프로젝트 모두 기존 전용 11종과 공통 16종을 별도 스타일로 유지한다. Figma 공통 UI 상태는 각각 175개, 아이콘은 DEW 27개·KOREX 20개다. 기본 네이티브 템플릿은 각각 3개이며 확장 템플릿 상태는 Claude Design 및 소스에 포함한다.
+각 프로젝트의 기존 정규화 스타일을 유지하며, 전용 11종 + 공통 16종과 기본 템플릿 3개를 제공합니다. IAK는 138개 사례의 항목 기준입니다. 각 시스템의 138개 사례가 Claude, 소스, Figma의 Coverage 138 페이지에 대응됩니다.
 
-IAK 138개 참조 케이스를 138개 네이티브 변형으로 세지 않는다. HTML 의미/동작/조합/design-only 케이스는 유형이 서로 다르다. 실제 생성 변형과 소스 대응표를 각각 제공한다. 가상 스크롤, 새로운 테마, DB/Router는 이번 최소 웹 시스템 범위 밖이다.
+code 114 / composition 8 / native 4 / preview-only 5 / design-only 7. 사례 수는 컴포넌트 family 수나 모든 상태 조합 수와 다릅니다. 디자인 전용 7개를 런타임 API라고 표시하지 않습니다. 가상 스크롤 표, 페이지 표, 알림 스택, 비동기 확인·재시도도 포함합니다. DB/Router는 없습니다.
 
-- DEW: [coverage](DEW_V1/preview/coverage.md) · [Figma mapping](DEW_V1/preview/handoff/figma-components.json)
-- KOREX: [coverage](KOREX_V1/preview/coverage.md) · [Figma mapping](KOREX_V1/preview/handoff/figma-components.json)
+- [DEW 사례](DEW_V1/preview/case-coverage.json) · [Figma 연결](DEW_V1/preview/handoff/figma-cases.json)
+- [KOREX 사례](KOREX_V1/preview/case-coverage.json) · [Figma 연결](KOREX_V1/preview/handoff/figma-cases.json)
 
-다른 포트폴리오는 project-inventory.json에 목록으로 관리한다. 목록 등재와 시스템 제작 완료를 구분한다.
+Figma는 편집 가능한 정적 사례이며 실제 키보드·비동기 동작은 Claude와 소스 미리보기를 기준으로 합니다. 독립 검증과 Claude의 개별 검증 보고는 각 preview/handoff/verification.json에서 구분합니다.

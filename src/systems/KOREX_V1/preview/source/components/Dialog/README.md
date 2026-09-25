@@ -8,3 +8,4 @@
 - 긴 제목은 줄바꿈, 본문이 길면 패널 안에서 스크롤. 모바일에서는 footer 버튼이 폭을 나눠 가진다.
 - `contained`는 문서 미리보기용(프레임 안에 그리기)이다.
 - **제공할 것**: `open`, `onClose`, `title`, `description`, `size`, `children`, `footer`, `dismissible`.
+- **v1.3 (derived-extension)**: `initialFocus="close"`(열릴 때 닫기 버튼으로 포커스), `closeState`(focus 표시). description이 없으면 `aria-describedby`를 두지 않는다.

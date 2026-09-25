@@ -1,4 +1,4 @@
-# KOREX_V1
+# KOREX_V1 (v1.3)
 
 용도: **Corporate / Brand / Product Web**
 
@@ -64,6 +64,14 @@
 
 기존 11개에 추가된 상태(derived-extension): ProductCard loading · missing image, ImageCard/HeroSearch missing image, SearchBar/FilterPanel/CTA disabled, ContentGrid empty 액션.
 
+
+### IAK 138 케이스 (v1.3)
+IAK 16 family · 138 케이스를 모두 KOREX 스타일로 구현했다(foundation · 전용 11개 · 템플릿 3개 유지, 새 사례는 derived-extension).
+- referenceType: code 114 · composition 8 · native 4 · preview-only 5 · design-only 7. design-only(`d-*`)는 **시각 샘플**이며 런타임 API가 아니다.
+- 행 기록: `preview/case-coverage.json`(정확히 138행: family, id, referenceType, origin, 구현 export/props, 렌더 경로·앵커, 검증 내용).
+- 렌더: `preview/coverage-138.html#c-<family>-<id>`(정적 샘플, React 18을 불러올 수 있으면 동작 모드), 디자인 시스템 아티팩트의 Coverage138 카드와 family별 Coverage 카드.
+- 보강 API: Button `text` · 입력 `state="hover"` · Badge `info`/`count` · Skeleton `circle` · Icon 미해결 표식 · Dialog `initialFocus`/`closeState` · Menu 항목 `href` · Table `pageSize`/`virtual`/열 `state` · Pagination `state`/`statePage` · Toast `description`/`closeState` · ToastStack · AlertDialog Promise 기반 pending/error/retry.
+
 상호작용 요소는 hover 시 밑줄 또는 색 변화, focus 시 2px 외곽선과 4px offset을 사용한다. 모든 입력에 label, 버튼에 읽을 수 있는 이름을 제공한다. 클릭 영역은 최소 44px. 모바일에서 정보를 숨기지 않는다. 얇은 border는 구획용이며 입력 경계는 textSecondary로 구분한다.
 
 ## Templates
@@ -71,6 +79,7 @@
 - `SearchList` → `preview/list.html`
 - `ProductDetail` → `preview/detail.html`
 - 상태별 정적 렌더: `preview/kit/templates/` — BrandHome(default · loading · error · long-text · missing-image), SearchList(default · loading · empty · error · long-text · missing-image), ProductDetail(default · loading · error · long-text · missing-image). 1440 · 834 · 390 · 375 폭 확인.
+- 138 케이스 갤러리: `preview/coverage-138.html` + `preview/case-coverage.json`.
 - 컴포넌트 상태 카드 정적 렌더: `preview/kit/components/` (27개), 목록: `preview/kit/index.html`, 스타일: `preview/kit/kit.css`.
 
 ## Do / Don't
@@ -90,15 +99,13 @@
 `preview/index.html`을 브라우저에서 열면 된다. 설치와 빌드가 없다. `list.html`, `detail.html`은 일반 링크로 연결된다.
 검색·분류는 3개의 예시 레코드만 메모리에서 필터링한다. 빈 결과와 초기화가 포함된다. 카드는 공통 상세 화면을 열고 선택한 예시 이름·소재를 표시한다.
 JSON을 변경하면 `preview/styles.css`와 `preview/kit/kit.css`의 대응 CSS 변수도 갱신한다. `preview/kit/`은 디자인 시스템 컴포넌트를 정적 HTML로 렌더한 참조이며 상호작용은 없다.
-컴포넌트 소스는 `preview/source/`에 있다(라이브 디자인 시스템 아티팩트의 bundle.js · bundle.css · index.d.ts · 컴포넌트별 preview.html/README.md · tokens.json · README.md · coverage.md · templates.js). React 18 UMD를 먼저 불러온 뒤 bundle.js를 불러오면 `window.KOREX`로 쓸 수 있다. 자세한 내용: `preview/source/SOURCE.md`. SVG는 정적 참조이므로 함께 갱신한다.
+컴포넌트 소스는 `preview/source/`에 있다(라이브 디자인 시스템 아티팩트의 bundle.js · bundle.css · index.d.ts · 컴포넌트별 preview.html/README.md · tokens.json · README.md · coverage.md · templates.js · coverage-cases.js). React 18 UMD를 먼저 불러온 뒤 bundle.js를 불러오면 `window.KOREX`로 쓸 수 있다. 자세한 내용: `preview/source/SOURCE.md`. SVG는 정적 참조이므로 함께 갱신한다.
 
 ## Reference / Scope
 [Behance 공개 포트폴리오](https://www.behance.net/gallery/133721087/KOREX-PM_WEB_UIUX_Design) · 2026-09-25 확인.
 상세 페이지 접근은 HTTP 403으로 제한되어 공개 썸네일과 이전 대화에서 확정된 방향을 기준으로 정규화했다. 색상·치수는 원본을 정밀 추출한 값이 아니라 이전에 합의한 재사용 토큰이다. 미리보기 카피와 도형은 이번 산출물용으로 새로 작성했다.
 
 
-## v1.2 인계 기준
+## v1.3.0 인계 기준
 
-IAK는 공통 항목·상태의 점검 기준이다. 이 프로젝트의 색상·서체 역할·간격·반경·레이아웃을 시각 기준으로 사용한다. 다른 프로젝트의 스킨을 섞지 않는다. 신규 공통 항목은 derived-extension이며 Behance에서 관찰한 원본이라고 표현하지 않는다.
-
-최신 연결 정보는 figma-system.json의 handoff에 있다. 정적 미리보기는 preview/, 실제 재사용 소스는 preview/source/에 있다. Figma는 편집 가능한 상태 변형 라이브러리이며 웹 런타임 동작·자동 반응형의 대체물이 아니다. 원본 페이지 상세가 접근 제한되어 이전 합의 토큰을 계승했으므로 원본 정밀 복제라고 주장하지 않는다.
+기존 프로젝트 스타일을 유지한다. IAK는 138개 사례 목록의 기준이다. 없는 폰트만 유사 서체로 대체하고 변경 내역을 기록한다. Figma의 Coverage 138 페이지와 preview/case-coverage.json을 대응표로 사용한다. 다른 design/p 버전의 스타일과 혼합하지 않는다. 동작 예시는 preview/coverage-138.html에서 열 수 있다(React CDN 연결 필요).

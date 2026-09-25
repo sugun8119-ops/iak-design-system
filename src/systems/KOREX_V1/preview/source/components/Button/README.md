@@ -10,3 +10,4 @@ KOREX CTA를 IAK Button 기준으로 확장한 행동 버튼: 4 variants(primary
 - **제공할 것**: `children`, `variant`, `size`, `icon`/`iconEnd`, `href` 또는 `onClick`, `loading` + `loadingLabel`, `disabled`, `block`.
 - 기존 **CTA**는 그대로 유지한다(md primary/secondary와 동일 외형). 새 화면은 Button을 쓴다.
 - observed는 Behance 원본 정밀 추출이 아니라 정규화 preview에서 계승했다는 뜻이다.
+- **v1.3 (derived-extension)**: `variant="text"`(IAK 이름, 기존 ghost와 같은 모양 — ghost는 별칭으로 유지), `autoFocusMark`(대화상자 초기 포커스 표식). d-outlined · d-outlined-primary · d-soft는 Coverage 갤러리의 **시각 샘플(design-only)**이며 variant가 아니다.

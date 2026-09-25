@@ -8,3 +8,4 @@
 - readOnly는 네이티브 제약상 disabled로 렌더되며 label에 “읽기 전용”을 표기한다.
 - **제공할 것**: `label`, `options` `[{value,label,disabled}]`, `value`/`defaultValue`, `onChange`, `placeholder`, `description`, `error`, `required`, `disabled`, `readOnly`.
 - observed는 Behance 원본 정밀 추출이 아니라 정규화 preview에서 계승했다는 뜻이다.
+- **v1.3 (derived-extension)**: `state="hover"`.

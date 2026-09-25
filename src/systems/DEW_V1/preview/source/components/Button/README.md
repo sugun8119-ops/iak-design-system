@@ -14,3 +14,5 @@ The action control for forms, dialogs and utilities: square, hairline or ink-fil
 **Relationship:** EditorialCTA stays the editorial *link* (↗, navigates to a story); Button is for *actions* (save, retry, confirm). Don't swap them. `state` forces hover/focus/pressed for previews only.
 
 Status: **derived-extension** (IAK coverage family, DEW visuals).
+
+**IAK cases (v1.3):** all 19 cases render in the `CoverageButton` card (anchors `case-button-<id>`).

@@ -1,7 +1,7 @@
 {
   "id": "DEW_V1",
   "name": "DEW Editorial System",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "category": "Editorial / Premium / Content Web",
   "foundation": {
     "colors": {
@@ -116,7 +116,7 @@
     "basis": "Prior approved tokens + public portfolio thumbnail observed 2026-09-25. Detail page returned HTTP 403.",
     "precision": "Normalized reusable values inherited from v1.0; not sampled measurements or original source tokens. v1.1 additions are derived-extension.",
     "assets": "No original logos, copy, photography or real records are included.",
-    "extensions": "v1.1 adds 16 common families, template states, icon set and one scrim token as derived-extension; IAK provided coverage only.",
+    "extensions": "v1.1 adds 16 common families, template states, icon set and one scrim token; v1.3 completes the 138 IAK cases. All derived-extension; IAK provided coverage only; no new tokens in v1.3.",
     "inheritance": {
       "inheritedFromNormalizedV1_0": [
         "foundation.colors (7)",
@@ -137,7 +137,8 @@
         "missing-image / loading states on editorial components",
         "AlertDialog error + retry",
         "ArticleList sort Menu + Pagination",
-        "control heights, dialog widths, motion, Korean line-break rule"
+        "control heights, dialog widths, motion, Korean line-break rule",
+        "v1.3: all 138 IAK cases (Table paginated/virtual, Toast stack max, AlertDialog async, Dialog focus trap/maxHeight, Menu keyboard/links, Icon unresolved, Skeleton circle, Badge count, 7 design-only samples)"
       ]
     }
   },
@@ -323,7 +324,123 @@
         "FullWidth"
       ],
       "status": "derived-extension",
-      "coverageSource": "IAK common family"
+      "coverageSource": "IAK common family",
+      "iakCases": [
+        {
+          "id": "primary",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-button-primary"
+        },
+        {
+          "id": "secondary",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-button-secondary"
+        },
+        {
+          "id": "danger",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-button-danger"
+        },
+        {
+          "id": "text",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-button-text"
+        },
+        {
+          "id": "size-sm",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-button-size-sm"
+        },
+        {
+          "id": "size-md",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-button-size-md"
+        },
+        {
+          "id": "size-lg",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-button-size-lg"
+        },
+        {
+          "id": "default",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-button-default"
+        },
+        {
+          "id": "hover-primary",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-button-hover-primary"
+        },
+        {
+          "id": "pressed-primary",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-button-pressed-primary"
+        },
+        {
+          "id": "focus",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-button-focus"
+        },
+        {
+          "id": "disabled",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-button-disabled"
+        },
+        {
+          "id": "loading",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-button-loading"
+        },
+        {
+          "id": "with-icon",
+          "referenceType": "composition",
+          "runtimeSupport": true,
+          "anchor": "case-button-with-icon"
+        },
+        {
+          "id": "icon-only",
+          "referenceType": "composition",
+          "runtimeSupport": true,
+          "anchor": "case-button-icon-only"
+        },
+        {
+          "id": "long-label",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-button-long-label"
+        },
+        {
+          "id": "d-outlined",
+          "referenceType": "design-only",
+          "runtimeSupport": false,
+          "anchor": "case-button-d-outlined"
+        },
+        {
+          "id": "d-outlined-primary",
+          "referenceType": "design-only",
+          "runtimeSupport": false,
+          "anchor": "case-button-d-outlined-primary"
+        },
+        {
+          "id": "d-soft",
+          "referenceType": "design-only",
+          "runtimeSupport": false,
+          "anchor": "case-button-d-soft"
+        }
+      ]
     },
     "TextField": {
       "layout": "vertical gap 8; label body 600; field 48h surface, 1px textSecondary, radius 2",
@@ -340,7 +457,87 @@
         "Long"
       ],
       "status": "derived-extension",
-      "coverageSource": "IAK common family"
+      "coverageSource": "IAK common family",
+      "iakCases": [
+        {
+          "id": "default",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-textfield-default"
+        },
+        {
+          "id": "filled",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-textfield-filled"
+        },
+        {
+          "id": "hover",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-textfield-hover"
+        },
+        {
+          "id": "focus",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-textfield-focus"
+        },
+        {
+          "id": "error",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-textfield-error"
+        },
+        {
+          "id": "disabled",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-textfield-disabled"
+        },
+        {
+          "id": "description",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-textfield-description"
+        },
+        {
+          "id": "required",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-textfield-required"
+        },
+        {
+          "id": "readonly",
+          "referenceType": "native",
+          "runtimeSupport": true,
+          "anchor": "case-textfield-readonly"
+        },
+        {
+          "id": "long-label",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-textfield-long-label"
+        },
+        {
+          "id": "long-value",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-textfield-long-value"
+        },
+        {
+          "id": "type-email",
+          "referenceType": "native",
+          "runtimeSupport": true,
+          "anchor": "case-textfield-type-email"
+        },
+        {
+          "id": "d-floating",
+          "referenceType": "design-only",
+          "runtimeSupport": false,
+          "anchor": "case-textfield-d-floating"
+        }
+      ]
     },
     "Textarea": {
       "layout": "as TextField, min 136h, vertical resize, meta counter",
@@ -354,7 +551,63 @@
         "Long"
       ],
       "status": "derived-extension",
-      "coverageSource": "IAK common family"
+      "coverageSource": "IAK common family",
+      "iakCases": [
+        {
+          "id": "default",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-textarea-default"
+        },
+        {
+          "id": "filled",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-textarea-filled"
+        },
+        {
+          "id": "hover",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-textarea-hover"
+        },
+        {
+          "id": "focus",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-textarea-focus"
+        },
+        {
+          "id": "error",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-textarea-error"
+        },
+        {
+          "id": "disabled",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-textarea-disabled"
+        },
+        {
+          "id": "rows-2",
+          "referenceType": "native",
+          "runtimeSupport": true,
+          "anchor": "case-textarea-rows-2"
+        },
+        {
+          "id": "long-text",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-textarea-long-text"
+        },
+        {
+          "id": "description",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-textarea-description"
+        }
+      ]
     },
     "Select": {
       "layout": "as TextField + chevron-down 20 at right 16",
@@ -368,7 +621,57 @@
         "LongOption"
       ],
       "status": "derived-extension",
-      "coverageSource": "IAK common family"
+      "coverageSource": "IAK common family",
+      "iakCases": [
+        {
+          "id": "default",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-select-default"
+        },
+        {
+          "id": "hover",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-select-hover"
+        },
+        {
+          "id": "focus",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-select-focus"
+        },
+        {
+          "id": "error",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-select-error"
+        },
+        {
+          "id": "disabled",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-select-disabled"
+        },
+        {
+          "id": "description",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-select-description"
+        },
+        {
+          "id": "long-option",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-select-long-option"
+        },
+        {
+          "id": "placeholder-option",
+          "referenceType": "native",
+          "runtimeSupport": true,
+          "anchor": "case-select-placeholder-option"
+        }
+      ]
     },
     "Checkbox": {
       "layout": "row min 44h gap 16; box 20 square 1px textPrimary",
@@ -385,7 +688,51 @@
         "Long"
       ],
       "status": "derived-extension",
-      "coverageSource": "IAK common family"
+      "coverageSource": "IAK common family",
+      "iakCases": [
+        {
+          "id": "unchecked",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-checkbox-unchecked"
+        },
+        {
+          "id": "checked",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-checkbox-checked"
+        },
+        {
+          "id": "focus",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-checkbox-focus"
+        },
+        {
+          "id": "disabled",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-checkbox-disabled"
+        },
+        {
+          "id": "disabled-checked",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-checkbox-disabled-checked"
+        },
+        {
+          "id": "long-label",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-checkbox-long-label"
+        },
+        {
+          "id": "group",
+          "referenceType": "composition",
+          "runtimeSupport": true,
+          "anchor": "case-checkbox-group"
+        }
+      ]
     },
     "Switch": {
       "layout": "row min 44h space-between; track 44x24 radius 2, thumb 16 square; state word meta",
@@ -399,7 +746,45 @@
         "Long"
       ],
       "status": "derived-extension",
-      "coverageSource": "IAK common family"
+      "coverageSource": "IAK common family",
+      "iakCases": [
+        {
+          "id": "off",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-switch-off"
+        },
+        {
+          "id": "on",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-switch-on"
+        },
+        {
+          "id": "focus",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-switch-focus"
+        },
+        {
+          "id": "disabled-off",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-switch-disabled-off"
+        },
+        {
+          "id": "disabled-on",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-switch-disabled-on"
+        },
+        {
+          "id": "long-label",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-switch-long-label"
+        }
+      ]
     },
     "Badge": {
       "layout": "min 24h, padding 2/8, meta 12/18 500, radius 0, icon 16 gap 4",
@@ -414,7 +799,73 @@
         "Long"
       ],
       "status": "derived-extension",
-      "coverageSource": "IAK common family"
+      "coverageSource": "IAK common family",
+      "iakCases": [
+        {
+          "id": "neutral",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-badge-neutral"
+        },
+        {
+          "id": "info",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-badge-info"
+        },
+        {
+          "id": "success",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-badge-success"
+        },
+        {
+          "id": "warning",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-badge-warning"
+        },
+        {
+          "id": "error",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-badge-error"
+        },
+        {
+          "id": "with-icon",
+          "referenceType": "composition",
+          "runtimeSupport": true,
+          "anchor": "case-badge-with-icon"
+        },
+        {
+          "id": "long-text",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-badge-long-text"
+        },
+        {
+          "id": "number",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-badge-number"
+        },
+        {
+          "id": "d-status-dot",
+          "referenceType": "design-only",
+          "runtimeSupport": false,
+          "anchor": "case-badge-d-status-dot"
+        },
+        {
+          "id": "d-filter-chip",
+          "referenceType": "design-only",
+          "runtimeSupport": false,
+          "anchor": "case-badge-d-filter-chip"
+        }
+      ],
+      "v1_3": {
+        "count": "count / max / srLabel",
+        "tone": "'error' = danger styling"
+      }
     },
     "Card": {
       "layout": "vertical gap 8 (media gap 16); padding 24; plain = 1px textPrimary top rule; horizontal = 5:7 grid",
@@ -432,7 +883,45 @@
         "Horizontal"
       ],
       "status": "derived-extension",
-      "coverageSource": "IAK common family"
+      "coverageSource": "IAK common family",
+      "iakCases": [
+        {
+          "id": "full",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-card-full"
+        },
+        {
+          "id": "body-only",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-card-body-only"
+        },
+        {
+          "id": "long-title",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-card-long-title"
+        },
+        {
+          "id": "loading",
+          "referenceType": "composition",
+          "runtimeSupport": true,
+          "anchor": "case-card-loading"
+        },
+        {
+          "id": "missing",
+          "referenceType": "composition",
+          "runtimeSupport": true,
+          "anchor": "case-card-missing"
+        },
+        {
+          "id": "error",
+          "referenceType": "composition",
+          "runtimeSupport": true,
+          "anchor": "case-card-error"
+        }
+      ]
     },
     "Skeleton": {
       "layout": "border fill, radius 2, pulse 1.4s (none when reduced motion)",
@@ -446,7 +935,36 @@
         "Row"
       ],
       "status": "derived-extension",
-      "coverageSource": "IAK common family"
+      "coverageSource": "IAK common family",
+      "iakCases": [
+        {
+          "id": "default",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-skeleton-default"
+        },
+        {
+          "id": "sized",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-skeleton-sized"
+        },
+        {
+          "id": "circle",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-skeleton-circle"
+        },
+        {
+          "id": "list-row",
+          "referenceType": "composition",
+          "runtimeSupport": true,
+          "anchor": "case-skeleton-list-row"
+        }
+      ],
+      "v1_3": {
+        "circle": "variant circle + size (only circular shape in the system, for circular media placeholders)"
+      }
     },
     "Icon": {
       "layout": "24 grid, stroke 1.5, square cap, miter join; sizes 16/20/24; currentColor",
@@ -459,7 +977,54 @@
         "Muted"
       ],
       "status": "derived-extension",
-      "coverageSource": "IAK common family"
+      "coverageSource": "IAK common family",
+      "iakCases": [
+        {
+          "id": "size-16",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-icon-size-16"
+        },
+        {
+          "id": "size-20",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-icon-size-20"
+        },
+        {
+          "id": "size-24",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-icon-size-24"
+        },
+        {
+          "id": "decorative",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-icon-decorative"
+        },
+        {
+          "id": "labeled",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-icon-labeled"
+        },
+        {
+          "id": "currentColor",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-icon-currentcolor"
+        },
+        {
+          "id": "unresolved",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-icon-unresolved"
+        }
+      ],
+      "v1_3": {
+        "unresolved": "unknown name → dashed square + data-unresolved; no substitute glyph"
+      }
     },
     "Dialog": {
       "layout": "canvas panel, 1px textPrimary, radius 0, padding 32 (mobile 24), gap 16; widths 400/560/800; scrim backdrop; title heading serif",
@@ -472,7 +1037,56 @@
         "MobileSheet"
       ],
       "status": "derived-extension",
-      "coverageSource": "IAK common family"
+      "coverageSource": "IAK common family",
+      "iakCases": [
+        {
+          "id": "size-sm",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-dialog-size-sm"
+        },
+        {
+          "id": "size-md",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-dialog-size-md"
+        },
+        {
+          "id": "size-lg",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-dialog-size-lg"
+        },
+        {
+          "id": "no-description",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-dialog-no-description"
+        },
+        {
+          "id": "long-content",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-dialog-long-content"
+        },
+        {
+          "id": "focus-close",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-dialog-focus-close"
+        },
+        {
+          "id": "live",
+          "referenceType": "preview-only",
+          "runtimeSupport": true,
+          "anchor": "case-dialog-live"
+        }
+      ],
+      "v1_3": {
+        "focus": "Tab trap, focus return on close",
+        "maxHeight": "body-only scroll region (focusable)",
+        "noDescription": "aria-describedby omitted"
+      }
     },
     "AlertDialog": {
       "layout": "Dialog sm + 2px accent top rule for danger; cancel secondary + confirm danger",
@@ -491,6 +1105,47 @@
         "layout": "surface box, 1px accent border, radius 0, padding 16, gap 16, above the footer",
         "anatomy": "accent error icon 20, textPrimary title (600), textSecondary message, role=alert",
         "action": "confirm button becomes '다시 시도' with refresh icon (same danger/primary variant); dialog stays open; cancel stays secondary"
+      },
+      "iakCases": [
+        {
+          "id": "default",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-alertdialog-default"
+        },
+        {
+          "id": "danger",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-alertdialog-danger"
+        },
+        {
+          "id": "pending",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-alertdialog-pending"
+        },
+        {
+          "id": "error",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-alertdialog-error"
+        },
+        {
+          "id": "long-text",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-alertdialog-long-text"
+        },
+        {
+          "id": "live",
+          "referenceType": "preview-only",
+          "runtimeSupport": true,
+          "anchor": "case-alertdialog-live"
+        }
+      ],
+      "v1_3": {
+        "async": "onConfirm may return a Promise → pending (aria-busy) → error box + retry → onResolved"
       }
     },
     "Menu": {
@@ -508,7 +1163,49 @@
       ],
       "status": "derived-extension",
       "coverageSource": "IAK common family",
-      "a11y": "aria-controls is set only while the list is open"
+      "a11y": "aria-controls is set only while the list is open",
+      "iakCases": [
+        {
+          "id": "default",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-menu-default"
+        },
+        {
+          "id": "highlighted",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-menu-highlighted"
+        },
+        {
+          "id": "disabled-item",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-menu-disabled-item"
+        },
+        {
+          "id": "danger",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-menu-danger"
+        },
+        {
+          "id": "long-label",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-menu-long-label"
+        },
+        {
+          "id": "a",
+          "referenceType": "preview-only",
+          "runtimeSupport": true,
+          "anchor": "case-menu-a"
+        }
+      ],
+      "v1_3": {
+        "keyboard": "Enter/Space/↓ opens and focuses first item; ↑↓ Home End; Esc returns to trigger; outside click closes",
+        "href": "items[].href → <a role=menuitem>"
+      }
     },
     "Table": {
       "layout": "header meta over 1px textPrimary; cells padding 16, 1px border row rules; wrapper scrolls horizontally",
@@ -524,7 +1221,79 @@
         "Narrow"
       ],
       "status": "derived-extension",
-      "coverageSource": "IAK common family"
+      "coverageSource": "IAK common family",
+      "iakCases": [
+        {
+          "id": "default",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-table-default"
+        },
+        {
+          "id": "sorted-asc",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-table-sorted-asc"
+        },
+        {
+          "id": "sorted-desc",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-table-sorted-desc"
+        },
+        {
+          "id": "paginated",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-table-paginated"
+        },
+        {
+          "id": "loading",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-table-loading"
+        },
+        {
+          "id": "error",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-table-error"
+        },
+        {
+          "id": "empty",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-table-empty"
+        },
+        {
+          "id": "focus-sort",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-table-focus-sort"
+        },
+        {
+          "id": "missing-long",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-table-missing-long"
+        },
+        {
+          "id": "narrow",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-table-narrow"
+        },
+        {
+          "id": "virtual",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-table-virtual"
+        }
+      ],
+      "v1_3": {
+        "pagination": "prop {page,pageSize,onPageChange}; renders DEW.Pagination + aria-live range",
+        "virtual": "prop {height:336,rowHeight:56}; windowed rows, role=grid + aria-activedescendant, keys ↑↓ PageUp PageDown Home End, 'full page' alternative; virtual cells single-line with title"
+      }
     },
     "Pagination": {
       "layout": "horizontal gap 16; numbers 44x44; current 600 + 2px accent underline; mobile shows 'n / total'",
@@ -538,7 +1307,57 @@
         "MobileCompact"
       ],
       "status": "derived-extension",
-      "coverageSource": "IAK common family"
+      "coverageSource": "IAK common family",
+      "iakCases": [
+        {
+          "id": "first",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-pagination-first"
+        },
+        {
+          "id": "middle",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-pagination-middle"
+        },
+        {
+          "id": "last",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-pagination-last"
+        },
+        {
+          "id": "single",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-pagination-single"
+        },
+        {
+          "id": "disabled",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-pagination-disabled"
+        },
+        {
+          "id": "hover",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-pagination-hover"
+        },
+        {
+          "id": "focus",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-pagination-focus"
+        },
+        {
+          "id": "live",
+          "referenceType": "preview-only",
+          "runtimeSupport": true,
+          "anchor": "case-pagination-live"
+        }
+      ]
     },
     "Toast": {
       "layout": "surface, 1px textPrimary, radius 0, padding 16, max 400; grid 32 icon / text / close; region fixed bottom-right 24 (mobile 16)",
@@ -553,7 +1372,79 @@
         "Stack"
       ],
       "status": "derived-extension",
-      "coverageSource": "IAK common family"
+      "coverageSource": "IAK common family",
+      "iakCases": [
+        {
+          "id": "success",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-toast-success"
+        },
+        {
+          "id": "warning",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-toast-warning"
+        },
+        {
+          "id": "error",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-toast-error"
+        },
+        {
+          "id": "info",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-toast-info"
+        },
+        {
+          "id": "description",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-toast-description"
+        },
+        {
+          "id": "action",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-toast-action"
+        },
+        {
+          "id": "long-text",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-toast-long-text"
+        },
+        {
+          "id": "focus-close",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-toast-focus-close"
+        },
+        {
+          "id": "stack-3",
+          "referenceType": "code",
+          "runtimeSupport": true,
+          "anchor": "case-toast-stack-3"
+        },
+        {
+          "id": "live",
+          "referenceType": "preview-only",
+          "runtimeSupport": true,
+          "anchor": "case-toast-live"
+        },
+        {
+          "id": "d-snackbar-default",
+          "referenceType": "design-only",
+          "runtimeSupport": false,
+          "anchor": "case-toast-d-snackbar-default"
+        }
+      ],
+      "v1_3": {
+        "ToastRegion.max": "latest N visible + hidden count note",
+        "closeState": "forced focus for docs"
+      }
     }
   },
   "templateSpecs": {
@@ -845,8 +1736,9 @@
     ]
   },
   "authority": {
-    "visual": "DEW (this file's foundation, unchanged from v1.0)",
-    "coverage": "IAK Design Studio — list of common families and states only; no IAK colours, fonts, radius or layouts"
+    "coverage": "IAK Design Studio case inventory only",
+    "visual": "DEW_V1 approved normalized v1.0 foundation",
+    "fontFallback": "Preserve appearance, weight and metrics; use a similar available font only when missing. Record substitutions."
   },
   "extensions": {
     "status": "derived-extension",
@@ -903,30 +1795,43 @@
       "error": "accent boundary + icon + textPrimary message",
       "selected": "2px accent underline (nav, pagination, sort) or 2px textPrimary inset (Card)",
       "errorRetry": "AlertDialog: accent-bordered surface message + retry button (derived-extension)"
+    },
+    "designOnlySamples": {
+      "ids": [
+        "Button.d-outlined",
+        "Button.d-outlined-primary",
+        "Button.d-soft",
+        "TextField.d-floating",
+        "Badge.d-status-dot",
+        "Badge.d-filter-chip",
+        "Toast.d-snackbar-default"
+      ],
+      "note": "Visual samples (.dew-dsample*) only; not component variants; no runtime support."
     }
   },
-  "upstreamClaudeVersion": "1.1",
-  "normalization": {
-    "coverageAuthority": "IAK 16 common families; applicable cases translated to project vocabulary",
-    "visualAuthority": "DEW_V1",
-    "sharedVisualTheme": false,
-    "preserveFoundation": true,
-    "referenceCaseCount": 138,
-    "referenceCasesAreNotNativeVariantCount": true
+  "coverage": {
+    "source": "IAK Design Studio 16 families × 138 cases (coverage only)",
+    "manifest": "preview/case-coverage.json",
+    "staticGallery": "preview/coverage-138.html",
+    "artifactCards": "Coverage 138 group: Coverage138 + Coverage<Family> ×16",
+    "counts": {
+      "code": 114,
+      "composition": 8,
+      "native": 4,
+      "preview-only": 5,
+      "design-only": 7
+    }
   },
-  "handoff": {
-    "claudeDesign": "https://claude.ai/artifact/QPSdZdNRdLF3gfnZccrmYv?org=fa3d9581-54d4-4425-bae4-42d8076030e7",
-    "figma": "https://www.figma.com/design/qDaMlSX00Eow0b7aDYKKsf",
-    "github": "https://github.com/sugun8119-ops/iak-design-system/tree/main/src/systems/DEW_V1",
-    "coverage": "preview/coverage.md",
-    "nativeMapping": "preview/handoff/figma-components.json",
-    "source": "preview/source/",
-    "nativeCommonVariants": 175,
-    "nativeOriginalFamilies": 11,
-    "commonFamilies": 16,
-    "nativeTemplates": 3,
-    "figmaPrototypeInteractions": false,
-    "codeConnectPublished": false,
-    "teamLibraryPublished": false
+  "caseCoverage": {
+    "count": 138,
+    "manifest": "preview/case-coverage.json",
+    "figmaCaseCount": 138,
+    "referenceTypes": {
+      "code": 114,
+      "composition": 8,
+      "native": 4,
+      "preview-only": 5,
+      "design-only": 7
+    }
   }
 }

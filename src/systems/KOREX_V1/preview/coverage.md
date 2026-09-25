@@ -1,5 +1,7 @@
 # IAK coverage 대응표
 
+> v1.3: 16 family · **138 케이스 전부** 구현. 케이스 행 기록은 `preview/case-coverage.json`, 렌더는 Coverage138 카드와 `preview/coverage-138.html`(앵커 `#c-<family>-<id>`). 아래 “138 케이스” 섹션 참고.
+
 IAK Design Studio의 16개 common family는 **어떤 항목과 상태를 갖춰야 하는지(coverage)**만 정한다. 모양·색·타입·반경은 전부 KOREX가 정한다(visual authority). IAK의 dark 테마, orange 강조색, Pretendard, IAK 로고, SaaS 대시보드 스킨은 가져오지 않았다.
 
 **출처 표기**: `observed`는 이전에 정규화한 KOREX_V1 preview(`preview/` — 합의된 재사용 토큰 + 2026-09-25 공개 썸네일 기준)에서 계승한 요소라는 뜻이다. **Behance 원본을 정밀 추출·측정했다는 뜻이 아니다**(원본 상세 페이지는 HTTP 403으로 열람하지 못했다). `derived-extension` = 원본에서 관찰하지 못해 KOREX 팔레트·타입·반경 안에서 새로 만든 컴포넌트나 상태.
@@ -54,3 +56,27 @@ IAK Design Studio의 16개 common family는 **어떤 항목과 상태를 갖춰�
 | BrandHome | ✓ | ✓ 컬렉션 Skeleton | — (해당 없음) | ✓ 인라인 오류 Toast | ✓ | ✓ 히어로 + 카드 2 |
 | SearchList | ✓ 6개·3개씩 Pagination | ✓ Skeleton + 비활성 필터·Pagination | ✓ 빈 결과 + 검색 초기화 | ✓ 인라인 오류 Toast | ✓ | ✓ 카드 3 |
 | ProductDetail | ✓ Badge·Table·Button 조합 | ✓ Skeleton + 로딩 Table | — (해당 없음) | ✓ 오류 + 목록 복귀 | ✓ | ✓ 대표 이미지 + 관련 카드 |
+
+## 138 케이스 (v1.3)
+
+IAK의 16 family · 138 케이스를 **전부** KOREX 스타일로 구현했다. IAK는 케이스 목록만 기준이며, foundation(8색 · 5 타입 · 9 간격 · 3 반경 · grid)과 전용 11개 컴포넌트·템플릿 3개는 바꾸지 않았다. 새로 만든 사례는 모두 **derived-extension**이다(정규화 preview에서 계승한 14개만 observed).
+
+| referenceType | 개수 | 뜻 |
+|---|---|---|
+| code | 114 | 컴포넌트 export + props로 직접 지원 |
+| composition | 8 | 기존 컴포넌트 조합(Button+Icon, fieldset+Checkbox, Card+Skeleton/Media/Icon+Button, Skeleton 행) |
+| native | 4 | 네이티브 속성(readonly, type=email, rows, placeholder option) |
+| preview-only | 5 | 미리보기 안의 라이브 데모(Dialog.live · Menu.a · Pagination.live · Toast.live · AlertDialog.live) |
+| design-only | 7 | `d-*` **시각 샘플** — 런타임 컴포넌트·prop이 아니다 |
+
+- **확인 위치**: Coverage 그룹의 **Coverage138** 카드(전체) + family별 카드 16개. 케이스마다 안정 앵커 `#c-<family>-<id>`(예: `#c-table-virtual`)와 referenceType·origin 배지, 사용한 export/props가 붙어 있다. 행 단위 기록은 패키지 `preview/case-coverage.json`(138행).
+- **이번에 보강한 API** (전부 derived-extension):
+  - Button `variant="text"`(ghost는 별칭) · 입력류 `state="hover"` · Textarea `rows`가 최소 높이를 해제.
+  - Badge `tone="info"`, `count`/`max`(99+) · Skeleton `variant="circle"`.
+  - Icon: 세트에 없는 이름이면 **대체 아이콘 없이** 점선 “?” 표식 + “미해결 아이콘: 이름”을 보인다.
+  - Card 제목 생략(body-only) · Dialog `initialFocus="close"`, `closeState` · Menu 항목 `href`(→ `<a role=menuitem>`).
+  - Table 열 `state`(정렬 버튼 focus 표시), `pageSize`(내장 Pagination), `virtual`(고정 높이 가상 스크롤 · ↑↓/PageUp/PageDown/Home/End · `aria-rowcount`/`aria-rowindex` · “전체 N행 한 번에 보기” 대안).
+  - Pagination `state`/`statePage` · Toast `description`, `closeState` · **ToastStack**(최대 3개, 최신 먼저, “+n개”, polite live 영역).
+  - AlertDialog: `onConfirm`이 Promise를 반환하면 pending(`aria-busy`) → 실패 시 `role=alert` 오류 + “다시 시도” → 성공 시 `onResolved`.
+- design-only 7개(`d-outlined`, `d-outlined-primary`, `d-soft`, `d-floating`, `d-status-dot`, `d-filter-chip`, `d-snackbar-default`)는 갤러리 전용 CSS로 그린 시각 샘플이며 bundle.css·index.d.ts에 없다.
+

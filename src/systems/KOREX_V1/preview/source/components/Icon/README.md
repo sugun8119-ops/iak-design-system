@@ -6,3 +6,4 @@
 - 기본은 장식(`aria-hidden`). 아이콘만으로 뜻을 전할 때는 `label`을 준다. 버튼 안에서는 버튼 이름이 뜻을 전한다.
 - 색은 부모 글자색을 따른다 — 상태를 아이콘 색만으로 구분하지 않고 단어와 함께 쓴다.
 - 이름: arrow-up-right · search · check · close · chevron-down/up/left/right · alert · info · minus · plus · image-off · sort · sort-asc · sort-desc · more · refresh · trash · spinner.
+- **v1.3 (derived-extension)**: 세트에 없는 `name`은 **다른 아이콘으로 대체하지 않고** 점선 “?” 표식 + `aria-label`/`title` “미해결 아이콘: 이름”을 렌더한다(`data-unresolved`).

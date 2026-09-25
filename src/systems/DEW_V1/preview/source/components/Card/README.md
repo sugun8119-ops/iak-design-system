@@ -9,3 +9,5 @@ A general content container for non-story content — notes, guides, issues, set
 - Long titles wrap — never truncated. Missing image shows the dashed missing-image frame, not an empty box.
 
 **Don't** build a symmetric SaaS tile wall, round the corners, or nest a StoryCard inside a Card. Status: **derived-extension**.
+
+**IAK cases (v1.3):** all 6 cases render in the `CoverageCard` card (anchors `case-card-<id>`).

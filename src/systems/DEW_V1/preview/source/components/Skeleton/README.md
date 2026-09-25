@@ -5,3 +5,5 @@ Loading placeholders in the `border` tone, with the same geometry as the compone
 **Consumer provides:** `variant` (`text` | `heading` | `media` | `story` | `feature` | `row` | `block`), `lines`, `ratio`, `cells`, `width`/`height` (block), `label` (announced via `role="status"`), `decorative` (hide from assistive tech when a parent already announces loading).
 
 **Relationship:** `story` mirrors StoryCard, `feature` mirrors FeatureStory's 5 : 7 split, `row` fills Table loading. Status: **derived-extension**.
+
+**IAK cases (v1.3):** all 4 cases render in the `CoverageSkeleton` card (anchors `case-skeleton-<id>`).

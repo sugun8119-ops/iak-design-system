@@ -9,3 +9,5 @@ A small (400) `role="alertdialog"` that interrupts to confirm a consequential ac
 - Loading keeps the dialog open with `aria-busy` on the confirm button and cancel disabled.
 
 Status: **derived-extension**.
+
+**IAK cases (v1.3):** all 6 cases render in the `CoverageAlertDialog` card (anchors `case-alertdialog-<id>`).

@@ -8,3 +8,5 @@ A short status label in `meta` type (12/18, 500) on a square chip. Meaning is ca
 - **Relationship:** ArticleMeta lists facts about a story; Badge marks a *state* (새 이야기, 저장됨). Place a Badge before ArticleMeta, never inside it.
 
 Status: **derived-extension**.
+
+**IAK cases (v1.3):** all 10 cases render in the `CoverageBadge` card (anchors `case-badge-<id>`).
