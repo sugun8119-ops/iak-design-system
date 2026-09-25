@@ -20,7 +20,7 @@ IAK Design Studio의 **케이스 항목 구조만 공유**하고 Behance 프로�
 | 시스템 | 추천 사용처 | Figma | Claude Design |
 |---|---|---|---|
 | HYNIX_V1 | 설비 관제, IoT 운영, 장비 관리, 원격 뷰어 | [13종 · 61변형](https://www.figma.com/design/Nh9NILHBye8VS0jGtph3UB) | [게시 완료](https://claude.ai/design/p/e80718a5-1ce2-4e2c-8305-66e1c569290b) |
-| KPOP_V1 | 모바일 콘텐츠, 엔터테인먼트 피드, 문화 매거진 | [13종 · 55변형](https://www.figma.com/design/VR9GFAKIFEjLWuQonbJVYv) | [게시 완료 · 최종 재검사 일부 중단](https://claude.ai/design/p/b9b13fc9-3a4a-4815-b091-5eab5b27fa26) |
+| KPOP_V1 | 모바일 콘텐츠, 엔터테인먼트 피드, 문화 매거진 | [13종 · 55변형](https://www.figma.com/design/VR9GFAKIFEjLWuQonbJVYv) | [게시 완료 · 최종 자동 재검사 통과](https://claude.ai/design/p/b9b13fc9-3a4a-4815-b091-5eab5b27fa26) |
 
 [시스템 미리보기](https://sugun8119-ops.github.io/iak-design-system/systems/)
 
@@ -52,7 +52,7 @@ HTML과 Figma는 동일한 토큰·컴포넌트 계약을 사용하는 별도 �
 
 HYNIX_V1은 Published 상태로 팀 신규 프로젝트에서 선택할 수 있습니다. Main/Sub/Detail을 실제 templates 항목으로 변환했고 디자인 시스템 구조 검사를 통과했습니다. 생성 과정의 추가 화면 점검은 완전한 기능 보증이 아닙니다.
 
-KPOP_V1도 Published로 등록해 팀 신규 프로젝트에서 선택할 수 있습니다. 30개 케이스, 7개 문서, 핵심 12개 + Toast, Main/Sub/Detail 템플릿을 갖췄습니다. OS 글꼴 fallback과 반경 불일치 수정까지 저장됐으나 마지막 TP10/자동 재검사 도중 세션 한도에 걸렸습니다(표시된 재개 시각 2026-09-25 23:50 KST). 이 최종 재검사 완료는 주장하지 않습니다. 고객 폰트 파일 업로드 없이 OS 글꼴 fallback을 유지합니다.
+KPOP_V1도 Published로 등록해 팀 신규 프로젝트에서 선택할 수 있습니다. 30개 케이스, 7개 문서, 핵심 12개 + Toast, Main/Sub/Detail 템플릿을 갖췄습니다. OS 글꼴 fallback과 반경 수정 후 TP01–TP10 및 디자인 시스템 재검사를 완료했습니다. TP10은 104개 파일을 검사했고 반경·Toast 규격 9개도 통과했습니다. 자동 검사에서는 폰트 경고가 없었으나 앱 상단 Missing brand font 배너는 남아 있습니다. 고객 폰트 파일을 제공하지 않는 의도적 OS fallback입니다. 독립 재생성 비교와 실기기 화면 읽기 검사는 별도 미실행 항목입니다.
 
 ## 확인
 

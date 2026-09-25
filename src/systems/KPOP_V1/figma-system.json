@@ -631,11 +631,11 @@
     "claudeDesign": {
       "url": "https://claude.ai/design/p/b9b13fc9-3a4a-4815-b091-5eab5b27fa26",
       "status": "published",
-      "note": "Published confirmed in UI. Final automatic recheck interrupted by Claude session limit; reset shown as 2026-09-25 23:50 KST. Existing fallback fonts remain intentional.",
+      "note": "Published. Final post-correction TP01–TP10 and design-system checks completed. Intentional local OS font fallback: no bundled webfont; application font banner remains despite clean automatic check.",
       "caseCount": 30,
       "componentCount": 13,
       "templateCount": 3,
-      "structureCheck": "prior structure check passed except intended OS font warning; final post-radius/TP10 recheck interrupted"
+      "structureCheck": "passed: 47 cards, 15 exports, 3 templates; TP10 scanned 104 files"
     },
     "github": "https://github.com/sugun8119-ops/iak-design-system/tree/main/src/systems/KPOP_V1",
     "preview": "https://sugun8119-ops.github.io/iak-design-system/systems/KPOP_V1/preview/index.html",

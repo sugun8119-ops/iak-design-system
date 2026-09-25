@@ -44,11 +44,18 @@
     "components": 13,
     "templates": 3,
     "cases": 30,
-    "structureCheck": "earlier check passed except system font warning",
-    "finalPostCorrectionCheck": "interrupted by Claude session limit",
-    "lastObservedChanges": "OS local font declaration and radius md12/lg24 correction saved; final full TP10 report not verified",
-    "usageResetDisplayed": "2026-09-25 23:50 KST",
-    "font": "intentional OS fallback; no font files bundled"
+    "structureCheck": "passed: check_design_system reported No issues found",
+    "finalPostCorrectionCheck": "completed; TP01–TP10 and radius/Toast checks passed",
+    "lastObservedChanges": "Radius control12/panel24 and AppHeader wrapper24 saved; TP10 scanned 104 files with 33 distinct allowed colors",
+    "font": "intentional local OS fallback; no font files bundled. Automatic check reported no warning; application header still displays Missing brand font.",
+    "verificationSource": "Claude Design final response and rendered QA cards, observed 2026-09-25",
+    "designSystemCheck": {
+      "cards": 47,
+      "exports": 15,
+      "templates": 3,
+      "cssCustomProperties": 106
+    },
+    "finalManifestCheck": "No issues found; manifest counts match source. Updated radius subtitle and Published state confirmed in UI."
   },
   "repositoryChecks": {
     "build": "passed",
