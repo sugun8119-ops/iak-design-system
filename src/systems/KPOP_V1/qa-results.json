@@ -1,7 +1,7 @@
 {
   "system": "KPOP_V1",
-  "revision": "1.1.0",
-  "status": "local-and-figma-checks-passed; see claudeDesign for external verification limits",
+  "revision": "1.5.0",
+  "status": "local and Figma checks passed; Claude revision1.5 published and structure check passed",
   "regenerationStability": "not-run; no inherited IAK score",
   "variantStress": "not-run; existing variant contracts retained",
   "checks": {
@@ -59,7 +59,7 @@
   },
   "repositoryChecks": {
     "build": "passed",
-    "testsPassed": 31,
+    "testsPassed": 49,
     "testsFailed": 0,
     "scope": "Existing repository suite; not a claim that Claude background checks finished."
   },
@@ -220,6 +220,79 @@
       ],
       "status": "completed",
       "verifiedComplete": true
+    }
+  },
+  "qualityRevision15": {
+    "version": "1.5.0",
+    "date": "2026-09-26",
+    "referenceYear": 2023,
+    "localPreview": {
+      "pages": [
+        "Main",
+        "Sub",
+        "Detail article",
+        "Detail creator"
+      ],
+      "widths": [
+        320,
+        375,
+        390,
+        430
+      ],
+      "combinations": 16,
+      "horizontalOverflow": 0,
+      "controlsBelow44px": 0,
+      "font": "Pretendard"
+    },
+    "interactions": [
+      "Stage tile returns 2 stories",
+      "Backstage search returns 2 stories",
+      "Unmatched search shows empty; reset restores feed",
+      "Save story, navigate to Saved, matching story appears",
+      "Creator follow remains after reload in same tab",
+      "Tab navigation shows visible focus outline"
+    ],
+    "figma": {
+      "componentSets": 16,
+      "variants": 68,
+      "variables": 88,
+      "templateLevels": 3,
+      "templateFrames": 4,
+      "mainSubDetailCreatorVisuallyReviewed": true,
+      "prototypeInteractions": "not configured; native editable design examples"
+    },
+    "repositoryTests": "49 passed, 0 failed",
+    "notVerified": [
+      "Physical devices",
+      "VoiceOver/TalkBack",
+      "Independent regeneration",
+      "Cross-browser rendering"
+    ],
+    "claudeDesign": {
+      "status": "completed",
+      "published": true,
+      "components": 16,
+      "structureCheck": "No issues found (Claude completion report)",
+      "directChecks": [
+        "Published checkbox enabled after reload",
+        "Readme revision1.5.0 visible",
+        "BrowseTile, CollectionRail, CreatorSpotlight registered in published outline",
+        "Compiled Main renders after preview reload",
+        "Compiled Explore renders two-column tiles; clicking Stage shows 3 matching stories",
+        "Compiled article Detail renders matching Stage title/category and persisted saved state",
+        "Compiled Creator Detail renders Stage Unit09, followed state, stories and related creator rail"
+      ],
+      "reportedChecks": [
+        "UI kit Discover/Explore/Story/Saved/Creator and templates at 320/375/390/430 phone widths: no horizontal overflow or controls under44px",
+        "Search, tile filtering, counts, empty/reset, save and follow persistence across kit/templates",
+        "Programmatic focus ring checks"
+      ],
+      "limitations": [
+        "Claude width tests used phone-frame widths, not real under600px browser viewports",
+        "Real keyboard Tab/Enter not checked inside Claude",
+        "Screen readers and physical touch devices not tested",
+        "UI kit loading/error and Detail/Main missing-media toggles not visually verified this round"
+      ]
     }
   }
 }

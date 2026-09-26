@@ -1,6 +1,6 @@
 {
   "system": "KPOP_V1",
-  "version": "1.1.0",
+  "version": "1.5.0",
   "structureSource": {
     "source": "IAK Design Studio",
     "sourcePath": "src/library/claude/_ds_manifest.json",
@@ -341,5 +341,14 @@
       "figmaNodeId": "20:269",
       "figmaUrl": "https://www.figma.com/design/VR9GFAKIFEjLWuQonbJVYv?node-id=20-269"
     }
-  ]
+  ],
+  "revision15": {
+    "caseCount": 30,
+    "componentsAdded": [
+      "BrowseTile",
+      "CollectionRail",
+      "CreatorSpotlight"
+    ],
+    "mapping": "Existing content/components/layout/state/image case categories are extended; no unrelated cases added."
+  }
 }

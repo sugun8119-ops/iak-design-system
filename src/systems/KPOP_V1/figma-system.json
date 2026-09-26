@@ -1,7 +1,7 @@
 {
   "id": "KPOP_V1",
   "name": "OFFBEAT",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "category": "Mobile / Entertainment / Content",
   "provenance": {
     "referenceUrl": "https://www.behance.net/gallery/105759817/Kpop-World_App_GUI",
@@ -11,7 +11,15 @@
       "Large rounded image-led stories with editorial overlays",
       "White and pale-gray feeds, compact author metadata and social actions"
     ],
-    "normalization": "All numeric values, sample copy/data, layouts and CSS and original SVG graphics are newly authored interpretations, not extracted original design values. No customer assets bundled."
+    "normalization": "All numeric values, sample copy/data, layouts and CSS and original SVG graphics are newly authored interpretations, not extracted original design values. No customer assets bundled.",
+    "supplementaryReferences": [
+      {
+        "title": "Spotify user-selected press images (2023)",
+        "url": "https://newsroom.spotify.com/media-kit/product/",
+        "year": 2023,
+        "use": "Content hierarchy, category discovery, collection rail, saved list and creator spotlight only; no source assets copied"
+      }
+    ]
   },
   "tokens": {
     "color": {
@@ -222,6 +230,32 @@
           "value": 160,
           "unit": "ms"
         }
+      }
+    },
+    "content": {
+      "musicBg": {
+        "$type": "color",
+        "$value": "#FFEAF1"
+      },
+      "musicText": {
+        "$type": "color",
+        "$value": "#92203F"
+      },
+      "stageBg": {
+        "$type": "color",
+        "$value": "#E7ECFF"
+      },
+      "stageText": {
+        "$type": "color",
+        "$value": "#303C70"
+      },
+      "cultureBg": {
+        "$type": "color",
+        "$value": "#E5EFE5"
+      },
+      "cultureText": {
+        "$type": "color",
+        "$value": "#315E53"
       }
     }
   },
@@ -439,10 +473,10 @@
     {
       "name": "BottomNav",
       "figmaName": "KPOP_V1/BottomNav",
-      "anatomy": "Discover; category feed; story links",
+      "anatomy": "Discover; Explore; Saved",
       "variants": "active=discover|feed|story",
       "autoLayout": "Three equal columns; min-height 64; safe-area padding",
-      "behavior": "Use nav and aria-current=page; always show text labels",
+      "behavior": "Explore opens category feed; Saved opens same feed with saved-only filter. Legacy Figma active=feed|story maps to Explore|Saved.",
       "tokenBindings": {
         "text": "color.text",
         "surface": "color.surface",
@@ -514,6 +548,51 @@
         "vertical": "HUG"
       },
       "provenance": "Added to cover IAK Toasts case, using only project-specific styling."
+    },
+    {
+      "name": "BrowseTile",
+      "figmaName": "KPOP_V1/BrowseTile",
+      "variants": "category=music|stage|culture|saved; state=default|selected",
+      "anatomy": "Two-column category tile; label and description; 12px gap; minimum 112px height",
+      "autoLayout": "Two-column category tile; label and description; 12px gap; minimum 112px height",
+      "behavior": "Updates category or Saved filter without losing keyboard focus",
+      "tokenBindings": {
+        "text": "color.text",
+        "surface": "color.surface",
+        "focus": "color.selection",
+        "radius": "radius.md",
+        "gap": "spacing.12"
+      }
+    },
+    {
+      "name": "CollectionRail",
+      "figmaName": "KPOP_V1/CollectionRail",
+      "variants": "state=ready|empty",
+      "anatomy": "156px square-media cards; 12px gaps; scroll confined to the rail",
+      "autoLayout": "156px square-media cards; 12px gaps; scroll confined to the rail",
+      "behavior": "Keyboard accessible links to category feeds; no fake playback controls",
+      "tokenBindings": {
+        "text": "color.text",
+        "surface": "color.surface",
+        "focus": "color.selection",
+        "radius": "radius.md",
+        "gap": "spacing.12"
+      }
+    },
+    {
+      "name": "CreatorSpotlight",
+      "figmaName": "KPOP_V1/CreatorSpotlight",
+      "variants": "state=default|followed|media-missing",
+      "anatomy": "4:5 media, creator name overlay, metadata and 48px follow action",
+      "autoLayout": "4:5 media, creator name overlay, metadata and 48px follow action",
+      "behavior": "Detail creator variant; follow persists within current tab only",
+      "tokenBindings": {
+        "text": "color.text",
+        "surface": "color.surface",
+        "focus": "color.selection",
+        "radius": "radius.md",
+        "gap": "spacing.12"
+      }
     }
   ],
   "templates": [
@@ -526,9 +605,11 @@
         "CategoryTabs",
         "FeatureStory",
         "RankingRow",
-        "BottomNav"
+        "BottomNav",
+        "BrowseTile",
+        "CollectionRail"
       ],
-      "layout": "Shell > page heading > primary content > supporting content",
+      "layout": "Heading > hero > category shortcuts > collection rail > creator entry > Latest stories > ranking > schedule",
       "states": [
         "ready",
         "loading",
@@ -544,9 +625,10 @@
         "CategoryTabs",
         "Field",
         "StoryCard",
-        "BottomNav"
+        "BottomNav",
+        "BrowseTile"
       ],
-      "layout": "Shell > page heading > primary content > supporting content",
+      "layout": "Search > two-column browse tiles > category tabs > result count > stories; Saved filters same feed",
       "states": [
         "ready",
         "loading",
@@ -562,14 +644,19 @@
         "AuthorMeta",
         "FeatureStory",
         "ReactionBar",
-        "StoryCard"
+        "StoryCard",
+        "CreatorSpotlight"
       ],
-      "layout": "Shell > page heading > primary content > supporting content",
+      "layout": "Article reading layout or CreatorSpotlight + follow + related stories",
       "states": [
         "ready",
         "loading",
         "empty",
         "error"
+      ],
+      "variants": [
+        "article",
+        "creator"
       ]
     }
   ],
@@ -603,7 +690,7 @@
   "previewContract": {
     "runtime": "Plain HTML/CSS/JS with bundled local WOFF2 fonts. No build, database, router or external network requests.",
     "data": "Fictional static fixtures only",
-    "persistence": "None; refresh resets state"
+    "persistence": "sessionStorage in current tab for saved stories and followed creator; in-memory fallback if storage is blocked"
   },
   "integrations": {
     "figma": {
@@ -612,36 +699,42 @@
       "team": "Test",
       "libraryPublished": false,
       "collections": 2,
-      "primitiveVariables": 38,
-      "semanticVariables": 38,
+      "primitiveVariables": 44,
+      "semanticVariables": 44,
       "textStyles": 5,
       "effectStyles": 2,
-      "componentSets": 13,
-      "variants": 55,
+      "componentSets": 16,
+      "variants": 68,
       "templates": {
         "Main": "https://www.figma.com/design/VR9GFAKIFEjLWuQonbJVYv?node-id=7-2",
         "Sub": "https://www.figma.com/design/VR9GFAKIFEjLWuQonbJVYv?node-id=7-48",
-        "Detail": "https://www.figma.com/design/VR9GFAKIFEjLWuQonbJVYv?node-id=7-111"
+        "Detail": "https://www.figma.com/design/VR9GFAKIFEjLWuQonbJVYv?node-id=7-111",
+        "DetailCreator": "https://www.figma.com/design/VR9GFAKIFEjLWuQonbJVYv?node-id=49-367"
       },
       "font": "Pretendard 1.3.9 actual rendering; official OTF uploaded to Figma account, all text nodes and styles migrated",
       "caseCount": 30,
       "caseLibrary": "https://www.figma.com/design/VR9GFAKIFEjLWuQonbJVYv?node-id=20-3",
       "projectGuides": "https://www.figma.com/design/VR9GFAKIFEjLWuQonbJVYv?node-id=20-277",
-      "toast": "https://www.figma.com/design/VR9GFAKIFEjLWuQonbJVYv?node-id=20-304"
+      "toast": "https://www.figma.com/design/VR9GFAKIFEjLWuQonbJVYv?node-id=20-304",
+      "qualityRevision": "1.5.0"
     },
     "claudeDesign": {
       "url": "https://claude.ai/design/p/b9b13fc9-3a4a-4815-b091-5eab5b27fa26",
       "status": "published",
-      "note": "Published confirmed. User-approved Pretendard font update completed; original OS-only rule superseded.",
+      "note": "Revision1.5 implemented in existing published system. Source-level checks reported by Claude; final bundle smoke checks performed separately. See qa-results.json for limits.",
       "caseCount": 30,
-      "componentCount": 13,
+      "componentCount": 16,
       "templateCount": 3,
-      "structureCheck": "passed after Pretendard update",
-      "font": "Pretendard 1.3.9 bundled WOFF2; loaded and check_design_system passed; no active Missing brand font banner observed"
+      "structureCheck": "revision1.5: no issues found",
+      "font": "Pretendard 1.3.9 bundled WOFF2; loaded and check_design_system passed; no active Missing brand font banner observed",
+      "qualityRevision14Status": "completed and published UI verified",
+      "qualityRevision15Status": "completed; published UI and new component registration verified",
+      "qualityRevision": "1.5.0"
     },
     "github": "https://github.com/sugun8119-ops/iak-design-system/tree/main/src/systems/KPOP_V1",
     "preview": "https://sugun8119-ops.github.io/iak-design-system/systems/KPOP_V1/preview/index.html",
-    "updatedAt": "2026-09-25"
+    "updatedAt": "2026-09-26",
+    "qualityRevision": "1.5.0"
   },
   "caseStructure": {
     "source": "IAK Design Studio",
@@ -695,5 +788,17 @@
     "date": "2026-09-26",
     "guidance": "콘텐츠 아트 방향: Music pink / Stage blue / Culture green. 이는 콘텐츠 그래픽 팔레트이며 브랜드와 상태 토큰은 기존 값을 유지한다. Main은 hero → Latest stories 2개 → ranking → 일정으로 구성한다. 제목·카테고리·읽기 시간은 상세 화면과 일치시킨다. 웹 일정은 월/일 블록과 내용 열, Figma 일정은 기존 ScheduleRow 인스턴스를 재사용한다.\n\nBottomNav는 자체 제작 compass/feed/bookmark 24px, stroke 1.75px 아이콘과 텍스트를 조합한다. SVG는 장식이고 접근 가능한 이름은 텍스트가 제공한다. active는 연분홍 배경과 aria-current로 표시하며 웹 링크 높이는64px, Figma 항목64px/전체96px다. 미디어 없음 변형은 그래픽 대신 중립 플레이스홀더를 유지한다.",
     "scope": "Independent project style; existing 30 case categories and 13 component sets retained"
+  },
+  "qualityRevision15": {
+    "date": "2026-09-26",
+    "scope": "Content discovery based on user-selected 2023 Spotify screenshots. KPOP independent visual style retained.",
+    "componentsAdded": [
+      "BrowseTile",
+      "CollectionRail",
+      "CreatorSpotlight"
+    ],
+    "referenceBrief": "docs/08-reference-1.5.md",
+    "caseCount": 30,
+    "templateLevels": 3
   }
 }

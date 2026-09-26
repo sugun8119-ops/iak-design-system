@@ -36,3 +36,12 @@ BottomNav는 자체 제작 compass/feed/bookmark 24px, stroke 1.75px 아이콘�
 
 ## Claude1.4 resume completed
 Session quota reset; resumed the existing project, completed pending implementation and final check_design_system (no issues). Published UI was verified after reload. Detailed evidence and limitations:07-quality-1.4-handoff.md and qa-results.json.
+
+
+## 1.5.0 · 2026-09-26
+- User-selected Spotify 2023 references mapped to KPOP content patterns.
+- Added BrowseTile, CollectionRail and CreatorSpotlight.
+- Added category links, six-story search, result counts, Saved filter and creator Detail variant.
+- Fixed cross-page saved/follow state with sessionStorage and explicit fallback.
+- Authored three original SVG media compositions.
+- Existing 30 case categories retained; no DB/router.

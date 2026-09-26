@@ -1,3 +1,4 @@
+<!-- Current release: 1.5.0. See the Current revision 1.5 section for the active discovery and persistence contracts. -->
 # KPOP_V1 · OFFBEAT
 
 ## STYLE DNA
@@ -76,7 +77,7 @@ Main은 피처·순위·일정, Sub는 검색과 카테고리 필터, Detail은 
 
 ## Quick Start for Claude
 이 문서와 figma-system.json을 함께 컨텍스트로 제공한다. 요청 페이지를 Default Pages 중 선택한 뒤 기존 preview 구조를 재사용한다. 토큰·비율·정보 순서를 유지하고 프로젝트 콘텐츠만 교체한다. 런타임은 정적 HTML/CSS/JS로 시작한다.
-`preview/index.html`을 브라우저에서 직접 열면 된다. 설치·빌드 불필요. 데모 상태는 새로고침 시 초기화된다.
+`preview/index.html`을 브라우저에서 직접 열면 된다. 설치·빌드 불필요. 저장·팔로우는 현재 탭의 sessionStorage로 화면 이동과 새로고침 뒤에도 유지된다.
 
 ## Registered design resources
 
@@ -103,3 +104,16 @@ KPOP: 48px 기본 버튼, 44px 최소 터치 영역, 25~28px 비조작 배지. H
 콘텐츠 아트 방향: Music pink / Stage blue / Culture green. 이는 콘텐츠 그래픽 팔레트이며 브랜드와 상태 토큰은 기존 값을 유지한다. Main은 hero → Latest stories 2개 → ranking → 일정으로 구성한다. 제목·카테고리·읽기 시간은 상세 화면과 일치시킨다. 웹 일정은 월/일 블록과 내용 열, Figma 일정은 기존 ScheduleRow 인스턴스를 재사용한다.
 
 BottomNav는 자체 제작 compass/feed/bookmark 24px, stroke 1.75px 아이콘과 텍스트를 조합한다. SVG는 장식이고 접근 가능한 이름은 텍스트가 제공한다. active는 연분홍 배경과 aria-current로 표시하며 웹 링크 높이는64px, Figma 항목64px/전체96px다. 미디어 없음 변형은 그래픽 대신 중립 플레이스홀더를 유지한다.
+
+
+## Current revision 1.5 · Content discovery
+
+The following supersedes earlier 1.3/1.4 layout and state descriptions. Keep KPOP pink/white/Pretendard and all 30 case categories. Total core components: 16 (13 existing + BrowseTile, CollectionRail, CreatorSpotlight). Main/Sub/Detail remain three template levels; Creator is a Detail variant.
+
+Main: hero → category shortcuts → collection rail → creator entry → latest stories → ranking → schedule. Sub: search → 2-column browse tiles → category tabs → result count → list/empty. Saved is a filtered Sub, not an unrelated Detail page. Detail includes an article and creator variant.
+
+Bottom navigation: Discover / Explore / Saved, original 24px SVG icons with 1.75px strokes and visible labels. Saved stories and followed creator persist with sessionStorage in the current tab; no account or server persistence. Storage-unavailable fallback is explicitly labelled.
+
+Image Direction: original poster, stage-light and collage compositions supplement rings. User-supplied Spotify press images are 2023 reference material, not current 2026 screenshots and not shipped product assets. No real artist/album imagery or source copy is used. See docs/08-reference-1.5.md for mapping and component contracts.
+
+Do: retain the pink masthead and white editorial feed; use artwork and hierarchy for variety; preserve 44px touch targets and visible keyboard focus. Don't: copy Spotify green, logo, icons or content; invent playback for static content; add DB/router or merge project styles.

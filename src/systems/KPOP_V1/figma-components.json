@@ -284,13 +284,13 @@
           "id": "6:2",
           "name": "variant=hero, state=ready",
           "width": 350,
-          "height": 547.5
+          "height": 437.5
         },
         {
           "id": "6:3",
           "name": "variant=hero, state=media-missing",
           "width": 350,
-          "height": 507.5
+          "height": 437.5
         },
         {
           "id": "6:4",
@@ -433,8 +433,110 @@
           "height": 92
         }
       ]
+    },
+    "BrowseTile": {
+      "nodeId": "47:11",
+      "url": "https://www.figma.com/design/VR9GFAKIFEjLWuQonbJVYv?node-id=47-11",
+      "variants": [
+        {
+          "id": "47:3",
+          "name": "category=music, state=default",
+          "width": 169,
+          "height": 112
+        },
+        {
+          "id": "47:4",
+          "name": "category=music, state=selected",
+          "width": 169,
+          "height": 112
+        },
+        {
+          "id": "47:5",
+          "name": "category=stage, state=default",
+          "width": 169,
+          "height": 112
+        },
+        {
+          "id": "47:6",
+          "name": "category=stage, state=selected",
+          "width": 169,
+          "height": 112
+        },
+        {
+          "id": "47:7",
+          "name": "category=culture, state=default",
+          "width": 169,
+          "height": 112
+        },
+        {
+          "id": "47:8",
+          "name": "category=culture, state=selected",
+          "width": 169,
+          "height": 112
+        },
+        {
+          "id": "47:9",
+          "name": "category=saved, state=default",
+          "width": 169,
+          "height": 112
+        },
+        {
+          "id": "47:10",
+          "name": "category=saved, state=selected",
+          "width": 169,
+          "height": 112
+        }
+      ],
+      "source": "preview/components.html",
+      "specification": "figma-system.json#/components"
+    },
+    "CollectionRail": {
+      "nodeId": "47:30",
+      "url": "https://www.figma.com/design/VR9GFAKIFEjLWuQonbJVYv?node-id=47-30",
+      "variants": [
+        {
+          "id": "47:28",
+          "name": "state=ready",
+          "width": 350,
+          "height": 256
+        },
+        {
+          "id": "47:29",
+          "name": "state=empty",
+          "width": 350,
+          "height": 88
+        }
+      ],
+      "source": "preview/components.html",
+      "specification": "figma-system.json#/components"
+    },
+    "CreatorSpotlight": {
+      "nodeId": "47:72",
+      "url": "https://www.figma.com/design/VR9GFAKIFEjLWuQonbJVYv?node-id=47-72",
+      "variants": [
+        {
+          "id": "47:69",
+          "name": "state=default",
+          "width": 350,
+          "height": 535.5
+        },
+        {
+          "id": "47:70",
+          "name": "state=followed",
+          "width": 350,
+          "height": 535.5
+        },
+        {
+          "id": "47:71",
+          "name": "state=media-missing",
+          "width": 350,
+          "height": 535.5
+        }
+      ],
+      "source": "preview/components.html",
+      "specification": "figma-system.json#/components"
     }
   },
   "note": "Native Figma local components. This is a source map, not a published Figma Code Connect integration.",
-  "qualityRevision": "1.4"
+  "qualityRevision": "1.5.0"
 }
