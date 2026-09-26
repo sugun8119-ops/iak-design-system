@@ -1,7 +1,7 @@
 import React from 'react';
 import { Icon } from '../icon/Icon.tsx';
 
-/** KOSAF MobileHeader — Source-derived from mobile screens (1:87784, 1:92154). Hamburger bars are CSS (menu vector not exported). */
+/** KOSAF MobileHeader — Source-derived from mobile screens (1:87784, 1:92154). Menu glyph = KOSAF extension icon "menu" (menu vector not exported from source). */
 export function MobileHeader({ title = '농산물 온라인 도매시장', logoSrc, onMenu, onSearch, onCart, cartCount, back, onBack, style }) {
   const btn = { width: 44, height: 44, display: 'inline-flex', alignItems: 'center', justifyContent: 'center', background: 'none', border: 0, padding: 0, cursor: 'pointer', position: 'relative' };
   return (
@@ -10,7 +10,7 @@ export function MobileHeader({ title = '농산물 온라인 도매시장', logoS
         <button style={btn} aria-label="뒤로" onClick={onBack}><Icon name="navigate" size={24} /></button>
       ) : (
         <button style={btn} aria-label="전체메뉴 열기" onClick={onMenu}>
-          <span aria-hidden="true" style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>{[0, 1, 2].map((i) => <span key={i} style={{ width: 20, height: 2, background: 'var(--kosaf-color-text-primary)' }}></span>)}</span>
+          <Icon name="menu" size={24} tone="primary" />
         </button>
       )}
       <div style={{ flex: 1, textAlign: 'center', fontSize: 18, fontWeight: 700, lineHeight: '26px', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>

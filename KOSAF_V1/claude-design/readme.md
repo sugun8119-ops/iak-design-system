@@ -27,18 +27,20 @@ Direct Figma access was not used; the exports above are the ground truth. Where 
 - `SKILL.md` — Agent Skill entry
 
 ## Components
-49 components. Provenance: **master** = Figma component in 218:570 · **source** = derived from 1:85779 frames/geometry/captures (not a Figma master) · **ext** = KOSAF extension (behaviour/styling defined here).
+50 components. Provenance: **master** = Figma component in 218:570 · **source** = derived from 1:85779 frames/geometry/captures (not a Figma master) · **ext** = KOSAF extension (behaviour/styling defined here).
 
 **1.4.0 patterns (KOSAF extension, not Figma masters)**: PageHeader (제목→설명→행동), FormErrorSummary (필드 오류 vs 제출 실패), MobileFilterSheet (draft/applied 바텀시트). Cards total: 97 (incl. 22 kit cards).
 
-**Actions** — Button (master 218:590) · Badge (master 218:621) · Icon (source, 11 SVG) · FilterChip (source) · BottomActionBar (source)
+**1.5.0 icon management**: IconButton family + icon catalogue + 2 Iconography guideline cards → **100 cards · 50 components · 22 kit cards**.
+
+**Actions** — Button (master 218:590) · Badge (master 218:621) · Icon (source 11 + ext 23) · IconButton (ext, 1.5.0) · FilterChip (source) · BottomActionBar (source)
 **Forms** — Input (master 218:600) · Search (master 218:601) · Checkbox (master 218:608) · Radio (master 218:614) · Select (source 1:98823/1:98859) · Textarea (source 1:87378) · FormField (source 1:89853) · FileUpload (source 1:89966) · DateField (source; native picker) · DateRange (source) · QuantityStepper (source Spinner) · SegmentedControl (ext, 기간 Toggle)
 **Navigation** — Tab (master 218:620) · PaginationItem (master 218:631) · Pagination (source) · Stepper (master 218:642) · ProgressSteps (source 1:90125) · Breadcrumb (ext) · SideNav (source 1:90423) · Header (source 1:86081) · Footer (source 1:86051) · MobileHeader (source) · MobileMenu (source 1:93205)
-**Data Display** — TableRow (master 218:637) · ProductTable (source 1:97566) · DescriptionList (source 1:94245) · MetricCard (source 1:87886, = SmallDataCard) · CompareTable (source 1:90204) · PriceTrend (source frame 1:86445; example data) · Rating (ext, ★ glyph) · Accordion (source 1:90254)
+**Data Display** — TableRow (master 218:637) · ProductTable (source 1:97566) · DescriptionList (source 1:94245) · MetricCard (source 1:87886, = SmallDataCard) · CompareTable (source 1:90204) · PriceTrend (source frame 1:86445; example data) · Rating (ext, KOSAF SVG star) · Accordion (source 1:90254)
 **Commerce** — ProductCard (source 1:91180 / 1:91517) · ProductListItem (source) · CartItem (source) · OrderSummary (source) · ReviewItem (source) · FilterPanel (source 1:97566 / 1:93119)
 **Feedback & Overlay** — Modal (master 218:639) · AlertDialog (source 1:103625) · EmptyState (source copy) · NotificationList (source 1:92553)
 
-Helper exports (not separate families): `IconRegistry`, `DealBadge` (ProductCard), `CloseX` (CSS close mark), default data constants.
+Helper exports (not separate families): `IconRegistry`, `UIIconRegistry`, `IconAliases`, `IconTones`, `resolveIcon`, `DealBadge` (ProductCard), `CloseX` (deprecated → Icon close), default data constants.
 
 **Still not built:** custom Calendar popover (DateField uses the native picker — unverified range), image zoom/lightbox, 가입안내, 공동인증서, main/home pages, the 7.8k-px 판매자 거래 등록 forms (controls exist). The earlier "11 only" limit was lifted by the 2026-09-25 expansion request.
 
@@ -71,11 +73,13 @@ Helper exports (not separate families): `IconRegistry`, `DealBadge` (ProductCard
 - **Transparency**: none except the web modal backdrop.
 - **Contrast (source values, computed)**: white on #059B00 3.69:1 · on #02AC5A 2.98:1 · on #17BF56 2.44:1 · on #E23736 4.35:1. These are the original colours reported as-is; this system makes **no accessibility-conformance judgement**.
 
-## ICONOGRAPHY
-- **11 source SVGs** exported verbatim from 1:85779 (`kosaf-source-icons.json`), stored as `assets/icons/<name>__<figma-id>.svg` and exposed via `<Icon name>` + `IconRegistry` (ids preserved): analytics 1:88929 · search 1:86084 · check 1:88348 (white) · shopping-bag 1:88810 (white fill) · heart 1:91526 (#FF5858) · navigate 1:90282 (points left; rotate for next/chevrons) · purchase 1:88868 · bell 1:86136 · time-history 1:87530 · document-edit 1:88822 · cart 1:91528.
-- Colours are baked into the source SVG and preserved; components only apply rotation or a CSS filter (e.g. white-on-green in MetricCard, grey for un-liked heart).
-- **Not exported → not drawn:** star, close ×, hamburger, shop, person, trade, calendar, list/grid view, social icons. Substitutes: ★ text glyph (Rating), CSS bars/× (MobileHeader, CloseX), dashed empty slots (MobileMenu quick menu), text labels (view toggle).
-- Unicode used: ✓ (Checkbox, as in 218:605), · separator, ▼/▾ menu carets (Polygon 18×18 in header), − / +, ~. Emoji: never.
+## ICONOGRAPHY (1.5.0 icon management)
+- **One API**: `<Icon name mode size tone filled title rotate>` + `<IconButton icon label>`. Catalogue: `components/icon/icons.manifest.json` (canonical kebab name, 한국어 label, category, provenance, nativeSize/viewBox, colorPolicy, allowedSizes, aliases, status, usage). Policy/inventory: `docs/icon-management.md`, `docs/icon-usage-audit.json`.
+- **Source (11)** — verbatim from 1:85779 (`assets/icons/<name>__<figma-id>.svg`, `components/icon/icons.data.js`, byte-identical; SHA-256 checked 1.5.0). `mode="source"` (default) renders them as-is: baked colours, `tone` ignored, **no CSS filter recolouring**. White glyphs (check, shopping-bag, purchase, document-edit) are for green/filled backgrounds only.
+- **KOSAF extension (23)** — authored for 1.5.0, *not extracted from Figma*: close, menu, plus, minus, chevron-left/right/up/down, star, heart-outline, filter, sort, check-mark, calendar, user, store, home, help, grid, list, refresh, chart-line, wallet. 24 grid, 2px round cap/join (1.75 allowed), currentColor; sizes 16/20/24/32; tones current/primary/secondary/muted/disabled/brand/positive/danger/focus/inverse.
+- **Aliases** resolve duplicates (x→close, hamburger→menu, prev/next→chevron-*, like→heart, back→navigate …). Unknown names render a dashed red "?" + one `console.warn` — never a silent null.
+- **Rules**: no text glyphs (× − ★ ▾) or CSS-drawn shapes as icons; icon-only buttons use IconButton with a required Korean label; hit area desktop ≥36 / mobile ≥44 where layout allows. No emoji. No brand/social icons without a supplied source.
+- **Legacy**: `CloseX` kept as a deprecated wrapper → `<Icon name="close">`.
 
 ## Brand & logo
 - **Logo wordmark** 1:86099 supplied as 2× transparent PNG (`assets/brand/logo-wordmark__1-86099@2x.png`, native 292×33, "농산물 온라인 도매시장" set in S-Core Dream ExtraBold). Use at 292×33 (Header) or proportionally; never recolour, stretch or re-typeset. The Footer keeps its source #888 text version.

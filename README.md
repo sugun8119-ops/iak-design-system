@@ -168,6 +168,8 @@ UI/MCP 0.9.1, 사이트/스킬 0.12.0입니다. React 19 소비자에서 발견�
 
 2026-09-27: [Claude Design 시스템](https://claude.ai/design/p/f8c97b66-58c3-463f-9523-26fdd5b960d4)은 **49개 컴포넌트 family · 97개 카드 · 22개 화면 예제**로 보강했습니다. Mobbin·Refero·Land-book 패턴을 KOSAF 규칙에 맞춰 폼 오류, 표 상태, 모바일 필터, 제목 위계에 적용했습니다. [적용 내역](KOSAF_V1/claude-design/docs/reference-enhancement.md) · [대표 QA](KOSAF_V1/reference-enhancement-qa.json). Figma master는 기존 11개입니다.
 
+2026-09-27 · 1.5.0: 아이콘 관리 보강으로 현재 **50개 family · 100개 카드 · 22개 화면 예제**입니다. 원본 SVG11개를 보존하고 UI 확장23개, 별칭33개, 검색/분류 카탈로그, IconButton, 크기·상태 가이드를 추가했습니다. [아이콘 관리](KOSAF_V1/claude-design/docs/icon-management.md) · [아이콘 manifest](KOSAF_V1/claude-design/components/icon/icons.manifest.json) · [검수 결과](KOSAF_V1/icon-management-qa.json).
+
 ## HYNIX_V1 · KPOP_V1 독립 디자인 시스템
 
 [시스템 선택](src/systems/README.md) · [공개 미리보기](https://sugun8119-ops.github.io/iak-design-system/systems/)

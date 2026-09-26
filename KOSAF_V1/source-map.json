@@ -140,16 +140,16 @@
     "sourceCommit": "e384bfa01333984b61275d4537c70cc708bc3c7d",
     "variables": 81,
     "textStyles": 69,
-    "componentFamilies": 49,
+    "componentFamilies": 50,
     "geometryExport": "kosaf-component-geometry.json",
-    "verification": "Native Published library: 97 manifest card files and 49 family folders. Representative published search and exported signup/table browser checks; see reference-enhancement-qa.json for limits.",
-    "cards": 97,
+    "verification": "Native Published system:100cards50families22kits. Source11SVG/data and tokens preserved; icon catalogue and representative interactions checked. See icon-management-qa.json.",
+    "cards": 100,
     "uiKitGroups": 10,
     "uiKitPages": 22,
     "nativeExportDirectory": "claude-design",
     "qa": "claude-design-qa.json",
     "sourceCoverage": "claude-design/docs/source-coverage.md",
-    "expansionVersion": "1.4.0",
+    "expansionVersion": "1.5.0",
     "sourceInventory": "kosaf-source-patterns.json",
     "expandedGeometry": "kosaf-expanded-geometry.json",
     "sourceIcons": "kosaf-source-icons.json",
@@ -158,6 +158,11 @@
     "referenceEnhancementReport": "claude-design/docs/reference-enhancement.md",
     "referenceEnhancementQA": "reference-enhancement-qa.json",
     "referenceMap": "claude-design/docs/reference-map.json",
-    "changedFiles": "reference-changes-2026-09-27.json"
+    "changedFiles": "reference-changes-2026-09-27.json",
+    "iconManifest": "claude-design/components/icon/icons.manifest.json",
+    "iconManagement": "claude-design/docs/icon-management.md",
+    "iconQA": "icon-management-qa.json",
+    "iconSourceCount": 11,
+    "iconExtensionCount": 23
   }
 }

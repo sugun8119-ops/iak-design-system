@@ -1,5 +1,5 @@
 import React from 'react';
-import { CloseX } from '../mobile-menu/MobileMenu.tsx';
+import { Icon } from '../icon/Icon.tsx';
 
 const F = 'var(--kosaf-font)';
 export const SAMPLE_NOTIFICATIONS = ['역경매번호 [127794749] 마감', '역경매번호 [127794749] 자동유찰', '공고번호 [딸기] 에 낙찰자로 선정', '상품번호 [127794749] 지정거래 상품이 등록', '[딸기] 에서 발주반려. 발주번호 [12779474]', '상품번호 [127794749] 가격협상 승인', '상품번호 [127794749] 가격협상 거절'];
@@ -10,7 +10,7 @@ export function NotificationList({ items = SAMPLE_NOTIFICATIONS, title = '알림
     <section aria-label={title} style={{ width: '100%', maxWidth: 390, fontFamily: F, background: '#fff', ...style }}>
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: 72, padding: '0 20px', borderBottom: '1px solid var(--kosaf-color-border-default)' }}>
         <h2 style={{ margin: 0, fontSize: 24, fontWeight: 700, lineHeight: '24px' }}>{title}</h2>
-        {onClose ? <button type="button" aria-label="알림 닫기" onClick={onClose} style={{ width: 44, height: 44, marginRight: -12, background: 'none', border: 0, cursor: 'pointer', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}><CloseX size={16} /></button> : null}
+        {onClose ? <button type="button" aria-label="알림 닫기" onClick={onClose} style={{ width: 44, height: 44, marginRight: -12, background: 'none', border: 0, cursor: 'pointer', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}><Icon name="close" size={20} tone="primary" /></button> : null}
       </div>
       <div style={{ background: 'var(--kosaf-src-panel-bg)', padding: 20 }}>
         <ul style={{ listStyle: 'none', margin: 0, padding: '4px 20px', background: '#fff', borderRadius: 10 }}>

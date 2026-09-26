@@ -24,7 +24,7 @@ export function Header({ logoSrc, menu = MENU, topLeft = TOP_LEFT, topRight = TO
             {logoSrc ? <img src={logoSrc} alt="농산물 온라인 도매시장" width="292" height="33" style={{ display: 'block' }} /> : <span style={{ fontSize: 28, fontWeight: 700, lineHeight: '33px' }}>농산물 온라인 도매시장</span>}
           </a>
           <Search width={579} placeholder={searchPlaceholder} onSubmit={onSearch}
-            leading={<span style={{ fontSize: 18, color: 'var(--kosaf-color-text-secondary)', whiteSpace: 'nowrap' }}>거래방식 ▾</span>}
+            leading={<span style={{ display: 'inline-flex', alignItems: 'center', gap: 4, fontSize: 18, color: 'var(--kosaf-color-text-secondary)', whiteSpace: 'nowrap' }}>거래방식<Icon name="chevron-down" size={16} /></span>}
             trailing={<button type="submit" aria-label="검색" style={{ background: 'none', border: 0, padding: 0, marginRight: 12, cursor: 'pointer', lineHeight: 0 }}><Icon name="search" /></button>} />
           <button onClick={onMall} style={{ flex: '0 0 239px', height: 50, borderRadius: 25, border: 0, background: 'var(--kosaf-color-action-primary)', color: '#fff', fontFamily: F, fontSize: 24, fontWeight: 500, cursor: 'pointer', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: 10 }}>품목도매관 <span aria-hidden="true" style={{ fontSize: 16 }}>▾</span></button>
           <div style={{ marginLeft: 'auto', display: 'flex', gap: 10 }}>

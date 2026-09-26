@@ -1,6 +1,9 @@
 import React from 'react';
+import { UIIconRegistry } from '../icon/Icon.tsx';
 
-/** KOSAF Rating — KOSAF extension: star vectors were not exported, so stars are the "★" text glyph in --kosaf-color-state-warning (#FFE326, observed yellow stars in 1:87593). Read-only or input (radio group, ←/→). */
+const STAR = UIIconRegistry.find((i) => i.name === 'star').d[0];
+
+/** KOSAF Rating — KOSAF extension SVG "star" (not extracted from Figma; source star vector was not exported) — (24 grid) filled --kosaf-color-state-warning (#FFE326, observed yellow in 1:87593), empty = #DDDDDD. Half fill via clip. Read-only or input (radio group, ←/→). */
 export function Rating({ value = 0, onChange, max = 5, size = 18, showValue, readOnly, 'aria-label': ariaLabel = '평점', style }) {
   const [hover, setHover] = React.useState(0);
   const interactive = !readOnly && !!onChange;
@@ -8,8 +11,9 @@ export function Rating({ value = 0, onChange, max = 5, size = 18, showValue, rea
   const star = (i) => {
     const fill = Math.max(0, Math.min(1, shown - i));
     return (
-      <span key={i} aria-hidden="true" style={{ position: 'relative', display: 'inline-block', width: size, fontSize: size, lineHeight: 1, color: 'var(--kosaf-color-border-default)' }}>★
-        <span style={{ position: 'absolute', left: 0, top: 0, width: fill * 100 + '%', overflow: 'hidden', color: 'var(--kosaf-color-state-warning)' }}>★</span>
+      <span key={i} aria-hidden="true" style={{ position: 'relative', display: 'inline-block', width: size, height: size, lineHeight: 0, verticalAlign: 'middle' }}>
+        <svg width={size} height={size} viewBox="0 0 24 24" style={{ display: 'block' }}><path d={STAR} fill="var(--kosaf-color-border-default)" /></svg>
+        <span style={{ position: 'absolute', left: 0, top: 0, width: fill * 100 + '%', height: size, overflow: 'hidden' }}><svg width={size} height={size} viewBox="0 0 24 24" style={{ display: 'block' }}><path d={STAR} fill="var(--kosaf-color-state-warning)" /></svg></span>
       </span>
     );
   };

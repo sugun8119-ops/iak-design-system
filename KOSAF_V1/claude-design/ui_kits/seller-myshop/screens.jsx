@@ -24,7 +24,7 @@ function SellerShopPC() {
         <KS.SideNav title="마이샵관리" groups={SELLER_NAV} active={nav} onSelect={setNav} />
         <div style={{ flex: 1, minWidth: 0, display: 'flex', flexDirection: 'column', gap: 50 }}>
           <PageHead size={30} title="마이샵 홈" desc="정산 예정금액과 진행 중인 거래를 확인하고 상세를 처리합니다." style={{ marginBottom: 0 }} />
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 20 }}>{[['정산예정', '10,000', 'analytics'], ['정가거래', '12', 'purchase'], ['입찰거래', '3'], ['가격협상', '2']].map(([l, v, ic]) => <KS.MetricCard key={l} width="100%" label={l} unit={l === '정산예정' ? '(만원)' : '(건)'} value={v} icon={ic ? <KS.Icon name={ic} size={34} style={{ filter: 'brightness(0) invert(1)' }} /> : null} />)}</div>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 20 }}>{[['정산예정', '10,000', 'wallet'], ['정가거래', '12', 'list'], ['입찰거래', '3'], ['가격협상', '2']].map(([l, v, ic]) => <KS.MetricCard key={l} width="100%" label={l} unit={l === '정산예정' ? '(만원)' : '(건)'} value={v} icon={ic ? <KS.Icon name={ic} size={32} tone="inverse" /> : null} />)}</div>
           <div><SectionTitle size={24}>판매정보</SectionTitle><ShopInfo /></div>
           <div>
             <SectionTitle size={24} right={<KS.SegmentedControl value={period} onChange={setPeriod} />}>정가거래 목록</SectionTitle>
@@ -46,7 +46,7 @@ function SellerShopMo() {
   return (
     <MoPage>
       <div style={{ padding: '20px 16px 0' }}><PageHead mobile title="마이샵 홈" /></div>
-      <div style={{ padding: '0 16px 20px', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>{[['정산예정', '10,000'], ['정가거래', '12']].map(([l, v]) => <KS.MetricCard key={l} width="100%" label={l} value={v} icon={<KS.Icon name="analytics" size={34} style={{ filter: 'brightness(0) invert(1)' }} />} />)}</div>
+      <div style={{ padding: '0 16px 20px', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>{[['정산예정', '10,000'], ['정가거래', '12']].map(([l, v]) => <KS.MetricCard key={l} width="100%" label={l} value={v} icon={<KS.Icon name={l === '정산예정' ? 'wallet' : 'list'} size={32} tone="inverse" />} />)}</div>
       <div role="tablist" style={{ display: 'flex', gap: 8, padding: '0 16px 16px' }}>{['판매정보', '거래목록'].map((t, i) => <KS.Tab key={t} selected={tab === i} onClick={() => setTab(i)} width={120}>{t}</KS.Tab>)}</div>
       {tab === 0 ? <ShopInfo mobile /> : <div role="table">{DEALS.map((d, i) => <KS.TableRow key={i} device="mobile" cells={[d[1], d[4]]} style={{ borderTop: i ? 0 : undefined }} />)}</div>}
       <div style={{ padding: '20px 16px 32px' }}><DemoNote>수치·목록은 예시 데이터입니다</DemoNote></div>

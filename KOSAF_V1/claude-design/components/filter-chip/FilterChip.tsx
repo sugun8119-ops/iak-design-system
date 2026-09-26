@@ -1,4 +1,5 @@
 import React from 'react';
+import { Icon } from '../icon/Icon.tsx';
 
 const F = 'var(--kosaf-font)';
 
@@ -8,7 +9,7 @@ export function FilterChip({ selected, onToggle, onRemove, variant = 'toggle', d
     return (
       <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontFamily: F, fontSize: 16, lineHeight: '24px', color: 'var(--kosaf-color-action-primary)', ...style }}>
         {children}
-        <button type="button" aria-label={(typeof children === 'string' ? children : '') + ' 필터 해제'} onClick={onRemove} style={{ width: 24, height: 24, padding: 0, border: 0, background: 'none', cursor: 'pointer', fontSize: 18, lineHeight: '24px', color: 'var(--kosaf-color-text-secondary)' }}>×</button>
+        <button type="button" aria-label={(typeof children === 'string' ? children : '') + ' 필터 해제'} onClick={onRemove} style={{ width: 24, height: 24, padding: 0, border: 0, background: 'none', cursor: 'pointer', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', color: 'var(--kosaf-color-text-secondary)' }}><Icon name="close" size={16} /></button>
       </span>
     );
   }

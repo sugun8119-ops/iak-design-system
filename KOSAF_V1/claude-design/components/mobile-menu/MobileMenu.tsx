@@ -8,10 +8,12 @@ const SECTIONS = [
   { label: '판매유형별', items: ['위탁', '매수', '직접판매'] },
   { label: '도매시장별', items: ['서울가락', '서울강서', '수원', '안양'] },
 ];
-const QUICK = [{ label: '홈' }, { label: '거래관리' }, { label: '주문관리' }, { label: '관심목록', icon: 'heart' }, { label: 'Q&A' }, { label: '회원 정보 관리' }];
+const QUICK = [{ label: '홈', icon: 'home' }, { label: '거래관리', icon: 'store' }, { label: '주문관리', icon: 'list' }, { label: '관심목록', icon: 'heart-outline' }, { label: 'Q&A', icon: 'help' }, { label: '회원 정보 관리', icon: 'user' }];
 
+/** @deprecated 1.5.0 — use <Icon name="close" />. Kept as a wrapper for backward compatibility. */
 export function CloseX({ size = 18, color = 'var(--kosaf-src-text-strong)' }) {
-  return <span aria-hidden="true" style={{ position: 'relative', display: 'inline-block', width: size, height: size }}>{[45, -45].map((d) => <span key={d} style={{ position: 'absolute', left: -2, top: size / 2 - 1, width: size + 4, height: 2, background: color, transform: 'rotate(' + d + 'deg)' }}></span>)}</span>;
+  const s = size <= 16 ? 16 : size <= 20 ? 20 : 24;
+  return <Icon name="close" size={s} tone={color} />;
 }
 
 /** KOSAF MobileMenu — Source-derived from 모바일 메뉴 1:93205 (390×845). Accordion sections, quick-menu grid, footer links. */
@@ -24,7 +26,7 @@ export function MobileMenu({ sections = SECTIONS, quick = QUICK, defaultOpen = 1
     <nav ref={ref} aria-label="전체메뉴" style={{ width: '100%', maxWidth: 391, background: '#fff', fontFamily: F, ...style }}>
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: 75, padding: '0 20px', borderBottom: '1px solid var(--kosaf-color-border-default)' }}>
         <span style={{ fontSize: 24, fontWeight: 700, lineHeight: '33px' }}>전체메뉴</span>
-        <button aria-label="메뉴 닫기" onClick={onClose} style={{ width: 44, height: 44, marginRight: -10, background: 'none', border: 0, cursor: 'pointer', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}><CloseX /></button>
+        <button aria-label="메뉴 닫기" onClick={onClose} style={{ width: 44, height: 44, marginRight: -10, background: 'none', border: 0, cursor: 'pointer', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}><Icon name="close" size={24} tone="primary" /></button>
       </div>
       {sections.map((s, i) => {
         const on = open === i;
@@ -49,7 +51,7 @@ export function MobileMenu({ sections = SECTIONS, quick = QUICK, defaultOpen = 1
           const q = quick[i];
           return q ? (
             <button key={i} onClick={() => onSelect && onSelect(q.label)} style={{ height: 79, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 8, background: '#fff', border: 0, borderRight: i % 4 < 3 ? '1px solid var(--kosaf-gray-100)' : 0, borderBottom: '1px solid var(--kosaf-gray-100)', cursor: 'pointer', fontFamily: F, fontSize: 13, color: 'var(--kosaf-src-text-strong)' }}>
-              {q.icon ? <Icon name={q.icon} size={30} /> : <span aria-hidden="true" style={{ width: 32, height: 32, border: '1px dashed var(--kosaf-color-border-strong)', borderRadius: 3 }} title="icon slot"></span>}
+              {q.icon ? <Icon name={q.icon} mode="ui" size={32} strokeWidth={1.75} tone="primary" /> : <span aria-hidden="true" style={{ width: 32, height: 32, border: '1px dashed var(--kosaf-color-border-strong)', borderRadius: 3 }} title="icon slot"></span>}
               {q.label}
             </button>
           ) : <span key={i} style={{ borderRight: i % 4 < 3 ? '1px solid var(--kosaf-gray-100)' : 0, borderBottom: '1px solid var(--kosaf-gray-100)' }}></span>;

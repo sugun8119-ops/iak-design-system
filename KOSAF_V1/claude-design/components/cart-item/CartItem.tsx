@@ -2,7 +2,7 @@ import React from 'react';
 import { Checkbox } from '../checkbox/Checkbox.jsx';
 import { QuantityStepper } from '../quantity-stepper/QuantityStepper.tsx';
 import { DateField } from '../date-field/DateField.tsx';
-import { CloseX } from '../mobile-menu/MobileMenu.tsx';
+import { Icon } from '../icon/Icon.tsx';
 import { ImageSlot } from '../product-card/ProductCard.tsx';
 
 const F = 'var(--kosaf-font)';
@@ -24,7 +24,7 @@ export function CartItem({ imageSrc, title = '프리미엄 부사 꿀사과 5kg'
             {specs.map(([k, v]) => <React.Fragment key={k}><dt style={{ color: 'var(--kosaf-color-text-secondary)', whiteSpace: 'nowrap' }}>{k}</dt><dd style={{ margin: 0, fontVariantNumeric: 'tabular-nums' }}>{v}</dd></React.Fragment>)}
           </dl>
         </div>
-        {onRemove ? <button type="button" aria-label={title + ' 삭제'} onClick={onRemove} style={{ width: 32, height: 32, background: 'none', border: 0, cursor: 'pointer', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}><CloseX size={14} /></button> : null}
+        {onRemove ? <button type="button" aria-label={title + ' 삭제'} onClick={onRemove} style={{ width: 32, height: 32, background: 'none', border: 0, cursor: 'pointer', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}><Icon name="close" size={16} tone="primary" /></button> : null}
       </div>
       <div style={{ marginTop: 14, display: 'flex', flexDirection: 'column' }}>
         <div style={row}><span style={{ whiteSpace: 'nowrap' }}>주문수량</span>{editableQuantity ? <QuantityStepper value={quantity ?? 1} onChange={onQuantity} /> : <strong style={{ fontSize: 18, color: 'var(--kosaf-color-text-muted)' }}>{quantity}</strong>}</div>

@@ -1,8 +1,8 @@
 // 구매자 마이페이지 홈 — Source: 1:88132 (PC 1920×2622), 1:87784 (Mo 390×2203), LNB 1:90423, MetricCard 1:87886
-const METRICS = [['여신금액', '10,000', 'purchase'], ['사용금액', '1,000', 'analytics'], ['한도금액', '9,000'], ['사용가능금액', '8,800']];
+const METRICS = [['여신금액', '10,000', 'wallet'], ['사용금액', '1,000', 'chart-line'], ['한도금액', '9,000'], ['사용가능금액', '8,800']];
 const FLOW = [['주문', 2], ['상품준비', 1], ['출고', 1], ['인수', 0], ['구매확정', 3]];
 const QNA = [['답변대기', '주문한지 1주가 지났는데 아직 배송이 시작되지 않았어요.', '2023-05-08'], ['답변완료', '납품장소를 변경할 수 있나요?', '2023-04-28'], ['답변완료', '세금계산서 발행 일정이 궁금합니다.', '2023-04-21']];
-const icoW = (n) => (n ? <KS.Icon name={n} size={34} style={{ filter: 'brightness(0) invert(1)' }} /> : null);
+const icoW = (n) => (n ? <KS.Icon name={n} size={32} tone="inverse" /> : null);
 
 function Welcome({ mobile }) {
   return (

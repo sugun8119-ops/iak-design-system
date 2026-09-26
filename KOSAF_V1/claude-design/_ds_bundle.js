@@ -1,4 +1,4 @@
-/* @ds-bundle: {"format":4,"namespace":"KOSAFV1ProjectDesignSystem_f8c97b","components":[{"name":"Accordion","sourcePath":"components/accordion/Accordion.tsx"},{"name":"AlertDialog","sourcePath":"components/alert-dialog/AlertDialog.tsx"},{"name":"Badge","sourcePath":"components/badge/Badge.jsx"},{"name":"BottomActionBar","sourcePath":"components/bottom-action-bar/BottomActionBar.tsx"},{"name":"Breadcrumb","sourcePath":"components/breadcrumb/Breadcrumb.tsx"},{"name":"Button","sourcePath":"components/button/Button.jsx"},{"name":"CartItem","sourcePath":"components/cart-item/CartItem.tsx"},{"name":"Checkbox","sourcePath":"components/checkbox/Checkbox.jsx"},{"name":"CompareTable","sourcePath":"components/compare-table/CompareTable.tsx"},{"name":"DateField","sourcePath":"components/date-field/DateField.tsx"},{"name":"DateRange","sourcePath":"components/date-range/DateRange.tsx"},{"name":"DescriptionList","sourcePath":"components/description-list/DescriptionList.tsx"},{"name":"EMPTY_STATE_PRESETS","sourcePath":"components/empty-state/EmptyState.tsx"},{"name":"EmptyState","sourcePath":"components/empty-state/EmptyState.tsx"},{"name":"FileUpload","sourcePath":"components/file-upload/FileUpload.tsx"},{"name":"FilterChip","sourcePath":"components/filter-chip/FilterChip.tsx"},{"name":"DEFAULT_FILTER_GROUPS","sourcePath":"components/filter-panel/FilterPanel.tsx"},{"name":"FilterPanel","sourcePath":"components/filter-panel/FilterPanel.tsx"},{"name":"Footer","sourcePath":"components/footer/Footer.tsx"},{"name":"FormErrorSummary","sourcePath":"components/form-error-summary/FormErrorSummary.tsx"},{"name":"FormField","sourcePath":"components/form-field/FormField.tsx"},{"name":"Header","sourcePath":"components/header/Header.tsx"},{"name":"IconRegistry","sourcePath":"components/icon/Icon.tsx"},{"name":"Icon","sourcePath":"components/icon/Icon.tsx"},{"name":"KOSAF_ICONS","sourcePath":"components/icon/icons.data.js"},{"name":"Input","sourcePath":"components/input/Input.jsx"},{"name":"MetricCard","sourcePath":"components/metric-card/MetricCard.tsx"},{"name":"MobileFilterSheet","sourcePath":"components/mobile-filter-sheet/MobileFilterSheet.tsx"},{"name":"MobileHeader","sourcePath":"components/mobile-header/MobileHeader.tsx"},{"name":"CloseX","sourcePath":"components/mobile-menu/MobileMenu.tsx"},{"name":"MobileMenu","sourcePath":"components/mobile-menu/MobileMenu.tsx"},{"name":"Modal","sourcePath":"components/modal/Modal.jsx"},{"name":"SAMPLE_NOTIFICATIONS","sourcePath":"components/notification-list/NotificationList.tsx"},{"name":"NotificationList","sourcePath":"components/notification-list/NotificationList.tsx"},{"name":"OrderSummary","sourcePath":"components/order-summary/OrderSummary.tsx"},{"name":"PageHeader","sourcePath":"components/page-header/PageHeader.tsx"},{"name":"PaginationItem","sourcePath":"components/pagination-item/PaginationItem.jsx"},{"name":"Pagination","sourcePath":"components/pagination/Pagination.tsx"},{"name":"EXAMPLE_PRICE_SERIES","sourcePath":"components/price-trend/PriceTrend.tsx"},{"name":"PriceTrend","sourcePath":"components/price-trend/PriceTrend.tsx"},{"name":"ImageSlot","sourcePath":"components/product-card/ProductCard.tsx"},{"name":"DealBadge","sourcePath":"components/product-card/ProductCard.tsx"},{"name":"ProductCard","sourcePath":"components/product-card/ProductCard.tsx"},{"name":"ProductListItem","sourcePath":"components/product-list-item/ProductListItem.tsx"},{"name":"PRODUCT_TABLE_COLUMNS","sourcePath":"components/product-table/ProductTable.tsx"},{"name":"ProductTable","sourcePath":"components/product-table/ProductTable.tsx"},{"name":"ProgressSteps","sourcePath":"components/progress-steps/ProgressSteps.tsx"},{"name":"QuantityStepper","sourcePath":"components/quantity-stepper/QuantityStepper.tsx"},{"name":"Radio","sourcePath":"components/radio/Radio.jsx"},{"name":"Rating","sourcePath":"components/rating/Rating.tsx"},{"name":"ReviewItem","sourcePath":"components/review-item/ReviewItem.tsx"},{"name":"Search","sourcePath":"components/search/Search.jsx"},{"name":"SegmentedControl","sourcePath":"components/segmented-control/SegmentedControl.tsx"},{"name":"Select","sourcePath":"components/select/Select.tsx"},{"name":"BUYER_NAV","sourcePath":"components/side-nav/SideNav.tsx"},{"name":"SideNav","sourcePath":"components/side-nav/SideNav.tsx"},{"name":"Stepper","sourcePath":"components/stepper/Stepper.jsx"},{"name":"Tab","sourcePath":"components/tab/Tab.jsx"},{"name":"TableRow","sourcePath":"components/table-row/TableRow.jsx"},{"name":"Textarea","sourcePath":"components/textarea/Textarea.tsx"}],"sourceHashes":{"components/accordion/Accordion.tsx":"8560aa05e22e","components/alert-dialog/AlertDialog.tsx":"44425b4ef882","components/badge/Badge.jsx":"edfca979276b","components/bottom-action-bar/BottomActionBar.tsx":"57a5f94d4436","components/breadcrumb/Breadcrumb.tsx":"3546712a7b5d","components/button/Button.jsx":"77ef0cb16c7c","components/cart-item/CartItem.tsx":"9977c13eb016","components/checkbox/Checkbox.jsx":"748aefc9df7d","components/compare-table/CompareTable.tsx":"02479305a67a","components/date-field/DateField.tsx":"fcf7f48512e1","components/date-range/DateRange.tsx":"5566407845f5","components/description-list/DescriptionList.tsx":"621ef105b820","components/empty-state/EmptyState.tsx":"a63d32ea38b7","components/file-upload/FileUpload.tsx":"4e450c291a73","components/filter-chip/FilterChip.tsx":"55952a0eb31d","components/filter-panel/FilterPanel.tsx":"8e30744454be","components/footer/Footer.tsx":"c7ab7c05ec89","components/form-error-summary/FormErrorSummary.tsx":"bce1ff2efb82","components/form-field/FormField.tsx":"cad7366fcafd","components/header/Header.tsx":"c4bdac51314d","components/icon/Icon.tsx":"21804f08e5bf","components/icon/icons.data.js":"1f82893c6d66","components/input/Input.jsx":"3532a15127cf","components/metric-card/MetricCard.tsx":"5201fb65d364","components/mobile-filter-sheet/MobileFilterSheet.tsx":"f08792bd3bf1","components/mobile-header/MobileHeader.tsx":"402cca9d49f8","components/mobile-menu/MobileMenu.tsx":"d37309ac207d","components/modal/Modal.jsx":"629455cea605","components/notification-list/NotificationList.tsx":"9ffa759a8284","components/order-summary/OrderSummary.tsx":"dbfb64437d95","components/page-header/PageHeader.tsx":"7dd72be9108f","components/pagination-item/PaginationItem.jsx":"7e2ef2fb0efa","components/pagination/Pagination.tsx":"d620ccc9c1b0","components/price-trend/PriceTrend.tsx":"70e1b798e407","components/product-card/ProductCard.tsx":"3637ada2bf50","components/product-list-item/ProductListItem.tsx":"048cdc35efd6","components/product-table/ProductTable.tsx":"dca3e820b8ea","components/progress-steps/ProgressSteps.tsx":"52c10c6d4b2a","components/quantity-stepper/QuantityStepper.tsx":"36be6baac8ee","components/radio/Radio.jsx":"611574d2b25b","components/rating/Rating.tsx":"f46fd79aca51","components/review-item/ReviewItem.tsx":"0566eacd93b3","components/search/Search.jsx":"99eb34ed21a7","components/segmented-control/SegmentedControl.tsx":"886ff4520da5","components/select/Select.tsx":"fec557876fa7","components/side-nav/SideNav.tsx":"058b075d3562","components/stepper/Stepper.jsx":"dc152d73de22","components/tab/Tab.jsx":"72cfb7408f43","components/table-row/TableRow.jsx":"63a4c3cdf9de","components/textarea/Textarea.tsx":"7d0862d8af5a","guidelines/card-kit.js":"18b3cd771d81","guidelines/source-styles.js":"ce6425475665","ui_kits/_shared/shell.jsx":"961381b5fb22","ui_kits/buyer-mypage/screens.jsx":"6c8118e24250","ui_kits/cart/screens.jsx":"80e203746f97","ui_kits/checkout/screens.jsx":"9f15fa716dac","ui_kits/login/screens.jsx":"afc82333cec1","ui_kits/product-detail/screens.jsx":"f0545c564b1d","ui_kits/search-results/screens.jsx":"6367151f6252","ui_kits/seller-myshop/screens.jsx":"10c015e25f3b","ui_kits/seller-signup/screens.jsx":"a18ac484e316","ui_kits/support/screens.jsx":"f798557c7192"},"inlinedExternals":[],"unexposedExports":[]} */
+/* @ds-bundle: {"format":4,"namespace":"KOSAFV1ProjectDesignSystem_f8c97b","components":[{"name":"Accordion","sourcePath":"components/accordion/Accordion.tsx"},{"name":"AlertDialog","sourcePath":"components/alert-dialog/AlertDialog.tsx"},{"name":"Badge","sourcePath":"components/badge/Badge.jsx"},{"name":"BottomActionBar","sourcePath":"components/bottom-action-bar/BottomActionBar.tsx"},{"name":"Breadcrumb","sourcePath":"components/breadcrumb/Breadcrumb.tsx"},{"name":"Button","sourcePath":"components/button/Button.jsx"},{"name":"CartItem","sourcePath":"components/cart-item/CartItem.tsx"},{"name":"Checkbox","sourcePath":"components/checkbox/Checkbox.jsx"},{"name":"CompareTable","sourcePath":"components/compare-table/CompareTable.tsx"},{"name":"DateField","sourcePath":"components/date-field/DateField.tsx"},{"name":"DateRange","sourcePath":"components/date-range/DateRange.tsx"},{"name":"DescriptionList","sourcePath":"components/description-list/DescriptionList.tsx"},{"name":"EMPTY_STATE_PRESETS","sourcePath":"components/empty-state/EmptyState.tsx"},{"name":"EmptyState","sourcePath":"components/empty-state/EmptyState.tsx"},{"name":"FileUpload","sourcePath":"components/file-upload/FileUpload.tsx"},{"name":"FilterChip","sourcePath":"components/filter-chip/FilterChip.tsx"},{"name":"DEFAULT_FILTER_GROUPS","sourcePath":"components/filter-panel/FilterPanel.tsx"},{"name":"FilterPanel","sourcePath":"components/filter-panel/FilterPanel.tsx"},{"name":"Footer","sourcePath":"components/footer/Footer.tsx"},{"name":"FormErrorSummary","sourcePath":"components/form-error-summary/FormErrorSummary.tsx"},{"name":"FormField","sourcePath":"components/form-field/FormField.tsx"},{"name":"Header","sourcePath":"components/header/Header.tsx"},{"name":"IconButton","sourcePath":"components/icon-button/IconButton.tsx"},{"name":"IconRegistry","sourcePath":"components/icon/Icon.tsx"},{"name":"UIIconRegistry","sourcePath":"components/icon/Icon.tsx"},{"name":"IconAliases","sourcePath":"components/icon/Icon.tsx"},{"name":"IconTones","sourcePath":"components/icon/Icon.tsx"},{"name":"Icon","sourcePath":"components/icon/Icon.tsx"},{"name":"KOSAF_ICONS","sourcePath":"components/icon/icons.data.js"},{"name":"KOSAF_UI_ICONS","sourcePath":"components/icon/icons.ui.js"},{"name":"KOSAF_ICON_ALIASES","sourcePath":"components/icon/icons.ui.js"},{"name":"KOSAF_ICON_TONES","sourcePath":"components/icon/icons.ui.js"},{"name":"Input","sourcePath":"components/input/Input.jsx"},{"name":"MetricCard","sourcePath":"components/metric-card/MetricCard.tsx"},{"name":"MobileFilterSheet","sourcePath":"components/mobile-filter-sheet/MobileFilterSheet.tsx"},{"name":"MobileHeader","sourcePath":"components/mobile-header/MobileHeader.tsx"},{"name":"CloseX","sourcePath":"components/mobile-menu/MobileMenu.tsx"},{"name":"MobileMenu","sourcePath":"components/mobile-menu/MobileMenu.tsx"},{"name":"Modal","sourcePath":"components/modal/Modal.jsx"},{"name":"SAMPLE_NOTIFICATIONS","sourcePath":"components/notification-list/NotificationList.tsx"},{"name":"NotificationList","sourcePath":"components/notification-list/NotificationList.tsx"},{"name":"OrderSummary","sourcePath":"components/order-summary/OrderSummary.tsx"},{"name":"PageHeader","sourcePath":"components/page-header/PageHeader.tsx"},{"name":"PaginationItem","sourcePath":"components/pagination-item/PaginationItem.jsx"},{"name":"Pagination","sourcePath":"components/pagination/Pagination.tsx"},{"name":"EXAMPLE_PRICE_SERIES","sourcePath":"components/price-trend/PriceTrend.tsx"},{"name":"PriceTrend","sourcePath":"components/price-trend/PriceTrend.tsx"},{"name":"ImageSlot","sourcePath":"components/product-card/ProductCard.tsx"},{"name":"DealBadge","sourcePath":"components/product-card/ProductCard.tsx"},{"name":"ProductCard","sourcePath":"components/product-card/ProductCard.tsx"},{"name":"ProductListItem","sourcePath":"components/product-list-item/ProductListItem.tsx"},{"name":"PRODUCT_TABLE_COLUMNS","sourcePath":"components/product-table/ProductTable.tsx"},{"name":"ProductTable","sourcePath":"components/product-table/ProductTable.tsx"},{"name":"ProgressSteps","sourcePath":"components/progress-steps/ProgressSteps.tsx"},{"name":"QuantityStepper","sourcePath":"components/quantity-stepper/QuantityStepper.tsx"},{"name":"Radio","sourcePath":"components/radio/Radio.jsx"},{"name":"Rating","sourcePath":"components/rating/Rating.tsx"},{"name":"ReviewItem","sourcePath":"components/review-item/ReviewItem.tsx"},{"name":"Search","sourcePath":"components/search/Search.jsx"},{"name":"SegmentedControl","sourcePath":"components/segmented-control/SegmentedControl.tsx"},{"name":"Select","sourcePath":"components/select/Select.tsx"},{"name":"BUYER_NAV","sourcePath":"components/side-nav/SideNav.tsx"},{"name":"SideNav","sourcePath":"components/side-nav/SideNav.tsx"},{"name":"Stepper","sourcePath":"components/stepper/Stepper.jsx"},{"name":"Tab","sourcePath":"components/tab/Tab.jsx"},{"name":"TableRow","sourcePath":"components/table-row/TableRow.jsx"},{"name":"Textarea","sourcePath":"components/textarea/Textarea.tsx"}],"sourceHashes":{"components/accordion/Accordion.tsx":"8560aa05e22e","components/alert-dialog/AlertDialog.tsx":"44425b4ef882","components/badge/Badge.jsx":"edfca979276b","components/bottom-action-bar/BottomActionBar.tsx":"a298e835f84e","components/breadcrumb/Breadcrumb.tsx":"3546712a7b5d","components/button/Button.jsx":"77ef0cb16c7c","components/cart-item/CartItem.tsx":"d5fec14da426","components/checkbox/Checkbox.jsx":"748aefc9df7d","components/compare-table/CompareTable.tsx":"02479305a67a","components/date-field/DateField.tsx":"fcf7f48512e1","components/date-range/DateRange.tsx":"5566407845f5","components/description-list/DescriptionList.tsx":"621ef105b820","components/empty-state/EmptyState.tsx":"a63d32ea38b7","components/file-upload/FileUpload.tsx":"66e23b27d4e2","components/filter-chip/FilterChip.tsx":"aa5e5287c250","components/filter-panel/FilterPanel.tsx":"da923a09457f","components/footer/Footer.tsx":"c7ab7c05ec89","components/form-error-summary/FormErrorSummary.tsx":"bce1ff2efb82","components/form-field/FormField.tsx":"cad7366fcafd","components/header/Header.tsx":"96af1d64202e","components/icon-button/IconButton.tsx":"25685b26664c","components/icon/Icon.tsx":"97ad4e2debe9","components/icon/icons.data.js":"1f82893c6d66","components/icon/icons.ui.js":"518bbffb4e5a","components/input/Input.jsx":"3532a15127cf","components/metric-card/MetricCard.tsx":"5201fb65d364","components/mobile-filter-sheet/MobileFilterSheet.tsx":"f08792bd3bf1","components/mobile-header/MobileHeader.tsx":"c94a8cdd76a2","components/mobile-menu/MobileMenu.tsx":"27bcc775cdb6","components/modal/Modal.jsx":"629455cea605","components/notification-list/NotificationList.tsx":"fa2ea74ddb1f","components/order-summary/OrderSummary.tsx":"dbfb64437d95","components/page-header/PageHeader.tsx":"7dd72be9108f","components/pagination-item/PaginationItem.jsx":"7e2ef2fb0efa","components/pagination/Pagination.tsx":"d620ccc9c1b0","components/price-trend/PriceTrend.tsx":"70e1b798e407","components/product-card/ProductCard.tsx":"40acfdd44ffb","components/product-list-item/ProductListItem.tsx":"048cdc35efd6","components/product-table/ProductTable.tsx":"66ecbda84884","components/progress-steps/ProgressSteps.tsx":"52c10c6d4b2a","components/quantity-stepper/QuantityStepper.tsx":"0645edf3f5a5","components/radio/Radio.jsx":"611574d2b25b","components/rating/Rating.tsx":"e749a99476ac","components/review-item/ReviewItem.tsx":"0566eacd93b3","components/search/Search.jsx":"99eb34ed21a7","components/segmented-control/SegmentedControl.tsx":"886ff4520da5","components/select/Select.tsx":"00d4d10ece26","components/side-nav/SideNav.tsx":"058b075d3562","components/stepper/Stepper.jsx":"dc152d73de22","components/tab/Tab.jsx":"72cfb7408f43","components/table-row/TableRow.jsx":"63a4c3cdf9de","components/textarea/Textarea.tsx":"7d0862d8af5a","guidelines/card-kit.js":"18b3cd771d81","guidelines/source-styles.js":"ce6425475665","ui_kits/_shared/shell.jsx":"961381b5fb22","ui_kits/buyer-mypage/screens.jsx":"5008dff37dbe","ui_kits/cart/screens.jsx":"80e203746f97","ui_kits/checkout/screens.jsx":"1487e307e6f9","ui_kits/login/screens.jsx":"afc82333cec1","ui_kits/product-detail/screens.jsx":"f0545c564b1d","ui_kits/search-results/screens.jsx":"6367151f6252","ui_kits/seller-myshop/screens.jsx":"39783e95b283","ui_kits/seller-signup/screens.jsx":"a18ac484e316","ui_kits/support/screens.jsx":"f798557c7192"},"inlinedExternals":[],"unexposedExports":[{"name":"resolveIcon","sourcePath":"components/icon/Icon.tsx"}]} */
 
 (() => {
 
@@ -756,203 +756,6 @@ function EmptyState({
 Object.assign(__ds_scope, { EMPTY_STATE_PRESETS, EmptyState });
 })(); } catch (e) { __ds_ns.__errors.push({ path: "components/empty-state/EmptyState.tsx", error: String((e && e.message) || e) }); }
 
-// components/file-upload/FileUpload.tsx
-try { (() => {
-const F = 'var(--kosaf-font)';
-
-/** KOSAF FileUpload — Source-derived from 첨부파일2 1:89966 (field 360×45 r3 + "찾아보기" 99×45 r3 #F8F8F8, 16/500). Uses the native file picker; upload itself is a demo. */
-function FileUpload({
-  files,
-  defaultFiles = [],
-  onChange,
-  accept,
-  multiple,
-  maxSizeMB = 4,
-  buttonLabel = '찾아보기',
-  placeholder = '',
-  width = 360,
-  disabled,
-  error,
-  id,
-  style
-}) {
-  const [inner, setInner] = React.useState(defaultFiles);
-  const list = files !== undefined ? files : inner;
-  const ref = React.useRef(null);
-  const set = next => {
-    if (files === undefined) setInner(next);
-    onChange && onChange(next);
-  };
-  const add = e => {
-    const picked = Array.from(e.target.files || []).map(f => ({
-      name: f.name,
-      size: f.size,
-      tooLarge: f.size > maxSizeMB * 1048576
-    }));
-    set(multiple ? list.concat(picked) : picked.slice(0, 1));
-    e.target.value = '';
-  };
-  return /*#__PURE__*/React.createElement("div", {
-    style: {
-      display: 'flex',
-      gap: 10,
-      alignItems: 'center',
-      fontFamily: F,
-      ...style
-    }
-  }, /*#__PURE__*/React.createElement("div", {
-    style: {
-      boxSizing: 'border-box',
-      width,
-      maxWidth: '100%',
-      minHeight: 45,
-      display: 'flex',
-      flexWrap: 'wrap',
-      alignItems: 'center',
-      gap: 8,
-      padding: '6px 14px',
-      border: '1px solid ' + (error ? 'var(--kosaf-color-action-danger)' : 'var(--kosaf-color-border-default)'),
-      borderRadius: 3,
-      background: disabled ? 'var(--kosaf-color-bg-subtle)' : '#fff'
-    }
-  }, list.length ? list.map((f, i) => /*#__PURE__*/React.createElement("span", {
-    key: f.name + i,
-    style: {
-      display: 'inline-flex',
-      alignItems: 'center',
-      gap: 6,
-      fontSize: 14,
-      color: f.tooLarge ? 'var(--kosaf-color-action-danger)' : 'var(--kosaf-color-text-primary)'
-    }
-  }, f.name, /*#__PURE__*/React.createElement("button", {
-    type: "button",
-    "aria-label": f.name + ' 삭제',
-    disabled: disabled,
-    onClick: () => set(list.filter((_, j) => j !== i)),
-    style: {
-      width: 16,
-      height: 16,
-      borderRadius: 8,
-      border: 0,
-      padding: 0,
-      background: 'var(--kosaf-src-text-strong)',
-      color: '#fff',
-      fontSize: 11,
-      lineHeight: '16px',
-      cursor: 'pointer'
-    }
-  }, "\xD7"))) : /*#__PURE__*/React.createElement("span", {
-    style: {
-      fontSize: 14,
-      color: 'var(--kosaf-color-text-muted)'
-    }
-  }, placeholder)), /*#__PURE__*/React.createElement("input", {
-    ref: ref,
-    id: id,
-    type: "file",
-    accept: accept,
-    multiple: multiple,
-    disabled: disabled,
-    onChange: add,
-    style: {
-      position: 'absolute',
-      width: 1,
-      height: 1,
-      opacity: 0,
-      pointerEvents: 'none'
-    },
-    tabIndex: -1
-  }), /*#__PURE__*/React.createElement("button", {
-    type: "button",
-    disabled: disabled,
-    onClick: () => ref.current && ref.current.click(),
-    style: {
-      flex: '0 0 99px',
-      height: 45,
-      border: '1px solid var(--kosaf-color-border-default)',
-      borderRadius: 3,
-      background: 'var(--kosaf-src-file-btn)',
-      fontFamily: F,
-      fontSize: 16,
-      fontWeight: 500,
-      color: 'var(--kosaf-color-text-primary)',
-      cursor: disabled ? 'not-allowed' : 'pointer'
-    }
-  }, buttonLabel));
-}
-Object.assign(__ds_scope, { FileUpload });
-})(); } catch (e) { __ds_ns.__errors.push({ path: "components/file-upload/FileUpload.tsx", error: String((e && e.message) || e) }); }
-
-// components/filter-chip/FilterChip.tsx
-try { (() => {
-const F = 'var(--kosaf-font)';
-
-/** KOSAF FilterChip — Source-derived from 통합검색 filter chips (1:97566 capture: pill, selected = #059B00 stroke + text) and applied-filter tags ("사과 ×"). */
-function FilterChip({
-  selected,
-  onToggle,
-  onRemove,
-  variant = 'toggle',
-  disabled,
-  children,
-  style
-}) {
-  if (variant === 'removable') {
-    return /*#__PURE__*/React.createElement("span", {
-      style: {
-        display: 'inline-flex',
-        alignItems: 'center',
-        gap: 6,
-        fontFamily: F,
-        fontSize: 16,
-        lineHeight: '24px',
-        color: 'var(--kosaf-color-action-primary)',
-        ...style
-      }
-    }, children, /*#__PURE__*/React.createElement("button", {
-      type: "button",
-      "aria-label": (typeof children === 'string' ? children : '') + ' 필터 해제',
-      onClick: onRemove,
-      style: {
-        width: 24,
-        height: 24,
-        padding: 0,
-        border: 0,
-        background: 'none',
-        cursor: 'pointer',
-        fontSize: 18,
-        lineHeight: '24px',
-        color: 'var(--kosaf-color-text-secondary)'
-      }
-    }, "\xD7"));
-  }
-  return /*#__PURE__*/React.createElement("button", {
-    type: "button",
-    "aria-pressed": !!selected,
-    disabled: disabled,
-    onClick: onToggle,
-    style: {
-      boxSizing: 'border-box',
-      height: 44,
-      minWidth: 110,
-      padding: '0 28px',
-      borderRadius: 22,
-      border: '1px solid ' + (selected ? 'var(--kosaf-color-action-primary)' : 'var(--kosaf-color-border-default)'),
-      boxShadow: selected ? 'inset 0 0 0 1px var(--kosaf-color-action-primary)' : 'none',
-      background: disabled ? 'var(--kosaf-color-bg-subtle)' : '#fff',
-      color: disabled ? 'var(--kosaf-color-text-disabled)' : selected ? 'var(--kosaf-color-action-primary)' : 'var(--kosaf-color-text-primary)',
-      fontFamily: F,
-      fontSize: 16,
-      fontWeight: selected ? 500 : 400,
-      cursor: disabled ? 'not-allowed' : 'pointer',
-      whiteSpace: 'nowrap',
-      ...style
-    }
-  }, children);
-}
-Object.assign(__ds_scope, { FilterChip });
-})(); } catch (e) { __ds_ns.__errors.push({ path: "components/filter-chip/FilterChip.tsx", error: String((e && e.message) || e) }); }
-
 // components/footer/Footer.tsx
 try { (() => {
 const F = 'var(--kosaf-font)';
@@ -1388,23 +1191,308 @@ const KOSAF_ICONS = [{
 Object.assign(__ds_scope, { KOSAF_ICONS });
 })(); } catch (e) { __ds_ns.__errors.push({ path: "components/icon/icons.data.js", error: String((e && e.message) || e) }); }
 
+// components/icon/icons.ui.js
+try { (() => {
+// KOSAF extension UI icons — authored for KOSAF_V1 1.5.0 (NOT extracted from Figma).
+// 24×24 grid, 2px stroke, round cap/join, stroke = currentColor. `fill: true` shapes may be filled (Rating star, liked heart).
+const KOSAF_UI_ICONS = [{
+  name: 'close',
+  label: '닫기',
+  category: 'action',
+  d: ['M6 6L18 18', 'M18 6L6 18']
+}, {
+  name: 'menu',
+  label: '전체메뉴',
+  category: 'navigation',
+  d: ['M4 6H20', 'M4 12H20', 'M4 18H20']
+}, {
+  name: 'plus',
+  label: '더하기·증가',
+  category: 'action',
+  d: ['M12 5V19', 'M5 12H19']
+}, {
+  name: 'minus',
+  label: '빼기·감소',
+  category: 'action',
+  d: ['M5 12H19']
+}, {
+  name: 'chevron-left',
+  label: '이전',
+  category: 'navigation',
+  d: ['M15 5L8 12L15 19']
+}, {
+  name: 'chevron-right',
+  label: '다음',
+  category: 'navigation',
+  d: ['M9 5L16 12L9 19']
+}, {
+  name: 'chevron-up',
+  label: '접기',
+  category: 'navigation',
+  d: ['M5 15L12 8L19 15']
+}, {
+  name: 'chevron-down',
+  label: '펼치기',
+  category: 'navigation',
+  d: ['M5 9L12 16L19 9']
+}, {
+  name: 'star',
+  label: '별점',
+  category: 'status',
+  fill: true,
+  d: ['M12 3.5L14.6 8.8L20.4 9.6L16.2 13.7L17.2 19.5L12 16.8L6.8 19.5L7.8 13.7L3.6 9.6L9.4 8.8Z']
+}, {
+  name: 'heart-outline',
+  label: '관심상품(해제)',
+  category: 'status',
+  fill: true,
+  d: ['M12 19.5C12 19.5 3.5 14.6 3.5 9C3.5 6.5 5.5 4.5 8 4.5C9.7 4.5 11.1 5.4 12 6.8C12.9 5.4 14.3 4.5 16 4.5C18.5 4.5 20.5 6.5 20.5 9C20.5 14.6 12 19.5 12 19.5Z']
+}, {
+  name: 'filter',
+  label: '필터',
+  category: 'action',
+  d: ['M4 5H20L14 12.5V19L10 17V12.5Z']
+}, {
+  name: 'sort',
+  label: '정렬',
+  category: 'action',
+  d: ['M8 4V20', 'M4.5 7.5L8 4L11.5 7.5', 'M16 20V4', 'M12.5 16.5L16 20L19.5 16.5']
+}, {
+  name: 'check-mark',
+  label: '확인·선택됨',
+  category: 'status',
+  d: ['M5 12.5L10 17.5L19 7']
+}, {
+  name: 'calendar',
+  label: '날짜',
+  category: 'form',
+  d: ['M5.5 5H18.5A2 2 0 0 1 20.5 7V18A2 2 0 0 1 18.5 20H5.5A2 2 0 0 1 3.5 18V7A2 2 0 0 1 5.5 5Z', 'M3.5 10H20.5', 'M8 3V7', 'M16 3V7']
+}, {
+  name: 'user',
+  label: '회원',
+  category: 'navigation',
+  d: ['M12 12A4 4 0 1 0 12 4A4 4 0 1 0 12 12Z', 'M4.5 20C5.5 16.5 8.5 14.5 12 14.5C15.5 14.5 18.5 16.5 19.5 20']
+}, {
+  name: 'store',
+  label: '판매샵',
+  category: 'navigation',
+  d: ['M4 9L5.5 4H18.5L20 9', 'M4 9H20', 'M5 9V20H19V9', 'M9.5 20V14H14.5V20']
+}, {
+  name: 'home',
+  label: '홈',
+  category: 'navigation',
+  d: ['M4 10.5L12 4L20 10.5V20H14.5V14.5H9.5V20H4Z']
+}, {
+  name: 'help',
+  label: '문의·Q&A',
+  category: 'navigation',
+  d: ['M12 20.5A8.5 8.5 0 1 0 12 3.5A8.5 8.5 0 1 0 12 20.5Z', 'M9.6 9.5A2.4 2.4 0 1 1 12 12V13.5', 'M12 16.8V17']
+}, {
+  name: 'grid',
+  label: '카드 보기',
+  category: 'view',
+  d: ['M4 4H10.5V10.5H4Z', 'M13.5 4H20V10.5H13.5Z', 'M4 13.5H10.5V20H4Z', 'M13.5 13.5H20V20H13.5Z']
+}, {
+  name: 'list',
+  label: '목록 보기',
+  category: 'view',
+  d: ['M9 6H20', 'M9 12H20', 'M9 18H20', 'M4.5 6H5', 'M4.5 12H5', 'M4.5 18H5']
+}, {
+  name: 'chart-line',
+  label: '추이·통계',
+  category: 'data',
+  d: ['M4 4V20H20', 'M7.5 15L11.5 11L14.5 14L20 8.5']
+}, {
+  name: 'wallet',
+  label: '금액·여신',
+  category: 'data',
+  d: ['M4 7H18A2 2 0 0 1 20 9V18A2 2 0 0 1 18 20H6A2 2 0 0 1 4 18V7Z', 'M4 7L15.5 4V7', 'M16 13.5H16.5']
+}, {
+  name: 'refresh',
+  label: '초기화',
+  category: 'action',
+  d: ['M19.5 12A7.5 7.5 0 1 1 17.3 6.7', 'M19.5 3.5V8H15']
+}];
+
+// alias → canonical. Duplicated / legacy names resolve here instead of adding new SVGs.
+const KOSAF_ICON_ALIASES = {
+  x: 'close',
+  'close-x': 'close',
+  hamburger: 'menu',
+  add: 'plus',
+  increase: 'plus',
+  decrease: 'minus',
+  prev: 'chevron-left',
+  next: 'chevron-right',
+  'caret-down': 'chevron-down',
+  'caret-up': 'chevron-up',
+  expand: 'chevron-down',
+  collapse: 'chevron-up',
+  back: 'navigate',
+  bag: 'shopping-bag',
+  notification: 'bell',
+  history: 'time-history',
+  edit: 'document-edit',
+  chart: 'analytics',
+  money: 'wallet',
+  trend: 'chart-line',
+  like: 'heart',
+  'heart-filled': 'heart',
+  'like-outline': 'heart-outline',
+  rating: 'star',
+  check: 'check',
+  done: 'check-mark',
+  date: 'calendar',
+  member: 'user',
+  shop: 'store',
+  qna: 'help',
+  reset: 'refresh',
+  'view-grid': 'grid',
+  'view-list': 'list'
+};
+const KOSAF_ICON_TONES = {
+  current: 'currentColor',
+  primary: 'var(--kosaf-color-icon-default)',
+  secondary: 'var(--kosaf-color-text-secondary)',
+  muted: 'var(--kosaf-color-text-muted)',
+  disabled: 'var(--kosaf-color-text-disabled)',
+  brand: 'var(--kosaf-color-action-primary)',
+  positive: 'var(--kosaf-color-action-positive)',
+  danger: 'var(--kosaf-color-action-danger)',
+  focus: 'var(--kosaf-color-state-focus)',
+  inverse: 'var(--kosaf-color-text-inverse)'
+};
+Object.assign(__ds_scope, { KOSAF_UI_ICONS, KOSAF_ICON_ALIASES, KOSAF_ICON_TONES });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/icon/icons.ui.js", error: String((e && e.message) || e) }); }
+
 // components/icon/Icon.tsx
 try { (() => {
 function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
-/** All 11 source icons (name, Figma id, source layer name, native w/h, verbatim svg). */
+/** 11 source icons, verbatim (name, Figma id, source layer, native w/h, svg). Unchanged since 1.0. */
 const IconRegistry = __ds_scope.KOSAF_ICONS;
+/** KOSAF extension UI icons (24 grid, currentColor). Authored, not extracted from Figma. */
+const UIIconRegistry = __ds_scope.KOSAF_UI_ICONS;
+const IconAliases = __ds_scope.KOSAF_ICON_ALIASES;
+const IconTones = __ds_scope.KOSAF_ICON_TONES;
+const warned = {};
+function warn(msg) {
+  if (!warned[msg] && typeof console !== 'undefined') {
+    warned[msg] = 1;
+    console.warn('[KOSAF Icon] ' + msg);
+  }
+}
 
-/** KOSAF Icon — renders one of the 11 SVGs exported verbatim from MOEAkEbXtwHdE3xveg2Gto. Colours are baked into the source SVG and preserved. */
+/** Resolve a name/alias → { kind: 'source'|'ui'|'missing', canonical, def }. */
+function resolveIcon(name, mode = 'source') {
+  const canonical = __ds_scope.KOSAF_ICON_ALIASES[name] || name;
+  const src = __ds_scope.KOSAF_ICONS.find(i => i.name === canonical);
+  const ui = __ds_scope.KOSAF_UI_ICONS.find(i => i.name === canonical);
+  if (mode === 'ui' && ui) return {
+    kind: 'ui',
+    canonical,
+    def: ui
+  };
+  if (src) return {
+    kind: 'source',
+    canonical,
+    def: src
+  };
+  if (ui) return {
+    kind: 'ui',
+    canonical,
+    def: ui
+  };
+  return {
+    kind: 'missing',
+    canonical,
+    def: null
+  };
+}
+
+/** KOSAF Icon — mode="source" (default) renders the 11 Figma SVGs verbatim (baked colours, tone ignored);
+ *  extension names render the 24-grid currentColor set. Unknown names render an explicit dashed "missing" box + console.warn. */
 function Icon({
   name,
   size,
   title,
   rotate = 0,
+  mode = 'source',
+  tone,
+  filled,
+  strokeWidth = 2,
   style,
   ...rest
 }) {
-  const def = __ds_scope.KOSAF_ICONS.find(i => i.name === name);
-  if (!def) return null;
+  const r = resolveIcon(name, mode);
+  const a11y = title ? {
+    role: 'img',
+    'aria-label': title
+  } : {
+    'aria-hidden': true
+  };
+  const tf = rotate ? 'rotate(' + rotate + 'deg)' : undefined;
+  if (r.kind === 'missing') {
+    warn('unknown icon "' + name + '" — see components/icon/icons.manifest.json');
+    const s = size || 24;
+    return /*#__PURE__*/React.createElement("span", _extends({
+      "data-icon-missing": name,
+      title: 'missing icon: ' + name
+    }, a11y, {
+      style: {
+        display: 'inline-flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        flex: '0 0 auto',
+        boxSizing: 'border-box',
+        width: s,
+        height: s,
+        border: '1px dashed var(--kosaf-color-action-danger)',
+        borderRadius: 2,
+        color: 'var(--kosaf-color-action-danger)',
+        fontSize: Math.max(9, s * 0.45),
+        fontFamily: 'var(--kosaf-font)',
+        lineHeight: 1,
+        ...style
+      }
+    }, rest), "?");
+  }
+  if (r.kind === 'ui') {
+    const s = size || 24;
+    if (![16, 20, 24, 32].includes(s)) warn('"' + r.canonical + '" size ' + s + ' is outside 16/20/24/32');
+    const color = tone ? __ds_scope.KOSAF_ICON_TONES[tone] || tone : 'currentColor';
+    const fillOn = filled && r.def.fill;
+    return /*#__PURE__*/React.createElement("span", _extends({
+      "data-icon": r.canonical,
+      "data-icon-kind": "extension"
+    }, a11y, {
+      style: {
+        display: 'inline-flex',
+        flex: '0 0 auto',
+        width: s,
+        height: s,
+        lineHeight: 0,
+        color,
+        transform: tf,
+        ...style
+      }
+    }, rest), /*#__PURE__*/React.createElement("svg", {
+      width: s,
+      height: s,
+      viewBox: "0 0 24 24",
+      fill: fillOn ? 'currentColor' : 'none',
+      stroke: "currentColor",
+      strokeWidth: strokeWidth,
+      strokeLinecap: "round",
+      strokeLinejoin: "round",
+      "aria-hidden": "true",
+      focusable: "false"
+    }, r.def.d.map((d, i) => /*#__PURE__*/React.createElement("path", {
+      key: i,
+      d: d
+    }))));
+  }
+  if (tone) warn('tone ignored for source icon "' + r.canonical + '" (colours are preserved from Figma)');
+  const def = r.def;
   const m = def.svg.match(/viewBox="0 0 ([\d.]+) ([\d.]+)"/);
   const vw = m ? +m[1] : 24,
     vh = m ? +m[2] : 24;
@@ -1412,11 +1500,9 @@ function Icon({
   const w = +(vw * k).toFixed(2),
     h = +(vh * k).toFixed(2);
   const svg = def.svg.replace(/^<svg width="[^"]*" height="[^"]*"/, '<svg width="' + w + '" height="' + h + '" aria-hidden="true" focusable="false"');
-  return /*#__PURE__*/React.createElement("span", _extends({
-    role: title ? 'img' : undefined,
-    "aria-label": title,
-    "aria-hidden": title ? undefined : true,
-    "data-icon": name,
+  return /*#__PURE__*/React.createElement("span", _extends({}, a11y, {
+    "data-icon": r.canonical,
+    "data-icon-kind": "source",
     "data-figma-id": def.id,
     style: {
       display: 'inline-flex',
@@ -1424,7 +1510,7 @@ function Icon({
       width: w,
       height: h,
       lineHeight: 0,
-      transform: rotate ? 'rotate(' + rotate + 'deg)' : undefined,
+      transform: tf,
       ...style
     },
     dangerouslySetInnerHTML: {
@@ -1432,7 +1518,7 @@ function Icon({
     }
   }, rest));
 }
-Object.assign(__ds_scope, { IconRegistry, Icon });
+Object.assign(__ds_scope, { IconRegistry, UIIconRegistry, IconAliases, IconTones, resolveIcon, Icon });
 })(); } catch (e) { __ds_ns.__errors.push({ path: "components/icon/Icon.tsx", error: String((e && e.message) || e) }); }
 
 // components/accordion/Accordion.tsx
@@ -1616,23 +1702,21 @@ function BottomActionBar({
     "aria-label": "\uC7A5\uBC14\uAD6C\uB2C8 \uB2F4\uAE30",
     onClick: onCart
   }, /*#__PURE__*/React.createElement(__ds_scope.Icon, {
-    name: "shopping-bag",
-    size: 26,
-    style: {
-      filter: 'brightness(0) saturate(0) opacity(.8)'
-    }
+    name: "cart",
+    size: 24
   })), /*#__PURE__*/React.createElement("button", {
     type: "button",
     style: ib,
     "aria-label": "\uAD00\uC2EC\uC0C1\uD488",
     "aria-pressed": !!liked,
     onClick: onLike
-  }, /*#__PURE__*/React.createElement(__ds_scope.Icon, {
+  }, liked ? /*#__PURE__*/React.createElement(__ds_scope.Icon, {
     name: "heart",
+    size: 22
+  }) : /*#__PURE__*/React.createElement(__ds_scope.Icon, {
+    name: "heart-outline",
     size: 24,
-    style: {
-      filter: liked ? 'none' : 'grayscale(1) brightness(1.6)'
-    }
+    tone: "muted"
   }))) : null, secondaryLabel ? /*#__PURE__*/React.createElement(__ds_scope.Button, {
     variant: "secondary",
     size: 50,
@@ -1653,540 +1737,224 @@ function BottomActionBar({
 Object.assign(__ds_scope, { BottomActionBar });
 })(); } catch (e) { __ds_ns.__errors.push({ path: "components/bottom-action-bar/BottomActionBar.tsx", error: String((e && e.message) || e) }); }
 
-// components/input/Input.jsx
+// components/file-upload/FileUpload.tsx
 try { (() => {
-function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
-/** KOSAF/Input — Figma 218:600. 287×45, radius 5, 14px inset, Regular 14. State=Default|Focus(2px #0047ED)|Error(1px #E23736)|Disabled(#F7F7F7). */
-function Input({
-  state,
-  value,
-  defaultValue,
+const F = 'var(--kosaf-font)';
+
+/** KOSAF FileUpload — Source-derived from 첨부파일2 1:89966 (field 360×45 r3 + "찾아보기" 99×45 r3 #F8F8F8, 16/500). Uses the native file picker; upload itself is a demo. */
+function FileUpload({
+  files,
+  defaultFiles = [],
   onChange,
-  placeholder = '입력값을 입력하세요',
-  errorMessage,
+  accept,
+  multiple,
+  maxSizeMB = 4,
+  buttonLabel = '찾아보기',
+  placeholder = '',
+  width = 360,
   disabled,
-  width = 287,
-  type = 'text',
+  error,
   id,
-  style,
-  ...rest
+  style
 }) {
-  const [focus, setFocus] = React.useState(false);
-  const isDisabled = disabled || state === 'disabled';
-  const isError = state === 'error' || !state && !!errorMessage;
-  const isFocus = !isDisabled && (state ? state === 'focus' : focus);
-  const bd = isDisabled ? 'var(--kosaf-color-border-default)' : isFocus ? 'var(--kosaf-color-state-focus)' : isError ? 'var(--kosaf-color-action-danger)' : 'var(--kosaf-color-border-default)';
-  const msgId = id ? id + '-msg' : undefined;
+  const [inner, setInner] = React.useState(defaultFiles);
+  const list = files !== undefined ? files : inner;
+  const ref = React.useRef(null);
+  const set = next => {
+    if (files === undefined) setInner(next);
+    onChange && onChange(next);
+  };
+  const add = e => {
+    const picked = Array.from(e.target.files || []).map(f => ({
+      name: f.name,
+      size: f.size,
+      tooLarge: f.size > maxSizeMB * 1048576
+    }));
+    set(multiple ? list.concat(picked) : picked.slice(0, 1));
+    e.target.value = '';
+  };
   return /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'flex',
-      flexDirection: 'column',
-      gap: 6,
-      width,
-      maxWidth: '100%',
-      ...style
-    }
-  }, /*#__PURE__*/React.createElement("input", _extends({
-    className: "kosaf-field",
-    id: id,
-    type: type,
-    value: value,
-    defaultValue: defaultValue,
-    disabled: isDisabled,
-    placeholder: isDisabled && !placeholder ? 'Disabled' : placeholder,
-    "aria-invalid": isError || undefined,
-    "aria-describedby": isError && errorMessage ? msgId : undefined,
-    onChange: onChange,
-    onFocus: () => setFocus(true),
-    onBlur: () => setFocus(false),
-    style: {
-      boxSizing: 'border-box',
-      width: '100%',
-      height: 'var(--kosaf-control-form)',
-      padding: '0 14px',
-      fontFamily: 'var(--kosaf-font)',
-      fontSize: 14,
-      color: isDisabled ? 'var(--kosaf-color-text-disabled)' : 'var(--kosaf-color-text-primary)',
-      background: isDisabled ? 'var(--kosaf-color-bg-subtle)' : 'var(--kosaf-color-surface-default)',
-      border: `1px solid ${bd}`,
-      boxShadow: isFocus ? 'inset 0 0 0 1px var(--kosaf-color-state-focus)' : 'none',
-      borderRadius: 'var(--kosaf-radius-5)',
-      outline: 'none',
-      cursor: isDisabled ? 'not-allowed' : 'text'
-    }
-  }, rest)), isError && errorMessage ? /*#__PURE__*/React.createElement("span", {
-    id: msgId,
-    style: {
-      fontFamily: 'var(--kosaf-font)',
-      fontSize: 12,
-      lineHeight: '16px',
-      color: 'var(--kosaf-color-action-danger)'
-    }
-  }, errorMessage) : null);
-}
-Object.assign(__ds_scope, { Input });
-})(); } catch (e) { __ds_ns.__errors.push({ path: "components/input/Input.jsx", error: String((e && e.message) || e) }); }
-
-// components/metric-card/MetricCard.tsx
-try { (() => {
-/** KOSAF MetricCard (SmallDataCard) — Source-derived from Card_01 1:87886 (167×227 r10 white; 70px #02AC5A icon circle; label 16/500 #333; unit 12 #878787; value 20/500). */
-function MetricCard({
-  label = '여신금액',
-  unit = '(만원)',
-  value = '10,000',
-  icon,
-  width = 167,
-  onClick,
-  style
-}) {
-  const Tag = onClick ? 'button' : 'div';
-  return /*#__PURE__*/React.createElement(Tag, {
-    onClick: onClick,
-    style: {
-      boxSizing: 'border-box',
-      width,
-      maxWidth: '100%',
-      minHeight: 227,
-      display: 'flex',
-      flexDirection: 'column',
+      gap: 10,
       alignItems: 'center',
-      padding: 0,
-      background: '#fff',
-      border: '1px solid var(--kosaf-color-border-default)',
-      borderRadius: 10,
-      fontFamily: 'var(--kosaf-font)',
-      cursor: onClick ? 'pointer' : 'default',
-      overflow: 'hidden',
-      textAlign: 'center'
-    }
-  }, /*#__PURE__*/React.createElement("span", {
-    "aria-hidden": "true",
-    style: {
-      width: 70,
-      height: 70,
-      marginTop: 23,
-      borderRadius: 35,
-      background: 'var(--kosaf-src-metric-icon)',
-      display: 'inline-flex',
-      alignItems: 'center',
-      justifyContent: 'center'
-    }
-  }, icon), /*#__PURE__*/React.createElement("span", {
-    style: {
-      marginTop: 10,
-      fontSize: 16,
-      fontWeight: 500,
-      lineHeight: '26px',
-      color: 'var(--kosaf-color-text-primary)'
-    }
-  }, label), unit ? /*#__PURE__*/React.createElement("span", {
-    style: {
-      fontSize: 12,
-      lineHeight: '16px',
-      color: '#878787'
-    }
-  }, unit) : null, /*#__PURE__*/React.createElement("span", {
-    style: {
-      marginTop: 'auto',
-      width: '100%',
-      borderTop: '1px solid var(--kosaf-color-border-default)',
-      padding: '14px 0',
-      fontSize: 20,
-      fontWeight: 500,
-      lineHeight: '27px',
-      fontVariantNumeric: 'tabular-nums',
-      color: 'var(--kosaf-src-text-strong)',
-      ...style
-    }
-  }, value));
-}
-Object.assign(__ds_scope, { MetricCard });
-})(); } catch (e) { __ds_ns.__errors.push({ path: "components/metric-card/MetricCard.tsx", error: String((e && e.message) || e) }); }
-
-// components/mobile-header/MobileHeader.tsx
-try { (() => {
-/** KOSAF MobileHeader — Source-derived from mobile screens (1:87784, 1:92154). Hamburger bars are CSS (menu vector not exported). */
-function MobileHeader({
-  title = '농산물 온라인 도매시장',
-  logoSrc,
-  onMenu,
-  onSearch,
-  onCart,
-  cartCount,
-  back,
-  onBack,
-  style
-}) {
-  const btn = {
-    width: 44,
-    height: 44,
-    display: 'inline-flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    background: 'none',
-    border: 0,
-    padding: 0,
-    cursor: 'pointer',
-    position: 'relative'
-  };
-  return /*#__PURE__*/React.createElement("header", {
-    style: {
-      boxSizing: 'border-box',
-      height: 60,
-      display: 'flex',
-      alignItems: 'center',
-      padding: '0 8px',
-      background: 'var(--kosaf-color-surface-default)',
-      fontFamily: 'var(--kosaf-font)',
-      color: 'var(--kosaf-color-text-primary)',
-      ...style
-    }
-  }, back ? /*#__PURE__*/React.createElement("button", {
-    style: btn,
-    "aria-label": "\uB4A4\uB85C",
-    onClick: onBack
-  }, /*#__PURE__*/React.createElement(__ds_scope.Icon, {
-    name: "navigate",
-    size: 24
-  })) : /*#__PURE__*/React.createElement("button", {
-    style: btn,
-    "aria-label": "\uC804\uCCB4\uBA54\uB274 \uC5F4\uAE30",
-    onClick: onMenu
-  }, /*#__PURE__*/React.createElement("span", {
-    "aria-hidden": "true",
-    style: {
-      display: 'flex',
-      flexDirection: 'column',
-      gap: 6
-    }
-  }, [0, 1, 2].map(i => /*#__PURE__*/React.createElement("span", {
-    key: i,
-    style: {
-      width: 20,
-      height: 2,
-      background: 'var(--kosaf-color-text-primary)'
-    }
-  })))), /*#__PURE__*/React.createElement("div", {
-    style: {
-      flex: 1,
-      textAlign: 'center',
-      fontSize: 18,
-      fontWeight: 700,
-      lineHeight: '26px',
-      whiteSpace: 'nowrap',
-      overflow: 'hidden',
-      textOverflow: 'ellipsis'
-    }
-  }, logoSrc ? /*#__PURE__*/React.createElement("img", {
-    src: logoSrc,
-    alt: title,
-    style: {
-      height: 20,
-      width: 'auto',
-      verticalAlign: 'middle'
-    }
-  }) : title), /*#__PURE__*/React.createElement("button", {
-    style: btn,
-    "aria-label": "\uAC80\uC0C9",
-    onClick: onSearch
-  }, /*#__PURE__*/React.createElement(__ds_scope.Icon, {
-    name: "search",
-    size: 24
-  })), /*#__PURE__*/React.createElement("button", {
-    style: btn,
-    "aria-label": "\uC7A5\uBC14\uAD6C\uB2C8",
-    onClick: onCart
-  }, /*#__PURE__*/React.createElement(__ds_scope.Icon, {
-    name: "cart",
-    size: 24
-  }), cartCount ? /*#__PURE__*/React.createElement("span", {
-    style: {
-      position: 'absolute',
-      top: 6,
-      right: 4,
-      minWidth: 16,
-      height: 16,
-      borderRadius: 8,
-      background: 'var(--kosaf-color-action-danger)',
-      color: '#fff',
-      fontSize: 10,
-      lineHeight: '16px',
-      textAlign: 'center'
-    }
-  }, cartCount) : null));
-}
-Object.assign(__ds_scope, { MobileHeader });
-})(); } catch (e) { __ds_ns.__errors.push({ path: "components/mobile-header/MobileHeader.tsx", error: String((e && e.message) || e) }); }
-
-// components/mobile-menu/MobileMenu.tsx
-try { (() => {
-const F = 'var(--kosaf-font)';
-const SECTIONS = [{
-  label: '부류별',
-  items: ['과실류', '채소류', '곡물류']
-}, {
-  label: '거래방식별',
-  items: ['정가거래', '입찰거래', '역경매']
-}, {
-  label: '판매유형별',
-  items: ['위탁', '매수', '직접판매']
-}, {
-  label: '도매시장별',
-  items: ['서울가락', '서울강서', '수원', '안양']
-}];
-const QUICK = [{
-  label: '홈'
-}, {
-  label: '거래관리'
-}, {
-  label: '주문관리'
-}, {
-  label: '관심목록',
-  icon: 'heart'
-}, {
-  label: 'Q&A'
-}, {
-  label: '회원 정보 관리'
-}];
-function CloseX({
-  size = 18,
-  color = 'var(--kosaf-src-text-strong)'
-}) {
-  return /*#__PURE__*/React.createElement("span", {
-    "aria-hidden": "true",
-    style: {
-      position: 'relative',
-      display: 'inline-block',
-      width: size,
-      height: size
-    }
-  }, [45, -45].map(d => /*#__PURE__*/React.createElement("span", {
-    key: d,
-    style: {
-      position: 'absolute',
-      left: -2,
-      top: size / 2 - 1,
-      width: size + 4,
-      height: 2,
-      background: color,
-      transform: 'rotate(' + d + 'deg)'
-    }
-  })));
-}
-
-/** KOSAF MobileMenu — Source-derived from 모바일 메뉴 1:93205 (390×845). Accordion sections, quick-menu grid, footer links. */
-function MobileMenu({
-  sections = SECTIONS,
-  quick = QUICK,
-  defaultOpen = 1,
-  shopLabel = '입점 판매샵 목록',
-  bottomLinks = ['마이페이지', '고객센터', '로그아웃'],
-  onClose,
-  onSelect,
-  style
-}) {
-  const [open, setOpen] = React.useState(defaultOpen);
-  const ref = React.useRef(null);
-  React.useEffect(() => {
-    const k = e => {
-      if (e.key === 'Escape' && onClose) onClose();
-    };
-    window.addEventListener('keydown', k);
-    return () => window.removeEventListener('keydown', k);
-  }, [onClose]);
-  const row = {
-    boxSizing: 'border-box',
-    width: '100%',
-    minHeight: 73,
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    padding: '0 20px',
-    background: 'none',
-    border: 0,
-    borderBottom: '1px solid var(--kosaf-color-border-default)',
-    cursor: 'pointer',
-    fontFamily: F,
-    fontSize: 20,
-    lineHeight: '30px',
-    color: 'var(--kosaf-src-text-strong)',
-    textAlign: 'left'
-  };
-  return /*#__PURE__*/React.createElement("nav", {
-    ref: ref,
-    "aria-label": "\uC804\uCCB4\uBA54\uB274",
-    style: {
-      width: '100%',
-      maxWidth: 391,
-      background: '#fff',
       fontFamily: F,
       ...style
     }
   }, /*#__PURE__*/React.createElement("div", {
     style: {
+      boxSizing: 'border-box',
+      width,
+      maxWidth: '100%',
+      minHeight: 45,
       display: 'flex',
+      flexWrap: 'wrap',
       alignItems: 'center',
-      justifyContent: 'space-between',
-      height: 75,
-      padding: '0 20px',
-      borderBottom: '1px solid var(--kosaf-color-border-default)'
+      gap: 8,
+      padding: '6px 14px',
+      border: '1px solid ' + (error ? 'var(--kosaf-color-action-danger)' : 'var(--kosaf-color-border-default)'),
+      borderRadius: 3,
+      background: disabled ? 'var(--kosaf-color-bg-subtle)' : '#fff'
+    }
+  }, list.length ? list.map((f, i) => /*#__PURE__*/React.createElement("span", {
+    key: f.name + i,
+    style: {
+      display: 'inline-flex',
+      alignItems: 'center',
+      gap: 6,
+      fontSize: 14,
+      color: f.tooLarge ? 'var(--kosaf-color-action-danger)' : 'var(--kosaf-color-text-primary)'
+    }
+  }, f.name, /*#__PURE__*/React.createElement("button", {
+    type: "button",
+    "aria-label": f.name + ' 삭제',
+    disabled: disabled,
+    onClick: () => set(list.filter((_, j) => j !== i)),
+    style: {
+      width: 24,
+      height: 24,
+      margin: '-4px -4px -4px -2px',
+      display: 'inline-flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      border: 0,
+      padding: 0,
+      background: 'none',
+      cursor: disabled ? 'not-allowed' : 'pointer'
     }
   }, /*#__PURE__*/React.createElement("span", {
     style: {
-      fontSize: 24,
-      fontWeight: 700,
-      lineHeight: '33px'
-    }
-  }, "\uC804\uCCB4\uBA54\uB274"), /*#__PURE__*/React.createElement("button", {
-    "aria-label": "\uBA54\uB274 \uB2EB\uAE30",
-    onClick: onClose,
-    style: {
-      width: 44,
-      height: 44,
-      marginRight: -10,
-      background: 'none',
-      border: 0,
-      cursor: 'pointer',
+      width: 16,
+      height: 16,
+      borderRadius: 8,
+      background: 'var(--kosaf-src-text-strong)',
       display: 'inline-flex',
       alignItems: 'center',
       justifyContent: 'center'
     }
-  }, /*#__PURE__*/React.createElement(CloseX, null))), sections.map((s, i) => {
-    const on = open === i;
-    const id = 'kmm-' + i;
-    return /*#__PURE__*/React.createElement("div", {
-      key: s.label
-    }, /*#__PURE__*/React.createElement("button", {
+  }, /*#__PURE__*/React.createElement(__ds_scope.Icon, {
+    name: "close",
+    size: 16,
+    tone: "inverse",
+    strokeWidth: 2.5,
+    style: {
+      transform: 'scale(.625)'
+    }
+  }))))) : /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontSize: 14,
+      color: 'var(--kosaf-color-text-muted)'
+    }
+  }, placeholder)), /*#__PURE__*/React.createElement("input", {
+    ref: ref,
+    id: id,
+    type: "file",
+    accept: accept,
+    multiple: multiple,
+    disabled: disabled,
+    onChange: add,
+    style: {
+      position: 'absolute',
+      width: 1,
+      height: 1,
+      opacity: 0,
+      pointerEvents: 'none'
+    },
+    tabIndex: -1
+  }), /*#__PURE__*/React.createElement("button", {
+    type: "button",
+    disabled: disabled,
+    onClick: () => ref.current && ref.current.click(),
+    style: {
+      flex: '0 0 99px',
+      height: 45,
+      border: '1px solid var(--kosaf-color-border-default)',
+      borderRadius: 3,
+      background: 'var(--kosaf-src-file-btn)',
+      fontFamily: F,
+      fontSize: 16,
+      fontWeight: 500,
+      color: 'var(--kosaf-color-text-primary)',
+      cursor: disabled ? 'not-allowed' : 'pointer'
+    }
+  }, buttonLabel));
+}
+Object.assign(__ds_scope, { FileUpload });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/file-upload/FileUpload.tsx", error: String((e && e.message) || e) }); }
+
+// components/filter-chip/FilterChip.tsx
+try { (() => {
+const F = 'var(--kosaf-font)';
+
+/** KOSAF FilterChip — Source-derived from 통합검색 filter chips (1:97566 capture: pill, selected = #059B00 stroke + text) and applied-filter tags ("사과 ×"). */
+function FilterChip({
+  selected,
+  onToggle,
+  onRemove,
+  variant = 'toggle',
+  disabled,
+  children,
+  style
+}) {
+  if (variant === 'removable') {
+    return /*#__PURE__*/React.createElement("span", {
       style: {
-        ...row,
-        borderBottom: on ? 0 : row.borderBottom
-      },
-      "aria-expanded": on,
-      "aria-controls": id,
-      onClick: () => setOpen(on ? -1 : i)
-    }, s.label, /*#__PURE__*/React.createElement(__ds_scope.Icon, {
-      name: "navigate",
-      size: 20,
-      rotate: on ? 90 : -90
-    })), on ? /*#__PURE__*/React.createElement("ul", {
-      id: id,
-      style: {
-        listStyle: 'none',
-        margin: 0,
-        padding: '14px 0',
-        background: 'var(--kosaf-color-bg-subtle)',
-        borderBottom: '1px solid var(--kosaf-color-border-default)'
-      }
-    }, s.items.map(it => /*#__PURE__*/React.createElement("li", {
-      key: it
-    }, /*#__PURE__*/React.createElement("button", {
-      onClick: () => onSelect && onSelect(s.label, it),
-      style: {
-        width: '100%',
-        minHeight: 48,
-        padding: '0 48px',
-        background: 'none',
-        border: 0,
-        textAlign: 'left',
-        cursor: 'pointer',
+        display: 'inline-flex',
+        alignItems: 'center',
+        gap: 6,
         fontFamily: F,
         fontSize: 16,
-        color: 'var(--kosaf-src-text-body)'
+        lineHeight: '24px',
+        color: 'var(--kosaf-color-action-primary)',
+        ...style
       }
-    }, it)))) : null);
-  }), /*#__PURE__*/React.createElement("button", {
-    style: {
-      ...row,
-      borderBottom: 0
-    },
-    onClick: () => onSelect && onSelect(shopLabel)
-  }, shopLabel), /*#__PURE__*/React.createElement("div", {
-    style: {
-      height: 10,
-      background: 'var(--kosaf-src-divider-thick)'
-    }
-  }), /*#__PURE__*/React.createElement("div", {
-    style: {
-      display: 'grid',
-      gridTemplateColumns: 'repeat(4, 1fr)'
-    }
-  }, Array.from({
-    length: Math.ceil(quick.length / 4) * 4
-  }).map((_, i) => {
-    const q = quick[i];
-    return q ? /*#__PURE__*/React.createElement("button", {
-      key: i,
-      onClick: () => onSelect && onSelect(q.label),
+    }, children, /*#__PURE__*/React.createElement("button", {
+      type: "button",
+      "aria-label": (typeof children === 'string' ? children : '') + ' 필터 해제',
+      onClick: onRemove,
       style: {
-        height: 79,
-        display: 'flex',
-        flexDirection: 'column',
+        width: 24,
+        height: 24,
+        padding: 0,
+        border: 0,
+        background: 'none',
+        cursor: 'pointer',
+        display: 'inline-flex',
         alignItems: 'center',
         justifyContent: 'center',
-        gap: 8,
-        background: '#fff',
-        border: 0,
-        borderRight: i % 4 < 3 ? '1px solid var(--kosaf-gray-100)' : 0,
-        borderBottom: '1px solid var(--kosaf-gray-100)',
-        cursor: 'pointer',
-        fontFamily: F,
-        fontSize: 13,
-        color: 'var(--kosaf-src-text-strong)'
+        color: 'var(--kosaf-color-text-secondary)'
       }
-    }, q.icon ? /*#__PURE__*/React.createElement(__ds_scope.Icon, {
-      name: q.icon,
-      size: 30
-    }) : /*#__PURE__*/React.createElement("span", {
-      "aria-hidden": "true",
-      style: {
-        width: 32,
-        height: 32,
-        border: '1px dashed var(--kosaf-color-border-strong)',
-        borderRadius: 3
-      },
-      title: "icon slot"
-    }), q.label) : /*#__PURE__*/React.createElement("span", {
-      key: i,
-      style: {
-        borderRight: i % 4 < 3 ? '1px solid var(--kosaf-gray-100)' : 0,
-        borderBottom: '1px solid var(--kosaf-gray-100)'
-      }
-    });
-  })), /*#__PURE__*/React.createElement("div", {
+    }, /*#__PURE__*/React.createElement(__ds_scope.Icon, {
+      name: "close",
+      size: 16
+    })));
+  }
+  return /*#__PURE__*/React.createElement("button", {
+    type: "button",
+    "aria-pressed": !!selected,
+    disabled: disabled,
+    onClick: onToggle,
     style: {
-      height: 12,
-      background: 'var(--kosaf-src-divider-thick)'
-    }
-  }), /*#__PURE__*/React.createElement("div", {
-    style: {
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      gap: 16,
-      padding: '20px 0 28px'
-    }
-  }, bottomLinks.map((b, i) => /*#__PURE__*/React.createElement(React.Fragment, {
-    key: b
-  }, i ? /*#__PURE__*/React.createElement("span", {
-    style: {
-      width: 1,
-      height: 13,
-      background: 'var(--kosaf-color-border-strong)'
-    }
-  }) : null, /*#__PURE__*/React.createElement("button", {
-    onClick: () => onSelect && onSelect(b),
-    style: {
-      background: 'none',
-      border: 0,
-      cursor: 'pointer',
+      boxSizing: 'border-box',
+      height: 44,
+      minWidth: 110,
+      padding: '0 28px',
+      borderRadius: 22,
+      border: '1px solid ' + (selected ? 'var(--kosaf-color-action-primary)' : 'var(--kosaf-color-border-default)'),
+      boxShadow: selected ? 'inset 0 0 0 1px var(--kosaf-color-action-primary)' : 'none',
+      background: disabled ? 'var(--kosaf-color-bg-subtle)' : '#fff',
+      color: disabled ? 'var(--kosaf-color-text-disabled)' : selected ? 'var(--kosaf-color-action-primary)' : 'var(--kosaf-color-text-primary)',
       fontFamily: F,
-      fontSize: 14,
-      color: 'var(--kosaf-color-text-secondary)'
+      fontSize: 16,
+      fontWeight: selected ? 500 : 400,
+      cursor: disabled ? 'not-allowed' : 'pointer',
+      whiteSpace: 'nowrap',
+      ...style
     }
-  }, b)))));
+  }, children);
 }
-Object.assign(__ds_scope, { CloseX, MobileMenu });
-})(); } catch (e) { __ds_ns.__errors.push({ path: "components/mobile-menu/MobileMenu.tsx", error: String((e && e.message) || e) }); }
+Object.assign(__ds_scope, { FilterChip });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/filter-chip/FilterChip.tsx", error: String((e && e.message) || e) }); }
 
 // components/filter-panel/FilterPanel.tsx
 try { (() => {
@@ -2317,8 +2085,10 @@ function FilterPanel({
         alignItems: 'center',
         justifyContent: 'center'
       }
-    }, /*#__PURE__*/React.createElement(__ds_scope.CloseX, {
-      size: 20
+    }, /*#__PURE__*/React.createElement(__ds_scope.Icon, {
+      name: "close",
+      size: 20,
+      tone: "primary"
     }))), groups.map((g, i) => {
       const on = open === i;
       const cur = sel[g.key] || [];
@@ -2613,16 +2383,250 @@ function FilterPanel({
       gap: 10
     }
   }, "\uB2EB\uAE30 ", /*#__PURE__*/React.createElement(__ds_scope.Icon, {
-    name: "navigate",
+    name: "chevron-up",
     size: 16,
-    rotate: 90,
-    style: {
-      filter: 'brightness(0) invert(1)'
-    }
+    tone: "inverse"
   }))) : null);
 }
 Object.assign(__ds_scope, { DEFAULT_FILTER_GROUPS, FilterPanel });
 })(); } catch (e) { __ds_ns.__errors.push({ path: "components/filter-panel/FilterPanel.tsx", error: String((e && e.message) || e) }); }
+
+// components/icon-button/IconButton.tsx
+try { (() => {
+function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
+const ICON = {
+  16: 16,
+  20: 20,
+  24: 24
+};
+
+/** KOSAF IconButton — KOSAF extension. Icon-only control with a required accessible label.
+ *  Hit area: desktop 36, mobile 44 (min). Hover #F7F7F7 · pressed #EAEAEA · selected brand tone · focus 2px #0047ED · disabled blocks events. */
+function IconButton({
+  icon,
+  label,
+  iconSize = 20,
+  mode,
+  tone,
+  device = 'desktop',
+  size,
+  selected,
+  toggle,
+  pressed,
+  disabled,
+  state,
+  onClick,
+  type = 'button',
+  style,
+  ...rest
+}) {
+  const [h, setH] = React.useState(false);
+  const [down, setDown] = React.useState(false);
+  const [f, setF] = React.useState(false);
+  if (!label && typeof console !== 'undefined') console.warn('[KOSAF IconButton] label is required');
+  const box = Math.max(size || 0, device === 'mobile' ? 44 : 36);
+  const st = state || (disabled ? 'disabled' : down ? 'pressed' : f ? 'focus' : h ? 'hover' : 'default');
+  const isSel = selected || pressed;
+  const bg = st === 'disabled' ? 'transparent' : st === 'pressed' ? 'var(--kosaf-gray-100)' : st === 'hover' ? 'var(--kosaf-color-bg-subtle)' : 'transparent';
+  const color = st === 'disabled' ? 'var(--kosaf-color-text-disabled)' : isSel ? 'var(--kosaf-color-action-primary)' : tone ? undefined : 'var(--kosaf-color-icon-default)';
+  const isSourceOnly = ['search', 'cart', 'bell', 'heart', 'navigate', 'analytics', 'purchase', 'shopping-bag', 'document-edit', 'time-history', 'check'].includes(icon) && mode !== 'ui';
+  return /*#__PURE__*/React.createElement("button", _extends({
+    type: type,
+    "aria-label": label,
+    title: label,
+    "aria-pressed": toggle ? !!isSel : undefined,
+    "aria-disabled": disabled || undefined,
+    disabled: disabled,
+    onClick: disabled ? undefined : onClick,
+    onMouseEnter: () => setH(true),
+    onMouseLeave: () => {
+      setH(false);
+      setDown(false);
+    },
+    onMouseDown: () => setDown(true),
+    onMouseUp: () => setDown(false),
+    onFocus: e => setF(e.target.matches ? e.target.matches(':focus-visible') : true),
+    onBlur: () => setF(false),
+    style: {
+      boxSizing: 'border-box',
+      width: box,
+      height: box,
+      flex: '0 0 ' + box + 'px',
+      display: 'inline-flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      padding: 0,
+      border: 0,
+      borderRadius: 3,
+      background: bg,
+      color,
+      cursor: st === 'disabled' ? 'not-allowed' : 'pointer',
+      outline: st === 'focus' ? '2px solid var(--kosaf-color-state-focus)' : 'none',
+      outlineOffset: st === 'focus' ? -2 : 0,
+      opacity: st === 'disabled' && isSourceOnly ? 0.4 : 1,
+      transition: 'background-color .12s',
+      ...style
+    }
+  }, rest), /*#__PURE__*/React.createElement(__ds_scope.Icon, {
+    name: icon,
+    mode: mode,
+    size: ICON[iconSize] || 20,
+    tone: isSourceOnly ? undefined : tone,
+    filled: isSel && (icon === 'heart-outline' || icon === 'star')
+  }));
+}
+Object.assign(__ds_scope, { IconButton });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/icon-button/IconButton.tsx", error: String((e && e.message) || e) }); }
+
+// components/input/Input.jsx
+try { (() => {
+function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
+/** KOSAF/Input — Figma 218:600. 287×45, radius 5, 14px inset, Regular 14. State=Default|Focus(2px #0047ED)|Error(1px #E23736)|Disabled(#F7F7F7). */
+function Input({
+  state,
+  value,
+  defaultValue,
+  onChange,
+  placeholder = '입력값을 입력하세요',
+  errorMessage,
+  disabled,
+  width = 287,
+  type = 'text',
+  id,
+  style,
+  ...rest
+}) {
+  const [focus, setFocus] = React.useState(false);
+  const isDisabled = disabled || state === 'disabled';
+  const isError = state === 'error' || !state && !!errorMessage;
+  const isFocus = !isDisabled && (state ? state === 'focus' : focus);
+  const bd = isDisabled ? 'var(--kosaf-color-border-default)' : isFocus ? 'var(--kosaf-color-state-focus)' : isError ? 'var(--kosaf-color-action-danger)' : 'var(--kosaf-color-border-default)';
+  const msgId = id ? id + '-msg' : undefined;
+  return /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      flexDirection: 'column',
+      gap: 6,
+      width,
+      maxWidth: '100%',
+      ...style
+    }
+  }, /*#__PURE__*/React.createElement("input", _extends({
+    className: "kosaf-field",
+    id: id,
+    type: type,
+    value: value,
+    defaultValue: defaultValue,
+    disabled: isDisabled,
+    placeholder: isDisabled && !placeholder ? 'Disabled' : placeholder,
+    "aria-invalid": isError || undefined,
+    "aria-describedby": isError && errorMessage ? msgId : undefined,
+    onChange: onChange,
+    onFocus: () => setFocus(true),
+    onBlur: () => setFocus(false),
+    style: {
+      boxSizing: 'border-box',
+      width: '100%',
+      height: 'var(--kosaf-control-form)',
+      padding: '0 14px',
+      fontFamily: 'var(--kosaf-font)',
+      fontSize: 14,
+      color: isDisabled ? 'var(--kosaf-color-text-disabled)' : 'var(--kosaf-color-text-primary)',
+      background: isDisabled ? 'var(--kosaf-color-bg-subtle)' : 'var(--kosaf-color-surface-default)',
+      border: `1px solid ${bd}`,
+      boxShadow: isFocus ? 'inset 0 0 0 1px var(--kosaf-color-state-focus)' : 'none',
+      borderRadius: 'var(--kosaf-radius-5)',
+      outline: 'none',
+      cursor: isDisabled ? 'not-allowed' : 'text'
+    }
+  }, rest)), isError && errorMessage ? /*#__PURE__*/React.createElement("span", {
+    id: msgId,
+    style: {
+      fontFamily: 'var(--kosaf-font)',
+      fontSize: 12,
+      lineHeight: '16px',
+      color: 'var(--kosaf-color-action-danger)'
+    }
+  }, errorMessage) : null);
+}
+Object.assign(__ds_scope, { Input });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/input/Input.jsx", error: String((e && e.message) || e) }); }
+
+// components/metric-card/MetricCard.tsx
+try { (() => {
+/** KOSAF MetricCard (SmallDataCard) — Source-derived from Card_01 1:87886 (167×227 r10 white; 70px #02AC5A icon circle; label 16/500 #333; unit 12 #878787; value 20/500). */
+function MetricCard({
+  label = '여신금액',
+  unit = '(만원)',
+  value = '10,000',
+  icon,
+  width = 167,
+  onClick,
+  style
+}) {
+  const Tag = onClick ? 'button' : 'div';
+  return /*#__PURE__*/React.createElement(Tag, {
+    onClick: onClick,
+    style: {
+      boxSizing: 'border-box',
+      width,
+      maxWidth: '100%',
+      minHeight: 227,
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      padding: 0,
+      background: '#fff',
+      border: '1px solid var(--kosaf-color-border-default)',
+      borderRadius: 10,
+      fontFamily: 'var(--kosaf-font)',
+      cursor: onClick ? 'pointer' : 'default',
+      overflow: 'hidden',
+      textAlign: 'center'
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    "aria-hidden": "true",
+    style: {
+      width: 70,
+      height: 70,
+      marginTop: 23,
+      borderRadius: 35,
+      background: 'var(--kosaf-src-metric-icon)',
+      display: 'inline-flex',
+      alignItems: 'center',
+      justifyContent: 'center'
+    }
+  }, icon), /*#__PURE__*/React.createElement("span", {
+    style: {
+      marginTop: 10,
+      fontSize: 16,
+      fontWeight: 500,
+      lineHeight: '26px',
+      color: 'var(--kosaf-color-text-primary)'
+    }
+  }, label), unit ? /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontSize: 12,
+      lineHeight: '16px',
+      color: '#878787'
+    }
+  }, unit) : null, /*#__PURE__*/React.createElement("span", {
+    style: {
+      marginTop: 'auto',
+      width: '100%',
+      borderTop: '1px solid var(--kosaf-color-border-default)',
+      padding: '14px 0',
+      fontSize: 20,
+      fontWeight: 500,
+      lineHeight: '27px',
+      fontVariantNumeric: 'tabular-nums',
+      color: 'var(--kosaf-src-text-strong)',
+      ...style
+    }
+  }, value));
+}
+Object.assign(__ds_scope, { MetricCard });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/metric-card/MetricCard.tsx", error: String((e && e.message) || e) }); }
 
 // components/mobile-filter-sheet/MobileFilterSheet.tsx
 try { (() => {
@@ -2774,6 +2778,381 @@ function MobileFilterSheet({
 Object.assign(__ds_scope, { MobileFilterSheet });
 })(); } catch (e) { __ds_ns.__errors.push({ path: "components/mobile-filter-sheet/MobileFilterSheet.tsx", error: String((e && e.message) || e) }); }
 
+// components/mobile-header/MobileHeader.tsx
+try { (() => {
+/** KOSAF MobileHeader — Source-derived from mobile screens (1:87784, 1:92154). Menu glyph = KOSAF extension icon "menu" (menu vector not exported from source). */
+function MobileHeader({
+  title = '농산물 온라인 도매시장',
+  logoSrc,
+  onMenu,
+  onSearch,
+  onCart,
+  cartCount,
+  back,
+  onBack,
+  style
+}) {
+  const btn = {
+    width: 44,
+    height: 44,
+    display: 'inline-flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    background: 'none',
+    border: 0,
+    padding: 0,
+    cursor: 'pointer',
+    position: 'relative'
+  };
+  return /*#__PURE__*/React.createElement("header", {
+    style: {
+      boxSizing: 'border-box',
+      height: 60,
+      display: 'flex',
+      alignItems: 'center',
+      padding: '0 8px',
+      background: 'var(--kosaf-color-surface-default)',
+      fontFamily: 'var(--kosaf-font)',
+      color: 'var(--kosaf-color-text-primary)',
+      ...style
+    }
+  }, back ? /*#__PURE__*/React.createElement("button", {
+    style: btn,
+    "aria-label": "\uB4A4\uB85C",
+    onClick: onBack
+  }, /*#__PURE__*/React.createElement(__ds_scope.Icon, {
+    name: "navigate",
+    size: 24
+  })) : /*#__PURE__*/React.createElement("button", {
+    style: btn,
+    "aria-label": "\uC804\uCCB4\uBA54\uB274 \uC5F4\uAE30",
+    onClick: onMenu
+  }, /*#__PURE__*/React.createElement(__ds_scope.Icon, {
+    name: "menu",
+    size: 24,
+    tone: "primary"
+  })), /*#__PURE__*/React.createElement("div", {
+    style: {
+      flex: 1,
+      textAlign: 'center',
+      fontSize: 18,
+      fontWeight: 700,
+      lineHeight: '26px',
+      whiteSpace: 'nowrap',
+      overflow: 'hidden',
+      textOverflow: 'ellipsis'
+    }
+  }, logoSrc ? /*#__PURE__*/React.createElement("img", {
+    src: logoSrc,
+    alt: title,
+    style: {
+      height: 20,
+      width: 'auto',
+      verticalAlign: 'middle'
+    }
+  }) : title), /*#__PURE__*/React.createElement("button", {
+    style: btn,
+    "aria-label": "\uAC80\uC0C9",
+    onClick: onSearch
+  }, /*#__PURE__*/React.createElement(__ds_scope.Icon, {
+    name: "search",
+    size: 24
+  })), /*#__PURE__*/React.createElement("button", {
+    style: btn,
+    "aria-label": "\uC7A5\uBC14\uAD6C\uB2C8",
+    onClick: onCart
+  }, /*#__PURE__*/React.createElement(__ds_scope.Icon, {
+    name: "cart",
+    size: 24
+  }), cartCount ? /*#__PURE__*/React.createElement("span", {
+    style: {
+      position: 'absolute',
+      top: 6,
+      right: 4,
+      minWidth: 16,
+      height: 16,
+      borderRadius: 8,
+      background: 'var(--kosaf-color-action-danger)',
+      color: '#fff',
+      fontSize: 10,
+      lineHeight: '16px',
+      textAlign: 'center'
+    }
+  }, cartCount) : null));
+}
+Object.assign(__ds_scope, { MobileHeader });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/mobile-header/MobileHeader.tsx", error: String((e && e.message) || e) }); }
+
+// components/mobile-menu/MobileMenu.tsx
+try { (() => {
+const F = 'var(--kosaf-font)';
+const SECTIONS = [{
+  label: '부류별',
+  items: ['과실류', '채소류', '곡물류']
+}, {
+  label: '거래방식별',
+  items: ['정가거래', '입찰거래', '역경매']
+}, {
+  label: '판매유형별',
+  items: ['위탁', '매수', '직접판매']
+}, {
+  label: '도매시장별',
+  items: ['서울가락', '서울강서', '수원', '안양']
+}];
+const QUICK = [{
+  label: '홈',
+  icon: 'home'
+}, {
+  label: '거래관리',
+  icon: 'store'
+}, {
+  label: '주문관리',
+  icon: 'list'
+}, {
+  label: '관심목록',
+  icon: 'heart-outline'
+}, {
+  label: 'Q&A',
+  icon: 'help'
+}, {
+  label: '회원 정보 관리',
+  icon: 'user'
+}];
+
+/** @deprecated 1.5.0 — use <Icon name="close" />. Kept as a wrapper for backward compatibility. */
+function CloseX({
+  size = 18,
+  color = 'var(--kosaf-src-text-strong)'
+}) {
+  const s = size <= 16 ? 16 : size <= 20 ? 20 : 24;
+  return /*#__PURE__*/React.createElement(__ds_scope.Icon, {
+    name: "close",
+    size: s,
+    tone: color
+  });
+}
+
+/** KOSAF MobileMenu — Source-derived from 모바일 메뉴 1:93205 (390×845). Accordion sections, quick-menu grid, footer links. */
+function MobileMenu({
+  sections = SECTIONS,
+  quick = QUICK,
+  defaultOpen = 1,
+  shopLabel = '입점 판매샵 목록',
+  bottomLinks = ['마이페이지', '고객센터', '로그아웃'],
+  onClose,
+  onSelect,
+  style
+}) {
+  const [open, setOpen] = React.useState(defaultOpen);
+  const ref = React.useRef(null);
+  React.useEffect(() => {
+    const k = e => {
+      if (e.key === 'Escape' && onClose) onClose();
+    };
+    window.addEventListener('keydown', k);
+    return () => window.removeEventListener('keydown', k);
+  }, [onClose]);
+  const row = {
+    boxSizing: 'border-box',
+    width: '100%',
+    minHeight: 73,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    padding: '0 20px',
+    background: 'none',
+    border: 0,
+    borderBottom: '1px solid var(--kosaf-color-border-default)',
+    cursor: 'pointer',
+    fontFamily: F,
+    fontSize: 20,
+    lineHeight: '30px',
+    color: 'var(--kosaf-src-text-strong)',
+    textAlign: 'left'
+  };
+  return /*#__PURE__*/React.createElement("nav", {
+    ref: ref,
+    "aria-label": "\uC804\uCCB4\uBA54\uB274",
+    style: {
+      width: '100%',
+      maxWidth: 391,
+      background: '#fff',
+      fontFamily: F,
+      ...style
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'space-between',
+      height: 75,
+      padding: '0 20px',
+      borderBottom: '1px solid var(--kosaf-color-border-default)'
+    }
+  }, /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontSize: 24,
+      fontWeight: 700,
+      lineHeight: '33px'
+    }
+  }, "\uC804\uCCB4\uBA54\uB274"), /*#__PURE__*/React.createElement("button", {
+    "aria-label": "\uBA54\uB274 \uB2EB\uAE30",
+    onClick: onClose,
+    style: {
+      width: 44,
+      height: 44,
+      marginRight: -10,
+      background: 'none',
+      border: 0,
+      cursor: 'pointer',
+      display: 'inline-flex',
+      alignItems: 'center',
+      justifyContent: 'center'
+    }
+  }, /*#__PURE__*/React.createElement(__ds_scope.Icon, {
+    name: "close",
+    size: 24,
+    tone: "primary"
+  }))), sections.map((s, i) => {
+    const on = open === i;
+    const id = 'kmm-' + i;
+    return /*#__PURE__*/React.createElement("div", {
+      key: s.label
+    }, /*#__PURE__*/React.createElement("button", {
+      style: {
+        ...row,
+        borderBottom: on ? 0 : row.borderBottom
+      },
+      "aria-expanded": on,
+      "aria-controls": id,
+      onClick: () => setOpen(on ? -1 : i)
+    }, s.label, /*#__PURE__*/React.createElement(__ds_scope.Icon, {
+      name: "navigate",
+      size: 20,
+      rotate: on ? 90 : -90
+    })), on ? /*#__PURE__*/React.createElement("ul", {
+      id: id,
+      style: {
+        listStyle: 'none',
+        margin: 0,
+        padding: '14px 0',
+        background: 'var(--kosaf-color-bg-subtle)',
+        borderBottom: '1px solid var(--kosaf-color-border-default)'
+      }
+    }, s.items.map(it => /*#__PURE__*/React.createElement("li", {
+      key: it
+    }, /*#__PURE__*/React.createElement("button", {
+      onClick: () => onSelect && onSelect(s.label, it),
+      style: {
+        width: '100%',
+        minHeight: 48,
+        padding: '0 48px',
+        background: 'none',
+        border: 0,
+        textAlign: 'left',
+        cursor: 'pointer',
+        fontFamily: F,
+        fontSize: 16,
+        color: 'var(--kosaf-src-text-body)'
+      }
+    }, it)))) : null);
+  }), /*#__PURE__*/React.createElement("button", {
+    style: {
+      ...row,
+      borderBottom: 0
+    },
+    onClick: () => onSelect && onSelect(shopLabel)
+  }, shopLabel), /*#__PURE__*/React.createElement("div", {
+    style: {
+      height: 10,
+      background: 'var(--kosaf-src-divider-thick)'
+    }
+  }), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'grid',
+      gridTemplateColumns: 'repeat(4, 1fr)'
+    }
+  }, Array.from({
+    length: Math.ceil(quick.length / 4) * 4
+  }).map((_, i) => {
+    const q = quick[i];
+    return q ? /*#__PURE__*/React.createElement("button", {
+      key: i,
+      onClick: () => onSelect && onSelect(q.label),
+      style: {
+        height: 79,
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        gap: 8,
+        background: '#fff',
+        border: 0,
+        borderRight: i % 4 < 3 ? '1px solid var(--kosaf-gray-100)' : 0,
+        borderBottom: '1px solid var(--kosaf-gray-100)',
+        cursor: 'pointer',
+        fontFamily: F,
+        fontSize: 13,
+        color: 'var(--kosaf-src-text-strong)'
+      }
+    }, q.icon ? /*#__PURE__*/React.createElement(__ds_scope.Icon, {
+      name: q.icon,
+      mode: "ui",
+      size: 32,
+      strokeWidth: 1.75,
+      tone: "primary"
+    }) : /*#__PURE__*/React.createElement("span", {
+      "aria-hidden": "true",
+      style: {
+        width: 32,
+        height: 32,
+        border: '1px dashed var(--kosaf-color-border-strong)',
+        borderRadius: 3
+      },
+      title: "icon slot"
+    }), q.label) : /*#__PURE__*/React.createElement("span", {
+      key: i,
+      style: {
+        borderRight: i % 4 < 3 ? '1px solid var(--kosaf-gray-100)' : 0,
+        borderBottom: '1px solid var(--kosaf-gray-100)'
+      }
+    });
+  })), /*#__PURE__*/React.createElement("div", {
+    style: {
+      height: 12,
+      background: 'var(--kosaf-src-divider-thick)'
+    }
+  }), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      gap: 16,
+      padding: '20px 0 28px'
+    }
+  }, bottomLinks.map((b, i) => /*#__PURE__*/React.createElement(React.Fragment, {
+    key: b
+  }, i ? /*#__PURE__*/React.createElement("span", {
+    style: {
+      width: 1,
+      height: 13,
+      background: 'var(--kosaf-color-border-strong)'
+    }
+  }) : null, /*#__PURE__*/React.createElement("button", {
+    onClick: () => onSelect && onSelect(b),
+    style: {
+      background: 'none',
+      border: 0,
+      cursor: 'pointer',
+      fontFamily: F,
+      fontSize: 14,
+      color: 'var(--kosaf-color-text-secondary)'
+    }
+  }, b)))));
+}
+Object.assign(__ds_scope, { CloseX, MobileMenu });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/mobile-menu/MobileMenu.tsx", error: String((e && e.message) || e) }); }
+
 // components/modal/Modal.jsx
 try { (() => {
 function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
@@ -2919,8 +3298,10 @@ function NotificationList({
       alignItems: 'center',
       justifyContent: 'center'
     }
-  }, /*#__PURE__*/React.createElement(__ds_scope.CloseX, {
-    size: 16
+  }, /*#__PURE__*/React.createElement(__ds_scope.Icon, {
+    name: "close",
+    size: 20,
+    tone: "primary"
   })) : null), /*#__PURE__*/React.createElement("div", {
     style: {
       background: 'var(--kosaf-src-panel-bg)',
@@ -3454,12 +3835,13 @@ function ProductCard({
     cursor: soldOut ? 'not-allowed' : 'pointer',
     opacity: soldOut ? 0.4 : 1
   };
-  const heart = /*#__PURE__*/React.createElement(__ds_scope.Icon, {
+  const heart = liked ? /*#__PURE__*/React.createElement(__ds_scope.Icon, {
     name: "heart",
-    size: m ? 20 : 22,
-    style: {
-      filter: liked ? 'none' : 'grayscale(1) brightness(1.6)'
-    }
+    size: m ? 20 : 22
+  }) : /*#__PURE__*/React.createElement(__ds_scope.Icon, {
+    name: "heart-outline",
+    size: m ? 20 : 24,
+    tone: "muted"
   });
   const fg = soldOut ? 'var(--kosaf-color-text-disabled)' : 'var(--kosaf-src-text-strong)';
   return /*#__PURE__*/React.createElement("article", {
@@ -4312,12 +4694,13 @@ function ProductTable({
           alignItems: 'center',
           justifyContent: 'center'
         }
-      }, /*#__PURE__*/React.createElement(__ds_scope.Icon, {
+      }, r.liked ? /*#__PURE__*/React.createElement(__ds_scope.Icon, {
         name: "heart",
+        size: 20
+      }) : /*#__PURE__*/React.createElement(__ds_scope.Icon, {
+        name: "heart-outline",
         size: 20,
-        style: {
-          filter: r.liked ? 'none' : 'grayscale(1) brightness(1.6)'
-        }
+        tone: "muted"
       })), /*#__PURE__*/React.createElement("button", {
         type: "button",
         "aria-label": '장바구니 담기 ' + (r.name || ''),
@@ -4432,6 +4815,10 @@ function QuantityStepper({
     width: h,
     height: h,
     flex: '0 0 ' + h + 'px',
+    display: 'inline-flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: 0,
     border: 0,
     background: '#fff',
     cursor: dis ? 'not-allowed' : 'pointer',
@@ -4457,7 +4844,10 @@ function QuantityStepper({
     disabled: disabled || v <= min,
     onClick: () => set(v - step),
     style: btn(disabled || v <= min)
-  }, "\u2212"), /*#__PURE__*/React.createElement("input", {
+  }, /*#__PURE__*/React.createElement(__ds_scope.Icon, {
+    name: "minus",
+    size: size === 'lg' ? 20 : 16
+  })), /*#__PURE__*/React.createElement("input", {
     type: "text",
     inputMode: "numeric",
     role: "spinbutton",
@@ -4497,7 +4887,10 @@ function QuantityStepper({
     disabled: disabled || v >= max,
     onClick: () => set(v + step),
     style: btn(disabled || v >= max)
-  }, "+"));
+  }, /*#__PURE__*/React.createElement(__ds_scope.Icon, {
+    name: "plus",
+    size: size === 'lg' ? 20 : 16
+  })));
 }
 Object.assign(__ds_scope, { QuantityStepper });
 })(); } catch (e) { __ds_ns.__errors.push({ path: "components/quantity-stepper/QuantityStepper.tsx", error: String((e && e.message) || e) }); }
@@ -4627,8 +5020,10 @@ function CartItem({
       alignItems: 'center',
       justifyContent: 'center'
     }
-  }, /*#__PURE__*/React.createElement(__ds_scope.CloseX, {
-    size: 14
+  }, /*#__PURE__*/React.createElement(__ds_scope.Icon, {
+    name: "close",
+    size: 16,
+    tone: "primary"
   })) : null), /*#__PURE__*/React.createElement("div", {
     style: {
       marginTop: 14,
@@ -4782,7 +5177,9 @@ Object.assign(__ds_scope, { Radio });
 
 // components/rating/Rating.tsx
 try { (() => {
-/** KOSAF Rating — KOSAF extension: star vectors were not exported, so stars are the "★" text glyph in --kosaf-color-state-warning (#FFE326, observed yellow stars in 1:87593). Read-only or input (radio group, ←/→). */
+const STAR = __ds_scope.UIIconRegistry.find(i => i.name === 'star').d[0];
+
+/** KOSAF Rating — KOSAF extension SVG "star" (not extracted from Figma; source star vector was not exported) — (24 grid) filled --kosaf-color-state-warning (#FFE326, observed yellow in 1:87593), empty = #DDDDDD. Half fill via clip. Read-only or input (radio group, ←/→). */
 function Rating({
   value = 0,
   onChange,
@@ -4805,20 +5202,40 @@ function Rating({
         position: 'relative',
         display: 'inline-block',
         width: size,
-        fontSize: size,
-        lineHeight: 1,
-        color: 'var(--kosaf-color-border-default)'
+        height: size,
+        lineHeight: 0,
+        verticalAlign: 'middle'
       }
-    }, "\u2605", /*#__PURE__*/React.createElement("span", {
+    }, /*#__PURE__*/React.createElement("svg", {
+      width: size,
+      height: size,
+      viewBox: "0 0 24 24",
+      style: {
+        display: 'block'
+      }
+    }, /*#__PURE__*/React.createElement("path", {
+      d: STAR,
+      fill: "var(--kosaf-color-border-default)"
+    })), /*#__PURE__*/React.createElement("span", {
       style: {
         position: 'absolute',
         left: 0,
         top: 0,
         width: fill * 100 + '%',
-        overflow: 'hidden',
-        color: 'var(--kosaf-color-state-warning)'
+        height: size,
+        overflow: 'hidden'
       }
-    }, "\u2605"));
+    }, /*#__PURE__*/React.createElement("svg", {
+      width: size,
+      height: size,
+      viewBox: "0 0 24 24",
+      style: {
+        display: 'block'
+      }
+    }, /*#__PURE__*/React.createElement("path", {
+      d: STAR,
+      fill: "var(--kosaf-color-state-warning)"
+    }))));
   };
   if (!interactive) {
     return /*#__PURE__*/React.createElement("span", {
@@ -5217,11 +5634,17 @@ function Header({
     onSubmit: onSearch,
     leading: /*#__PURE__*/React.createElement("span", {
       style: {
+        display: 'inline-flex',
+        alignItems: 'center',
+        gap: 4,
         fontSize: 18,
         color: 'var(--kosaf-color-text-secondary)',
         whiteSpace: 'nowrap'
       }
-    }, "\uAC70\uB798\uBC29\uC2DD \u25BE"),
+    }, "\uAC70\uB798\uBC29\uC2DD", /*#__PURE__*/React.createElement(__ds_scope.Icon, {
+      name: "chevron-down",
+      size: 16
+    })),
     trailing: /*#__PURE__*/React.createElement("button", {
       type: "submit",
       "aria-label": "\uAC80\uC0C9",
@@ -5681,9 +6104,9 @@ function Select({
       whiteSpace: 'nowrap'
     }
   }, cur ? cur.label : placeholder), /*#__PURE__*/React.createElement(__ds_scope.Icon, {
-    name: "navigate",
-    size: 18,
-    rotate: open ? 90 : -90
+    name: open ? 'chevron-up' : 'chevron-down',
+    size: 20,
+    tone: disabled ? 'disabled' : 'primary'
   })), open ? /*#__PURE__*/React.createElement("ul", {
     role: "listbox",
     style: {
@@ -7203,15 +7626,13 @@ Object.assign(window, {
 // ui_kits/buyer-mypage/screens.jsx
 try { (() => {
 // 구매자 마이페이지 홈 — Source: 1:88132 (PC 1920×2622), 1:87784 (Mo 390×2203), LNB 1:90423, MetricCard 1:87886
-const METRICS = [['여신금액', '10,000', 'purchase'], ['사용금액', '1,000', 'analytics'], ['한도금액', '9,000'], ['사용가능금액', '8,800']];
+const METRICS = [['여신금액', '10,000', 'wallet'], ['사용금액', '1,000', 'chart-line'], ['한도금액', '9,000'], ['사용가능금액', '8,800']];
 const FLOW = [['주문', 2], ['상품준비', 1], ['출고', 1], ['인수', 0], ['구매확정', 3]];
 const QNA = [['답변대기', '주문한지 1주가 지났는데 아직 배송이 시작되지 않았어요.', '2023-05-08'], ['답변완료', '납품장소를 변경할 수 있나요?', '2023-04-28'], ['답변완료', '세금계산서 발행 일정이 궁금합니다.', '2023-04-21']];
 const icoW = n => n ? /*#__PURE__*/React.createElement(KS.Icon, {
   name: n,
-  size: 34,
-  style: {
-    filter: 'brightness(0) invert(1)'
-  }
+  size: 32,
+  tone: "inverse"
 }) : null;
 function Welcome({
   mobile
@@ -8039,8 +8460,10 @@ function CheckoutMo({
       alignItems: 'center',
       justifyContent: 'center'
     }
-  }, /*#__PURE__*/React.createElement(KS.CloseX, {
-    size: 18
+  }, /*#__PURE__*/React.createElement(KS.Icon, {
+    name: "close",
+    size: 24,
+    tone: "primary"
   }))), /*#__PURE__*/React.createElement("div", {
     style: {
       padding: '16px 16px 0'
@@ -9275,7 +9698,7 @@ function SellerShopPC() {
       gridTemplateColumns: 'repeat(4, 1fr)',
       gap: 20
     }
-  }, [['정산예정', '10,000', 'analytics'], ['정가거래', '12', 'purchase'], ['입찰거래', '3'], ['가격협상', '2']].map(([l, v, ic]) => /*#__PURE__*/React.createElement(KS.MetricCard, {
+  }, [['정산예정', '10,000', 'wallet'], ['정가거래', '12', 'list'], ['입찰거래', '3'], ['가격협상', '2']].map(([l, v, ic]) => /*#__PURE__*/React.createElement(KS.MetricCard, {
     key: l,
     width: "100%",
     label: l,
@@ -9283,10 +9706,8 @@ function SellerShopPC() {
     value: v,
     icon: ic ? /*#__PURE__*/React.createElement(KS.Icon, {
       name: ic,
-      size: 34,
-      style: {
-        filter: 'brightness(0) invert(1)'
-      }
+      size: 32,
+      tone: "inverse"
     }) : null
   }))), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(SectionTitle, {
     size: 24
@@ -9373,11 +9794,9 @@ function SellerShopMo() {
     label: l,
     value: v,
     icon: /*#__PURE__*/React.createElement(KS.Icon, {
-      name: "analytics",
-      size: 34,
-      style: {
-        filter: 'brightness(0) invert(1)'
-      }
+      name: l === '정산예정' ? 'wallet' : 'list',
+      size: 32,
+      tone: "inverse"
     })
   }))), /*#__PURE__*/React.createElement("div", {
     role: "tablist",
@@ -10241,11 +10660,25 @@ __ds_ns.FormField = __ds_scope.FormField;
 
 __ds_ns.Header = __ds_scope.Header;
 
+__ds_ns.IconButton = __ds_scope.IconButton;
+
 __ds_ns.IconRegistry = __ds_scope.IconRegistry;
+
+__ds_ns.UIIconRegistry = __ds_scope.UIIconRegistry;
+
+__ds_ns.IconAliases = __ds_scope.IconAliases;
+
+__ds_ns.IconTones = __ds_scope.IconTones;
 
 __ds_ns.Icon = __ds_scope.Icon;
 
 __ds_ns.KOSAF_ICONS = __ds_scope.KOSAF_ICONS;
+
+__ds_ns.KOSAF_UI_ICONS = __ds_scope.KOSAF_UI_ICONS;
+
+__ds_ns.KOSAF_ICON_ALIASES = __ds_scope.KOSAF_ICON_ALIASES;
+
+__ds_ns.KOSAF_ICON_TONES = __ds_scope.KOSAF_ICON_TONES;
 
 __ds_ns.Input = __ds_scope.Input;
 

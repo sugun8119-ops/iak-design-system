@@ -1,10 +1,15 @@
-The 11 SVGs exported verbatim from the final source — use it for actions on KOSAF PC (1920) and mobile (390–391) screens.
+Single entry point for every KOSAF glyph — 11 verbatim Figma source icons plus the KOSAF extension UI set; use it instead of text glyphs (×, −, ★, ▾) or CSS-drawn shapes.
 
 ```jsx
-<Icon name={i.name} size={30}/>
+<Icon name="search" />                         {/* source 1:86084, baked #059B00 */}
+<Icon name="close" size={20} tone="secondary" /> {/* extension, currentColor */}
+<Icon name="star" filled tone="#FFE326" />
+<IconButton icon="close" label="닫기" />         {/* icon-only controls always go through IconButton */}
 ```
 
-- Provenance: **Source-derived (1:85779)** · node 11 SVG ids. Structure, sizes and colours follow the exported source; behaviour beyond what the screen shows is a KOSAF extension.
-- States: Static.
-- Props: `name`, `size`, `title`, `rotate`.
-- The 11 SVGs exported verbatim from the final source. Colours are baked in; size scales the longest side.
+- `mode="source"` (default) keeps Figma colours exactly; `tone` is ignored with a warning. Source colours are never replaced or filtered.
+- Extension icons: sizes 16/20/24/32, 2px round stroke on a 24 grid, `tone` = current|primary|secondary|muted|disabled|brand|positive|danger|focus|inverse.
+- White source icons (check, shopping-bag, purchase, document-edit) are drawn for green/filled backgrounds — don't place on white.
+- Unknown name → dashed red "?" + `console.warn`. Add names to `icons.ui.js` + `icons.manifest.json`; don't hand-draw inline.
+- Decorative by default (`aria-hidden`). Pass `title` only for standalone meaningful icons.
+- Aliases (x→close, hamburger→menu, prev/next→chevron-*, like→heart …) are in `IconAliases`.

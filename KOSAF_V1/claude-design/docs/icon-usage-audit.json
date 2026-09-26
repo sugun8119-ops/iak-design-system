@@ -1,0 +1,83 @@
+{
+ "version": "1.5.0",
+ "date": "2026-09-27",
+ "sourceChecksumsIdentical": true,
+ "manifest": {
+  "names": 34,
+  "source": 11,
+  "extension": 23,
+  "duplicates": 0,
+  "brokenAliases": 0
+ },
+ "changedFiles": [
+  "components/icon/Icon.tsx",
+  "components/icon/Icon.d.ts",
+  "components/icon/Icon.prompt.md",
+  "components/icon/icons.ui.js (new)",
+  "components/icon/icons.manifest.json (new)",
+  "components/icon/icon.card.html",
+  "components/icon-button/* (new family)",
+  "components/mobile-header/MobileHeader.tsx",
+  "components/mobile-menu/MobileMenu.tsx",
+  "components/cart-item/CartItem.tsx",
+  "components/notification-list/NotificationList.tsx",
+  "components/filter-panel/FilterPanel.tsx",
+  "components/file-upload/FileUpload.tsx",
+  "components/filter-chip/FilterChip.tsx",
+  "components/quantity-stepper/QuantityStepper.tsx",
+  "components/rating/Rating.tsx",
+  "components/header/Header.tsx",
+  "components/select/Select.tsx",
+  "components/product-card/ProductCard.tsx",
+  "components/product-table/ProductTable.tsx",
+  "components/bottom-action-bar/BottomActionBar.tsx",
+  "components/metric-card/metric-card.card.html",
+  "components/metric-card/MetricCard.prompt.md",
+  "components/search/search.card.html",
+  "ui_kits/checkout/screens.jsx",
+  "ui_kits/buyer-mypage/screens.jsx",
+  "ui_kits/seller-myshop/screens.jsx",
+  "guidelines/icon-usage.html (new)",
+  "guidelines/icon-states.html (new)",
+  "guidelines/docs/02-category-index.html",
+  "guidelines/docs/05-qa.html",
+  "guidelines/docs/07-changelog.html",
+  "readme.md",
+  "SKILL.md"
+ ],
+ "legacy": {
+  "CloseX": "deprecated wrapper → Icon close (export kept)",
+  "navigate": "source arrow kept for Pagination/Accordion/MobileMenu/FilterPanel/back"
+ },
+ "removed": {
+  "textGlyphIcons": [
+   "×",
+   "−",
+   "+ (QuantityStepper)",
+   "★",
+   "▾"
+  ],
+  "cssFilterRecolour": 7,
+  "cssDrawnIcons": [
+   "MobileHeader bars",
+   "CloseX"
+  ]
+ },
+ "preserved": [
+  "11 source SVG bytes",
+  "Checkbox ✓ (source glyph)",
+  "OrderSummary + = operators (content)",
+  "Search/Button masters untouched"
+ ],
+ "staticChecks": {
+  "remainingGlyphIcons": 0,
+  "remainingCssFilter": 0,
+  "closeXCallSites": 0,
+  "unknownIconLiterals": 0
+ },
+ "notVerified": [
+  "browser render of icons/IconButton",
+  "keyboard focus in browser",
+  "visual QA of 100 cards"
+ ]
+}

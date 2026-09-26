@@ -145,10 +145,15 @@ IAK GameofMind의 다크/오렌지 외형은 KOSAF에 적용하지 않는다. KO
 - 원본의 소형 컨트롤과 브랜드 서체 예외는 유지되어 있으므로 터치 영역·대비·누락 서체를 자동 해결된 것으로 간주하지 않는다.
 
 
-## Native Claude Design library (1.4.0)
-Use the published KOSAF_V1 native library and its 49 component families in `claude-design/components/`. Follow component `.prompt.md` and `.d.ts` files; use the 10 UI kit groups for compositions. Reference `claude-design/docs/source-coverage.md` for explicit coverage and gaps. This package extends the 11 Figma masters; do not describe all 49 as Figma masters or claim all 91 source frames are reproduced. IAK Design Studio is an organizational reference only. Root migration/source-map files are current; embedded docs/source files are historical source snapshots.
+## Native Claude Design library (1.5.0)
+Use the published KOSAF_V1 native library and its 50 component families in `claude-design/components/`. Follow component `.prompt.md` and `.d.ts` files; use the 10 UI kit groups for compositions. Reference `claude-design/docs/source-coverage.md` for explicit coverage and gaps. This package extends the 11 Figma masters; do not describe all 50 as Figma masters or claim all 91 source frames are reproduced. IAK Design Studio is an organizational reference only. Root migration/source-map files are current; embedded docs/source files are historical source snapshots.
 
 
 ## Reference enhancement — 1.4.0 / 2026-09-27
 
 Use PageHeader for title/description/actions, FormErrorSummary for field vs submit errors, and MobileFilterSheet for draft/applied mobile filtering. Preserve KOSAF tokens; borrow reference patterns only. Native library now has 49 families, 97 cards and 22 screen kits. See `claude-design/docs/reference-map.json`, `reference-enhancement-qa.json` and `reference-changes-2026-09-27.json`. Figma masters remain 11.
+
+
+## Icon management — 1.5.0 / 2026-09-27
+
+Use `Icon` and `IconButton` with the canonical names in `claude-design/components/icon/icons.manifest.json`. Preserve the11source SVGs and use the23KOSAF extension SVGs for shared interface controls. Source colors are fixed; extension icons use semantic tones/currentColor. New icon-only controls require a meaningful accessible label and desktop36/mobile44px minimum hit area. Do not draw ad-hoc CSS/glyph icons or recolor source icons with CSS filters. See `claude-design/docs/icon-management.md` for aliases and retirement rules, `icon-management-qa.json` for bounded verification. Native library now100cards50families22kits; Figma master count remains11.

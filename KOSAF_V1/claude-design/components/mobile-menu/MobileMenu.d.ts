@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 /**
- * MobileMenu — Source-derived (1:85779), 1:93205. 전체메뉴 drawer: accordion sections (open list on #F7F7F7), 입점 판매샵 목록, 4-col quick menu, bottom links. Esc closes.
+ * MobileMenu — Source-derived (1:85779), 1:93205. 전체메뉴 drawer: accordion sections (open list on #F7F7F7), 입점 판매샵 목록, 4-col quick menu (6 KOSAF extension SVG icons, not extracted from Figma; dashed slot only when `icon` is omitted), bottom links. Esc closes.
  * States: Section open · closed.
  */
 export interface MobileMenuProps {

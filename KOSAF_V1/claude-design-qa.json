@@ -1,8 +1,8 @@
 {
   "date": "2026-09-27",
-  "componentFamilies": 49,
-  "manifestExportsIncludingHelpers": 60,
-  "cards": 97,
+  "componentFamilies": 50,
+  "manifestExportsIncludingHelpers": 67,
+  "cards": 100,
   "uiKitGroups": 10,
   "uiKitPages": 22,
   "desktopCards": 11,
@@ -97,5 +97,56 @@
       "all94PreviousCardsPreserved": true,
       "missingTypePromptCardCompanions": []
     }
+  },
+  "iconManagement": {
+    "version": "1.5.0",
+    "date": "2026-09-27",
+    "sourceIcons": 11,
+    "extensionIcons": 23,
+    "aliases": 33,
+    "componentFamilies": 50,
+    "cards": 100,
+    "uiKitPages": 22,
+    "staticChecks": {
+      "sourceSVGsAndDataByteIdentical": true,
+      "tokenFilesChanged": [],
+      "all97PreviousCardsPreserved": true,
+      "missingCardFiles": [],
+      "duplicateIconNames": 0,
+      "brokenAliases": 0,
+      "nativeCheckerReportedIssues": 0
+    },
+    "browserChecks": [
+      {
+        "area": "Catalogue",
+        "result": "Korean 닫기 search returned exactly close; source filter returned 11 entries."
+      },
+      {
+        "area": "IconButton",
+        "result": "Like toggled aria-pressed=true; switching grid→list updated both states; active reset increments counter0→1; disabled reset has native disabled attribute; desktop36x36 and mobile44x44 measured."
+      },
+      {
+        "area": "Keyboard focus",
+        "result": "Tab from filter to search: computed outline rgb(0,71,237) solid2px."
+      },
+      {
+        "area": "MobileMenu",
+        "result": "6 quick action SVG icons visually present; dashed placeholders replaced."
+      },
+      {
+        "area": "Rating",
+        "result": "ArrowRight from3 selects4; 4.4 rating has SVG clips100/100/100/100/40 percent."
+      },
+      {
+        "area": "Final catalogue",
+        "result": "Extension+navigation+menu search intersection returned exactly1menu. Paired white/#333 previews visually checked; source colors preserved; missing demo labeled."
+      }
+    ],
+    "limitations": [
+      "Representative browser checks on unchanged native exported source; not exhaustive100-card regression.",
+      "Original source-sized controls and checkbox glyph preserved; not all controls migrated to IconButton.",
+      "Source icon baked colors remain fixed; extensions have separate provenance.",
+      "No accessibility certification or custom native date-picker icon replacement."
+    ]
   }
 }

@@ -17,7 +17,7 @@ const FAQ=[{title:'[배송] 배송기간은 얼마나 되나요?',content:'상�
 const META = {"name":"Search","prov":"master","node":"218:601","use":"키워드 검색 pill 579×50 r25, 2px 녹색 테두리. 헤더는 거래방식 범위 슬롯 사용","props":["value","onChange","onSubmit","placeholder","width","leading","trailing","disabled"],"states":"기본·포커스·비활성","ko":"검색 · Search"};
 function Demo(){return (<>
 <KSec label="PC · MASTER 579×50"><Search width={579} trailing={<button aria-label="검색" style={{background:'none',border:0,marginRight:12,lineHeight:0,cursor:'pointer'}}><Icon name="search"/></button>}/></KSec>
-<KSec label="PC · HEADER (leading scope)"><Search width={579} leading={<span style={{fontSize:18,color:'#707070'}}>거래방식 ▾</span>} placeholder=""/></KSec>
+<KSec label="PC · HEADER (leading scope)"><Search width={579} leading={<span style={{display:'inline-flex',alignItems:'center',gap:4,fontSize:18,color:'#707070'}}>거래방식<Icon name="chevron-down" size={16}/></span>} placeholder=""/></KSec>
 <KSec label="모바일 · 100%"><div style={{width:350}}><Search width="100%" disabled placeholder="Disabled"/></div></KSec>
 </>);}
 ReactDOM.createRoot(document.getElementById('r')).render(<KCard meta={META}><Demo/></KCard>);

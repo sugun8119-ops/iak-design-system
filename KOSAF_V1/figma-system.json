@@ -275,9 +275,9 @@
     ]
   },
   "claudeDesignExpansion": {
-    "version": "1.4.0",
+    "version": "1.5.0",
     "nativeProject": "https://claude.ai/design/p/f8c97b66-58c3-463f-9523-26fdd5b960d4",
-    "componentFamilies": 49,
+    "componentFamilies": 50,
     "families": [
       "accordion",
       "alert-dialog",
@@ -300,6 +300,7 @@
       "form-field",
       "header",
       "icon",
+      "icon-button",
       "input",
       "metric-card",
       "mobile-filter-sheet",
@@ -329,7 +330,7 @@
       "table-row",
       "textarea"
     ],
-    "cards": 97,
+    "cards": 100,
     "uiKitGroups": 10,
     "uiKitPages": 22,
     "sourcePackage": "claude-design",
@@ -339,6 +340,11 @@
     "referenceEnhancementReport": "claude-design/docs/reference-enhancement.md",
     "referenceEnhancementQA": "reference-enhancement-qa.json",
     "referenceMap": "claude-design/docs/reference-map.json",
-    "changedFiles": "reference-changes-2026-09-27.json"
+    "changedFiles": "reference-changes-2026-09-27.json",
+    "iconManifest": "claude-design/components/icon/icons.manifest.json",
+    "iconManagement": "claude-design/docs/icon-management.md",
+    "iconQA": "icon-management-qa.json",
+    "iconSourceCount": 11,
+    "iconExtensionCount": 23
   }
 }

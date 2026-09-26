@@ -36,6 +36,7 @@
               "components/form-error-summary/**",
               "components/form-field/**",
               "components/header/**",
+              "components/icon-button/**",
               "components/icon/**",
               "components/input/**",
               "components/metric-card/**",
@@ -257,12 +258,32 @@
         "message": "<Header> doesn't accept that prop. Declared props: logoSrc, menu, topLeft, topRight, activeMenu, onMenu, onTopLink, onSearch, searchPlaceholder, cartCount, alarmCount, onCart, onAlarm, onMall, onShop, style."
       },
       {
-        "selector": "JSXOpeningElement[name.name='Icon'] > JSXAttribute > JSXIdentifier[name!=/^(?:name|size|title|rotate|style|key|ref|className|style|children)$/]",
-        "message": "<Icon> doesn't accept that prop. Declared props: name, size, title, rotate, style."
+        "selector": "JSXOpeningElement[name.name='Icon'] > JSXAttribute > JSXIdentifier[name!=/^(?:name|mode|size|tone|filled|strokeWidth|title|rotate|style|key|ref|className|style|children)$/]",
+        "message": "<Icon> doesn't accept that prop. Declared props: name, mode, size, tone, filled, strokeWidth, title, rotate, style."
       },
       {
-        "selector": "JSXOpeningElement[name.name='Icon'] > JSXAttribute[name.name='name'] > Literal[value!=/^(?:analytics|search|check|shopping-bag|heart|navigate|purchase|bell|time-history|document-edit|cart)$/]",
-        "message": "<Icon> name must be one of 'analytics' | 'search' | 'check' | 'shopping-bag' | 'heart' | 'navigate' | 'purchase' | 'bell' | 'time-history' | 'document-edit' | 'cart'."
+        "selector": "JSXOpeningElement[name.name='Icon'] > JSXAttribute[name.name='mode'] > Literal[value!=/^(?:source|ui)$/]",
+        "message": "<Icon> mode must be one of 'source' | 'ui'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='IconButton'] > JSXAttribute > JSXIdentifier[name!=/^(?:icon|label|iconSize|mode|tone|device|size|toggle|selected|pressed|disabled|state|onClick|type|style|key|ref|className|style|children)$/]",
+        "message": "<IconButton> doesn't accept that prop. Declared props: icon, label, iconSize, mode, tone, device, size, toggle, selected, pressed, disabled, state, onClick, type, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='IconButton'] > JSXAttribute[name.name='mode'] > Literal[value!=/^(?:source|ui)$/]",
+        "message": "<IconButton> mode must be one of 'source' | 'ui'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='IconButton'] > JSXAttribute[name.name='device'] > Literal[value!=/^(?:desktop|mobile)$/]",
+        "message": "<IconButton> device must be one of 'desktop' | 'mobile'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='IconButton'] > JSXAttribute[name.name='state'] > Literal[value!=/^(?:default|hover|focus|pressed|disabled)$/]",
+        "message": "<IconButton> state must be one of 'default' | 'hover' | 'focus' | 'pressed' | 'disabled'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='IconButton'] > JSXAttribute[name.name='type'] > Literal[value!=/^(?:button|submit)$/]",
+        "message": "<IconButton> type must be one of 'button' | 'submit'."
       },
       {
         "selector": "JSXOpeningElement[name.name='Input'] > JSXAttribute > JSXIdentifier[name!=/^(?:state|value|defaultValue|onChange|placeholder|errorMessage|disabled|width|type|id|style|key|ref|className|style|children)$/]",
@@ -539,6 +560,9 @@
         "replaces": []
       },
       "Icon": {
+        "replaces": []
+      },
+      "IconButton": {
         "replaces": []
       },
       "Input": {

@@ -1,0 +1,32 @@
+{
+ "algo": "sha256 (first 16 hex)",
+ "before1_5": {
+  "analytics__1-88929.svg": "4f3ccb41eaae6c66",
+  "bell__1-86136.svg": "9652b1d1e10bc74a",
+  "cart__1-91528.svg": "438b512677802157",
+  "check__1-88348.svg": "48b2b65bf867c717",
+  "document-edit__1-88822.svg": "fbd90dcc4e707775",
+  "heart__1-91526.svg": "e67f31e835557876",
+  "navigate__1-90282.svg": "f1f4554d5af1b144",
+  "purchase__1-88868.svg": "49cc344ee1dc1761",
+  "search__1-86084.svg": "282c2f15f5a47239",
+  "shopping-bag__1-88810.svg": "4c865ca55f908ea8",
+  "time-history__1-87530.svg": "e7ce764aa3759277",
+  "components/icon/icons.data.js": "1f82893c6d667fbc"
+ },
+ "after1_5": {
+  "analytics__1-88929.svg": "4f3ccb41eaae6c66",
+  "bell__1-86136.svg": "9652b1d1e10bc74a",
+  "cart__1-91528.svg": "438b512677802157",
+  "check__1-88348.svg": "48b2b65bf867c717",
+  "document-edit__1-88822.svg": "fbd90dcc4e707775",
+  "heart__1-91526.svg": "e67f31e835557876",
+  "navigate__1-90282.svg": "f1f4554d5af1b144",
+  "purchase__1-88868.svg": "49cc344ee1dc1761",
+  "search__1-86084.svg": "282c2f15f5a47239",
+  "shopping-bag__1-88810.svg": "4c865ca55f908ea8",
+  "time-history__1-87530.svg": "e7ce764aa3759277",
+  "components/icon/icons.data.js": "1f82893c6d667fbc"
+ },
+ "identical": true
+}

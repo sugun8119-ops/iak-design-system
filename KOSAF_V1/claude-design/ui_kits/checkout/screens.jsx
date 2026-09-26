@@ -55,7 +55,7 @@ function CheckoutMo({ startDone }) {
   const [pay, setPay] = React.useState('a');
   return (
     <MoPage header={false} bottom={done ? null : <KS.BottomActionBar variant="full" primaryLabel={won(ORDER_TOTAL) + ' 결제하기'} onPrimary={() => setDone(true)} />} bottomHeight={70}>
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: 60, padding: '0 16px', borderBottom: '1px solid var(--kosaf-color-border-default)' }}><h1 style={{ margin: 0, fontSize: 20, fontWeight: 700 }}>{done ? '주문완료' : '주문/결제'}</h1><button aria-label="닫기" style={{ width: 44, height: 44, marginRight: -12, border: 0, background: 'none', cursor: 'pointer', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}><KS.CloseX size={18} /></button></div>
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: 60, padding: '0 16px', borderBottom: '1px solid var(--kosaf-color-border-default)' }}><h1 style={{ margin: 0, fontSize: 20, fontWeight: 700 }}>{done ? '주문완료' : '주문/결제'}</h1><button aria-label="닫기" style={{ width: 44, height: 44, marginRight: -12, border: 0, background: 'none', cursor: 'pointer', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}><KS.Icon name="close" size={24} tone="primary" /></button></div>
       <div style={{ padding: '16px 16px 0' }}><KS.Stepper current={done ? 2 : 1} itemWidth={116} style={{ gap: 3 }} /></div>
       {done ? <CompleteBody mobile pay={pay} onRestart={() => setDone(false)} /> : (
         <div style={{ padding: 16, display: 'flex', flexDirection: 'column', gap: 20 }}>

@@ -2,7 +2,6 @@ import React from 'react';
 import { Checkbox } from '../checkbox/Checkbox.jsx';
 import { FilterChip } from '../filter-chip/FilterChip.tsx';
 import { Icon } from '../icon/Icon.tsx';
-import { CloseX } from '../mobile-menu/MobileMenu.tsx';
 
 const F = 'var(--kosaf-font)';
 export const DEFAULT_FILTER_GROUPS = [
@@ -33,7 +32,7 @@ export function FilterPanel({ device = 'desktop', groups = DEFAULT_FILTER_GROUPS
         <div style={{ display: 'flex', alignItems: 'center', gap: 22, height: 75, padding: '0 20px', borderBottom: '1px solid var(--kosaf-color-border-default)' }}>
           <span style={{ fontSize: 20, fontWeight: 700 }}>필터</span>
           <button type="button" onClick={reset} style={{ width: 82, height: 42, border: 0, borderRadius: 5, background: 'var(--kosaf-color-action-primary)', color: '#fff', fontFamily: F, fontSize: 14, fontWeight: 500, cursor: 'pointer' }}>초기화</button>
-          <button type="button" aria-label="필터 닫기" onClick={onClose} style={{ marginLeft: 'auto', marginRight: -10, width: 44, height: 44, background: 'none', border: 0, cursor: 'pointer', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}><CloseX size={20} /></button>
+          <button type="button" aria-label="필터 닫기" onClick={onClose} style={{ marginLeft: 'auto', marginRight: -10, width: 44, height: 44, background: 'none', border: 0, cursor: 'pointer', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}><Icon name="close" size={20} tone="primary" /></button>
         </div>
         {groups.map((g, i) => {
           const on = open === i; const cur = sel[g.key] || [];
@@ -95,7 +94,7 @@ export function FilterPanel({ device = 'desktop', groups = DEFAULT_FILTER_GROUPS
           {applied.map(({ k, o }) => <FilterChip key={k + o} variant="removable" onRemove={() => toggle(k, o)}>{o}</FilterChip>)}
         </div>
       </div>
-      {onClose ? <div style={{ display: 'flex', justifyContent: 'center' }}><button type="button" onClick={onClose} style={{ height: 46, padding: '0 36px', marginTop: -1, border: 0, borderRadius: '0 0 3px 3px', background: 'var(--kosaf-color-action-primary)', color: '#fff', fontFamily: F, fontSize: 18, fontWeight: 500, cursor: 'pointer', display: 'inline-flex', alignItems: 'center', gap: 10 }}>닫기 <Icon name="navigate" size={16} rotate={90} style={{ filter: 'brightness(0) invert(1)' }} /></button></div> : null}
+      {onClose ? <div style={{ display: 'flex', justifyContent: 'center' }}><button type="button" onClick={onClose} style={{ height: 46, padding: '0 36px', marginTop: -1, border: 0, borderRadius: '0 0 3px 3px', background: 'var(--kosaf-color-action-primary)', color: '#fff', fontFamily: F, fontSize: 18, fontWeight: 500, cursor: 'pointer', display: 'inline-flex', alignItems: 'center', gap: 10 }}>닫기 <Icon name="chevron-up" size={16} tone="inverse" /></button></div> : null}
     </section>
   );
 }

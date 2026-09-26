@@ -1,0 +1,1037 @@
+{
+ "system": "KOSAF_V1 · Project Design System",
+ "version": "1.5.0",
+ "generated": "2026-09-27",
+ "counts": {
+  "source": 11,
+  "extension": 23,
+  "aliases": 33
+ },
+ "api": {
+  "component": "Icon",
+  "modes": [
+   "source (default)",
+   "ui"
+  ],
+  "sizes": [
+   16,
+   20,
+   24,
+   32
+  ],
+  "tones": [
+   "current",
+   "primary",
+   "secondary",
+   "muted",
+   "disabled",
+   "brand",
+   "positive",
+   "danger",
+   "focus",
+   "inverse"
+  ],
+  "missing": "dashed red \"?\" box + console.warn once per name",
+  "a11y": "aria-hidden by default; title → role=img + aria-label; icon-only controls use IconButton(label required)"
+ },
+ "policy": {
+  "add": "Extension icons: 24 grid, 2px round stroke, single path set, currentColor; add to icons.ui.js + this manifest + docs/icon-management.md changelog. No brand/social icons without a supplied source.",
+  "deprecate": "Set status \"deprecated\", keep an alias to the replacement for ≥1 minor version.",
+  "sourceIcons": "Never edit, recolour or CSS-filter source SVGs."
+ },
+ "aliases": {
+  "x": "close",
+  "close-x": "close",
+  "hamburger": "menu",
+  "add": "plus",
+  "increase": "plus",
+  "decrease": "minus",
+  "prev": "chevron-left",
+  "next": "chevron-right",
+  "caret-down": "chevron-down",
+  "caret-up": "chevron-up",
+  "expand": "chevron-down",
+  "collapse": "chevron-up",
+  "back": "navigate",
+  "bag": "shopping-bag",
+  "notification": "bell",
+  "history": "time-history",
+  "edit": "document-edit",
+  "chart": "analytics",
+  "money": "wallet",
+  "trend": "chart-line",
+  "like": "heart",
+  "heart-filled": "heart",
+  "like-outline": "heart-outline",
+  "rating": "star",
+  "check": "check",
+  "done": "check-mark",
+  "date": "calendar",
+  "member": "user",
+  "shop": "store",
+  "qna": "help",
+  "reset": "refresh",
+  "view-grid": "grid",
+  "view-list": "list"
+ },
+ "icons": [
+  {
+   "name": "analytics",
+   "label": "분석 그래프",
+   "category": "data",
+   "provenance": {
+    "type": "source",
+    "figmaFile": "MOEAkEbXtwHdE3xveg2Gto",
+    "figmaId": "1:88929",
+    "layer": "🦆 icon \"analytics graph chart\"",
+    "file": "assets/icons/analytics__1-88929.svg"
+   },
+   "nativeSize": [
+    34.26,
+    32.9
+   ],
+   "viewBox": "0 0 36 35",
+   "colorPolicy": "baked — preserved verbatim, tone ignored, no CSS filter",
+   "bakedColors": [
+    "black",
+    "#059B00"
+   ],
+   "allowedSizes": "native or longest-side scaling; prefer native",
+   "aliases": [
+    "chart"
+   ],
+   "status": "active",
+   "usage": []
+  },
+  {
+   "name": "search",
+   "label": "검색",
+   "category": "action",
+   "provenance": {
+    "type": "source",
+    "figmaFile": "MOEAkEbXtwHdE3xveg2Gto",
+    "figmaId": "1:86084",
+    "layer": "icon",
+    "file": "assets/icons/search__1-86084.svg"
+   },
+   "nativeSize": [
+    24,
+    24
+   ],
+   "viewBox": "0 0 24 24",
+   "colorPolicy": "baked — preserved verbatim, tone ignored, no CSS filter",
+   "bakedColors": [
+    "#059B00"
+   ],
+   "allowedSizes": "native or longest-side scaling; prefer native",
+   "aliases": [],
+   "status": "active",
+   "usage": [
+    "Header",
+    "MobileHeader",
+    "Search trailing"
+   ]
+  },
+  {
+   "name": "check",
+   "label": "체크(흰색)",
+   "category": "status",
+   "provenance": {
+    "type": "source",
+    "figmaFile": "MOEAkEbXtwHdE3xveg2Gto",
+    "figmaId": "1:88348",
+    "layer": "🦆 icon \"check\"",
+    "file": "assets/icons/check__1-88348.svg"
+   },
+   "nativeSize": [
+    26.33,
+    20.61
+   ],
+   "viewBox": "0 0 28 22",
+   "colorPolicy": "baked — preserved verbatim, tone ignored, no CSS filter",
+   "bakedColors": [
+    "white"
+   ],
+   "allowedSizes": "native or longest-side scaling; prefer native",
+   "aliases": [],
+   "status": "active",
+   "onDark": "white glyph — use on green/filled backgrounds only",
+   "usage": []
+  },
+  {
+   "name": "shopping-bag",
+   "label": "쇼핑백(흰색)",
+   "category": "commerce",
+   "provenance": {
+    "type": "source",
+    "figmaFile": "MOEAkEbXtwHdE3xveg2Gto",
+    "figmaId": "1:88810",
+    "layer": "🦆 icon \"Shopping bag\"",
+    "file": "assets/icons/shopping-bag__1-88810.svg"
+   },
+   "nativeSize": [
+    31.56,
+    31.11
+   ],
+   "viewBox": "0 0 32 32",
+   "colorPolicy": "baked — preserved verbatim, tone ignored, no CSS filter",
+   "bakedColors": [
+    "white",
+    "#02AC5A"
+   ],
+   "allowedSizes": "native or longest-side scaling; prefer native",
+   "aliases": [
+    "bag"
+   ],
+   "status": "active",
+   "usage": []
+  },
+  {
+   "name": "heart",
+   "label": "관심(채움)",
+   "category": "status",
+   "provenance": {
+    "type": "source",
+    "figmaFile": "MOEAkEbXtwHdE3xveg2Gto",
+    "figmaId": "1:91526",
+    "layer": "Heart_M_01",
+    "file": "assets/icons/heart__1-91526.svg"
+   },
+   "nativeSize": [
+    22,
+    18
+   ],
+   "viewBox": "0 0 22 18",
+   "colorPolicy": "baked — preserved verbatim, tone ignored, no CSS filter",
+   "bakedColors": [
+    "#FF5858"
+   ],
+   "allowedSizes": "native or longest-side scaling; prefer native",
+   "aliases": [
+    "like",
+    "heart-filled"
+   ],
+   "status": "active",
+   "usage": [
+    "ProductCard/ProductTable/BottomActionBar (liked)"
+   ]
+  },
+  {
+   "name": "navigate",
+   "label": "이동 화살표",
+   "category": "navigation",
+   "provenance": {
+    "type": "source",
+    "figmaFile": "MOEAkEbXtwHdE3xveg2Gto",
+    "figmaId": "1:90282",
+    "layer": "ic:round-navigate-next",
+    "file": "assets/icons/navigate__1-90282.svg"
+   },
+   "nativeSize": [
+    20,
+    20
+   ],
+   "viewBox": "0 0 20 20",
+   "colorPolicy": "baked — preserved verbatim, tone ignored, no CSS filter",
+   "bakedColors": [
+    "#333333"
+   ],
+   "allowedSizes": "native or longest-side scaling; prefer native",
+   "aliases": [
+    "back"
+   ],
+   "status": "active",
+   "usage": [
+    "Pagination",
+    "Accordion",
+    "MobileMenu",
+    "FilterPanel",
+    "MobileHeader back"
+   ]
+  },
+  {
+   "name": "purchase",
+   "label": "구매(흰색)",
+   "category": "commerce",
+   "provenance": {
+    "type": "source",
+    "figmaFile": "MOEAkEbXtwHdE3xveg2Gto",
+    "figmaId": "1:88868",
+    "layer": "🦆 icon \"purchase\"",
+    "file": "assets/icons/purchase__1-88868.svg"
+   },
+   "nativeSize": [
+    35,
+    35
+   ],
+   "viewBox": "0 0 35 35",
+   "colorPolicy": "baked — preserved verbatim, tone ignored, no CSS filter",
+   "bakedColors": [
+    "white",
+    "#02AC5A"
+   ],
+   "allowedSizes": "native or longest-side scaling; prefer native",
+   "aliases": [],
+   "status": "active",
+   "usage": []
+  },
+  {
+   "name": "bell",
+   "label": "알림",
+   "category": "navigation",
+   "provenance": {
+    "type": "source",
+    "figmaFile": "MOEAkEbXtwHdE3xveg2Gto",
+    "figmaId": "1:86136",
+    "layer": "🦆 icon \"bell\"",
+    "file": "assets/icons/bell__1-86136.svg"
+   },
+   "nativeSize": [
+    31.45,
+    36.65
+   ],
+   "viewBox": "0 0 32 37",
+   "colorPolicy": "baked — preserved verbatim, tone ignored, no CSS filter",
+   "bakedColors": [
+    "#333333",
+    "white"
+   ],
+   "allowedSizes": "native or longest-side scaling; prefer native",
+   "aliases": [
+    "notification"
+   ],
+   "status": "active",
+   "usage": [
+    "Header"
+   ]
+  },
+  {
+   "name": "time-history",
+   "label": "최근 본",
+   "category": "navigation",
+   "provenance": {
+    "type": "source",
+    "figmaFile": "MOEAkEbXtwHdE3xveg2Gto",
+    "figmaId": "1:87530",
+    "layer": "🦆 icon \"time history\"",
+    "file": "assets/icons/time-history__1-87530.svg"
+   },
+   "nativeSize": [
+    24,
+    24
+   ],
+   "viewBox": "0 0 24 24",
+   "colorPolicy": "baked — preserved verbatim, tone ignored, no CSS filter",
+   "bakedColors": [
+    "#059B00"
+   ],
+   "allowedSizes": "native or longest-side scaling; prefer native",
+   "aliases": [
+    "history"
+   ],
+   "status": "active",
+   "usage": []
+  },
+  {
+   "name": "document-edit",
+   "label": "문서 편집(흰색)",
+   "category": "action",
+   "provenance": {
+    "type": "source",
+    "figmaFile": "MOEAkEbXtwHdE3xveg2Gto",
+    "figmaId": "1:88822",
+    "layer": "🦆 icon \"Document Edit\"",
+    "file": "assets/icons/document-edit__1-88822.svg"
+   },
+   "nativeSize": [
+    27.5,
+    35
+   ],
+   "viewBox": "0 0 28 35",
+   "colorPolicy": "baked — preserved verbatim, tone ignored, no CSS filter",
+   "bakedColors": [
+    "white",
+    "#02AC5A"
+   ],
+   "allowedSizes": "native or longest-side scaling; prefer native",
+   "aliases": [
+    "edit"
+   ],
+   "status": "active",
+   "usage": []
+  },
+  {
+   "name": "cart",
+   "label": "장바구니",
+   "category": "commerce",
+   "provenance": {
+    "type": "source",
+    "figmaFile": "MOEAkEbXtwHdE3xveg2Gto",
+    "figmaId": "1:91528",
+    "layer": "Cart_M_01",
+    "file": "assets/icons/cart__1-91528.svg"
+   },
+   "nativeSize": [
+    22,
+    22
+   ],
+   "viewBox": "0 0 22 22",
+   "colorPolicy": "baked — preserved verbatim, tone ignored, no CSS filter",
+   "bakedColors": [
+    "black"
+   ],
+   "allowedSizes": "native or longest-side scaling; prefer native",
+   "aliases": [],
+   "status": "active",
+   "usage": [
+    "Header",
+    "MobileHeader",
+    "ProductCard",
+    "ProductTable",
+    "BottomActionBar"
+   ]
+  },
+  {
+   "name": "close",
+   "label": "닫기",
+   "category": "action",
+   "provenance": {
+    "type": "extension",
+    "note": "KOSAF_V1 1.5.0 authored; not extracted from Figma"
+   },
+   "nativeSize": [
+    24,
+    24
+   ],
+   "viewBox": "0 0 24 24",
+   "colorPolicy": "currentColor via tone",
+   "fillable": false,
+   "allowedSizes": [
+    16,
+    20,
+    24,
+    32
+   ],
+   "stroke": "2px (1.75 allowed) round cap/join",
+   "aliases": [
+    "x",
+    "close-x"
+   ],
+   "status": "active",
+   "usage": []
+  },
+  {
+   "name": "menu",
+   "label": "전체메뉴",
+   "category": "navigation",
+   "provenance": {
+    "type": "extension",
+    "note": "KOSAF_V1 1.5.0 authored; not extracted from Figma"
+   },
+   "nativeSize": [
+    24,
+    24
+   ],
+   "viewBox": "0 0 24 24",
+   "colorPolicy": "currentColor via tone",
+   "fillable": false,
+   "allowedSizes": [
+    16,
+    20,
+    24,
+    32
+   ],
+   "stroke": "2px (1.75 allowed) round cap/join",
+   "aliases": [
+    "hamburger"
+   ],
+   "status": "active",
+   "usage": []
+  },
+  {
+   "name": "plus",
+   "label": "더하기·증가",
+   "category": "action",
+   "provenance": {
+    "type": "extension",
+    "note": "KOSAF_V1 1.5.0 authored; not extracted from Figma"
+   },
+   "nativeSize": [
+    24,
+    24
+   ],
+   "viewBox": "0 0 24 24",
+   "colorPolicy": "currentColor via tone",
+   "fillable": false,
+   "allowedSizes": [
+    16,
+    20,
+    24,
+    32
+   ],
+   "stroke": "2px (1.75 allowed) round cap/join",
+   "aliases": [
+    "add",
+    "increase"
+   ],
+   "status": "active",
+   "usage": []
+  },
+  {
+   "name": "minus",
+   "label": "빼기·감소",
+   "category": "action",
+   "provenance": {
+    "type": "extension",
+    "note": "KOSAF_V1 1.5.0 authored; not extracted from Figma"
+   },
+   "nativeSize": [
+    24,
+    24
+   ],
+   "viewBox": "0 0 24 24",
+   "colorPolicy": "currentColor via tone",
+   "fillable": false,
+   "allowedSizes": [
+    16,
+    20,
+    24,
+    32
+   ],
+   "stroke": "2px (1.75 allowed) round cap/join",
+   "aliases": [
+    "decrease"
+   ],
+   "status": "active",
+   "usage": []
+  },
+  {
+   "name": "chevron-left",
+   "label": "이전",
+   "category": "navigation",
+   "provenance": {
+    "type": "extension",
+    "note": "KOSAF_V1 1.5.0 authored; not extracted from Figma"
+   },
+   "nativeSize": [
+    24,
+    24
+   ],
+   "viewBox": "0 0 24 24",
+   "colorPolicy": "currentColor via tone",
+   "fillable": false,
+   "allowedSizes": [
+    16,
+    20,
+    24,
+    32
+   ],
+   "stroke": "2px (1.75 allowed) round cap/join",
+   "aliases": [
+    "prev"
+   ],
+   "status": "active",
+   "usage": []
+  },
+  {
+   "name": "chevron-right",
+   "label": "다음",
+   "category": "navigation",
+   "provenance": {
+    "type": "extension",
+    "note": "KOSAF_V1 1.5.0 authored; not extracted from Figma"
+   },
+   "nativeSize": [
+    24,
+    24
+   ],
+   "viewBox": "0 0 24 24",
+   "colorPolicy": "currentColor via tone",
+   "fillable": false,
+   "allowedSizes": [
+    16,
+    20,
+    24,
+    32
+   ],
+   "stroke": "2px (1.75 allowed) round cap/join",
+   "aliases": [
+    "next"
+   ],
+   "status": "active",
+   "usage": []
+  },
+  {
+   "name": "chevron-up",
+   "label": "접기",
+   "category": "navigation",
+   "provenance": {
+    "type": "extension",
+    "note": "KOSAF_V1 1.5.0 authored; not extracted from Figma"
+   },
+   "nativeSize": [
+    24,
+    24
+   ],
+   "viewBox": "0 0 24 24",
+   "colorPolicy": "currentColor via tone",
+   "fillable": false,
+   "allowedSizes": [
+    16,
+    20,
+    24,
+    32
+   ],
+   "stroke": "2px (1.75 allowed) round cap/join",
+   "aliases": [
+    "caret-up",
+    "collapse"
+   ],
+   "status": "active",
+   "usage": []
+  },
+  {
+   "name": "chevron-down",
+   "label": "펼치기",
+   "category": "navigation",
+   "provenance": {
+    "type": "extension",
+    "note": "KOSAF_V1 1.5.0 authored; not extracted from Figma"
+   },
+   "nativeSize": [
+    24,
+    24
+   ],
+   "viewBox": "0 0 24 24",
+   "colorPolicy": "currentColor via tone",
+   "fillable": false,
+   "allowedSizes": [
+    16,
+    20,
+    24,
+    32
+   ],
+   "stroke": "2px (1.75 allowed) round cap/join",
+   "aliases": [
+    "caret-down",
+    "expand"
+   ],
+   "status": "active",
+   "usage": []
+  },
+  {
+   "name": "star",
+   "label": "별점",
+   "category": "status",
+   "provenance": {
+    "type": "extension",
+    "note": "KOSAF_V1 1.5.0 authored; not extracted from Figma"
+   },
+   "nativeSize": [
+    24,
+    24
+   ],
+   "viewBox": "0 0 24 24",
+   "colorPolicy": "currentColor via tone",
+   "fillable": true,
+   "allowedSizes": [
+    16,
+    20,
+    24,
+    32
+   ],
+   "stroke": "2px (1.75 allowed) round cap/join",
+   "aliases": [
+    "rating"
+   ],
+   "status": "active",
+   "usage": []
+  },
+  {
+   "name": "heart-outline",
+   "label": "관심상품(해제)",
+   "category": "status",
+   "provenance": {
+    "type": "extension",
+    "note": "KOSAF_V1 1.5.0 authored; not extracted from Figma"
+   },
+   "nativeSize": [
+    24,
+    24
+   ],
+   "viewBox": "0 0 24 24",
+   "colorPolicy": "currentColor via tone",
+   "fillable": true,
+   "allowedSizes": [
+    16,
+    20,
+    24,
+    32
+   ],
+   "stroke": "2px (1.75 allowed) round cap/join",
+   "aliases": [
+    "like-outline"
+   ],
+   "status": "active",
+   "usage": []
+  },
+  {
+   "name": "filter",
+   "label": "필터",
+   "category": "action",
+   "provenance": {
+    "type": "extension",
+    "note": "KOSAF_V1 1.5.0 authored; not extracted from Figma"
+   },
+   "nativeSize": [
+    24,
+    24
+   ],
+   "viewBox": "0 0 24 24",
+   "colorPolicy": "currentColor via tone",
+   "fillable": false,
+   "allowedSizes": [
+    16,
+    20,
+    24,
+    32
+   ],
+   "stroke": "2px (1.75 allowed) round cap/join",
+   "aliases": [],
+   "status": "active",
+   "usage": []
+  },
+  {
+   "name": "sort",
+   "label": "정렬",
+   "category": "action",
+   "provenance": {
+    "type": "extension",
+    "note": "KOSAF_V1 1.5.0 authored; not extracted from Figma"
+   },
+   "nativeSize": [
+    24,
+    24
+   ],
+   "viewBox": "0 0 24 24",
+   "colorPolicy": "currentColor via tone",
+   "fillable": false,
+   "allowedSizes": [
+    16,
+    20,
+    24,
+    32
+   ],
+   "stroke": "2px (1.75 allowed) round cap/join",
+   "aliases": [],
+   "status": "active",
+   "usage": []
+  },
+  {
+   "name": "check-mark",
+   "label": "확인·선택됨",
+   "category": "status",
+   "provenance": {
+    "type": "extension",
+    "note": "KOSAF_V1 1.5.0 authored; not extracted from Figma"
+   },
+   "nativeSize": [
+    24,
+    24
+   ],
+   "viewBox": "0 0 24 24",
+   "colorPolicy": "currentColor via tone",
+   "fillable": false,
+   "allowedSizes": [
+    16,
+    20,
+    24,
+    32
+   ],
+   "stroke": "2px (1.75 allowed) round cap/join",
+   "aliases": [
+    "done"
+   ],
+   "status": "active",
+   "usage": []
+  },
+  {
+   "name": "calendar",
+   "label": "날짜",
+   "category": "form",
+   "provenance": {
+    "type": "extension",
+    "note": "KOSAF_V1 1.5.0 authored; not extracted from Figma"
+   },
+   "nativeSize": [
+    24,
+    24
+   ],
+   "viewBox": "0 0 24 24",
+   "colorPolicy": "currentColor via tone",
+   "fillable": false,
+   "allowedSizes": [
+    16,
+    20,
+    24,
+    32
+   ],
+   "stroke": "2px (1.75 allowed) round cap/join",
+   "aliases": [
+    "date"
+   ],
+   "status": "active",
+   "usage": []
+  },
+  {
+   "name": "user",
+   "label": "회원",
+   "category": "navigation",
+   "provenance": {
+    "type": "extension",
+    "note": "KOSAF_V1 1.5.0 authored; not extracted from Figma"
+   },
+   "nativeSize": [
+    24,
+    24
+   ],
+   "viewBox": "0 0 24 24",
+   "colorPolicy": "currentColor via tone",
+   "fillable": false,
+   "allowedSizes": [
+    16,
+    20,
+    24,
+    32
+   ],
+   "stroke": "2px (1.75 allowed) round cap/join",
+   "aliases": [
+    "member"
+   ],
+   "status": "active",
+   "usage": []
+  },
+  {
+   "name": "store",
+   "label": "판매샵",
+   "category": "navigation",
+   "provenance": {
+    "type": "extension",
+    "note": "KOSAF_V1 1.5.0 authored; not extracted from Figma"
+   },
+   "nativeSize": [
+    24,
+    24
+   ],
+   "viewBox": "0 0 24 24",
+   "colorPolicy": "currentColor via tone",
+   "fillable": false,
+   "allowedSizes": [
+    16,
+    20,
+    24,
+    32
+   ],
+   "stroke": "2px (1.75 allowed) round cap/join",
+   "aliases": [
+    "shop"
+   ],
+   "status": "active",
+   "usage": []
+  },
+  {
+   "name": "home",
+   "label": "홈",
+   "category": "navigation",
+   "provenance": {
+    "type": "extension",
+    "note": "KOSAF_V1 1.5.0 authored; not extracted from Figma"
+   },
+   "nativeSize": [
+    24,
+    24
+   ],
+   "viewBox": "0 0 24 24",
+   "colorPolicy": "currentColor via tone",
+   "fillable": false,
+   "allowedSizes": [
+    16,
+    20,
+    24,
+    32
+   ],
+   "stroke": "2px (1.75 allowed) round cap/join",
+   "aliases": [],
+   "status": "active",
+   "usage": []
+  },
+  {
+   "name": "help",
+   "label": "문의·Q&A",
+   "category": "navigation",
+   "provenance": {
+    "type": "extension",
+    "note": "KOSAF_V1 1.5.0 authored; not extracted from Figma"
+   },
+   "nativeSize": [
+    24,
+    24
+   ],
+   "viewBox": "0 0 24 24",
+   "colorPolicy": "currentColor via tone",
+   "fillable": false,
+   "allowedSizes": [
+    16,
+    20,
+    24,
+    32
+   ],
+   "stroke": "2px (1.75 allowed) round cap/join",
+   "aliases": [
+    "qna"
+   ],
+   "status": "active",
+   "usage": []
+  },
+  {
+   "name": "grid",
+   "label": "카드 보기",
+   "category": "view",
+   "provenance": {
+    "type": "extension",
+    "note": "KOSAF_V1 1.5.0 authored; not extracted from Figma"
+   },
+   "nativeSize": [
+    24,
+    24
+   ],
+   "viewBox": "0 0 24 24",
+   "colorPolicy": "currentColor via tone",
+   "fillable": false,
+   "allowedSizes": [
+    16,
+    20,
+    24,
+    32
+   ],
+   "stroke": "2px (1.75 allowed) round cap/join",
+   "aliases": [
+    "view-grid"
+   ],
+   "status": "active",
+   "usage": []
+  },
+  {
+   "name": "list",
+   "label": "목록 보기",
+   "category": "view",
+   "provenance": {
+    "type": "extension",
+    "note": "KOSAF_V1 1.5.0 authored; not extracted from Figma"
+   },
+   "nativeSize": [
+    24,
+    24
+   ],
+   "viewBox": "0 0 24 24",
+   "colorPolicy": "currentColor via tone",
+   "fillable": false,
+   "allowedSizes": [
+    16,
+    20,
+    24,
+    32
+   ],
+   "stroke": "2px (1.75 allowed) round cap/join",
+   "aliases": [
+    "view-list"
+   ],
+   "status": "active",
+   "usage": []
+  },
+  {
+   "name": "chart-line",
+   "label": "추이·통계",
+   "category": "data",
+   "provenance": {
+    "type": "extension",
+    "note": "KOSAF_V1 1.5.0 authored; not extracted from Figma"
+   },
+   "nativeSize": [
+    24,
+    24
+   ],
+   "viewBox": "0 0 24 24",
+   "colorPolicy": "currentColor via tone",
+   "fillable": false,
+   "allowedSizes": [
+    16,
+    20,
+    24,
+    32
+   ],
+   "stroke": "2px (1.75 allowed) round cap/join",
+   "aliases": [
+    "trend"
+   ],
+   "status": "active",
+   "usage": []
+  },
+  {
+   "name": "wallet",
+   "label": "금액·여신",
+   "category": "data",
+   "provenance": {
+    "type": "extension",
+    "note": "KOSAF_V1 1.5.0 authored; not extracted from Figma"
+   },
+   "nativeSize": [
+    24,
+    24
+   ],
+   "viewBox": "0 0 24 24",
+   "colorPolicy": "currentColor via tone",
+   "fillable": false,
+   "allowedSizes": [
+    16,
+    20,
+    24,
+    32
+   ],
+   "stroke": "2px (1.75 allowed) round cap/join",
+   "aliases": [
+    "money"
+   ],
+   "status": "active",
+   "usage": []
+  },
+  {
+   "name": "refresh",
+   "label": "초기화",
+   "category": "action",
+   "provenance": {
+    "type": "extension",
+    "note": "KOSAF_V1 1.5.0 authored; not extracted from Figma"
+   },
+   "nativeSize": [
+    24,
+    24
+   ],
+   "viewBox": "0 0 24 24",
+   "colorPolicy": "currentColor via tone",
+   "fillable": false,
+   "allowedSizes": [
+    16,
+    20,
+    24,
+    32
+   ],
+   "stroke": "2px (1.75 allowed) round cap/join",
+   "aliases": [
+    "reset"
+   ],
+   "status": "active",
+   "usage": []
+  }
+ ]
+}

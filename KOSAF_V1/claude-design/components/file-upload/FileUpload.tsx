@@ -1,4 +1,5 @@
 import React from 'react';
+import { Icon } from '../icon/Icon.tsx';
 
 const F = 'var(--kosaf-font)';
 
@@ -19,7 +20,7 @@ export function FileUpload({ files, defaultFiles = [], onChange, accept, multipl
         {list.length ? list.map((f, i) => (
           <span key={f.name + i} style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontSize: 14, color: f.tooLarge ? 'var(--kosaf-color-action-danger)' : 'var(--kosaf-color-text-primary)' }}>
             {f.name}
-            <button type="button" aria-label={f.name + ' 삭제'} disabled={disabled} onClick={() => set(list.filter((_, j) => j !== i))} style={{ width: 16, height: 16, borderRadius: 8, border: 0, padding: 0, background: 'var(--kosaf-src-text-strong)', color: '#fff', fontSize: 11, lineHeight: '16px', cursor: 'pointer' }}>×</button>
+            <button type="button" aria-label={f.name + ' 삭제'} disabled={disabled} onClick={() => set(list.filter((_, j) => j !== i))} style={{ width: 24, height: 24, margin: '-4px -4px -4px -2px', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', border: 0, padding: 0, background: 'none', cursor: disabled ? 'not-allowed' : 'pointer' }}><span style={{ width: 16, height: 16, borderRadius: 8, background: 'var(--kosaf-src-text-strong)', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}><Icon name="close" size={16} tone="inverse" strokeWidth={2.5} style={{ transform: 'scale(.625)' }} /></span></button>
           </span>
         )) : <span style={{ fontSize: 14, color: 'var(--kosaf-color-text-muted)' }}>{placeholder}</span>}
       </div>

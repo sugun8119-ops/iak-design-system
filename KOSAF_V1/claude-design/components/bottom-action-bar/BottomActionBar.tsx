@@ -11,7 +11,7 @@ export function BottomActionBar({ variant = 'split', primaryLabel = '구매하�
   const ib = { width: 44, height: 50, flex: '0 0 44px', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', background: 'none', border: 0, padding: 0, cursor: 'pointer' };
   return (
     <div style={{ ...pos, boxSizing: 'border-box', width: '100%', display: 'flex', alignItems: 'center', gap: 8, padding: '10px 12px', background: '#fff', borderTop: '1px solid var(--kosaf-color-border-default)', ...style }}>
-      {showIcons ? <><button type="button" style={ib} aria-label="장바구니 담기" onClick={onCart}><Icon name="shopping-bag" size={26} style={{ filter: 'brightness(0) saturate(0) opacity(.8)' }} /></button><button type="button" style={ib} aria-label="관심상품" aria-pressed={!!liked} onClick={onLike}><Icon name="heart" size={24} style={{ filter: liked ? 'none' : 'grayscale(1) brightness(1.6)' }} /></button></> : null}
+      {showIcons ? <><button type="button" style={ib} aria-label="장바구니 담기" onClick={onCart}><Icon name="cart" size={24} /></button><button type="button" style={ib} aria-label="관심상품" aria-pressed={!!liked} onClick={onLike}>{liked ? <Icon name="heart" size={22} /> : <Icon name="heart-outline" size={24} tone="muted" />}</button></> : null}
       {secondaryLabel ? <Button variant="secondary" size={50} style={{ flex: 1 }} onClick={onSecondary} disabled={disabled}>{secondaryLabel}</Button> : null}
       <Button size={50} style={{ flex: 1 }} onClick={onPrimary} disabled={disabled}>{primaryLabel}</Button>
     </div>

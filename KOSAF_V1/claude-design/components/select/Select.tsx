@@ -36,7 +36,7 @@ export function Select({ options = [], value, defaultValue, onChange, placeholde
       <button type="button" id={id} aria-describedby={describedBy} aria-invalid={ariaInvalid || (error ? true : undefined)} role="combobox" aria-haspopup="listbox" aria-expanded={open} aria-label={ariaLabel} disabled={disabled} onClick={() => setOpen(!open)} onKeyDown={onKey}
         style={{ boxSizing: 'border-box', width: '100%', height: h, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 8, padding: '0 14px 0 19px', background: disabled ? 'var(--kosaf-color-bg-subtle)' : '#fff', border: '1px solid ' + bd, borderRadius: 3, cursor: disabled ? 'not-allowed' : 'pointer', fontFamily: F, fontSize: 16, color: cur ? 'var(--kosaf-src-text-strong)' : 'var(--kosaf-src-dropdown-idle)', textAlign: 'left' }}>
         <span style={{ overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{cur ? cur.label : placeholder}</span>
-        <Icon name="navigate" size={18} rotate={open ? 90 : -90} />
+        <Icon name={open ? 'chevron-up' : 'chevron-down'} size={20} tone={disabled ? 'disabled' : 'primary'} />
       </button>
       {open ? (
         <ul role="listbox" style={{ position: 'absolute', zIndex: 20, left: 0, right: 0, top: h - 1, margin: 0, padding: '8px 0', listStyle: 'none', background: '#fff', border: '1px solid var(--kosaf-color-border-default)', maxHeight: 260, overflowY: 'auto' }}>

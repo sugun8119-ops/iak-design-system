@@ -108,3 +108,8 @@ All94 published card bodies were inspected:0 empty bodies,0 broken completed ima
 Claude Design의 Published 시스템을 49개 family / 97개 카드로 확장했다. 기존 94개 카드와 22개 화면 예제를 보존하고 PageHeader, FormErrorSummary, MobileFilterSheet를 추가했다. 폼 도움말·오류 연결, 표 숫자 정렬·정렬/선택·로딩/빈 결과/오류, 검색 조건 및 빈 결과 복구를 보강했다. 기존 token 파일은 모두 동일하다. 이번 작업에서 Figma 노드를 추가 수정하지 않았다.
 
 출처별 적용은 [reference-map](claude-design/docs/reference-map.json), 변경 파일은 [reference-changes](reference-changes-2026-09-27.json), 대표 동작과 390/391px 실측은 [reference-enhancement-qa](reference-enhancement-qa.json)에 기록했다. 전체 97카드 정밀 시각·접근성 검사와 기존 미구현 화면은 완료로 표시하지 않았다. 원본/legacy 자산은 삭제하지 않았다.
+
+
+## 아이콘 관리 — Claude Design 1.5.0 / 2026-09-27
+
+원본11개 SVG를 그대로 보존하고 KOSAF UI 확장23개를 추가했다. 이름·한국어label·분류·출처·크기·색상정책·별칭·사용처를 manifest로 관리한다. 검색 가능한 Icon 카탈로그, IconButton, 크기/상태 가이드를 등록했다. 닫기·메뉴·별점·수량 등 임시 표현과 원본 SVG 재색칠 CSS filter를 정리했다. 기존97카드와22kit는 유지하며 현재100카드50family이다. 변경 파일은 `icon-changes-2026-09-27.json`, 검사 범위는 `icon-management-qa.json`을 참조한다. 이번 작업에서 Figma는 수정하지 않았다.

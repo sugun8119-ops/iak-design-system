@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 /**
- * Rating — KOSAF extension, ★ glyph. Star score. Star vectors not exported → ★ text glyph in #FFE326. Display or input (radio group, ←/→).
+ * Rating — KOSAF extension. Star score using the KOSAF extension SVG "star" (24 grid; not extracted from Figma), filled #FFE326, empty #DDDDDD, fractional clip. Display or input (radio group, ←/→).
  * States: Display (fractional) · Input · Hover.
  */
 export interface RatingProps {

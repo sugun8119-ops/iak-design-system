@@ -40,7 +40,7 @@ export function ProductCard({ device = 'desktop', imageSrc, title = '사과/부�
   const m = device === 'mobile';
   const IMG = m ? 155 : 278;
   const iconBtn = { width: 36, height: 36, display: 'inline-flex', alignItems: 'center', justifyContent: 'center', background: 'none', border: 0, padding: 0, borderRadius: 3, cursor: soldOut ? 'not-allowed' : 'pointer', opacity: soldOut ? 0.4 : 1 };
-  const heart = <Icon name="heart" size={m ? 20 : 22} style={{ filter: liked ? 'none' : 'grayscale(1) brightness(1.6)' }} />;
+  const heart = liked ? <Icon name="heart" size={m ? 20 : 22} /> : <Icon name="heart-outline" size={m ? 20 : 24} tone="muted" />;
   const fg = soldOut ? 'var(--kosaf-color-text-disabled)' : 'var(--kosaf-src-text-strong)';
   return (
     <article aria-label={title} style={{ boxSizing: 'border-box', width: m ? 176 : 298, padding: m ? 0 : 8, border: '2px solid ' + (selected ? 'var(--kosaf-color-action-primary)' : 'transparent'), borderRadius: 10, background: '#fff', fontFamily: F, color: fg, display: 'flex', flexDirection: 'column', ...style }}>
