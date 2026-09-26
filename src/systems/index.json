@@ -45,14 +45,15 @@
       "componentFamilies": 27,
       "visualAuthority": "DEW_V1",
       "coverageAuthority": "IAK exact 138-case inventory",
-      "version": "1.5.0",
+      "version": "1.6.0",
       "caseCount": 138,
       "caseCoverage": "DEW_V1/preview/case-coverage.json",
       "caseLibrary": "DEW_V1/preview/library.html",
       "nativeCaseExamples": 138,
       "qualityReport": "DEW_V1/preview/handoff/quality-1.4.json",
       "supplementaryPatterns": "DEW_V1/preview/scenarios.html",
-      "supplementaryStateCount": 12
+      "supplementaryStateCount": 12,
+      "editorialPatterns": "DEW_V1/preview/editorial.html"
     },
     {
       "id": "KOREX_V1",

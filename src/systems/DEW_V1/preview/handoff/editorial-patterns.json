@@ -1,0 +1,42 @@
+{
+  "version": "1.6.0",
+  "entry": "preview/editorial.html",
+  "source": "preview/source/editorial-patterns.js",
+  "namespace": "DEWEditorial",
+  "components": [
+    "LeadStoryGrid",
+    "ReadingBody",
+    "EditorialFigure",
+    "PullQuote",
+    "RelatedStories",
+    "NewsletterSignup"
+  ],
+  "references": [
+    {
+      "pattern": "StoryHierarchy",
+      "url": "https://www.kinfolk.com/",
+      "principle": "대표 기사와 보조 기사에 서로 다른 중요도 부여"
+    },
+    {
+      "pattern": "ArticleRhythm",
+      "url": "https://thegentlewoman.co.uk/library/coco-gauff",
+      "principle": "본문·사진·캡션·인용문을 교차 배치"
+    },
+    {
+      "pattern": "ReadNextSubscription",
+      "url": "https://www.itsnicethat.com/features/the-weekend-with-claire-marie-healy-250926",
+      "principle": "관련 글과 뉴스레터로 읽기 후 행동 연결"
+    }
+  ],
+  "figma": {
+    "url": "https://www.figma.com/design/qDaMlSX00Eow0b7aDYKKsf?node-id=58-2",
+    "pageId": "58:2",
+    "boards": [
+      "58:3",
+      "58:33",
+      "58:51"
+    ],
+    "representation": "Editable static composition references, not pixel-identical web captures"
+  },
+  "policy": "References inform composition only. Preserve DEW foundation. No copied photos, logos or proprietary copy. Existing 138 cases unchanged."
+}
