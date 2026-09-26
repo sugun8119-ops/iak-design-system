@@ -1,8 +1,8 @@
 {
-  "date": "2026-09-25",
-  "componentFamilies": 46,
-  "manifestExportsIncludingHelpers": 55,
-  "cards": 94,
+  "date": "2026-09-27",
+  "componentFamilies": 49,
+  "manifestExportsIncludingHelpers": 60,
+  "cards": 97,
   "uiKitGroups": 10,
   "uiKitPages": 22,
   "desktopCards": 11,
@@ -54,5 +54,48 @@
       "Representative visual checks, not an exhaustive 94-card/22-screen audit",
       "Original17 frame gaps and Figma migration exceptions remain"
     ]
+  },
+  "referenceEnhancement": {
+    "date": "2026-09-27",
+    "version": "1.4.0",
+    "componentFamilies": 49,
+    "cards": 97,
+    "uiKitPages": 22,
+    "missingCardFiles": [],
+    "canonicalTokenFilesChanged": [],
+    "browserChecks": [
+      {
+        "area": "Published mobile search",
+        "result": "Cancel retained 2 results and returned focus to filter trigger; price-fixed apply produced 1 result and added chip; reset produced 5 results; Escape closed sheet and returned focus; body scroll lock restored."
+      },
+      {
+        "area": "Published mobile search viewport",
+        "result": "CSS innerWidth390/clientWidth371/scrollWidth371; innerWidth391/clientWidth372/scrollWidth372. Scrollbar reduces content width; no horizontal overflow."
+      },
+      {
+        "area": "Exported signup mobile",
+        "result": "Empty submit: 7 errors, focus m-name, aria-invalid/describedby on 7 invalid controls. Name correction plus resubmit: 6 errors, focus m-id, name invalid cleared."
+      },
+      {
+        "area": "Exported signup viewport",
+        "result": "CSS390/client375/scroll375; CSS391/client376/scroll376. No horizontal overflow."
+      },
+      {
+        "area": "Exported ProductTable",
+        "result": "50,000원 cell computed text-align:right and font-variant-numeric:tabular-nums. Loading/error/empty examples rendered."
+      }
+    ],
+    "limitations": [
+      "Representative interactions and DOM measurements only; not exhaustive visual QA of 97 cards.",
+      "390/391 signup checks use unchanged native exported source on localhost; search checks use published Claude preview.",
+      "Existing source coverage gaps, backend demo actions and accessibility certification remain unchanged.",
+      "Mobile table sorting/selection not implemented; order-complete body preserved."
+    ],
+    "nativeCheckerReportedIssues": 0,
+    "staticChecks": {
+      "nativeChecker": "97 cards, 0 issues, reported by native Claude after final documentation update",
+      "all94PreviousCardsPreserved": true,
+      "missingTypePromptCardCompanions": []
+    }
   }
 }

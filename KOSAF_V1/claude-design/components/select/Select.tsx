@@ -5,7 +5,7 @@ const F = 'var(--kosaf-font)';
 
 /** KOSAF Select — Source-derived from Drop down_List type 1:98823 / Drop down_amount 1:98859 (272×42 r3, options 16px, idle #ABABAB, selected #000).
  * Custom listbox with keyboard: Enter/Space/ArrowDown open, ↑↓ move, Enter select, Esc close. */
-export function Select({ options = [], value, defaultValue, onChange, placeholder = '-선택-', width = 272, size = 'list', disabled, error, 'aria-label': ariaLabel, style }) {
+export function Select({ options = [], value, defaultValue, onChange, placeholder = '-선택-', width = 272, size = 'list', disabled, error, 'aria-label': ariaLabel, id, 'aria-describedby': describedBy, 'aria-invalid': ariaInvalid, style }) {
   const [inner, setInner] = React.useState(defaultValue);
   const [open, setOpen] = React.useState(false);
   const [hi, setHi] = React.useState(-1);
@@ -33,7 +33,7 @@ export function Select({ options = [], value, defaultValue, onChange, placeholde
   const bd = error ? 'var(--kosaf-color-action-danger)' : open ? 'var(--kosaf-color-state-focus)' : 'var(--kosaf-color-border-default)';
   return (
     <div ref={wrap} style={{ position: 'relative', width, maxWidth: '100%', fontFamily: F, ...style }}>
-      <button type="button" role="combobox" aria-haspopup="listbox" aria-expanded={open} aria-label={ariaLabel} disabled={disabled} onClick={() => setOpen(!open)} onKeyDown={onKey}
+      <button type="button" id={id} aria-describedby={describedBy} aria-invalid={ariaInvalid || (error ? true : undefined)} role="combobox" aria-haspopup="listbox" aria-expanded={open} aria-label={ariaLabel} disabled={disabled} onClick={() => setOpen(!open)} onKeyDown={onKey}
         style={{ boxSizing: 'border-box', width: '100%', height: h, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 8, padding: '0 14px 0 19px', background: disabled ? 'var(--kosaf-color-bg-subtle)' : '#fff', border: '1px solid ' + bd, borderRadius: 3, cursor: disabled ? 'not-allowed' : 'pointer', fontFamily: F, fontSize: 16, color: cur ? 'var(--kosaf-src-text-strong)' : 'var(--kosaf-src-dropdown-idle)', textAlign: 'left' }}>
         <span style={{ overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{cur ? cur.label : placeholder}</span>
         <Icon name="navigate" size={18} rotate={open ? 90 : -90} />

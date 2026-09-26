@@ -17,7 +17,7 @@ export const DEFAULT_FILTER_GROUPS = [
 
 /** KOSAF FilterPanel — Source-derived. desktop = 통합검색 category panel (1:97566 / 1:98635): green label column, 4 list columns, chip rows, 전체해제 + applied tags, 닫기.
  *  mobile = 통합검색_필터 1:93119 (390): accordion + checkbox lists, 초기화 82×42 r5, summary text #0047ED. */
-export function FilterPanel({ device = 'desktop', groups = DEFAULT_FILTER_GROUPS, value, defaultValue = {}, onChange, keyword, onKeyword, onSearch, onClose, onlyOnSale, onOnlyOnSale, style }) {
+export function FilterPanel({ device = 'desktop', groups = DEFAULT_FILTER_GROUPS, value, defaultValue = {}, onChange, keyword, onKeyword, onSearch, onClose, onlyOnSale, onOnlyOnSale, bare, style }) {
   const [inner, setInner] = React.useState(defaultValue);
   const sel = value !== undefined ? value : inner;
   const [open, setOpen] = React.useState(0);
@@ -29,7 +29,7 @@ export function FilterPanel({ device = 'desktop', groups = DEFAULT_FILTER_GROUPS
 
   if (device === 'mobile') {
     return (
-      <div role="dialog" aria-label="필터" style={{ width: '100%', maxWidth: 390, background: '#fff', fontFamily: F, ...style }}>
+      <div role={bare ? undefined : 'dialog'} aria-label={bare ? undefined : '필터'} style={{ width: '100%', maxWidth: 390, background: '#fff', fontFamily: F, ...style }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 22, height: 75, padding: '0 20px', borderBottom: '1px solid var(--kosaf-color-border-default)' }}>
           <span style={{ fontSize: 20, fontWeight: 700 }}>필터</span>
           <button type="button" onClick={reset} style={{ width: 82, height: 42, border: 0, borderRadius: 5, background: 'var(--kosaf-color-action-primary)', color: '#fff', fontFamily: F, fontSize: 14, fontWeight: 500, cursor: 'pointer' }}>초기화</button>

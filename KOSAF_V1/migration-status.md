@@ -101,3 +101,10 @@ Published representative checks: mobile product detail image and price consisten
 
 ## Published card DOM audit — 2026-09-26
 All94 published card bodies were inspected:0 empty bodies,0 broken completed images.12 horizontal-overflow findings were measured (Pagination, Radius, Coreboard and9 desktop kits). See `published-card-audit-2026-09-26.json`. Native Claude fix work was resumed and edits observed, but Chrome disconnected before final results/export could be verified. These findings remain pending; no new native snapshot is claimed. This is a DOM smoke check, not full visual acceptance.
+
+
+## 레퍼런스 보강 — Claude Design 1.4.0 / 2026-09-27
+
+Claude Design의 Published 시스템을 49개 family / 97개 카드로 확장했다. 기존 94개 카드와 22개 화면 예제를 보존하고 PageHeader, FormErrorSummary, MobileFilterSheet를 추가했다. 폼 도움말·오류 연결, 표 숫자 정렬·정렬/선택·로딩/빈 결과/오류, 검색 조건 및 빈 결과 복구를 보강했다. 기존 token 파일은 모두 동일하다. 이번 작업에서 Figma 노드를 추가 수정하지 않았다.
+
+출처별 적용은 [reference-map](claude-design/docs/reference-map.json), 변경 파일은 [reference-changes](reference-changes-2026-09-27.json), 대표 동작과 390/391px 실측은 [reference-enhancement-qa](reference-enhancement-qa.json)에 기록했다. 전체 97카드 정밀 시각·접근성 검사와 기존 미구현 화면은 완료로 표시하지 않았다. 원본/legacy 자산은 삭제하지 않았다.

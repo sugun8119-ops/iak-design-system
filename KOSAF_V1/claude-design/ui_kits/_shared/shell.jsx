@@ -40,7 +40,7 @@ const KD = {
 
 function PCPage({ children, active, onMenu }) {
   return (
-    <div style={{ minWidth: 1920, background: '#fff', fontFamily: 'var(--kosaf-font)', color: 'var(--kosaf-color-text-primary)' }}>
+    <div style={{ width: '100%', minWidth: 0, boxSizing: 'border-box', overflowX: 'visible', background: '#fff', fontFamily: 'var(--kosaf-font)', color: 'var(--kosaf-color-text-primary)' }}>
       <KS.Header logoSrc={LOGO} activeMenu={active} onMenu={onMenu} cartCount={2} />
       <main style={{ maxWidth: 1596, margin: '0 auto', padding: '60px 20px 100px', boxSizing: 'content-box' }}>{children}</main>
       <KS.Footer />
@@ -65,6 +65,7 @@ function MoPage({ children, title, back, bottom, bottomHeight = 71, header = tru
 
 /* Title → description → content → action hierarchy. */
 function PageHead({ title, desc, right, size = 40, mobile, align = 'left', style }) {
+  if (KS.PageHeader) return <KS.PageHeader title={title} description={desc} actions={right} size={size} device={mobile ? 'mobile' : 'desktop'} align={align} style={style} />;
   return (
     <div style={{ display: 'flex', alignItems: mobile ? 'flex-start' : 'flex-end', justifyContent: 'space-between', gap: 20, flexDirection: mobile && right ? 'column' : 'row', textAlign: align, marginBottom: mobile ? 20 : 30, ...style }}>
       <div style={{ flex: 1, minWidth: 0 }}>

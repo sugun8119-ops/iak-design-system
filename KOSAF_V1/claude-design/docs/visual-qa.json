@@ -1,0 +1,1102 @@
+{
+ "date": "2026-09-26",
+ "method": {
+  "runner": "qa/card-runner.html loads every @dsCard at its declared viewport in an iframe, waits 3.5s (kits 5s), measures documentElement/body scrollWidth/scrollHeight, broken <img>, empty root, interactive elements past right edge.",
+  "user": "User DOM smoke of 94 published iframes: 0 empty bodies, 0 broken images, 12 horizontal overflows.",
+  "limits": "Structural smoke only — not a per-card visual approval. Console errors inside iframes were not captured by the runner."
+ },
+ "summary": {
+  "cards": 94,
+  "heightClipped": 56,
+  "horizontalOverflow": 12,
+  "cropOverEdge": 4,
+  "brokenImages": 0,
+  "emptyBodies": 0
+ },
+ "cards": [
+  {
+   "path": "guidelines/brand-imagery.html",
+   "name": "Product imagery (2 exported)",
+   "viewport": "700x250",
+   "render": "loaded, body non-empty",
+   "brokenImages": 0,
+   "measured": "card-runner iframe DOM (this turn, before fixes) + user DOM smoke 94/94",
+   "issuesFound": [],
+   "status": "no structural issue measured (visual design not individually approved)"
+  },
+  {
+   "path": "guidelines/brand-wordmark.html",
+   "name": "Logo wordmark (1:86099)",
+   "viewport": "700x200",
+   "render": "loaded, body non-empty",
+   "brokenImages": 0,
+   "measured": "card-runner iframe DOM (this turn, before fixes) + user DOM smoke 94/94",
+   "issuesFound": [],
+   "status": "no structural issue measured (visual design not individually approved)"
+  },
+  {
+   "path": "guidelines/preservation.html",
+   "name": "Preserved source exceptions",
+   "viewport": "700x150",
+   "render": "loaded, body non-empty",
+   "brokenImages": 0,
+   "measured": "card-runner iframe DOM (this turn, before fixes) + user DOM smoke 94/94",
+   "issuesFound": [
+    "preview height clipped → viewport 150→190"
+   ],
+   "status": "fixed in source — re-measure after bundle/publish (not yet re-verified)"
+  },
+  {
+   "path": "guidelines/colors-brand.html",
+   "name": "Brand greens",
+   "viewport": "700x170",
+   "render": "loaded, body non-empty",
+   "brokenImages": 0,
+   "measured": "card-runner iframe DOM (this turn, before fixes) + user DOM smoke 94/94",
+   "issuesFound": [
+    "preview height clipped → viewport 170→350"
+   ],
+   "status": "fixed in source — re-measure after bundle/publish (not yet re-verified)"
+  },
+  {
+   "path": "guidelines/colors-gray.html",
+   "name": "Gray primitives",
+   "viewport": "700x120",
+   "render": "loaded, body non-empty",
+   "brokenImages": 0,
+   "measured": "card-runner iframe DOM (this turn, before fixes) + user DOM smoke 94/94",
+   "issuesFound": [
+    "preview height clipped → viewport 120→140"
+   ],
+   "status": "fixed in source — re-measure after bundle/publish (not yet re-verified)"
+  },
+  {
+   "path": "guidelines/colors-state.html",
+   "name": "State & semantic",
+   "viewport": "700x170",
+   "render": "loaded, body non-empty",
+   "brokenImages": 0,
+   "measured": "card-runner iframe DOM (this turn, before fixes) + user DOM smoke 94/94",
+   "issuesFound": [
+    "preview height clipped → viewport 170→370"
+   ],
+   "status": "fixed in source — re-measure after bundle/publish (not yet re-verified)"
+  },
+  {
+   "path": "guidelines/colors-surface-border.html",
+   "name": "Surface & border",
+   "viewport": "700x170",
+   "render": "loaded, body non-empty",
+   "brokenImages": 0,
+   "measured": "card-runner iframe DOM (this turn, before fixes) + user DOM smoke 94/94",
+   "issuesFound": [
+    "preview height clipped → viewport 170→320"
+   ],
+   "status": "fixed in source — re-measure after bundle/publish (not yet re-verified)"
+  },
+  {
+   "path": "guidelines/colors-text.html",
+   "name": "Text",
+   "viewport": "700x150",
+   "render": "loaded, body non-empty",
+   "brokenImages": 0,
+   "measured": "card-runner iframe DOM (this turn, before fixes) + user DOM smoke 94/94",
+   "issuesFound": [
+    "preview height clipped → viewport 150→180"
+   ],
+   "status": "fixed in source — re-measure after bundle/publish (not yet re-verified)"
+  },
+  {
+   "path": "components/badge/badge.card.html",
+   "name": "Badge",
+   "viewport": "700x170",
+   "render": "loaded, body non-empty",
+   "brokenImages": 0,
+   "measured": "card-runner iframe DOM (this turn, before fixes) + user DOM smoke 94/94",
+   "issuesFound": [
+    "preview height clipped → viewport 170→290"
+   ],
+   "status": "fixed in source — re-measure after bundle/publish (not yet re-verified)"
+  },
+  {
+   "path": "components/bottom-action-bar/bottom-action-bar.card.html",
+   "name": "BottomActionBar",
+   "viewport": "700x260",
+   "render": "loaded, body non-empty",
+   "brokenImages": 0,
+   "measured": "card-runner iframe DOM (this turn, before fixes) + user DOM smoke 94/94",
+   "issuesFound": [
+    "preview height clipped → viewport 260→370"
+   ],
+   "status": "fixed in source — re-measure after bundle/publish (not yet re-verified)"
+  },
+  {
+   "path": "components/button/button.card.html",
+   "name": "Button",
+   "viewport": "700x330",
+   "render": "loaded, body non-empty",
+   "brokenImages": 0,
+   "measured": "card-runner iframe DOM (this turn, before fixes) + user DOM smoke 94/94",
+   "issuesFound": [
+    "preview height clipped → viewport 330→550"
+   ],
+   "status": "fixed in source — re-measure after bundle/publish (not yet re-verified)"
+  },
+  {
+   "path": "components/filter-chip/filter-chip.card.html",
+   "name": "FilterChip",
+   "viewport": "700x200",
+   "render": "loaded, body non-empty",
+   "brokenImages": 0,
+   "measured": "card-runner iframe DOM (this turn, before fixes) + user DOM smoke 94/94",
+   "issuesFound": [
+    "preview height clipped → viewport 200→300"
+   ],
+   "status": "fixed in source — re-measure after bundle/publish (not yet re-verified)"
+  },
+  {
+   "path": "components/icon/icon.card.html",
+   "name": "Icon",
+   "viewport": "700x300",
+   "render": "loaded, body non-empty",
+   "brokenImages": 0,
+   "measured": "card-runner iframe DOM (this turn, before fixes) + user DOM smoke 94/94",
+   "issuesFound": [
+    "preview height clipped → viewport 300→600"
+   ],
+   "status": "fixed in source — re-measure after bundle/publish (not yet re-verified)"
+  },
+  {
+   "path": "components/cart-item/cart-item.card.html",
+   "name": "CartItem",
+   "viewport": "700x500",
+   "render": "loaded, body non-empty",
+   "brokenImages": 0,
+   "measured": "card-runner iframe DOM (this turn, before fixes) + user DOM smoke 94/94",
+   "issuesFound": [],
+   "status": "no structural issue measured (visual design not individually approved)"
+  },
+  {
+   "path": "components/filter-panel/filter-panel.card.html",
+   "name": "FilterPanel",
+   "viewport": "700x920",
+   "render": "loaded, body non-empty",
+   "brokenImages": 0,
+   "measured": "card-runner iframe DOM (this turn, before fixes) + user DOM smoke 94/94",
+   "issuesFound": [
+    "preview height clipped → viewport 920→1310",
+    "over-edge controls 20 controls beyond card edge in 1:1 crop → crop is now a scroll region"
+   ],
+   "status": "fixed in source — re-measure after bundle/publish (not yet re-verified)"
+  },
+  {
+   "path": "components/order-summary/order-summary.card.html",
+   "name": "OrderSummary",
+   "viewport": "700x330",
+   "render": "loaded, body non-empty",
+   "brokenImages": 0,
+   "measured": "card-runner iframe DOM (this turn, before fixes) + user DOM smoke 94/94",
+   "issuesFound": [
+    "preview height clipped → viewport 330→500"
+   ],
+   "status": "fixed in source — re-measure after bundle/publish (not yet re-verified)"
+  },
+  {
+   "path": "components/product-card/product-card.card.html",
+   "name": "ProductCard",
+   "viewport": "700x640",
+   "render": "loaded, body non-empty",
+   "brokenImages": 0,
+   "measured": "card-runner iframe DOM (this turn, before fixes) + user DOM smoke 94/94",
+   "issuesFound": [
+    "preview height clipped → viewport 640→1000"
+   ],
+   "status": "fixed in source — re-measure after bundle/publish (not yet re-verified)"
+  },
+  {
+   "path": "components/product-list-item/product-list-item.card.html",
+   "name": "ProductListItem",
+   "viewport": "700x330",
+   "render": "loaded, body non-empty",
+   "brokenImages": 0,
+   "measured": "card-runner iframe DOM (this turn, before fixes) + user DOM smoke 94/94",
+   "issuesFound": [
+    "preview height clipped → viewport 330→700"
+   ],
+   "status": "fixed in source — re-measure after bundle/publish (not yet re-verified)"
+  },
+  {
+   "path": "components/review-item/review-item.card.html",
+   "name": "ReviewItem",
+   "viewport": "700x380",
+   "render": "loaded, body non-empty",
+   "brokenImages": 0,
+   "measured": "card-runner iframe DOM (this turn, before fixes) + user DOM smoke 94/94",
+   "issuesFound": [
+    "preview height clipped → viewport 380→680"
+   ],
+   "status": "fixed in source — re-measure after bundle/publish (not yet re-verified)"
+  },
+  {
+   "path": "components/accordion/accordion.card.html",
+   "name": "Accordion",
+   "viewport": "700x400",
+   "render": "loaded, body non-empty",
+   "brokenImages": 0,
+   "measured": "card-runner iframe DOM (this turn, before fixes) + user DOM smoke 94/94",
+   "issuesFound": [
+    "preview height clipped → viewport 400→710"
+   ],
+   "status": "fixed in source — re-measure after bundle/publish (not yet re-verified)"
+  },
+  {
+   "path": "components/compare-table/compare-table.card.html",
+   "name": "CompareTable",
+   "viewport": "700x470",
+   "render": "loaded, body non-empty",
+   "brokenImages": 0,
+   "measured": "card-runner iframe DOM (this turn, before fixes) + user DOM smoke 94/94",
+   "issuesFound": [
+    "preview height clipped → viewport 470→620"
+   ],
+   "status": "fixed in source — re-measure after bundle/publish (not yet re-verified)"
+  },
+  {
+   "path": "components/description-list/description-list.card.html",
+   "name": "DescriptionList",
+   "viewport": "700x360",
+   "render": "loaded, body non-empty",
+   "brokenImages": 0,
+   "measured": "card-runner iframe DOM (this turn, before fixes) + user DOM smoke 94/94",
+   "issuesFound": [
+    "preview height clipped → viewport 360→550"
+   ],
+   "status": "fixed in source — re-measure after bundle/publish (not yet re-verified)"
+  },
+  {
+   "path": "components/metric-card/metric-card.card.html",
+   "name": "MetricCard",
+   "viewport": "700x330",
+   "render": "loaded, body non-empty",
+   "brokenImages": 0,
+   "measured": "card-runner iframe DOM (this turn, before fixes) + user DOM smoke 94/94",
+   "issuesFound": [
+    "preview height clipped → viewport 330→650"
+   ],
+   "status": "fixed in source — re-measure after bundle/publish (not yet re-verified)"
+  },
+  {
+   "path": "components/price-trend/price-trend.card.html",
+   "name": "PriceTrend",
+   "viewport": "700x460",
+   "render": "loaded, body non-empty",
+   "brokenImages": 0,
+   "measured": "card-runner iframe DOM (this turn, before fixes) + user DOM smoke 94/94",
+   "issuesFound": [
+    "preview height clipped → viewport 460→480"
+   ],
+   "status": "fixed in source — re-measure after bundle/publish (not yet re-verified)"
+  },
+  {
+   "path": "components/product-table/product-table.card.html",
+   "name": "ProductTable",
+   "viewport": "700x860",
+   "render": "loaded, body non-empty",
+   "brokenImages": 0,
+   "measured": "card-runner iframe DOM (this turn, before fixes) + user DOM smoke 94/94",
+   "issuesFound": [
+    "preview height clipped → viewport 860→1070",
+    "over-edge controls 12 → scroll region"
+   ],
+   "status": "fixed in source — re-measure after bundle/publish (not yet re-verified)"
+  },
+  {
+   "path": "components/rating/rating.card.html",
+   "name": "Rating",
+   "viewport": "700x190",
+   "render": "loaded, body non-empty",
+   "brokenImages": 0,
+   "measured": "card-runner iframe DOM (this turn, before fixes) + user DOM smoke 94/94",
+   "issuesFound": [
+    "preview height clipped → viewport 190→280"
+   ],
+   "status": "fixed in source — re-measure after bundle/publish (not yet re-verified)"
+  },
+  {
+   "path": "components/table-row/table-row.card.html",
+   "name": "TableRow",
+   "viewport": "700x280",
+   "render": "loaded, body non-empty",
+   "brokenImages": 0,
+   "measured": "card-runner iframe DOM (this turn, before fixes) + user DOM smoke 94/94",
+   "issuesFound": [
+    "preview height clipped → viewport 280→420"
+   ],
+   "status": "fixed in source — re-measure after bundle/publish (not yet re-verified)"
+  },
+  {
+   "path": "components/alert-dialog/alert-dialog.card.html",
+   "name": "AlertDialog",
+   "viewport": "700x560",
+   "render": "loaded, body non-empty",
+   "brokenImages": 0,
+   "measured": "card-runner iframe DOM (this turn, before fixes) + user DOM smoke 94/94",
+   "issuesFound": [],
+   "status": "no structural issue measured (visual design not individually approved)"
+  },
+  {
+   "path": "components/empty-state/empty-state.card.html",
+   "name": "EmptyState",
+   "viewport": "700x360",
+   "render": "loaded, body non-empty",
+   "brokenImages": 0,
+   "measured": "card-runner iframe DOM (this turn, before fixes) + user DOM smoke 94/94",
+   "issuesFound": [
+    "preview height clipped → viewport 360→510"
+   ],
+   "status": "fixed in source — re-measure after bundle/publish (not yet re-verified)"
+  },
+  {
+   "path": "components/modal/modal.card.html",
+   "name": "Modal",
+   "viewport": "700x470",
+   "render": "loaded, body non-empty",
+   "brokenImages": 0,
+   "measured": "card-runner iframe DOM (this turn, before fixes) + user DOM smoke 94/94",
+   "issuesFound": [
+    "preview height clipped → viewport 470→590"
+   ],
+   "status": "fixed in source — re-measure after bundle/publish (not yet re-verified)"
+  },
+  {
+   "path": "components/notification-list/notification-list.card.html",
+   "name": "NotificationList",
+   "viewport": "700x560",
+   "render": "loaded, body non-empty",
+   "brokenImages": 0,
+   "measured": "card-runner iframe DOM (this turn, before fixes) + user DOM smoke 94/94",
+   "issuesFound": [],
+   "status": "no structural issue measured (visual design not individually approved)"
+  },
+  {
+   "path": "components/checkbox/checkbox.card.html",
+   "name": "Checkbox",
+   "viewport": "700x190",
+   "render": "loaded, body non-empty",
+   "brokenImages": 0,
+   "measured": "card-runner iframe DOM (this turn, before fixes) + user DOM smoke 94/94",
+   "issuesFound": [
+    "preview height clipped → viewport 190→270"
+   ],
+   "status": "fixed in source — re-measure after bundle/publish (not yet re-verified)"
+  },
+  {
+   "path": "components/date-field/date-field.card.html",
+   "name": "DateField",
+   "viewport": "700x220",
+   "render": "loaded, body non-empty",
+   "brokenImages": 0,
+   "measured": "card-runner iframe DOM (this turn, before fixes) + user DOM smoke 94/94",
+   "issuesFound": [
+    "preview height clipped → viewport 220→320"
+   ],
+   "status": "fixed in source — re-measure after bundle/publish (not yet re-verified)"
+  },
+  {
+   "path": "components/date-range/date-range.card.html",
+   "name": "DateRange",
+   "viewport": "700x200",
+   "render": "loaded, body non-empty",
+   "brokenImages": 0,
+   "measured": "card-runner iframe DOM (this turn, before fixes) + user DOM smoke 94/94",
+   "issuesFound": [
+    "preview height clipped → viewport 200→320"
+   ],
+   "status": "fixed in source — re-measure after bundle/publish (not yet re-verified)"
+  },
+  {
+   "path": "components/file-upload/file-upload.card.html",
+   "name": "FileUpload",
+   "viewport": "700x240",
+   "render": "loaded, body non-empty",
+   "brokenImages": 0,
+   "measured": "card-runner iframe DOM (this turn, before fixes) + user DOM smoke 94/94",
+   "issuesFound": [
+    "preview height clipped → viewport 240→350"
+   ],
+   "status": "fixed in source — re-measure after bundle/publish (not yet re-verified)"
+  },
+  {
+   "path": "components/form-field/form-field.card.html",
+   "name": "FormField",
+   "viewport": "700x330",
+   "render": "loaded, body non-empty",
+   "brokenImages": 0,
+   "measured": "card-runner iframe DOM (this turn, before fixes) + user DOM smoke 94/94",
+   "issuesFound": [
+    "preview height clipped → viewport 330→570"
+   ],
+   "status": "fixed in source — re-measure after bundle/publish (not yet re-verified)"
+  },
+  {
+   "path": "components/input/input.card.html",
+   "name": "Input",
+   "viewport": "700x260",
+   "render": "loaded, body non-empty",
+   "brokenImages": 0,
+   "measured": "card-runner iframe DOM (this turn, before fixes) + user DOM smoke 94/94",
+   "issuesFound": [
+    "preview height clipped → viewport 260→400"
+   ],
+   "status": "fixed in source — re-measure after bundle/publish (not yet re-verified)"
+  },
+  {
+   "path": "components/quantity-stepper/quantity-stepper.card.html",
+   "name": "QuantityStepper",
+   "viewport": "700x190",
+   "render": "loaded, body non-empty",
+   "brokenImages": 0,
+   "measured": "card-runner iframe DOM (this turn, before fixes) + user DOM smoke 94/94",
+   "issuesFound": [
+    "preview height clipped → viewport 190→300"
+   ],
+   "status": "fixed in source — re-measure after bundle/publish (not yet re-verified)"
+  },
+  {
+   "path": "components/radio/radio.card.html",
+   "name": "Radio",
+   "viewport": "700x190",
+   "render": "loaded, body non-empty",
+   "brokenImages": 0,
+   "measured": "card-runner iframe DOM (this turn, before fixes) + user DOM smoke 94/94",
+   "issuesFound": [
+    "preview height clipped → viewport 190→270"
+   ],
+   "status": "fixed in source — re-measure after bundle/publish (not yet re-verified)"
+  },
+  {
+   "path": "components/search/search.card.html",
+   "name": "Search",
+   "viewport": "700x230",
+   "render": "loaded, body non-empty",
+   "brokenImages": 0,
+   "measured": "card-runner iframe DOM (this turn, before fixes) + user DOM smoke 94/94",
+   "issuesFound": [
+    "preview height clipped → viewport 230→420"
+   ],
+   "status": "fixed in source — re-measure after bundle/publish (not yet re-verified)"
+  },
+  {
+   "path": "components/segmented-control/segmented-control.card.html",
+   "name": "SegmentedControl",
+   "viewport": "700x190",
+   "render": "loaded, body non-empty",
+   "brokenImages": 0,
+   "measured": "card-runner iframe DOM (this turn, before fixes) + user DOM smoke 94/94",
+   "issuesFound": [
+    "preview height clipped → viewport 190→310"
+   ],
+   "status": "fixed in source — re-measure after bundle/publish (not yet re-verified)"
+  },
+  {
+   "path": "components/select/select.card.html",
+   "name": "Select",
+   "viewport": "700x420",
+   "render": "loaded, body non-empty",
+   "brokenImages": 0,
+   "measured": "card-runner iframe DOM (this turn, before fixes) + user DOM smoke 94/94",
+   "issuesFound": [
+    "preview height clipped → viewport 420→520"
+   ],
+   "status": "fixed in source — re-measure after bundle/publish (not yet re-verified)"
+  },
+  {
+   "path": "components/textarea/textarea.card.html",
+   "name": "Textarea",
+   "viewport": "700x390",
+   "render": "loaded, body non-empty",
+   "brokenImages": 0,
+   "measured": "card-runner iframe DOM (this turn, before fixes) + user DOM smoke 94/94",
+   "issuesFound": [
+    "preview height clipped → viewport 390→570"
+   ],
+   "status": "fixed in source — re-measure after bundle/publish (not yet re-verified)"
+  },
+  {
+   "path": "components/breadcrumb/breadcrumb.card.html",
+   "name": "Breadcrumb",
+   "viewport": "700x170",
+   "render": "loaded, body non-empty",
+   "brokenImages": 0,
+   "measured": "card-runner iframe DOM (this turn, before fixes) + user DOM smoke 94/94",
+   "issuesFound": [
+    "preview height clipped → viewport 170→270"
+   ],
+   "status": "fixed in source — re-measure after bundle/publish (not yet re-verified)"
+  },
+  {
+   "path": "components/footer/footer.card.html",
+   "name": "Footer",
+   "viewport": "700x520",
+   "render": "loaded, body non-empty",
+   "brokenImages": 0,
+   "measured": "card-runner iframe DOM (this turn, before fixes) + user DOM smoke 94/94",
+   "issuesFound": [
+    "preview height clipped → viewport 520→760",
+    "over-edge controls 1 → scroll region"
+   ],
+   "status": "fixed in source — re-measure after bundle/publish (not yet re-verified)"
+  },
+  {
+   "path": "components/header/header.card.html",
+   "name": "Header",
+   "viewport": "700x500",
+   "render": "loaded, body non-empty",
+   "brokenImages": 0,
+   "measured": "card-runner iframe DOM (this turn, before fixes) + user DOM smoke 94/94",
+   "issuesFound": [
+    "preview height clipped → viewport 500→530",
+    "over-edge controls 11 → scroll region"
+   ],
+   "status": "fixed in source — re-measure after bundle/publish (not yet re-verified)"
+  },
+  {
+   "path": "components/mobile-header/mobile-header.card.html",
+   "name": "MobileHeader",
+   "viewport": "700x230",
+   "render": "loaded, body non-empty",
+   "brokenImages": 0,
+   "measured": "card-runner iframe DOM (this turn, before fixes) + user DOM smoke 94/94",
+   "issuesFound": [
+    "preview height clipped → viewport 230→350"
+   ],
+   "status": "fixed in source — re-measure after bundle/publish (not yet re-verified)"
+  },
+  {
+   "path": "components/mobile-menu/mobile-menu.card.html",
+   "name": "MobileMenu",
+   "viewport": "700x620",
+   "render": "loaded, body non-empty",
+   "brokenImages": 0,
+   "measured": "card-runner iframe DOM (this turn, before fixes) + user DOM smoke 94/94",
+   "issuesFound": [
+    "preview height clipped → viewport 620→810"
+   ],
+   "status": "fixed in source — re-measure after bundle/publish (not yet re-verified)"
+  },
+  {
+   "path": "components/pagination-item/pagination-item.card.html",
+   "name": "PaginationItem",
+   "viewport": "700x190",
+   "render": "loaded, body non-empty",
+   "brokenImages": 0,
+   "measured": "card-runner iframe DOM (this turn, before fixes) + user DOM smoke 94/94",
+   "issuesFound": [
+    "preview height clipped → viewport 190→290"
+   ],
+   "status": "fixed in source — re-measure after bundle/publish (not yet re-verified)"
+  },
+  {
+   "path": "components/pagination/pagination.card.html",
+   "name": "Pagination",
+   "viewport": "700x200",
+   "render": "loaded, body non-empty",
+   "brokenImages": 0,
+   "measured": "card-runner iframe DOM (this turn, before fixes) + user DOM smoke 94/94",
+   "issuesFound": [
+    "preview height clipped → viewport 200→380",
+    "W+59 (740/681) → Pagination flex-wrap + card 7-page group"
+   ],
+   "status": "fixed in source — re-measure after bundle/publish (not yet re-verified)"
+  },
+  {
+   "path": "components/progress-steps/progress-steps.card.html",
+   "name": "ProgressSteps",
+   "viewport": "700x190",
+   "render": "loaded, body non-empty",
+   "brokenImages": 0,
+   "measured": "card-runner iframe DOM (this turn, before fixes) + user DOM smoke 94/94",
+   "issuesFound": [
+    "preview height clipped → viewport 190→340"
+   ],
+   "status": "fixed in source — re-measure after bundle/publish (not yet re-verified)"
+  },
+  {
+   "path": "components/side-nav/side-nav.card.html",
+   "name": "SideNav",
+   "viewport": "700x480",
+   "render": "loaded, body non-empty",
+   "brokenImages": 0,
+   "measured": "card-runner iframe DOM (this turn, before fixes) + user DOM smoke 94/94",
+   "issuesFound": [
+    "preview height clipped → viewport 480→1000"
+   ],
+   "status": "fixed in source — re-measure after bundle/publish (not yet re-verified)"
+  },
+  {
+   "path": "components/stepper/stepper.card.html",
+   "name": "Stepper",
+   "viewport": "700x220",
+   "render": "loaded, body non-empty",
+   "brokenImages": 0,
+   "measured": "card-runner iframe DOM (this turn, before fixes) + user DOM smoke 94/94",
+   "issuesFound": [
+    "preview height clipped → viewport 220→330"
+   ],
+   "status": "fixed in source — re-measure after bundle/publish (not yet re-verified)"
+  },
+  {
+   "path": "components/tab/tab.card.html",
+   "name": "Tab",
+   "viewport": "700x180",
+   "render": "loaded, body non-empty",
+   "brokenImages": 0,
+   "measured": "card-runner iframe DOM (this turn, before fixes) + user DOM smoke 94/94",
+   "issuesFound": [
+    "preview height clipped → viewport 180→230"
+   ],
+   "status": "fixed in source — re-measure after bundle/publish (not yet re-verified)"
+  },
+  {
+   "path": "ui_kits/core-components/index.html",
+   "name": "KOSAF_V1 / Core Components (218:570)",
+   "viewport": "1612x900",
+   "render": "loaded, body non-empty",
+   "brokenImages": 0,
+   "measured": "card-runner iframe DOM (this turn, before fixes) + user DOM smoke 94/94",
+   "issuesFound": [
+    "W+18 (1612 in 1594 avail.) → fit-to-available-width scale"
+   ],
+   "status": "fixed in source — re-measure after bundle/publish (not yet re-verified)"
+  },
+  {
+   "path": "guidelines/controls.html",
+   "name": "Control heights",
+   "viewport": "700x170",
+   "render": "loaded, body non-empty",
+   "brokenImages": 0,
+   "measured": "card-runner iframe DOM (this turn, before fixes) + user DOM smoke 94/94",
+   "issuesFound": [],
+   "status": "no structural issue measured (visual design not individually approved)"
+  },
+  {
+   "path": "guidelines/layout.html",
+   "name": "Viewports & table rhythm",
+   "viewport": "700x170",
+   "render": "loaded, body non-empty",
+   "brokenImages": 0,
+   "measured": "card-runner iframe DOM (this turn, before fixes) + user DOM smoke 94/94",
+   "issuesFound": [],
+   "status": "no structural issue measured (visual design not individually approved)"
+  },
+  {
+   "path": "guidelines/radius.html",
+   "name": "Radius",
+   "viewport": "700x140",
+   "render": "loaded, body non-empty",
+   "brokenImages": 0,
+   "measured": "card-runner iframe DOM (this turn, before fixes) + user DOM smoke 94/94",
+   "issuesFound": [
+    "preview height clipped → viewport 140→240",
+    "W+32 (713/681) → flex-wrap"
+   ],
+   "status": "fixed in source — re-measure after bundle/publish (not yet re-verified)"
+  },
+  {
+   "path": "guidelines/spacing.html",
+   "name": "Spacing scale",
+   "viewport": "700x150",
+   "render": "loaded, body non-empty",
+   "brokenImages": 0,
+   "measured": "card-runner iframe DOM (this turn, before fixes) + user DOM smoke 94/94",
+   "issuesFound": [],
+   "status": "no structural issue measured (visual design not individually approved)"
+  },
+  {
+   "path": "guidelines/docs/01-getting-started.html",
+   "name": "01 · 시작 가이드 (Rulebook)",
+   "viewport": "700x330",
+   "render": "loaded, body non-empty",
+   "brokenImages": 0,
+   "measured": "card-runner iframe DOM (this turn, before fixes) + user DOM smoke 94/94",
+   "issuesFound": [
+    "preview height clipped → viewport 330→430"
+   ],
+   "status": "fixed in source — re-measure after bundle/publish (not yet re-verified)"
+  },
+  {
+   "path": "guidelines/docs/02-category-index.html",
+   "name": "02 · 카테고리 인덱스",
+   "viewport": "700x400",
+   "render": "loaded, body non-empty",
+   "brokenImages": 0,
+   "measured": "card-runner iframe DOM (this turn, before fixes) + user DOM smoke 94/94",
+   "issuesFound": [
+    "preview height clipped → viewport 400→630"
+   ],
+   "status": "fixed in source — re-measure after bundle/publish (not yet re-verified)"
+  },
+  {
+   "path": "guidelines/docs/03-state-matrix.html",
+   "name": "03 · 상태 매트릭스",
+   "viewport": "700x400",
+   "render": "loaded, body non-empty",
+   "brokenImages": 0,
+   "measured": "card-runner iframe DOM (this turn, before fixes) + user DOM smoke 94/94",
+   "issuesFound": [
+    "preview height clipped → viewport 400→620"
+   ],
+   "status": "fixed in source — re-measure after bundle/publish (not yet re-verified)"
+  },
+  {
+   "path": "guidelines/docs/04-layout-guide.html",
+   "name": "04 · 레이아웃 가이드 (PC / Mobile)",
+   "viewport": "700x330",
+   "render": "loaded, body non-empty",
+   "brokenImages": 0,
+   "measured": "card-runner iframe DOM (this turn, before fixes) + user DOM smoke 94/94",
+   "issuesFound": [],
+   "status": "no structural issue measured (visual design not individually approved)"
+  },
+  {
+   "path": "guidelines/docs/05-qa.html",
+   "name": "05 · QA 현황",
+   "viewport": "700x360",
+   "render": "loaded, body non-empty",
+   "brokenImages": 0,
+   "measured": "card-runner iframe DOM (this turn, before fixes) + user DOM smoke 94/94",
+   "issuesFound": [
+    "preview height clipped → viewport 360→450"
+   ],
+   "status": "fixed in source — re-measure after bundle/publish (not yet re-verified)"
+  },
+  {
+   "path": "guidelines/docs/06-ai-guide.html",
+   "name": "06 · AI 생성 가이드",
+   "viewport": "700x330",
+   "render": "loaded, body non-empty",
+   "brokenImages": 0,
+   "measured": "card-runner iframe DOM (this turn, before fixes) + user DOM smoke 94/94",
+   "issuesFound": [],
+   "status": "no structural issue measured (visual design not individually approved)"
+  },
+  {
+   "path": "guidelines/docs/07-changelog.html",
+   "name": "07 · 변경 이력",
+   "viewport": "700x300",
+   "render": "loaded, body non-empty",
+   "brokenImages": 0,
+   "measured": "card-runner iframe DOM (this turn, before fixes) + user DOM smoke 94/94",
+   "issuesFound": [
+    "preview height clipped → viewport 300→520"
+   ],
+   "status": "fixed in source — re-measure after bundle/publish (not yet re-verified)"
+  },
+  {
+   "path": "guidelines/contrast.html",
+   "name": "White-text contrast",
+   "viewport": "700x130",
+   "render": "loaded, body non-empty",
+   "brokenImages": 0,
+   "measured": "card-runner iframe DOM (this turn, before fixes) + user DOM smoke 94/94",
+   "issuesFound": [],
+   "status": "no structural issue measured (visual design not individually approved)"
+  },
+  {
+   "path": "guidelines/states.html",
+   "name": "State rules",
+   "viewport": "700x170",
+   "render": "loaded, body non-empty",
+   "brokenImages": 0,
+   "measured": "card-runner iframe DOM (this turn, before fixes) + user DOM smoke 94/94",
+   "issuesFound": [
+    "preview height clipped → viewport 170→200"
+   ],
+   "status": "fixed in source — re-measure after bundle/publish (not yet re-verified)"
+  },
+  {
+   "path": "guidelines/type-body.html",
+   "name": "Body & caption",
+   "viewport": "700x230",
+   "render": "loaded, body non-empty",
+   "brokenImages": 0,
+   "measured": "card-runner iframe DOM (this turn, before fixes) + user DOM smoke 94/94",
+   "issuesFound": [],
+   "status": "no structural issue measured (visual design not individually approved)"
+  },
+  {
+   "path": "guidelines/type-headings.html",
+   "name": "Headings",
+   "viewport": "700x330",
+   "render": "loaded, body non-empty",
+   "brokenImages": 0,
+   "measured": "card-runner iframe DOM (this turn, before fixes) + user DOM smoke 94/94",
+   "issuesFound": [],
+   "status": "no structural issue measured (visual design not individually approved)"
+  },
+  {
+   "path": "guidelines/type-source.html",
+   "name": "KOSAF/Source styles (60)",
+   "viewport": "700x400",
+   "render": "loaded, body non-empty",
+   "brokenImages": 0,
+   "measured": "card-runner iframe DOM (this turn, before fixes) + user DOM smoke 94/94",
+   "issuesFound": [],
+   "status": "no structural issue measured (visual design not individually approved)"
+  },
+  {
+   "path": "guidelines/type-weights.html",
+   "name": "Noto Sans KR weights",
+   "viewport": "700x140",
+   "render": "loaded, body non-empty",
+   "brokenImages": 0,
+   "measured": "card-runner iframe DOM (this turn, before fixes) + user DOM smoke 94/94",
+   "issuesFound": [],
+   "status": "no structural issue measured (visual design not individually approved)"
+  },
+  {
+   "path": "ui_kits/search-results/index.html",
+   "name": "검색 결과 — PC 1920",
+   "viewport": "1920x1080",
+   "render": "loaded, body non-empty",
+   "brokenImages": 0,
+   "measured": "card-runner iframe DOM (this turn, before fixes) + user DOM smoke 94/94",
+   "issuesFound": [
+    "user-measured 1901 vs 1920 (scrollbar) → PC frame width:100% minWidth:1636"
+   ],
+   "status": "fixed in source — re-measure after bundle/publish (not yet re-verified)"
+  },
+  {
+   "path": "ui_kits/search-results/mobile.html",
+   "name": "검색 결과 — Mobile 390",
+   "viewport": "390x844",
+   "render": "loaded, body non-empty",
+   "brokenImages": 0,
+   "measured": "card-runner iframe DOM (this turn, before fixes) + user DOM smoke 94/94",
+   "issuesFound": [],
+   "status": "no structural issue measured (visual design not individually approved)"
+  },
+  {
+   "path": "ui_kits/buyer-mypage/index.html",
+   "name": "구매자 마이페이지 — PC 1920",
+   "viewport": "1920x1080",
+   "render": "loaded, body non-empty",
+   "brokenImages": 0,
+   "measured": "card-runner iframe DOM (this turn, before fixes) + user DOM smoke 94/94",
+   "issuesFound": [
+    "user-measured 1901 vs 1920 (scrollbar) → PC frame width:100% minWidth:1636"
+   ],
+   "status": "fixed in source — re-measure after bundle/publish (not yet re-verified)"
+  },
+  {
+   "path": "ui_kits/buyer-mypage/mobile.html",
+   "name": "구매자 마이페이지 — Mobile 390",
+   "viewport": "390x844",
+   "render": "loaded, body non-empty",
+   "brokenImages": 0,
+   "measured": "card-runner iframe DOM (this turn, before fixes) + user DOM smoke 94/94",
+   "issuesFound": [],
+   "status": "no structural issue measured (visual design not individually approved)"
+  },
+  {
+   "path": "ui_kits/login/index.html",
+   "name": "로그인 — PC 1920",
+   "viewport": "1920x1080",
+   "render": "loaded, body non-empty",
+   "brokenImages": 0,
+   "measured": "card-runner iframe DOM (this turn, before fixes) + user DOM smoke 94/94",
+   "issuesFound": [
+    "user-measured 1901 vs 1920 (scrollbar) → PC frame width:100% minWidth:1636"
+   ],
+   "status": "fixed in source — re-measure after bundle/publish (not yet re-verified)"
+  },
+  {
+   "path": "ui_kits/login/mobile.html",
+   "name": "로그인 — Mobile 390",
+   "viewport": "390x844",
+   "render": "loaded, body non-empty",
+   "brokenImages": 0,
+   "measured": "card-runner iframe DOM (this turn, before fixes) + user DOM smoke 94/94",
+   "issuesFound": [],
+   "status": "no structural issue measured (visual design not individually approved)"
+  },
+  {
+   "path": "ui_kits/product-detail/index.html",
+   "name": "상품상세 — PC 1920",
+   "viewport": "1920x1080",
+   "render": "loaded, body non-empty",
+   "brokenImages": 0,
+   "measured": "card-runner iframe DOM (this turn, before fixes) + user DOM smoke 94/94",
+   "issuesFound": [
+    "user-measured 1901 vs 1920 (scrollbar) → PC frame width:100% minWidth:1636"
+   ],
+   "status": "fixed in source — re-measure after bundle/publish (not yet re-verified)"
+  },
+  {
+   "path": "ui_kits/product-detail/mobile.html",
+   "name": "상품상세 — Mobile 390",
+   "viewport": "390x844",
+   "render": "loaded, body non-empty",
+   "brokenImages": 0,
+   "measured": "card-runner iframe DOM (this turn, before fixes) + user DOM smoke 94/94",
+   "issuesFound": [
+    "over-edge controls 1 (tab strip) → inside its own overflow-x:auto tablist; intended"
+   ],
+   "status": "fixed in source — re-measure after bundle/publish (not yet re-verified)"
+  },
+  {
+   "path": "ui_kits/cart/index-empty.html",
+   "name": "장바구니 (없음) — PC 1920",
+   "viewport": "1920x1080",
+   "render": "loaded, body non-empty",
+   "brokenImages": 0,
+   "measured": "card-runner iframe DOM (this turn, before fixes) + user DOM smoke 94/94",
+   "issuesFound": [
+    "user-measured 1901 vs 1920 (scrollbar) → PC frame width:100% minWidth:1636"
+   ],
+   "status": "fixed in source — re-measure after bundle/publish (not yet re-verified)"
+  },
+  {
+   "path": "ui_kits/cart/index.html",
+   "name": "장바구니 — PC 1920",
+   "viewport": "1920x1080",
+   "render": "loaded, body non-empty",
+   "brokenImages": 0,
+   "measured": "card-runner iframe DOM (this turn, before fixes) + user DOM smoke 94/94",
+   "issuesFound": [
+    "user-measured 1901 vs 1920 (scrollbar) → PC frame width:100% minWidth:1636"
+   ],
+   "status": "fixed in source — re-measure after bundle/publish (not yet re-verified)"
+  },
+  {
+   "path": "ui_kits/cart/mobile-empty.html",
+   "name": "장바구니 (없음) — Mobile 390",
+   "viewport": "390x844",
+   "render": "loaded, body non-empty",
+   "brokenImages": 0,
+   "measured": "card-runner iframe DOM (this turn, before fixes) + user DOM smoke 94/94",
+   "issuesFound": [],
+   "status": "no structural issue measured (visual design not individually approved)"
+  },
+  {
+   "path": "ui_kits/cart/mobile.html",
+   "name": "장바구니 — Mobile 390",
+   "viewport": "390x844",
+   "render": "loaded, body non-empty",
+   "brokenImages": 0,
+   "measured": "card-runner iframe DOM (this turn, before fixes) + user DOM smoke 94/94",
+   "issuesFound": [],
+   "status": "no structural issue measured (visual design not individually approved)"
+  },
+  {
+   "path": "ui_kits/order-complete/index.html",
+   "name": "주문 완료 — PC 1920",
+   "viewport": "1920x1080",
+   "render": "loaded, body non-empty",
+   "brokenImages": 0,
+   "measured": "card-runner iframe DOM (this turn, before fixes) + user DOM smoke 94/94",
+   "issuesFound": [
+    "user-measured 1901 vs 1920 (scrollbar) → PC frame width:100% minWidth:1636"
+   ],
+   "status": "fixed in source — re-measure after bundle/publish (not yet re-verified)"
+  },
+  {
+   "path": "ui_kits/order-complete/mobile.html",
+   "name": "주문 완료 — Mobile 390",
+   "viewport": "390x844",
+   "render": "loaded, body non-empty",
+   "brokenImages": 0,
+   "measured": "card-runner iframe DOM (this turn, before fixes) + user DOM smoke 94/94",
+   "issuesFound": [],
+   "status": "no structural issue measured (visual design not individually approved)"
+  },
+  {
+   "path": "ui_kits/checkout/index.html",
+   "name": "주문·결제 — PC 1920",
+   "viewport": "1920x1080",
+   "render": "loaded, body non-empty",
+   "brokenImages": 0,
+   "measured": "card-runner iframe DOM (this turn, before fixes) + user DOM smoke 94/94",
+   "issuesFound": [
+    "user-measured 1901 vs 1920 (scrollbar) → PC frame width:100% minWidth:1636"
+   ],
+   "status": "fixed in source — re-measure after bundle/publish (not yet re-verified)"
+  },
+  {
+   "path": "ui_kits/checkout/mobile.html",
+   "name": "주문·결제 — Mobile 390",
+   "viewport": "390x844",
+   "render": "loaded, body non-empty",
+   "brokenImages": 0,
+   "measured": "card-runner iframe DOM (this turn, before fixes) + user DOM smoke 94/94",
+   "issuesFound": [],
+   "status": "no structural issue measured (visual design not individually approved)"
+  },
+  {
+   "path": "ui_kits/seller-myshop/index.html",
+   "name": "판매자 마이샵 — PC 1920",
+   "viewport": "1920x1080",
+   "render": "loaded, body non-empty",
+   "brokenImages": 0,
+   "measured": "card-runner iframe DOM (this turn, before fixes) + user DOM smoke 94/94",
+   "issuesFound": [
+    "user-measured 1901 vs 1920 (scrollbar) → PC frame width:100% minWidth:1636"
+   ],
+   "status": "fixed in source — re-measure after bundle/publish (not yet re-verified)"
+  },
+  {
+   "path": "ui_kits/seller-myshop/mobile.html",
+   "name": "판매자 마이샵 — Mobile 390",
+   "viewport": "390x844",
+   "render": "loaded, body non-empty",
+   "brokenImages": 0,
+   "measured": "card-runner iframe DOM (this turn, before fixes) + user DOM smoke 94/94",
+   "issuesFound": [],
+   "status": "no structural issue measured (visual design not individually approved)"
+  },
+  {
+   "path": "ui_kits/seller-signup/index.html",
+   "name": "판매자 회원가입 — PC 1920",
+   "viewport": "1920x1080",
+   "render": "loaded, body non-empty",
+   "brokenImages": 0,
+   "measured": "card-runner iframe DOM (this turn, before fixes) + user DOM smoke 94/94",
+   "issuesFound": [
+    "user-measured 1901 vs 1920 (scrollbar) → PC frame width:100% minWidth:1636"
+   ],
+   "status": "fixed in source — re-measure after bundle/publish (not yet re-verified)"
+  },
+  {
+   "path": "ui_kits/seller-signup/mobile.html",
+   "name": "판매자 회원가입 — Mobile 390",
+   "viewport": "390x844",
+   "render": "loaded, body non-empty",
+   "brokenImages": 0,
+   "measured": "card-runner iframe DOM (this turn, before fixes) + user DOM smoke 94/94",
+   "issuesFound": [],
+   "status": "no structural issue measured (visual design not individually approved)"
+  },
+  {
+   "path": "ui_kits/support/index.html",
+   "name": "FAQ · 공지 · 후기 — PC 1920",
+   "viewport": "1920x1080",
+   "render": "loaded, body non-empty",
+   "brokenImages": 0,
+   "measured": "card-runner iframe DOM (this turn, before fixes) + user DOM smoke 94/94",
+   "issuesFound": [
+    "user-measured 1901 vs 1920 (scrollbar) → PC frame width:100% minWidth:1636"
+   ],
+   "status": "fixed in source — re-measure after bundle/publish (not yet re-verified)"
+  },
+  {
+   "path": "ui_kits/support/mobile.html",
+   "name": "FAQ · 공지 · 후기 — Mobile 390",
+   "viewport": "390x844",
+   "render": "loaded, body non-empty",
+   "brokenImages": 0,
+   "measured": "card-runner iframe DOM (this turn, before fixes) + user DOM smoke 94/94",
+   "issuesFound": [],
+   "status": "no structural issue measured (visual design not individually approved)"
+  }
+ ]
+}

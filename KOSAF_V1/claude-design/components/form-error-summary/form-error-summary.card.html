@@ -1,0 +1,25 @@
+<!-- @dsCard group="Components · Forms" viewport="700x620" name="FormErrorSummary" subtitle="필드 오류 요약 ↔ 제출 실패 구분 · loading/success" -->
+<!DOCTYPE html>
+<html lang="ko"><head><meta charset="utf-8"><title>FormErrorSummary</title>
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+<script src="../../guidelines/card-kit.js"></script>
+<style>body{margin:0;background:#fff}</style>
+</head><body><div id="r"></div>
+<script type="text/babel">
+const NS = window.KOSAFV1ProjectDesignSystem_f8c97b;
+const { FormErrorSummary, FormField, Input, Button } = NS;
+const META = {"name":"FormErrorSummary","prov":"extension","node":"문구 1:89853","use":"필드 오류 목록(링크 → 필드 focus)과 제출 실패(재시도)를 구분","props":["status","errors","title","message","onRetry","focusKey","focusTarget","device"],"states":"error·submitError·loading·success","ko":"폼 오류 요약 · FormErrorSummary"};
+function Live(){const [v,setV]=React.useState('');const [n,setN]=React.useState(0);const [t,setT]=React.useState(false);const errs=t&&!v?[{id:'c-name',label:'회원 이름',message:'필수항목을 입력해주세요.'}]:[];
+return <div style={{width:660}}><FormErrorSummary status="error" errors={errs} focusKey={n||undefined} focusTarget="firstField"/><FormField label="회원 이름" required labelWidth={160} htmlFor="c-name" error={errs[0]&&errs[0].message}><Input id="c-name" width={300} value={v} onChange={e=>setV(e.target.value)} state={errs.length?'error':undefined} placeholder=""/><Button size={45} onClick={()=>{setT(true);setN(n+1);}}>제출</Button></FormField></div>;}
+function Demo(){return (<>
+<KSec label="PC · 실제 동작 — 빈 값 제출 → 요약 + 첫 오류 필드 focus → 입력하면 해소" style={{display:'block'}}><Live/></KSec>
+<KSec label="제출 실패 (서버·네트워크, 데모)" style={{width:660,display:'block'}}><FormErrorSummary status="submitError" message="네트워크 상태를 확인한 뒤 다시 시도해주세요. 입력한 내용은 유지됩니다." onRetry={()=>{}}/></KSec>
+<KSec label="처리 중 · 완료" style={{display:'grid',gridTemplateColumns:'1fr 1fr',width:660}}><FormErrorSummary status="loading"/><FormErrorSummary status="success" message="심사 결과는 등록된 연락처로 안내됩니다."/></KSec>
+<KSec label="모바일"><div style={{width:350}}><FormErrorSummary device="mobile" errors={[{id:'x1',label:'아이디',message:'필수항목을 입력해주세요.'},{id:'x2',label:'비밀번호 확인',message:'비밀번호가 일치하지 않습니다.'}]}/></div></KSec>
+</>);}
+ReactDOM.createRoot(document.getElementById('r')).render(<KCard meta={META}><Demo/></KCard>);
+</script></body></html>

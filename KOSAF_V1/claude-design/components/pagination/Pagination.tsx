@@ -19,7 +19,7 @@ export function Pagination({ page, defaultPage = 1, total = 10, window: win = 10
     </button>
   );
   return (
-    <nav aria-label="페이지" onKeyDown={(e) => { if (e.key === 'ArrowLeft') go(p - 1); if (e.key === 'ArrowRight') go(p + 1); }} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: mobile ? 6 : 12, ...style }}>
+    <nav aria-label="페이지" onKeyDown={(e) => { if (e.key === 'ArrowLeft') go(p - 1); if (e.key === 'ArrowRight') go(p + 1); }} style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center', gap: mobile ? 6 : 12, maxWidth: '100%', ...style }}>
       {ctrl('첫 페이지', 1, p === 1, 0, 'l')}
       {ctrl('이전 페이지', p - 1, p === 1, 0)}
       {nums.map((n) => mobile

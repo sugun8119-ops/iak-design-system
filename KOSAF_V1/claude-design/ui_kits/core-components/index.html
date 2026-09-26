@@ -1,4 +1,4 @@
-<!-- @dsCard group="Core Components board" viewport="1612x900" name="KOSAF_V1 / Core Components (218:570)" subtitle="Board rebuilt from 82-node geometry export using the 11 React components" -->
+<!-- @dsCard group="Core Components board" viewport="1640x900" name="KOSAF_V1 / Core Components (218:570)" subtitle="Board rebuilt from 82-node geometry export using the 11 React components" -->
 <!DOCTYPE html>
 <html><head><meta charset="utf-8"><title>KOSAF_V1 / Core Components</title>
 <link rel="stylesheet" href="../../styles.css">
@@ -7,7 +7,7 @@
 <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
 <script src="../../_ds_bundle.js"></script>
 <style>body{margin:0;background:var(--kosaf-color-bg-subtle)}</style>
-</head><body><div id="r"></div>
+<style>html,body{margin:0;box-sizing:border-box}*,*::before,*::after{box-sizing:inherit}</style></head><body><div id="r"></div>
 <script type="text/babel">
 const K = window.KOSAFV1ProjectDesignSystem_f8c97b;
 const { Button, Input, Search, Checkbox, Radio, Tab, Badge, PaginationItem, TableRow, Modal, Stepper } = K;
@@ -39,5 +39,11 @@ function Board(){
     <At x={820} y={1196}><div onClick={()=>setStep((step+1)%3)} style={{cursor:'pointer'}}><Stepper current={step}/></div></At>
   </div>;
 }
-ReactDOM.createRoot(document.getElementById('r')).render(<Board/>);
+/* Fit the 1612-wide source board into the available width (viewport minus scrollbar) without changing its geometry. */
+function Fit({ w, h, children }) {
+  const [s, setS] = React.useState(1);
+  React.useLayoutEffect(() => { const f = () => setS(Math.min(1, document.documentElement.clientWidth / w)); f(); window.addEventListener('resize', f); return () => window.removeEventListener('resize', f); }, [w]);
+  return <div style={{ width: w * s, height: h * s, overflow: 'hidden' }}><div style={{ width: w, transform: 'scale(' + s + ')', transformOrigin: '0 0' }}>{children}</div></div>;
+}
+ReactDOM.createRoot(document.getElementById('r')).render(<Fit w={1612} h={1882}><Board/></Fit>);
 </script></body></html>

@@ -1,4 +1,4 @@
-/* @ds-bundle: {"format":4,"namespace":"KOSAFV1ProjectDesignSystem_f8c97b","components":[{"name":"Accordion","sourcePath":"components/accordion/Accordion.tsx"},{"name":"AlertDialog","sourcePath":"components/alert-dialog/AlertDialog.tsx"},{"name":"Badge","sourcePath":"components/badge/Badge.jsx"},{"name":"BottomActionBar","sourcePath":"components/bottom-action-bar/BottomActionBar.tsx"},{"name":"Breadcrumb","sourcePath":"components/breadcrumb/Breadcrumb.tsx"},{"name":"Button","sourcePath":"components/button/Button.jsx"},{"name":"CartItem","sourcePath":"components/cart-item/CartItem.tsx"},{"name":"Checkbox","sourcePath":"components/checkbox/Checkbox.jsx"},{"name":"CompareTable","sourcePath":"components/compare-table/CompareTable.tsx"},{"name":"DateField","sourcePath":"components/date-field/DateField.tsx"},{"name":"DateRange","sourcePath":"components/date-range/DateRange.tsx"},{"name":"DescriptionList","sourcePath":"components/description-list/DescriptionList.tsx"},{"name":"EmptyState","sourcePath":"components/empty-state/EmptyState.tsx"},{"name":"FileUpload","sourcePath":"components/file-upload/FileUpload.tsx"},{"name":"FilterChip","sourcePath":"components/filter-chip/FilterChip.tsx"},{"name":"DEFAULT_FILTER_GROUPS","sourcePath":"components/filter-panel/FilterPanel.tsx"},{"name":"FilterPanel","sourcePath":"components/filter-panel/FilterPanel.tsx"},{"name":"Footer","sourcePath":"components/footer/Footer.tsx"},{"name":"FormField","sourcePath":"components/form-field/FormField.tsx"},{"name":"Header","sourcePath":"components/header/Header.tsx"},{"name":"IconRegistry","sourcePath":"components/icon/Icon.tsx"},{"name":"Icon","sourcePath":"components/icon/Icon.tsx"},{"name":"KOSAF_ICONS","sourcePath":"components/icon/icons.data.js"},{"name":"Input","sourcePath":"components/input/Input.jsx"},{"name":"MetricCard","sourcePath":"components/metric-card/MetricCard.tsx"},{"name":"MobileHeader","sourcePath":"components/mobile-header/MobileHeader.tsx"},{"name":"CloseX","sourcePath":"components/mobile-menu/MobileMenu.tsx"},{"name":"MobileMenu","sourcePath":"components/mobile-menu/MobileMenu.tsx"},{"name":"Modal","sourcePath":"components/modal/Modal.jsx"},{"name":"SAMPLE_NOTIFICATIONS","sourcePath":"components/notification-list/NotificationList.tsx"},{"name":"NotificationList","sourcePath":"components/notification-list/NotificationList.tsx"},{"name":"OrderSummary","sourcePath":"components/order-summary/OrderSummary.tsx"},{"name":"PaginationItem","sourcePath":"components/pagination-item/PaginationItem.jsx"},{"name":"Pagination","sourcePath":"components/pagination/Pagination.tsx"},{"name":"EXAMPLE_PRICE_SERIES","sourcePath":"components/price-trend/PriceTrend.tsx"},{"name":"PriceTrend","sourcePath":"components/price-trend/PriceTrend.tsx"},{"name":"ImageSlot","sourcePath":"components/product-card/ProductCard.tsx"},{"name":"DealBadge","sourcePath":"components/product-card/ProductCard.tsx"},{"name":"ProductCard","sourcePath":"components/product-card/ProductCard.tsx"},{"name":"ProductListItem","sourcePath":"components/product-list-item/ProductListItem.tsx"},{"name":"PRODUCT_TABLE_COLUMNS","sourcePath":"components/product-table/ProductTable.tsx"},{"name":"ProductTable","sourcePath":"components/product-table/ProductTable.tsx"},{"name":"ProgressSteps","sourcePath":"components/progress-steps/ProgressSteps.tsx"},{"name":"QuantityStepper","sourcePath":"components/quantity-stepper/QuantityStepper.tsx"},{"name":"Radio","sourcePath":"components/radio/Radio.jsx"},{"name":"Rating","sourcePath":"components/rating/Rating.tsx"},{"name":"ReviewItem","sourcePath":"components/review-item/ReviewItem.tsx"},{"name":"Search","sourcePath":"components/search/Search.jsx"},{"name":"SegmentedControl","sourcePath":"components/segmented-control/SegmentedControl.tsx"},{"name":"Select","sourcePath":"components/select/Select.tsx"},{"name":"BUYER_NAV","sourcePath":"components/side-nav/SideNav.tsx"},{"name":"SideNav","sourcePath":"components/side-nav/SideNav.tsx"},{"name":"Stepper","sourcePath":"components/stepper/Stepper.jsx"},{"name":"Tab","sourcePath":"components/tab/Tab.jsx"},{"name":"TableRow","sourcePath":"components/table-row/TableRow.jsx"},{"name":"Textarea","sourcePath":"components/textarea/Textarea.tsx"}],"sourceHashes":{"components/accordion/Accordion.tsx":"8560aa05e22e","components/alert-dialog/AlertDialog.tsx":"44425b4ef882","components/badge/Badge.jsx":"edfca979276b","components/bottom-action-bar/BottomActionBar.tsx":"57a5f94d4436","components/breadcrumb/Breadcrumb.tsx":"3546712a7b5d","components/button/Button.jsx":"77ef0cb16c7c","components/cart-item/CartItem.tsx":"9977c13eb016","components/checkbox/Checkbox.jsx":"748aefc9df7d","components/compare-table/CompareTable.tsx":"02479305a67a","components/date-field/DateField.tsx":"fcf7f48512e1","components/date-range/DateRange.tsx":"5566407845f5","components/description-list/DescriptionList.tsx":"621ef105b820","components/empty-state/EmptyState.tsx":"06faa6297076","components/file-upload/FileUpload.tsx":"4e450c291a73","components/filter-chip/FilterChip.tsx":"55952a0eb31d","components/filter-panel/FilterPanel.tsx":"29bf2a7843dc","components/footer/Footer.tsx":"c7ab7c05ec89","components/form-field/FormField.tsx":"ae08c11e587d","components/header/Header.tsx":"c4bdac51314d","components/icon/Icon.tsx":"21804f08e5bf","components/icon/icons.data.js":"1f82893c6d66","components/input/Input.jsx":"3532a15127cf","components/metric-card/MetricCard.tsx":"5201fb65d364","components/mobile-header/MobileHeader.tsx":"402cca9d49f8","components/mobile-menu/MobileMenu.tsx":"d37309ac207d","components/modal/Modal.jsx":"629455cea605","components/notification-list/NotificationList.tsx":"9ffa759a8284","components/order-summary/OrderSummary.tsx":"dbfb64437d95","components/pagination-item/PaginationItem.jsx":"7e2ef2fb0efa","components/pagination/Pagination.tsx":"7e5a64dee005","components/price-trend/PriceTrend.tsx":"70e1b798e407","components/product-card/ProductCard.tsx":"3637ada2bf50","components/product-list-item/ProductListItem.tsx":"048cdc35efd6","components/product-table/ProductTable.tsx":"bbde1160dcd9","components/progress-steps/ProgressSteps.tsx":"52c10c6d4b2a","components/quantity-stepper/QuantityStepper.tsx":"36be6baac8ee","components/radio/Radio.jsx":"611574d2b25b","components/rating/Rating.tsx":"f46fd79aca51","components/review-item/ReviewItem.tsx":"0566eacd93b3","components/search/Search.jsx":"99eb34ed21a7","components/segmented-control/SegmentedControl.tsx":"886ff4520da5","components/select/Select.tsx":"58f4f7169a9e","components/side-nav/SideNav.tsx":"058b075d3562","components/stepper/Stepper.jsx":"dc152d73de22","components/tab/Tab.jsx":"72cfb7408f43","components/table-row/TableRow.jsx":"63a4c3cdf9de","components/textarea/Textarea.tsx":"7d0862d8af5a","guidelines/card-kit.js":"21b95b145371","guidelines/source-styles.js":"ce6425475665","ui_kits/_shared/shell.jsx":"7f10fd1d8720","ui_kits/buyer-mypage/screens.jsx":"8a62621b11c2","ui_kits/cart/screens.jsx":"80e203746f97","ui_kits/checkout/screens.jsx":"9f15fa716dac","ui_kits/login/screens.jsx":"f3c0d4900aed","ui_kits/product-detail/screens.jsx":"f0545c564b1d","ui_kits/search-results/screens.jsx":"4f492314e13e","ui_kits/seller-myshop/screens.jsx":"a376e8a1337c","ui_kits/seller-signup/screens.jsx":"0d168b0f0615","ui_kits/support/screens.jsx":"c91f530c1623"},"inlinedExternals":[],"unexposedExports":[]} */
+/* @ds-bundle: {"format":4,"namespace":"KOSAFV1ProjectDesignSystem_f8c97b","components":[{"name":"Accordion","sourcePath":"components/accordion/Accordion.tsx"},{"name":"AlertDialog","sourcePath":"components/alert-dialog/AlertDialog.tsx"},{"name":"Badge","sourcePath":"components/badge/Badge.jsx"},{"name":"BottomActionBar","sourcePath":"components/bottom-action-bar/BottomActionBar.tsx"},{"name":"Breadcrumb","sourcePath":"components/breadcrumb/Breadcrumb.tsx"},{"name":"Button","sourcePath":"components/button/Button.jsx"},{"name":"CartItem","sourcePath":"components/cart-item/CartItem.tsx"},{"name":"Checkbox","sourcePath":"components/checkbox/Checkbox.jsx"},{"name":"CompareTable","sourcePath":"components/compare-table/CompareTable.tsx"},{"name":"DateField","sourcePath":"components/date-field/DateField.tsx"},{"name":"DateRange","sourcePath":"components/date-range/DateRange.tsx"},{"name":"DescriptionList","sourcePath":"components/description-list/DescriptionList.tsx"},{"name":"EMPTY_STATE_PRESETS","sourcePath":"components/empty-state/EmptyState.tsx"},{"name":"EmptyState","sourcePath":"components/empty-state/EmptyState.tsx"},{"name":"FileUpload","sourcePath":"components/file-upload/FileUpload.tsx"},{"name":"FilterChip","sourcePath":"components/filter-chip/FilterChip.tsx"},{"name":"DEFAULT_FILTER_GROUPS","sourcePath":"components/filter-panel/FilterPanel.tsx"},{"name":"FilterPanel","sourcePath":"components/filter-panel/FilterPanel.tsx"},{"name":"Footer","sourcePath":"components/footer/Footer.tsx"},{"name":"FormErrorSummary","sourcePath":"components/form-error-summary/FormErrorSummary.tsx"},{"name":"FormField","sourcePath":"components/form-field/FormField.tsx"},{"name":"Header","sourcePath":"components/header/Header.tsx"},{"name":"IconRegistry","sourcePath":"components/icon/Icon.tsx"},{"name":"Icon","sourcePath":"components/icon/Icon.tsx"},{"name":"KOSAF_ICONS","sourcePath":"components/icon/icons.data.js"},{"name":"Input","sourcePath":"components/input/Input.jsx"},{"name":"MetricCard","sourcePath":"components/metric-card/MetricCard.tsx"},{"name":"MobileFilterSheet","sourcePath":"components/mobile-filter-sheet/MobileFilterSheet.tsx"},{"name":"MobileHeader","sourcePath":"components/mobile-header/MobileHeader.tsx"},{"name":"CloseX","sourcePath":"components/mobile-menu/MobileMenu.tsx"},{"name":"MobileMenu","sourcePath":"components/mobile-menu/MobileMenu.tsx"},{"name":"Modal","sourcePath":"components/modal/Modal.jsx"},{"name":"SAMPLE_NOTIFICATIONS","sourcePath":"components/notification-list/NotificationList.tsx"},{"name":"NotificationList","sourcePath":"components/notification-list/NotificationList.tsx"},{"name":"OrderSummary","sourcePath":"components/order-summary/OrderSummary.tsx"},{"name":"PageHeader","sourcePath":"components/page-header/PageHeader.tsx"},{"name":"PaginationItem","sourcePath":"components/pagination-item/PaginationItem.jsx"},{"name":"Pagination","sourcePath":"components/pagination/Pagination.tsx"},{"name":"EXAMPLE_PRICE_SERIES","sourcePath":"components/price-trend/PriceTrend.tsx"},{"name":"PriceTrend","sourcePath":"components/price-trend/PriceTrend.tsx"},{"name":"ImageSlot","sourcePath":"components/product-card/ProductCard.tsx"},{"name":"DealBadge","sourcePath":"components/product-card/ProductCard.tsx"},{"name":"ProductCard","sourcePath":"components/product-card/ProductCard.tsx"},{"name":"ProductListItem","sourcePath":"components/product-list-item/ProductListItem.tsx"},{"name":"PRODUCT_TABLE_COLUMNS","sourcePath":"components/product-table/ProductTable.tsx"},{"name":"ProductTable","sourcePath":"components/product-table/ProductTable.tsx"},{"name":"ProgressSteps","sourcePath":"components/progress-steps/ProgressSteps.tsx"},{"name":"QuantityStepper","sourcePath":"components/quantity-stepper/QuantityStepper.tsx"},{"name":"Radio","sourcePath":"components/radio/Radio.jsx"},{"name":"Rating","sourcePath":"components/rating/Rating.tsx"},{"name":"ReviewItem","sourcePath":"components/review-item/ReviewItem.tsx"},{"name":"Search","sourcePath":"components/search/Search.jsx"},{"name":"SegmentedControl","sourcePath":"components/segmented-control/SegmentedControl.tsx"},{"name":"Select","sourcePath":"components/select/Select.tsx"},{"name":"BUYER_NAV","sourcePath":"components/side-nav/SideNav.tsx"},{"name":"SideNav","sourcePath":"components/side-nav/SideNav.tsx"},{"name":"Stepper","sourcePath":"components/stepper/Stepper.jsx"},{"name":"Tab","sourcePath":"components/tab/Tab.jsx"},{"name":"TableRow","sourcePath":"components/table-row/TableRow.jsx"},{"name":"Textarea","sourcePath":"components/textarea/Textarea.tsx"}],"sourceHashes":{"components/accordion/Accordion.tsx":"8560aa05e22e","components/alert-dialog/AlertDialog.tsx":"44425b4ef882","components/badge/Badge.jsx":"edfca979276b","components/bottom-action-bar/BottomActionBar.tsx":"57a5f94d4436","components/breadcrumb/Breadcrumb.tsx":"3546712a7b5d","components/button/Button.jsx":"77ef0cb16c7c","components/cart-item/CartItem.tsx":"9977c13eb016","components/checkbox/Checkbox.jsx":"748aefc9df7d","components/compare-table/CompareTable.tsx":"02479305a67a","components/date-field/DateField.tsx":"fcf7f48512e1","components/date-range/DateRange.tsx":"5566407845f5","components/description-list/DescriptionList.tsx":"621ef105b820","components/empty-state/EmptyState.tsx":"a63d32ea38b7","components/file-upload/FileUpload.tsx":"4e450c291a73","components/filter-chip/FilterChip.tsx":"55952a0eb31d","components/filter-panel/FilterPanel.tsx":"8e30744454be","components/footer/Footer.tsx":"c7ab7c05ec89","components/form-error-summary/FormErrorSummary.tsx":"bce1ff2efb82","components/form-field/FormField.tsx":"cad7366fcafd","components/header/Header.tsx":"c4bdac51314d","components/icon/Icon.tsx":"21804f08e5bf","components/icon/icons.data.js":"1f82893c6d66","components/input/Input.jsx":"3532a15127cf","components/metric-card/MetricCard.tsx":"5201fb65d364","components/mobile-filter-sheet/MobileFilterSheet.tsx":"f08792bd3bf1","components/mobile-header/MobileHeader.tsx":"402cca9d49f8","components/mobile-menu/MobileMenu.tsx":"d37309ac207d","components/modal/Modal.jsx":"629455cea605","components/notification-list/NotificationList.tsx":"9ffa759a8284","components/order-summary/OrderSummary.tsx":"dbfb64437d95","components/page-header/PageHeader.tsx":"7dd72be9108f","components/pagination-item/PaginationItem.jsx":"7e2ef2fb0efa","components/pagination/Pagination.tsx":"d620ccc9c1b0","components/price-trend/PriceTrend.tsx":"70e1b798e407","components/product-card/ProductCard.tsx":"3637ada2bf50","components/product-list-item/ProductListItem.tsx":"048cdc35efd6","components/product-table/ProductTable.tsx":"dca3e820b8ea","components/progress-steps/ProgressSteps.tsx":"52c10c6d4b2a","components/quantity-stepper/QuantityStepper.tsx":"36be6baac8ee","components/radio/Radio.jsx":"611574d2b25b","components/rating/Rating.tsx":"f46fd79aca51","components/review-item/ReviewItem.tsx":"0566eacd93b3","components/search/Search.jsx":"99eb34ed21a7","components/segmented-control/SegmentedControl.tsx":"886ff4520da5","components/select/Select.tsx":"fec557876fa7","components/side-nav/SideNav.tsx":"058b075d3562","components/stepper/Stepper.jsx":"dc152d73de22","components/tab/Tab.jsx":"72cfb7408f43","components/table-row/TableRow.jsx":"63a4c3cdf9de","components/textarea/Textarea.tsx":"7d0862d8af5a","guidelines/card-kit.js":"18b3cd771d81","guidelines/source-styles.js":"ce6425475665","ui_kits/_shared/shell.jsx":"961381b5fb22","ui_kits/buyer-mypage/screens.jsx":"6c8118e24250","ui_kits/cart/screens.jsx":"80e203746f97","ui_kits/checkout/screens.jsx":"9f15fa716dac","ui_kits/login/screens.jsx":"afc82333cec1","ui_kits/product-detail/screens.jsx":"f0545c564b1d","ui_kits/search-results/screens.jsx":"6367151f6252","ui_kits/seller-myshop/screens.jsx":"10c015e25f3b","ui_kits/seller-signup/screens.jsx":"a18ac484e316","ui_kits/support/screens.jsx":"f798557c7192"},"inlinedExternals":[],"unexposedExports":[]} */
 
 (() => {
 
@@ -667,17 +667,40 @@ Object.assign(__ds_scope, { DescriptionList });
 
 // components/empty-state/EmptyState.tsx
 try { (() => {
-/** KOSAF EmptyState — Source-derived copy/structure from 장바구니 없음 1:104584 ("장바구니에 담긴 상품이 없습니다." + 상품검색), 후기 No Result 1:91890, 주문내역 없음 1:105292. Layout = KOSAF extension. */
+/** KOSAF EmptyState — Source-derived copy/structure from 장바구니 없음 1:104584 ("장바구니에 담긴 상품이 없습니다." + 상품검색), 후기 No Result 1:91890, 주문내역 없음 1:105292. Layout = KOSAF extension.
+ *  1.4.0 variants (KOSAF extension copy except emptyCart): noResults → 필터 초기화 · emptyCart → 상품검색 · noHistory → guidance only. */
+const EMPTY_STATE_PRESETS = {
+  emptyCart: {
+    message: '장바구니에 담긴 상품이 없습니다.',
+    actionLabel: '상품검색'
+  },
+  noResults: {
+    message: '조건에 맞는 상품이 없습니다.',
+    description: '선택한 필터를 줄이거나 초기화한 뒤 다시 검색해 보세요.',
+    actionLabel: '필터 초기화'
+  },
+  noHistory: {
+    message: '조회된 거래내역이 없습니다.',
+    description: '조회 기간을 변경하면 이전 거래를 확인할 수 있습니다.'
+  }
+};
 function EmptyState({
-  message = '장바구니에 담긴 상품이 없습니다.',
+  variant,
+  message,
   description,
   actionLabel,
   onAction,
+  secondaryLabel,
+  onSecondary,
   icon,
   device = 'desktop',
   style
 }) {
   const m = device === 'mobile';
+  const p = variant && EMPTY_STATE_PRESETS[variant] || {};
+  const msg = message ?? p.message ?? '장바구니에 담긴 상품이 없습니다.';
+  const desc = description ?? p.description;
+  const act = actionLabel ?? (onAction ? p.actionLabel : undefined) ?? (variant ? undefined : undefined);
   return /*#__PURE__*/React.createElement("div", {
     role: "status",
     style: {
@@ -701,22 +724,36 @@ function EmptyState({
       fontSize: m ? 18 : 24,
       fontWeight: 500,
       lineHeight: m ? '26px' : '34px',
-      color: 'var(--kosaf-color-text-primary)'
+      color: 'var(--kosaf-color-text-primary)',
+      wordBreak: 'keep-all'
     }
-  }, message), description ? /*#__PURE__*/React.createElement("div", {
+  }, msg), desc ? /*#__PURE__*/React.createElement("div", {
     style: {
       fontSize: m ? 14 : 18,
       lineHeight: m ? '20px' : '28px',
       color: 'var(--kosaf-color-text-secondary)',
-      whiteSpace: 'pre-line'
+      whiteSpace: 'pre-line',
+      wordBreak: 'keep-all'
     }
-  }, description) : null, actionLabel ? /*#__PURE__*/React.createElement(__ds_scope.Button, {
+  }, desc) : null, act || secondaryLabel ? /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      gap: 10,
+      flexWrap: 'wrap',
+      justifyContent: 'center'
+    }
+  }, secondaryLabel ? /*#__PURE__*/React.createElement(__ds_scope.Button, {
+    variant: "secondary",
+    size: m ? 45 : 50,
+    width: m ? 140 : 180,
+    onClick: onSecondary
+  }, secondaryLabel) : null, act ? /*#__PURE__*/React.createElement(__ds_scope.Button, {
     size: m ? 45 : 50,
     width: m ? 160 : 200,
     onClick: onAction
-  }, actionLabel) : null);
+  }, act) : null) : null);
 }
-Object.assign(__ds_scope, { EmptyState });
+Object.assign(__ds_scope, { EMPTY_STATE_PRESETS, EmptyState });
 })(); } catch (e) { __ds_ns.__errors.push({ path: "components/empty-state/EmptyState.tsx", error: String((e && e.message) || e) }); }
 
 // components/file-upload/FileUpload.tsx
@@ -1016,9 +1053,162 @@ function Footer({
 Object.assign(__ds_scope, { Footer });
 })(); } catch (e) { __ds_ns.__errors.push({ path: "components/footer/Footer.tsx", error: String((e && e.message) || e) }); }
 
+// components/form-error-summary/FormErrorSummary.tsx
+try { (() => {
+function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
+const F = 'var(--kosaf-font)';
+
+/** KOSAF FormErrorSummary — KOSAF extension (1.4.0, reference: Mobbin error-message). Separates field errors (list of links to fields)
+ *  from submit failure (server/network, retry). Also loading / success status lines. Border-only, no shadow, radius 5. */
+function FormErrorSummary({
+  status = 'error',
+  errors = [],
+  title,
+  message,
+  onRetry,
+  retryLabel = '다시 시도',
+  focusKey,
+  focusTarget = 'summary',
+  device = 'desktop',
+  style
+}) {
+  const ref = React.useRef(null);
+  const m = device === 'mobile';
+  React.useEffect(() => {
+    if (focusKey === undefined || focusKey === null) return;
+    if (status === 'error' && errors.length) {
+      if (focusTarget === 'firstField') {
+        const el = document.getElementById(errors[0].id);
+        if (el) {
+          el.focus();
+          return;
+        }
+      }
+      if (focusTarget !== 'none' && ref.current) ref.current.focus();
+    } else if (status === 'submitError' && ref.current && focusTarget !== 'none') ref.current.focus();
+  }, [focusKey]);
+  if (status === 'error' && !errors.length) return null;
+  if (!status || status === 'idle') return null;
+  const tone = {
+    error: 'var(--kosaf-color-action-danger)',
+    submitError: 'var(--kosaf-color-action-danger)',
+    loading: 'var(--kosaf-color-border-default)',
+    success: 'var(--kosaf-color-action-positive)'
+  }[status];
+  const heading = title || {
+    error: '입력 내용을 확인해주세요. (' + errors.length + '개 항목)',
+    submitError: '신청을 완료하지 못했습니다.',
+    loading: '처리 중입니다…',
+    success: '정상적으로 처리되었습니다.'
+  }[status];
+  const live = status === 'loading' || status === 'success' ? {
+    role: 'status',
+    'aria-live': 'polite'
+  } : {
+    role: 'alert'
+  };
+  const go = id => e => {
+    e.preventDefault();
+    const el = document.getElementById(id);
+    if (el) el.focus();
+  };
+  return /*#__PURE__*/React.createElement("div", _extends({
+    ref: ref,
+    tabIndex: -1
+  }, live, {
+    style: {
+      boxSizing: 'border-box',
+      width: '100%',
+      padding: m ? '14px 16px' : '16px 20px',
+      border: '1px solid ' + tone,
+      borderRadius: 'var(--kosaf-radius-5)',
+      background: status === 'loading' ? 'var(--kosaf-color-bg-subtle)' : '#fff',
+      fontFamily: F,
+      outline: 'none',
+      ...style
+    }
+  }), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      alignItems: 'center',
+      gap: 12,
+      flexWrap: 'wrap'
+    }
+  }, /*#__PURE__*/React.createElement("strong", {
+    style: {
+      flex: 1,
+      minWidth: 0,
+      fontSize: m ? 15 : 16,
+      lineHeight: '24px',
+      fontWeight: 500,
+      color: status === 'loading' ? 'var(--kosaf-color-text-secondary)' : status === 'success' ? 'var(--kosaf-color-action-primary)' : 'var(--kosaf-color-action-danger)',
+      wordBreak: 'keep-all'
+    }
+  }, heading), status === 'submitError' && onRetry ? /*#__PURE__*/React.createElement(__ds_scope.Button, {
+    variant: "secondary",
+    size: 34,
+    onClick: onRetry,
+    style: {
+      padding: '0 14px'
+    }
+  }, retryLabel) : null), message ? /*#__PURE__*/React.createElement("p", {
+    style: {
+      margin: '4px 0 0',
+      fontSize: 14,
+      lineHeight: '20px',
+      color: 'var(--kosaf-color-text-secondary)',
+      wordBreak: 'keep-all',
+      overflowWrap: 'anywhere'
+    }
+  }, message) : null, status === 'error' ? /*#__PURE__*/React.createElement("ul", {
+    style: {
+      margin: '8px 0 0',
+      padding: 0,
+      listStyle: 'none',
+      display: 'flex',
+      flexDirection: 'column',
+      gap: 4
+    }
+  }, errors.map(e => /*#__PURE__*/React.createElement("li", {
+    key: e.id,
+    style: {
+      fontSize: 14,
+      lineHeight: '20px'
+    }
+  }, /*#__PURE__*/React.createElement("a", {
+    href: '#' + e.id,
+    onClick: go(e.id),
+    style: {
+      color: 'var(--kosaf-color-text-primary)',
+      textDecoration: 'underline',
+      textUnderlineOffset: 3
+    }
+  }, e.label), /*#__PURE__*/React.createElement("span", {
+    style: {
+      color: 'var(--kosaf-color-text-secondary)'
+    }
+  }, " \u2014 ", e.message)))) : null);
+}
+Object.assign(__ds_scope, { FormErrorSummary });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/form-error-summary/FormErrorSummary.tsx", error: String((e && e.message) || e) }); }
+
 // components/form-field/FormField.tsx
 try { (() => {
-/** KOSAF FormField — Source-derived from 판매자 회원가입 1:89853 form rows (label column, required "*", red error "필수항목을 입력해주세요.", 1px #DDDDDD row rule). */
+const srOnly = {
+  position: 'absolute',
+  width: 1,
+  height: 1,
+  overflow: 'hidden',
+  clip: 'rect(0 0 0 0)',
+  whiteSpace: 'nowrap'
+};
+const wrap = {
+  wordBreak: 'keep-all',
+  overflowWrap: 'anywhere'
+};
+
+/** KOSAF FormField — Source-derived from 판매자 회원가입 1:89853 form rows (label column, required "*", red error "필수항목을 입력해주세요.", 1px #DDDDDD row rule).
+ *  1.4.0 web refinement: the child whose id === htmlFor receives aria-describedby (help + error ids) and aria-invalid; help sits above error so rows don't jump order. */
 function FormField({
   label,
   required,
@@ -1031,6 +1221,17 @@ function FormField({
   style
 }) {
   const h = layout === 'horizontal';
+  const helpId = htmlFor && help ? htmlFor + '-help' : undefined;
+  const errId = htmlFor && error ? htmlFor + '-error' : undefined;
+  const desc = [helpId, errId].filter(Boolean).join(' ') || undefined;
+  const kids = React.Children.map(children, c => {
+    if (!htmlFor || !React.isValidElement(c) || c.props.id !== htmlFor) return c;
+    const own = c.props['aria-describedby'];
+    return React.cloneElement(c, {
+      'aria-describedby': [own, desc].filter(Boolean).join(' ') || undefined,
+      'aria-invalid': error ? true : c.props['aria-invalid']
+    });
+  });
   return /*#__PURE__*/React.createElement("div", {
     role: "group",
     "aria-labelledby": htmlFor ? htmlFor + '-label' : undefined,
@@ -1048,13 +1249,15 @@ function FormField({
     htmlFor: htmlFor,
     style: {
       flex: h ? '0 0 ' + labelWidth + 'px' : undefined,
-      display: 'flex',
-      alignItems: h ? 'flex-start' : 'center',
+      boxSizing: 'border-box',
+      paddingRight: h ? 20 : 0,
+      display: 'block',
       paddingTop: h ? 11 : 0,
       fontSize: 16,
       fontWeight: 500,
       lineHeight: '24px',
-      color: 'var(--kosaf-color-text-primary)'
+      color: 'var(--kosaf-color-text-primary)',
+      ...wrap
     }
   }, label, required ? /*#__PURE__*/React.createElement("span", {
     "aria-hidden": "true",
@@ -1063,13 +1266,7 @@ function FormField({
       marginLeft: 4
     }
   }, "*") : null, required ? /*#__PURE__*/React.createElement("span", {
-    style: {
-      position: 'absolute',
-      width: 1,
-      height: 1,
-      overflow: 'hidden',
-      clip: 'rect(0 0 0 0)'
-    }
+    style: srOnly
   }, "(\uD544\uC218)") : null), /*#__PURE__*/React.createElement("div", {
     style: {
       flex: 1,
@@ -1083,22 +1280,26 @@ function FormField({
       display: 'flex',
       flexWrap: 'wrap',
       alignItems: 'center',
-      gap: 10
+      gap: 10,
+      minWidth: 0
     }
-  }, children), error ? /*#__PURE__*/React.createElement("span", {
-    role: "alert",
-    style: {
-      fontSize: 14,
-      lineHeight: '20px',
-      color: 'var(--kosaf-color-action-danger)'
-    }
-  }, error) : null, help ? /*#__PURE__*/React.createElement("span", {
+  }, kids), help ? /*#__PURE__*/React.createElement("span", {
+    id: helpId,
     style: {
       fontSize: 13,
       lineHeight: '18px',
-      color: 'var(--kosaf-color-text-secondary)'
+      color: 'var(--kosaf-color-text-secondary)',
+      ...wrap
     }
-  }, help) : null));
+  }, help) : null, error ? /*#__PURE__*/React.createElement("span", {
+    id: errId,
+    style: {
+      fontSize: 14,
+      lineHeight: '20px',
+      color: 'var(--kosaf-color-action-danger)',
+      ...wrap
+    }
+  }, error) : null));
 }
 Object.assign(__ds_scope, { FormField });
 })(); } catch (e) { __ds_ns.__errors.push({ path: "components/form-field/FormField.tsx", error: String((e && e.message) || e) }); }
@@ -2037,6 +2238,7 @@ function FilterPanel({
   onClose,
   onlyOnSale,
   onOnlyOnSale,
+  bare,
   style
 }) {
   const [inner, setInner] = React.useState(defaultValue);
@@ -2061,8 +2263,8 @@ function FilterPanel({
   })));
   if (device === 'mobile') {
     return /*#__PURE__*/React.createElement("div", {
-      role: "dialog",
-      "aria-label": "\uD544\uD130",
+      role: bare ? undefined : 'dialog',
+      "aria-label": bare ? undefined : '필터',
       style: {
         width: '100%',
         maxWidth: 390,
@@ -2422,6 +2624,156 @@ function FilterPanel({
 Object.assign(__ds_scope, { DEFAULT_FILTER_GROUPS, FilterPanel });
 })(); } catch (e) { __ds_ns.__errors.push({ path: "components/filter-panel/FilterPanel.tsx", error: String((e && e.message) || e) }); }
 
+// components/mobile-filter-sheet/MobileFilterSheet.tsx
+try { (() => {
+const F = 'var(--kosaf-font)';
+const FOCUSABLE = 'button:not([disabled]),[href],input:not([disabled]),select,textarea,[tabindex]:not([tabindex="-1"])';
+
+/** KOSAF MobileFilterSheet — KOSAF extension (1.4.0, reference: Mobbin bottom-sheet/chip). Wraps the source mobile FilterPanel (1:93119)
+ *  in a bottom sheet with draft ≠ applied state: 취소 / Esc / backdrop → discard draft; 초기화 → clear draft; 적용 → onApply(draft).
+ *  Focus trap + return, body scroll lock, scrolling body with fixed apply bar. inline = no overlay (for docs/cards). */
+function MobileFilterSheet({
+  open,
+  value = {},
+  groups,
+  onApply,
+  onClose,
+  count,
+  applyLabel,
+  title = '필터',
+  inline,
+  maxHeight = '88vh',
+  style
+}) {
+  const [draft, setDraft] = React.useState(value);
+  const ref = React.useRef(null);
+  const back = React.useRef(null);
+  React.useEffect(() => {
+    if (!open) return undefined;
+    setDraft(value);
+    if (inline) return undefined;
+    back.current = document.activeElement;
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    const t = setTimeout(() => {
+      const f = ref.current && ref.current.querySelector(FOCUSABLE);
+      if (f) f.focus();
+    }, 0);
+    return () => {
+      clearTimeout(t);
+      document.body.style.overflow = prev;
+      const b = back.current;
+      if (b && b.focus) b.focus();
+    };
+  }, [open]);
+  if (!open) return null;
+  const cancel = () => {
+    setDraft(value);
+    onClose && onClose();
+  };
+  const onKey = e => {
+    if (e.key === 'Escape') {
+      e.stopPropagation();
+      cancel();
+      return;
+    }
+    if (e.key !== 'Tab' || !ref.current) return;
+    const els = Array.from(ref.current.querySelectorAll(FOCUSABLE));
+    if (!els.length) return;
+    const first = els[0],
+      last = els[els.length - 1];
+    if (e.shiftKey && document.activeElement === first) {
+      e.preventDefault();
+      last.focus();
+    } else if (!e.shiftKey && document.activeElement === last) {
+      e.preventDefault();
+      first.focus();
+    }
+  };
+  const n = typeof count === 'function' ? count(draft) : count;
+  const label = applyLabel || (n === undefined || n === null ? '적용' : n + '개 상품 보기');
+  const sheet = /*#__PURE__*/React.createElement("div", {
+    ref: ref,
+    role: "dialog",
+    "aria-modal": inline ? undefined : 'true',
+    "aria-label": title,
+    onKeyDown: onKey,
+    style: {
+      boxSizing: 'border-box',
+      width: '100%',
+      maxWidth: 391,
+      maxHeight: inline ? undefined : maxHeight,
+      height: inline ? '100%' : undefined,
+      display: 'flex',
+      flexDirection: 'column',
+      background: '#fff',
+      borderRadius: inline ? 0 : '10px 10px 0 0',
+      overflow: 'hidden',
+      fontFamily: F,
+      ...style
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      flex: 1,
+      minHeight: 0,
+      overflowY: 'auto',
+      overscrollBehavior: 'contain'
+    }
+  }, /*#__PURE__*/React.createElement(__ds_scope.FilterPanel, {
+    device: "mobile",
+    bare: true,
+    groups: groups,
+    value: draft,
+    onChange: setDraft,
+    onClose: cancel,
+    style: {
+      maxWidth: 'none'
+    }
+  })), /*#__PURE__*/React.createElement("div", {
+    style: {
+      flex: '0 0 auto',
+      display: 'flex',
+      gap: 10,
+      padding: '12px 16px',
+      paddingBottom: 'calc(12px + env(safe-area-inset-bottom))',
+      borderTop: '1px solid var(--kosaf-color-border-default)',
+      background: '#fff'
+    }
+  }, /*#__PURE__*/React.createElement(__ds_scope.Button, {
+    variant: "secondary",
+    size: 50,
+    onClick: cancel,
+    style: {
+      flex: '0 0 96px'
+    }
+  }, "\uCDE8\uC18C"), /*#__PURE__*/React.createElement(__ds_scope.Button, {
+    size: 50,
+    onClick: () => onApply && onApply(draft),
+    style: {
+      flex: 1,
+      fontVariantNumeric: 'tabular-nums'
+    },
+    disabled: n === 0
+  }, n === 0 ? '조건에 맞는 상품 없음' : label)));
+  if (inline) return sheet;
+  return /*#__PURE__*/React.createElement("div", {
+    onMouseDown: e => {
+      if (e.target === e.currentTarget) cancel();
+    },
+    style: {
+      position: 'fixed',
+      inset: 0,
+      zIndex: 200,
+      display: 'flex',
+      alignItems: 'flex-end',
+      justifyContent: 'center',
+      background: 'rgba(0,0,0,0.5)'
+    }
+  }, sheet);
+}
+Object.assign(__ds_scope, { MobileFilterSheet });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/mobile-filter-sheet/MobileFilterSheet.tsx", error: String((e && e.message) || e) }); }
+
 // components/modal/Modal.jsx
 try { (() => {
 function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
@@ -2731,6 +3083,78 @@ function OrderSummary({
 Object.assign(__ds_scope, { OrderSummary });
 })(); } catch (e) { __ds_ns.__errors.push({ path: "components/order-summary/OrderSummary.tsx", error: String((e && e.message) || e) }); }
 
+// components/page-header/PageHeader.tsx
+try { (() => {
+const F = 'var(--kosaf-font)';
+
+/** KOSAF PageHeader — KOSAF extension (1.4.0). Title → description → actions hierarchy consolidated from the kits' page heads.
+ *  Work screens: align="left". Completion / notice screens: align="center". No marketing scale: PC 40 (or 30 inside SideNav layouts), Mobile 22. */
+function PageHeader({
+  title,
+  description,
+  actions,
+  align = 'left',
+  device = 'desktop',
+  size = 40,
+  level = 1,
+  style
+}) {
+  const m = device === 'mobile';
+  const c = align === 'center';
+  const stack = m || c;
+  const Tag = 'h' + Math.min(Math.max(level, 1), 3);
+  return /*#__PURE__*/React.createElement("header", {
+    style: {
+      display: 'flex',
+      flexDirection: stack ? 'column' : 'row',
+      alignItems: c ? 'center' : stack ? 'stretch' : 'flex-end',
+      justifyContent: 'space-between',
+      gap: m ? 12 : 20,
+      textAlign: align,
+      marginBottom: m ? 20 : 30,
+      fontFamily: F,
+      ...style
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      flex: stack ? '0 0 auto' : 1,
+      minWidth: 0,
+      maxWidth: c ? 960 : undefined
+    }
+  }, React.createElement(Tag, {
+    style: {
+      margin: 0,
+      fontSize: m ? 22 : size,
+      fontWeight: 700,
+      lineHeight: 1.3,
+      color: 'var(--kosaf-color-text-primary)',
+      wordBreak: 'keep-all',
+      overflowWrap: 'anywhere'
+    }
+  }, title), description ? /*#__PURE__*/React.createElement("p", {
+    style: {
+      margin: m ? '6px 0 0' : '10px 0 0',
+      fontSize: m ? 14 : 18,
+      lineHeight: m ? '20px' : '28px',
+      color: 'var(--kosaf-color-text-secondary)',
+      wordBreak: 'keep-all',
+      overflowWrap: 'anywhere',
+      textWrap: 'pretty'
+    }
+  }, description) : null), actions ? /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      flexWrap: 'wrap',
+      alignItems: 'center',
+      gap: 10,
+      justifyContent: c ? 'center' : m ? 'flex-start' : 'flex-end',
+      flex: '0 0 auto'
+    }
+  }, actions) : null);
+}
+Object.assign(__ds_scope, { PageHeader });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/page-header/PageHeader.tsx", error: String((e && e.message) || e) }); }
+
 // components/pagination-item/PaginationItem.jsx
 try { (() => {
 function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
@@ -2852,9 +3276,11 @@ function Pagination({
     },
     style: {
       display: 'flex',
+      flexWrap: 'wrap',
       alignItems: 'center',
       justifyContent: 'center',
       gap: mobile ? 6 : 12,
+      maxWidth: '100%',
       ...style
     }
   }, ctrl('첫 페이지', 1, p === 1, 0, 'l'), ctrl('이전 페이지', p - 1, p === 1, 0), nums.map(n => mobile ? /*#__PURE__*/React.createElement("button", {
@@ -3473,17 +3899,22 @@ const PRODUCT_TABLE_COLUMNS = [{
   key: 'qty',
   label: '거래물량\n(잔여물량)',
   group: '거래정보',
-  width: 110
+  width: 110,
+  numeric: true,
+  sortable: true
 }, {
   key: 'price',
   label: '거래단가',
   group: '거래정보',
-  width: 130
+  width: 130,
+  numeric: true,
+  sortable: true
 }, {
   key: 'deadline',
   label: '입찰\n마감시간',
   group: '거래정보',
-  width: 120
+  width: 120,
+  sortable: true
 }, {
   key: 'grade',
   label: '등급',
@@ -3509,8 +3940,23 @@ const PRODUCT_TABLE_COLUMNS = [{
   label: '관리',
   width: 90
 }];
+const srOnly = {
+  position: 'absolute',
+  width: 1,
+  height: 1,
+  overflow: 'hidden',
+  clip: 'rect(0 0 0 0)',
+  whiteSpace: 'nowrap'
+};
+const MSG = {
+  loading: '상품 목록을 불러오는 중입니다…',
+  empty: '조회된 상품이 없습니다.',
+  error: '상품 목록을 불러오지 못했습니다.'
+};
 
-/** KOSAF ProductTable — Source-derived from 통합검색_테이블 1:97566: 2-level grouped header on #F7F7F7, dense rows, 구매하기 link (#0047ED underline), heart/cart, disabled (sold-out) row greyed.
+/** KOSAF ProductTable — Source-derived from 통합검색_테이블 1:97566: 2-level grouped header on #F7F7F7 (50+50), dense rows, 구매하기 link (#0047ED underline), heart/cart, disabled (sold-out) row greyed.
+ *  1.4.0 web refinement (reference: Mobbin table): 상품명 left, numeric columns right + tabular-nums (numericAlign), optional sort buttons (onSort),
+ *  row selection (selectable), and loading/empty/error states. Header labels/columns/heights unchanged.
  *  device="mobile" collapses rows into stacked TableRow-style blocks (50px rhythm). */
 function ProductTable({
   rows = [],
@@ -3520,9 +3966,62 @@ function ProductTable({
   onLike,
   onCart,
   highlightFirst = true,
+  numericAlign = 'right',
+  sort,
+  onSort,
+  selectable,
+  selectedKeys = [],
+  onSelectChange,
+  rowKey = r => r.no,
+  state = 'ready',
+  emptyMessage,
+  errorMessage,
+  onRetry,
   style
 }) {
+  const isSel = r => selectedKeys.includes(rowKey(r));
+  const toggleRow = r => {
+    const k = rowKey(r);
+    onSelectChange && onSelectChange(isSel(r) ? selectedKeys.filter(x => x !== k) : selectedKeys.concat(k));
+  };
+  const status = state !== 'ready' ? state : rows.length === 0 ? 'empty' : 'ready';
+  const stateBox = h => /*#__PURE__*/React.createElement("div", {
+    role: status === 'error' ? 'alert' : 'status',
+    style: {
+      minHeight: h,
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      gap: 12,
+      fontSize: 16,
+      color: 'var(--kosaf-color-text-secondary)'
+    }
+  }, /*#__PURE__*/React.createElement("span", null, status === 'empty' ? emptyMessage || MSG.empty : status === 'error' ? errorMessage || MSG.error : MSG.loading), status === 'error' && onRetry ? /*#__PURE__*/React.createElement("button", {
+    type: "button",
+    onClick: onRetry,
+    style: {
+      height: 34,
+      padding: '0 14px',
+      border: '1px solid var(--kosaf-color-border-default)',
+      borderRadius: 3,
+      background: '#fff',
+      fontFamily: F,
+      fontSize: 14,
+      fontWeight: 500,
+      color: 'var(--kosaf-color-text-primary)',
+      cursor: 'pointer'
+    }
+  }, "\uB2E4\uC2DC \uC2DC\uB3C4") : null);
   if (device === 'mobile') {
+    if (status !== 'ready') return /*#__PURE__*/React.createElement("div", {
+      style: {
+        fontFamily: F,
+        borderTop: '1px solid var(--kosaf-color-border-default)',
+        borderBottom: '1px solid var(--kosaf-color-border-default)',
+        ...style
+      }
+    }, stateBox(160));
     return /*#__PURE__*/React.createElement("div", {
       role: "list",
       style: {
@@ -3537,30 +4036,39 @@ function ProductTable({
         padding: '14px 16px',
         borderBottom: '1px solid var(--kosaf-color-border-default)',
         display: 'grid',
-        gridTemplateColumns: '1fr auto',
-        gap: 6,
-        opacity: r.disabled ? 0.4 : 1
+        gridTemplateColumns: 'minmax(0,1fr) auto',
+        gap: '6px 12px',
+        opacity: r.disabled ? 0.4 : 1,
+        background: isSel(r) ? 'var(--kosaf-color-surface-brand-soft)' : undefined
       }
     }, /*#__PURE__*/React.createElement("div", {
       style: {
         fontSize: 14,
-        fontWeight: 500
+        fontWeight: 500,
+        wordBreak: 'keep-all',
+        overflowWrap: 'anywhere'
       }
     }, r.name), /*#__PURE__*/React.createElement("div", {
       style: {
         fontSize: 14,
-        fontWeight: 700
+        fontWeight: 700,
+        textAlign: 'right',
+        fontVariantNumeric: 'tabular-nums',
+        whiteSpace: 'nowrap'
       }
     }, r.price), /*#__PURE__*/React.createElement("div", {
       style: {
         fontSize: 12,
-        color: 'var(--kosaf-color-text-secondary)'
+        color: 'var(--kosaf-color-text-secondary)',
+        fontVariantNumeric: 'tabular-nums'
       }
     }, [r.deal, r.producer, r.qty, r.region].filter(Boolean).join(' · ')), /*#__PURE__*/React.createElement("button", {
       type: "button",
       disabled: r.disabled,
       onClick: () => onBuy && onBuy(r),
       style: {
+        justifySelf: 'end',
+        minHeight: 24,
         background: 'none',
         border: 0,
         padding: 0,
@@ -3572,8 +4080,13 @@ function ProductTable({
       }
     }, "\uAD6C\uB9E4\uD558\uAE30"))));
   }
+  const cols = selectable ? [{
+    key: '__sel',
+    label: '선택',
+    width: 48
+  }].concat(columns) : columns;
   const groups = [];
-  columns.forEach(c => {
+  cols.forEach(c => {
     const last = groups[groups.length - 1];
     if (c.group && last && last.group === c.group) last.span++;else groups.push({
       group: c.group,
@@ -3592,6 +4105,65 @@ function ProductTable({
     borderLeft: '1px solid var(--kosaf-color-border-default)',
     color: 'var(--kosaf-color-text-primary)'
   };
+  const allOn = selectable && rows.length > 0 && rows.filter(r => !r.disabled).every(isSel);
+  const head = c => {
+    if (c.key === '__sel') return /*#__PURE__*/React.createElement("label", {
+      style: {
+        display: 'inline-flex',
+        width: 44,
+        height: 44,
+        alignItems: 'center',
+        justifyContent: 'center',
+        cursor: 'pointer'
+      }
+    }, /*#__PURE__*/React.createElement("input", {
+      type: "checkbox",
+      checked: allOn,
+      onChange: () => onSelectChange && onSelectChange(allOn ? [] : rows.filter(r => !r.disabled).map(rowKey)),
+      style: {
+        width: 20,
+        height: 20,
+        accentColor: 'var(--kosaf-color-action-primary)',
+        margin: 0
+      }
+    }), /*#__PURE__*/React.createElement("span", {
+      style: srOnly
+    }, "\uC804\uCCB4 \uC120\uD0DD"));
+    if (!(onSort && c.sortable)) return c.label;
+    const on = sort && sort.key === c.key;
+    const next = on && sort.dir === 'asc' ? 'desc' : 'asc';
+    return /*#__PURE__*/React.createElement("button", {
+      type: "button",
+      onClick: () => onSort({
+        key: c.key,
+        dir: next
+      }),
+      style: {
+        display: 'inline-flex',
+        alignItems: 'center',
+        gap: 4,
+        minHeight: 36,
+        padding: '0 4px',
+        background: 'none',
+        border: 0,
+        cursor: 'pointer',
+        fontFamily: F,
+        fontSize: 14,
+        fontWeight: on ? 700 : 500,
+        lineHeight: '20px',
+        whiteSpace: 'pre-line',
+        color: on ? 'var(--kosaf-color-action-primary)' : 'var(--kosaf-color-text-primary)'
+      }
+    }, c.label, /*#__PURE__*/React.createElement("span", {
+      "aria-hidden": "true",
+      style: {
+        fontSize: 10,
+        color: on ? 'var(--kosaf-color-action-primary)' : 'var(--kosaf-color-text-disabled)'
+      }
+    }, on && sort.dir === 'asc' ? '▲' : '▼'));
+  };
+  const ariaSort = c => onSort && c.sortable ? sort && sort.key === c.key ? sort.dir === 'asc' ? 'ascending' : 'descending' : 'none' : undefined;
+  const align = c => c.key === 'name' ? 'left' : c.numeric ? numericAlign : 'center';
   return /*#__PURE__*/React.createElement("div", {
     style: {
       width: '100%',
@@ -3599,9 +4171,10 @@ function ProductTable({
       ...style
     }
   }, /*#__PURE__*/React.createElement("table", {
+    "aria-busy": status === 'loading' || undefined,
     style: {
       width: '100%',
-      minWidth: columns.reduce((s, c) => s + c.width, 0),
+      minWidth: cols.reduce((s, c) => s + c.width, 0),
       borderCollapse: 'collapse',
       tableLayout: 'fixed',
       fontFamily: F,
@@ -3609,7 +4182,7 @@ function ProductTable({
       textAlign: 'center',
       borderTop: '2px solid var(--kosaf-color-border-default)'
     }
-  }, /*#__PURE__*/React.createElement("colgroup", null, columns.map(c => /*#__PURE__*/React.createElement("col", {
+  }, /*#__PURE__*/React.createElement("colgroup", null, cols.map(c => /*#__PURE__*/React.createElement("col", {
     key: c.key,
     style: {
       width: c.width
@@ -3630,31 +4203,65 @@ function ProductTable({
     key: i,
     rowSpan: 2,
     scope: "col",
+    "aria-sort": ariaSort(g.col),
     style: {
       ...th,
       borderLeft: i ? th.borderLeft : 0
     }
-  }, g.col.label))), /*#__PURE__*/React.createElement("tr", {
+  }, head(g.col)))), /*#__PURE__*/React.createElement("tr", {
     style: {
       height: 50
     }
-  }, columns.filter(c => c.group).map(c => /*#__PURE__*/React.createElement("th", {
+  }, cols.filter(c => c.group).map(c => /*#__PURE__*/React.createElement("th", {
     key: c.key,
     scope: "col",
+    "aria-sort": ariaSort(c),
     style: th
-  }, c.label)))), /*#__PURE__*/React.createElement("tbody", null, rows.map((r, i) => {
+  }, head(c))))), /*#__PURE__*/React.createElement("tbody", null, status !== 'ready' ? /*#__PURE__*/React.createElement("tr", null, /*#__PURE__*/React.createElement("td", {
+    colSpan: cols.length,
+    style: {
+      padding: 0,
+      borderBottom: '1px solid var(--kosaf-color-border-subtle)'
+    }
+  }, stateBox(200))) : rows.map((r, i) => {
     const bold = highlightFirst && i === 0;
+    const sel = selectable && isSel(r);
     return /*#__PURE__*/React.createElement("tr", {
       key: i,
+      "aria-selected": selectable ? sel : undefined,
       style: {
         height: 100,
         borderBottom: '1px solid var(--kosaf-color-border-subtle)',
+        background: sel ? 'var(--kosaf-color-surface-brand-soft)' : undefined,
         color: r.disabled ? 'var(--kosaf-color-border-default)' : 'var(--kosaf-color-text-primary)',
         fontSize: 14,
         fontWeight: bold ? 700 : 400
       }
-    }, columns.map(c => {
+    }, cols.map(c => {
       let v = r[c.key];
+      if (c.key === '__sel') v = /*#__PURE__*/React.createElement("label", {
+        style: {
+          display: 'inline-flex',
+          width: 44,
+          height: 44,
+          alignItems: 'center',
+          justifyContent: 'center',
+          cursor: r.disabled ? 'not-allowed' : 'pointer'
+        }
+      }, /*#__PURE__*/React.createElement("input", {
+        type: "checkbox",
+        disabled: r.disabled,
+        checked: sel,
+        onChange: () => toggleRow(r),
+        style: {
+          width: 20,
+          height: 20,
+          accentColor: 'var(--kosaf-color-action-primary)',
+          margin: 0
+        }
+      }), /*#__PURE__*/React.createElement("span", {
+        style: srOnly
+      }, r.name, " \uC120\uD0DD"));
       if (c.key === 'price') v = /*#__PURE__*/React.createElement("span", {
         style: {
           fontSize: v && v !== '-' ? 18 : 14
@@ -3670,6 +4277,7 @@ function ProductTable({
         disabled: r.disabled,
         onClick: () => onBuy && onBuy(r),
         style: {
+          minHeight: 32,
           background: 'none',
           border: 0,
           padding: 0,
@@ -3684,20 +4292,25 @@ function ProductTable({
       if (c.key === 'manage') v = /*#__PURE__*/React.createElement("span", {
         style: {
           display: 'inline-flex',
-          gap: 8,
+          gap: 4,
           opacity: r.disabled ? 0.3 : 1
         }
       }, /*#__PURE__*/React.createElement("button", {
         type: "button",
-        "aria-label": "\uAD00\uC2EC\uC0C1\uD488",
+        "aria-label": '관심상품 ' + (r.name || ''),
         "aria-pressed": !!r.liked,
         onClick: () => onLike && onLike(r),
         style: {
+          width: 32,
+          height: 32,
           background: 'none',
           border: 0,
           padding: 0,
           cursor: 'pointer',
-          lineHeight: 0
+          lineHeight: 0,
+          display: 'inline-flex',
+          alignItems: 'center',
+          justifyContent: 'center'
         }
       }, /*#__PURE__*/React.createElement(__ds_scope.Icon, {
         name: "heart",
@@ -3707,25 +4320,33 @@ function ProductTable({
         }
       })), /*#__PURE__*/React.createElement("button", {
         type: "button",
-        "aria-label": "\uC7A5\uBC14\uAD6C\uB2C8",
+        "aria-label": '장바구니 담기 ' + (r.name || ''),
         onClick: () => onCart && onCart(r),
         style: {
+          width: 32,
+          height: 32,
           background: 'none',
           border: 0,
           padding: 0,
           cursor: 'pointer',
-          lineHeight: 0
+          lineHeight: 0,
+          display: 'inline-flex',
+          alignItems: 'center',
+          justifyContent: 'center'
         }
       }, /*#__PURE__*/React.createElement(__ds_scope.Icon, {
         name: "cart",
         size: 20
       })));
+      const a = align(c);
       return /*#__PURE__*/React.createElement("td", {
         key: c.key,
         style: {
-          padding: '0 6px',
+          padding: a === 'center' ? '0 6px' : '0 12px',
+          textAlign: a,
           whiteSpace: 'pre-line',
-          wordBreak: 'keep-all'
+          wordBreak: 'keep-all',
+          overflowWrap: 'anywhere'
         }
       }, v);
     }));
@@ -4961,6 +5582,9 @@ function Select({
   disabled,
   error,
   'aria-label': ariaLabel,
+  id,
+  'aria-describedby': describedBy,
+  'aria-invalid': ariaInvalid,
   style
 }) {
   const [inner, setInner] = React.useState(defaultValue);
@@ -5022,6 +5646,9 @@ function Select({
     }
   }, /*#__PURE__*/React.createElement("button", {
     type: "button",
+    id: id,
+    "aria-describedby": describedBy,
+    "aria-invalid": ariaInvalid || (error ? true : undefined),
     role: "combobox",
     "aria-haspopup": "listbox",
     "aria-expanded": open,
@@ -5624,25 +6251,47 @@ try { (() => {
     }, p.children));
   }
   /* Real-size (1:1) crop of a wide component so text stays readable. x/y = offset into the component. */
+  /* Real scroll area (not a hidden clip): starts at x/y, every control stays reachable by scrolling. */
   function KCrop(p) {
+    var ref = React.useRef(null);
+    React.useLayoutEffect(function () {
+      var el = ref.current;
+      if (el) {
+        el.scrollLeft = p.x || 0;
+        el.scrollTop = p.y || 0;
+      }
+    }, [p.x, p.y]);
     return h('div', {
+      style: {
+        display: 'flex',
+        flexDirection: 'column',
+        gap: 4,
+        flex: '0 0 auto',
+        maxWidth: '100%'
+      }
+    }, h('div', {
+      ref: ref,
+      tabIndex: 0,
+      role: 'region',
+      'aria-label': '실제 크기 미리보기 (가로 스크롤)',
       style: {
         width: p.vw || 660,
         maxWidth: '100%',
         height: p.h,
-        overflow: 'hidden',
-        position: 'relative',
+        overflow: 'auto',
         border: '1px solid #EAEAEA',
-        flex: '0 0 auto'
+        boxSizing: 'border-box'
       }
     }, h('div', {
       style: {
-        position: 'absolute',
-        left: -(p.x || 0),
-        top: -(p.y || 0),
         width: p.w
       }
-    }, p.children));
+    }, p.children)), h('div', {
+      style: {
+        fontSize: 11,
+        color: '#888'
+      }
+    }, '1:1 크기 · 가로 스크롤로 전체 확인'));
   }
   /* Mobile viewport frame (390 or given width), content not clipped horizontally. */
   function KPhone(p) {
@@ -6324,7 +6973,10 @@ function PCPage({
 }) {
   return /*#__PURE__*/React.createElement("div", {
     style: {
-      minWidth: 1920,
+      width: '100%',
+      minWidth: 0,
+      boxSizing: 'border-box',
+      overflowX: 'visible',
       background: '#fff',
       fontFamily: 'var(--kosaf-font)',
       color: 'var(--kosaf-color-text-primary)'
@@ -6417,6 +7069,15 @@ function PageHead({
   align = 'left',
   style
 }) {
+  if (KS.PageHeader) return /*#__PURE__*/React.createElement(KS.PageHeader, {
+    title: title,
+    description: desc,
+    actions: right,
+    size: size,
+    device: mobile ? 'mobile' : 'desktop',
+    align: align,
+    style: style
+  });
   return /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'flex',
@@ -6543,8 +7204,8 @@ Object.assign(window, {
 try { (() => {
 // 구매자 마이페이지 홈 — Source: 1:88132 (PC 1920×2622), 1:87784 (Mo 390×2203), LNB 1:90423, MetricCard 1:87886
 const METRICS = [['여신금액', '10,000', 'purchase'], ['사용금액', '1,000', 'analytics'], ['한도금액', '9,000'], ['사용가능금액', '8,800']];
-const FLOW = [['주문', 0], ['상품준비', 0], ['출고', 0], ['인수', 0], ['구매확정', 0]];
-const QNA = [['답변대기', '주문한지 1주가 지났는데 아직 배송이...', '2023-03-24'], ['답변완료', '주문한지 1주가 지났는데 아직 배송이...', '2023-03-24'], ['답변완료', '주문한지 1주가 지났는데 아직 배송이...', '2023-03-24']];
+const FLOW = [['주문', 2], ['상품준비', 1], ['출고', 1], ['인수', 0], ['구매확정', 3]];
+const QNA = [['답변대기', '주문한지 1주가 지났는데 아직 배송이 시작되지 않았어요.', '2023-05-08'], ['답변완료', '납품장소를 변경할 수 있나요?', '2023-04-28'], ['답변완료', '세금계산서 발행 일정이 궁금합니다.', '2023-04-21']];
 const icoW = n => n ? /*#__PURE__*/React.createElement(KS.Icon, {
   name: n,
   size: 34,
@@ -6685,9 +7346,14 @@ function BuyerMyPC() {
       flexDirection: 'column',
       gap: 50
     }
-  }, /*#__PURE__*/React.createElement(PageTitle, {
-    size: 30
-  }, "\uB9C8\uC774\uD398\uC774\uC9C0 \uD648"), /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/React.createElement(PageHead, {
+    size: 30,
+    title: "\uB9C8\uC774\uD398\uC774\uC9C0 \uD648",
+    desc: "\uC5EC\uC2E0 \uD55C\uB3C4\uC640 \uC8FC\uBB38\xB7\uBB38\uC758 \uD604\uD669\uC744 \uD55C\uB208\uC5D0 \uD655\uC778\uD569\uB2C8\uB2E4.",
+    style: {
+      marginBottom: 0
+    }
+  }), /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'grid',
       gridTemplateColumns: '1fr 2fr',
@@ -6733,17 +7399,16 @@ function BuyerMyPC() {
     device: "desktop",
     imageSrc: IMG_M,
     status: "\uBC30\uC1A1\uC900\uBE44\uC911",
-    date: "2023-06-14",
-    title: "\uAC70\uCC3D\uB18D\uC0B0 13\uBE0C\uB9AD\uC2A4\uC774\uC0C1 \uB2F9\uB3C4\uC88B\uC740 \uC544\uC0AD\uC0AC\uACFC \uAECD\uC9C8\uC9F8\uBA39\uB294 \uAFC0 \uD587 \uBD80\uC0AC...",
-    price: "13,950\uC6D0"
+    date: "2023-05-08",
+    title: PRODUCTS[0].name + ' · 10박스',
+    price: won(PRODUCTS[0].price * 10)
   }), /*#__PURE__*/React.createElement(KS.ProductListItem, {
     device: "desktop",
-    imageSrc: IMG_M,
     status: "\uBC30\uC1A1\uC644\uB8CC",
     statusTone: "done",
-    date: "2023-06-14",
-    title: "\uAC70\uCC3D\uB18D\uC0B0 13\uBE0C\uB9AD\uC2A4\uC774\uC0C1 \uB2F9\uB3C4\uC88B\uC740 \uC544\uC0AD\uC0AC\uACFC",
-    price: "13,950\uC6D0"
+    date: "2023-04-27",
+    title: PRODUCTS[2].name + ' · 4박스',
+    price: won(PRODUCTS[2].price * 4)
   }))), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(SectionTitle, {
     size: 24
   }, "\uBB38\uC758\uB0B4\uC5ED"), /*#__PURE__*/React.createElement(QnaList, null))))));
@@ -6751,14 +7416,12 @@ function BuyerMyPC() {
 function BuyerMyMo() {
   return /*#__PURE__*/React.createElement(MoPage, null, /*#__PURE__*/React.createElement("div", {
     style: {
-      padding: 20
+      padding: '20px 16px'
     }
-  }, /*#__PURE__*/React.createElement(PageTitle, {
-    size: 20,
-    style: {
-      marginBottom: 14
-    }
-  }, "\uB9C8\uC774\uD398\uC774\uC9C0 \uD648"), /*#__PURE__*/React.createElement(Welcome, {
+  }, /*#__PURE__*/React.createElement(PageHead, {
+    mobile: true,
+    title: "\uB9C8\uC774\uD398\uC774\uC9C0 \uD648"
+  }), /*#__PURE__*/React.createElement(Welcome, {
     mobile: true
   })), /*#__PURE__*/React.createElement("div", {
     style: {
@@ -6824,7 +7487,7 @@ function BuyerMyMo() {
     mobile: true
   })), /*#__PURE__*/React.createElement("div", {
     style: {
-      padding: '0 20px 20px',
+      padding: '0 16px 20px',
       display: 'flex',
       flexDirection: 'column',
       gap: 20
@@ -6832,16 +7495,15 @@ function BuyerMyMo() {
   }, /*#__PURE__*/React.createElement(KS.ProductListItem, {
     imageSrc: IMG_M,
     status: "\uBC30\uC1A1\uC900\uBE44\uC911",
-    date: "2023-06-14",
-    title: "\uAC70\uCC3D\uB18D\uC0B0 13\uBE0C\uB9AD\uC2A4\uC774\uC0C1 \uB2F9\uB3C4\uC88B\uC740 \uC544\uC0AD\uC0AC\uACFC \uAECD\uC9C8\uC9F8\uBA39\uB294 \uAFC0 \uD587 \uBD80\uC0AC...",
-    price: "13,950\uC6D0"
+    date: "2023-05-08",
+    title: PRODUCTS[0].name + ' · 10박스',
+    price: won(PRODUCTS[0].price * 10)
   }), /*#__PURE__*/React.createElement(KS.ProductListItem, {
-    imageSrc: IMG_M,
     status: "\uBC30\uC1A1\uC644\uB8CC",
     statusTone: "done",
-    date: "2023-06-14",
-    title: "\uAC70\uCC3D\uB18D\uC0B0 13\uBE0C\uB9AD\uC2A4\uC774\uC0C1 \uB2F9\uB3C4\uC88B\uC740 \uC544\uC0AD\uC0AC\uACFC",
-    price: "13,950\uC6D0"
+    date: "2023-04-27",
+    title: PRODUCTS[2].name + ' · 4박스',
+    price: won(PRODUCTS[2].price * 4)
   })), /*#__PURE__*/React.createElement("div", {
     style: {
       padding: '0 20px 30px'
@@ -7455,6 +8117,7 @@ Object.assign(window, {
 
 // ui_kits/login/screens.jsx
 try { (() => {
+function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
 // 로그인 — Source: 1:87393 (PC 1920×1080, bg #F1F3F8, two 627×361 r20 cards), 1:87494 (Mo). 휴면 계정 안내 1:103625.
 function LoginForm({
   mobile,
@@ -7463,13 +8126,22 @@ function LoginForm({
   const [id, setId] = React.useState('');
   const [pw, setPw] = React.useState('');
   const [err, setErr] = React.useState('');
+  const P = mobile ? 'lm-' : 'l-';
   const submit = e => {
     e.preventDefault();
-    if (!id || !pw) setErr('아이디와 비밀번호를 입력해주세요.');else {
+    if (!id || !pw) {
+      setErr(!id && !pw ? '아이디와 비밀번호를 입력해주세요.' : !id ? '아이디를 입력해주세요.' : '비밀번호를 입력해주세요.');
+      const el = document.getElementById(P + (!id ? 'id' : 'pw'));
+      if (el) el.focus();
+    } else {
       setErr('');
       onDormant();
     }
   };
+  const ea = bad => err && bad ? {
+    'aria-invalid': true,
+    'aria-describedby': P + 'err'
+  } : {};
   const card = {
     boxSizing: 'border-box',
     background: '#fff',
@@ -7507,21 +8179,34 @@ function LoginForm({
       flexDirection: 'column',
       gap: 12
     }
-  }, /*#__PURE__*/React.createElement(KS.Input, {
+  }, /*#__PURE__*/React.createElement(KS.Input, _extends({
+    id: P + 'id',
     width: "100%",
     placeholder: "\uC544\uC774\uB514",
     value: id,
     onChange: e => setId(e.target.value),
-    "aria-label": "\uC544\uC774\uB514"
-  }), /*#__PURE__*/React.createElement(KS.Input, {
+    "aria-label": "\uC544\uC774\uB514",
+    autoComplete: "username",
+    state: err && !id ? 'error' : undefined
+  }, ea(!id))), /*#__PURE__*/React.createElement(KS.Input, _extends({
     width: "100%",
     type: "password",
     placeholder: "\uBE44\uBC00\uBC88\uD638",
     value: pw,
     onChange: e => setPw(e.target.value),
     "aria-label": "\uBE44\uBC00\uBC88\uD638",
-    errorMessage: err
-  })), /*#__PURE__*/React.createElement(KS.Button, {
+    autoComplete: "current-password",
+    id: P + 'pw',
+    state: err && !pw ? 'error' : undefined
+  }, ea(!pw))), err ? /*#__PURE__*/React.createElement("span", {
+    id: P + 'err',
+    role: "alert",
+    style: {
+      fontSize: 14,
+      lineHeight: '20px',
+      color: 'var(--kosaf-color-action-danger)'
+    }
+  }, err) : null), /*#__PURE__*/React.createElement(KS.Button, {
     type: "submit",
     size: mobile ? 102 : 102,
     width: mobile ? 90 : 125,
@@ -7539,11 +8224,30 @@ function LoginForm({
       marginTop: 20,
       fontSize: 16
     }
-  }, /*#__PURE__*/React.createElement(KS.Checkbox, null, "\uC544\uC774\uB514 \uC800\uC7A5"), /*#__PURE__*/React.createElement("span", {
+  }, /*#__PURE__*/React.createElement(KS.Checkbox, null, "\uC544\uC774\uB514 \uC800\uC7A5"), /*#__PURE__*/React.createElement("nav", {
+    "aria-label": "\uACC4\uC815 \uCC3E\uAE30",
+    style: {
+      display: 'flex',
+      alignItems: 'center',
+      gap: 10,
+      fontSize: mobile ? 14 : 16
+    }
+  }, ['회원가입', '아이디 찾기', '비밀번호 찾기'].map((t, i) => /*#__PURE__*/React.createElement(React.Fragment, {
+    key: t
+  }, i ? /*#__PURE__*/React.createElement("span", {
+    "aria-hidden": "true",
+    style: {
+      width: 1,
+      height: 12,
+      background: 'var(--kosaf-color-border-strong)'
+    }
+  }) : null, /*#__PURE__*/React.createElement("a", {
+    href: "#",
+    onClick: e => e.preventDefault(),
     style: {
       color: 'var(--kosaf-color-text-primary)'
     }
-  }, "\uD68C\uC6D0\uAC00\uC785 \xA0|\xA0 \uC544\uC774\uB514 \uCC3E\uAE30 \xA0|\xA0 \uBE44\uBC00\uBC88\uD638 \uCC3E\uAE30"))), /*#__PURE__*/React.createElement("div", {
+  }, t)))))), /*#__PURE__*/React.createElement("div", {
     style: card
   }, /*#__PURE__*/React.createElement("h2", {
     style: {
@@ -7597,7 +8301,10 @@ function LoginPC() {
   };
   return /*#__PURE__*/React.createElement("div", {
     style: {
-      minWidth: 1920,
+      width: '100%',
+      minWidth: 0,
+      boxSizing: 'border-box',
+      overflowX: 'visible',
       minHeight: 1080,
       background: 'var(--kosaf-src-login-bg)',
       fontFamily: 'var(--kosaf-font)',
@@ -7636,22 +8343,24 @@ function LoginPC() {
       textAlign: 'center',
       marginTop: 68
     }
-  }, /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/React.createElement("h1", {
     style: {
+      margin: 0,
       fontSize: 40,
-      fontWeight: 500
+      fontWeight: 700
     }
   }, "\uB85C\uADF8\uC778"), /*#__PURE__*/React.createElement("div", {
     style: {
       fontSize: 24,
       fontWeight: 700,
-      marginTop: 50
+      marginTop: 30
     }
   }, "\uB18D\uC0B0\uBB3C \uC628\uB77C\uC778\uB3C4\uB9E4\uC2DC\uC7A5 \uD488\uBAA9\uB3C4\uB9E4\uAD00 \uB85C\uADF8\uC778"), /*#__PURE__*/React.createElement("div", {
     style: {
-      fontSize: 20,
-      marginTop: 20,
-      lineHeight: '29px'
+      fontSize: 18,
+      marginTop: 10,
+      lineHeight: '28px',
+      color: 'var(--kosaf-color-text-secondary)'
     }
   }, "\uB85C\uADF8\uC778\uC744 \uD558\uC2DC\uBA74 \uB18D\uC0B0\uBB3C \uC628\uB77C\uC778\uB3C4\uB9E4\uC2DC\uC7A5\uC5D0\uC11C \uC81C\uACF5\uD558\uB294 \uB2E4\uC591\uD55C \uC11C\uBE44\uC2A4\uB97C \uC774\uC6A9\uD558\uC2E4 \uC218 \uC788\uC2B5\uB2C8\uB2E4.")), /*#__PURE__*/React.createElement("div", {
     style: {
@@ -7681,10 +8390,11 @@ function LoginMo() {
       textAlign: 'center',
       marginBottom: 24
     }
-  }, /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/React.createElement("h1", {
     style: {
-      fontSize: 28,
-      fontWeight: 500
+      margin: 0,
+      fontSize: 24,
+      fontWeight: 700
     }
   }, "\uB85C\uADF8\uC778"), /*#__PURE__*/React.createElement("div", {
     style: {
@@ -8138,6 +8848,24 @@ Object.assign(window, {
 // ui_kits/search-results/screens.jsx
 try { (() => {
 // 통합검색 결과 — Source: 1:97566 (table), 1:98635 / 1:98118 (card), Mo 1:92883 / 1:92625 / 1:93119 (filter)
+// 1.4.0: real filtering (demo, client-side), 0-result EmptyState + reset, table sort/select, mobile MobileFilterSheet (draft/applied).
+const facet = x => ({
+  item: x.item,
+  deal: (x.deal || '').slice(0, 2),
+  sold: !!(x.soldOut || x.disabled),
+  name: x.name || ''
+});
+function matches(x, s, only, kw) {
+  const f = facet(x);
+  const items = [].concat(s.class || [], s.item || []);
+  if (items.length && !items.includes(f.item)) return false;
+  if (s.deal && s.deal.length && !s.deal.includes(f.deal)) return false;
+  if (only && f.sold) return false;
+  if (kw && !f.name.includes(kw) && !f.item.includes(kw)) return false;
+  return true;
+}
+const priceOf = r => parseInt(String(r.price).replace(/\D/g, ''), 10) || 0;
+const qtyOf = r => parseInt(String(r.qty).replace(/\D/g, ''), 10) || 0;
 function SearchToolbar({
   total,
   view,
@@ -8202,30 +8930,56 @@ function SearchToolbar({
   }));
 }
 function SearchPC() {
+  const INIT = {
+    sort: ['농산물'],
+    class: ['사과'],
+    item: ['사과']
+  };
   const [open, setOpen] = React.useState(true);
   const [view, setView] = React.useState('테이블');
   const [only, setOnly] = React.useState(false);
   const [page, setPage] = React.useState(1);
   const [liked, setLiked] = React.useState({});
-  const rows = KD.rows.filter(r => !only || !r.disabled).map(r => ({
+  const [sel, setSel] = React.useState(INIT);
+  const [kw, setKw] = React.useState('사과');
+  const [sort, setSort] = React.useState(null);
+  const [picked, setPicked] = React.useState([]);
+  const [resetN, setResetN] = React.useState(0);
+  const reset = () => {
+    setSel({});
+    setKw('');
+    setOnly(false);
+    setPicked([]);
+    setResetN(resetN + 1);
+  };
+  let rows = KD.rows.filter(r => matches(r, sel, only, kw)).map(r => ({
     ...r,
     liked: liked[r.no] ?? r.liked
   }));
-  const cards = PRODUCTS.filter(p => !only || !p.soldOut);
+  if (sort) {
+    const g = sort.key === 'price' ? priceOf : sort.key === 'qty' ? qtyOf : r => r.deadline;
+    rows = rows.slice().sort((a, b) => {
+      const x = g(a),
+        y = g(b);
+      const d = x > y ? 1 : x < y ? -1 : 0;
+      return sort.dir === 'asc' ? d : -d;
+    });
+  }
+  const cards = PRODUCTS.filter(p => matches(p, sel, only, kw));
+  const total = view === '테이블' ? rows.length : cards.length;
   return /*#__PURE__*/React.createElement(PCPage, {
     active: "\uAC70\uB798\uBC29\uC2DD\uBCC4"
   }, /*#__PURE__*/React.createElement(PageHead, {
     title: "\uD1B5\uD569\uAC80\uC0C9",
-    desc: '\u2018사과\u2019 검색 결과입니다. 카테고리와 거래 조건으로 결과를 좁힐 수 있습니다.'
+    desc: kw ? '\u2018' + kw + '\u2019 검색 결과입니다. 카테고리와 거래 조건으로 결과를 좁힐 수 있습니다.' : '카테고리와 거래 조건으로 상품을 찾아보세요.'
   }), open ? /*#__PURE__*/React.createElement(KS.FilterPanel, {
-    keyword: "\uC0AC\uACFC",
+    key: resetN,
+    keyword: kw,
+    onSearch: setKw,
     onlyOnSale: only,
     onOnlyOnSale: setOnly,
-    defaultValue: {
-      sort: ['농산물'],
-      class: ['사과'],
-      item: ['사과']
-    },
+    value: sel,
+    onChange: setSel,
     onClose: () => setOpen(false)
   }) : /*#__PURE__*/React.createElement("div", {
     style: {
@@ -8240,13 +8994,46 @@ function SearchPC() {
       marginTop: 50
     }
   }, /*#__PURE__*/React.createElement(SearchToolbar, {
-    total: view === '테이블' ? rows.length : cards.length,
+    total: total,
     view: view,
     setView: setView,
     onlyOnSale: only,
     setOnly: setOnly
-  })), view === '테이블' ? /*#__PURE__*/React.createElement(KS.ProductTable, {
+  })), total === 0 ? /*#__PURE__*/React.createElement(KS.EmptyState, {
+    variant: "noResults",
+    onAction: reset,
+    style: {
+      marginTop: 20
+    }
+  }) : view === '테이블' ? /*#__PURE__*/React.createElement(React.Fragment, null, picked.length ? /*#__PURE__*/React.createElement("div", {
+    role: "status",
+    style: {
+      display: 'flex',
+      alignItems: 'center',
+      gap: 12,
+      padding: '12px 0 0',
+      fontSize: 14
+    }
+  }, /*#__PURE__*/React.createElement("span", null, "\uC120\uD0DD ", /*#__PURE__*/React.createElement("b", {
+    style: {
+      color: 'var(--kosaf-color-action-primary)',
+      fontVariantNumeric: 'tabular-nums'
+    }
+  }, picked.length), "\uAC74"), /*#__PURE__*/React.createElement(KS.Button, {
+    variant: "secondary",
+    size: 34,
+    style: {
+      padding: '0 12px'
+    },
+    onClick: () => setPicked([])
+  }, "\uC120\uD0DD \uD574\uC81C")) : null, /*#__PURE__*/React.createElement(KS.ProductTable, {
     rows: rows,
+    highlightFirst: !sort,
+    sort: sort || undefined,
+    onSort: setSort,
+    selectable: true,
+    selectedKeys: picked,
+    onSelectChange: setPicked,
     onLike: r => setLiked({
       ...liked,
       [r.no]: !r.liked
@@ -8254,7 +9041,7 @@ function SearchPC() {
     style: {
       marginTop: 20
     }
-  }) : /*#__PURE__*/React.createElement("div", {
+  })) : /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'grid',
       gridTemplateColumns: 'repeat(5, 298px)',
@@ -8262,7 +9049,7 @@ function SearchPC() {
       rowGap: 30,
       marginTop: 30
     }
-  }, cards.map((p, i) => /*#__PURE__*/React.createElement(KS.ProductCard, {
+  }, cards.map(p => /*#__PURE__*/React.createElement(KS.ProductCard, {
     key: p.id,
     imageSrc: imgFor(p),
     deal: p.deal,
@@ -8272,28 +9059,34 @@ function SearchPC() {
     deadline: p.deadline,
     soldOut: p.soldOut,
     compare: false
-  }))), /*#__PURE__*/React.createElement(KS.Pagination, {
+  }))), total ? /*#__PURE__*/React.createElement(KS.Pagination, {
     page: page,
     onChange: setPage,
-    total: 3,
+    total: 1,
     style: {
       marginTop: 50
     }
-  }), /*#__PURE__*/React.createElement("div", {
+  }) : null, /*#__PURE__*/React.createElement("div", {
     style: {
       marginTop: 20,
       textAlign: 'center'
     }
-  }, /*#__PURE__*/React.createElement(DemoNote, null, "\uC0C1\uD488\xB7\uAC00\uACA9\uC740 \uC608\uC2DC \uB370\uC774\uD130\uC774\uBA70, \uC0AC\uC9C4\uC740 \uC6D0\uBCF8\uC5D0\uC11C \uC81C\uACF5\uB41C \uC0AC\uACFC \uC774\uBBF8\uC9C0 2\uC885\uB9CC \uC0AC\uC6A9\uD569\uB2C8\uB2E4")));
+  }, /*#__PURE__*/React.createElement(DemoNote, null, "\uAC80\uC0C9\xB7\uD544\uD130\xB7\uC815\uB82C\uC740 \uD074\uB77C\uC774\uC5B8\uD2B8 \uB370\uBAA8\uC785\uB2C8\uB2E4. \uAC70\uB798\uBC29\uC2DD\uC5D0\uC11C \u2018\uC5ED\uACBD\uB9E4\u2019\uB97C \uACE0\uB974\uBA74 0\uAC74 \uD654\uBA74\uC744 \uD655\uC778\uD560 \uC218 \uC788\uC2B5\uB2C8\uB2E4")));
 }
 function SearchMo() {
-  const [filter, setFilter] = React.useState(false);
-  const [sel, setSel] = React.useState({
+  const [sheet, setSheet] = React.useState(false);
+  const [applied, setApplied] = React.useState({
     sort: ['농산물'],
     class: ['사과']
   });
   const [page, setPage] = React.useState(1);
-  const tags = Object.values(sel).flat();
+  const chips = Object.entries(applied).flatMap(([k, a]) => (a || []).map(o => [k, o]));
+  const list = PRODUCTS.filter(p => matches(p, applied));
+  const remove = (k, o) => setApplied({
+    ...applied,
+    [k]: applied[k].filter(x => x !== o)
+  });
+  const Sheet = KS.MobileFilterSheet;
   return /*#__PURE__*/React.createElement(MoPage, null, /*#__PURE__*/React.createElement("div", {
     style: {
       padding: '8px 16px 12px'
@@ -8302,31 +9095,53 @@ function SearchMo() {
     width: "100%",
     placeholder: "\uAC80\uC0C9\uC5B4\uB97C \uC785\uB825\uD558\uC138\uC694",
     defaultValue: "\uC0AC\uACFC"
-  })), tags.length ? /*#__PURE__*/React.createElement("div", {
+  })), chips.length ? /*#__PURE__*/React.createElement("div", {
+    "aria-label": "\uC801\uC6A9\uB41C \uD544\uD130",
+    role: "group",
     style: {
       display: 'flex',
-      gap: 12,
+      alignItems: 'center',
+      gap: '4px 12px',
       padding: '0 16px 8px',
       flexWrap: 'wrap'
     }
-  }, tags.map(t => /*#__PURE__*/React.createElement(KS.FilterChip, {
-    key: t,
+  }, chips.map(([k, o]) => /*#__PURE__*/React.createElement(KS.FilterChip, {
+    key: k + o,
     variant: "removable",
-    onRemove: () => setSel(Object.fromEntries(Object.entries(sel).map(([k, v]) => [k, v.filter(x => x !== t)])))
-  }, t))) : null, /*#__PURE__*/React.createElement(SearchToolbar, {
+    onRemove: () => remove(k, o)
+  }, o)), /*#__PURE__*/React.createElement("button", {
+    type: "button",
+    onClick: () => setApplied({}),
+    style: {
+      minHeight: 32,
+      marginLeft: 'auto',
+      padding: 0,
+      background: 'none',
+      border: 0,
+      fontFamily: 'inherit',
+      fontSize: 13,
+      color: 'var(--kosaf-color-text-secondary)',
+      textDecoration: 'underline',
+      cursor: 'pointer'
+    }
+  }, "\uC804\uCCB4 \uCD08\uAE30\uD654")) : null, /*#__PURE__*/React.createElement(SearchToolbar, {
     mobile: true,
-    total: PRODUCTS.length,
-    onFilter: () => setFilter(true),
-    filterCount: tags.length
-  }), /*#__PURE__*/React.createElement("div", {
+    total: list.length,
+    onFilter: () => setSheet(true),
+    filterCount: chips.length
+  }), list.length === 0 ? /*#__PURE__*/React.createElement(KS.EmptyState, {
+    device: "mobile",
+    variant: "noResults",
+    onAction: () => setApplied({})
+  }) : /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'grid',
-      gridTemplateColumns: 'repeat(2, 176px)',
+      gridTemplateColumns: 'repeat(2, minmax(0, 176px))',
       justifyContent: 'space-evenly',
       rowGap: 12,
       padding: '12px 0'
     }
-  }, PRODUCTS.slice(0, 4).map(p => /*#__PURE__*/React.createElement(KS.ProductCard, {
+  }, list.map(p => /*#__PURE__*/React.createElement(KS.ProductCard, {
     key: p.id,
     device: "mobile",
     imageSrc: imgFor(p, true),
@@ -8339,28 +9154,32 @@ function SearchMo() {
     device: "mobile",
     page: page,
     onChange: setPage,
-    total: 3,
+    total: 1,
     style: {
       padding: '12px 0 32px'
     }
-  }), filter ? /*#__PURE__*/React.createElement("div", {
+  })), Sheet ? /*#__PURE__*/React.createElement(Sheet, {
+    open: sheet,
+    value: applied,
+    count: d => PRODUCTS.filter(p => matches(p, d)).length,
+    onApply: v => {
+      setApplied(v);
+      setSheet(false);
+    },
+    onClose: () => setSheet(false)
+  }) : sheet ? /*#__PURE__*/React.createElement("div", {
     style: {
       position: 'fixed',
-      top: 0,
-      bottom: 0,
-      left: '50%',
-      transform: 'translateX(-50%)',
-      width: '100%',
-      maxWidth: 391,
+      inset: 0,
       zIndex: 100,
       background: '#fff',
       overflowY: 'auto'
     }
   }, /*#__PURE__*/React.createElement(KS.FilterPanel, {
     device: "mobile",
-    value: sel,
-    onChange: setSel,
-    onClose: () => setFilter(false)
+    value: applied,
+    onChange: setApplied,
+    onClose: () => setSheet(false)
   })) : null);
 }
 Object.assign(window, {
@@ -8391,7 +9210,7 @@ const SELLER_NAV = [{
   label: '정산관리',
   items: ['정산예정', '정산내역', '세금계산서']
 }];
-const DEALS = [['2023-04-23', '사과/부사/특/20kg', '100', '1,000,000원', '결제완료'], ['2023-04-22', '배/신고/특/15kg', '20', '400,000원', '가격협상'], ['2023-04-21', '포도/캠벨/5kg', '50', '250,000원', '배송준비중']];
+const DEALS = [[PRODUCTS[0], 10, '2023-05-08', '결제완료'], [PRODUCTS[2], 4, '2023-05-06', '가격협상'], [PRODUCTS[3], 5, '2023-05-02', '배송준비중']].map(([p, q, d, s]) => [d, p.name, num(q), won(p.price * q), s]);
 function ShopInfo({
   mobile
 }) {
@@ -8443,9 +9262,14 @@ function SellerShopPC() {
       flexDirection: 'column',
       gap: 50
     }
-  }, /*#__PURE__*/React.createElement(PageTitle, {
-    size: 30
-  }, "\uB9C8\uC774\uC0F5 \uD648"), /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/React.createElement(PageHead, {
+    size: 30,
+    title: "\uB9C8\uC774\uC0F5 \uD648",
+    desc: "\uC815\uC0B0 \uC608\uC815\uAE08\uC561\uACFC \uC9C4\uD589 \uC911\uC778 \uAC70\uB798\uB97C \uD655\uC778\uD558\uACE0 \uC0C1\uC138\uB97C \uCC98\uB9AC\uD569\uB2C8\uB2E4.",
+    style: {
+      marginBottom: 0
+    }
+  }), /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'grid',
       gridTemplateColumns: 'repeat(4, 1fr)',
@@ -8531,13 +9355,14 @@ function SellerShopMo() {
   const [tab, setTab] = React.useState(0);
   return /*#__PURE__*/React.createElement(MoPage, null, /*#__PURE__*/React.createElement("div", {
     style: {
-      padding: 20
+      padding: '20px 16px 0'
     }
-  }, /*#__PURE__*/React.createElement(PageTitle, {
-    size: 20
-  }, "\uB9C8\uC774\uC0F5 \uD648")), /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/React.createElement(PageHead, {
+    mobile: true,
+    title: "\uB9C8\uC774\uC0F5 \uD648"
+  })), /*#__PURE__*/React.createElement("div", {
     style: {
-      padding: '0 20px 20px',
+      padding: '0 16px 20px',
       display: 'grid',
       gridTemplateColumns: '1fr 1fr',
       gap: 16
@@ -8559,7 +9384,7 @@ function SellerShopMo() {
     style: {
       display: 'flex',
       gap: 8,
-      padding: '0 20px 16px'
+      padding: '0 16px 16px'
     }
   }, ['판매정보', '거래목록'].map((t, i) => /*#__PURE__*/React.createElement(KS.Tab, {
     key: t,
@@ -8579,9 +9404,9 @@ function SellerShopMo() {
     }
   }))), /*#__PURE__*/React.createElement("div", {
     style: {
-      padding: 20
+      padding: '20px 16px 32px'
     }
-  }, /*#__PURE__*/React.createElement(DemoNote, null, "\uC218\uCE58\xB7\uBAA9\uB85D\uC740 \uC608\uC2DC")));
+  }, /*#__PURE__*/React.createElement(DemoNote, null, "\uC218\uCE58\xB7\uBAA9\uB85D\uC740 \uC608\uC2DC \uB370\uC774\uD130\uC785\uB2C8\uB2E4")));
 }
 Object.assign(window, {
   SellerShopPC,
@@ -8593,10 +9418,12 @@ Object.assign(window, {
 try { (() => {
 // 판매자 회원가입 — Source: 기본정보입력 1:89853 (PC 1920×3241), 1:89639 (Mo), Step_Navi 1:90125, 첨부파일 1:89966, 완료 1:90168
 const TEL = ['010', '02', '031', '051'];
+const REQ = '필수항목을 입력해주세요.';
 function SignupForm({
   mobile,
   onDone
 }) {
+  const P = mobile ? 'm-' : 'f-';
   const [v, setV] = React.useState({
     name: '',
     id: '',
@@ -8607,17 +9434,63 @@ function SignupForm({
     email: ''
   });
   const [tried, setTried] = React.useState(false);
+  const [tries, setTries] = React.useState(0);
+  const [status, setStatus] = React.useState('idle');
+  const [failSim, setFailSim] = React.useState(false);
   const set = k => e => setV({
     ...v,
     [k]: e && e.target ? e.target.value : e
   });
-  const req = k => tried && !v[k] ? '필수항목을 입력해주세요.' : undefined;
+  const errors = !tried ? [] : [!v.name && {
+    id: P + 'name',
+    label: '회원 이름',
+    message: REQ
+  }, !v.id && {
+    id: P + 'id',
+    label: '아이디',
+    message: REQ
+  }, !v.pw && {
+    id: P + 'pw',
+    label: '비밀번호',
+    message: REQ
+  }, (!v.pw2 || v.pw !== v.pw2) && {
+    id: P + 'pw2',
+    label: '비밀번호 확인',
+    message: v.pw2 ? '비밀번호가 일치하지 않습니다.' : REQ
+  }, !v.type && {
+    id: P + 'type',
+    label: '판매자 유형',
+    message: REQ
+  }, !v.email && {
+    id: P + 'email',
+    label: '이메일',
+    message: REQ
+  }, !v.biz && {
+    id: P + 'biz',
+    label: '사업자등록번호',
+    message: v.biz ? '' : REQ
+  }].filter(Boolean);
+  const err = k => (errors.find(e => e.id === P + k) || {}).message;
+  const st = k => err(k) ? 'error' : undefined;
   const L = mobile ? 'vertical' : 'horizontal';
   const W = mobile ? '100%' : 360;
   const submit = () => {
+    const missing = !v.name || !v.id || !v.pw || v.pw !== v.pw2 || !v.pw2 || !v.type || !v.biz || !v.email;
     setTried(true);
-    if (v.name && v.id && v.pw && v.pw === v.pw2 && v.type && v.biz && v.email) onDone();
+    setTries(tries + 1);
+    if (missing) {
+      setStatus('error');
+      return;
+    }
+    setStatus('loading');
+    setTimeout(() => {
+      if (failSim) setStatus('submitError');else {
+        setStatus('success');
+        onDone();
+      }
+    }, 700);
   };
+  const summaryStatus = status === 'error' ? 'error' : status;
   return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
     style: {
       fontSize: 14,
@@ -8629,139 +9502,202 @@ function SignupForm({
     style: {
       color: 'var(--kosaf-color-action-danger)'
     }
-  }, "*"), " \uD45C\uC2DC\uB294 \uBC18\uB4DC\uC2DC \uC785\uB825\uD558\uC154\uC57C \uD558\uB294 \uD56D\uBAA9\uC785\uB2C8\uB2E4."), /*#__PURE__*/React.createElement(KS.FormField, {
+  }, "*"), " \uD45C\uC2DC\uB294 \uBC18\uB4DC\uC2DC \uC785\uB825\uD558\uC154\uC57C \uD558\uB294 \uD56D\uBAA9\uC785\uB2C8\uB2E4."), summaryStatus !== 'idle' ? /*#__PURE__*/React.createElement(KS.FormErrorSummary, {
+    status: summaryStatus,
+    errors: errors,
+    focusKey: tries,
+    focusTarget: "firstField",
+    device: mobile ? 'mobile' : 'desktop',
+    message: status === 'submitError' ? '네트워크 상태를 확인한 뒤 다시 시도해주세요. 입력한 내용은 유지됩니다. (데모)' : undefined,
+    onRetry: submit,
+    style: {
+      margin: '20px 0 4px'
+    }
+  }) : null, /*#__PURE__*/React.createElement(KS.FormField, {
     layout: L,
     label: "\uD68C\uC6D0 \uC774\uB984",
     required: true,
-    error: req('name'),
-    htmlFor: "f-name"
+    error: err('name'),
+    htmlFor: P + 'name'
   }, /*#__PURE__*/React.createElement(KS.Input, {
-    id: "f-name",
+    id: P + 'name',
     width: W,
     value: v.name,
     onChange: set('name'),
-    state: req('name') ? 'error' : undefined,
+    state: st('name'),
     placeholder: ""
   })), /*#__PURE__*/React.createElement(KS.FormField, {
     layout: L,
     label: "\uC544\uC774\uB514",
     required: true,
-    error: req('id'),
-    htmlFor: "f-id"
+    error: err('id'),
+    help: "\uC601\uBB38 \uC18C\uBB38\uC790, \uC22B\uC790 \uC911 6~20\uC790 \uC870\uD569.",
+    htmlFor: P + 'id'
   }, /*#__PURE__*/React.createElement(KS.Input, {
-    id: "f-id",
-    width: mobile ? 230 : W,
+    id: P + 'id',
+    width: mobile ? 'calc(100% - 104px)' : W,
     value: v.id,
     onChange: set('id'),
-    state: req('id') ? 'error' : undefined,
-    placeholder: "\uC601\uBB38 \uC18C\uBB38\uC790, \uC22B\uC790 \uC911 6~20\uC790 \uC870\uD569."
+    state: st('id'),
+    placeholder: ""
   }), /*#__PURE__*/React.createElement(KS.Button, {
     variant: "secondary",
-    size: 45
+    size: 45,
+    style: {
+      flex: '0 0 auto'
+    }
   }, "\uC911\uBCF5 \uD655\uC778")), /*#__PURE__*/React.createElement(KS.FormField, {
     layout: L,
     label: "\uBE44\uBC00\uBC88\uD638",
     required: true,
-    error: req('pw'),
-    htmlFor: "f-pw"
+    error: err('pw'),
+    help: "\uC601\uBB38+\uC22B\uC790+\uD2B9\uC218\uBB38\uC790 8~24\uC790 \uC870\uD569.",
+    htmlFor: P + 'pw'
   }, /*#__PURE__*/React.createElement(KS.Input, {
-    id: "f-pw",
+    id: P + 'pw',
     type: "password",
     width: W,
     value: v.pw,
     onChange: set('pw'),
-    state: req('pw') ? 'error' : undefined,
-    placeholder: "\uC601\uBB38+\uC22B\uC790+\uD2B9\uC218\uBB38\uC790 8~24\uC790 \uC870\uD569."
+    state: st('pw'),
+    placeholder: ""
   })), /*#__PURE__*/React.createElement(KS.FormField, {
     layout: L,
     label: "\uBE44\uBC00\uBC88\uD638 \uD655\uC778",
     required: true,
-    error: tried && (!v.pw2 || v.pw !== v.pw2) ? v.pw2 ? '비밀번호가 일치하지 않습니다.' : '필수항목을 입력해주세요.' : undefined,
-    htmlFor: "f-pw2"
+    error: err('pw2'),
+    htmlFor: P + 'pw2'
   }, /*#__PURE__*/React.createElement(KS.Input, {
-    id: "f-pw2",
+    id: P + 'pw2',
     type: "password",
     width: W,
     value: v.pw2,
     onChange: set('pw2'),
-    state: tried && (!v.pw2 || v.pw !== v.pw2) ? 'error' : undefined,
+    state: st('pw2'),
     placeholder: "\uBE44\uBC00\uBC88\uD638\uB97C \uD55C \uBC88 \uB354 \uC785\uB825\uD558\uC138\uC694."
   })), /*#__PURE__*/React.createElement(KS.FormField, {
     layout: L,
     label: "\uD310\uB9E4\uC790 \uC720\uD615",
     required: true,
-    error: req('type')
+    error: err('type'),
+    htmlFor: P + 'type'
   }, /*#__PURE__*/React.createElement(KS.Select, {
+    id: P + 'type',
     size: "form",
-    width: 200,
+    width: mobile ? '100%' : 200,
     options: ['위탁', '매수', '직접판매'],
     value: v.type || undefined,
     onChange: set('type'),
-    error: !!req('type'),
+    error: !!err('type'),
     "aria-label": "\uD310\uB9E4\uC790 \uC720\uD615"
   })), /*#__PURE__*/React.createElement(KS.FormField, {
     layout: L,
     label: "\uD5C8\uAC00\uBC88\uD638"
   }, /*#__PURE__*/React.createElement(KS.Select, {
     size: "form",
-    width: 200,
+    width: mobile ? '100%' : 200,
     placeholder: "-\uB3C4\uB9E4\uC2DC\uC7A5 \uC120\uD0DD-",
     options: ['서울가락', '서울강서'],
     "aria-label": "\uB3C4\uB9E4\uC2DC\uC7A5"
   }), /*#__PURE__*/React.createElement(KS.Input, {
     width: mobile ? '100%' : 200,
-    placeholder: "\uD5C8\uAC00\uBC88\uD638"
+    placeholder: "\uD5C8\uAC00\uBC88\uD638",
+    "aria-label": "\uD5C8\uAC00\uBC88\uD638"
   })), /*#__PURE__*/React.createElement(KS.FormField, {
     layout: L,
     label: "\uD734\uB300\uD3F0\uBC88\uD638",
     required: true
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'grid',
+      gridTemplateColumns: mobile ? '96px 8px minmax(0,1fr) 8px minmax(0,1fr)' : '160px 8px 160px 8px 160px',
+      alignItems: 'center',
+      gap: 6,
+      width: mobile ? '100%' : undefined
+    }
   }, /*#__PURE__*/React.createElement(KS.Select, {
     size: "form",
-    width: mobile ? 96 : 160,
+    width: "100%",
     options: TEL,
-    "aria-label": "\uC55E\uC790\uB9AC"
-  }), /*#__PURE__*/React.createElement("span", null, "-"), /*#__PURE__*/React.createElement(KS.Input, {
-    width: mobile ? 90 : 160,
-    placeholder: ""
-  }), /*#__PURE__*/React.createElement("span", null, "-"), /*#__PURE__*/React.createElement(KS.Input, {
-    width: mobile ? 90 : 160,
-    placeholder: ""
-  })), /*#__PURE__*/React.createElement(KS.FormField, {
+    defaultValue: "010",
+    "aria-label": "\uD734\uB300\uD3F0 \uC55E\uC790\uB9AC"
+  }), /*#__PURE__*/React.createElement("span", {
+    "aria-hidden": "true",
+    style: {
+      textAlign: 'center'
+    }
+  }, "-"), /*#__PURE__*/React.createElement(KS.Input, {
+    width: "100%",
+    placeholder: "",
+    "aria-label": "\uD734\uB300\uD3F0 \uAC00\uC6B4\uB370 \uC790\uB9AC",
+    inputMode: "numeric"
+  }), /*#__PURE__*/React.createElement("span", {
+    "aria-hidden": "true",
+    style: {
+      textAlign: 'center'
+    }
+  }, "-"), /*#__PURE__*/React.createElement(KS.Input, {
+    width: "100%",
+    placeholder: "",
+    "aria-label": "\uD734\uB300\uD3F0 \uB05D\uC790\uB9AC",
+    inputMode: "numeric"
+  }))), /*#__PURE__*/React.createElement(KS.FormField, {
     layout: L,
     label: "\uC774\uBA54\uC77C",
     required: true,
-    error: req('email')
+    error: err('email'),
+    htmlFor: P + 'email'
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'grid',
+      gridTemplateColumns: mobile ? 'minmax(0,1fr) 16px minmax(0,1fr)' : '200px 16px 200px 200px',
+      alignItems: 'center',
+      gap: 6,
+      width: mobile ? '100%' : undefined
+    }
   }, /*#__PURE__*/React.createElement(KS.Input, {
-    width: mobile ? 150 : 200,
+    id: P + 'email',
+    width: "100%",
     value: v.email,
     onChange: set('email'),
-    state: req('email') ? 'error' : undefined,
+    state: st('email'),
     placeholder: "",
-    "aria-label": "\uC774\uBA54\uC77C \uC544\uC774\uB514"
+    "aria-label": "\uC774\uBA54\uC77C \uC544\uC774\uB514",
+    "aria-describedby": err('email') ? P + 'email-error' : undefined,
+    "aria-invalid": err('email') ? true : undefined
   }), /*#__PURE__*/React.createElement("span", {
-    "aria-hidden": "true"
+    "aria-hidden": "true",
+    style: {
+      textAlign: 'center'
+    }
   }, "@"), /*#__PURE__*/React.createElement(KS.Input, {
-    width: mobile ? 150 : 200,
+    width: "100%",
     placeholder: "",
     "aria-label": "\uC774\uBA54\uC77C \uB3C4\uBA54\uC778"
   }), /*#__PURE__*/React.createElement(KS.Select, {
     size: "form",
-    width: mobile ? '100%' : 200,
+    width: "100%",
     placeholder: "\uC9C1\uC811\uC785\uB825",
     options: ['직접입력', 'naver.com', 'gmail.com'],
-    "aria-label": "\uB3C4\uBA54\uC778 \uC120\uD0DD"
-  })), /*#__PURE__*/React.createElement(KS.FormField, {
+    "aria-label": "\uB3C4\uBA54\uC778 \uC120\uD0DD",
+    style: mobile ? {
+      gridColumn: '1 / -1'
+    } : undefined
+  }))), /*#__PURE__*/React.createElement(KS.FormField, {
     layout: L,
     label: "\uC0AC\uC5C5\uC790\uB4F1\uB85D\uBC88\uD638",
     required: true,
-    error: req('biz')
+    error: err('biz'),
+    help: "\uC22B\uC790 10\uC790\uB9AC",
+    htmlFor: P + 'biz'
   }, /*#__PURE__*/React.createElement(KS.Input, {
+    id: P + 'biz',
     width: W,
     value: v.biz,
     onChange: set('biz'),
-    state: req('biz') ? 'error' : undefined,
-    placeholder: "\uC22B\uC790 10\uC790\uB9AC",
-    "aria-label": "\uC0AC\uC5C5\uC790\uB4F1\uB85D\uBC88\uD638"
+    state: st('biz'),
+    placeholder: "",
+    inputMode: "numeric"
   })), /*#__PURE__*/React.createElement(KS.FormField, {
     layout: L,
     label: "\uD68C\uC0AC\uC8FC\uC18C",
@@ -8779,7 +9715,7 @@ function SignupForm({
       gap: 10
     }
   }, /*#__PURE__*/React.createElement(KS.Input, {
-    width: mobile ? 220 : W,
+    width: mobile ? 'calc(100% - 124px)' : W,
     placeholder: "\uC6B0\uD3B8\uBC88\uD638",
     "aria-label": "\uC6B0\uD3B8\uBC88\uD638"
   }), /*#__PURE__*/React.createElement(KS.Button, {
@@ -8790,15 +9726,17 @@ function SignupForm({
     }
   }, "\uC6B0\uD3B8\uBC88\uD638 \uAC80\uC0C9")), /*#__PURE__*/React.createElement(KS.Input, {
     width: W,
-    placeholder: "\uAE30\uBCF8\uC8FC\uC18C"
+    placeholder: "\uAE30\uBCF8\uC8FC\uC18C",
+    "aria-label": "\uAE30\uBCF8\uC8FC\uC18C"
   }), /*#__PURE__*/React.createElement(KS.Input, {
     width: W,
-    placeholder: "\uC0C1\uC138\uC8FC\uC18C"
+    placeholder: "\uC0C1\uC138\uC8FC\uC18C",
+    "aria-label": "\uC0C1\uC138\uC8FC\uC18C"
   }))), /*#__PURE__*/React.createElement("h2", {
     style: {
       fontSize: mobile ? 20 : 24,
       fontWeight: 700,
-      margin: '60px 0 8px'
+      margin: mobile ? '50px 0 8px' : '50px 0 8px'
     }
   }, "\uC2EC\uC0AC\uC11C\uB958"), /*#__PURE__*/React.createElement("div", {
     style: {
@@ -8818,7 +9756,7 @@ function SignupForm({
     required: true,
     help: "*\uAC1C\uC778 \uC815\uBCF4\uC785\uB825\uC5D0\uC11C \uC785\uB825\uD55C \uB0B4\uC6A9\uACFC \uC77C\uCE58\uD558\uC5EC\uC57C \uD569\uB2C8\uB2E4."
   }, /*#__PURE__*/React.createElement(KS.FileUpload, {
-    width: mobile ? 220 : 360,
+    width: mobile ? '100%' : 360,
     defaultFiles: [{
       name: '사업자등록증.hwp'
     }]
@@ -8826,38 +9764,50 @@ function SignupForm({
     layout: L,
     label: "\uCCA8\uBD80\uD30C\uC77C...n"
   }, /*#__PURE__*/React.createElement(KS.FileUpload, {
-    width: mobile ? 220 : 360
+    width: mobile ? '100%' : 360
   })), /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'flex',
-      justifyContent: 'center',
+      flexDirection: 'column',
+      alignItems: 'center',
+      gap: 12,
       marginTop: 50
     }
   }, /*#__PURE__*/React.createElement(KS.Button, {
     size: 50,
     width: mobile ? '100%' : 164,
     fullWidth: mobile,
+    disabled: status === 'loading',
     onClick: submit
-  }, "\uD68C\uC6D0\uAC00\uC785 \uC644\uB8CC")), tried ? /*#__PURE__*/React.createElement("div", {
+  }, status === 'loading' ? '처리 중…' : '회원가입 완료'), /*#__PURE__*/React.createElement("div", {
     style: {
-      textAlign: 'center',
-      marginTop: 10
+      display: 'flex',
+      flexWrap: 'wrap',
+      alignItems: 'center',
+      justifyContent: 'center',
+      gap: 10
     }
-  }, /*#__PURE__*/React.createElement(DemoNote, null, "\uD544\uC218 \uD56D\uBAA9 \uAC80\uC99D\uC740 \uD074\uB77C\uC774\uC5B8\uD2B8 \uB370\uBAA8\uC785\uB2C8\uB2E4")) : null);
+  }, /*#__PURE__*/React.createElement(DemoNote, null, "\uD544\uC218 \uD56D\uBAA9 \uAC80\uC99D\xB7\uC81C\uCD9C\uC740 \uD074\uB77C\uC774\uC5B8\uD2B8 \uB370\uBAA8\uC785\uB2C8\uB2E4"), /*#__PURE__*/React.createElement(KS.Checkbox, {
+    checked: failSim,
+    onChange: setFailSim,
+    style: {
+      fontSize: 13
+    }
+  }, "\uC81C\uCD9C \uC2E4\uD328 \uC2DC\uBBAC\uB808\uC774\uC158"))));
 }
 function SignupDone({
   mobile
 }) {
   return /*#__PURE__*/React.createElement("div", {
     style: {
-      textAlign: 'center',
-      padding: mobile ? '40px 20px' : '80px 0',
+      padding: mobile ? '40px 0' : '80px 0',
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
       gap: 24
     }
   }, /*#__PURE__*/React.createElement("span", {
+    "aria-hidden": "true",
     style: {
       width: 90,
       height: 90,
@@ -8870,27 +9820,36 @@ function SignupDone({
   }, /*#__PURE__*/React.createElement(KS.Icon, {
     name: "check",
     size: 44
-  })), /*#__PURE__*/React.createElement("div", {
+  })), /*#__PURE__*/React.createElement(PageHead, {
+    mobile: mobile,
+    align: "center",
+    size: 30,
+    title: "\uB18D\uC0B0\uBB3C \uC628\uB77C\uC778\uAC70\uB798\uC18C \uC2EC\uC0AC\uC2E0\uCCAD\uC774 \uC644\uB8CC\uB418\uC5C8\uC2B5\uB2C8\uB2E4.",
+    desc: "\uC2EC\uC0AC\uAC00 \uC644\uB8CC\uB418\uBA74 \uB85C\uADF8\uC778 \uD6C4 \uD310\uB9E4\uB97C \uC2DC\uC791\uD560 \uC218 \uC788\uC2B5\uB2C8\uB2E4.",
+    right: /*#__PURE__*/React.createElement(KS.Button, {
+      size: 45,
+      width: 127
+    }, "\uBA54\uC778\uC73C\uB85C"),
     style: {
-      fontSize: mobile ? 20 : 30,
-      fontWeight: 700
+      marginBottom: 0
     }
-  }, "\uB18D\uC0B0\uBB3C \uC628\uB77C\uC778\uAC70\uB798\uC18C \uC2EC\uC0AC\uC2E0\uCCAD\uC774 \uC644\uB8CC\uB418\uC5C8\uC2B5\uB2C8\uB2E4."), /*#__PURE__*/React.createElement(KS.Button, {
-    size: 45,
-    width: 127
-  }, "\uBA54\uC778\uC73C\uB85C"));
+  }));
 }
 function SignupPC() {
   const [done, setDone] = React.useState(false);
   return /*#__PURE__*/React.createElement("div", {
     style: {
-      minWidth: 1920,
+      width: '100%',
+      minWidth: 0,
+      boxSizing: 'border-box',
+      overflowX: 'visible',
       background: '#fff',
       fontFamily: 'var(--kosaf-font)'
     }
   }, /*#__PURE__*/React.createElement("main", {
     style: {
-      width: 1276,
+      width: '100%',
+      maxWidth: 1276,
       margin: '0 auto',
       padding: '90px 0 120px'
     }
@@ -9102,13 +10061,15 @@ function ReviewBody({
     }
   }, /*#__PURE__*/React.createElement("span", {
     style: {
-      fontSize: mobile ? 14 : 18
+      fontSize: mobile ? 14 : 18,
+      whiteSpace: 'nowrap'
     }
-  }, "Total : ", /*#__PURE__*/React.createElement("b", {
+  }, "\uCD1D ", /*#__PURE__*/React.createElement("b", {
     style: {
-      color: 'var(--kosaf-color-action-primary)'
+      color: 'var(--kosaf-color-action-primary)',
+      fontVariantNumeric: 'tabular-nums'
     }
-  }, empty ? '00' : '02'), "\uAC1C"), /*#__PURE__*/React.createElement("span", {
+  }, empty ? 0 : 2), "\uAC1C"), /*#__PURE__*/React.createElement("span", {
     style: {
       flex: 1
     }
@@ -9131,15 +10092,25 @@ function ReviewBody({
     style: {
       padding: mobile ? '0 16px' : 0
     }
-  }, [5, 4].map(r => /*#__PURE__*/React.createElement(KS.ReviewItem, {
-    key: r,
-    rating: r,
+  }, /*#__PURE__*/React.createElement(KS.ReviewItem, {
+    rating: 5,
     device: mobile ? 'mobile' : 'desktop',
-    tags: r === 5 ? ['품질 만족', '배송 만족', '포장상태 만족'] : [],
+    product: PRODUCTS[0].name,
+    tags: ['품질 만족', '배송 만족', '포장상태 만족'],
     actions: [{
-      label: mobile ? '수정' : '삭제'
+      label: '신고하기'
     }]
-  }))));
+  }), /*#__PURE__*/React.createElement(KS.ReviewItem, {
+    rating: 4,
+    author: "kim***",
+    date: "2023-04-20",
+    device: mobile ? 'mobile' : 'desktop',
+    product: PRODUCTS[2].name,
+    body: "\uACFC\uC721\uC774 \uB2E8\uB2E8\uD558\uACE0 \uD3EC\uC7A5\uC774 \uAF3C\uAF3C\uD588\uC2B5\uB2C8\uB2E4.",
+    actions: [{
+      label: '신고하기'
+    }]
+  })));
 }
 function SupportPC() {
   const [nav, setNav] = React.useState('FAQ');
@@ -9158,12 +10129,15 @@ function SupportPC() {
       flex: 1,
       minWidth: 0
     }
-  }, /*#__PURE__*/React.createElement(PageTitle, {
+  }, /*#__PURE__*/React.createElement(PageHead, {
     size: 30,
-    style: {
-      marginBottom: 30
-    }
-  }, nav === '이용후기' ? '이용후기(리뷰)' : nav), nav === 'FAQ' ? /*#__PURE__*/React.createElement(FaqBody, null) : nav === '공지사항' ? /*#__PURE__*/React.createElement(NoticeBody, null) : nav === '이용후기' ? /*#__PURE__*/React.createElement(ReviewBody, null) : /*#__PURE__*/React.createElement(KS.EmptyState, {
+    title: nav === '이용후기' ? '이용후기(리뷰)' : nav,
+    desc: {
+      FAQ: '자주 묻는 질문을 분류별로 확인하세요.',
+      공지사항: '서비스 운영 및 점검 안내입니다.',
+      이용후기: '구매 회원이 남긴 상품 후기입니다.'
+    }[nav]
+  }), nav === 'FAQ' ? /*#__PURE__*/React.createElement(FaqBody, null) : nav === '공지사항' ? /*#__PURE__*/React.createElement(NoticeBody, null) : nav === '이용후기' ? /*#__PURE__*/React.createElement(ReviewBody, null) : /*#__PURE__*/React.createElement(KS.EmptyState, {
     message: "Q&A \uD654\uBA74\uC740 \uC774\uBC88 \uBC94\uC704\uC5D0\uC11C \uC7AC\uD604\uD558\uC9C0 \uC54A\uC558\uC2B5\uB2C8\uB2E4.",
     description: "FAQ \xB7 \uACF5\uC9C0\uC0AC\uD56D \xB7 \uC774\uC6A9\uD6C4\uAE30\uB97C \uC120\uD0DD\uD558\uC138\uC694."
   }))));
@@ -9176,10 +10150,10 @@ function SupportMo() {
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'space-between',
-      padding: '10px 16px'
+      padding: '20px 16px 16px'
     }
   }, /*#__PURE__*/React.createElement(PageTitle, {
-    size: 20
+    size: 22
   }, "\uACE0\uAC1D\uC13C\uD130"), /*#__PURE__*/React.createElement(KS.Button, {
     variant: "secondary",
     size: 34,
@@ -9247,6 +10221,8 @@ __ds_ns.DateRange = __ds_scope.DateRange;
 
 __ds_ns.DescriptionList = __ds_scope.DescriptionList;
 
+__ds_ns.EMPTY_STATE_PRESETS = __ds_scope.EMPTY_STATE_PRESETS;
+
 __ds_ns.EmptyState = __ds_scope.EmptyState;
 
 __ds_ns.FileUpload = __ds_scope.FileUpload;
@@ -9258,6 +10234,8 @@ __ds_ns.DEFAULT_FILTER_GROUPS = __ds_scope.DEFAULT_FILTER_GROUPS;
 __ds_ns.FilterPanel = __ds_scope.FilterPanel;
 
 __ds_ns.Footer = __ds_scope.Footer;
+
+__ds_ns.FormErrorSummary = __ds_scope.FormErrorSummary;
 
 __ds_ns.FormField = __ds_scope.FormField;
 
@@ -9273,6 +10251,8 @@ __ds_ns.Input = __ds_scope.Input;
 
 __ds_ns.MetricCard = __ds_scope.MetricCard;
 
+__ds_ns.MobileFilterSheet = __ds_scope.MobileFilterSheet;
+
 __ds_ns.MobileHeader = __ds_scope.MobileHeader;
 
 __ds_ns.CloseX = __ds_scope.CloseX;
@@ -9286,6 +10266,8 @@ __ds_ns.SAMPLE_NOTIFICATIONS = __ds_scope.SAMPLE_NOTIFICATIONS;
 __ds_ns.NotificationList = __ds_scope.NotificationList;
 
 __ds_ns.OrderSummary = __ds_scope.OrderSummary;
+
+__ds_ns.PageHeader = __ds_scope.PageHeader;
 
 __ds_ns.PaginationItem = __ds_scope.PaginationItem;
 

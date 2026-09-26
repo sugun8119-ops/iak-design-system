@@ -1,0 +1,90 @@
+{
+  "date": "2026-09-27",
+  "scope": "Post-pass3 targeted browser remeasurement of the 12 previous horizontal overflow failures. Not full visual QA of all cards.",
+  "checks": [
+    {
+      "title": "Pagination",
+      "sw": 700,
+      "text": 234,
+      "w": 700,
+      "passed": true
+    },
+    {
+      "title": "Radius",
+      "sw": 700,
+      "text": 28,
+      "w": 700,
+      "passed": true
+    },
+    {
+      "title": "KOSAF_V1 / Core Components (218:570)",
+      "sw": 1621,
+      "text": 234,
+      "w": 1621,
+      "passed": true
+    },
+    {
+      "title": "검색 결과 — PC 1920",
+      "sw": 1901,
+      "text": 1487,
+      "w": 1901,
+      "passed": true
+    },
+    {
+      "title": "구매자 마이페이지 — PC 1920",
+      "sw": 1901,
+      "text": 885,
+      "w": 1901,
+      "passed": true
+    },
+    {
+      "title": "상품상세 — PC 1920",
+      "sw": 1901,
+      "text": 614,
+      "w": 1901,
+      "passed": true
+    },
+    {
+      "title": "장바구니 — PC 1920",
+      "sw": 1901,
+      "text": 806,
+      "w": 1901,
+      "passed": true
+    },
+    {
+      "title": "주문 완료 — PC 1920",
+      "sw": 1901,
+      "text": 466,
+      "w": 1901,
+      "passed": true
+    },
+    {
+      "title": "주문·결제 — PC 1920",
+      "sw": 1901,
+      "text": 710,
+      "w": 1901,
+      "passed": true
+    },
+    {
+      "title": "판매자 마이샵 — PC 1920",
+      "sw": 1901,
+      "text": 860,
+      "w": 1901,
+      "passed": true
+    },
+    {
+      "title": "판매자 회원가입 — PC 1920",
+      "sw": 1901,
+      "text": 632,
+      "w": 1901,
+      "passed": true
+    },
+    {
+      "title": "FAQ · 공지 · 후기 — PC 1920",
+      "sw": 1901,
+      "text": 565,
+      "w": 1901,
+      "passed": true
+    }
+  ]
+}

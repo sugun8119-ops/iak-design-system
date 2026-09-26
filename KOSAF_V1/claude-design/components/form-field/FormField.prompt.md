@@ -8,3 +8,8 @@ Label + control row for 회원가입/등록 forms: required *, error text, help,
 - States: Default · Required · Error · Help.
 - Props: `label`, `required`, `error`, `help`, `htmlFor`, `layout`, `labelWidth`, `children`.
 - Label + control row for 회원가입/등록 forms: required *, error text, help, bottom rule.
+
+## 1.4.0 (web refinement)
+- Give the control `id={htmlFor}`: FormField then adds `aria-describedby="<id>-help <id>-error"` and `aria-invalid`. Error text id = `<htmlFor>-error`.
+- Field errors are no longer `role="alert"`; pair with **FormErrorSummary** for the announcement + first-error focus.
+- Label column wraps long Korean words (`keep-all` + `overflow-wrap:anywhere`), 20px gutter.

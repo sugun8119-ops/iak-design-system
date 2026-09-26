@@ -1,4 +1,4 @@
-<!-- @dsCard group="Components · Data Display" viewport="700x860" name="ProductTable" subtitle="상품 검색 표 · 통합검색 표: 2단 헤더(상품정보/거래정보) 14열, 구매하기, 관심/장바구니" -->
+<!-- @dsCard group="Components · Data Display" viewport="700x1580" name="ProductTable" subtitle="상품 검색 표 · 통합검색 표: 2단 헤더(상품정보/거래정보) 14열, 구매하기, 관심/장바구니" -->
 <!DOCTYPE html>
 <html><head><meta charset="utf-8"><title>ProductTable</title>
 <link rel="stylesheet" href="../../styles.css">
@@ -15,10 +15,14 @@ const A = '../../assets/';
 const ROWS=[{no:10,item:'사과',variety:'부사',name:'사과/부사/특/20kg',deal:'입찰',producer:'김원생',qty:'300PT',remain:300,price:'-',deadline:'2023-05-05\n18:00',grade:'문경',region:'가락시장',ship:'2023\n05-05',liked:true},{no:9,item:'사과',variety:'부사',name:'사과/부사/특/20kg',deal:'정가',producer:'',qty:'300PT',remain:50,price:'50,000원',deadline:'2023-05-05\n18:00',grade:'문경',region:'가락시장',ship:'2023\n05-05'},{no:8,item:'사과',variety:'부사',name:'사과/부사/특/20kg',deal:'입찰',producer:'김원생',qty:'300PT',remain:300,price:'-',deadline:'2023-05-05\n18:00',grade:'문경',region:'가락시장',ship:'2023\n05-05',disabled:true},{no:7,item:'사과',variety:'부사',name:'사과/부사/특/20kg',deal:'정가',producer:'김원생',qty:'300PT',remain:50,price:'50,000원',deadline:'2023-05-05\n18:00',grade:'문경',region:'가락시장',ship:'2023\n05-05'}];
 const FAQ=[{title:'[배송] 배송기간은 얼마나 되나요?',content:'상품의 평균 배송일은 3~4일(주말, 공휴일 제외) 정도 소요됩니다.\n자세한 배송일자는 상품 상세 페이지에서 확인이 가능합니다.'},{title:'[회원] 회원탈퇴는 어떻게 해야 하나요?',content:'마이페이지 > 회원정보관리 > 회원탈퇴에서 신청할 수 있습니다.'},{title:'[배송] 배송조회는 어디에서 할 수 있나요?',content:'마이페이지 > 주문/배송내역에서 확인할 수 있습니다.'}];
 const META = {"name":"ProductTable","prov":"source","node":"1:97566","use":"통합검색 표: 2단 헤더(상품정보/거래정보) 14열, 구매하기, 관심/장바구니. 모바일은 목록","props":["rows","columns","device","onBuy","onLike","onCart","highlightFirst"],"states":"기본·첫 행 굵게·비활성·관심","ko":"상품 검색 표 · ProductTable"};
+function PTLive(){const [sel,setSel]=React.useState([9]);const [s,setS]=React.useState({key:'price',dir:'desc'});const p=(r)=>parseInt(String(r.price).replace(/\D/g,''))||0;const rows=ROWS.slice().sort((a,b)=>s.key==='price'?(s.dir==='asc'?p(a)-p(b):p(b)-p(a)):0);
+return <div style={{width:660,overflowX:'auto',border:'1px solid #EAEAEA'}}><div style={{width:1390}}><ProductTable rows={rows} highlightFirst={false} selectable selectedKeys={sel} onSelectChange={setSel} sort={s} onSort={setS}/></div><div style={{fontSize:12,color:'#707070',padding:'6px 8px'}}>선택 {sel.length}건 · 정렬 {s.key} {s.dir}</div></div>;}
 function Demo(){return (<>
 <KSec label="PC · 실제 크기 (NO~거래단가)"><KCrop w={1596} h={330}><ProductTable rows={ROWS}/></KCrop></KSec>
 <KSec label="PC · 전체 (축소 0.41)"><KScale w={1596} s={0.41}><ProductTable rows={ROWS}/></KScale></KSec>
 <KSec label="모바일"><div style={{width:350}}><ProductTable device="mobile" rows={ROWS.slice(0,3)}/></div></KSec>
+<KSec label="1.4.0 · 선택 + 정렬 (1:1, 가로 스크롤)" style={{display:'block'}}><PTLive/></KSec>
+<KSec label="상태 · 불러오는 중 / 오류 / 빈 결과" style={{display:'grid',gridTemplateColumns:'1fr',gap:10,width:660}}><div style={{width:660,overflowX:'auto'}}><div style={{width:1340}}><ProductTable rows={[]} state="loading"/></div></div><div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:10}}><ProductTable device="mobile" state="error" onRetry={()=>{}}/><ProductTable device="mobile" rows={[]}/></div></KSec>
 </>);}
 ReactDOM.createRoot(document.getElementById('r')).render(<KCard meta={META}><Demo/></KCard>);
 </script></body></html>

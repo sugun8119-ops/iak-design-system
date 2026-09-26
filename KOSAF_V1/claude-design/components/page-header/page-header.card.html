@@ -1,0 +1,22 @@
+<!-- @dsCard group="Components · Patterns" viewport="700x430" name="PageHeader" subtitle="페이지 제목 → 설명 → 행동 · 업무 좌측 / 완료 중앙" -->
+<!DOCTYPE html>
+<html lang="ko"><head><meta charset="utf-8"><title>PageHeader</title>
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+<script src="../../guidelines/card-kit.js"></script>
+<style>body{margin:0;background:#fff}</style>
+</head><body><div id="r"></div>
+<script type="text/babel">
+const NS = window.KOSAFV1ProjectDesignSystem_f8c97b;
+const { PageHeader, Button, Stepper } = NS;
+const META = {"name":"PageHeader","prov":"extension","node":"kits 공통 (1.4.0)","use":"제목 → 설명 → 행동. 업무화면 좌측, 완료화면 중앙","props":["title","description","actions","align","device","size","level"],"states":"좌측·중앙·행동 있음·모바일","ko":"페이지 헤더 · PageHeader"};
+function Demo(){return (<>
+<KSec label="PC · 업무 화면 (size 30, SideNav 레이아웃)" style={{width:660,display:'block'}}><PageHeader size={30} title="마이페이지 홈" description="여신 한도와 주문·문의 현황을 한눈에 확인합니다." actions={<Button variant="secondary" size={42}>회원정보 수정</Button>} style={{marginBottom:0}}/></KSec>
+<KSec label="PC · 완료 화면 (align center)" style={{width:660,display:'block'}}><PageHeader align="center" size={30} title="심사신청이 완료되었습니다." description="심사가 완료되면 로그인 후 판매를 시작할 수 있습니다." actions={<Button size={45} width={127}>메인으로</Button>} style={{marginBottom:0}}/></KSec>
+<KSec label="모바일 390"><KPhone w={350}><div style={{padding:'20px 16px'}}><PageHeader device="mobile" title="판매자 회원가입" description="기본정보와 심사서류를 입력하세요." style={{marginBottom:0}}/></div></KPhone></KSec>
+</>);}
+ReactDOM.createRoot(document.getElementById('r')).render(<KCard meta={META}><Demo/></KCard>);
+</script></body></html>

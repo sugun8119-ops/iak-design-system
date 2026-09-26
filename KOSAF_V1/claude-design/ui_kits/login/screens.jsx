@@ -3,7 +3,9 @@ function LoginForm({ mobile, onDormant }) {
   const [id, setId] = React.useState('');
   const [pw, setPw] = React.useState('');
   const [err, setErr] = React.useState('');
-  const submit = (e) => { e.preventDefault(); if (!id || !pw) setErr('아이디와 비밀번호를 입력해주세요.'); else { setErr(''); onDormant(); } };
+  const P = mobile ? 'lm-' : 'l-';
+  const submit = (e) => { e.preventDefault(); if (!id || !pw) { setErr(!id && !pw ? '아이디와 비밀번호를 입력해주세요.' : !id ? '아이디를 입력해주세요.' : '비밀번호를 입력해주세요.'); const el = document.getElementById(P + (!id ? 'id' : 'pw')); if (el) el.focus(); } else { setErr(''); onDormant(); } };
+  const ea = (bad) => (err && bad ? { 'aria-invalid': true, 'aria-describedby': P + 'err' } : {});
   const card = { boxSizing: 'border-box', background: '#fff', borderRadius: 20, padding: mobile ? 24 : '50px 64px', width: mobile ? '100%' : 627, minHeight: mobile ? undefined : 361 };
   return (
     <div style={{ display: 'flex', flexDirection: mobile ? 'column' : 'row', gap: mobile ? 16 : 26, justifyContent: 'center' }}>
@@ -11,8 +13,9 @@ function LoginForm({ mobile, onDormant }) {
         <h2 style={{ margin: '0 0 30px', fontSize: 24, fontWeight: 700 }}>일반 로그인</h2>
         <div style={{ display: 'flex', gap: 12 }}>
           <div style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: 12 }}>
-            <KS.Input width="100%" placeholder="아이디" value={id} onChange={(e) => setId(e.target.value)} aria-label="아이디" state={err && !id ? 'error' : undefined} />
-            <KS.Input width="100%" type="password" placeholder="비밀번호" value={pw} onChange={(e) => setPw(e.target.value)} aria-label="비밀번호" state={err && !pw ? 'error' : undefined} errorMessage={err} />
+            <KS.Input id={P + 'id'} width="100%" placeholder="아이디" value={id} onChange={(e) => setId(e.target.value)} aria-label="아이디" autoComplete="username" state={err && !id ? 'error' : undefined} {...ea(!id)} />
+            <KS.Input width="100%" type="password" placeholder="비밀번호" value={pw} onChange={(e) => setPw(e.target.value)} aria-label="비밀번호" autoComplete="current-password" id={P + 'pw'} state={err && !pw ? 'error' : undefined} {...ea(!pw)} />
+            {err ? <span id={P + 'err'} role="alert" style={{ fontSize: 14, lineHeight: '20px', color: 'var(--kosaf-color-action-danger)' }}>{err}</span> : null}
           </div>
           <KS.Button type="submit" size={mobile ? 102 : 102} width={mobile ? 90 : 125} style={{ height: 102, alignSelf: 'flex-start' }}>로그인</KS.Button>
         </div>
@@ -38,7 +41,7 @@ function LoginPC() {
   const [d, setD] = React.useState(false);
   const link = { background: 'none', border: 0, fontFamily: 'inherit', fontSize: 14, fontWeight: 500, color: 'var(--kosaf-color-text-secondary)', cursor: 'pointer' };
   return (
-    <div style={{ minWidth: 1920, minHeight: 1080, background: 'var(--kosaf-src-login-bg)', fontFamily: 'var(--kosaf-font)', color: 'var(--kosaf-color-text-primary)' }}>
+    <div style={{ width: '100%', minWidth: 0, boxSizing: 'border-box', overflowX: 'visible', minHeight: 1080, background: 'var(--kosaf-src-login-bg)', fontFamily: 'var(--kosaf-font)', color: 'var(--kosaf-color-text-primary)' }}>
       <div style={{ maxWidth: 1596, margin: '0 auto', display: 'flex', justifyContent: 'space-between', paddingTop: 0 }}><span style={{ display: 'flex', gap: 20 }}><button style={link}>플랫폼 소개</button><button style={link}>도매시장 유통데이터</button></span><span style={{ display: 'flex', gap: 20 }}><button style={link}>로그인</button><button style={link}>회원가입</button><button style={link}>고객센터</button></span></div>
       <div style={{ textAlign: 'center', marginTop: 68 }}>
         <h1 style={{ margin: 0, fontSize: 40, fontWeight: 700 }}>로그인</h1>

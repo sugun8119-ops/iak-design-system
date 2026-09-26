@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.4.0 — 2026-09-27 (reference-based enhancement)
+- +3 KOSAF-extension components: PageHeader, FormErrorSummary, MobileFilterSheet (+3 cards → 97). 49 components.
+- FormField/Select a11y wiring, ProductTable align/sort/select/states, EmptyState variants, FilterPanel `bare`.
+- Kits: search (real demo filtering, 0-result reset, mobile sheet), signup (error summary, first-error focus, submit states), login (linked errors).
+- Pass 3 overflow (12) confirmed resolved by user on the new bundle.
+- See docs/reference-enhancement.md, docs/reference-map.json.
+
 ## 1.3.0 — 2026-09-26 (quality refinement, partial)
 - See docs/quality-refinement.md. ImageSlot fallback, ProductCard alignment, tabular numbers, shared demo catalogue, mobile overflow/CTA spacing, Korean card meta + real-size crops.
 - Correction: kit cards = 11 PC + 11 Mobile = 22.

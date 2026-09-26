@@ -16,17 +16,20 @@ Direct Figma access was not used; the exports above are the ground truth. Where 
 ## Index
 - `styles.css` — global entry; `@import`s only
 - `tokens/` — `fonts.css`, `colors.css` (81 Figma vars incl. layout in spacing/layout), `typography.css`, `typography-source.css`, `spacing.css`, `layout.css`, `source-extended.css` (observed raw colours, not Figma vars), `base.css`
-- `components/<name>/` — 46 React components, one folder each: `.jsx|.tsx` + `.d.ts` + `.prompt.md` + its own `@dsCard` (use, source node, props, states, PC/Mobile examples)
+- `components/<name>/` — 49 React components, one folder each: `.jsx|.tsx` + `.d.ts` + `.prompt.md` + its own `@dsCard` (use, source node, props, states, PC/Mobile examples)
 - `guidelines/docs/` — **Start here** cards: 01 시작 가이드, 02 카테고리 인덱스, 03 상태 매트릭스, 04 레이아웃 가이드, 05 QA, 06 AI 생성 가이드, 07 변경 이력
 - `guidelines/` — foundation specimen cards; `card-kit.js` (card chrome)
 - `ui_kits/` — 10 product UI kits → 22 kit cards (11 PC 1920 `index*.html` + 11 Mobile 390 `mobile*.html`), plus `core-components/` board 218:570; see `ui_kits/README.md`
 - `docs/source-coverage.md` (all 91 frames mapped), `docs/source-map.md`, `docs/migration-qa.md`, `docs/changelog.md`, `docs/source/` (raw exports)
 - `assets/` — `icons/` (11 source SVGs), `brand/` (logo 1:86099), `products/` (1:91190, 1:91522), `reference/` captures; provenance in `assets/README.md`
-- `docs/quality-refinement.md` — 1.3.0 visual refinement log (what changed / verified / remaining)
+- `docs/reference-enhancement.md` · `docs/reference-map.json` — 1.4.0 reference-based patterns (source → files → screens → verification)
+- `docs/quality-refinement.md` · `docs/visual-qa-pass3.json` — 1.3.0 visual refinement log (what changed / verified / remaining)
 - `SKILL.md` — Agent Skill entry
 
 ## Components
-46 components. Provenance: **master** = Figma component in 218:570 · **source** = derived from 1:85779 frames/geometry/captures (not a Figma master) · **ext** = KOSAF extension (behaviour/styling defined here).
+49 components. Provenance: **master** = Figma component in 218:570 · **source** = derived from 1:85779 frames/geometry/captures (not a Figma master) · **ext** = KOSAF extension (behaviour/styling defined here).
+
+**1.4.0 patterns (KOSAF extension, not Figma masters)**: PageHeader (제목→설명→행동), FormErrorSummary (필드 오류 vs 제출 실패), MobileFilterSheet (draft/applied 바텀시트). Cards total: 97 (incl. 22 kit cards).
 
 **Actions** — Button (master 218:590) · Badge (master 218:621) · Icon (source, 11 SVG) · FilterChip (source) · BottomActionBar (source)
 **Forms** — Input (master 218:600) · Search (master 218:601) · Checkbox (master 218:608) · Radio (master 218:614) · Select (source 1:98823/1:98859) · Textarea (source 1:87378) · FormField (source 1:89853) · FileUpload (source 1:89966) · DateField (source; native picker) · DateRange (source) · QuantityStepper (source Spinner) · SegmentedControl (ext, 기간 Toggle)
@@ -60,8 +63,8 @@ Helper exports (not separate families): `IconRegistry`, `DealBadge` (ProductCard
 - **Corners**: small and consistent — 5px for buttons, inputs, tabs, pagination, stepper; 3px checkbox; 10px modal; 15px badge (pill); 25px search (pill). Table rows are square.
 - **Borders**: 1px #DDDDDD everywhere; 2px only for focus (#0047ED) and the Search outline (#059B00). Hover never changes stroke colour (Primary hover keeps #059B00 stroke).
 - **Shadows**: none in the source components. Separation is by 1px stroke and #F7F7F7 fills, never elevation.
-- **Backgrounds**: flat white canvas; #F7F7F7 for subtle panels and table headers. No gradients, patterns, textures or blur. Imagery is real product photography (produce on white or natural backgrounds, saturated, warm) — used full-width on mobile detail pages; not supplied here.
-- **Cards**: none as a component. Content grouping = bordered table rows or #F7F7F7 blocks.
+- **Backgrounds**: flat white canvas; #F7F7F7 for subtle panels and table headers. No gradients, patterns, textures or blur. Imagery is real product photography (produce on white or natural backgrounds, saturated, warm) — used full-width on mobile detail pages; two source product photos supplied; other imagery remains placeholder.
+- **Cards**: flat only — ProductCard / MetricCard / CartItem use 1px #DDDDDD strokes or #F7F7F7 fills, radius ≤10 (image 10), no shadow. Most grouping is still bordered table rows or #F7F7F7 blocks.
 - **Hover**: fill shifts only — green → lighter green, white → #F7F7F7, red → #FF5858. **Press**: no pressed state in source. **Focus**: 2px blue stroke. **Disabled**: grey fill + #A0A0A0 text; never opacity alone.
 - **Selected**: fill change *and* text colour/weight change (Tab, PaginationItem, Stepper) — never colour-only.
 - **Motion**: none specified. Web components use a 150ms colour transition only; no bounces, slides or fades.

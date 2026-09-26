@@ -15,3 +15,6 @@ Key rules:
 - Heights: Button 34/42/45/50/70, Input 45, Search 579×50 r25, TableRow 70 desktop / 50 mobile. Desktop 1920, mobile 390–391 as separate layouts.
 - Assets: 11 source SVG icons (`<Icon>`), logo PNG 1:86099, 2 product photos. Do not draw other icons/logos; use placeholder slots. Korean, plain administrative copy, no emoji.
 - Traceability: `docs/source-map.md`, `docs/migration-qa.md`, raw exports in `docs/source/`.
+
+
+1.4.0: use PageHeader for every screen title, FormErrorSummary above forms, MobileFilterSheet for mobile filters (see docs/reference-enhancement.md).

@@ -1,0 +1,97 @@
+{
+ "date": "2026-09-26",
+ "baseline": "docs/visual-qa.json (external 94-card measurement: empty 0, broken img 0, overflow 12)",
+ "fixes": [
+  {
+   "card": "components/pagination/pagination.card.html",
+   "viewport": "700x380",
+   "measured": "cssW 681 / scrollW 740",
+   "fix": "5-page group + viewport 700x400",
+   "status": "fixed in source — re-measure pending"
+  },
+  {
+   "card": "guidelines/radius.html",
+   "viewport": "700x240",
+   "measured": "cssW 681 / scrollW 713",
+   "fix": "auto-fill grid + viewport 700x260",
+   "status": "fixed in source — re-measure pending"
+  },
+  {
+   "card": "ui_kits/core-components/index.html",
+   "viewport": "1612x900",
+   "measured": "cssW 1594 / scrollW 1612",
+   "fix": "viewport 1640x900, box-sizing reset",
+   "status": "fixed in source — re-measure pending"
+  },
+  {
+   "card": "ui_kits/search-results/index.html",
+   "viewport": "1920x1080",
+   "measured": "cssW 1901 / scrollW 1920",
+   "fix": "page shell minWidth 1920(stale bundle)/1636 → 0; Header/Footer use available width",
+   "status": "fixed in source — re-measure pending"
+  },
+  {
+   "card": "ui_kits/buyer-mypage/index.html",
+   "viewport": "1920x1080",
+   "measured": "cssW 1901 / scrollW 1920",
+   "fix": "page shell minWidth 1920(stale bundle)/1636 → 0; Header/Footer use available width",
+   "status": "fixed in source — re-measure pending"
+  },
+  {
+   "card": "ui_kits/product-detail/index.html",
+   "viewport": "1920x1080",
+   "measured": "cssW 1901 / scrollW 1920",
+   "fix": "page shell minWidth 1920(stale bundle)/1636 → 0; Header/Footer use available width",
+   "status": "fixed in source — re-measure pending"
+  },
+  {
+   "card": "ui_kits/cart/index.html",
+   "viewport": "1920x1080",
+   "measured": "cssW 1901 / scrollW 1920",
+   "fix": "page shell minWidth 1920(stale bundle)/1636 → 0; Header/Footer use available width",
+   "status": "fixed in source — re-measure pending"
+  },
+  {
+   "card": "ui_kits/order-complete/index.html",
+   "viewport": "1920x1080",
+   "measured": "cssW 1901 / scrollW 1920",
+   "fix": "page shell minWidth 1920(stale bundle)/1636 → 0; Header/Footer use available width",
+   "status": "fixed in source — re-measure pending"
+  },
+  {
+   "card": "ui_kits/checkout/index.html",
+   "viewport": "1920x1080",
+   "measured": "cssW 1901 / scrollW 1920",
+   "fix": "page shell minWidth 1920(stale bundle)/1636 → 0; Header/Footer use available width",
+   "status": "fixed in source — re-measure pending"
+  },
+  {
+   "card": "ui_kits/seller-myshop/index.html",
+   "viewport": "1920x1080",
+   "measured": "cssW 1901 / scrollW 1920",
+   "fix": "page shell minWidth 1920(stale bundle)/1636 → 0; Header/Footer use available width",
+   "status": "fixed in source — re-measure pending"
+  },
+  {
+   "card": "ui_kits/seller-signup/index.html",
+   "viewport": "1920x1080",
+   "measured": "cssW 1901 / scrollW 1920",
+   "fix": "page shell minWidth 1920(stale bundle)/1636 → 0; Header/Footer use available width",
+   "status": "fixed in source — re-measure pending"
+  },
+  {
+   "card": "ui_kits/support/index.html",
+   "viewport": "1920x1080",
+   "measured": "cssW 1901 / scrollW 1920",
+   "fix": "page shell minWidth 1920(stale bundle)/1636 → 0; Header/Footer use available width",
+   "status": "fixed in source — re-measure pending"
+  }
+ ],
+ "pending": [
+  "Re-measure all 94 on new bundle",
+  "Mobile 390/391 CSS width",
+  "States: Select/Modal open, Tab, 수량, form error, keyboard focus",
+  "Preview-height clipping"
+ ],
+ "agentVisualCheck": "none this turn (preview did not load)"
+}

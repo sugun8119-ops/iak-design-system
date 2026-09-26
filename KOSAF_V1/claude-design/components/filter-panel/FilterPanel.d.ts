@@ -17,6 +17,8 @@ export interface FilterPanelProps {
   onClose?: () => void;
   onlyOnSale?: boolean;
   onOnlyOnSale?: (v: boolean) => void;
+  /** Drop the dialog role (when wrapped by MobileFilterSheet). */
+  bare?: boolean;
   style?: React.CSSProperties;
 }
 export declare function FilterPanel(props: FilterPanelProps): JSX.Element | null;

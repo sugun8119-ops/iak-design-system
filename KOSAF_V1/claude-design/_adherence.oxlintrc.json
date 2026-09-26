@@ -33,16 +33,19 @@
               "components/filter-chip/**",
               "components/filter-panel/**",
               "components/footer/**",
+              "components/form-error-summary/**",
               "components/form-field/**",
               "components/header/**",
               "components/icon/**",
               "components/input/**",
               "components/metric-card/**",
+              "components/mobile-filter-sheet/**",
               "components/mobile-header/**",
               "components/mobile-menu/**",
               "components/modal/**",
               "components/notification-list/**",
               "components/order-summary/**",
+              "components/page-header/**",
               "components/pagination-item/**",
               "components/pagination/**",
               "components/price-trend/**",
@@ -186,8 +189,12 @@
         "message": "<DescriptionList> device must be one of 'desktop' | 'mobile'."
       },
       {
-        "selector": "JSXOpeningElement[name.name='EmptyState'] > JSXAttribute > JSXIdentifier[name!=/^(?:message|description|actionLabel|onAction|icon|device|style|key|ref|className|style|children)$/]",
-        "message": "<EmptyState> doesn't accept that prop. Declared props: message, description, actionLabel, onAction, icon, device, style."
+        "selector": "JSXOpeningElement[name.name='EmptyState'] > JSXAttribute > JSXIdentifier[name!=/^(?:variant|message|description|actionLabel|onAction|secondaryLabel|onSecondary|icon|device|style|key|ref|className|style|children)$/]",
+        "message": "<EmptyState> doesn't accept that prop. Declared props: variant, message, description, actionLabel, onAction, secondaryLabel, onSecondary, icon, device, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='EmptyState'] > JSXAttribute[name.name='variant'] > Literal[value!=/^(?:noResults|emptyCart|noHistory)$/]",
+        "message": "<EmptyState> variant must be one of 'noResults' | 'emptyCart' | 'noHistory'."
       },
       {
         "selector": "JSXOpeningElement[name.name='EmptyState'] > JSXAttribute[name.name='device'] > Literal[value!=/^(?:desktop|mobile)$/]",
@@ -206,8 +213,8 @@
         "message": "<FilterChip> variant must be one of 'toggle' | 'removable'."
       },
       {
-        "selector": "JSXOpeningElement[name.name='FilterPanel'] > JSXAttribute > JSXIdentifier[name!=/^(?:device|groups|value|defaultValue|onChange|keyword|onKeyword|onSearch|onClose|onlyOnSale|onOnlyOnSale|style|key|ref|className|style|children)$/]",
-        "message": "<FilterPanel> doesn't accept that prop. Declared props: device, groups, value, defaultValue, onChange, keyword, onKeyword, onSearch, onClose, onlyOnSale, onOnlyOnSale, style."
+        "selector": "JSXOpeningElement[name.name='FilterPanel'] > JSXAttribute > JSXIdentifier[name!=/^(?:device|groups|value|defaultValue|onChange|keyword|onKeyword|onSearch|onClose|onlyOnSale|onOnlyOnSale|bare|style|key|ref|className|style|children)$/]",
+        "message": "<FilterPanel> doesn't accept that prop. Declared props: device, groups, value, defaultValue, onChange, keyword, onKeyword, onSearch, onClose, onlyOnSale, onOnlyOnSale, bare, style."
       },
       {
         "selector": "JSXOpeningElement[name.name='FilterPanel'] > JSXAttribute[name.name='device'] > Literal[value!=/^(?:desktop|mobile)$/]",
@@ -220,6 +227,22 @@
       {
         "selector": "JSXOpeningElement[name.name='Footer'] > JSXAttribute[name.name='device'] > Literal[value!=/^(?:desktop|mobile)$/]",
         "message": "<Footer> device must be one of 'desktop' | 'mobile'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='FormErrorSummary'] > JSXAttribute > JSXIdentifier[name!=/^(?:status|errors|title|message|onRetry|retryLabel|focusKey|focusTarget|device|style|key|ref|className|style|children)$/]",
+        "message": "<FormErrorSummary> doesn't accept that prop. Declared props: status, errors, title, message, onRetry, retryLabel, focusKey, focusTarget, device, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='FormErrorSummary'] > JSXAttribute[name.name='status'] > Literal[value!=/^(?:idle|error|submitError|loading|success)$/]",
+        "message": "<FormErrorSummary> status must be one of 'idle' | 'error' | 'submitError' | 'loading' | 'success'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='FormErrorSummary'] > JSXAttribute[name.name='focusTarget'] > Literal[value!=/^(?:summary|firstField|none)$/]",
+        "message": "<FormErrorSummary> focusTarget must be one of 'summary' | 'firstField' | 'none'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='FormErrorSummary'] > JSXAttribute[name.name='device'] > Literal[value!=/^(?:desktop|mobile)$/]",
+        "message": "<FormErrorSummary> device must be one of 'desktop' | 'mobile'."
       },
       {
         "selector": "JSXOpeningElement[name.name='FormField'] > JSXAttribute > JSXIdentifier[name!=/^(?:label|required|error|help|htmlFor|layout|labelWidth|children|style|key|ref|className|style|children)$/]",
@@ -254,6 +277,10 @@
         "message": "<MetricCard> doesn't accept that prop. Declared props: label, unit, value, icon, width, onClick, style."
       },
       {
+        "selector": "JSXOpeningElement[name.name='MobileFilterSheet'] > JSXAttribute > JSXIdentifier[name!=/^(?:open|value|groups|onApply|onClose|count|applyLabel|title|inline|maxHeight|style|key|ref|className|style|children)$/]",
+        "message": "<MobileFilterSheet> doesn't accept that prop. Declared props: open, value, groups, onApply, onClose, count, applyLabel, title, inline, maxHeight, style."
+      },
+      {
         "selector": "JSXOpeningElement[name.name='MobileHeader'] > JSXAttribute > JSXIdentifier[name!=/^(?:title|logoSrc|onMenu|onSearch|onCart|cartCount|back|onBack|style|key|ref|className|style|children)$/]",
         "message": "<MobileHeader> doesn't accept that prop. Declared props: title, logoSrc, onMenu, onSearch, onCart, cartCount, back, onBack, style."
       },
@@ -276,6 +303,18 @@
       {
         "selector": "JSXOpeningElement[name.name='OrderSummary'] > JSXAttribute[name.name='layout'] > Literal[value!=/^(?:vertical|horizontal)$/]",
         "message": "<OrderSummary> layout must be one of 'vertical' | 'horizontal'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='PageHeader'] > JSXAttribute > JSXIdentifier[name!=/^(?:title|description|actions|align|device|size|level|style|key|ref|className|style|children)$/]",
+        "message": "<PageHeader> doesn't accept that prop. Declared props: title, description, actions, align, device, size, level, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='PageHeader'] > JSXAttribute[name.name='align'] > Literal[value!=/^(?:left|center)$/]",
+        "message": "<PageHeader> align must be one of 'left' | 'center'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='PageHeader'] > JSXAttribute[name.name='device'] > Literal[value!=/^(?:desktop|mobile)$/]",
+        "message": "<PageHeader> device must be one of 'desktop' | 'mobile'."
       },
       {
         "selector": "JSXOpeningElement[name.name='Pagination'] > JSXAttribute > JSXIdentifier[name!=/^(?:page|defaultPage|total|window|onChange|device|style|key|ref|className|style|children)$/]",
@@ -330,12 +369,20 @@
         "message": "<ProductListItem> device must be one of 'desktop' | 'mobile'."
       },
       {
-        "selector": "JSXOpeningElement[name.name='ProductTable'] > JSXAttribute > JSXIdentifier[name!=/^(?:rows|columns|device|onBuy|onLike|onCart|highlightFirst|style|key|ref|className|style|children)$/]",
-        "message": "<ProductTable> doesn't accept that prop. Declared props: rows, columns, device, onBuy, onLike, onCart, highlightFirst, style."
+        "selector": "JSXOpeningElement[name.name='ProductTable'] > JSXAttribute > JSXIdentifier[name!=/^(?:rows|columns|device|onBuy|onLike|onCart|highlightFirst|numericAlign|sort|onSort|selectable|selectedKeys|onSelectChange|rowKey|state|emptyMessage|errorMessage|onRetry|style|key|ref|className|style|children)$/]",
+        "message": "<ProductTable> doesn't accept that prop. Declared props: rows, columns, device, onBuy, onLike, onCart, highlightFirst, numericAlign, sort, onSort, selectable, selectedKeys, onSelectChange, rowKey, state, emptyMessage, errorMessage, onRetry, style."
       },
       {
         "selector": "JSXOpeningElement[name.name='ProductTable'] > JSXAttribute[name.name='device'] > Literal[value!=/^(?:desktop|mobile)$/]",
         "message": "<ProductTable> device must be one of 'desktop' | 'mobile'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='ProductTable'] > JSXAttribute[name.name='numericAlign'] > Literal[value!=/^(?:right|center)$/]",
+        "message": "<ProductTable> numericAlign must be one of 'right' | 'center'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='ProductTable'] > JSXAttribute[name.name='state'] > Literal[value!=/^(?:ready|loading|empty|error)$/]",
+        "message": "<ProductTable> state must be one of 'ready' | 'loading' | 'empty' | 'error'."
       },
       {
         "selector": "JSXOpeningElement[name.name='ProgressSteps'] > JSXAttribute > JSXIdentifier[name!=/^(?:steps|current|device|style|key|ref|className|style|children)$/]",
@@ -382,8 +429,8 @@
         "message": "<SegmentedControl> doesn't accept that prop. Declared props: options, value, defaultValue, onChange, height, style."
       },
       {
-        "selector": "JSXOpeningElement[name.name='Select'] > JSXAttribute > JSXIdentifier[name!=/^(?:options|value|defaultValue|onChange|placeholder|width|size|disabled|error|style|key|ref|className|style|children)$/]",
-        "message": "<Select> doesn't accept that prop. Declared props: options, value, defaultValue, onChange, placeholder, width, size, disabled, error, style."
+        "selector": "JSXOpeningElement[name.name='Select'] > JSXAttribute > JSXIdentifier[name!=/^(?:options|value|defaultValue|onChange|placeholder|width|size|disabled|error|id|style|key|ref|className|style|children)$/]",
+        "message": "<Select> doesn't accept that prop. Declared props: options, value, defaultValue, onChange, placeholder, width, size, disabled, error, id, style."
       },
       {
         "selector": "JSXOpeningElement[name.name='Select'] > JSXAttribute[name.name='size'] > Literal[value!=/^(?:list|form)$/]",
@@ -482,6 +529,9 @@
       "Footer": {
         "replaces": []
       },
+      "FormErrorSummary": {
+        "replaces": []
+      },
       "FormField": {
         "replaces": []
       },
@@ -497,6 +547,9 @@
       "MetricCard": {
         "replaces": []
       },
+      "MobileFilterSheet": {
+        "replaces": []
+      },
       "MobileHeader": {
         "replaces": []
       },
@@ -510,6 +563,9 @@
         "replaces": []
       },
       "OrderSummary": {
+        "replaces": []
+      },
+      "PageHeader": {
         "replaces": []
       },
       "Pagination": {

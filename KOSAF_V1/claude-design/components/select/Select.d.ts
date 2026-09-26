@@ -18,6 +18,9 @@ export interface SelectProps {
   disabled?: boolean;
   error?: boolean;
   'aria-label'?: string;
+  id?: string;
+  'aria-describedby'?: string;
+  'aria-invalid'?: boolean;
   style?: React.CSSProperties;
 }
 export declare function Select(props: SelectProps): JSX.Element | null;

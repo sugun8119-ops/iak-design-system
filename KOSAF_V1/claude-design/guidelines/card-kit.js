@@ -40,9 +40,14 @@
       h('div', { ref: ref, style: { width: p.w, transform: 'scale(' + p.s + ')', transformOrigin: '0 0' } }, p.children));
   }
   /* Real-size (1:1) crop of a wide component so text stays readable. x/y = offset into the component. */
+  /* Real scroll area (not a hidden clip): starts at x/y, every control stays reachable by scrolling. */
   function KCrop(p) {
-    return h('div', { style: { width: p.vw || 660, maxWidth: '100%', height: p.h, overflow: 'hidden', position: 'relative', border: '1px solid #EAEAEA', flex: '0 0 auto' } },
-      h('div', { style: { position: 'absolute', left: -(p.x || 0), top: -(p.y || 0), width: p.w } }, p.children));
+    var ref = React.useRef(null);
+    React.useLayoutEffect(function () { var el = ref.current; if (el) { el.scrollLeft = p.x || 0; el.scrollTop = p.y || 0; } }, [p.x, p.y]);
+    return h('div', { style: { display: 'flex', flexDirection: 'column', gap: 4, flex: '0 0 auto', maxWidth: '100%' } },
+      h('div', { ref: ref, tabIndex: 0, role: 'region', 'aria-label': '실제 크기 미리보기 (가로 스크롤)', style: { width: p.vw || 660, maxWidth: '100%', height: p.h, overflow: 'auto', border: '1px solid #EAEAEA', boxSizing: 'border-box' } },
+        h('div', { style: { width: p.w } }, p.children)),
+      h('div', { style: { fontSize: 11, color: '#888' } }, '1:1 크기 · 가로 스크롤로 전체 확인'));
   }
   /* Mobile viewport frame (390 or given width), content not clipped horizontally. */
   function KPhone(p) {

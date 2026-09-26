@@ -1,0 +1,124 @@
+{
+ "version": "1.4.0",
+ "date": "2026-09-27",
+ "note": "Public references were used for interaction/structure patterns only. No visual tokens (colour, type, radius, spacing scale) were imported. Refero Styles is an interpretive reconstruction, not official product tokens.",
+ "references": [
+  {
+   "id": "R1",
+   "url": "https://mobbin.com/glossary/text-field",
+   "pattern": "Persistent label, help, inline error",
+   "applied": "FormField aria-describedby/aria-invalid wiring, help above error, keep-all wrapping; Input rest-prop override; Select id/aria",
+   "files": [
+    "components/form-field/FormField.tsx",
+    "components/select/Select.tsx",
+    "ui_kits/seller-signup/screens.jsx",
+    "ui_kits/login/screens.jsx"
+   ],
+   "screens": [
+    "판매자 회원가입 PC/Mo",
+    "로그인 PC/Mo"
+   ],
+   "verification": "static source edit + check_design_system; browser verification pending (user)"
+  },
+  {
+   "id": "R2",
+   "url": "https://mobbin.com/glossary/table",
+   "url2": "https://styles.refero.design/style/b136f0a0-8064-4978-a18e-db54b9362c24",
+   "pattern": "Numeric right-align, sort, selection, table states",
+   "applied": "ProductTable numericAlign, onSort/aria-sort, selectable, loading/empty/error; mobile list tabular price",
+   "files": [
+    "components/product-table/ProductTable.tsx",
+    "components/product-table/product-table.card.html",
+    "ui_kits/search-results/screens.jsx"
+   ],
+   "screens": [
+    "검색 결과 PC (표)"
+   ],
+   "verification": "static source edit + check_design_system; browser verification pending (user)"
+  },
+  {
+   "id": "R3",
+   "url": "https://mobbin.com/glossary/empty-state",
+   "pattern": "Distinct empty states with meaningful action",
+   "applied": "EmptyState variant noResults/emptyCart/noHistory; search 0-result + reset",
+   "files": [
+    "components/empty-state/EmptyState.tsx",
+    "components/empty-state/empty-state.card.html",
+    "ui_kits/search-results/screens.jsx"
+   ],
+   "screens": [
+    "검색 결과 PC/Mo 0건"
+   ],
+   "verification": "static source edit + check_design_system; browser verification pending (user)"
+  },
+  {
+   "id": "R4",
+   "url": "https://mobbin.com/glossary/error-message",
+   "pattern": "Field error vs submit failure",
+   "applied": "New FormErrorSummary (error/submitError/loading/success, focusKey, first-field focus)",
+   "files": [
+    "components/form-error-summary/*",
+    "ui_kits/seller-signup/screens.jsx"
+   ],
+   "screens": [
+    "판매자 회원가입 PC/Mo"
+   ],
+   "verification": "static source edit + check_design_system; browser verification pending (user)"
+  },
+  {
+   "id": "R5",
+   "url": "https://mobbin.com/glossary/bottom-sheet",
+   "url2": "https://mobbin.com/glossary/chip",
+   "pattern": "Bottom sheet with draft/apply, removable chips",
+   "applied": "New MobileFilterSheet (draft≠applied, Esc/cancel revert, reset, focus trap/return, scroll lock, live count, fixed apply bar); FilterPanel bare prop; applied chips + 전체 초기화",
+   "files": [
+    "components/mobile-filter-sheet/*",
+    "components/filter-panel/FilterPanel.tsx",
+    "ui_kits/search-results/screens.jsx"
+   ],
+   "screens": [
+    "검색 결과 Mo"
+   ],
+   "verification": "static source edit + check_design_system; browser verification pending (user)"
+  },
+  {
+   "id": "R6",
+   "url": "https://styles.refero.design/style/6fb648be-cc69-4a84-a798-9f0f006922a0",
+   "pattern": "Search first, category vs filter separation, product info reading order (interpretive source, not official tokens)",
+   "applied": "No geometry change: Search 579×50 r25 and ProductCard source spec kept; search kit keyword + category/filter state unified in one data path",
+   "files": [
+    "ui_kits/search-results/screens.jsx"
+   ],
+   "screens": [
+    "검색 결과 PC/Mo"
+   ],
+   "verification": "static source edit + check_design_system; browser verification pending (user)"
+  },
+  {
+   "id": "R7",
+   "url": "https://land-book.com/websites/99034-ai-hrs-for-frontline-workforce-management-hunar-ai",
+   "url2": "https://land-book.com/websites/99527-meeting-scheduling-software-and-ai-meeting-tools-calendly",
+   "pattern": "Title → description → action",
+   "applied": "New PageHeader; shell PageHead delegates to it (search, mypage, myshop, cart, checkout, support, signup); signup completion centered",
+   "files": [
+    "components/page-header/*",
+    "ui_kits/_shared/shell.jsx",
+    "ui_kits/seller-signup/screens.jsx"
+   ],
+   "screens": [
+    "all kits using PageHead"
+   ],
+   "verification": "static source edit + check_design_system; browser verification pending (user)"
+  }
+ ],
+ "newComponents": [
+  "PageHeader",
+  "FormErrorSummary",
+  "MobileFilterSheet"
+ ],
+ "counts": {
+  "components": 49,
+  "cards": 97,
+  "kitCards": 22
+ }
+}

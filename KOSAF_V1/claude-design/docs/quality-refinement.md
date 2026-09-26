@@ -25,10 +25,17 @@
 - Foundation (18) + Start-here (7) cards: shared `guidelines/doc.css` baseline (padding 18/20, 13/19 body, 14/700 section heads, table/th rules, tabular numbers). 94 cards unchanged in count.
 - **Desktop product image check (1:91190)**: pixel analysis of `product-desktop__1-91190.png` (556×556) → 99.9% opaque, 72.7% non-white pixels, i.e. the asset has real content (not blank). Also rendered in the ProductCard card (apple visible). Kept as the PC apple image; 1:91522 remains the mobile image. If a white box appears it is a load/timing issue, and ImageSlot now shows "이미지 준비중" on load error instead of white.
 
+## Pass 3 — overflow fixes (12)
+Input: external 94-card measurement (`docs/visual-qa.json`): empty 0 · broken img 0 · horizontal overflow 12.
+- 9 PC kits (1901→1920): page shell `minWidth` (1920 in stale bundle, 1636 in source) → 0 in shell/login/signup; Header/Footer lay out in available width. No overflow clipping.
+- Pagination card (681→740): 5-page group, viewport 700x400. Radius (681→713): auto-fill grid, 700x260. Core board (1594→1612): viewport 1640x900 + box-sizing.
+- Record: `docs/visual-qa-pass3.json`. Re-measurement on new bundle **pending (user)**; my preview did not load, so nothing in pass 3 is visually verified by me.
+
 ## Remaining gaps
 - Representative visual review of pass-2 kits: by user in browser (not done by me).
 - No accessibility audit; keyboard handling is implemented, not certified.
 
 ## Files changed
+Pass 3: ui_kits/_shared/shell.jsx, ui_kits/{login,seller-signup}/screens.jsx, pagination.card.html, guidelines/radius.html, core-components/index.html, docs/visual-qa-pass3.json, 05-qa.html, readme.md.
 Pass 2: ui_kits/{login,buyer-mypage,seller-myshop,support}/screens.jsx, guidelines/doc.css (new), 25 guideline/doc cards (+doc.css link).
 components/product-card/{ProductCard.tsx,ProductCard.d.ts,product-card.card.html}, product-list-item, cart-item, compare-table, description-list, order-summary, product-table, metric-card, quantity-stepper (.tsx), all 46 *.card.html (meta), guidelines/card-kit.js, tokens/base.css, ui_kits/_shared/shell.jsx, ui_kits/{search-results,product-detail,cart,checkout,seller-signup}/screens.jsx.
