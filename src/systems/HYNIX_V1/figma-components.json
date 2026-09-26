@@ -469,8 +469,116 @@
           "height": 92
         }
       ]
+    },
+    "SegmentTabs": {
+      "nodeId": "52:30",
+      "url": "https://www.figma.com/design/Nh9NILHBye8VS0jGtph3UB?node-id=52-30",
+      "variants": [
+        {
+          "id": "52:6",
+          "name": "selected=Overview",
+          "width": 440,
+          "height": 88
+        },
+        {
+          "id": "52:14",
+          "name": "selected=Telemetry",
+          "width": 440,
+          "height": 88
+        },
+        {
+          "id": "52:22",
+          "name": "selected=Events",
+          "width": 440,
+          "height": 88
+        }
+      ]
+    },
+    "ProgressMeter": {
+      "nodeId": "52:58",
+      "url": "https://www.figma.com/design/Nh9NILHBye8VS0jGtph3UB?node-id=52-58",
+      "variants": [
+        {
+          "id": "52:35",
+          "name": "state=Normal",
+          "width": 440,
+          "height": 128
+        },
+        {
+          "id": "52:40",
+          "name": "state=Warning",
+          "width": 440,
+          "height": 128
+        },
+        {
+          "id": "52:45",
+          "name": "state=Critical",
+          "width": 440,
+          "height": 128
+        },
+        {
+          "id": "52:50",
+          "name": "state=Zero",
+          "width": 440,
+          "height": 128
+        },
+        {
+          "id": "52:54",
+          "name": "state=Unavailable",
+          "width": 440,
+          "height": 128
+        }
+      ]
+    },
+    "StateTimeline": {
+      "nodeId": "52:141",
+      "url": "https://www.figma.com/design/Nh9NILHBye8VS0jGtph3UB?node-id=52-141",
+      "variants": [
+        {
+          "id": "52:63",
+          "name": "state=Ready",
+          "width": 440,
+          "height": 452
+        },
+        {
+          "id": "52:102",
+          "name": "state=Missing",
+          "width": 440,
+          "height": 452
+        }
+      ]
+    },
+    "TelemetryTable": {
+      "nodeId": "52:203",
+      "url": "https://www.figma.com/design/Nh9NILHBye8VS0jGtph3UB?node-id=52-203",
+      "variants": [
+        {
+          "id": "52:146",
+          "name": "state=Ready",
+          "width": 680,
+          "height": 360
+        },
+        {
+          "id": "52:173",
+          "name": "state=Empty",
+          "width": 680,
+          "height": 116
+        },
+        {
+          "id": "52:176",
+          "name": "state=Unavailable",
+          "width": 680,
+          "height": 360
+        }
+      ]
     }
   },
   "note": "Native Figma local components. This is a source map, not a published Figma Code Connect integration.",
-  "qualityRevision": "1.4"
+  "qualityRevision": "1.4",
+  "version": "1.5.0",
+  "currentTemplates": {
+    "Main": "53:3",
+    "Sub": "53:402",
+    "Detail": "53:454"
+  }
 }

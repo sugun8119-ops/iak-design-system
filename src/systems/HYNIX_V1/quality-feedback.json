@@ -1,0 +1,10 @@
+{
+  "system": "HYNIX_V1",
+  "revision": "1.5.0",
+  "scope": "Independent industrial monitoring only; 30 IAK case categories retained",
+  "expected": "Clear six-state semantics, time-series context, missing-data handling, equipment discovery and detail tabs",
+  "correction": "New monitoring templates and 4 reusable components; preserved gray/orange/blue/Pretendard identity",
+  "verified": "53 tests and build pass; 12 browser width/page combinations no overflow; offline-filter-to-detail keyboard flow checked",
+  "regressions": "tests/hynix-monitoring.test.mjs",
+  "registryNote": "System entry, not ordinary template registry; no duplicate registry template added"
+}

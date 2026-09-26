@@ -213,5 +213,49 @@
       "status": "completed",
       "verifiedComplete": true
     }
+  },
+  "monitoring15": {
+    "revision": "1.5.0",
+    "date": "2026-09-26",
+    "automatedTests": {
+      "passed": 53,
+      "failed": 0,
+      "log": "npm test"
+    },
+    "build": "passed",
+    "browserWidths": [
+      1440,
+      1024,
+      390
+    ],
+    "browserPages": [
+      "index",
+      "sub",
+      "detail",
+      "components"
+    ],
+    "pageOverflow": false,
+    "verifiedBehaviors": [
+      "Offline filter returns Module 06",
+      "Search composes with filters",
+      "ArrowRight activates Telemetry panel",
+      "Offline commands disabled",
+      "Missing telemetry is not zero",
+      "15m/1h changes plot samples",
+      "Zero meter has numeric 0"
+    ],
+    "figma": {
+      "variables": 96,
+      "scopeIssues": 0,
+      "missingSyntax": 0,
+      "newComponentSets": 4,
+      "currentTemplatePage": "53:2"
+    },
+    "limitations": [
+      "Native Figma templates are static editable compositions; HTML carries runtime behavior.",
+      "Claude 1.5 published output pending verification.",
+      "Safari, Firefox and screen reader not tested.",
+      "Figma team library remains unpublished."
+    ]
   }
 }

@@ -33,3 +33,6 @@ Figma의 상세 화면은 Viewer/Command와 Trend/Events의 열을 균등 정렬
 
 ## Claude1.4 resume completed
 Session quota reset; resumed the existing project, completed pending implementation and final check_design_system (no issues). Published UI was verified after reload. Detailed evidence and limitations:07-quality-1.4-handoff.md and qa-results.json.
+
+## 1.5 — 2026-09-26
+Added monitoring overview, six-state semantics, four reusable components, searchable equipment table, keyboard detail tabs and honest offline states. Pretendard variable corrected in Figma. See 08-monitoring-1.5.md and qa-results.json.

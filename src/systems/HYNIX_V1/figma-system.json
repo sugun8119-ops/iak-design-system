@@ -1,7 +1,7 @@
 {
   "id": "HYNIX_V1",
   "name": "Relay Control",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "category": "Industrial / Device Control / Monitoring",
   "provenance": {
     "referenceUrl": "https://www.behance.net/gallery/107517297/SK-hynix-system-ic-Device-Control-GUI-Design",
@@ -62,6 +62,46 @@
       "white": {
         "$type": "color",
         "$value": "#FFFFFF"
+      },
+      "critical": {
+        "$type": "color",
+        "$value": "#783DA0"
+      },
+      "plot": {
+        "$type": "color",
+        "$value": "#162337"
+      },
+      "plotMuted": {
+        "$type": "color",
+        "$value": "#B8C6DC"
+      },
+      "plotLine": {
+        "$type": "color",
+        "$value": "#80B4FF"
+      },
+      "successSoft": {
+        "$type": "color",
+        "$value": "#E2F0E9"
+      },
+      "warningSoft": {
+        "$type": "color",
+        "$value": "#FFF0CE"
+      },
+      "criticalSoft": {
+        "$type": "color",
+        "$value": "#F1E7F8"
+      },
+      "alarmSoft": {
+        "$type": "color",
+        "$value": "#FBE7EB"
+      },
+      "infoSoft": {
+        "$type": "color",
+        "$value": "#E4ECFC"
+      },
+      "neutralSoft": {
+        "$type": "color",
+        "$value": "#E1E6ED"
       }
     },
     "spacing": {
@@ -271,7 +311,17 @@
       "desktop": 1200
     },
     "minTouchTarget": 44,
-    "responsive": "4 device columns above 1200px, 2 at 601–1200px, 1 at <=600px; sidebar stacks at <=900px"
+    "responsive": "4 device columns above 1200px, 2 at 601–1200px, 1 at <=600px; sidebar stacks at <=900px",
+    "monitoring15": {
+      "sidebar": 208,
+      "workspace": 32,
+      "gutter": 24,
+      "breakpoints": {
+        "twoColumns": 1100,
+        "horizontalNav": 800,
+        "singleColumn": 480
+      }
+    }
   },
   "components": [
     {
@@ -350,9 +400,9 @@
       "name": "StatusBadge",
       "figmaName": "HYNIX_V1/StatusBadge",
       "anatomy": "Dot; textual state",
-      "variants": "status=online|warning|offline|unknown",
+      "variants": "status=alarm|critical|warning|success|info|neutral; legacy online|offline|unknown",
       "autoLayout": "Horizontal; gap 4; padding 4/8; hug content",
-      "behavior": "Always show text; unknown is not healthy",
+      "behavior": "Noninteractive symbol + label + semantic color. Connection is independent of severity.",
       "tokenBindings": {
         "text": "color.text",
         "surface": "color.surface",
@@ -388,7 +438,7 @@
       "anatomy": "Title; line; axis units; accessible summary",
       "variants": "state=ready|loading|empty|error",
       "autoLayout": "Fill width; 180px plot; 16px padding",
-      "behavior": "Supply text summary; never encode series only by color",
+      "behavior": "15m/1h controls change synthetic samples. Show axes, percent unit, threshold legend, textual summary. Navy is restricted to analytical panels.",
       "tokenBindings": {
         "text": "color.text",
         "surface": "color.surface",
@@ -514,6 +564,74 @@
         "vertical": "HUG"
       },
       "provenance": "Added to cover IAK Toasts case, using only project-specific styling."
+    },
+    {
+      "name": "SegmentTabs",
+      "figmaName": "SegmentTabs",
+      "anatomy": "Linked tab and panel IDs; ArrowLeft/Right, Home/End; roving tabindex.",
+      "variants": "selected=Overview|Telemetry|Events",
+      "behavior": "Linked tab and panel IDs; ArrowLeft/Right, Home/End; roving tabindex.",
+      "autoLayout": "Fill width; intrinsic height; 24px panel padding; 16px related gap",
+      "tokenBindings": {
+        "text": "color.text",
+        "surface": "color.surface",
+        "focus": "color.selection"
+      },
+      "resizing": {
+        "horizontal": "FILL",
+        "vertical": "HUG"
+      }
+    },
+    {
+      "name": "ProgressMeter",
+      "figmaName": "ProgressMeter",
+      "anatomy": "Value and unit; valid zero; null has no numeric meter role.",
+      "variants": "state=Normal|Warning|Critical|Zero|Unavailable",
+      "behavior": "Value and unit; valid zero; null has no numeric meter role.",
+      "autoLayout": "Fill width; intrinsic height; 24px panel padding; 16px related gap",
+      "tokenBindings": {
+        "text": "color.text",
+        "surface": "color.surface",
+        "focus": "color.selection"
+      },
+      "resizing": {
+        "horizontal": "FILL",
+        "vertical": "HUG"
+      }
+    },
+    {
+      "name": "StateTimeline",
+      "figmaName": "StateTimeline",
+      "anatomy": "Duration proportional bands, start/end times and explicit missing intervals.",
+      "variants": "state=Ready|Missing",
+      "behavior": "Duration proportional bands, start/end times and explicit missing intervals.",
+      "autoLayout": "Fill width; intrinsic height; 24px panel padding; 16px related gap",
+      "tokenBindings": {
+        "text": "color.text",
+        "surface": "color.surface",
+        "focus": "color.selection"
+      },
+      "resizing": {
+        "horizontal": "FILL",
+        "vertical": "HUG"
+      }
+    },
+    {
+      "name": "TelemetryTable",
+      "figmaName": "TelemetryTable",
+      "anatomy": "Equipment link, connection, health, units, timestamp; em dash for missing readings.",
+      "variants": "state=Ready|Empty|Unavailable",
+      "behavior": "Equipment link, connection, health, units, timestamp; em dash for missing readings.",
+      "autoLayout": "Fill width; intrinsic height; 24px panel padding; 16px related gap",
+      "tokenBindings": {
+        "text": "color.text",
+        "surface": "color.surface",
+        "focus": "color.selection"
+      },
+      "resizing": {
+        "horizontal": "FILL",
+        "vertical": "HUG"
+      }
     }
   ],
   "templates": [
@@ -694,5 +812,27 @@
     "date": "2026-09-26",
     "guidance": "운영 정보 위계: Main 지표 아래에 연결 끊김 요약을 배치하고 장비 확인으로 이어진다. 숫자는 분모·단위·snapshot 시간을 함께 표시한다. 장비 카드 메타데이터는 Zone + Snapshot time, 오프라인은 Unavailable로 구분한다. 이벤트는 시간/심각도/메시지 열을 사용하고 좁은 화면에서는 메시지를 다음 줄에 배치한다. 오프라인 상세는 최신 추이를 숨기고 마지막 수신 시각을 명시한다.\n\nFigma의 상세 화면은 Viewer/Command와 Trend/Events의 열을 균등 정렬했다. Figma는 8개 가상 장비(7 online, Unit 08 offline, 14:32 snapshot)를, 실행 가능한 웹 예시는 6개(5 online, Module 06 offline, 09:42 snapshot)를 사용한다. 두 렌더 예시는 동일 데이터의 복제본이 아니며 각 예시 안에서 수치를 일치시킨다.",
     "scope": "Independent project style; existing 30 case categories and 13 component sets retained"
+  },
+  "qualityRevision15": {
+    "date": "2026-09-26",
+    "components": 17,
+    "references": [
+      "https://ix.siemens.io/docs/components/badge/guide",
+      "https://ix.siemens.io/docs/components/tabs/code",
+      "https://ix.siemens.io/docs/components/card/guide",
+      "https://ix.siemens.io/docs/components/kpi/code",
+      "https://play.grafana.org/dashboards/f/examples/examples"
+    ],
+    "normalization": "References inform status semantics and monitoring structure only. Authored palette, typography and synthetic graphics retained.",
+    "previewEntry": "preview/index.html",
+    "runtime": "preview/industrial.js",
+    "stylesheet": "preview/industrial.css",
+    "figmaPage": "53:2",
+    "figmaTemplates": {
+      "Main": "53:3",
+      "Sub": "53:402",
+      "Detail": "53:454"
+    },
+    "legacyTemplates": "Page 20 retained as earlier revision; page 24 is current."
   }
 }

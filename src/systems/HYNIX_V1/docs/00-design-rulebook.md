@@ -1,3 +1,5 @@
+> Current revision: [Monitoring 1.5](08-monitoring-1.5.md) supersedes conflicting sizing, inventory and sample-data guidance below. Earlier details remain for legacy variants.
+
 # HYNIX_V1 · Design Rulebook
 
 IAK Design Studio는 케이스 항목 구조만 제공한다. 색·서체·간격·라운드·그림자·레이아웃은 이 프로젝트의 figma-system.json을 따른다. IAK/RAIS 시각 토큰을 상속하지 않는다.

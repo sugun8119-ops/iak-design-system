@@ -1,3 +1,5 @@
+> Current revision: [Monitoring 1.5](08-monitoring-1.5.md) supersedes conflicting sizing, inventory and sample-data guidance below. Earlier details remain for legacy variants.
+
 # QA Checklist
 
 - case-coverage.json의 30개 항목과 실제 파일을 확인한다.

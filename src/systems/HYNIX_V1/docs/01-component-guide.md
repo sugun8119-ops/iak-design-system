@@ -1,3 +1,5 @@
+> Current revision: [Monitoring 1.5](08-monitoring-1.5.md) supersedes conflicting sizing, inventory and sample-data guidance below. Earlier details remain for legacy variants.
+
 # HYNIX_V1 · Component Guide
 
 기존 핵심 12종 + 케이스 보완 Toast 1종.

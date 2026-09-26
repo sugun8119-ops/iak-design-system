@@ -1,3 +1,5 @@
+> Current revision: [Monitoring 1.5](08-monitoring-1.5.md) supersedes conflicting sizing, inventory and sample-data guidance below. Earlier details remain for legacy variants.
+
 # Layout Patterns
 
 4 device columns above 1200px, 2 at 601–1200px, 1 at <=600px; sidebar stacks at <=900px

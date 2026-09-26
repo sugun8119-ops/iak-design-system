@@ -1,3 +1,5 @@
+> Current revision: [Monitoring 1.5](08-monitoring-1.5.md) supersedes conflicting sizing, inventory and sample-data guidance below. Earlier details remain for legacy variants.
+
 # AI Prompt Guide
 
 이 프로젝트의 claude-system.md와 figma-system.json을 먼저 읽고 case-coverage.json에서 필요한 케이스를 찾으세요. HYNIX_V1의 독립 시각 스타일로 Main/Sub/Detail 중 요청한 화면을 만드세요. IAK Design Studio는 케이스 항목 구조만 제공한다. 색·서체·간격·라운드·그림자·레이아웃은 이 프로젝트의 figma-system.json을 따른다. IAK/RAIS 시각 토큰을 상속하지 않는다.

@@ -1,3 +1,5 @@
+> Current revision: [Monitoring 1.5](08-monitoring-1.5.md) supersedes conflicting sizing, inventory and sample-data guidance below. Earlier details remain for legacy variants.
+
 # State System
 
 Default → hover → pressed → focus를 구분한다. Focus는 selection 색의 2px outline, offset 3px. Disabled는 native disabled이며 색만 흐리게 하지 않는다. Loading은 aria-busy와 동일 크기 skeleton, Empty는 이유와 reset, Error는 메시지와 retry 및 입력 보존.
