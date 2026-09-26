@@ -1,0 +1,48 @@
+{
+  "version": "1.6.0",
+  "entry": "preview/product.html",
+  "source": "preview/source/product-patterns.js",
+  "namespace": "KOREXProduct",
+  "components": [
+    "ProductSelector",
+    "ProductComparison",
+    "ApplicationCase",
+    "ConsultationForm"
+  ],
+  "references": [
+    {
+      "url": "https://www.usm.com/en/",
+      "principle": "용도와 제품 구성을 연결하는 탐색"
+    },
+    {
+      "url": "https://www.vitra.com/en-us/professionals/projects",
+      "principle": "프로젝트 맥락과 전문가 상담으로 이어지는 정보 구조"
+    }
+  ],
+  "policy": "Composition principles only. Comparison and demo journey are original adaptations; not observed IAK cases. Existing foundation and 138 cases preserved.",
+  "figma": {
+    "url": "https://www.figma.com/design/MR9qvFSq9w5HAD2wnQObdn?node-id=71-2",
+    "pageId": "71:2",
+    "boards": [
+      {
+        "id": "71:3",
+        "name": "KOREX / Product comparison",
+        "width": 960,
+        "height": 863
+      },
+      {
+        "id": "71:38",
+        "name": "KOREX / Application case",
+        "width": 960,
+        "height": 622
+      },
+      {
+        "id": "71:51",
+        "name": "KOREX / Consultation",
+        "width": 960,
+        "height": 657
+      }
+    ],
+    "representation": "Editable static composition references; web behavior and responsive layout are authoritative in product.html"
+  }
+}

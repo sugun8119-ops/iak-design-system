@@ -23,3 +23,5 @@ React 18.3.1 런타임과 MIT 라이선스가 vendor/에 포함되어 인터넷 
 - 목록과 상세는 공통 상세 레이아웃을 보여주는 조합 시연이며 개별 콘텐츠 라우팅은 없습니다.
 - 입력값은 메모리에만 있으며 실제 전송·구독·저장은 하지 않습니다. 새로고침하면 초기화됩니다.
 - Figma 연결은 `handoff/figma-supplementary.json`을 참조하세요. 편집 가능한 정적 흐름 참고이며 모든 웹 폼 컨트롤을 픽셀 단위로 복제한 화면은 아닙니다.
+
+제품 확장 1.6: `product.html`. 사용법: `source/product-patterns.md`. 출처: `handoff/product-patterns.json`.
