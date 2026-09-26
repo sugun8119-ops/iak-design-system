@@ -18,3 +18,7 @@ Dashboard, Analytics, Table, Detail, Settings, Billing, AI Chat, Builder, Modal,
 
 ## UI kits (3)
 Parent (`zem/ui_kits/parent.html`), Schedule (`schedule.html`), Activity (`activity.html`).
+
+## Reusable templates
+
+[Parent dashboard, weekly schedule and child activity](templates/README.md) are registered through Claude @template. Their `static DATA` is editable. Native `startingPoints` remains empty.

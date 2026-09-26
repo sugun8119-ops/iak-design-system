@@ -67,3 +67,5 @@ Dashboard, Analytics, Table, Detail, Settings, Billing, AI Chat, Builder, Modal,
 
 ## 9. Checks before shipping
 Open `zem/qa.html` in the current environment: all cases render, no horizontal overflow at 1440/834/375, no targets under 36px at 375, 66 contrast pairs pass, Nanum 400/700 loaded. Never cite uploaded or historical QA records as current results.
+
+Reusable Claude templates: `templates/README.md` (ParentDashboard, WeeklySchedule, KidActivity). Templates registry is separate from startingPoints.

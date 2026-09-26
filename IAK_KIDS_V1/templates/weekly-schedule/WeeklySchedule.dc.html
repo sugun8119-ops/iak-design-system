@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<!-- @template name="주간 일정 · Weekly schedule" description="요일×시간 시간표 + 일정 추가 Dialog(검증 포함) + 오늘 목록. 상태: default · empty · dialog · validation-error. 데이터는 로직의 static DATA에서 수정." -->
+<helmet><script src="./ds-base.js"></script></helmet>
+<div class="zs">
+<nav class="zs-rail" aria-label="주 메뉴"><div class="wm">Little Everyday</div><a href="#"><x-import component-from-global-scope="RAISDesignSystem_019e07.Icon" name="eva:home-fill" size="{{ 22 }}" hint-size="22px,22px"></x-import><span>홈</span></a><a href="#"><x-import component-from-global-scope="RAISDesignSystem_019e07.Icon" name="solar:chart-2-bold" size="{{ 22 }}" hint-size="22px,22px"></x-import><span>리포트</span></a><a href="#"><x-import component-from-global-scope="RAISDesignSystem_019e07.Icon" name="solar:checklist-bold" size="{{ 22 }}" hint-size="22px,22px"></x-import><span>미션</span></a><a href="#" aria-current="page"><x-import component-from-global-scope="RAISDesignSystem_019e07.Icon" name="eva:calendar-fill" size="{{ 22 }}" hint-size="22px,22px"></x-import><span>일정</span></a><a href="#"><x-import component-from-global-scope="RAISDesignSystem_019e07.Icon" name="solar:settings-bold" size="{{ 22 }}" hint-size="22px,22px"></x-import><span>설정</span></a></nav>
+<div class="zs-main">
+<header class="zs-header"><div class="zs-top"><span class="zs-ib" aria-hidden="true"></span><div class="grow">일정</div><button type="button" class="zs-ib" aria-label="알림 2개"><x-import component-from-global-scope="RAISDesignSystem_019e07.Icon" name="solar:bell-bold" size="{{ 22 }}" hint-size="22px,22px"></x-import><span class="zs-dot"></span></button></div>
+<div class="zs-hero"><span class="zs-chip"><i>민</i>민서 · 초등 3학년</span><h1>이번 주 시간표</h1><p>{{ sub }}</p></div></header>
+<main class="zs-body" data-state="{{ state }}">
+<x-import component-from-global-scope="RAISDesignSystem_019e07.Card" title="주간 시간표" hint-size="100%,320px">
+<sc-if value="{{ hasItems }}" hint-placeholder-val="{{ true }}"><div class="tt" role="table" aria-label="주간 시간표"><div class="h"></div><sc-for list="{{ days }}" as="d" hint-placeholder-count="5"><div class="h">{{ d.label }}</div></sc-for><sc-for list="{{ grid }}" as="row" hint-placeholder-count="3"><div class="h" style="align-self:center">{{ row.slot }}</div><sc-for list="{{ row.cells }}" as="c" hint-placeholder-count="5"><div style="background:{{ c.bg }};font-weight:700;overflow-wrap:anywhere">{{ c.text }}</div></sc-for></sc-for></div></sc-if>
+<sc-if value="{{ noItems }}" hint-placeholder-val="{{ false }}"><div class="empty"><div class="plate"><x-import component-from-global-scope="RAISDesignSystem_019e07.Icon" name="eva:calendar-fill" size="{{ 32 }}" hint-size="32px,32px"></x-import></div><h2>이번 주 일정이 비어 있어요</h2><p>학원·숙제·놀이 시간을 추가하면 시간표에 바로 보여요.</p></div></sc-if>
+<div class="legend"><sc-for list="{{ legend }}" as="l" hint-placeholder-count="4"><span><i style="background:{{ l.color }}"></i>{{ l.label }}</span></sc-for></div>
+<div class="row" style="justify-content:flex-end"><x-import component-from-global-scope="RAISDesignSystem_019e07.Button" on-click="{{ openDialog }}" hint-size="120px,44px"><x-import component-from-global-scope="RAISDesignSystem_019e07.Icon" name="eva:plus-fill" size="{{ 18 }}" hint-size="18px,18px"></x-import>일정 추가</x-import></div>
+</x-import>
+<x-import component-from-global-scope="RAISDesignSystem_019e07.Card" title="오늘 · 수요일" hint-size="100%,160px">
+<sc-if value="{{ hasToday }}" hint-placeholder-val="{{ true }}"><ul class="rows"><sc-for list="{{ today }}" as="i" hint-placeholder-count="2"><li><span class="tile {{ i.tile }}"><x-import component-from-global-scope="RAISDesignSystem_019e07.Icon" name="eva:calendar-fill" size="{{ 20 }}" hint-size="20px,20px"></x-import></span><div class="t"><b>{{ i.t }}</b><span>{{ i.meta }}</span></div></li></sc-for></ul></sc-if>
+<sc-if value="{{ noToday }}" hint-placeholder-val="{{ false }}"><p class="muted">오늘은 일정이 없어요.</p></sc-if>
+</x-import>
+</main></div>
+<nav class="zs-tabbar" aria-label="하단 탭"><a href="#"><x-import component-from-global-scope="RAISDesignSystem_019e07.Icon" name="eva:home-fill" size="{{ 24 }}" hint-size="24px,24px"></x-import>홈</a><a href="#" aria-current="page"><x-import component-from-global-scope="RAISDesignSystem_019e07.Icon" name="eva:calendar-fill" size="{{ 24 }}" hint-size="24px,24px"></x-import>일정</a><a href="#"><x-import component-from-global-scope="RAISDesignSystem_019e07.Icon" name="solar:checklist-bold" size="{{ 24 }}" hint-size="24px,24px"></x-import>미션</a><a href="#"><x-import component-from-global-scope="RAISDesignSystem_019e07.Icon" name="eva:more-horizontal-fill" size="{{ 24 }}" hint-size="24px,24px"></x-import>더보기</a></nav>
+<x-import component-from-global-scope="RAISDesignSystem_019e07.Dialog" open="{{ open }}" on-open-change="{{ setOpen }}" title="일정 추가" description="요일과 시간을 고르면 시간표에 바로 들어가요." hint-size="0px,0px"><div class="stack">
+<x-import component-from-global-scope="RAISDesignSystem_019e07.TextField" label="일정 이름" value="{{ name }}" on-change="{{ onName }}" error="{{ err }}" placeholder="예: 미술 학원" hint-size="100%,72px"></x-import>
+<!-- option 목록은 DATA.days / slots / kinds 순서와 같게 유지하세요 (value = 인덱스 / 종류 이름) -->
+<div class="row" style="flex-wrap:nowrap"><div style="flex:1;min-width:0"><x-import component-from-global-scope="RAISDesignSystem_019e07.Select" label="요일" value="{{ form.d }}" on-change="{{ onDay }}" hint-size="100%,72px"><option value="0">월</option><option value="1">화</option><option value="2">수</option><option value="3">목</option><option value="4">금</option></x-import></div><div style="flex:1;min-width:0"><x-import component-from-global-scope="RAISDesignSystem_019e07.Select" label="시간" value="{{ form.s }}" on-change="{{ onSlot }}" hint-size="100%,72px"><option value="0">1시</option><option value="1">3시</option><option value="2">5시</option></x-import></div></div>
+<x-import component-from-global-scope="RAISDesignSystem_019e07.Select" label="종류" value="{{ form.k }}" on-change="{{ onKind }}" hint-size="100%,72px"><option value="학원">학원</option><option value="숙제">숙제</option><option value="놀이">놀이</option><option value="운동">운동</option></x-import>
+<div class="row" style="justify-content:flex-end"><x-import component-from-global-scope="RAISDesignSystem_019e07.Button" variant="secondary" on-click="{{ closeDialog }}" hint-size="72px,44px">취소</x-import><x-import component-from-global-scope="RAISDesignSystem_019e07.Button" on-click="{{ save }}" hint-size="72px,44px">추가</x-import></div>
+</div></x-import>
+<sc-if value="{{ toast }}" hint-placeholder-val="{{ false }}"><ol class="zem-toast-viewport"><x-import component-from-global-scope="RAISDesignSystem_019e07.Toast" tone="{{ toast.tone }}" title="{{ toast.title }}" description="{{ toast.description }}" on-close="{{ closeToast }}" hint-size="320px,64px"></x-import></ol></sc-if>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;state&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;default&quot;,&quot;empty&quot;,&quot;dialog&quot;,&quot;validation-error&quot;],&quot;default&quot;:&quot;default&quot;,&quot;tsType&quot;:&quot;'default'|'empty'|'dialog'|'validation-error'&quot;,&quot;section&quot;:&quot;상태&quot;}}">
+class Component extends DCLogic {
+  // ▼ 수정할 데이터 — 요일·시간 슬롯·일정 종류(색 토큰)·일정. 오늘 = todayIndex.
+  static DATA = {
+    week: '9월 넷째 주', todayIndex: 2,
+    days: ['월', '화', '수', '목', '금'],
+    slots: ['1시', '3시', '5시'],
+    kinds: { 학원: ['var(--zem-cyan-100)', 'cyan'], 숙제: ['var(--zem-lime-100)', 'lime'], 놀이: ['var(--zem-mint-100)', 'mint'], 운동: ['var(--zem-violet-100)', 'violet'] },
+    items: [
+      { d: 0, s: 0, t: '수학 학원', k: '학원' }, { d: 1, s: 1, t: '줄넘기', k: '운동' }, { d: 2, s: 0, t: '영어 학원', k: '학원' },
+      { d: 2, s: 2, t: '독서 20분', k: '숙제' }, { d: 3, s: 1, t: '놀이터', k: '놀이' }, { d: 4, s: 2, t: '피아노', k: '학원' }
+    ]
+  };
+  init(s) {
+    return { phase: s || 'default', items: s === 'empty' ? [] : Component.DATA.items.slice(), open: s === 'dialog' || s === 'validation-error', name: '', err: s === 'validation-error' ? '일정 이름을 입력해 주세요.' : '', form: { d: '0', s: '1', k: '숙제' }, toast: null };
+  }
+  state = this.init(this.props.state);
+  componentDidUpdate(p) { if (p.state !== this.props.state) this.setState(this.init(this.props.state)); }
+  componentWillUnmount() { clearTimeout(this.t); }
+  save() {
+    const n = this.state.name.trim();
+    if (!n) return this.setState({ err: '일정 이름을 입력해 주세요.' });
+    const f = this.state.form;
+    this.setState(s => ({ items: [...s.items, { d: +f.d, s: +f.s, t: n, k: f.k }], open: false, name: '', err: '', toast: { tone: 'success', title: '일정을 추가했어요', description: n } }));
+    clearTimeout(this.t); this.t = setTimeout(() => this.setState({ toast: null }), 4000);
+  }
+  renderVals() {
+    const D = Component.DATA, { items, form } = this.state;
+    const cell = (d, s) => items.filter(i => i.d === d && i.s === s);
+    const setF = k => e => this.setState({ form: { ...form, [k]: e.target.value } });
+    const today = D.slots.flatMap((_, si) => cell(D.todayIndex, si)).map(i => ({ t: i.t, meta: D.slots[i.s] + ' · ' + i.k, tile: D.kinds[i.k][1] }));
+    return {
+      state: this.state.phase, sub: items.length + '개 일정 · ' + D.week,
+      hasItems: items.length > 0, noItems: items.length === 0,
+      days: D.days.map((label, v) => ({ label, v: String(v) })), slots: D.slots.map((label, v) => ({ label, v: String(v) })),
+      grid: D.slots.map((slot, si) => ({ slot, cells: D.days.map((_, di) => { const c = cell(di, si); return { text: c.map(i => i.t).join(' · '), bg: c.length ? D.kinds[c[0].k][0] : 'var(--iak-kids-background-canvas)' }; }) })),
+      legend: Object.entries(D.kinds).map(([label, v]) => ({ label, color: v[0] })),
+      today, hasToday: today.length > 0, noToday: today.length === 0,
+      open: this.state.open, name: this.state.name, err: this.state.err || undefined, form,
+      setOpen: v => this.setState(v ? { open: true } : { open: false, err: '' }),
+      openDialog: () => this.setState({ open: true }), closeDialog: () => this.setState({ open: false, err: '' }),
+      onName: e => this.setState({ name: e.target.value, err: '' }), onDay: setF('d'), onSlot: setF('s'), onKind: setF('k'),
+      save: () => this.save(),
+      toast: this.state.toast, closeToast: () => this.setState({ toast: null })
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -76,3 +76,5 @@ Open `zem/qa.html` in the current environment: all cases render, no horizontal o
 
 ---
 Source of truth: `zem/claude-system.md` (this file mirrors it).
+
+Reusable Claude templates: `templates/README.md` (ParentDashboard, WeeklySchedule, KidActivity). Templates registry is separate from startingPoints.

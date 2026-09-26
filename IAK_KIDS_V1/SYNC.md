@@ -18,8 +18,14 @@ Disabled text is 4.43:1 against its disabled background; the internal target is 
 
 Font files match SHA-256 of NAVER's official download. `fonts/OFL.txt` contains the current official license notice retrieved from NAVER; the official ZIP itself has no license file.
 
-Real-device, Safari and screen-reader testing remain outstanding. Figma native coverage is intentionally distinct from the expanded web pattern collection. Reusable Claude starting-point templates are not registered yet.
+Real-device, Safari and screen-reader testing remain outstanding. Figma native coverage is intentionally distinct from the expanded web pattern collection. Three Claude @template entries are registered in the Templates group. The separate startingPoints field remains empty by platform behavior. See templates/README.md.
 
 ## Compatibility
 
 The `zem/` paths and `window.ZEM` namespace remain for import compatibility only. The active product name is IAK KIDS_V1 · Little Everyday. Historical ZEM_V1 content is not the active implementation.
+
+## 2026-09-26 template handoff verification
+
+Downloaded templates were opened locally in Chrome. Parent request approval updates 3→2; child mission completion updates 1→2; weekly schedule creation updates 6→7. Template navigation links are placeholders to connect in each consuming project.
+
+Safari QA: 140/140 rendered, 120/120 pattern cases without document overflow, 66/66 contrast pairs. The long-option Select component preview still reports a width warning; do not treat Safari QA as entirely clean. Physical-device and screen-reader checks remain unperformed.

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<!-- @template name="아이 활동 · Kid activity" description="아이용 오늘의 미션: 진행률 + 미션 완료 토글 + 포인트. 상태: default · all-done · empty · loading. 데이터는 로직의 static DATA에서 수정." -->
+<helmet><script src="./ds-base.js"></script></helmet>
+<div class="zs">
+<nav class="zs-rail" aria-label="주 메뉴"><div class="wm">Little Everyday</div><a href="#" aria-current="page"><x-import component-from-global-scope="RAISDesignSystem_019e07.Icon" name="eva:home-fill" size="{{ 22 }}" hint-size="22px,22px"></x-import><span>홈</span></a><a href="#"><x-import component-from-global-scope="RAISDesignSystem_019e07.Icon" name="solar:chart-2-bold" size="{{ 22 }}" hint-size="22px,22px"></x-import><span>기록</span></a><a href="#"><x-import component-from-global-scope="RAISDesignSystem_019e07.Icon" name="solar:checklist-bold" size="{{ 22 }}" hint-size="22px,22px"></x-import><span>미션</span></a><a href="#"><x-import component-from-global-scope="RAISDesignSystem_019e07.Icon" name="eva:calendar-fill" size="{{ 22 }}" hint-size="22px,22px"></x-import><span>일정</span></a></nav>
+<div class="zs-main">
+<header class="zs-header"><div class="zs-top"><span class="zs-ib" aria-hidden="true"></span><div class="grow">오늘의 미션</div><button type="button" class="zs-ib" aria-label="알림 2개"><x-import component-from-global-scope="RAISDesignSystem_019e07.Icon" name="solar:bell-bold" size="{{ 22 }}" hint-size="22px,22px"></x-import><span class="zs-dot"></span></button></div>
+<div class="zs-hero"><span class="zs-chip"><i>민</i>민서 · 초등 3학년</span><h1>{{ hero }}</h1><p>{{ sub }}</p></div></header>
+<main class="zs-body" data-state="{{ state }}">
+<sc-if value="{{ isLoading }}" hint-placeholder-val="{{ false }}"><div class="stack" aria-busy="true" aria-label="미션을 불러오는 중"><x-import component-from-global-scope="RAISDesignSystem_019e07.Card" hint-size="100%,100px"><x-import component-from-global-scope="RAISDesignSystem_019e07.Skeleton" height="{{ 16 }}" width="40%" hint-size="40%,16px"></x-import><x-import component-from-global-scope="RAISDesignSystem_019e07.Skeleton" height="{{ 12 }}" hint-size="100%,12px"></x-import></x-import><x-import component-from-global-scope="RAISDesignSystem_019e07.Card" hint-size="100%,220px"><x-import component-from-global-scope="RAISDesignSystem_019e07.Skeleton" height="{{ 160 }}" hint-size="100%,160px"></x-import></x-import></div></sc-if>
+<sc-if value="{{ isEmpty }}" hint-placeholder-val="{{ false }}"><div class="empty"><div class="plate"><x-import component-from-global-scope="RAISDesignSystem_019e07.Icon" name="solar:target-bold" size="{{ 32 }}" hint-size="32px,32px"></x-import></div><h2>오늘은 미션이 없어요</h2><p>보호자가 미션을 보내면 이곳에 바로 보여요.</p></div></sc-if>
+<sc-if value="{{ hasMissions }}" hint-placeholder-val="{{ true }}">
+<x-import component-from-global-scope="RAISDesignSystem_019e07.Card" hint-size="100%,100px"><div class="row between"><b style="font:var(--zem-text-title)">진행률</b><b class="num">{{ pctText }}</b></div><div class="prog" role="progressbar" aria-valuenow="{{ pct }}" aria-valuemin="0" aria-valuemax="100" aria-label="미션 진행률"><i style="width:{{ pctWidth }};transition:width var(--zem-motion-slow) var(--zem-ease)"></i></div></x-import>
+<x-import component-from-global-scope="RAISDesignSystem_019e07.Card" title="미션" hint-size="100%,320px"><ul class="rows"><sc-for list="{{ missions }}" as="x" hint-placeholder-count="4"><li><span class="tile {{ x.tile }}"><x-import component-from-global-scope="RAISDesignSystem_019e07.Icon" name="solar:target-bold" size="{{ 20 }}" hint-size="20px,20px"></x-import></span><div class="t"><b>{{ x.n }}</b><sc-if value="{{ x.hasPt }}" hint-placeholder-val="{{ true }}"><span>{{ x.ptText }}</span></sc-if><sc-if value="{{ x.noPt }}" hint-placeholder-val="{{ false }}"><span class="miss">포인트 미정</span></sc-if></div><x-import component-from-global-scope="RAISDesignSystem_019e07.Button" size="sm" variant="{{ x.variant }}" aria-pressed="{{ x.done }}" on-click="{{ x.toggle }}" hint-size="88px,36px">{{ x.label }}</x-import></li></sc-for></ul></x-import>
+</sc-if>
+</main></div>
+<nav class="zs-tabbar" aria-label="하단 탭"><a href="#" aria-current="page"><x-import component-from-global-scope="RAISDesignSystem_019e07.Icon" name="eva:home-fill" size="{{ 24 }}" hint-size="24px,24px"></x-import>홈</a><a href="#"><x-import component-from-global-scope="RAISDesignSystem_019e07.Icon" name="eva:calendar-fill" size="{{ 24 }}" hint-size="24px,24px"></x-import>일정</a><a href="#"><x-import component-from-global-scope="RAISDesignSystem_019e07.Icon" name="solar:checklist-bold" size="{{ 24 }}" hint-size="24px,24px"></x-import>미션</a><a href="#"><x-import component-from-global-scope="RAISDesignSystem_019e07.Icon" name="eva:more-horizontal-fill" size="{{ 24 }}" hint-size="24px,24px"></x-import>더보기</a></nav>
+<sc-if value="{{ toast }}" hint-placeholder-val="{{ false }}"><ol class="zem-toast-viewport"><x-import component-from-global-scope="RAISDesignSystem_019e07.Toast" tone="{{ toast.tone }}" title="{{ toast.title }}" description="{{ toast.description }}" on-close="{{ closeToast }}" hint-size="320px,64px"></x-import></ol></sc-if>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;state&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;default&quot;,&quot;all-done&quot;,&quot;empty&quot;,&quot;loading&quot;],&quot;default&quot;:&quot;default&quot;,&quot;tsType&quot;:&quot;'default'|'all-done'|'empty'|'loading'&quot;,&quot;section&quot;:&quot;상태&quot;}}">
+class Component extends DCLogic {
+  // ▼ 수정할 데이터 — 오늘의 미션. pt:null = 포인트 미정(누락 표시).
+  static DATA = {
+    missions: [
+      { id: 1, n: '줄넘기 100번', pt: 50, done: true },
+      { id: 2, n: '영어 단어 20개 외우기', pt: 100, done: false },
+      { id: 3, n: '방 정리하고 사진 보내기', pt: 50, done: false },
+      { id: 4, n: '가족에게 오늘 있었던 일 이야기하기', pt: null, done: false }
+    ]
+  };
+  init(s) {
+    const m = Component.DATA.missions;
+    return { phase: s || 'default', toast: null, m: s === 'empty' ? [] : s === 'all-done' ? m.map(x => ({ ...x, done: true })) : m.map(x => ({ ...x })) };
+  }
+  state = this.init(this.props.state);
+  componentDidUpdate(p) { if (p.state !== this.props.state) this.setState(this.init(this.props.state)); }
+  componentWillUnmount() { clearTimeout(this.t); }
+  toggle(x) {
+    this.setState(s => ({ m: s.m.map(y => y.id === x.id ? { ...y, done: !y.done } : y) }));
+    if (!x.done) { clearTimeout(this.t); this.setState({ toast: { tone: 'success', title: '미션 완료! 보호자 확인을 기다려요', description: x.n } }); this.t = setTimeout(() => this.setState({ toast: null }), 4000); }
+  }
+  renderVals() {
+    const { m, phase } = this.state, loading = phase === 'loading';
+    const done = m.filter(x => x.done).length, pts = m.filter(x => x.done).reduce((a, x) => a + (x.pt || 0), 0);
+    const pct = m.length ? Math.round(done / m.length * 100) : 0;
+    return {
+      state: phase, isLoading: loading, isEmpty: !loading && m.length === 0, hasMissions: !loading && m.length > 0,
+      hero: loading ? '불러오는 중…' : !m.length ? '오늘은 쉬는 날!' : done === m.length ? '오늘 미션을 모두 끝냈어요' : m.length + '개 중 ' + done + '개 완료',
+      sub: '오늘 모은 포인트 ' + pts + 'P',
+      pct, pctText: pct + '%', pctWidth: pct + '%',
+      missions: m.map(x => ({ n: x.n, done: x.done, tile: x.done ? 'mint' : 'lime', hasPt: x.pt != null, noPt: x.pt == null, ptText: x.pt + 'P', variant: x.done ? 'secondary' : 'primary', label: x.done ? '완료됨' : '완료하기', toggle: () => this.toggle(x) })),
+      toast: this.state.toast, closeToast: () => this.setState({ toast: null })
+    };
+  }
+}
+</script>
+</body>
+</html>
