@@ -11,8 +11,8 @@
   "paletteUnchanged": true,
   "registeredFilesPresent": true,
   "httpStatus": 200,
-  "visualVerification": "NOT COMPLETED: Claude preview blank; local browser tab CDP repeatedly timed out",
-  "interactionVerification": "Claude reports code-level checks only; not independently verified in browser",
+  "visualVerification": "Chrome: 63 state/viewport cases passed horizontal overflow and 36px-height checks at 375/834/1440. Mobile and desktop screenshots reviewed. Final badge nowrap change needs post-fix visual confirmation.",
+  "interactionVerification": "Chrome: child switch click and arrow key, parent request approval, required goal form validation and save, empty schedule validation and save, focus start/pause/resume/complete, mission undo/recomplete passed.",
   "figmaSynced": false,
   "githubSynced": false,
   "githubReviewCandidate": true,
@@ -32,6 +32,9 @@
       "undo and recompletion"
     ]
   },
-  "githubStatus": "review branch; not merged",
-  "fontLicense": "Preserved previously verified official NAVER notice from repository"
+  "githubStatus": "draft PR #1; not merged",
+  "fontLicense": "Preserved previously verified official NAVER notice from repository",
+  "runtimeFix": "Removed 3 legacy ds-base entrypoints from exported bundle; they recursively injected the same bundle. Fixed QA state URL precedence.",
+  "claudeSourcePatched": false,
+  "browserCases": 63
 }

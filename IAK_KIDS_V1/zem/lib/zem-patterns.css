@@ -32,8 +32,10 @@
 .zp-tl-card{display:flex;flex-direction:column;gap:4px;padding:8px 12px;border-radius:var(--iak-kids-radius-md);min-width:0}
 .zp-tl [data-status=current] .zp-tl-card{background:var(--iak-kids-state-selected);box-shadow:inset 3px 0 0 var(--iak-kids-primary-default)}
 .zp-tl-row{display:flex;gap:8px;align-items:flex-start;justify-content:space-between;min-width:0}
+.zp-tl-row .zem-badge{flex-shrink:0;white-space:nowrap}
 .zp-tl-title{font:var(--zem-text-body-strong);color:var(--iak-kids-text-primary);overflow-wrap:anywhere;word-break:keep-all;min-width:0}
-.zp-tl [data-status=done] .zp-tl-title{color:var(--iak-kids-text-secondary)}
+.zp-tl [data-status=done] .zp-tl-row .zem-badge{flex-shrink:0;white-space:nowrap}
+.zp-tl-title{color:var(--iak-kids-text-secondary)}
 .zp-tl-meta{font:var(--zem-text-caption);font-size:14px;color:var(--iak-kids-text-secondary)}
 .zp-tl-btn{all:unset;box-sizing:border-box;display:block;width:100%;border-radius:var(--iak-kids-radius-md);cursor:pointer}
 .zp-tl-btn:hover .zp-tl-card{background:var(--iak-kids-state-hover)}

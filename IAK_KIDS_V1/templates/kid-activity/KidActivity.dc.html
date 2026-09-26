@@ -46,7 +46,7 @@ class Component extends DCLogic {
     ]
   };
   static LONG = [{ id: 11, n: '동생이랑 같이 레고 정리하고 상자마다 이름표를 붙여서 선반에 올려 두기', pt: 80, done: false, time: '16:00', dur: 25, steps: [{ title: '색깔별로 레고 조각을 나눠서 상자에 담기' }, { title: '이름표 스티커에 상자 이름 쓰기' }] }, { id: 12, n: '물 여섯 컵 마시기', pt: 20, done: true, time: '18:00', dur: 5 }];
-  phaseOf(p) { return p || new URLSearchParams(location.search).get('state') || 'default'; }
+  phaseOf(p) { return new URLSearchParams(location.search).get('state') || p || 'default'; }
   init(p) {
     const s = this.phaseOf(p), m = s === 'long-text' ? Component.LONG : Component.DATA.missions;
     return { phase: s, toast: null, m: s === 'empty' ? [] : s === 'all-done' ? m.map(x => ({ ...x, done: true })) : m.map(x => ({ ...x })) };

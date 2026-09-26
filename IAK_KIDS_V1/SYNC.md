@@ -1,3 +1,15 @@
+# 2026-09-27 runtime recovery and browser QA
+
+The exported bundle contained three legacy `iak-kids-v2.2-templates/templates/*/ds-base.js` entrypoints. Each injected `_ds_bundle.js` again, causing recursive loading and unresponsive tabs. Removed those entrypoints from the local handoff. Also made explicit `?state=` overrides win over template default props; the QA harness now checks the actual rendered state and waits for the font styles.
+
+Chrome browser verification: 63 template state/viewport cases (375, 834, 1440) without horizontal overflow or targets below the harness's 36px height threshold. This is not a 44px target audit. Real click checks passed child switching (including arrow keys), request approval, goal validation/save, schedule validation/save, timer start/pause/resume/completion and mission undo/recompletion.
+
+Visual review found a wrapping status badge at 375px. Added `flex-shrink:0;white-space:nowrap` to timeline badges. Post-fix screenshot confirmation remains pending because browser control detached. Figma is still the previous native library. Claude project sources must exclude the legacy entrypoint copies on regeneration; this local bundle patch alone does not change Claude's generator inputs.
+
+Earlier blocked status below is historical and superseded by the checks above. Screen-reader, real-device, Safari and complete keyboard-flow testing remain unperformed.
+
+---
+
 # IAK KIDS_V1 · v2.3 review handoff
 
 Downloaded from the existing Claude Design project on 2026-09-26. This is a review candidate, not a visually verified release.

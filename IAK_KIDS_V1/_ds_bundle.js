@@ -3066,71 +3066,7 @@ const TopBar = ({
 window.TopBar = TopBar;
 })(); } catch (e) { __ds_ns.__errors.push({ path: "archive/iak/ui_kits/rais-dashboard/TopBar.jsx", error: String((e && e.message) || e) }); }
 
-// iak-kids-v2.2-templates/templates/kid-activity/ds-base.js
-try { (() => {
-// IAK KIDS_V1 · Little Everyday v2.2 — template loader. Consuming project: point `base` at the bound _ds/<folder> tree.
-(() => {
-  const base = '../..';
-  for (const p of ['styles.css']) {
-    const l = document.createElement('link');
-    l.rel = 'stylesheet';
-    l.href = base + '/' + p;
-    document.head.appendChild(l);
-  }
-  // Bundle components are thin wrappers over window.ZEM → icons.js + zem-ui.js must load first, in order.
-  for (const p of ['zem/lib/icons.js', 'zem/lib/zem-ui.js', '_ds_bundle.js']) {
-    const s = document.createElement('script');
-    s.src = base + '/' + p;
-    s.async = false;
-    s.onerror = () => console.error('ds-base.js: failed to load ' + s.src + ' — fix the base path in ds-base.js');
-    document.head.appendChild(s);
-  }
-})();
-})(); } catch (e) { __ds_ns.__errors.push({ path: "iak-kids-v2.2-templates/templates/kid-activity/ds-base.js", error: String((e && e.message) || e) }); }
-
-// iak-kids-v2.2-templates/templates/parent-dashboard/ds-base.js
-try { (() => {
-// IAK KIDS_V1 · Little Everyday v2.2 — template loader. Consuming project: point `base` at the bound _ds/<folder> tree.
-(() => {
-  const base = '../..';
-  for (const p of ['styles.css']) {
-    const l = document.createElement('link');
-    l.rel = 'stylesheet';
-    l.href = base + '/' + p;
-    document.head.appendChild(l);
-  }
-  // Bundle components are thin wrappers over window.ZEM → icons.js + zem-ui.js must load first, in order.
-  for (const p of ['zem/lib/icons.js', 'zem/lib/zem-ui.js', '_ds_bundle.js']) {
-    const s = document.createElement('script');
-    s.src = base + '/' + p;
-    s.async = false;
-    s.onerror = () => console.error('ds-base.js: failed to load ' + s.src + ' — fix the base path in ds-base.js');
-    document.head.appendChild(s);
-  }
-})();
-})(); } catch (e) { __ds_ns.__errors.push({ path: "iak-kids-v2.2-templates/templates/parent-dashboard/ds-base.js", error: String((e && e.message) || e) }); }
-
-// iak-kids-v2.2-templates/templates/weekly-schedule/ds-base.js
-try { (() => {
-// IAK KIDS_V1 · Little Everyday v2.2 — template loader. Consuming project: point `base` at the bound _ds/<folder> tree.
-(() => {
-  const base = '../..';
-  for (const p of ['styles.css']) {
-    const l = document.createElement('link');
-    l.rel = 'stylesheet';
-    l.href = base + '/' + p;
-    document.head.appendChild(l);
-  }
-  // Bundle components are thin wrappers over window.ZEM → icons.js + zem-ui.js must load first, in order.
-  for (const p of ['zem/lib/icons.js', 'zem/lib/zem-ui.js', '_ds_bundle.js']) {
-    const s = document.createElement('script');
-    s.src = base + '/' + p;
-    s.async = false;
-    s.onerror = () => console.error('ds-base.js: failed to load ' + s.src + ' — fix the base path in ds-base.js');
-    document.head.appendChild(s);
-  }
-})();
-})(); } catch (e) { __ds_ns.__errors.push({ path: "iak-kids-v2.2-templates/templates/weekly-schedule/ds-base.js", error: String((e && e.message) || e) }); }
+// Handoff fix: exclude three legacy ds-base entrypoints; each recursively injects this bundle.
 
 // iak-kids-v2.2-templates/zem/lib/icons.js
 try { (() => {

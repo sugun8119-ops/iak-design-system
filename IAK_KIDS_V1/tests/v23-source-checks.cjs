@@ -15,6 +15,7 @@ assert.equal(crypto.createHash('sha256').update(read('zem/lib/iak-kids-tokens.cs
   '1bc036af78fec73539e7f46ad4c44ce2e6167857987100d36594f4aa498f0f55');
 new vm.Script(read('zem/lib/zem-patterns.js'));
 new vm.Script(read('_ds_bundle.js'));
+assert.ok(!read('_ds_bundle.js').includes("'_ds_bundle.js'"), 'A library bundle must not inject its own entrypoint');
 class DCLogic {
   constructor(props) { this.props = props; }
   setState(change) { this.state = {...this.state, ...(typeof change === 'function' ? change(this.state) : change)}; }
@@ -29,11 +30,15 @@ for (const [name, dir, file] of [
   const html = read(`templates/${dir}/${file}.dc.html`);
   const source = html.match(/<script type="text\/x-dc"[^>]*>([\s\S]*?)<\/script>/)[1];
   const props = JSON.parse(html.match(/data-props="([^"]+)"/)[1].replace(/&quot;/g, '"'));
+  const testLocation = {search: ''};
   const Component = vm.runInNewContext(source + '\nComponent', {
-    DCLogic, URLSearchParams, location: {search: ''},
+    DCLogic, URLSearchParams, location: testLocation,
     setTimeout: () => 1, clearTimeout: () => {}, Date
   });
   classes[name] = Component;
+  testLocation.search = '?state=loading';
+  assert.equal(new Component({state: 'default'}).renderVals().state, 'loading', 'QA query must override default props');
+  testLocation.search = '';
   for (const state of props.state.options) {
     const c = new Component({state});
     const values = c.renderVals();

@@ -64,7 +64,7 @@ class Component extends DCLogic {
   // long-text 상태용 긴 한글 예시
   static LONG = { name: '김민서아름다운별', meta: '초등학교 3학년 2반 방과후 돌봄교실', schedule: [{ id: 1, time: '15:00', title: '할머니 댁에 가서 저녁 먹고 오늘 배운 노래를 불러 드리기', duration: 90, status: 'current' }], goals: [{ id: 1, title: '주말마다 화분에 물 주고 강아지 산책시키기', repeat: '주말', points: 50 }], request: { id: 9, what: '토요일 오후에 친구들과 도서관 갔다가 근처 공원에서 자전거 타고 저녁 먹기 전까지 돌아오기', why: '숙제를 미리 다 끝냈고 친구 부모님도 함께 가세요' } };
   static REPEAT = { daily: '매일', weekdays: '평일', weekend: '주말', weekly: '일주일에 한 번' };
-  phaseOf(p) { return p || new URLSearchParams(location.search).get('state') || 'default'; }
+  phaseOf(p) { return new URLSearchParams(location.search).get('state') || p || 'default'; }
   init(p) {
     const s = this.phaseOf(p), D = Component.DATA, L = Component.LONG;
     let kids = D.kids.map(k => ({ ...k, goals: k.goals.slice() })), requests = D.requests.slice();

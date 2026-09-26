@@ -58,7 +58,7 @@ class Component extends DCLogic {
     ]
   };
   static LONG = [{ d: 2, s: 1, t: '할머니 댁에 가서 저녁 먹고 오늘 배운 노래를 불러 드리기', k: '놀이', dur: 90 }, { d: 2, s: 2, t: '내일 가져갈 준비물을 알림장 보고 가방에 모두 넣기', k: '숙제', dur: 15 }];
-  phaseOf(p) { return p || new URLSearchParams(location.search).get('state') || 'default'; }
+  phaseOf(p) { return new URLSearchParams(location.search).get('state') || p || 'default'; }
   init(p) {
     const s = this.phaseOf(p), D = Component.DATA;
     let items = s === 'empty' || s === 'loading' ? [] : D.items.slice();
