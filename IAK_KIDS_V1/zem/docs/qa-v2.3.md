@@ -35,3 +35,12 @@ ZIP 무결성, 등록 경로 존재, 팔레트 파일 동일성을 확인했습�
 재귀 번들 로딩과 상태 쿼리 우선순위를 수정한 뒤 63개 상태/화면 폭 조합을 검수했습니다. 모든 조합에서 요청한 상태가 실제 렌더되었으며 가로 넘침과 검사 기준(높이 36px 미만) 경고가 없었습니다. 44px 터치 대상 감사가 아닙니다. 결과는 `tests/browser-2026-09-27/`에 저장했습니다.
 
 실제 조작 확인: 자녀 클릭·방향키, 요청 수락, 목표 필수값 오류·초점 이동·저장, 일정 빈 값 오류·추가, 타이머 시작·정지·재개·완료, 미션 취소·재완료. 최종 모바일 배지 nowrap 변경의 수정 후 시각 확인은 연결 해제로 미완료입니다. Figma와 Claude 원본의 재생성 입력은 아직 수정되지 않았습니다.
+
+
+## 2026-09-27 — v2.3.1 timeline follow-up
+
+- Fixed completed-title selector scope and kept status badges on one line. Versioned stylesheet loading to invalidate stale browser CSS.
+- Verified activity/schedule default and long-text states at 375/834/1440: 12 cases with no horizontal overflow or targets under the harness 36px height threshold. This does not constitute a complete 44px/accessibility audit.
+- Actual 375px activity badge measurement: 완료/지금/예정/예정 all `white-space: nowrap`, height 26px (non-interactive status labels). Screenshot inspected.
+- Evidence: `tests/browser-2026-09-27/v231-timeline-regression.jsonl`.
+- Original Claude Design source repair submitted; regenerated export still pending verification. Figma remains v2.2.

@@ -1,7 +1,7 @@
 // IAK KIDS_V1 · Little Everyday v2.3 — template loader. Consuming project: point `base` at the bound _ds/<folder> tree.
 (() => {
   const base = '../..';
-  for (const p of ['styles.css']) {
+  for (const p of ['styles.css?v=2.3.1']) {
     const l = document.createElement('link'); l.rel = 'stylesheet'; l.href = base + '/' + p; document.head.appendChild(l);
   }
   // Bundle components are thin wrappers over window.ZEM → icons.js + zem-ui.js must load first, in order. zem-patterns.js (v2.3 patterns) loads last and fills the namespace if the bundle predates v2.3.

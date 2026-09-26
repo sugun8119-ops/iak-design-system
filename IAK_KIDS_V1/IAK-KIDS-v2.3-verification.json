@@ -11,7 +11,7 @@
   "paletteUnchanged": true,
   "registeredFilesPresent": true,
   "httpStatus": 200,
-  "visualVerification": "Chrome: 63 state/viewport cases passed horizontal overflow and 36px-height checks at 375/834/1440. Mobile and desktop screenshots reviewed. Final badge nowrap change needs post-fix visual confirmation.",
+  "visualVerification": "Chrome: initial 63 state/viewport cases passed horizontal overflow and 36px-height checks at 375/834/1440. Post-fix 12 timeline cases (activity/schedule × default/long-text × 3 widths) passed. At 375px all four activity status badges are nowrap and 26px tall; screenshot reviewed. This is not full accessibility certification.",
   "interactionVerification": "Chrome: child switch click and arrow key, parent request approval, required goal form validation and save, empty schedule validation and save, focus start/pause/resume/complete, mission undo/recomplete passed.",
   "figmaSynced": false,
   "githubSynced": false,
@@ -36,5 +36,7 @@
   "fontLicense": "Preserved previously verified official NAVER notice from repository",
   "runtimeFix": "Removed 3 legacy ds-base entrypoints from exported bundle; they recursively injected the same bundle. Fixed QA state URL precedence.",
   "claudeSourcePatched": false,
-  "browserCases": 63
+  "browserCases": 63,
+  "postFixBrowserCases": 12,
+  "claudeSourceStatus": "Fix request submitted in original project on 2026-09-27; completion and regenerated export pending verification."
 }
