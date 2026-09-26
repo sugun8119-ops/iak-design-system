@@ -33,3 +33,8 @@ Current browser implementation: industrial.css + industrial.js. Legacy styles.cs
 
 ## Reference normalization
 Siemens iX Badge, Tabs, Card and KPI informed status semantics and component organization; Grafana examples informed time-series and state-history structure. Their branded palette, icons, layouts and data are not bundled. These are newly authored interpretations, not extracted source tokens.
+
+
+## 2026-09-26 integration completion
+
+Claude Design 1.5 is published; Main/Sub/Detail and chart window, offline filter, unavailable values, disabled control and keyboard tabs were verified on the published templates. Its 17 core components use platform-local synthetic fixtures (different from the web preview). Figma is published to Test / Team project: 2 variable collections, 7 styles, 18 assets including 17 core component sets. Removed the unused StatusBadge text property that blocked publishing, retaining all 9 variants. The publisher reports Unchanged (27) / No changes. No automatic synchronization or pixel identity is implied.

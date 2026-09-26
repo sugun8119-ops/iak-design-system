@@ -249,13 +249,40 @@
       "scopeIssues": 0,
       "missingSyntax": 0,
       "newComponentSets": 4,
-      "currentTemplatePage": "53:2"
+      "currentTemplatePage": "53:2",
+      "libraryPublished": true,
+      "publicationVerification": "Test / Team project; Publish library shows No changes / Unchanged (27)"
     },
     "limitations": [
       "Native Figma templates are static editable compositions; HTML carries runtime behavior.",
-      "Claude 1.5 published output pending verification.",
       "Safari, Firefox and screen reader not tested.",
-      "Figma team library remains unpublished."
-    ]
+      "Claude and web/Figma use different synthetic fixtures; consistency is within each platform."
+    ],
+    "claudeDesign": {
+      "revision": "1.5.0",
+      "publishedUIVerified": true,
+      "componentCount": 17,
+      "cards": 36,
+      "tokens": 130,
+      "directChecks": [
+        "Published Main shows 4 KPIs, attention summary, chart, timeline and 6 modules",
+        "Last 15m changes chart and timeline",
+        "Sub Offline filter returns 1 of 6 (Module 06)",
+        "Module 06 link opens offline Detail with unavailable values and disabled command",
+        "ArrowRight changes Overview to selected Telemetry with its panel"
+      ],
+      "reportedChecks": [
+        "Main/Sub/Detail ×1440/1024/390: no horizontal overflow, text >=12px, controls >=44px",
+        "check_design_system: no issues"
+      ],
+      "visualEvidence": [
+        "Claude Main screenshot",
+        "Claude Detail Telemetry screenshot"
+      ],
+      "limits": [
+        "UI kit not directly verified",
+        "Safari/Firefox and screen reader not tested"
+      ]
+    }
   }
 }

@@ -3,7 +3,7 @@
     "url": "https://www.figma.com/design/Nh9NILHBye8VS0jGtph3UB",
     "status": "native_file_created",
     "team": "Test",
-    "libraryPublished": false,
+    "libraryPublished": true,
     "collections": 2,
     "primitiveVariables": 48,
     "semanticVariables": 48,
@@ -21,19 +21,26 @@
     "caseLibrary": "https://www.figma.com/design/Nh9NILHBye8VS0jGtph3UB?node-id=19-3",
     "projectGuides": "https://www.figma.com/design/Nh9NILHBye8VS0jGtph3UB?node-id=19-278",
     "toast": "https://www.figma.com/design/Nh9NILHBye8VS0jGtph3UB?node-id=19-305",
-    "qualityRevision": "1.5.0"
+    "qualityRevision": "1.5.0",
+    "libraryPublication": {
+      "date": "2026-09-26",
+      "project": "Test / Team project",
+      "verification": "Figma Publish library shows Unchanged (27), No changes, Publish disabled after successful publishing; 2 collections, 7 styles, 18 assets including 17 core sets.",
+      "repair": "Removed unused StatusBadge Label#4:53 property; retained all 9 variants."
+    }
   },
   "claudeDesign": {
     "url": "https://claude.ai/design/p/e80718a5-1ce2-4e2c-8305-66e1c569290b",
     "status": "published",
-    "note": "Resumed after session quota reset. Revision1.4 implementation and template checks completed; direct published UI verification recorded in qa-results.json. No billing settings changed.",
+    "note": "Revision1.5 resumed and completed. Published templates verified directly: time window, offline filter, navigation, disabled controls and keyboard tabs. Figma team library also published. Platform demo fixtures differ; no automatic or pixel-identical sync claim.",
     "caseCount": 30,
-    "componentCount": 13,
+    "componentCount": 17,
     "templateCount": 3,
-    "structureCheck": "revision1.4: no issues found",
+    "structureCheck": "revision1.5: no issues; 36 cards, 130 tokens",
     "font": "Pretendard 1.3.9 bundled WOFF2; loaded and check_design_system passed; no active Missing brand font banner observed",
     "qualityRevision14Status": "completed and published UI verified",
-    "revision15Status": "implementation in progress; published 1.5 not yet verified"
+    "revision15Status": "completed; published Main/Sub/Detail verified",
+    "qualityRevision": "1.5.0"
   },
   "github": "https://github.com/sugun8119-ops/iak-design-system/tree/main/src/systems/HYNIX_V1",
   "preview": "https://sugun8119-ops.github.io/iak-design-system/systems/HYNIX_V1/preview/index.html",

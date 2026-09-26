@@ -159,6 +159,36 @@
           "name": "status=unknown",
           "width": 77,
           "height": 25
+        },
+        {
+          "id": "52:1318",
+          "name": "status=alarm",
+          "width": 64,
+          "height": 25
+        },
+        {
+          "id": "52:1321",
+          "name": "status=critical",
+          "width": 70,
+          "height": 25
+        },
+        {
+          "id": "52:1324",
+          "name": "status=success",
+          "width": 85,
+          "height": 25
+        },
+        {
+          "id": "52:1327",
+          "name": "status=info",
+          "width": 52,
+          "height": 25
+        },
+        {
+          "id": "52:1330",
+          "name": "status=neutral",
+          "width": 80,
+          "height": 25
         }
       ],
       "source": "preview/components.html",
@@ -556,7 +586,7 @@
           "id": "52:146",
           "name": "state=Ready",
           "width": 680,
-          "height": 360
+          "height": 472
         },
         {
           "id": "52:173",
@@ -568,13 +598,13 @@
           "id": "52:176",
           "name": "state=Unavailable",
           "width": 680,
-          "height": 360
+          "height": 472
         }
       ]
     }
   },
   "note": "Native Figma local components. This is a source map, not a published Figma Code Connect integration.",
-  "qualityRevision": "1.4",
+  "qualityRevision": "1.5",
   "version": "1.5.0",
   "currentTemplates": {
     "Main": "53:3",
