@@ -1,5 +1,5 @@
 {
-  "version": "2.3",
+  "version": "2.3.1",
   "source": "Claude Design handoff",
   "counts": {
     "cards": 69,
@@ -34,9 +34,12 @@
   },
   "githubStatus": "draft PR #1; not merged",
   "fontLicense": "Preserved previously verified official NAVER notice from repository",
-  "runtimeFix": "Removed 3 legacy ds-base entrypoints from exported bundle; they recursively injected the same bundle. Fixed QA state URL precedence.",
-  "claudeSourcePatched": false,
+  "runtimeFix": "Claude source archived legacy v2.2 templates outside JS scan as ZIP. Current regenerated bundle contains no ds-base.js, iak-kids-v2.2 or recursive bundle reference. URL state precedence and badge nowrap fixed.",
+  "claudeSourcePatched": true,
   "browserCases": 63,
   "postFixBrowserCases": 12,
-  "claudeSourceStatus": "Fix request submitted in original project on 2026-09-27; completion and regenerated export pending verification."
+  "claudeSourceStatus": "Original source fixed. Downloaded v2.3.1 source handoff and separate current generated bundle/manifest/OFL; independently verified no legacy loader references and exact official OFL bytes. Claude also confirmed final QA-only error-readiness correction.",
+  "generatedBundleSha256": "55ed8ad1ec8cce75c783aa41cba40a5888106aae122cbd3833d00d781dc10929",
+  "generatedBundleBrowserCases": 45,
+  "generatedBundleVerification": "3 templates × default/empty/loading/error/long-text × 375/834/1440: 45 cases, state match, no horizontal overflow, no targets below harness 36px height threshold."
 }
