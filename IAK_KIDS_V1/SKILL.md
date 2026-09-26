@@ -1,6 +1,6 @@
 ---
 name: iak-kids-v1-little-everyday
-description: IAK KIDS_V1 · Little Everyday v2.2 — Kids/Friendly light mobile design system. Leaf green primary, sky blue secondary, playful purple accent, sand cream canvas; 62 semantic colour tokens; Nanum Barun Gothic 400/700 on web (Pretendard in Figma only).
+description: IAK KIDS_V1 · Little Everyday v2.3 — Kids/Friendly light mobile design system. Leaf green primary, sky blue secondary, playful purple accent, sand cream canvas; 62 semantic colour tokens; Nanum Barun Gothic 400/700 on web (Pretendard in Figma only).
 ---
 
 # IAK KIDS_V1 · Little Everyday — rules for generating screens
@@ -8,16 +8,19 @@ description: IAK KIDS_V1 · Little Everyday v2.2 — Kids/Friendly light mobile 
 Use this when Claude (or any generator) builds screens with this design system. If a rule here conflicts with an older chat summary or a ZEM_V1 / IAK Master document, this file and the actual CSS/API win.
 
 ## 0. Identity
-- Name: **IAK KIDS_V1 · Little Everyday** (v2.2). Kids/Friendly light mobile system. Identify it with the text "Little Everyday" or "IAK KIDS_V1" only. No logos, mascots or characters.
+- Name: **IAK KIDS_V1 · Little Everyday** (v2.3). Kids/Friendly light mobile system. Identify it with the text "Little Everyday" or "IAK KIDS_V1" only. No logos, mascots or characters.
 - Palette: Leaf green / Sky blue / Playful purple / Sand cream — an original accessible palette. Pokopia was only a mood reference for bright, calm nature colours: **no game characters, logos, images or screens.**
 - Never use ZEM source assets or ZEM-specific screen/component combinations (periwinkle curved header + overlapping cards, etc.). ZEM_V1 v1 material is inactive history in `archive/zem-v1/`.
 - Colour source of truth: `zem/figma-system.json` → `foundation.colors`, emitted as `zem/lib/iak-kids-tokens.css`.
+
+Starting templates: `templates/parent-dashboard`, `templates/weekly-schedule`, `templates/kid-activity` — entry files, data and states in `templates/README.md`.
 
 ## 1. Setup
 ```html
 <link rel="stylesheet" href="styles.css">   <!-- iak-kids-tokens + zem-tokens(role aliases) + zem-ui + zem-shell -->
 <script src="zem/lib/icons.js"></script>
 <script src="zem/lib/zem-ui.js"></script>     <!-- window.ZEM.{Button,…} (namespace kept for compatibility) -->
+<script src="zem/lib/zem-patterns.js"></script> <!-- v2.3 window.ZEM_PATTERNS.{ChildSwitcher,DailyTimeline,FocusSession,GoalComposer,MissionFeedback} -->
 ```
 The `zem/` paths, `--zem-*` role names and `window.ZEM` are a **compatibility API only**, not a brand. New work should prefer `--iak-kids-*` semantic tokens.
 
@@ -34,12 +37,12 @@ The `zem/` paths, `--zem-*` role names and `window.ZEM` are a **compatibility AP
 | Status | `status-{success,warning,error,info}-{foreground,background,solid,on-solid}` | see token card | always with text/icon |
 | Selected | `--iak-kids-state-selected` + `primary-on-soft` text + primary indicator line | #EAF4CA | #2B4D23 |
 | Hover (neutral) | `--iak-kids-state-hover` | #F4F0DD | |
-| Disabled | `state-disabled-background` / `state-disabled-text` | #E5E6D8 / #626B56 | |
+| Disabled | `state-disabled-background` / `state-disabled-text` — 일반 텍스트·placeholder는 4.5:1, disabled는 예외(비활성 요소 내부 목표 3:1, 실측 4.43:1) | #E5E6D8 / #626B56 | |
 | Focus | `--iak-kids-border-focus` 3px + `state-focus-gap` 2px | #7954AD + #FFFFFF | |
 | Borders | `border-subtle` (decorative only) · `border-default` (inputs, checkboxes, switch track) · `border-strong` (hover) | #D9DFC6 · #7A8469 · #50634C | |
 | Progress | `progress-fill` on `progress-track` | #487538 on #EAF4CA | |
 | Overlay | `overlay-scrim` | #293F2D7A | |
-Contrast: small text ≥ 4.5:1; required control boundaries, focus and progress ≥ 3:1. `border-subtle` never carries meaning. Disabled controls are exempt from WCAG contrast requirements; our internal disabled-text target is 3:1 (current pair 4.43:1).
+Contrast: small text ≥ 4.5:1; required control boundaries, focus and progress ≥ 3:1. `border-subtle` never carries meaning.
 
 ## 3. Type
 - Web: `--zem-font` = "Nanum Barun Gothic", self-hosted `fonts/NanumBarunGothic.ttf` (400) + `NanumBarunGothicBold.ttf` (700). Only 400 and 700 — Figma "600" renders as 700.
@@ -70,11 +73,18 @@ default · hover (*-hover / state-hover) · pressed (*-pressed, scale .98) · fo
 ## 8. Patterns
 Dashboard, Analytics, Table, Detail, Settings, Billing, AI Chat, Builder, Modal, Empty are Little Everyday compositions of the 16 components — examples, not external service screens. `zem/patterns/screen.html?p=<key>&s=<state>`.
 
+### 8.1 v2.3 composition patterns (API = `zem/compositions/*.d.ts`, docs `zem/docs/07-patterns-v23.html`)
+Built only from the 16 components — never add a duplicate primitive. Status = colour + text. Timers never announce every second. Inputs keep values on error and focus the first invalid field. No fake server success: memory-only features say "데모".
+- **ChildSwitcher** — radiogroup, ←/→/Home/End, selected = selected bg + primary line + "보는 중"; empty (+onAdd), loading, error+retry.
+- **DailyTimeline** — <ol> time · title · duration · Badge 완료/지금/예정; current = aria-current="step" + sub-steps; loading/empty/error+retry.
+- **FocusSession** — mm:ss + bar; 시작 → 일시정지 ⇄ 재개 → 완료, 초기화; role=timer aria-live=off, polite status on phase change + 1 min left.
+- **GoalComposer** — title + repeat first, details behind disclosure; validate on submit, keep values, focus first error.
+- **MissionFeedback** — 완료하기 ⇄ 완료 취소, progress, points derived from completed set (no double reward), 되돌리기.
+Parent home order: 자녀 전환 → 오늘 요약 → 대기 요청 → 관리. Schedule: <768 day picker + day timeline; ≥768 week grid + today timeline. Kid: 지금 할 일 → 오늘 순서 → 완료 피드백.
+
 ## 9. Checks before shipping
 Open `zem/qa.html` in the current environment: all cases render, no horizontal overflow at 1440/834/375, no targets under 36px at 375, 66 contrast pairs pass, Nanum 400/700 loaded. Never cite uploaded or historical QA records as current results.
 
 
 ---
 Source of truth: `zem/claude-system.md` (this file mirrors it).
-
-Reusable Claude templates: `templates/README.md` (ParentDashboard, WeeklySchedule, KidActivity). Templates registry is separate from startingPoints.

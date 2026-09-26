@@ -1,5 +1,7 @@
-# IAK KIDS_V1 · Little Everyday — handoff (v2.2, 2026-09-25)
+# IAK KIDS_V1 · Little Everyday — v2.3 review candidate
 
-Open zem/index.html (Overview) and zem/qa.html (live QA) through a local server (fonts + iframes need http://).
-Rules: SKILL.md · Spec: zem/figma-system.json · Tokens: zem/lib/iak-kids-tokens.css.
-_ds_manifest.json: 62 cards · 62 semantic colours (--iak-kids-*) · Nanum Barun Gothic 400/700. Deprecated --zem-periwinkle-* aliases remain for compatibility only.
+Open `zem/index.html` through a local HTTP server. New patterns: `zem/docs/07-patterns-v23.html`; reference mapping: `zem/docs/08-reference-mapping.html`; template QA: `zem/qa-v23.html`.
+
+69 preview cards · 22 exports · 3 templates. Original v2.2 palette unchanged. Figma still contains the prior native library, not these five new patterns.
+
+This handoff has not passed real-browser visual, keyboard or interaction verification. Source-level checks do not replace those checks. Read `SYNC.md` before adopting as a release.
