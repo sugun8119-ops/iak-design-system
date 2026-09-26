@@ -7,36 +7,53 @@
 </head>
 <body>
 <x-dc>
-<!-- @template name="부모 대시보드 · Parent dashboard" description="자녀별 사용 목표 카드 + 자녀 요청 수락/거절. 상태: default · empty · loading · error. 데이터는 로직의 static DATA에서 수정." -->
+<!-- @template name="부모 대시보드 · Parent dashboard" description="v2.3 · 자녀 전환 → 오늘 요약(사용 시간·오늘 일정) → 대기 요청 수락/거절 → 관리(목표 만들기). 상태: default · empty · loading · error · no-children · long-text · goal-dialog · goal-validation. 데이터는 로직의 static DATA에서 수정." -->
 <helmet><script src="./ds-base.js"></script></helmet>
 <div class="zs">
 <nav class="zs-rail" aria-label="주 메뉴"><div class="wm">Little Everyday</div><a href="#" aria-current="page"><x-import component-from-global-scope="RAISDesignSystem_019e07.Icon" name="eva:home-fill" size="{{ 22 }}" hint-size="22px,22px"></x-import><span>홈</span></a><a href="#"><x-import component-from-global-scope="RAISDesignSystem_019e07.Icon" name="solar:chart-2-bold" size="{{ 22 }}" hint-size="22px,22px"></x-import><span>리포트</span></a><a href="#"><x-import component-from-global-scope="RAISDesignSystem_019e07.Icon" name="solar:checklist-bold" size="{{ 22 }}" hint-size="22px,22px"></x-import><span>미션</span></a><a href="#"><x-import component-from-global-scope="RAISDesignSystem_019e07.Icon" name="eva:calendar-fill" size="{{ 22 }}" hint-size="22px,22px"></x-import><span>일정</span></a><a href="#"><x-import component-from-global-scope="RAISDesignSystem_019e07.Icon" name="solar:settings-bold" size="{{ 22 }}" hint-size="22px,22px"></x-import><span>설정</span></a></nav>
 <div class="zs-main">
 <header class="zs-header"><div class="zs-top"><span class="zs-ib" aria-hidden="true"></span><div class="grow">부모 홈</div><button type="button" class="zs-ib" aria-label="알림 2개"><x-import component-from-global-scope="RAISDesignSystem_019e07.Icon" name="solar:bell-bold" size="{{ 22 }}" hint-size="22px,22px"></x-import><span class="zs-dot"></span></button></div>
-<div class="zs-hero"><span class="zs-chip"><i>민</i>민서 · 도윤</span><h1>{{ hero }}</h1><p>{{ sub }}</p></div></header>
+<div class="zs-hero"><h1>{{ hero }}</h1><p>{{ sub }}</p></div></header>
 <main class="zs-body" data-state="{{ state }}">
-<sc-if value="{{ isError }}" hint-placeholder-val="{{ false }}"><div class="banner" role="alert"><span class="ic"><x-import component-from-global-scope="RAISDesignSystem_019e07.Icon" name="eva:alert-circle-outline" hint-size="24px,24px"></x-import></span><div class="stack" style="gap:6px;flex:1"><b>자녀 기기 정보를 불러오지 못했어요</b><span class="muted">도윤의 휴대폰이 오프라인이에요. 마지막 동기화 오후 2:48.</span><div><x-import component-from-global-scope="RAISDesignSystem_019e07.Button" variant="secondary" size="sm" on-click="{{ retry }}" hint-size="110px,36px">다시 시도</x-import></div></div></div></sc-if>
+<x-import component-from-global-scope="RAISDesignSystem_019e07.ChildSwitcher" kids="{{ switcherKids }}" value="{{ kidId }}" on-change="{{ pickKid }}" state="{{ switcherState }}" on-add="{{ addKid }}" label="자녀 선택" hint-size="100%,56px"></x-import>
+<sc-if value="{{ isError }}" hint-placeholder-val="{{ false }}"><div class="banner" role="alert"><span class="ic"><x-import component-from-global-scope="RAISDesignSystem_019e07.Icon" name="eva:alert-circle-outline" hint-size="24px,24px"></x-import></span><div class="stack" style="gap:6px;flex:1"><b>자녀 기기 정보를 불러오지 못했어요</b><span class="muted">도윤의 휴대폰이 오프라인이에요. 마지막 동기화 오후 2:48. 수락·거절한 요청은 그대로 있어요.</span><div><x-import component-from-global-scope="RAISDesignSystem_019e07.Button" variant="secondary" size="sm" on-click="{{ retry }}" hint-size="110px,36px">다시 시도</x-import></div></div></div></sc-if>
 <sc-if value="{{ isLoading }}" hint-placeholder-val="{{ false }}"><div class="zs-grid" aria-busy="true" aria-label="부모 홈을 불러오는 중"><div class="t4 d6"><x-import component-from-global-scope="RAISDesignSystem_019e07.Card" hint-size="100%,140px"><x-import component-from-global-scope="RAISDesignSystem_019e07.Skeleton" height="{{ 16 }}" width="45%" hint-size="45%,16px"></x-import><x-import component-from-global-scope="RAISDesignSystem_019e07.Skeleton" height="{{ 28 }}" width="70%" hint-size="70%,28px"></x-import></x-import></div><div class="t4 d6"><x-import component-from-global-scope="RAISDesignSystem_019e07.Card" hint-size="100%,140px"><x-import component-from-global-scope="RAISDesignSystem_019e07.Skeleton" height="{{ 16 }}" width="45%" hint-size="45%,16px"></x-import><x-import component-from-global-scope="RAISDesignSystem_019e07.Skeleton" height="{{ 28 }}" width="70%" hint-size="70%,28px"></x-import></x-import></div><div class="t8 d12"><x-import component-from-global-scope="RAISDesignSystem_019e07.Card" hint-size="100%,220px"><x-import component-from-global-scope="RAISDesignSystem_019e07.Skeleton" height="{{ 140 }}" hint-size="100%,140px"></x-import></x-import></div></div></sc-if>
-<sc-if value="{{ isReady }}" hint-placeholder-val="{{ true }}"><div class="zs-grid">
-<sc-for list="{{ kids }}" as="k" hint-placeholder-count="2"><div class="t4 d6"><x-import component-from-global-scope="RAISDesignSystem_019e07.Card" hint-size="100%,140px"><div class="row between"><div class="row"><span class="ava">{{ k.initial }}</span><b>{{ k.name }}</b></div><x-import component-from-global-scope="RAISDesignSystem_019e07.Badge" tone="{{ k.tone }}" hint-size="72px,24px">{{ k.badge }}</x-import></div><div class="kpi">{{ k.usage }}</div><div class="prog" role="progressbar" aria-valuenow="{{ k.pct }}" aria-valuemin="0" aria-valuemax="100" aria-label="{{ k.aria }}"><i style="width:{{ k.width }}"></i></div><span class="muted cap">{{ k.goalText }}</span></x-import></div></sc-for>
-<div class="t8 d12"><x-import component-from-global-scope="RAISDesignSystem_019e07.Card" title="자녀 요청" hint-size="100%,260px">
-<sc-if value="{{ hasRequests }}" hint-placeholder-val="{{ true }}"><ul class="rows"><sc-for list="{{ requests }}" as="r" hint-placeholder-count="3"><li><span class="tile {{ r.tile }}"><x-import component-from-global-scope="RAISDesignSystem_019e07.Icon" name="solar:chat-round-line-bold" size="{{ 20 }}" hint-size="20px,20px"></x-import></span><div class="t"><b>{{ r.what }}</b><span>{{ r.meta }}</span></div><div class="row" style="flex-wrap:nowrap"><x-import component-from-global-scope="RAISDesignSystem_019e07.Button" size="sm" variant="secondary" on-click="{{ r.reject }}" hint-size="56px,36px">거절</x-import><x-import component-from-global-scope="RAISDesignSystem_019e07.Button" size="sm" on-click="{{ r.accept }}" hint-size="56px,36px">수락</x-import></div></li></sc-for></ul></sc-if>
-<sc-if value="{{ noRequests }}" hint-placeholder-val="{{ false }}"><div class="empty"><div class="plate"><x-import component-from-global-scope="RAISDesignSystem_019e07.Icon" name="eva:checkmark-circle-2-fill" size="{{ 32 }}" hint-size="32px,32px"></x-import></div><h2>새 요청이 없어요</h2><p>아이가 요청을 보내면 이곳에 바로 보여요.</p></div></sc-if>
-</x-import></div>
-</div></sc-if>
+<sc-if value="{{ isReady }}" hint-placeholder-val="{{ true }}">
+<div class="zs-sectitle"><h2>오늘 요약</h2></div>
+<div class="zs-grid">
+<div class="t4 d6"><x-import component-from-global-scope="RAISDesignSystem_019e07.Card" title="{{ kid.usageTitle }}" hint-size="100%,160px"><div class="row between"><div class="kpi">{{ kid.usage }}</div><x-import component-from-global-scope="RAISDesignSystem_019e07.Badge" tone="{{ kid.tone }}" hint-size="72px,24px">{{ kid.badge }}</x-import></div><div class="prog" role="progressbar" aria-valuenow="{{ kid.pct }}" aria-valuemin="0" aria-valuemax="100" aria-label="{{ kid.aria }}"><i style="width:{{ kid.width }}"></i></div><span class="muted cap">{{ kid.goalText }}</span></x-import></div>
+<div class="t4 d6"><x-import component-from-global-scope="RAISDesignSystem_019e07.Card" title="{{ kid.scheduleTitle }}" hint-size="100%,160px"><x-import component-from-global-scope="RAISDesignSystem_019e07.DailyTimeline" items="{{ kid.schedule }}" state="{{ timelineState }}" on-retry="{{ retry }}" show-steps="none" label="오늘 일정" empty-text="오늘 등록된 일정이 없어요." hint-size="100%,180px"></x-import></x-import></div>
+</div>
+<div class="zs-sectitle"><h2>{{ requestTitle }}</h2></div>
+<x-import component-from-global-scope="RAISDesignSystem_019e07.Card" hint-size="100%,220px">
+<sc-if value="{{ hasRequests }}" hint-placeholder-val="{{ true }}"><ul class="rows" aria-label="대기 요청"><sc-for list="{{ requests }}" as="r" hint-placeholder-count="3"><li><span class="tile {{ r.tile }}"><x-import component-from-global-scope="RAISDesignSystem_019e07.Icon" name="solar:chat-round-line-bold" size="{{ 20 }}" hint-size="20px,20px"></x-import></span><div class="t"><b>{{ r.what }}</b><span>{{ r.meta }}</span></div><div class="row" style="flex-wrap:nowrap"><x-import component-from-global-scope="RAISDesignSystem_019e07.Button" size="sm" variant="secondary" on-click="{{ r.reject }}" aria-label="{{ r.rejectLabel }}" hint-size="56px,36px">거절</x-import><x-import component-from-global-scope="RAISDesignSystem_019e07.Button" size="sm" on-click="{{ r.accept }}" aria-label="{{ r.acceptLabel }}" hint-size="56px,36px">수락</x-import></div></li></sc-for></ul></sc-if>
+<sc-if value="{{ noRequests }}" hint-placeholder-val="{{ false }}"><div class="empty" style="box-shadow:none;border:0;padding:24px 12px"><div class="plate"><x-import component-from-global-scope="RAISDesignSystem_019e07.Icon" name="eva:checkmark-circle-2-fill" size="{{ 32 }}" hint-size="32px,32px"></x-import></div><h2>새 요청이 없어요</h2><p>아이가 요청을 보내면 이곳에 바로 보여요.</p></div></sc-if>
+</x-import>
+<div class="zs-sectitle"><h2>관리</h2><x-import component-from-global-scope="RAISDesignSystem_019e07.Button" size="sm" on-click="{{ openGoal }}" hint-size="120px,36px"><x-import component-from-global-scope="RAISDesignSystem_019e07.Icon" name="eva:plus-fill" size="{{ 18 }}" hint-size="18px,18px"></x-import>목표 만들기</x-import></div>
+<x-import component-from-global-scope="RAISDesignSystem_019e07.Card" title="{{ kid.goalsTitle }}" hint-size="100%,160px">
+<sc-if value="{{ kid.hasGoals }}" hint-placeholder-val="{{ true }}"><ul class="rows"><sc-for list="{{ kid.goals }}" as="g" hint-placeholder-count="2"><li><span class="tile lime"><x-import component-from-global-scope="RAISDesignSystem_019e07.Icon" name="solar:target-bold" size="{{ 20 }}" hint-size="20px,20px"></x-import></span><div class="t"><b>{{ g.title }}</b><span>{{ g.meta }}</span></div><sc-if value="{{ g.isNew }}" hint-placeholder-val="{{ false }}"><x-import component-from-global-scope="RAISDesignSystem_019e07.Badge" tone="info" hint-size="72px,24px">데모 추가</x-import></sc-if></li></sc-for></ul></sc-if>
+<sc-if value="{{ kid.noGoals }}" hint-placeholder-val="{{ false }}"><p class="muted">아직 목표가 없어요. ‘목표 만들기’로 첫 목표를 추가해 보세요.</p></sc-if>
+</x-import>
+</sc-if>
 </main></div>
 <nav class="zs-tabbar" aria-label="하단 탭"><a href="#" aria-current="page"><x-import component-from-global-scope="RAISDesignSystem_019e07.Icon" name="eva:home-fill" size="{{ 24 }}" hint-size="24px,24px"></x-import>홈</a><a href="#"><x-import component-from-global-scope="RAISDesignSystem_019e07.Icon" name="eva:calendar-fill" size="{{ 24 }}" hint-size="24px,24px"></x-import>일정</a><a href="#"><x-import component-from-global-scope="RAISDesignSystem_019e07.Icon" name="solar:checklist-bold" size="{{ 24 }}" hint-size="24px,24px"></x-import>미션</a><a href="#"><x-import component-from-global-scope="RAISDesignSystem_019e07.Icon" name="eva:more-horizontal-fill" size="{{ 24 }}" hint-size="24px,24px"></x-import>더보기</a></nav>
+<x-import component-from-global-scope="RAISDesignSystem_019e07.Dialog" open="{{ goalOpen }}" on-open-change="{{ setGoalOpen }}" title="목표 만들기" description="이름과 반복만 정하면 바로 만들 수 있어요. 나머지는 상세 설정에서." hint-size="0px,0px"><sc-if value="{{ goalOpen }}" hint-placeholder-val="{{ false }}"><x-import component-from-global-scope="RAISDesignSystem_019e07.GoalComposer" kids="{{ composerKids }}" default-value="{{ goalDefault }}" show-errors="{{ goalShowErrors }}" on-submit="{{ submitGoal }}" on-cancel="{{ closeGoal }}" hint-size="100%,320px"></x-import></sc-if></x-import>
 <sc-if value="{{ toast }}" hint-placeholder-val="{{ false }}"><ol class="zem-toast-viewport"><x-import component-from-global-scope="RAISDesignSystem_019e07.Toast" tone="{{ toast.tone }}" title="{{ toast.title }}" description="{{ toast.description }}" on-close="{{ closeToast }}" hint-size="320px,64px"></x-import></ol></sc-if>
 </div>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;state&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;default&quot;,&quot;empty&quot;,&quot;loading&quot;,&quot;error&quot;],&quot;default&quot;:&quot;default&quot;,&quot;tsType&quot;:&quot;'default'|'empty'|'loading'|'error'&quot;,&quot;section&quot;:&quot;상태&quot;}}">
+<script type="text/x-dc" data-dc-script data-props="{&quot;state&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;default&quot;,&quot;empty&quot;,&quot;loading&quot;,&quot;error&quot;,&quot;no-children&quot;,&quot;long-text&quot;,&quot;goal-dialog&quot;,&quot;goal-validation&quot;],&quot;default&quot;:&quot;default&quot;,&quot;tsType&quot;:&quot;'default'|'empty'|'loading'|'error'|'no-children'|'long-text'|'goal-dialog'|'goal-validation'&quot;,&quot;section&quot;:&quot;상태&quot;}}">
 class Component extends DCLogic {
-  // ▼ 수정할 데이터 — 자녀·사용 시간·요청. 실제 API 응답으로 교체하세요 (가상 예시).
+  // ▼ 수정할 데이터 — 자녀(사용 시간·목표·오늘 일정·목표 목록)·요청. 실제 API 응답으로 교체하세요 (가상 예시).
+  // 신규(v2.3) 기능 — 자녀 전환·목표 만들기 — 은 메모리 기반 데모입니다. 서버 저장/동기화를 하지 않습니다.
   static DATA = {
     asOf: '오늘 오후 3:12 기준',
     kids: [
-      { name: '민서', usedMin: 88, goalMin: 90, tile: 'cyan' },
-      { name: '도윤', usedMin: 130, goalMin: 120, tile: 'violet' }
+      { id: 'minseo', name: '민서', meta: '초등 3학년', usedMin: 88, goalMin: 90, tile: 'cyan',
+        schedule: [{ id: 1, time: '13:00', title: '영어 학원', duration: 60, status: 'done' }, { id: 2, time: '15:00', title: '수학 숙제', duration: 30, status: 'current' }, { id: 3, time: '17:00', title: '피아노', duration: 60, status: 'upcoming' }],
+        goals: [{ id: 1, title: '자기 전 양치하기', repeat: '매일', points: 30 }, { id: 2, title: '책 20분 읽기', repeat: '평일', points: null }] },
+      { id: 'doyun', name: '도윤', meta: '7세', usedMin: 130, goalMin: 120, tile: 'violet',
+        schedule: [{ id: 1, time: '14:00', title: '놀이터', duration: 60, status: 'done' }, { id: 2, time: '16:00', title: '그림 그리기', duration: 40, status: 'upcoming' }],
+        goals: [{ id: 1, title: '장난감 정리하기', repeat: '매일', points: 20 }] }
     ],
     requests: [
       { id: 1, kid: '민서', what: '게임 30분 더 하기', why: '숙제 다 했어요' },
@@ -44,30 +61,60 @@ class Component extends DCLogic {
       { id: 3, kid: '민서', what: '친구 집에서 저녁까지 놀기 — 오후 7시 전에 귀가할게요', why: null }
     ]
   };
-  init(s) { return { requests: s === 'empty' ? [] : Component.DATA.requests.slice(), toast: null, phase: s || 'default' }; }
+  // long-text 상태용 긴 한글 예시
+  static LONG = { name: '김민서아름다운별', meta: '초등학교 3학년 2반 방과후 돌봄교실', schedule: [{ id: 1, time: '15:00', title: '할머니 댁에 가서 저녁 먹고 오늘 배운 노래를 불러 드리기', duration: 90, status: 'current' }], goals: [{ id: 1, title: '주말마다 화분에 물 주고 강아지 산책시키기', repeat: '주말', points: 50 }], request: { id: 9, what: '토요일 오후에 친구들과 도서관 갔다가 근처 공원에서 자전거 타고 저녁 먹기 전까지 돌아오기', why: '숙제를 미리 다 끝냈고 친구 부모님도 함께 가세요' } };
+  static REPEAT = { daily: '매일', weekdays: '평일', weekend: '주말', weekly: '일주일에 한 번' };
+  phaseOf(p) { return p || new URLSearchParams(location.search).get('state') || 'default'; }
+  init(p) {
+    const s = this.phaseOf(p), D = Component.DATA, L = Component.LONG;
+    let kids = D.kids.map(k => ({ ...k, goals: k.goals.slice() })), requests = D.requests.slice();
+    if (s === 'no-children') kids = [];
+    if (s === 'long-text') { kids[0] = { ...kids[0], name: L.name, meta: L.meta, schedule: L.schedule, goals: L.goals }; requests = [{ ...L.request, kid: L.name }, ...requests.map(r => r.kid === '민서' ? { ...r, kid: L.name } : r)]; }
+    if (s === 'empty' || s === 'no-children') requests = [];
+    return { phase: s, kids, kidId: kids[0] ? kids[0].id : null, requests, toast: null, goalOpen: s === 'goal-dialog' || s === 'goal-validation', goalShowErrors: s === 'goal-validation' };
+  }
   state = this.init(this.props.state);
   componentDidUpdate(p) { if (p.state !== this.props.state) this.setState(this.init(this.props.state)); }
   componentWillUnmount() { clearTimeout(this.t); }
-  fmt(m) { const h = Math.floor(m / 60), r = m % 60; return (h ? h + '시간 ' : '') + (r ? r + '분' : '').trim(); }
+  fmt(m) { const h = Math.floor(m / 60), r = m % 60; return ((h ? h + '시간 ' : '') + (r ? r + '분' : '')).trim() || '0분'; }
   notify(toast) { clearTimeout(this.t); this.setState({ toast }); this.t = setTimeout(() => this.setState({ toast: null }), 4000); }
   act(r, ok) {
     this.setState(s => ({ requests: s.requests.filter(x => x.id !== r.id) }));
     this.notify({ tone: ok ? 'success' : 'info', title: ok ? r.kid + '의 요청을 수락했어요' : '요청을 거절했어요', description: r.what });
   }
+  submitGoal(g) {
+    const R = Component.REPEAT, kidId = g.kid || this.state.kidId;
+    this.setState(s => ({ goalOpen: false, goalShowErrors: false, kids: s.kids.map(k => k.id === kidId ? { ...k, goals: [...k.goals, { id: Date.now(), title: g.title, repeat: R[g.repeat] || g.repeat, points: g.points, isNew: true }] } : k) }));
+    const k = this.state.kids.find(x => x.id === kidId);
+    this.notify({ tone: 'success', title: '목표를 추가했어요 (데모)', description: (k ? k.name + ' · ' : '') + g.title + ' — 이 화면 메모리에만 있어요' });
+  }
   renderVals() {
-    const { requests, toast, phase } = this.state, D = Component.DATA;
-    const isLoading = phase === 'loading', isError = phase === 'error';
+    const { requests, toast, phase, kids, kidId } = this.state, D = Component.DATA;
+    const isLoading = phase === 'loading', isError = phase === 'error', hasKid = kids.length > 0;
+    const k = kids.find(x => x.id === kidId) || kids[0];
+    let kid = null;
+    if (k) {
+      const pct = Math.min(100, Math.round(k.usedMin / k.goalMin * 100)), over = k.usedMin > k.goalMin;
+      kid = { usageTitle: k.name + ' · 오늘 사용 시간', scheduleTitle: k.name + ' · 오늘 일정', goalsTitle: k.name + '의 목표', usage: isError ? '—' : this.fmt(k.usedMin), pct, width: pct + '%', tone: isError ? 'neutral' : over ? 'warning' : 'success', badge: isError ? '동기화 안 됨' : over ? '목표 초과' : '목표 이내', aria: k.name + ' 사용 목표 대비', goalText: '하루 목표 ' + this.fmt(k.goalMin), schedule: k.schedule,
+        goals: k.goals.map(g => ({ title: g.title, meta: g.repeat + ' · ' + (g.points != null ? g.points + 'P' : '포인트 미정'), isNew: !!g.isNew })), hasGoals: k.goals.length > 0, noGoals: k.goals.length === 0 };
+    }
     return {
-      state: phase, isLoading, isError, isReady: !isLoading,
-      hero: isLoading ? '불러오는 중…' : requests.length ? '확인할 요청 ' + requests.length + '개' : '모든 요청을 확인했어요',
+      state: phase, isLoading, isError, isReady: !isLoading && hasKid,
+      hero: isLoading ? '불러오는 중…' : !hasKid ? '자녀를 연결해 주세요' : requests.length ? '확인할 요청 ' + requests.length + '개' : '모든 요청을 확인했어요',
       sub: D.asOf,
-      kids: D.kids.map(k => {
-        const pct = Math.min(100, Math.round(k.usedMin / k.goalMin * 100)), over = k.usedMin > k.goalMin;
-        return { name: k.name, initial: k.name[0], usage: isError && over ? '—' : this.fmt(k.usedMin), pct, width: pct + '%', tone: over ? 'warning' : 'success', badge: over ? '목표 초과' : '목표 이내', aria: k.name + ' 사용 목표 대비', goalText: '하루 목표 ' + this.fmt(k.goalMin) };
-      }),
+      switcherKids: kids.map(x => ({ id: x.id, name: x.name, meta: x.meta })), kidId, switcherState: isLoading ? 'loading' : 'ready',
+      pickKid: id => this.setState({ kidId: id }),
+      addKid: () => this.notify({ tone: 'info', title: '데모: 자녀 연결 흐름은 이 템플릿에 없어요', description: '실제 서비스의 기기 연결 화면으로 연결하세요.' }),
+      kid: kid || {}, timelineState: isError ? 'error' : 'ready',
+      requestTitle: '대기 요청 ' + requests.length,
       hasRequests: requests.length > 0, noRequests: requests.length === 0,
-      requests: requests.map(r => ({ what: r.what, meta: r.kid + ' · ' + (r.why || '사유 없음'), tile: (D.kids.find(k => k.name === r.kid) || {}).tile || 'soft', accept: () => this.act(r, true), reject: () => this.act(r, false) })),
+      requests: requests.map(r => ({ what: r.what, meta: r.kid + ' · ' + (r.why || '사유 없음'), tile: (kids.find(x => x.name === r.kid) || {}).tile || 'soft', acceptLabel: r.kid + '의 “' + r.what + '” 수락', rejectLabel: r.kid + '의 “' + r.what + '” 거절', accept: () => this.act(r, true), reject: () => this.act(r, false) })),
       retry: () => this.setState({ phase: 'default' }),
+      goalOpen: this.state.goalOpen, goalShowErrors: this.state.goalShowErrors,
+      composerKids: kids.map(x => ({ id: x.id, name: x.name })), goalDefault: { kid: kidId || '' },
+      openGoal: () => this.setState({ goalOpen: true, goalShowErrors: false }), closeGoal: () => this.setState({ goalOpen: false, goalShowErrors: false }),
+      setGoalOpen: v => this.setState({ goalOpen: v, goalShowErrors: v ? this.state.goalShowErrors : false }),
+      submitGoal: g => this.submitGoal(g),
       toast, closeToast: () => this.setState({ toast: null })
     };
   }

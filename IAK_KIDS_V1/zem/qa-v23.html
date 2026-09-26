@@ -1,0 +1,16 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8"><title>IAK KIDS v2.3 · QA harness</title>
+<style>body{margin:0;padding:16px;font:14px/1.4 system-ui;background:#eee}h1{font-size:18px;margin:0 0 8px}.g{display:flex;flex-wrap:wrap;gap:12px;align-items:flex-start}.f{background:#fff;border:1px solid #ccc;overflow:hidden}.f p{margin:0;padding:4px 6px;font:12px monospace;background:#222;color:#fff}.f iframe{border:0;transform-origin:0 0;display:block}pre{white-space:pre-wrap;font:12px monospace;background:#fff;padding:8px}</style></head><body>
+<h1>v2.3 QA — 375 / 834 / 1440 · state via ?state=</h1><div class="g" id="g"></div><pre id="out">running…</pre>
+<script>
+const T={pd:'../templates/parent-dashboard/ParentDashboard.dc.html',ws:'../templates/weekly-schedule/WeeklySchedule.dc.html',ka:'../templates/kid-activity/KidActivity.dc.html'};
+const P=new URLSearchParams(location.search);const tpl=(P.get('t')||'pd,ws,ka').split(','),states=(P.get('s')||'default').split(','),widths=(P.get('w')||'375,834,1440').split(',').map(Number),H=+(P.get('h')||900),SC=+(P.get('sc')||0.3);
+const g=document.getElementById('g'),frames=[];
+for(const t of tpl)for(const s of states)for(const w of widths){const d=document.createElement('div');d.className='f';d.style.width=w*SC+'px';d.style.height=H*SC+20+'px';const p=document.createElement('p');p.textContent=t+' · '+s+' · '+w;const f=document.createElement('iframe');f.src=T[t]+'?state='+s;f.width=w;f.height=H;f.style.transform='scale('+SC+')';d.append(p,f);g.append(d);frames.push({t,s,w,f})}
+const sleep=ms=>new Promise(r=>setTimeout(r,ms));
+async function ready(f){for(let i=0;i<80;i++){try{const d=f.contentDocument;if(d&&d.querySelector('.zs-body')&&!d.querySelector('[data-dc-placeholder]')&&(d.querySelector('.zp-kids,.zp-tl,.zp-mf,.zp-focus,.zp-empty,.zp-alert,.empty,[aria-busy]')))return true}catch(e){}await sleep(250)}return false}
+function audit(x){const d=x.f.contentDocument,W=x.f.contentWindow,de=d.documentElement;const over=[];d.querySelectorAll('.zs-body *').forEach(el=>{const r=el.getBoundingClientRect();if(r.width&&r.right>W.innerWidth+1&&!el.closest('.zp-kids,.tt'))over.push((el.className&&el.className.baseVal===undefined?el.className:el.tagName).toString().slice(0,40)+'@'+Math.round(r.right))});
+ const small=[...d.querySelectorAll('button,a[href],input,select')].filter(e=>{const r=e.getBoundingClientRect();return r.width&&r.height&&r.height<36&&!e.closest('.zem-toast')}).map(e=>(e.textContent||e.getAttribute('aria-label')||e.tagName).trim().slice(0,16)+':'+Math.round(e.getBoundingClientRect().height));
+ return {id:x.t+'/'+x.s+'/'+x.w,hScroll:de.scrollWidth>W.innerWidth+1,over:over.slice(0,5),small:small.slice(0,6),patterns:[...new Set([...d.querySelectorAll('[class*="zp-"]')].map(e=>[...e.classList].find(c=>/^zp-(kids|tl|focus|goal|mf|days)$/.test(c))).filter(Boolean))]}}
+(async()=>{const res=[];for(const x of frames){const ok=await ready(x.f);await sleep(400);res.push(ok?audit(x):{id:x.t+'/'+x.s+'/'+x.w,error:'not ready'})}
+ window.__QA=res;const txt=res.map(r=>JSON.stringify(r)).join('\n');document.getElementById('out').textContent=txt;console.log('QA-V23\n'+txt)})();
+</script></body></html>

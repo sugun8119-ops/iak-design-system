@@ -1,3 +1,18 @@
+# IAK KIDS_V1 · v2.3 review handoff
+
+Downloaded from the existing Claude Design project on 2026-09-26. This is a review candidate, not a visually verified release.
+
+- Added ChildSwitcher, DailyTimeline, FocusSession, GoalComposer and MissionFeedback.
+- Updated parent dashboard, weekly schedule and child activity templates.
+- Manifest: 69 cards, 22 exported components, 3 templates; startingPoints remains empty.
+- Palette is byte-identical to v2.2; existing fonts and compatibility namespaces are retained.
+- Browser visual and interaction verification is blocked by repeated browser-control timeouts, including a single template. The cause is undetermined; this does not establish a source-code defect.
+- Figma remains at its previous native library version. No v2.3 patterns were written to Figma.
+- Safari long-option Select warning remains unresolved by evidence. Do not interpret the prior flex change as a verified fix.
+- See `IAK-KIDS-v2.3-verification.json` and `zem/docs/qa-v2.3.md` for the verification boundary. Earlier results below apply to v2.2 only.
+
+---
+
 # IAK KIDS_V1 · v2.2 synchronization
 
 Synced on 2026-09-26 from the latest Claude Design handoff.

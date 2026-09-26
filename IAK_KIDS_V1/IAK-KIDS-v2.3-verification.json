@@ -1,0 +1,37 @@
+{
+  "version": "2.3",
+  "source": "Claude Design handoff",
+  "counts": {
+    "cards": 69,
+    "components": 22,
+    "templates": 3,
+    "startingPoints": 0
+  },
+  "zipIntegrity": true,
+  "paletteUnchanged": true,
+  "registeredFilesPresent": true,
+  "httpStatus": 200,
+  "visualVerification": "NOT COMPLETED: Claude preview blank; local browser tab CDP repeatedly timed out",
+  "interactionVerification": "Claude reports code-level checks only; not independently verified in browser",
+  "figmaSynced": false,
+  "githubSynced": false,
+  "githubReviewCandidate": true,
+  "knownPriorIssue": "Safari Select long-option width warning remains unverified; earlier flex fix did not prove resolution",
+  "independentSourceChecks": {
+    "command": "node IAK_KIDS_V1/tests/v23-source-checks.cjs",
+    "passed": true,
+    "states": 21,
+    "browserValidated": false,
+    "scenarios": [
+      "child switch",
+      "request approval",
+      "goal assigned only to selected child",
+      "empty and long schedule validation",
+      "schedule creation and day selection",
+      "duplicate completion",
+      "undo and recompletion"
+    ]
+  },
+  "githubStatus": "review branch; not merged",
+  "fontLicense": "Preserved previously verified official NAVER notice from repository"
+}
