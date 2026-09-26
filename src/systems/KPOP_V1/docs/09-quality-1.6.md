@@ -18,3 +18,5 @@ KPOP is a systems entry, not one of the regular template registry IDs. The templ
 
 ## Limits
 No physical-device, screen-reader or cross-browser certification. Figma team library remains unpublished and prototype interactions are not wired. Browser demos are functional.
+
+Claude1.6 completion reported no design-system issues. Final compiled Main,Explore,article Detail and Creator Detail were then directly opened and verified; Stage filtering returned3 results with selected text. Claude uses18/30 article lead and40px sections; HTML/Figma use20/32 lead and32px mobile sections. These are separately composed examples,not pixel-identical outputs.

@@ -1,7 +1,7 @@
 {
   "system": "KPOP_V1",
   "revision": "1.6.0",
-  "status": "Local and Figma refinement verified; Claude1.6 in progress",
+  "status": "KPOP1.6 local/Figma checks passed; Claude final compiled templates directly verified",
   "regenerationStability": "not-run; no inherited IAK score",
   "variantStress": "not-run; existing variant contracts retained",
   "checks": {
@@ -320,7 +320,9 @@
       "Reaction specimen toggles aria-pressed",
       "Toast dismiss restores focus; show restores toast",
       "Creator specimen follows",
-      "Article save then Saved navigation shows matching story"
+      "Article save then Saved navigation shows matching story",
+      "Creator follow toggles by Enter with visible focus and remains after reload",
+      "Case index opens with Enter; all30 links/sections retained;320px no overflow"
     ],
     "figma": {
       "showcaseNode": "57:477",
@@ -339,7 +341,23 @@
     },
     "repositoryTests": "49 passed,0 failed; build passed",
     "claudeDesign": {
-      "status": "in progress"
+      "status": "completed",
+      "structureCheck": "No issues (Claude completion report)",
+      "directChecks": [
+        "Reloaded final compiled Main,Explore,article Detail and Creator Detail render",
+        "Stage tile returns3 results with selected text",
+        "Article author/media/save and Creator related stories render"
+      ],
+      "reportedChecks": [
+        "Templates/UIkit phone widths320/375/390/430: no horizontal overflow or controls under44px",
+        "Six desktop specimen cards reviewed",
+        "Source search/reset/follow checks"
+      ],
+      "limits": [
+        "Other10 component and24 foundation cards not individually visually reviewed",
+        "No real keyboard,screen-reader or reduced-motion emulation in Claude",
+        "Phone-frame widths,not physical devices"
+      ]
     },
     "notVerified": [
       "Physical devices",

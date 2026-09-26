@@ -538,5 +538,6 @@
     }
   },
   "note": "Native Figma local components. This is a source map, not a published Figma Code Connect integration.",
-  "qualityRevision": "1.5.0"
+  "qualityRevision": "1.6.0",
+  "showcaseNodeId": "57:477"
 }

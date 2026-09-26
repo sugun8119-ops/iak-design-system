@@ -1,4 +1,4 @@
-<!-- Current release: 1.5.0. See the Current revision 1.5 section for the active discovery and persistence contracts. -->
+<!-- Current release: 1.6.0. Read the 1.6 visual refinement and retained 1.5 discovery contracts. -->
 # KPOP_V1 project entrypoint
 
 Read `claude-system.md` and `figma-system.json` before generating UI.
@@ -21,3 +21,7 @@ Bottom navigation: Discover / Explore / Saved, original 24px SVG icons with 1.75
 Image Direction: original poster, stage-light and collage compositions supplement rings. User-supplied Spotify press images are 2023 reference material, not current 2026 screenshots and not shipped product assets. No real artist/album imagery or source copy is used. See docs/08-reference-1.5.md for mapping and component contracts.
 
 Do: retain the pink masthead and white editorial feed; use artwork and hierarchy for variety; preserve 44px touch targets and visible keyboard focus. Don't: copy Spotify green, logo, icons or content; invent playback for static content; add DB/router or merge project styles.
+
+
+## Current revision 1.6
+Read `docs/09-quality-1.6.md` and the final1.6 section in `claude-system.md`. The catalog contains16 live visual examples. Keep32px mobile /40px wide sections,16px related-content gaps and12px control /24px media radii. The30 cases remain available through a collapsible index.
