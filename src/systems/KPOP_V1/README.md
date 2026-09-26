@@ -1,4 +1,4 @@
-# KPOP_V1 · OFFBEAT 1.5
+# KPOP_V1 · OFFBEAT 1.6
 
 Independent Mobile / Entertainment / Content design system. Pink masthead, white editorial feed, Pretendard. IAK provides the existing 30 case categories only.
 
@@ -26,3 +26,6 @@ The six user-selected Spotify 2023 press images inform content hierarchy only. T
 
 ## Use and limits
 Suitable for K-pop editorial discovery, creator magazines, entertainment news and fan-content hubs. All demo data is fictional. The three surfaces share system rules but are separately authored, not pixel-identical copies. Figma is editable and has local components; team-library publication and interactive prototype wiring are not enabled. Browser previews contain actual demo interactions. See `qa-results.json` for checked and unverified behavior.
+
+## Revision 1.6
+Components is now a visual library: palette, type specimens, 16 live examples, expandable contracts and loading/empty/error states. Main, Explore and both Detail variants share refined spacing, readable overlays, 12px controls and 24px media corners. Mobile sections use32px; wider preview40px. Figma adds a native-instance showcase and aligned template grouping. See `docs/09-quality-1.6.md`.

@@ -1,0 +1,20 @@
+{
+  "id": "kpop-visual-refinement-16",
+  "templateId": "KPOP_V1",
+  "scope": "systems/KPOP_V1",
+  "expected": "A polished, reusable editorial mobile system with visual component specimens",
+  "actual": "1.5 component catalog was dominated by specification text; examples and hierarchy needed stronger visual grouping",
+  "rule": "Keep KPOP pink/white/Pretendard; show16 real specimens;32/40 section rhythm;16 content gap;12 control /24 media radius",
+  "evidence": [
+    "preview/components.html",
+    "preview/refinement.css",
+    "preview/figma-library.png",
+    "qa-results.json"
+  ],
+  "status": "verified",
+  "verification": "320/390/430px on5 pages; selection/save/follow/toast demo checks; Figma visual export review;49 tests and build passed",
+  "regressionTests": [
+    "Repository npm test49 passed",
+    "Manual responsive/interaction checks recorded in qa-results.json"
+  ]
+}

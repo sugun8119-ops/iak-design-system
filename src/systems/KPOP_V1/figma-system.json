@@ -1,7 +1,7 @@
 {
   "id": "KPOP_V1",
   "name": "OFFBEAT",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "category": "Mobile / Entertainment / Content",
   "provenance": {
     "referenceUrl": "https://www.behance.net/gallery/105759817/Kpop-World_App_GUI",
@@ -140,6 +140,13 @@
         "$type": "dimension",
         "$value": {
           "value": 64,
+          "unit": "px"
+        }
+      },
+      "40": {
+        "$type": "dimension",
+        "$value": {
+          "value": 40,
           "unit": "px"
         }
       }
@@ -305,7 +312,16 @@
       "desktop": 1200
     },
     "minTouchTarget": 44,
-    "responsive": "Single-column 320–480 mobile canvas; max reading width 680 on desktop"
+    "responsive": "Single-column 320–480 mobile canvas; max reading width 680 on desktop",
+    "rhythm": {
+      "sectionMobile": 32,
+      "sectionWide": 40,
+      "content": 16,
+      "label": 8,
+      "controlRadius": 12,
+      "mediaRadius": 24
+    },
+    "library": "Responsive visual specimen catalog, 2 columns on desktop / 1 on mobile; 16 live component examples."
   },
   "components": [
     {

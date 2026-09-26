@@ -1,7 +1,7 @@
 {
   "system": "KPOP_V1",
-  "revision": "1.5.0",
-  "status": "local and Figma checks passed; Claude revision1.5 published and structure check passed",
+  "revision": "1.6.0",
+  "status": "Local and Figma refinement verified; Claude1.6 in progress",
   "regenerationStability": "not-run; no inherited IAK score",
   "variantStress": "not-run; existing variant contracts retained",
   "checks": {
@@ -294,5 +294,57 @@
         "UI kit loading/error and Detail/Main missing-media toggles not visually verified this round"
       ]
     }
+  },
+  "qualityRevision16": {
+    "version": "1.6.0",
+    "date": "2026-09-26",
+    "localPreview": {
+      "pages": [
+        "Main",
+        "Explore",
+        "Detail article",
+        "Detail creator",
+        "Components"
+      ],
+      "widths": [
+        320,
+        390,
+        430
+      ],
+      "combinations": 15,
+      "horizontalOverflow": 0,
+      "controlsBelow44px": 0
+    },
+    "interactions": [
+      "Category specimen exclusive selection",
+      "Reaction specimen toggles aria-pressed",
+      "Toast dismiss restores focus; show restores toast",
+      "Creator specimen follows",
+      "Article save then Saved navigation shows matching story"
+    ],
+    "figma": {
+      "showcaseNode": "57:477",
+      "componentSets": 16,
+      "variants": 68,
+      "variables": 90,
+      "fontFamily": "Pretendard",
+      "templates": "4 frames /3 levels",
+      "visualReview": [
+        "Main",
+        "Sub",
+        "Detail",
+        "Creator",
+        "Showcase"
+      ]
+    },
+    "repositoryTests": "49 passed,0 failed; build passed",
+    "claudeDesign": {
+      "status": "in progress"
+    },
+    "notVerified": [
+      "Physical devices",
+      "Screen readers",
+      "Cross-browser rendering"
+    ]
   }
 }

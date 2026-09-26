@@ -117,3 +117,9 @@ Bottom navigation: Discover / Explore / Saved, original 24px SVG icons with 1.75
 Image Direction: original poster, stage-light and collage compositions supplement rings. User-supplied Spotify press images are 2023 reference material, not current 2026 screenshots and not shipped product assets. No real artist/album imagery or source copy is used. See docs/08-reference-1.5.md for mapping and component contracts.
 
 Do: retain the pink masthead and white editorial feed; use artwork and hierarchy for variety; preserve 44px touch targets and visible keyboard focus. Don't: copy Spotify green, logo, icons or content; invent playback for static content; add DB/router or merge project styles.
+
+
+## Current revision 1.6 · Visual refinement
+Supersedes earlier spacing guidance. Preserve the independent KPOP pink/white/Pretendard identity, 16 components, 30 cases and three template levels. Use32px between mobile sections,40px on wider preview,16px within related content and8px between labels and values. These are authored normalization decisions, not measurements extracted from the original references.
+
+Components must be shown as live visual specimens: number → name/purpose → real example → expandable contract. Keep foundations, typography, components and states separate. Two-column catalog on desktop, one column on mobile. Use12px control and24px media corners,48px primary actions and44px minimum interaction targets. Preserve visible focus and selected text/ring; respect reduced motion. Article lead20/32; body16/28; retain the base16/26 body token for compact components. Avoid arbitrary decorative shadows or merging another project's brand.

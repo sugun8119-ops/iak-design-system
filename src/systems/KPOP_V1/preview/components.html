@@ -1,1 +1,271 @@
-<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KPOP_V1 · components</title><link rel="stylesheet" href="styles.css?v=1.5"><script defer src="app.js?v=1.5"></script></head><body><a class="skip" href="#content">본문으로 이동</a><header class="kitbar"><strong>KPOP_V1 <span class="muted"> / 01</span></strong><nav aria-label="템플릿"><a href="index.html" >Main</a><a href="sub.html" >Sub</a><a href="detail.html" >Detail</a><a href="components.html" aria-current="page">Components</a></nav></header><main class="catalog stack" id="content"><div class="pagehead"><div><p class="eyebrow">Foundations / components</p><h1>OFFBEAT toolkit</h1></div></div><h2>Color tokens</h2><div class="swatches"><div class="swatch"><i style="background:#F3F3F7"></i><span>canvas<br>#F3F3F7</span></div><div class="swatch"><i style="background:#FFFFFF"></i><span>surface<br>#FFFFFF</span></div><div class="swatch"><i style="background:#252438"></i><span>text<br>#252438</span></div><div class="swatch"><i style="background:#666478"></i><span>muted<br>#666478</span></div><div class="swatch"><i style="background:#DDDCE5"></i><span>border<br>#DDDCE5</span></div><div class="swatch"><i style="background:#C91C52"></i><span>accent<br>#C91C52</span></div><div class="swatch"><i style="background:#FFEAF1"></i><span>accentSoft<br>#FFEAF1</span></div><div class="swatch"><i style="background:#C91C52"></i><span>selection<br>#C91C52</span></div><div class="swatch"><i style="background:#176648"></i><span>success<br>#176648</span></div><div class="swatch"><i style="background:#885500"></i><span>warning<br>#885500</span></div><div class="swatch"><i style="background:#B52C3B"></i><span>danger<br>#B52C3B</span></div><div class="swatch"><i style="background:#FFFFFF"></i><span>white<br>#FFFFFF</span></div></div><h2>Type & interaction</h2><div class="panel stack"><h1>Display / 새로운 시작</h1><h2>Heading / 명확한 계층</h2><h3>Title / 짧은 제목</h3><p>Body / 읽기 편한 본문과 충분한 여백</p><div class="row"><button class="primary" id="sample-button">Primary demo</button><a class="btn" href="index.html">Secondary link</a><button disabled>Disabled</button></div><p id="sample-result" role="status">버튼 상태를 확인하세요.</p></div><h2>States</h2><div class="specs"><article aria-busy="true"><h3>Loading</h3><div class="skeleton"></div><div class="skeleton" style="width:60%"></div><p>정적 로딩 모양 샘플</p></article><article><h3>Empty</h3><p>표시할 항목이 없습니다.</p><a class="btn" href="sub.html">목록으로 이동</a></article><article><h3 class="error">Error</h3><p>데모 오류 상태입니다.</p><button id="retry">다시 시도 데모</button><p id="retry-result" role="status"></p></article><article><h3>Status</h3><div class="row"><span class="badge">● Online</span><span class="badge warn">! Warning</span><span class="badge off">○ Offline</span></div></article></div><h2>Component contracts</h2><div class="specs"><article><h3>MobileShell</h3><p>App header; scroll content; bottom navigation</p><p>width=320..480; state=ready|empty|error</p><p>390 reference; 20 margins; 16 gutter; safe area bottom</p><p class="muted">Reading view scales to 680 on wide screens; gallery may show 390px frame</p></article><article><h3>AppHeader</h3><p>Generic wordmark; section label</p><p>variant=brand|back</p><p>Horizontal; min-height 64; padding 16/20</p><p class="muted">Back returns to feed; header does not obscure keyboard focus</p></article><article><h3>CategoryTabs</h3><p>Category buttons and selected underline</p><p>selected=all|music|culture|stage</p><p>Horizontal; min-height 44; overflow auto; gap 8</p><p class="muted">Buttons expose aria-pressed; filtering is immediate and preserves focus</p></article><article><h3>FeatureStory</h3><p>Original media; category; title; metadata</p><p>variant=hero|detail; state=ready|media-missing</p><p>4:5 hero; 16:10 detail; radius 24; padding 24</p><p class="muted">Dark overlay behind white text; alt text if informative; link has explicit title</p></article><article><h3>StoryCard</h3><p>Media thumbnail; category; title; reading time</p><p>variant=list|grid; state=ready|saved|media-missing</p><p>List: 88x88 media and flexible text; gap 16; min-height 112</p><p class="muted">Single descriptive link; avoid nested actions inside links</p></article><article><h3>AuthorMeta</h3><p>Initial avatar; generic author; date</p><p>variant=compact|full</p><p>Horizontal; gap 8; 32px avatar; 12px metadata</p><p class="muted">Do not use real artist identity in demonstration content</p></article><article><h3>RankingRow</h3><p>Rank; title; generic collection; trend text</p><p>trend=up|down|new</p><p>Three columns 24/1fr/48; min-height 56</p><p class="muted">Rank and trend use text, not color alone</p></article><article><h3>ScheduleRow</h3><p>Date; event title; time</p><p>state=upcoming|ended</p><p>Horizontal; gap 12; min-height 56</p><p class="muted">State uses label; event data is fictional in preview</p></article><article><h3>ReactionBar</h3><p>Save button; local count or confirmation</p><p>saved=true|false</p><p>Horizontal; gap 12; min-height 44</p><p class="muted">Save exposes aria-pressed and live status; no implied server persistence</p></article><article><h3>BottomNav</h3><p>Discover; category feed; story links</p><p>active=discover|feed|story</p><p>Three equal columns; min-height 64; safe-area padding</p><p class="muted">Use nav and aria-current=page; always show text labels</p></article><article><h3>Button</h3><p>Label; optional leading icon</p><p>variant=primary|secondary|quiet; state=default|hover|pressed|focus|disabled</p><p>Horizontal center; gap 8; min-height 44; padding 12/16</p><p class="muted">Enter/Space activates; disabled prevents input; visible 2px focus ring</p></article><article><h3>Field</h3><p>Visible label; input; help/error</p><p>state=default|focus|error|disabled</p><p>Vertical; gap 8; input min-height 44; fill container</p><p class="muted">Label linked to input; error text with aria-describedby; never placeholder-only</p></article></div><section class="panel"><h2>Content discovery · 1.5</h2><div class="specs"><article><h3>BrowseTile</h3><p>Two-column category tile; label and description; 12px gap; minimum 112px height</p><p>Updates category or Saved filter without losing keyboard focus</p><a class="btn" href="sub.html#browse">Open live example →</a></article><article><h3>CollectionRail</h3><p>156px square-media cards; 12px gaps; scroll confined to the rail</p><p>Keyboard accessible links to category feeds; no fake playback controls</p><a class="btn" href="index.html#collections-title">Open live example →</a></article><article><h3>CreatorSpotlight</h3><p>4:5 media, creator name overlay, metadata and 48px follow action</p><p>Detail creator variant; follow persists within current tab only</p><a class="btn" href="detail.html?view=creator">Open live example →</a></article></div></section></main><footer>새로 작성한 범용 디자인 시스템 · 모든 콘텐츠와 수치는 가상 데모</footer><footer><a class="btn" href="cases.html">30 Case Library · 프로젝트별 독립 스타일</a></footer></body></html>
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>OFFBEAT · Design library</title><link rel="stylesheet" href="styles.css?v=1.6"><link rel="stylesheet" href="refinement.css?v=1.6"><script defer src="app.js?v=1.6"></script><script defer src="library.js?v=1.6"></script></head><body class="library"><a class="skip" href="#content">본문으로 이동</a><header class="kitbar"><strong>KPOP_V1 <span class="muted"> / 01</span></strong><nav aria-label="템플릿"><a href="index.html" >Main</a><a href="sub.html" >Sub</a><a href="detail.html" >Detail</a><a href="components.html" aria-current="page">Components</a></nav></header><main class="library-main" id="content"><section class="library-intro"><div><p class="eyebrow">OFFBEAT / DESIGN LIBRARY / 1.6</p><h1>취향을 발견하는<br>모든 순간을 위해.</h1><p class="intro-copy">콘텐츠가 주인공이 되는 모바일 디자인.<br>선명한 핑크, 편안한 여백, 이야기의 리듬.</p><div class="intro-actions"><a class="btn primary" href="index.html">Main 살펴보기 ↗</a><a class="btn" href="cases.html">30개 케이스</a></div><div class="library-facts"><span><b>16</b>Components</span><span><b>03</b>Page levels</span><span><b>Aa</b>Pretendard</span></div></div><div class="art-triptych" aria-hidden="true"><div class="art poster"></div><div class="art stage-art"></div><div class="art collage"></div><span>CULTURE, IN MOTION.</span></div></section><nav class="library-nav" aria-label="라이브러리 목차"><a href="#foundations">01 Foundations</a><a href="#typography">02 Typography</a><a href="#components">03 Components</a><a href="#states">04 States</a></nav><section id="foundations" class="library-section"><div class="library-section-head"><p class="eyebrow">01 / FOUNDATIONS</p><h2>한 가지 강조, 충분한 여백.</h2><p>핑크는 시선을 이끄는 곳에. 콘텐츠는 밝고 차분한 표면 위에.</p></div><div class="palette"><div class="palette-item"><div style="background:#C91C52;color:#fff"><strong>Brand pink</strong><span>#C91C52</span></div><p>강조 · 선택 · 주요 행동</p></div><div class="palette-item"><div style="background:#252438;color:#fff"><strong>Ink</strong><span>#252438</span></div><p>제목과 본문</p></div><div class="palette-item"><div style="background:#FFFFFF;color:#252438"><strong>Paper</strong><span>#FFFFFF</span></div><p>콘텐츠 표면</p></div><div class="palette-item"><div style="background:#F3F3F7;color:#252438"><strong>Canvas</strong><span>#F3F3F7</span></div><p>화면 바탕</p></div><div class="palette-item"><div style="background:#666478;color:#fff"><strong>Muted</strong><span>#666478</span></div><p>보조 정보</p></div><div class="palette-item"><div style="background:#FFEAF1;color:#252438"><strong>Rose</strong><span>#FFEAF1</span></div><p>선택한 영역</p></div></div></section><section id="typography" class="library-section"><div class="library-section-head"><p class="eyebrow">02 / TYPOGRAPHY</p><h2>읽히는 것부터, 아름답게.</h2><p>Pretendard · 400 / 700 / 900 · 한글과 영문의 균형</p></div><div class="type-specimen"><div class="type-large">Aa<br>가나다.</div><div class="type-rows"><div><small>DISPLAY · 32 / 40</small><h2>오늘의 새로운 리듬.</h2></div><div><small>HEADING · 24 / 32</small><h3>취향을 따라, 더 깊이.</h3></div><div><small>BODY · 16 / 26</small><p>익숙한 하루에 낯선 리듬 하나를 더해 보세요.<br>작은 발견이 새로운 이야기가 됩니다.</p></div><div><small>META · 12 / 17</small><p class="note">6 min read · Original demo</p></div></div></div></section><section id="components" class="library-section"><div class="library-section-head"><p class="eyebrow">03 / COMPONENTS</p><h2>함께 쓰일 때, 더 자연스럽게.</h2><p>실제 동작하는 표본으로 살펴보세요. 버튼과 선택 상태는 직접 조작할 수 있어요.</p></div><div class="specimen-grid"><article class="specimen" id="component-MobileShell"><div class="specimen-head"><span class="spec-index">01</span><div><h3>MobileShell</h3><p>한 화면의 기본 뼈대</p></div></div><div class="specimen-stage specimen-MobileShell"><div class="shell-sample"><div class="apphead"><b>offbeat /</b></div><div class="shell-content"><small>YOUR DAILY DISCOVERY</small><h3>오늘의 새로운 리듬.</h3><div class="art poster shell-art"></div></div><nav class="bottomnav" aria-label="앱 탐색"><a href="index.html" aria-current="page"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5z"/></svg><span>Discover</span></a><a href="sub.html" ><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="3"/><path d="M8 8h8M8 12h8M8 16h5"/></svg><span>Explore</span></a><a href="sub.html?saved=1" ><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v17l-6-4-6 4z"/></svg><span>Saved</span></a></nav></div></div><details><summary>규칙과 상태 보기</summary><pre>{
+  &quot;name&quot;: &quot;MobileShell&quot;,
+  &quot;figmaName&quot;: &quot;KPOP_V1/MobileShell&quot;,
+  &quot;anatomy&quot;: &quot;App header; scroll content; bottom navigation&quot;,
+  &quot;variants&quot;: &quot;width=320..480; state=ready|empty|error&quot;,
+  &quot;autoLayout&quot;: &quot;390 reference; 20 margins; 16 gutter; safe area bottom&quot;,
+  &quot;behavior&quot;: &quot;Reading view scales to 680 on wide screens; gallery may show 390px frame&quot;,
+  &quot;tokenBindings&quot;: {
+    &quot;text&quot;: &quot;color.text&quot;,
+    &quot;surface&quot;: &quot;color.surface&quot;,
+    &quot;focus&quot;: &quot;color.selection&quot;,
+    &quot;gap&quot;: &quot;spacing.8&quot;
+  },
+  &quot;resizing&quot;: {
+    &quot;horizontal&quot;: &quot;FILL except badges/buttons HUG&quot;,
+    &quot;vertical&quot;: &quot;HUG except media with aspect ratio&quot;
+  }
+}</pre></details></article><article class="specimen" id="component-AppHeader"><div class="specimen-head"><span class="spec-index">02</span><div><h3>AppHeader</h3><p>브랜드가 시작되는 자리</p></div></div><div class="specimen-stage specimen-AppHeader"><header class="apphead"><div class="row spread"><a class="brand" href="index.html">offbeat /</a><small>CULTURE IN MOTION</small></div></header></div><details><summary>규칙과 상태 보기</summary><pre>{
+  &quot;name&quot;: &quot;AppHeader&quot;,
+  &quot;figmaName&quot;: &quot;KPOP_V1/AppHeader&quot;,
+  &quot;anatomy&quot;: &quot;Generic wordmark; section label&quot;,
+  &quot;variants&quot;: &quot;variant=brand|back&quot;,
+  &quot;autoLayout&quot;: &quot;Horizontal; min-height 64; padding 16/20&quot;,
+  &quot;behavior&quot;: &quot;Back returns to feed; header does not obscure keyboard focus&quot;,
+  &quot;tokenBindings&quot;: {
+    &quot;text&quot;: &quot;color.text&quot;,
+    &quot;surface&quot;: &quot;color.surface&quot;,
+    &quot;focus&quot;: &quot;color.selection&quot;,
+    &quot;gap&quot;: &quot;spacing.8&quot;
+  },
+  &quot;resizing&quot;: {
+    &quot;horizontal&quot;: &quot;FILL except badges/buttons HUG&quot;,
+    &quot;vertical&quot;: &quot;HUG except media with aspect ratio&quot;
+  }
+}</pre></details></article><article class="specimen" id="component-CategoryTabs"><div class="specimen-head"><span class="spec-index">03</span><div><h3>CategoryTabs</h3><p>취향을 빠르게 고르는 방법</p></div></div><div class="specimen-stage specimen-CategoryTabs"><div class="tabs" data-demo-tabs><button aria-pressed="true">전체</button><button aria-pressed="false">Music</button><button aria-pressed="false">Stage</button><button aria-pressed="false">Culture</button></div></div><details><summary>규칙과 상태 보기</summary><pre>{
+  &quot;name&quot;: &quot;CategoryTabs&quot;,
+  &quot;figmaName&quot;: &quot;KPOP_V1/CategoryTabs&quot;,
+  &quot;anatomy&quot;: &quot;Category buttons and selected underline&quot;,
+  &quot;variants&quot;: &quot;selected=all|music|culture|stage&quot;,
+  &quot;autoLayout&quot;: &quot;Horizontal; min-height 44; overflow auto; gap 8&quot;,
+  &quot;behavior&quot;: &quot;Buttons expose aria-pressed; filtering is immediate and preserves focus&quot;,
+  &quot;tokenBindings&quot;: {
+    &quot;text&quot;: &quot;color.text&quot;,
+    &quot;surface&quot;: &quot;color.surface&quot;,
+    &quot;focus&quot;: &quot;color.selection&quot;,
+    &quot;gap&quot;: &quot;spacing.8&quot;
+  },
+  &quot;resizing&quot;: {
+    &quot;horizontal&quot;: &quot;FILL except badges/buttons HUG&quot;,
+    &quot;vertical&quot;: &quot;HUG except media with aspect ratio&quot;
+  }
+}</pre></details></article><article class="specimen" id="component-FeatureStory"><div class="specimen-head"><span class="spec-index">04</span><div><h3>FeatureStory</h3><p>한 장으로 여는 이야기</p></div></div><div class="specimen-stage specimen-FeatureStory"><a class="hero art poster" href="detail.html?story=0"><div class="herotext"><span class="eyebrow">LISTENING NOTES / 01</span><h2>새로운 소리가<br>시작되는 작은 공간</h2><small>6 min read · Original demo →</small></div></a></div><details><summary>규칙과 상태 보기</summary><pre>{
+  &quot;name&quot;: &quot;FeatureStory&quot;,
+  &quot;figmaName&quot;: &quot;KPOP_V1/FeatureStory&quot;,
+  &quot;anatomy&quot;: &quot;Original media; category; title; metadata&quot;,
+  &quot;variants&quot;: &quot;variant=hero|detail; state=ready|media-missing&quot;,
+  &quot;autoLayout&quot;: &quot;4:5 hero; 16:10 detail; radius 24; padding 24&quot;,
+  &quot;behavior&quot;: &quot;Dark overlay behind white text; alt text if informative; link has explicit title&quot;,
+  &quot;tokenBindings&quot;: {
+    &quot;text&quot;: &quot;color.text&quot;,
+    &quot;surface&quot;: &quot;color.surface&quot;,
+    &quot;focus&quot;: &quot;color.selection&quot;,
+    &quot;gap&quot;: &quot;spacing.8&quot;
+  },
+  &quot;resizing&quot;: {
+    &quot;horizontal&quot;: &quot;FILL except badges/buttons HUG&quot;,
+    &quot;vertical&quot;: &quot;HUG except media with aspect ratio&quot;
+  }
+}</pre></details></article><article class="specimen" id="component-StoryCard"><div class="specimen-head"><span class="spec-index">05</span><div><h3>StoryCard</h3><p>이미지와 제목의 균형</p></div></div><div class="specimen-stage specimen-StoryCard"><a class="story" href="detail.html?story=1"><span class="thumb art stage-art"></span><span><span class="eyebrow">STAGE</span><h3>무대 뒤에서 발견한 움직임</h3><small>4 min read · Backstage</small></span></a><a class="story" href="detail.html?story=2"><span class="thumb art collage"></span><span><span class="eyebrow">CULTURE</span><h3>밤의 도시를 기록하는 방법</h3><small>5 min read · City walk</small></span></a></div><details><summary>규칙과 상태 보기</summary><pre>{
+  &quot;name&quot;: &quot;StoryCard&quot;,
+  &quot;figmaName&quot;: &quot;KPOP_V1/StoryCard&quot;,
+  &quot;anatomy&quot;: &quot;Media thumbnail; category; title; reading time&quot;,
+  &quot;variants&quot;: &quot;variant=list|grid; state=ready|saved|media-missing&quot;,
+  &quot;autoLayout&quot;: &quot;List: 88x88 media and flexible text; gap 16; min-height 112&quot;,
+  &quot;behavior&quot;: &quot;Single descriptive link; avoid nested actions inside links&quot;,
+  &quot;tokenBindings&quot;: {
+    &quot;text&quot;: &quot;color.text&quot;,
+    &quot;surface&quot;: &quot;color.surface&quot;,
+    &quot;focus&quot;: &quot;color.selection&quot;,
+    &quot;gap&quot;: &quot;spacing.8&quot;
+  },
+  &quot;resizing&quot;: {
+    &quot;horizontal&quot;: &quot;FILL except badges/buttons HUG&quot;,
+    &quot;vertical&quot;: &quot;HUG except media with aspect ratio&quot;
+  }
+}</pre></details></article><article class="specimen" id="component-AuthorMeta"><div class="specimen-head"><span class="spec-index">06</span><div><h3>AuthorMeta</h3><p>콘텐츠에 더하는 맥락</p></div></div><div class="specimen-stage specimen-AuthorMeta"><div class="row"><span class="avatar">O</span><div><strong>Offbeat editorial</strong><p class="note">가상 에디터 · 6 min read</p></div></div></div><details><summary>규칙과 상태 보기</summary><pre>{
+  &quot;name&quot;: &quot;AuthorMeta&quot;,
+  &quot;figmaName&quot;: &quot;KPOP_V1/AuthorMeta&quot;,
+  &quot;anatomy&quot;: &quot;Initial avatar; generic author; date&quot;,
+  &quot;variants&quot;: &quot;variant=compact|full&quot;,
+  &quot;autoLayout&quot;: &quot;Horizontal; gap 8; 32px avatar; 12px metadata&quot;,
+  &quot;behavior&quot;: &quot;Do not use real artist identity in demonstration content&quot;,
+  &quot;tokenBindings&quot;: {
+    &quot;text&quot;: &quot;color.text&quot;,
+    &quot;surface&quot;: &quot;color.surface&quot;,
+    &quot;focus&quot;: &quot;color.selection&quot;,
+    &quot;gap&quot;: &quot;spacing.8&quot;
+  },
+  &quot;resizing&quot;: {
+    &quot;horizontal&quot;: &quot;FILL except badges/buttons HUG&quot;,
+    &quot;vertical&quot;: &quot;HUG except media with aspect ratio&quot;
+  }
+}</pre></details></article><article class="specimen" id="component-RankingRow"><div class="specimen-head"><span class="spec-index">07</span><div><h3>RankingRow</h3><p>지금 주목할 콘텐츠</p></div></div><div class="specimen-stage specimen-RankingRow"><div class="rank"><b>01</b><div><strong>Afterglow sessions</strong><small>Original collection</small></div><small>NEW</small></div><div class="rank"><b>02</b><div><strong>Soft frequencies</strong><small>Original collection</small></div><small>↑ 2</small></div></div><details><summary>규칙과 상태 보기</summary><pre>{
+  &quot;name&quot;: &quot;RankingRow&quot;,
+  &quot;figmaName&quot;: &quot;KPOP_V1/RankingRow&quot;,
+  &quot;anatomy&quot;: &quot;Rank; title; generic collection; trend text&quot;,
+  &quot;variants&quot;: &quot;trend=up|down|new&quot;,
+  &quot;autoLayout&quot;: &quot;Three columns 24/1fr/48; min-height 56&quot;,
+  &quot;behavior&quot;: &quot;Rank and trend use text, not color alone&quot;,
+  &quot;tokenBindings&quot;: {
+    &quot;text&quot;: &quot;color.text&quot;,
+    &quot;surface&quot;: &quot;color.surface&quot;,
+    &quot;focus&quot;: &quot;color.selection&quot;,
+    &quot;gap&quot;: &quot;spacing.8&quot;
+  },
+  &quot;resizing&quot;: {
+    &quot;horizontal&quot;: &quot;FILL except badges/buttons HUG&quot;,
+    &quot;vertical&quot;: &quot;HUG except media with aspect ratio&quot;
+  }
+}</pre></details></article><article class="specimen" id="component-ScheduleRow"><div class="specimen-head"><span class="spec-index">08</span><div><h3>ScheduleRow</h3><p>날짜를 먼저 읽는 일정</p></div></div><div class="specimen-stage specimen-ScheduleRow"><div class="schedule"><div class="dateblock"><span>OCT</span><strong>08</strong></div><div><p class="eyebrow">NEXT IN CULTURE</p><h3>Open studio evening</h3><small>19:00 · 가상 일정</small></div></div></div><details><summary>규칙과 상태 보기</summary><pre>{
+  &quot;name&quot;: &quot;ScheduleRow&quot;,
+  &quot;figmaName&quot;: &quot;KPOP_V1/ScheduleRow&quot;,
+  &quot;anatomy&quot;: &quot;Date; event title; time&quot;,
+  &quot;variants&quot;: &quot;state=upcoming|ended&quot;,
+  &quot;autoLayout&quot;: &quot;Horizontal; gap 12; min-height 56&quot;,
+  &quot;behavior&quot;: &quot;State uses label; event data is fictional in preview&quot;,
+  &quot;tokenBindings&quot;: {
+    &quot;text&quot;: &quot;color.text&quot;,
+    &quot;surface&quot;: &quot;color.surface&quot;,
+    &quot;focus&quot;: &quot;color.selection&quot;,
+    &quot;gap&quot;: &quot;spacing.8&quot;
+  },
+  &quot;resizing&quot;: {
+    &quot;horizontal&quot;: &quot;FILL except badges/buttons HUG&quot;,
+    &quot;vertical&quot;: &quot;HUG except media with aspect ratio&quot;
+  }
+}</pre></details></article><article class="specimen" id="component-ReactionBar"><div class="specimen-head"><span class="spec-index">09</span><div><h3>ReactionBar</h3><p>다시 읽고 싶은 이야기</p></div></div><div class="specimen-stage specimen-ReactionBar"><div class="stack"><button class="primary" data-demo-toggle aria-pressed="false" data-off="＋ 이야기 저장" data-on="✓ 저장됨">＋ 이야기 저장</button><p class="note" data-demo-status role="status">표본 안에서 저장 상태를 확인하세요.</p></div></div><details><summary>규칙과 상태 보기</summary><pre>{
+  &quot;name&quot;: &quot;ReactionBar&quot;,
+  &quot;figmaName&quot;: &quot;KPOP_V1/ReactionBar&quot;,
+  &quot;anatomy&quot;: &quot;Save button; local count or confirmation&quot;,
+  &quot;variants&quot;: &quot;saved=true|false&quot;,
+  &quot;autoLayout&quot;: &quot;Horizontal; gap 12; min-height 44&quot;,
+  &quot;behavior&quot;: &quot;Save exposes aria-pressed and live status; no implied server persistence&quot;,
+  &quot;tokenBindings&quot;: {
+    &quot;text&quot;: &quot;color.text&quot;,
+    &quot;surface&quot;: &quot;color.surface&quot;,
+    &quot;focus&quot;: &quot;color.selection&quot;,
+    &quot;gap&quot;: &quot;spacing.8&quot;
+  },
+  &quot;resizing&quot;: {
+    &quot;horizontal&quot;: &quot;FILL except badges/buttons HUG&quot;,
+    &quot;vertical&quot;: &quot;HUG except media with aspect ratio&quot;
+  }
+}</pre></details></article><article class="specimen" id="component-BottomNav"><div class="specimen-head"><span class="spec-index">10</span><div><h3>BottomNav</h3><p>세 가지 명확한 목적지</p></div></div><div class="specimen-stage specimen-BottomNav"><nav class="bottomnav" aria-label="앱 탐색"><a href="index.html" aria-current="page"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5z"/></svg><span>Discover</span></a><a href="sub.html" ><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="3"/><path d="M8 8h8M8 12h8M8 16h5"/></svg><span>Explore</span></a><a href="sub.html?saved=1" ><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v17l-6-4-6 4z"/></svg><span>Saved</span></a></nav></div><details><summary>규칙과 상태 보기</summary><pre>{
+  &quot;name&quot;: &quot;BottomNav&quot;,
+  &quot;figmaName&quot;: &quot;KPOP_V1/BottomNav&quot;,
+  &quot;anatomy&quot;: &quot;Discover; Explore; Saved&quot;,
+  &quot;variants&quot;: &quot;active=discover|feed|story&quot;,
+  &quot;autoLayout&quot;: &quot;Three equal columns; min-height 64; safe-area padding&quot;,
+  &quot;behavior&quot;: &quot;Explore opens category feed; Saved opens same feed with saved-only filter. Legacy Figma active=feed|story maps to Explore|Saved.&quot;,
+  &quot;tokenBindings&quot;: {
+    &quot;text&quot;: &quot;color.text&quot;,
+    &quot;surface&quot;: &quot;color.surface&quot;,
+    &quot;focus&quot;: &quot;color.selection&quot;,
+    &quot;gap&quot;: &quot;spacing.8&quot;
+  },
+  &quot;resizing&quot;: {
+    &quot;horizontal&quot;: &quot;FILL except badges/buttons HUG&quot;,
+    &quot;vertical&quot;: &quot;HUG except media with aspect ratio&quot;
+  }
+}</pre></details></article><article class="specimen" id="component-Button"><div class="specimen-head"><span class="spec-index">11</span><div><h3>Button</h3><p>한눈에 구분되는 행동</p></div></div><div class="specimen-stage specimen-Button"><div class="row"><button class="primary" id="sample-button">새로운 취향 찾기 ↗</button><a class="btn" href="index.html">더 둘러보기</a><button disabled>준비 중</button></div><p class="note" id="sample-result" role="status">Primary · Secondary · Disabled</p></div><details><summary>규칙과 상태 보기</summary><pre>{
+  &quot;name&quot;: &quot;Button&quot;,
+  &quot;figmaName&quot;: &quot;KPOP_V1/Button&quot;,
+  &quot;anatomy&quot;: &quot;Label; optional leading icon&quot;,
+  &quot;variants&quot;: &quot;variant=primary|secondary|quiet; state=default|hover|pressed|focus|disabled&quot;,
+  &quot;autoLayout&quot;: &quot;Horizontal center; gap 8; min-height 44; padding 12/16&quot;,
+  &quot;behavior&quot;: &quot;Enter/Space activates; disabled prevents input; visible 2px focus ring&quot;,
+  &quot;tokenBindings&quot;: {
+    &quot;text&quot;: &quot;color.text&quot;,
+    &quot;surface&quot;: &quot;color.surface&quot;,
+    &quot;focus&quot;: &quot;color.selection&quot;,
+    &quot;gap&quot;: &quot;spacing.8&quot;
+  },
+  &quot;resizing&quot;: {
+    &quot;horizontal&quot;: &quot;FILL except badges/buttons HUG&quot;,
+    &quot;vertical&quot;: &quot;HUG except media with aspect ratio&quot;
+  }
+}</pre></details></article><article class="specimen" id="component-Field"><div class="specimen-head"><span class="spec-index">12</span><div><h3>Field</h3><p>입력부터 피드백까지</p></div></div><div class="specimen-stage specimen-Field"><div class="stack"><label class="field">콘텐츠 검색<input type="search" placeholder="이야기, 카테고리, 시리즈" aria-describedby="field-help"></label><small id="field-help">실제 검색은 Explore에서 사용할 수 있어요.</small><label class="field">이메일 주소<input type="email" value="offbeat" aria-invalid="true" aria-describedby="field-error"></label><small class="error" id="field-error">이메일 형식을 확인해 주세요.</small></div></div><details><summary>규칙과 상태 보기</summary><pre>{
+  &quot;name&quot;: &quot;Field&quot;,
+  &quot;figmaName&quot;: &quot;KPOP_V1/Field&quot;,
+  &quot;anatomy&quot;: &quot;Visible label; input; help/error&quot;,
+  &quot;variants&quot;: &quot;state=default|focus|error|disabled&quot;,
+  &quot;autoLayout&quot;: &quot;Vertical; gap 8; input min-height 44; fill container&quot;,
+  &quot;behavior&quot;: &quot;Label linked to input; error text with aria-describedby; never placeholder-only&quot;,
+  &quot;tokenBindings&quot;: {
+    &quot;text&quot;: &quot;color.text&quot;,
+    &quot;surface&quot;: &quot;color.surface&quot;,
+    &quot;focus&quot;: &quot;color.selection&quot;,
+    &quot;gap&quot;: &quot;spacing.8&quot;
+  },
+  &quot;resizing&quot;: {
+    &quot;horizontal&quot;: &quot;FILL except badges/buttons HUG&quot;,
+    &quot;vertical&quot;: &quot;HUG except media with aspect ratio&quot;
+  }
+}</pre></details></article><article class="specimen" id="component-Toast"><div class="specimen-head"><span class="spec-index">13</span><div><h3>Toast</h3><p>흐름을 방해하지 않는 확인</p></div></div><div class="specimen-stage specimen-Toast"><div class="toast-sample" role="status"><span class="toast-mark" aria-hidden="true">✓</span><div><strong>이야기를 저장했어요</strong><p>Saved에서 다시 만나보세요.</p></div><button data-dismiss-toast aria-label="알림 닫기">×</button></div><button data-show-toast class="quiet">알림 다시 보기</button></div><details><summary>규칙과 상태 보기</summary><pre>{
+  &quot;name&quot;: &quot;Toast&quot;,
+  &quot;figmaName&quot;: &quot;KPOP_V1/Toast&quot;,
+  &quot;anatomy&quot;: &quot;Severity label; message; dismiss button&quot;,
+  &quot;variants&quot;: &quot;severity=info|success|warning|error|neutral&quot;,
+  &quot;autoLayout&quot;: &quot;Horizontal; max-width 420, mobile width 100%; padding 16; gap 12; dismiss target 44px&quot;,
+  &quot;behavior&quot;: &quot;role=status for info/success/neutral, role=alert for warning/error; explicit dismiss; no automatic timeout; no focus stealing; local demo only&quot;,
+  &quot;tokenBindings&quot;: {
+    &quot;surface&quot;: &quot;color.surface&quot;,
+    &quot;text&quot;: &quot;color.text&quot;,
+    &quot;border&quot;: &quot;color.border&quot;,
+    &quot;info&quot;: &quot;color.selection&quot;,
+    &quot;success&quot;: &quot;color.success&quot;,
+    &quot;warning&quot;: &quot;color.warning&quot;,
+    &quot;error&quot;: &quot;color.danger&quot;,
+    &quot;neutral&quot;: &quot;color.muted&quot;,
+    &quot;radius&quot;: &quot;radius.md&quot;,
+    &quot;gap&quot;: &quot;spacing.12&quot;
+  },
+  &quot;resizing&quot;: {
+    &quot;horizontal&quot;: &quot;FILL to 420px&quot;,
+    &quot;vertical&quot;: &quot;HUG&quot;
+  },
+  &quot;provenance&quot;: &quot;Added to cover IAK Toasts case, using only project-specific styling.&quot;
+}</pre></details></article><article class="specimen" id="component-BrowseTile"><div class="specimen-head"><span class="spec-index">14</span><div><h3>BrowseTile</h3><p>취향을 여는 작은 입구</p></div></div><div class="specimen-stage specimen-BrowseTile"><div class="browse-grid" data-demo-tabs><button class="browse-tile music-tile" aria-pressed="true"><strong>Music</strong><span>새로운 소리</span></button><button class="browse-tile stage-tile" aria-pressed="false"><strong>Stage</strong><span>무대 뒤의 순간</span></button><button class="browse-tile culture-tile" aria-pressed="false"><strong>Culture</strong><span>일상 속의 영감</span></button><button class="browse-tile saved-tile" aria-pressed="false"><strong>Saved</strong><span>다시 읽고 싶은 이야기</span></button></div></div><details><summary>규칙과 상태 보기</summary><pre>{
+  &quot;name&quot;: &quot;BrowseTile&quot;,
+  &quot;figmaName&quot;: &quot;KPOP_V1/BrowseTile&quot;,
+  &quot;variants&quot;: &quot;category=music|stage|culture|saved; state=default|selected&quot;,
+  &quot;anatomy&quot;: &quot;Two-column category tile; label and description; 12px gap; minimum 112px height&quot;,
+  &quot;autoLayout&quot;: &quot;Two-column category tile; label and description; 12px gap; minimum 112px height&quot;,
+  &quot;behavior&quot;: &quot;Updates category or Saved filter without losing keyboard focus&quot;,
+  &quot;tokenBindings&quot;: {
+    &quot;text&quot;: &quot;color.text&quot;,
+    &quot;surface&quot;: &quot;color.surface&quot;,
+    &quot;focus&quot;: &quot;color.selection&quot;,
+    &quot;radius&quot;: &quot;radius.md&quot;,
+    &quot;gap&quot;: &quot;spacing.12&quot;
+  }
+}</pre></details></article><article class="specimen" id="component-CollectionRail"><div class="specimen-head"><span class="spec-index">15</span><div><h3>CollectionRail</h3><p>이어지는 콘텐츠 발견</p></div></div><div class="specimen-stage specimen-CollectionRail"><div class="collection-rail"><a class="collection-card" href="sub.html?category=music"><span class="collection-art art poster"></span><strong>First light</strong><small>Music · Original demo</small></a><a class="collection-card" href="sub.html?category=stage"><span class="collection-art art stage-art"></span><strong>Behind the stage</strong><small>Stage · Original demo</small></a><a class="collection-card" href="sub.html?category=culture"><span class="collection-art art collage"></span><strong>Slow weekend</strong><small>Culture · Original demo</small></a></div></div><details><summary>규칙과 상태 보기</summary><pre>{
+  &quot;name&quot;: &quot;CollectionRail&quot;,
+  &quot;figmaName&quot;: &quot;KPOP_V1/CollectionRail&quot;,
+  &quot;variants&quot;: &quot;state=ready|empty&quot;,
+  &quot;anatomy&quot;: &quot;156px square-media cards; 12px gaps; scroll confined to the rail&quot;,
+  &quot;autoLayout&quot;: &quot;156px square-media cards; 12px gaps; scroll confined to the rail&quot;,
+  &quot;behavior&quot;: &quot;Keyboard accessible links to category feeds; no fake playback controls&quot;,
+  &quot;tokenBindings&quot;: {
+    &quot;text&quot;: &quot;color.text&quot;,
+    &quot;surface&quot;: &quot;color.surface&quot;,
+    &quot;focus&quot;: &quot;color.selection&quot;,
+    &quot;radius&quot;: &quot;radius.md&quot;,
+    &quot;gap&quot;: &quot;spacing.12&quot;
+  }
+}</pre></details></article><article class="specimen" id="component-CreatorSpotlight"><div class="specimen-head"><span class="spec-index">16</span><div><h3>CreatorSpotlight</h3><p>창작자의 시선을 담는 화면</p></div></div><div class="specimen-stage specimen-CreatorSpotlight"><div class="creator-hero art collage"><div><span class="eyebrow">CREATOR SPOTLIGHT</span><h2>Studio Morrow.</h2></div></div><div class="creator-meta"><div><strong>Independent studio</strong><small>Culture · 가상 크리에이터</small></div><button class="primary" data-demo-toggle data-off="팔로우" data-on="✓ 팔로잉" aria-pressed="false">팔로우</button></div></div><details><summary>규칙과 상태 보기</summary><pre>{
+  &quot;name&quot;: &quot;CreatorSpotlight&quot;,
+  &quot;figmaName&quot;: &quot;KPOP_V1/CreatorSpotlight&quot;,
+  &quot;variants&quot;: &quot;state=default|followed|media-missing&quot;,
+  &quot;anatomy&quot;: &quot;4:5 media, creator name overlay, metadata and 48px follow action&quot;,
+  &quot;autoLayout&quot;: &quot;4:5 media, creator name overlay, metadata and 48px follow action&quot;,
+  &quot;behavior&quot;: &quot;Detail creator variant; follow persists within current tab only&quot;,
+  &quot;tokenBindings&quot;: {
+    &quot;text&quot;: &quot;color.text&quot;,
+    &quot;surface&quot;: &quot;color.surface&quot;,
+    &quot;focus&quot;: &quot;color.selection&quot;,
+    &quot;radius&quot;: &quot;radius.md&quot;,
+    &quot;gap&quot;: &quot;spacing.12&quot;
+  }
+}</pre></details></article></div></section><section id="states" class="library-section"><div class="library-section-head"><p class="eyebrow">04 / STATES</p><h2>기다리는 순간까지 세심하게.</h2><p>상태는 색뿐 아니라 메시지와 다음 행동으로 전달합니다.</p></div><div class="state-grid"><article><span class="state-number">01</span><h3>불러오는 중</h3><div class="skeleton"></div><div class="skeleton" style="width:55%"></div><p>콘텐츠가 들어올 자리를 유지합니다.</p></article><article><span class="state-number">02</span><h3>아직 비어 있어요</h3><p>새로운 이야기를 발견하고 나만의 목록을 만들어 보세요.</p><a class="btn" href="sub.html">이야기 둘러보기 →</a></article><article><span class="state-number">03</span><h3>잠시 연결이 끊겼어요</h3><p>작성한 내용은 유지하고 다음 행동을 안내합니다.</p><button id="retry">다시 시도</button><p id="retry-result" role="status"></p></article></div></section></main><footer class="library-footer"><strong>offbeat /</strong><p>독립된 KPOP 디자인 시스템 · 모든 콘텐츠와 수치는 가상 예시</p><a class="btn" href="index.html">미리보기로 돌아가기 ↗</a></footer></body></html>

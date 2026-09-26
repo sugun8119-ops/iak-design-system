@@ -5,8 +5,8 @@
     "team": "Test",
     "libraryPublished": false,
     "collections": 2,
-    "primitiveVariables": 44,
-    "semanticVariables": 44,
+    "primitiveVariables": 45,
+    "semanticVariables": 45,
     "textStyles": 5,
     "effectStyles": 2,
     "componentSets": 16,
@@ -22,7 +22,8 @@
     "caseLibrary": "https://www.figma.com/design/VR9GFAKIFEjLWuQonbJVYv?node-id=20-3",
     "projectGuides": "https://www.figma.com/design/VR9GFAKIFEjLWuQonbJVYv?node-id=20-277",
     "toast": "https://www.figma.com/design/VR9GFAKIFEjLWuQonbJVYv?node-id=20-304",
-    "qualityRevision": "1.5.0"
+    "qualityRevision": "1.6.0",
+    "showcase": "https://www.figma.com/design/VR9GFAKIFEjLWuQonbJVYv?node-id=57-477"
   },
   "claudeDesign": {
     "url": "https://claude.ai/design/p/b9b13fc9-3a4a-4815-b091-5eab5b27fa26",
@@ -40,5 +41,5 @@
   "github": "https://github.com/sugun8119-ops/iak-design-system/tree/main/src/systems/KPOP_V1",
   "preview": "https://sugun8119-ops.github.io/iak-design-system/systems/KPOP_V1/preview/index.html",
   "updatedAt": "2026-09-26",
-  "qualityRevision": "1.5.0"
+  "qualityRevision": "1.6.0"
 }
