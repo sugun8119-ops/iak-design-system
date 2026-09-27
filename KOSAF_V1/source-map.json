@@ -76,7 +76,17 @@
     "untouchedReferenceNodes": [
       "1:107843",
       "213:712"
-    ]
+    ],
+    "followupDate": "2026-09-27",
+    "unclassifiedVisibleRawPaintNodes": 666,
+    "preservedRawPaintNodes": 666,
+    "followupNodeChanges": "migration-followup-changes-2026-09-27.json",
+    "annotationFontChanges": "migration-annotation-font-changes-2026-09-27.json",
+    "preservedPaintClassification": "migration-preserved-paints-2026-09-27.json",
+    "followupAdditionalModifiedNodes": 166,
+    "followupQA": "migration-followup-audit-2026-09-27.json",
+    "remainingBrandTextNodes": 34,
+    "scopeCompletion": "Standard UI follow-up applied; 666 source/legacy raw-paint exceptions remain preserved, not fully semantic-bound."
   },
   "preservation": {
     "legacyPalettes": [
@@ -118,7 +128,7 @@
       "1:70449",
       "1:70469"
     ],
-    "brandTextCount": 40,
+    "brandTextCount": 34,
     "missingFontCount": 34,
     "interactionCloseActions": [
       "1:70959",
@@ -129,7 +139,8 @@
       "1:85010"
     ],
     "sourceFileMutated": false,
-    "gameOfMindVisualAssetsImported": false
+    "gameOfMindVisualAssetsImported": false,
+    "annotationPoppinsCorrectedCount": 6
   },
   "claudeDesign": {
     "projectId": "f8c97b66-58c3-463f-9523-26fdd5b960d4",
@@ -149,7 +160,7 @@
     "nativeExportDirectory": "claude-design",
     "qa": "claude-design-qa.json",
     "sourceCoverage": "claude-design/docs/source-coverage.md",
-    "expansionVersion": "1.5.1",
+    "expansionVersion": "1.5.2",
     "sourceInventory": "kosaf-source-patterns.json",
     "expandedGeometry": "kosaf-expanded-geometry.json",
     "sourceIcons": "kosaf-source-icons.json",
@@ -165,6 +176,7 @@
     "iconSourceCount": 11,
     "iconExtensionCount": 23,
     "iconToneReport": "claude-design/docs/icon-tone-refinement.md",
-    "iconToneQA": "icon-tone-qa.json"
+    "iconToneQA": "icon-tone-qa.json",
+    "fullCardQA": "full-card-qa-2026-09-27.json"
   }
 }

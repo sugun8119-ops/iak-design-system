@@ -79,19 +79,20 @@ Helper exports (not separate families): `IconRegistry`, `UIIconRegistry`, `IconA
 - **KOSAF extension (23)** — authored for 1.5.0, *not extracted from Figma*: close, menu, plus, minus, chevron-left/right/up/down, star, heart-outline, filter, sort, check-mark, calendar, user, store, home, help, grid, list, refresh, chart-line, wallet. 24 grid, 2px round cap/join (1.75 allowed), currentColor; sizes 16/20/24/32; tones current/primary/secondary/muted/disabled/brand/positive/danger/focus/inverse.
 - **Aliases** resolve duplicates (x→close, hamburger→menu, prev/next→chevron-*, like→heart, back→navigate …). Unknown names render a dashed red "?" + one `console.warn` — never a silent null.
 - **Rules**: no text glyphs (× − ★ ▾) or CSS-drawn shapes as icons; icon-only buttons use IconButton with a required Korean label; hit area desktop ≥36 / mobile ≥44 where layout allows. No emoji. No brand/social icons without a supplied source.
-- **Variants (1.5.1)**: extension icons support `variant` outline (default) / duotone / solid on 10 closed glyphs; open strokes are outline-only (fallback). Soft faces use existing tokens (#EAEAEA neutral, #EBFFE9 brand). IconButton selected = #EBFFE9 + 1px inset #059B00 + brand duotone icon. Details: `docs/icon-tone-refinement.md`.
+- **Variants (1.5.1)**: extension icons support `variant` outline (default) / duotone / solid on 10 closed glyphs; open strokes are outline-only (fallback). Soft faces use existing tokens (#EAEAEA neutral, #EBFFE9 brand). IconButton selected = #EBFFE9 + 1px inset #059B00 + brand duotone icon. Details: `docs/icon-tone-refinement.md`. 1.5.2 full-card DOM QA: `docs/full-card-qa.md`.
+- **Helpers**: only PascalCase exports are on `window.KOSAFV1ProjectDesignSystem_f8c97b`; `resolveIcon` / `iconVariants` are internal — derive from `UIIconRegistry` in cards.
 - **Legacy**: `CloseX` kept as a deprecated wrapper → `<Icon name="close">`.
 
 ## Brand & logo
 - **Logo wordmark** 1:86099 supplied as 2× transparent PNG (`assets/brand/logo-wordmark__1-86099@2x.png`, native 292×33, "농산물 온라인 도매시장" set in S-Core Dream ExtraBold). Use at 292×33 (Header) or proportionally; never recolour, stretch or re-typeset. The Footer keeps its source #888 text version.
 - **Product images** 1:91190 (desktop 278) and 1:91522 (mobile 155) are the only photos; everything else is a placeholder slot. Not a full brand kit or photo export.
-- S-Core Dream (34 missing-font nodes) and Poppins (6) remain Figma-only; not shipped.
+- S-Core Dream (34 missing-font nodes) remains the only brand-font exception, Figma-only, not shipped. The former 6 Poppins nodes were screen annotations, not the logo (수의거래 설정 3 captions, GNB 메뉴 카테고리 / 최종시안 / GNB); on 2026-09-27 they were changed in Figma to Noto Sans KR Bold with the font-family variable and the primary text token → Poppins 0.
 
 ## Preserved exceptions
 - **Observed raw colours** used by source-derived components live in `tokens/source-extended.css` (footer #202020, login bg #F1F3F8, panels #F5F5F5, etc.) — they are part of the unclassified set, not Figma variables.
 - **Disabled fill**: measured Figma value is #EAEAEA (`gray/100`) for Button and Checkbox Disabled; the semantic token `color/surface/disabled` resolves to #D9D9D9 (`gray/250`). Components keep the measured #EAEAEA. The difference is an explicit source exception and has not been unified.
 - **Typography**: 60 `KOSAF/Source/*` styles are preserved separately from the canonical 400/500/700 × 9-style rule.
-832 unclassified raw-colour nodes, 34 missing S-Core Dream nodes, 40 brand-text nodes, legacy 23px pagination / 30px spinner / 20px selection controls — documented in `docs/migration-qa.md`, not auto-resolved.
+666 unbound raw-colour nodes (2026-09-27: 832 → 666; 166 unique nodes changed in Figma = 160 bound to semantic variables in the 3 management sections — border #DDD, guide text #888/#707070, 계약거래 badge #059B00, input error #E23736 — plus 6 Poppins annotation nodes moved to the primary text token; remaining Common 13 / 진행중 22 / Interaction 631; source/chart/brand exceptions preserved — this is not a full component migration), 34 missing S-Core Dream nodes, 34 brand-font nodes (S-Core Dream only; Poppins 6 → 0 on 2026-09-27), legacy 23px pagination / 30px spinner / 20px selection controls — documented in `docs/migration-qa.md`, not auto-resolved.
 
 ## Fonts
 Noto Sans KR 400/500/700 is loaded from Google Fonts (`tokens/fonts.css`); no binaries were provided. It is the same family bound in Figma (`typography/font-family`).

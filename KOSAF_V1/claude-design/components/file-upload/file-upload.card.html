@@ -16,7 +16,7 @@ const ROWS=[{no:10,item:'사과',variety:'부사',name:'사과/부사/특/20kg',
 const FAQ=[{title:'[배송] 배송기간은 얼마나 되나요?',content:'상품의 평균 배송일은 3~4일(주말, 공휴일 제외) 정도 소요됩니다.\n자세한 배송일자는 상품 상세 페이지에서 확인이 가능합니다.'},{title:'[회원] 회원탈퇴는 어떻게 해야 하나요?',content:'마이페이지 > 회원정보관리 > 회원탈퇴에서 신청할 수 있습니다.'},{title:'[배송] 배송조회는 어디에서 할 수 있나요?',content:'마이페이지 > 주문/배송내역에서 확인할 수 있습니다.'}];
 const META = {"name":"FileUpload","prov":"source","node":"1:89966","use":"360×45 파일 칩 + 99×45 찾아보기. 네이티브 선택, 업로드는 데모","props":["files","onChange","accept","multiple","maxSizeMB","buttonLabel","disabled","error"],"states":"비어있음·첨부·용량초과·오류·비활성","ko":"파일 첨부 · FileUpload"};
 function Demo(){return (<>
-<KSec label="PC · 첨부됨 / 비어있음+오류 / 비활성" style={{flexDirection:'column',alignItems:'flex-start'}}><FileUpload defaultFiles={[{name:'사업자등록증.hwp'}]}/><FileUpload error/><FileUpload disabled/></KSec>
+<KSec label="PC · 첨부됨 / 비어있음+오류 / 비활성" style={{flexDirection:'column',alignItems:'flex-start'}}><FileUpload name="bizDocs" aria-label="심사서류 파일 선택 — 첨부됨" defaultFiles={[{name:'사업자등록증.hwp'}]}/><FileUpload name="bizDocsError" aria-label="심사서류 파일 선택 — 오류" error/><FileUpload name="bizDocsDisabled" aria-label="심사서류 파일 선택 — 비활성" disabled/></KSec>
 </>);}
 ReactDOM.createRoot(document.getElementById('r')).render(<KCard meta={META}><Demo/></KCard>);
 </script></body></html>

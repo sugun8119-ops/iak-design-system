@@ -5,6 +5,10 @@ import * as React from 'react';
  * States: Empty · With file · Too large (red) · Error · Disabled.
  */
 export interface FileUploadProps {
+  /** 1.5.2: form field name of the native file input. Default "files". */
+  name?: string;
+  /** Accessible name of the native file input. Default "첨부파일 선택". */
+  'aria-label'?: string;
   files?: { name: string; size?: number; tooLarge?: boolean }[];
   defaultFiles?: { name: string }[];
   onChange?: (files: { name: string; size?: number; tooLarge?: boolean }[]) => void;

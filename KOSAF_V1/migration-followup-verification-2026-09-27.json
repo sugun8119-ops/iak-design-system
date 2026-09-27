@@ -1,0 +1,42 @@
+{
+  "checkedPaintNodes": 160,
+  "missingBindings": [],
+  "annotationFonts": [
+    {
+      "id": "1:85053",
+      "font": "Noto Sans KR",
+      "bound": true,
+      "paintBound": true
+    },
+    {
+      "id": "1:85054",
+      "font": "Noto Sans KR",
+      "bound": true,
+      "paintBound": true
+    },
+    {
+      "id": "1:85055",
+      "font": "Noto Sans KR",
+      "bound": true,
+      "paintBound": true
+    },
+    {
+      "id": "1:85773",
+      "font": "Noto Sans KR",
+      "bound": true,
+      "paintBound": true
+    },
+    {
+      "id": "1:85774",
+      "font": "Noto Sans KR",
+      "bound": true,
+      "paintBound": true
+    },
+    {
+      "id": "1:85775",
+      "font": "Noto Sans KR",
+      "bound": true,
+      "paintBound": true
+    }
+  ]
+}

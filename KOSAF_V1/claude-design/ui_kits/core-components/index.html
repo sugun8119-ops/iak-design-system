@@ -1,4 +1,4 @@
-<!-- @dsCard group="Core Components board" viewport="1640x900" name="KOSAF_V1 / Core Components (218:570)" subtitle="Board rebuilt from 82-node geometry export using the 11 React components" -->
+<!-- @dsCard group="Core Components board" viewport="1640x1940" name="KOSAF_V1 / Core Components (218:570)" subtitle="Board rebuilt from 82-node geometry export using the 11 React components" -->
 <!DOCTYPE html>
 <html><head><meta charset="utf-8"><title>KOSAF_V1 / Core Components</title>
 <link rel="stylesheet" href="../../styles.css">
@@ -21,10 +21,10 @@ function Board(){
     <H x={56} y={56}>Buttons</H>
     {btn.map(([v,s,x,y],i)=><At key={i} x={56+x} y={112+y}><Button variant={v} state={s} width={164}>버튼</Button></At>)}
     <H x={56} y={372}>Inputs / Selection</H>
-    {['default','focus','error','disabled'].map((s,i)=><At key={s} x={56+i*320} y={428}><Input state={s} width={287} placeholder={s==='disabled'?'Disabled':'입력값을 입력하세요'}/></At>)}
+    {['default','focus','error','disabled'].map((s,i)=><At key={s} x={56+i*320} y={428}><Input state={s} width={287} aria-label={'입력 예시 — '+s} placeholder={s==='disabled'?'Disabled':'입력값을 입력하세요'}/></At>)}
     <At x={56} y={528}><Search/></At>
-    {['unchecked','checked','focus','disabled'].map((s,i)=><At key={s} x={56+i*60} y={618}><Checkbox state={s}/></At>)}
-    {['unchecked','checked','focus','disabled'].map((s,i)=><At key={s} x={360+i*60} y={618}><Radio state={s}/></At>)}
+    {['unchecked','checked','focus','disabled'].map((s,i)=><At key={s} x={56+i*60} y={618}><Checkbox state={s} aria-label={'체크박스 예시 — '+s}/></At>)}
+    {['unchecked','checked','focus','disabled'].map((s,i)=><At key={s} x={360+i*60} y={618}><Radio state={s} name="rs" aria-label={'라디오 예시 — '+s}/></At>)}
     <At x={56} y={670}><div style={{display:'flex',gap:24,fontSize:14}}><Checkbox checked={chk} onChange={setChk}>live checkbox</Checkbox><Radio name="lr" value="a" checked={rad==='a'} onChange={setRad}>A</Radio><Radio name="lr" value="b" checked={rad==='b'} onChange={setRad}>B</Radio></div></At>
     <H x={56} y={728}>Tabs / Badge / Pagination</H>
     <At x={56} y={784}><div role="tablist" style={{display:'flex',gap:16}}>{['입찰거래','정가거래'].map((t,i)=><Tab key={t} selected={tab===i} onClick={()=>setTab(i)}>{t}</Tab>)}</div></At>

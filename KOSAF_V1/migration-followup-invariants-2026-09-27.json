@@ -1,0 +1,261 @@
+{
+  "variables": 81,
+  "textStyles": 69,
+  "brokenAliases": [],
+  "duplicateVariableNames": [],
+  "duplicateTextStyleNames": [],
+  "fontExceptions": [
+    {
+      "id": "1:71560",
+      "fonts": [
+        "S-Core Dream"
+      ]
+    },
+    {
+      "id": "1:72204",
+      "fonts": [
+        "S-Core Dream"
+      ]
+    },
+    {
+      "id": "1:72838",
+      "fonts": [
+        "S-Core Dream"
+      ]
+    },
+    {
+      "id": "1:73615",
+      "fonts": [
+        "S-Core Dream"
+      ]
+    },
+    {
+      "id": "1:73894",
+      "fonts": [
+        "S-Core Dream"
+      ]
+    },
+    {
+      "id": "1:74047",
+      "fonts": [
+        "S-Core Dream"
+      ]
+    },
+    {
+      "id": "1:74625",
+      "fonts": [
+        "S-Core Dream"
+      ]
+    },
+    {
+      "id": "1:74818",
+      "fonts": [
+        "S-Core Dream"
+      ]
+    },
+    {
+      "id": "1:75300",
+      "fonts": [
+        "S-Core Dream"
+      ]
+    },
+    {
+      "id": "1:75520",
+      "fonts": [
+        "S-Core Dream"
+      ]
+    },
+    {
+      "id": "1:75571",
+      "fonts": [
+        "S-Core Dream"
+      ]
+    },
+    {
+      "id": "1:76555",
+      "fonts": [
+        "S-Core Dream"
+      ]
+    },
+    {
+      "id": "1:76783",
+      "fonts": [
+        "S-Core Dream"
+      ]
+    },
+    {
+      "id": "1:76867",
+      "fonts": [
+        "S-Core Dream"
+      ]
+    },
+    {
+      "id": "1:76918",
+      "fonts": [
+        "S-Core Dream"
+      ]
+    },
+    {
+      "id": "1:77797",
+      "fonts": [
+        "S-Core Dream"
+      ]
+    },
+    {
+      "id": "1:77819",
+      "fonts": [
+        "S-Core Dream"
+      ]
+    },
+    {
+      "id": "1:78644",
+      "fonts": [
+        "S-Core Dream"
+      ]
+    },
+    {
+      "id": "1:78666",
+      "fonts": [
+        "S-Core Dream"
+      ]
+    },
+    {
+      "id": "1:79468",
+      "fonts": [
+        "S-Core Dream"
+      ]
+    },
+    {
+      "id": "1:79490",
+      "fonts": [
+        "S-Core Dream"
+      ]
+    },
+    {
+      "id": "1:80289",
+      "fonts": [
+        "S-Core Dream"
+      ]
+    },
+    {
+      "id": "1:80311",
+      "fonts": [
+        "S-Core Dream"
+      ]
+    },
+    {
+      "id": "1:81247",
+      "fonts": [
+        "S-Core Dream"
+      ]
+    },
+    {
+      "id": "1:81298",
+      "fonts": [
+        "S-Core Dream"
+      ]
+    },
+    {
+      "id": "1:82147",
+      "fonts": [
+        "S-Core Dream"
+      ]
+    },
+    {
+      "id": "1:82199",
+      "fonts": [
+        "S-Core Dream"
+      ]
+    },
+    {
+      "id": "1:83320",
+      "fonts": [
+        "S-Core Dream"
+      ]
+    },
+    {
+      "id": "1:83483",
+      "fonts": [
+        "S-Core Dream"
+      ]
+    },
+    {
+      "id": "1:83697",
+      "fonts": [
+        "S-Core Dream"
+      ]
+    },
+    {
+      "id": "1:84073",
+      "fonts": [
+        "S-Core Dream"
+      ]
+    },
+    {
+      "id": "1:84174",
+      "fonts": [
+        "S-Core Dream"
+      ]
+    },
+    {
+      "id": "1:85253",
+      "fonts": [
+        "S-Core Dream"
+      ]
+    },
+    {
+      "id": "1:85375",
+      "fonts": [
+        "S-Core Dream"
+      ]
+    }
+  ],
+  "coreFamilies": [
+    {
+      "id": "218:590",
+      "name": "KOSAF/Button"
+    },
+    {
+      "id": "218:600",
+      "name": "KOSAF/Input"
+    },
+    {
+      "id": "218:608",
+      "name": "KOSAF/Checkbox"
+    },
+    {
+      "id": "218:614",
+      "name": "KOSAF/Radio"
+    },
+    {
+      "id": "218:620",
+      "name": "KOSAF/Tab"
+    },
+    {
+      "id": "218:631",
+      "name": "KOSAF/PaginationItem"
+    },
+    {
+      "id": "218:637",
+      "name": "KOSAF/TableRow"
+    },
+    {
+      "id": "218:601",
+      "name": "KOSAF/Search"
+    },
+    {
+      "id": "218:621",
+      "name": "KOSAF/Badge"
+    },
+    {
+      "id": "218:639",
+      "name": "KOSAF/Modal"
+    },
+    {
+      "id": "218:642",
+      "name": "KOSAF/Stepper"
+    }
+  ],
+  "coreDescendants": 82,
+  "annotationFontCorrectionVerification": "migration-followup-verification-2026-09-27.json"
+}

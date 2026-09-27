@@ -4,7 +4,7 @@ import { Icon } from '../icon/Icon.tsx';
 const F = 'var(--kosaf-font)';
 
 /** KOSAF FileUpload — Source-derived from 첨부파일2 1:89966 (field 360×45 r3 + "찾아보기" 99×45 r3 #F8F8F8, 16/500). Uses the native file picker; upload itself is a demo. */
-export function FileUpload({ files, defaultFiles = [], onChange, accept, multiple, maxSizeMB = 4, buttonLabel = '찾아보기', placeholder = '', width = 360, disabled, error, id, style }) {
+export function FileUpload({ name = 'files', 'aria-label': ariaLabel, files, defaultFiles = [], onChange, accept, multiple, maxSizeMB = 4, buttonLabel = '찾아보기', placeholder = '', width = 360, disabled, error, id, style }) {
   const [inner, setInner] = React.useState(defaultFiles);
   const list = files !== undefined ? files : inner;
   const ref = React.useRef(null);
@@ -24,7 +24,7 @@ export function FileUpload({ files, defaultFiles = [], onChange, accept, multipl
           </span>
         )) : <span style={{ fontSize: 14, color: 'var(--kosaf-color-text-muted)' }}>{placeholder}</span>}
       </div>
-      <input ref={ref} id={id} type="file" accept={accept} multiple={multiple} disabled={disabled} onChange={add} style={{ position: 'absolute', width: 1, height: 1, opacity: 0, pointerEvents: 'none' }} tabIndex={-1} />
+      <input ref={ref} id={id} name={name} aria-label={ariaLabel || '첨부파일 선택'} type="file" accept={accept} multiple={multiple} disabled={disabled} onChange={add} style={{ position: 'absolute', width: 1, height: 1, opacity: 0, pointerEvents: 'none' }} tabIndex={-1} />
       <button type="button" disabled={disabled} onClick={() => ref.current && ref.current.click()} style={{ flex: '0 0 99px', height: 45, border: '1px solid var(--kosaf-color-border-default)', borderRadius: 3, background: 'var(--kosaf-src-file-btn)', fontFamily: F, fontSize: 16, fontWeight: 500, color: 'var(--kosaf-color-text-primary)', cursor: disabled ? 'not-allowed' : 'pointer' }}>{buttonLabel}</button>
     </div>
   );

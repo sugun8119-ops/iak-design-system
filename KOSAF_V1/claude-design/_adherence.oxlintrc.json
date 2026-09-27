@@ -202,8 +202,8 @@
         "message": "<EmptyState> device must be one of 'desktop' | 'mobile'."
       },
       {
-        "selector": "JSXOpeningElement[name.name='FileUpload'] > JSXAttribute > JSXIdentifier[name!=/^(?:files|defaultFiles|onChange|accept|multiple|maxSizeMB|buttonLabel|placeholder|width|disabled|error|id|style|key|ref|className|style|children)$/]",
-        "message": "<FileUpload> doesn't accept that prop. Declared props: files, defaultFiles, onChange, accept, multiple, maxSizeMB, buttonLabel, placeholder, width, disabled, error, id, style."
+        "selector": "JSXOpeningElement[name.name='FileUpload'] > JSXAttribute > JSXIdentifier[name!=/^(?:name|files|defaultFiles|onChange|accept|multiple|maxSizeMB|buttonLabel|placeholder|width|disabled|error|id|style|key|ref|className|style|children)$/]",
+        "message": "<FileUpload> doesn't accept that prop. Declared props: name, files, defaultFiles, onChange, accept, multiple, maxSizeMB, buttonLabel, placeholder, width, disabled, error, id, style."
       },
       {
         "selector": "JSXOpeningElement[name.name='FilterChip'] > JSXAttribute > JSXIdentifier[name!=/^(?:selected|onToggle|variant|onRemove|disabled|children|style|key|ref|className|style|children)$/]",

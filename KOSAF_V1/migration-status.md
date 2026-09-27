@@ -118,3 +118,17 @@ Claude Design의 Published 시스템을 49개 family / 97개 카드로 확장했
 ## 아이콘 채움·명암 — 1.5.1 / 2026-09-27
 
 공통UI10종에 outline/duotone/solid 변형을 추가하고 열린획13종은 outline으로 보존했다. IconButton 선택 배경·테두리·두톤 채움과 비활성 색상을 구분했다. MobileMenu 바로가기 및 상품/하단바 관심 상태에 연결했다. 원본11SVG·토큰·100카드·50family·22kit를 보존했다. 변경 파일은 `icon-tone-changes-2026-09-27.json`, 검수는 `icon-tone-qa.json`에 기록한다. Figma는 수정하지 않았다.
+
+
+## Figma 후속 마이그레이션 / 100카드 QA — 2026-09-27
+
+세 관리 섹션을 다시 검사하고 **166개 기존 노드**를 수정했다. 160개는 일반 테두리·본문/안내 글자·계약거래 배지·입력 오류를 기존 semantic token에 연결했다. 나머지 6개는 Poppins 화면 주석을 Noto Sans KR Bold 및 서체 변수에 연결했다. 이전에 이 6개를 브랜드 예외로 분류한 것은 잘못이었으며, 남은 브랜드 예외는 S-Core Dream 34개다. 문구·위치·글자 크기를 유지했고 서체 변경으로 자동 폭만 1–2px 달라졌다.
+
+- 삭제/추가 노드 0. 기존 하위 노드 414 / 842 / 15,581, 닫기 반응 6개 유지.
+- 변수 81개, 텍스트 스타일 69개, Figma 마스터 11개 유지. 끊어진 alias 및 중복 변수/스타일 이름 0.
+- 미연결 단색 노드 832 → **666** (Common 최종 13 / 진행중 22 / Interaction 631). 원본 팔레트와의 일치 여부, 속성, 노드 ID를 보존 분류표에 기록했다. 팔레트 일치만으로 의미 역할까지 확인됐다고 주장하지 않는다.
+- 원본 차트·로고·그림 및 구형 화면별 색상은 임의로 덮지 않았다. 이 666개는 전부 semantic 연결 완료된 상태가 아니며, 전체 컴포넌트 인스턴스 전환도 완료하지 않았다.
+- Figma Tab 관리 표본을 실제 렌더링해 기본 구획·선택 표시·테두리를 확인했다. input group의 Plugin API 스크린샷은 1×1을 반환해 시각 QA 통과로 계산하지 않았다.
+- 상세: `migration-followup-changes-2026-09-27.json`, `migration-annotation-font-changes-2026-09-27.json`, `migration-followup-audit-2026-09-27.json`, `migration-preserved-paints-2026-09-27.json`.
+
+Claude Design 100개 카드를 모두 지정 viewport에서 브라우저 DOM 검사했다. Icon 카탈로그의 미노출 helper 호출로 인한 blank를 발견했고, 입력 예제의 accessible name 및 일부 카드 높이 문제와 함께 native 시스템에서 수정했다. 22개 UI kit의 정상 세로 스크롤은 유지한다. 최종 재검사 결과는 `full-card-qa-2026-09-27.json`에 기록한다. 이는 모든 상태/화면의 정밀 시각 QA 또는 스크린리더 인증이 아니다.

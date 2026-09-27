@@ -1,0 +1,39 @@
+{
+  "version": "1.5.2",
+  "nativeChangedFiles": [
+    "KOSAF_V1/claude-design/_adherence.oxlintrc.json",
+    "KOSAF_V1/claude-design/_ds_bundle.js",
+    "KOSAF_V1/claude-design/_ds_manifest.json",
+    "KOSAF_V1/claude-design/components/empty-state/empty-state.card.html",
+    "KOSAF_V1/claude-design/components/file-upload/FileUpload.d.ts",
+    "KOSAF_V1/claude-design/components/file-upload/FileUpload.tsx",
+    "KOSAF_V1/claude-design/components/file-upload/file-upload.card.html",
+    "KOSAF_V1/claude-design/components/form-error-summary/form-error-summary.card.html",
+    "KOSAF_V1/claude-design/components/form-field/FormField.tsx",
+    "KOSAF_V1/claude-design/components/icon-button/icon-button.card.html",
+    "KOSAF_V1/claude-design/components/icon/icon.card.html",
+    "KOSAF_V1/claude-design/components/input/input.card.html",
+    "KOSAF_V1/claude-design/components/mobile-filter-sheet/mobile-filter-sheet.card.html",
+    "KOSAF_V1/claude-design/components/page-header/page-header.card.html",
+    "KOSAF_V1/claude-design/components/product-table/product-table.card.html",
+    "KOSAF_V1/claude-design/components/rating/rating.card.html",
+    "KOSAF_V1/claude-design/guidelines/docs/02-category-index.html",
+    "KOSAF_V1/claude-design/guidelines/docs/05-qa.html",
+    "KOSAF_V1/claude-design/guidelines/docs/07-changelog.html",
+    "KOSAF_V1/claude-design/guidelines/icon-states.html",
+    "KOSAF_V1/claude-design/guidelines/preservation.html",
+    "KOSAF_V1/claude-design/readme.md",
+    "KOSAF_V1/claude-design/ui_kits/core-components/index.html",
+    "KOSAF_V1/claude-design/ui_kits/seller-signup/screens.jsx",
+    "KOSAF_V1/claude-design/docs/full-card-qa.md"
+  ],
+  "figmaModifiedNodes": 166,
+  "deletedExistingFigmaNodes": 0,
+  "sourceOfTruthModified": false,
+  "reports": [
+    "full-card-qa-2026-09-27.json",
+    "migration-followup-changes-2026-09-27.json",
+    "migration-annotation-font-changes-2026-09-27.json",
+    "migration-preserved-paints-2026-09-27.json"
+  ]
+}

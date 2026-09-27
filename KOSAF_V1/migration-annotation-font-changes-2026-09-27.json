@@ -1,0 +1,181 @@
+{
+  "mutatedNodeIds": [
+    "1:85053",
+    "1:85054",
+    "1:85055",
+    "1:85773",
+    "1:85774",
+    "1:85775"
+  ],
+  "createdNodeIds": [],
+  "changes": [
+    {
+      "id": "1:85053",
+      "before": {
+        "font": {
+          "family": "Poppins",
+          "style": "Bold"
+        },
+        "x": 43,
+        "y": 118,
+        "w": 335,
+        "h": 29,
+        "text": "수의거래 설정 한 상품이 있는 경우"
+      },
+      "after": {
+        "font": {
+          "family": "Noto Sans KR",
+          "style": "Bold",
+          "variationSettings": {
+            "wght": 700
+          }
+        },
+        "x": 43,
+        "y": 118,
+        "w": 337,
+        "h": 29
+      },
+      "familyVariable": "VariableID:220:570"
+    },
+    {
+      "id": "1:85054",
+      "before": {
+        "font": {
+          "family": "Poppins",
+          "style": "Bold"
+        },
+        "x": 43,
+        "y": 410,
+        "w": 357,
+        "h": 29,
+        "text": "수의거래 설정 안한 상품이 있는 경우"
+      },
+      "after": {
+        "font": {
+          "family": "Noto Sans KR",
+          "style": "Bold",
+          "variationSettings": {
+            "wght": 700
+          }
+        },
+        "x": 43,
+        "y": 410,
+        "w": 359,
+        "h": 29
+      },
+      "familyVariable": "VariableID:220:570"
+    },
+    {
+      "id": "1:85055",
+      "before": {
+        "font": {
+          "family": "Poppins",
+          "style": "Bold"
+        },
+        "x": 43,
+        "y": 723,
+        "w": 165,
+        "h": 29,
+        "text": "상품이 없는 경우"
+      },
+      "after": {
+        "font": {
+          "family": "Noto Sans KR",
+          "style": "Bold",
+          "variationSettings": {
+            "wght": 700
+          }
+        },
+        "x": 43,
+        "y": 723,
+        "w": 166,
+        "h": 29
+      },
+      "familyVariable": "VariableID:220:570"
+    },
+    {
+      "id": "1:85773",
+      "before": {
+        "font": {
+          "family": "Poppins",
+          "style": "Bold"
+        },
+        "x": 971,
+        "y": 2056,
+        "w": 633,
+        "h": 96,
+        "text": "GNB메뉴 카테고리"
+      },
+      "after": {
+        "font": {
+          "family": "Noto Sans KR",
+          "style": "Bold",
+          "variationSettings": {
+            "wght": 700
+          }
+        },
+        "x": 971,
+        "y": 2056,
+        "w": 632,
+        "h": 96
+      },
+      "familyVariable": "VariableID:220:570"
+    },
+    {
+      "id": "1:85774",
+      "before": {
+        "font": {
+          "family": "Poppins",
+          "style": "Bold"
+        },
+        "x": 5531,
+        "y": 2056,
+        "w": 312,
+        "h": 96,
+        "text": "최종 시안"
+      },
+      "after": {
+        "font": {
+          "family": "Noto Sans KR",
+          "style": "Bold",
+          "variationSettings": {
+            "wght": 700
+          }
+        },
+        "x": 5531,
+        "y": 2056,
+        "w": 313,
+        "h": 96
+      },
+      "familyVariable": "VariableID:220:570"
+    },
+    {
+      "id": "1:85775",
+      "before": {
+        "font": {
+          "family": "Poppins",
+          "style": "Bold"
+        },
+        "x": 16923,
+        "y": 2056,
+        "w": 174,
+        "h": 96,
+        "text": "GNB"
+      },
+      "after": {
+        "font": {
+          "family": "Noto Sans KR",
+          "style": "Bold",
+          "variationSettings": {
+            "wght": 700
+          }
+        },
+        "x": 16923,
+        "y": 2056,
+        "w": 172,
+        "h": 96
+      },
+      "familyVariable": "VariableID:220:570"
+    }
+  ]
+}

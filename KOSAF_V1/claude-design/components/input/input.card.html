@@ -16,8 +16,8 @@ const ROWS=[{no:10,item:'사과',variety:'부사',name:'사과/부사/특/20kg',
 const FAQ=[{title:'[배송] 배송기간은 얼마나 되나요?',content:'상품의 평균 배송일은 3~4일(주말, 공휴일 제외) 정도 소요됩니다.\n자세한 배송일자는 상품 상세 페이지에서 확인이 가능합니다.'},{title:'[회원] 회원탈퇴는 어떻게 해야 하나요?',content:'마이페이지 > 회원정보관리 > 회원탈퇴에서 신청할 수 있습니다.'},{title:'[배송] 배송조회는 어디에서 할 수 있나요?',content:'마이페이지 > 주문/배송내역에서 확인할 수 있습니다.'}];
 const META = {"name":"Input","prov":"master","node":"218:600","use":"한 줄 입력 287×45 r5, 좌우 14","props":["state","value","onChange","placeholder","errorMessage","disabled","width"],"states":"기본·포커스·오류(+문구)·비활성","ko":"입력 · Input"};
 function Demo(){return (<>
-<KSec label="상태 매트릭스" align="flex-start"><Input width={287}/><Input state="focus" width={287}/><Input state="error" width={287} errorMessage="필수항목을 입력해주세요."/><Input state="disabled" placeholder="Disabled" width={287}/></KSec>
-<KSec label="모바일 · 100%"><div style={{width:350}}><Input width="100%" placeholder="아이디"/></div></KSec>
+<KSec label="상태 매트릭스" align="flex-start"><Input width={287} aria-label="입력 예시 — 기본"/><Input state="focus" width={287} aria-label="입력 예시 — 포커스"/><Input state="error" width={287} aria-label="입력 예시 — 오류" errorMessage="필수항목을 입력해주세요."/><Input state="disabled" placeholder="Disabled" width={287} aria-label="입력 예시 — 비활성"/></KSec>
+<KSec label="모바일 · 100%"><div style={{width:350}}><Input width="100%" placeholder="아이디" aria-label="아이디"/></div></KSec>
 </>);}
 ReactDOM.createRoot(document.getElementById('r')).render(<KCard meta={META}><Demo/></KCard>);
 </script></body></html>

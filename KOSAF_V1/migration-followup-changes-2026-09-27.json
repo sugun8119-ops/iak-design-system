@@ -1,0 +1,1474 @@
+{
+  "mutatedNodeIds": [
+    "1:69807",
+    "1:69808",
+    "1:69908",
+    "1:69909",
+    "1:69910",
+    "1:69911",
+    "1:69912",
+    "1:69913",
+    "1:69914",
+    "1:69936",
+    "1:69937",
+    "1:69938",
+    "1:70000",
+    "1:70001",
+    "1:70002",
+    "1:70003",
+    "1:70004",
+    "1:70005",
+    "1:70006",
+    "1:70028",
+    "1:70029",
+    "1:70030",
+    "1:70232",
+    "1:70313",
+    "1:70317",
+    "1:70373",
+    "1:70500",
+    "1:70501",
+    "1:70617",
+    "1:70625",
+    "1:71485",
+    "1:71486",
+    "1:71487",
+    "1:71488",
+    "1:71489",
+    "1:71490",
+    "1:71491",
+    "1:71492",
+    "1:71659",
+    "1:71660",
+    "1:71661",
+    "1:71662",
+    "1:71663",
+    "1:71664",
+    "1:71675",
+    "1:71679",
+    "1:71726",
+    "1:71727",
+    "1:71738",
+    "1:71739",
+    "1:71743",
+    "1:71813",
+    "1:71883",
+    "1:71890",
+    "1:71901",
+    "1:71905",
+    "1:71919",
+    "1:71923",
+    "1:72324",
+    "1:72325",
+    "1:72326",
+    "1:72327",
+    "1:72328",
+    "1:72329",
+    "1:72330",
+    "1:72332",
+    "1:72423",
+    "1:72434",
+    "1:72445",
+    "1:72456",
+    "1:72466",
+    "1:72477",
+    "1:72488",
+    "1:72499",
+    "1:72659",
+    "1:72671",
+    "1:72680",
+    "1:72689",
+    "1:72699",
+    "1:72706",
+    "1:72722",
+    "1:72723",
+    "1:73783",
+    "1:73796",
+    "1:73808",
+    "1:73852",
+    "1:73974",
+    "1:73975",
+    "1:73976",
+    "1:73977",
+    "1:73978",
+    "1:73979",
+    "1:73980",
+    "1:73981",
+    "1:74146",
+    "1:74147",
+    "1:74148",
+    "1:74149",
+    "1:74150",
+    "1:74151",
+    "1:74162",
+    "1:74166",
+    "1:74171",
+    "1:74172",
+    "1:74227",
+    "1:74234",
+    "1:74245",
+    "1:74249",
+    "1:74263",
+    "1:74267",
+    "1:74488",
+    "1:74745",
+    "1:74746",
+    "1:74747",
+    "1:74748",
+    "1:74749",
+    "1:74750",
+    "1:74751",
+    "1:74752",
+    "1:74917",
+    "1:74918",
+    "1:74919",
+    "1:74920",
+    "1:74921",
+    "1:74922",
+    "1:74933",
+    "1:74937",
+    "1:74994",
+    "1:75001",
+    "1:75012",
+    "1:75016",
+    "1:75030",
+    "1:75034",
+    "1:83288",
+    "1:83369",
+    "1:83370",
+    "1:83371",
+    "1:83374",
+    "1:83375",
+    "1:83377",
+    "1:83662",
+    "1:83664",
+    "1:83665",
+    "1:83671",
+    "1:83673",
+    "1:83674",
+    "1:83675",
+    "1:83908",
+    "1:83909",
+    "1:84039",
+    "1:84040",
+    "1:85061",
+    "1:85062",
+    "1:85231",
+    "1:85232",
+    "1:85417",
+    "1:85607",
+    "1:85633",
+    "1:85656",
+    "1:85678"
+  ],
+  "createdNodeIds": [],
+  "deletedNodeIds": [],
+  "changes": [
+    {
+      "id": "1:69807",
+      "root": "1:69548",
+      "property": "strokes",
+      "index": 0,
+      "from": "#DFE0E4",
+      "token": "color/border/default"
+    },
+    {
+      "id": "1:69808",
+      "root": "1:69548",
+      "property": "strokes",
+      "index": 0,
+      "from": "#DFE0E4",
+      "token": "color/border/default"
+    },
+    {
+      "id": "1:69908",
+      "root": "1:69548",
+      "property": "strokes",
+      "index": 0,
+      "from": "#DFE0E4",
+      "token": "color/border/default"
+    },
+    {
+      "id": "1:69909",
+      "root": "1:69548",
+      "property": "strokes",
+      "index": 0,
+      "from": "#DFE0E4",
+      "token": "color/border/default"
+    },
+    {
+      "id": "1:69910",
+      "root": "1:69548",
+      "property": "strokes",
+      "index": 0,
+      "from": "#DFE0E4",
+      "token": "color/border/default"
+    },
+    {
+      "id": "1:69911",
+      "root": "1:69548",
+      "property": "strokes",
+      "index": 0,
+      "from": "#DFE0E4",
+      "token": "color/border/default"
+    },
+    {
+      "id": "1:69912",
+      "root": "1:69548",
+      "property": "strokes",
+      "index": 0,
+      "from": "#DFE0E4",
+      "token": "color/border/default"
+    },
+    {
+      "id": "1:69913",
+      "root": "1:69548",
+      "property": "strokes",
+      "index": 0,
+      "from": "#DFE0E4",
+      "token": "color/border/default"
+    },
+    {
+      "id": "1:69914",
+      "root": "1:69548",
+      "property": "strokes",
+      "index": 0,
+      "from": "#DFE0E4",
+      "token": "color/border/default"
+    },
+    {
+      "id": "1:69936",
+      "root": "1:69548",
+      "property": "strokes",
+      "index": 0,
+      "from": "#DFE0E4",
+      "token": "color/border/default"
+    },
+    {
+      "id": "1:69937",
+      "root": "1:69548",
+      "property": "strokes",
+      "index": 0,
+      "from": "#DFE0E4",
+      "token": "color/border/default"
+    },
+    {
+      "id": "1:69938",
+      "root": "1:69548",
+      "property": "strokes",
+      "index": 0,
+      "from": "#DFE0E4",
+      "token": "color/border/default"
+    },
+    {
+      "id": "1:70000",
+      "root": "1:69947",
+      "property": "strokes",
+      "index": 0,
+      "from": "#DFE0E4",
+      "token": "color/border/default"
+    },
+    {
+      "id": "1:70001",
+      "root": "1:69947",
+      "property": "strokes",
+      "index": 0,
+      "from": "#DFE0E4",
+      "token": "color/border/default"
+    },
+    {
+      "id": "1:70002",
+      "root": "1:69947",
+      "property": "strokes",
+      "index": 0,
+      "from": "#DFE0E4",
+      "token": "color/border/default"
+    },
+    {
+      "id": "1:70003",
+      "root": "1:69947",
+      "property": "strokes",
+      "index": 0,
+      "from": "#DFE0E4",
+      "token": "color/border/default"
+    },
+    {
+      "id": "1:70004",
+      "root": "1:69947",
+      "property": "strokes",
+      "index": 0,
+      "from": "#DFE0E4",
+      "token": "color/border/default"
+    },
+    {
+      "id": "1:70005",
+      "root": "1:69947",
+      "property": "strokes",
+      "index": 0,
+      "from": "#DFE0E4",
+      "token": "color/border/default"
+    },
+    {
+      "id": "1:70006",
+      "root": "1:69947",
+      "property": "strokes",
+      "index": 0,
+      "from": "#DFE0E4",
+      "token": "color/border/default"
+    },
+    {
+      "id": "1:70028",
+      "root": "1:69947",
+      "property": "strokes",
+      "index": 0,
+      "from": "#DFE0E4",
+      "token": "color/border/default"
+    },
+    {
+      "id": "1:70029",
+      "root": "1:69947",
+      "property": "strokes",
+      "index": 0,
+      "from": "#DFE0E4",
+      "token": "color/border/default"
+    },
+    {
+      "id": "1:70030",
+      "root": "1:69947",
+      "property": "strokes",
+      "index": 0,
+      "from": "#DFE0E4",
+      "token": "color/border/default"
+    },
+    {
+      "id": "1:70232",
+      "root": "1:69947",
+      "property": "fills",
+      "index": 0,
+      "from": "#8E8E8E",
+      "token": "color/text/muted"
+    },
+    {
+      "id": "1:70313",
+      "root": "1:69947",
+      "property": "strokes",
+      "index": 0,
+      "from": "#DFE0E4",
+      "token": "color/border/default"
+    },
+    {
+      "id": "1:70317",
+      "root": "1:69947",
+      "property": "strokes",
+      "index": 0,
+      "from": "#DFE0E4",
+      "token": "color/border/default"
+    },
+    {
+      "id": "1:70373",
+      "root": "1:69947",
+      "property": "fills",
+      "index": 0,
+      "from": "#8E8E8E",
+      "token": "color/text/muted"
+    },
+    {
+      "id": "1:70500",
+      "root": "1:69947",
+      "property": "fills",
+      "index": 0,
+      "from": "#8E8E8E",
+      "token": "color/text/muted"
+    },
+    {
+      "id": "1:70501",
+      "root": "1:69947",
+      "property": "fills",
+      "index": 0,
+      "from": "#8E8E8E",
+      "token": "color/text/muted"
+    },
+    {
+      "id": "1:70617",
+      "root": "1:69947",
+      "property": "strokes",
+      "index": 0,
+      "from": "#DFE0E4",
+      "token": "color/border/default"
+    },
+    {
+      "id": "1:70625",
+      "root": "1:69947",
+      "property": "strokes",
+      "index": 0,
+      "from": "#FF0000",
+      "token": "color/action/danger"
+    },
+    {
+      "id": "1:71485",
+      "root": "1:70749",
+      "property": "strokes",
+      "index": 0,
+      "from": "#DFE0E4",
+      "token": "color/border/default"
+    },
+    {
+      "id": "1:71486",
+      "root": "1:70749",
+      "property": "strokes",
+      "index": 0,
+      "from": "#DFE0E4",
+      "token": "color/border/default"
+    },
+    {
+      "id": "1:71487",
+      "root": "1:70749",
+      "property": "strokes",
+      "index": 0,
+      "from": "#DFE0E4",
+      "token": "color/border/default"
+    },
+    {
+      "id": "1:71488",
+      "root": "1:70749",
+      "property": "strokes",
+      "index": 0,
+      "from": "#DFE0E4",
+      "token": "color/border/default"
+    },
+    {
+      "id": "1:71489",
+      "root": "1:70749",
+      "property": "strokes",
+      "index": 0,
+      "from": "#DFE0E4",
+      "token": "color/border/default"
+    },
+    {
+      "id": "1:71490",
+      "root": "1:70749",
+      "property": "strokes",
+      "index": 0,
+      "from": "#DFE0E4",
+      "token": "color/border/default"
+    },
+    {
+      "id": "1:71491",
+      "root": "1:70749",
+      "property": "strokes",
+      "index": 0,
+      "from": "#DFE0E4",
+      "token": "color/border/default"
+    },
+    {
+      "id": "1:71492",
+      "root": "1:70749",
+      "property": "strokes",
+      "index": 0,
+      "from": "#DFE0E4",
+      "token": "color/border/default"
+    },
+    {
+      "id": "1:71659",
+      "root": "1:70749",
+      "property": "fills",
+      "index": 0,
+      "from": "#333333",
+      "token": "color/text/primary"
+    },
+    {
+      "id": "1:71660",
+      "root": "1:70749",
+      "property": "fills",
+      "index": 0,
+      "from": "#333333",
+      "token": "color/text/primary"
+    },
+    {
+      "id": "1:71661",
+      "root": "1:70749",
+      "property": "fills",
+      "index": 0,
+      "from": "#333333",
+      "token": "color/text/primary"
+    },
+    {
+      "id": "1:71662",
+      "root": "1:70749",
+      "property": "fills",
+      "index": 0,
+      "from": "#333333",
+      "token": "color/text/primary"
+    },
+    {
+      "id": "1:71663",
+      "root": "1:70749",
+      "property": "fills",
+      "index": 0,
+      "from": "#333333",
+      "token": "color/text/primary"
+    },
+    {
+      "id": "1:71664",
+      "root": "1:70749",
+      "property": "fills",
+      "index": 0,
+      "from": "#333333",
+      "token": "color/text/primary"
+    },
+    {
+      "id": "1:71675",
+      "root": "1:70749",
+      "property": "fills",
+      "index": 0,
+      "from": "#333333",
+      "token": "color/text/primary"
+    },
+    {
+      "id": "1:71679",
+      "root": "1:70749",
+      "property": "fills",
+      "index": 0,
+      "from": "#333333",
+      "token": "color/text/primary"
+    },
+    {
+      "id": "1:71726",
+      "root": "1:70749",
+      "property": "strokes",
+      "index": 0,
+      "from": "#05A702",
+      "token": "color/action/primary"
+    },
+    {
+      "id": "1:71727",
+      "root": "1:70749",
+      "property": "fills",
+      "index": 0,
+      "from": "#05A702",
+      "token": "color/action/primary"
+    },
+    {
+      "id": "1:71738",
+      "root": "1:70749",
+      "property": "strokes",
+      "index": 0,
+      "from": "#DFE0E4",
+      "token": "color/border/default"
+    },
+    {
+      "id": "1:71739",
+      "root": "1:70749",
+      "property": "strokes",
+      "index": 0,
+      "from": "#DFE0E4",
+      "token": "color/border/default"
+    },
+    {
+      "id": "1:71743",
+      "root": "1:70749",
+      "property": "strokes",
+      "index": 0,
+      "from": "#DFE0E4",
+      "token": "color/border/default"
+    },
+    {
+      "id": "1:71813",
+      "root": "1:70749",
+      "property": "strokes",
+      "index": 0,
+      "from": "#DFE0E4",
+      "token": "color/border/default"
+    },
+    {
+      "id": "1:71883",
+      "root": "1:70749",
+      "property": "strokes",
+      "index": 0,
+      "from": "#DFE0E4",
+      "token": "color/border/default"
+    },
+    {
+      "id": "1:71890",
+      "root": "1:70749",
+      "property": "fills",
+      "index": 0,
+      "from": "#A6A8A6",
+      "token": "color/text/muted"
+    },
+    {
+      "id": "1:71901",
+      "root": "1:70749",
+      "property": "strokes",
+      "index": 0,
+      "from": "#DFE0E4",
+      "token": "color/border/default"
+    },
+    {
+      "id": "1:71905",
+      "root": "1:70749",
+      "property": "fills",
+      "index": 0,
+      "from": "#A6A8A6",
+      "token": "color/text/muted"
+    },
+    {
+      "id": "1:71919",
+      "root": "1:70749",
+      "property": "strokes",
+      "index": 0,
+      "from": "#DFE0E4",
+      "token": "color/border/default"
+    },
+    {
+      "id": "1:71923",
+      "root": "1:70749",
+      "property": "fills",
+      "index": 0,
+      "from": "#A6A8A6",
+      "token": "color/text/muted"
+    },
+    {
+      "id": "1:72324",
+      "root": "1:70749",
+      "property": "strokes",
+      "index": 0,
+      "from": "#DFE0E4",
+      "token": "color/border/default"
+    },
+    {
+      "id": "1:72325",
+      "root": "1:70749",
+      "property": "strokes",
+      "index": 0,
+      "from": "#DFE0E4",
+      "token": "color/border/default"
+    },
+    {
+      "id": "1:72326",
+      "root": "1:70749",
+      "property": "strokes",
+      "index": 0,
+      "from": "#DFE0E4",
+      "token": "color/border/default"
+    },
+    {
+      "id": "1:72327",
+      "root": "1:70749",
+      "property": "strokes",
+      "index": 0,
+      "from": "#DFE0E4",
+      "token": "color/border/default"
+    },
+    {
+      "id": "1:72328",
+      "root": "1:70749",
+      "property": "strokes",
+      "index": 0,
+      "from": "#DFE0E4",
+      "token": "color/border/default"
+    },
+    {
+      "id": "1:72329",
+      "root": "1:70749",
+      "property": "strokes",
+      "index": 0,
+      "from": "#DFE0E4",
+      "token": "color/border/default"
+    },
+    {
+      "id": "1:72330",
+      "root": "1:70749",
+      "property": "strokes",
+      "index": 0,
+      "from": "#DFE0E4",
+      "token": "color/border/default"
+    },
+    {
+      "id": "1:72332",
+      "root": "1:70749",
+      "property": "strokes",
+      "index": 0,
+      "from": "#DFE0E4",
+      "token": "color/border/default"
+    },
+    {
+      "id": "1:72423",
+      "root": "1:70749",
+      "property": "fills",
+      "index": 0,
+      "from": "#333333",
+      "token": "color/text/primary"
+    },
+    {
+      "id": "1:72434",
+      "root": "1:70749",
+      "property": "fills",
+      "index": 0,
+      "from": "#333333",
+      "token": "color/text/primary"
+    },
+    {
+      "id": "1:72445",
+      "root": "1:70749",
+      "property": "fills",
+      "index": 0,
+      "from": "#333333",
+      "token": "color/text/primary"
+    },
+    {
+      "id": "1:72456",
+      "root": "1:70749",
+      "property": "fills",
+      "index": 0,
+      "from": "#333333",
+      "token": "color/text/primary"
+    },
+    {
+      "id": "1:72466",
+      "root": "1:70749",
+      "property": "fills",
+      "index": 0,
+      "from": "#333333",
+      "token": "color/text/primary"
+    },
+    {
+      "id": "1:72477",
+      "root": "1:70749",
+      "property": "fills",
+      "index": 0,
+      "from": "#333333",
+      "token": "color/text/primary"
+    },
+    {
+      "id": "1:72488",
+      "root": "1:70749",
+      "property": "fills",
+      "index": 0,
+      "from": "#333333",
+      "token": "color/text/primary"
+    },
+    {
+      "id": "1:72499",
+      "root": "1:70749",
+      "property": "fills",
+      "index": 0,
+      "from": "#333333",
+      "token": "color/text/primary"
+    },
+    {
+      "id": "1:72659",
+      "root": "1:70749",
+      "property": "strokes",
+      "index": 0,
+      "from": "#DFE0E4",
+      "token": "color/border/default"
+    },
+    {
+      "id": "1:72671",
+      "root": "1:70749",
+      "property": "fills",
+      "index": 0,
+      "from": "#A6A8A6",
+      "token": "color/text/muted"
+    },
+    {
+      "id": "1:72680",
+      "root": "1:70749",
+      "property": "strokes",
+      "index": 0,
+      "from": "#DFE0E4",
+      "token": "color/border/default"
+    },
+    {
+      "id": "1:72689",
+      "root": "1:70749",
+      "property": "fills",
+      "index": 0,
+      "from": "#A6A8A6",
+      "token": "color/text/muted"
+    },
+    {
+      "id": "1:72699",
+      "root": "1:70749",
+      "property": "strokes",
+      "index": 0,
+      "from": "#DFE0E4",
+      "token": "color/border/default"
+    },
+    {
+      "id": "1:72706",
+      "root": "1:70749",
+      "property": "fills",
+      "index": 0,
+      "from": "#A6A8A6",
+      "token": "color/text/muted"
+    },
+    {
+      "id": "1:72722",
+      "root": "1:70749",
+      "property": "strokes",
+      "index": 0,
+      "from": "#05A702",
+      "token": "color/action/primary"
+    },
+    {
+      "id": "1:72723",
+      "root": "1:70749",
+      "property": "fills",
+      "index": 0,
+      "from": "#05A702",
+      "token": "color/action/primary"
+    },
+    {
+      "id": "1:73783",
+      "root": "1:70749",
+      "property": "strokes",
+      "index": 0,
+      "from": "#DFE0E4",
+      "token": "color/border/default"
+    },
+    {
+      "id": "1:73796",
+      "root": "1:70749",
+      "property": "strokes",
+      "index": 0,
+      "from": "#DFE0E4",
+      "token": "color/border/default"
+    },
+    {
+      "id": "1:73808",
+      "root": "1:70749",
+      "property": "strokes",
+      "index": 0,
+      "from": "#DFE0E4",
+      "token": "color/border/default"
+    },
+    {
+      "id": "1:73852",
+      "root": "1:70749",
+      "property": "strokes",
+      "index": 0,
+      "from": "#DFE0E4",
+      "token": "color/border/default"
+    },
+    {
+      "id": "1:73974",
+      "root": "1:70749",
+      "property": "strokes",
+      "index": 0,
+      "from": "#DFE0E4",
+      "token": "color/border/default"
+    },
+    {
+      "id": "1:73975",
+      "root": "1:70749",
+      "property": "strokes",
+      "index": 0,
+      "from": "#DFE0E4",
+      "token": "color/border/default"
+    },
+    {
+      "id": "1:73976",
+      "root": "1:70749",
+      "property": "strokes",
+      "index": 0,
+      "from": "#DFE0E4",
+      "token": "color/border/default"
+    },
+    {
+      "id": "1:73977",
+      "root": "1:70749",
+      "property": "strokes",
+      "index": 0,
+      "from": "#DFE0E4",
+      "token": "color/border/default"
+    },
+    {
+      "id": "1:73978",
+      "root": "1:70749",
+      "property": "strokes",
+      "index": 0,
+      "from": "#DFE0E4",
+      "token": "color/border/default"
+    },
+    {
+      "id": "1:73979",
+      "root": "1:70749",
+      "property": "strokes",
+      "index": 0,
+      "from": "#DFE0E4",
+      "token": "color/border/default"
+    },
+    {
+      "id": "1:73980",
+      "root": "1:70749",
+      "property": "strokes",
+      "index": 0,
+      "from": "#DFE0E4",
+      "token": "color/border/default"
+    },
+    {
+      "id": "1:73981",
+      "root": "1:70749",
+      "property": "strokes",
+      "index": 0,
+      "from": "#DFE0E4",
+      "token": "color/border/default"
+    },
+    {
+      "id": "1:74146",
+      "root": "1:70749",
+      "property": "fills",
+      "index": 0,
+      "from": "#333333",
+      "token": "color/text/primary"
+    },
+    {
+      "id": "1:74147",
+      "root": "1:70749",
+      "property": "fills",
+      "index": 0,
+      "from": "#333333",
+      "token": "color/text/primary"
+    },
+    {
+      "id": "1:74148",
+      "root": "1:70749",
+      "property": "fills",
+      "index": 0,
+      "from": "#333333",
+      "token": "color/text/primary"
+    },
+    {
+      "id": "1:74149",
+      "root": "1:70749",
+      "property": "fills",
+      "index": 0,
+      "from": "#333333",
+      "token": "color/text/primary"
+    },
+    {
+      "id": "1:74150",
+      "root": "1:70749",
+      "property": "fills",
+      "index": 0,
+      "from": "#333333",
+      "token": "color/text/primary"
+    },
+    {
+      "id": "1:74151",
+      "root": "1:70749",
+      "property": "fills",
+      "index": 0,
+      "from": "#333333",
+      "token": "color/text/primary"
+    },
+    {
+      "id": "1:74162",
+      "root": "1:70749",
+      "property": "fills",
+      "index": 0,
+      "from": "#333333",
+      "token": "color/text/primary"
+    },
+    {
+      "id": "1:74166",
+      "root": "1:70749",
+      "property": "fills",
+      "index": 0,
+      "from": "#333333",
+      "token": "color/text/primary"
+    },
+    {
+      "id": "1:74171",
+      "root": "1:70749",
+      "property": "strokes",
+      "index": 0,
+      "from": "#DFE0E4",
+      "token": "color/border/default"
+    },
+    {
+      "id": "1:74172",
+      "root": "1:70749",
+      "property": "strokes",
+      "index": 0,
+      "from": "#DFE0E4",
+      "token": "color/border/default"
+    },
+    {
+      "id": "1:74227",
+      "root": "1:70749",
+      "property": "strokes",
+      "index": 0,
+      "from": "#DFE0E4",
+      "token": "color/border/default"
+    },
+    {
+      "id": "1:74234",
+      "root": "1:70749",
+      "property": "fills",
+      "index": 0,
+      "from": "#A6A8A6",
+      "token": "color/text/muted"
+    },
+    {
+      "id": "1:74245",
+      "root": "1:70749",
+      "property": "strokes",
+      "index": 0,
+      "from": "#DFE0E4",
+      "token": "color/border/default"
+    },
+    {
+      "id": "1:74249",
+      "root": "1:70749",
+      "property": "fills",
+      "index": 0,
+      "from": "#A6A8A6",
+      "token": "color/text/muted"
+    },
+    {
+      "id": "1:74263",
+      "root": "1:70749",
+      "property": "strokes",
+      "index": 0,
+      "from": "#DFE0E4",
+      "token": "color/border/default"
+    },
+    {
+      "id": "1:74267",
+      "root": "1:70749",
+      "property": "fills",
+      "index": 0,
+      "from": "#A6A8A6",
+      "token": "color/text/muted"
+    },
+    {
+      "id": "1:74488",
+      "root": "1:70749",
+      "property": "strokes",
+      "index": 0,
+      "from": "#DFE0E4",
+      "token": "color/border/default"
+    },
+    {
+      "id": "1:74745",
+      "root": "1:70749",
+      "property": "strokes",
+      "index": 0,
+      "from": "#DFE0E4",
+      "token": "color/border/default"
+    },
+    {
+      "id": "1:74746",
+      "root": "1:70749",
+      "property": "strokes",
+      "index": 0,
+      "from": "#DFE0E4",
+      "token": "color/border/default"
+    },
+    {
+      "id": "1:74747",
+      "root": "1:70749",
+      "property": "strokes",
+      "index": 0,
+      "from": "#DFE0E4",
+      "token": "color/border/default"
+    },
+    {
+      "id": "1:74748",
+      "root": "1:70749",
+      "property": "strokes",
+      "index": 0,
+      "from": "#DFE0E4",
+      "token": "color/border/default"
+    },
+    {
+      "id": "1:74749",
+      "root": "1:70749",
+      "property": "strokes",
+      "index": 0,
+      "from": "#DFE0E4",
+      "token": "color/border/default"
+    },
+    {
+      "id": "1:74750",
+      "root": "1:70749",
+      "property": "strokes",
+      "index": 0,
+      "from": "#DFE0E4",
+      "token": "color/border/default"
+    },
+    {
+      "id": "1:74751",
+      "root": "1:70749",
+      "property": "strokes",
+      "index": 0,
+      "from": "#DFE0E4",
+      "token": "color/border/default"
+    },
+    {
+      "id": "1:74752",
+      "root": "1:70749",
+      "property": "strokes",
+      "index": 0,
+      "from": "#DFE0E4",
+      "token": "color/border/default"
+    },
+    {
+      "id": "1:74917",
+      "root": "1:70749",
+      "property": "fills",
+      "index": 0,
+      "from": "#333333",
+      "token": "color/text/primary"
+    },
+    {
+      "id": "1:74918",
+      "root": "1:70749",
+      "property": "fills",
+      "index": 0,
+      "from": "#333333",
+      "token": "color/text/primary"
+    },
+    {
+      "id": "1:74919",
+      "root": "1:70749",
+      "property": "fills",
+      "index": 0,
+      "from": "#333333",
+      "token": "color/text/primary"
+    },
+    {
+      "id": "1:74920",
+      "root": "1:70749",
+      "property": "fills",
+      "index": 0,
+      "from": "#333333",
+      "token": "color/text/primary"
+    },
+    {
+      "id": "1:74921",
+      "root": "1:70749",
+      "property": "fills",
+      "index": 0,
+      "from": "#333333",
+      "token": "color/text/primary"
+    },
+    {
+      "id": "1:74922",
+      "root": "1:70749",
+      "property": "fills",
+      "index": 0,
+      "from": "#333333",
+      "token": "color/text/primary"
+    },
+    {
+      "id": "1:74933",
+      "root": "1:70749",
+      "property": "fills",
+      "index": 0,
+      "from": "#333333",
+      "token": "color/text/primary"
+    },
+    {
+      "id": "1:74937",
+      "root": "1:70749",
+      "property": "fills",
+      "index": 0,
+      "from": "#333333",
+      "token": "color/text/primary"
+    },
+    {
+      "id": "1:74994",
+      "root": "1:70749",
+      "property": "strokes",
+      "index": 0,
+      "from": "#DFE0E4",
+      "token": "color/border/default"
+    },
+    {
+      "id": "1:75001",
+      "root": "1:70749",
+      "property": "fills",
+      "index": 0,
+      "from": "#A6A8A6",
+      "token": "color/text/muted"
+    },
+    {
+      "id": "1:75012",
+      "root": "1:70749",
+      "property": "strokes",
+      "index": 0,
+      "from": "#DFE0E4",
+      "token": "color/border/default"
+    },
+    {
+      "id": "1:75016",
+      "root": "1:70749",
+      "property": "fills",
+      "index": 0,
+      "from": "#A6A8A6",
+      "token": "color/text/muted"
+    },
+    {
+      "id": "1:75030",
+      "root": "1:70749",
+      "property": "strokes",
+      "index": 0,
+      "from": "#DFE0E4",
+      "token": "color/border/default"
+    },
+    {
+      "id": "1:75034",
+      "root": "1:70749",
+      "property": "fills",
+      "index": 0,
+      "from": "#A6A8A6",
+      "token": "color/text/muted"
+    },
+    {
+      "id": "1:83288",
+      "root": "1:70749",
+      "property": "fills",
+      "index": 0,
+      "from": "#999999",
+      "token": "color/text/muted"
+    },
+    {
+      "id": "1:83369",
+      "root": "1:70749",
+      "property": "fills",
+      "index": 0,
+      "from": "#555555",
+      "token": "color/text/secondary"
+    },
+    {
+      "id": "1:83370",
+      "root": "1:70749",
+      "property": "fills",
+      "index": 0,
+      "from": "#555555",
+      "token": "color/text/secondary"
+    },
+    {
+      "id": "1:83371",
+      "root": "1:70749",
+      "property": "fills",
+      "index": 0,
+      "from": "#555555",
+      "token": "color/text/secondary"
+    },
+    {
+      "id": "1:83374",
+      "root": "1:70749",
+      "property": "fills",
+      "index": 0,
+      "from": "#555555",
+      "token": "color/text/secondary"
+    },
+    {
+      "id": "1:83375",
+      "root": "1:70749",
+      "property": "fills",
+      "index": 0,
+      "from": "#555555",
+      "token": "color/text/secondary"
+    },
+    {
+      "id": "1:83377",
+      "root": "1:70749",
+      "property": "fills",
+      "index": 0,
+      "from": "#555555",
+      "token": "color/text/secondary"
+    },
+    {
+      "id": "1:83662",
+      "root": "1:70749",
+      "property": "fills",
+      "index": 0,
+      "from": "#ABABAB",
+      "token": "color/text/muted"
+    },
+    {
+      "id": "1:83664",
+      "root": "1:70749",
+      "property": "fills",
+      "index": 0,
+      "from": "#ABABAB",
+      "token": "color/text/muted"
+    },
+    {
+      "id": "1:83665",
+      "root": "1:70749",
+      "property": "fills",
+      "index": 0,
+      "from": "#ABABAB",
+      "token": "color/text/muted"
+    },
+    {
+      "id": "1:83671",
+      "root": "1:70749",
+      "property": "fills",
+      "index": 0,
+      "from": "#ABABAB",
+      "token": "color/text/muted"
+    },
+    {
+      "id": "1:83673",
+      "root": "1:70749",
+      "property": "fills",
+      "index": 0,
+      "from": "#ABABAB",
+      "token": "color/text/muted"
+    },
+    {
+      "id": "1:83674",
+      "root": "1:70749",
+      "property": "fills",
+      "index": 0,
+      "from": "#ABABAB",
+      "token": "color/text/muted"
+    },
+    {
+      "id": "1:83675",
+      "root": "1:70749",
+      "property": "fills",
+      "index": 0,
+      "from": "#ABABAB",
+      "token": "color/text/muted"
+    },
+    {
+      "id": "1:83908",
+      "root": "1:70749",
+      "property": "strokes",
+      "index": 0,
+      "from": "#05A702",
+      "token": "color/action/primary"
+    },
+    {
+      "id": "1:83909",
+      "root": "1:70749",
+      "property": "fills",
+      "index": 0,
+      "from": "#05A702",
+      "token": "color/action/primary"
+    },
+    {
+      "id": "1:84039",
+      "root": "1:70749",
+      "property": "strokes",
+      "index": 0,
+      "from": "#05A702",
+      "token": "color/action/primary"
+    },
+    {
+      "id": "1:84040",
+      "root": "1:70749",
+      "property": "fills",
+      "index": 0,
+      "from": "#05A702",
+      "token": "color/action/primary"
+    },
+    {
+      "id": "1:85061",
+      "root": "1:70749",
+      "property": "fills",
+      "index": 0,
+      "from": "#939393",
+      "token": "color/text/muted"
+    },
+    {
+      "id": "1:85062",
+      "root": "1:70749",
+      "property": "fills",
+      "index": 0,
+      "from": "#939393",
+      "token": "color/text/muted"
+    },
+    {
+      "id": "1:85231",
+      "root": "1:70749",
+      "property": "fills",
+      "index": 0,
+      "from": "#939393",
+      "token": "color/text/muted"
+    },
+    {
+      "id": "1:85232",
+      "root": "1:70749",
+      "property": "fills",
+      "index": 0,
+      "from": "#939393",
+      "token": "color/text/muted"
+    },
+    {
+      "id": "1:85417",
+      "root": "1:70749",
+      "property": "fills",
+      "index": 0,
+      "from": "#68696B",
+      "token": "color/text/secondary"
+    },
+    {
+      "id": "1:85607",
+      "root": "1:70749",
+      "property": "fills",
+      "index": 0,
+      "from": "#68696B",
+      "token": "color/text/secondary"
+    },
+    {
+      "id": "1:85633",
+      "root": "1:70749",
+      "property": "fills",
+      "index": 0,
+      "from": "#68696B",
+      "token": "color/text/secondary"
+    },
+    {
+      "id": "1:85656",
+      "root": "1:70749",
+      "property": "fills",
+      "index": 0,
+      "from": "#68696B",
+      "token": "color/text/secondary"
+    },
+    {
+      "id": "1:85678",
+      "root": "1:70749",
+      "property": "fills",
+      "index": 0,
+      "from": "#68696B",
+      "token": "color/text/secondary"
+    }
+  ],
+  "skipped": [
+    {
+      "id": "1:72204",
+      "reason": "font-unavailable"
+    },
+    {
+      "id": "1:73615",
+      "reason": "font-unavailable"
+    },
+    {
+      "id": "1:74625",
+      "reason": "font-unavailable"
+    },
+    {
+      "id": "1:75300",
+      "reason": "font-unavailable"
+    },
+    {
+      "id": "1:83697",
+      "reason": "font-unavailable"
+    },
+    {
+      "id": "1:85375",
+      "reason": "font-unavailable"
+    }
+  ]
+}

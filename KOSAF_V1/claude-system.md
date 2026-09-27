@@ -145,7 +145,7 @@ IAK GameofMind의 다크/오렌지 외형은 KOSAF에 적용하지 않는다. KO
 - 원본의 소형 컨트롤과 브랜드 서체 예외는 유지되어 있으므로 터치 영역·대비·누락 서체를 자동 해결된 것으로 간주하지 않는다.
 
 
-## Native Claude Design library (1.5.1)
+## Native Claude Design library (1.5.2)
 Use the published KOSAF_V1 native library and its 50 component families in `claude-design/components/`. Follow component `.prompt.md` and `.d.ts` files; use the 10 UI kit groups for compositions. Reference `claude-design/docs/source-coverage.md` for explicit coverage and gaps. This package extends the 11 Figma masters; do not describe all 50 as Figma masters or claim all 91 source frames are reproduced. IAK Design Studio is an organizational reference only. Root migration/source-map files are current; embedded docs/source files are historical source snapshots.
 
 
@@ -159,6 +159,13 @@ Use PageHeader for title/description/actions, FormErrorSummary for field vs subm
 Use `Icon` and `IconButton` with the canonical names in `claude-design/components/icon/icons.manifest.json`. Preserve the11source SVGs and use the23KOSAF extension SVGs for shared interface controls. Source colors are fixed; extension icons use semantic tones/currentColor. New icon-only controls require a meaningful accessible label and desktop36/mobile44px minimum hit area. Do not draw ad-hoc CSS/glyph icons or recolor source icons with CSS filters. See `claude-design/docs/icon-management.md` for aliases and retirement rules, `icon-management-qa.json` for bounded verification. Native library now100cards50families22kits; Figma master count remains11.
 
 
-## Icon fill and tone — 1.5.1
+## Icon fill and tone — 1.5.2
 
 UI icons support outline, duotone and solid where explicitly listed in the icon manifest. Ten closed shapes support fill variants; thirteen open-stroke glyphs remain outline. Source11icons remain verbatim. Use duotone for mobile quick navigation and selected IconButton states. Selected uses #EBFFE9 surface and #059B00 inset border/foreground; disabled uses #F7F7F7 surface with #A0A0A0 UI foreground and wins over forced state. Keyboard focus remains #0047ED. This adds icon fill/state contrast, not drop shadows.
+
+
+## 1.5.2 검수 운영
+- 카드는 컴포넌트의 PascalCase 공개 export만 사용한다. 미노출 helper를 namespace에서 호출하지 않는다.
+- 입력 예제에도 명확한 accessible name을 제공한다. FormField의 label/id/오류 연결을 보존한다.
+- 100카드 DOM 재검사 완료: 빈 카드/깨진 이미지/가로 넘침/검출된 이름 없는 컨트롤 0. 전체 상태 또는 접근성 인증을 의미하지 않는다.
+- Figma 후속 166노드 수정, 666 raw-paint와 S-Core Dream34 로고는 보존 예외다.

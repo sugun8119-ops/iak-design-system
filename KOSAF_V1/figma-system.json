@@ -223,9 +223,18 @@
     "nodeChanges": "migration-changes.json",
     "qa": "migration-qa.json",
     "report": "migration-status.md",
-    "unclassifiedVisibleRawPaintNodes": 832,
+    "unclassifiedVisibleRawPaintNodes": 666,
     "missingBrandFontNodes": 34,
-    "limitations": "In-place token/style migration is not blanket component replacement or a full responsive/prototype rebuild."
+    "limitations": "In-place token/style migration is not blanket component replacement or a full responsive/prototype rebuild.",
+    "followupDate": "2026-09-27",
+    "preservedRawPaintNodes": 666,
+    "followupNodeChanges": "migration-followup-changes-2026-09-27.json",
+    "annotationFontChanges": "migration-annotation-font-changes-2026-09-27.json",
+    "preservedPaintClassification": "migration-preserved-paints-2026-09-27.json",
+    "followupAdditionalModifiedNodes": 166,
+    "followupQA": "migration-followup-audit-2026-09-27.json",
+    "remainingBrandTextNodes": 34,
+    "scopeCompletion": "Standard UI follow-up applied; 666 source/legacy raw-paint exceptions remain preserved, not fully semantic-bound."
   },
   "componentStates": {
     "Button": [
@@ -275,7 +284,7 @@
     ]
   },
   "claudeDesignExpansion": {
-    "version": "1.5.1",
+    "version": "1.5.2",
     "nativeProject": "https://claude.ai/design/p/f8c97b66-58c3-463f-9523-26fdd5b960d4",
     "componentFamilies": 50,
     "families": [
@@ -347,6 +356,7 @@
     "iconSourceCount": 11,
     "iconExtensionCount": 23,
     "iconToneReport": "claude-design/docs/icon-tone-refinement.md",
-    "iconToneQA": "icon-tone-qa.json"
+    "iconToneQA": "icon-tone-qa.json",
+    "fullCardQA": "full-card-qa-2026-09-27.json"
   }
 }

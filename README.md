@@ -186,3 +186,5 @@ UI/MCP 0.9.1, 사이트/스킬 0.12.0입니다. React 19 소비자에서 발견�
 [Claude 최종 디자인 시스템](IAK_KIDS_V1/readme.md) · [전체 미리보기](IAK_KIDS_V1/zem/index.html) · [Figma](https://www.figma.com/design/O7wy74Ds5S9rV8WopyCe5d)
 
 62개 시맨틱 컬러, 62개 카드, 16개 웹 컴포넌트, 10개 패턴, 3개 UI 키트. 최신 기준은 IAK_KIDS_V1이며 ZEM_V1은 이전 기록입니다.
+
+- **KOSAF_V1 1.5.2 / 2026-09-27:** Figma 166노드 후속 마이그레이션, Claude Design 100카드 DOM 전수 재검사. 빈 카탈로그/미리보기 높이/입력 이름 수정. [QA](KOSAF_V1/full-card-qa-2026-09-27.json) · [마이그레이션 결과](KOSAF_V1/migration-status.md). 원본/legacy raw-paint666과 브랜드폰트34 보존.

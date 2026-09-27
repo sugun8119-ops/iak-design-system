@@ -187,5 +187,40 @@
       "13 open-stroke UI glyphs remain outline; 11 source icons preserve baked colors and use opacity for disabled.",
       "Figma masters were not edited in this Claude Design refinement; prior Figma/source-coverage gaps remain."
     ]
+  },
+  "fullCardAudit": {
+    "date": "2026-09-27",
+    "version": "1.5.2",
+    "scope": "All 100 native-export card DOMs at declared manifest viewport; final patch rechecks only the 3 modified cards",
+    "nativeProject": "https://claude.ai/design/p/f8c97b66-58c3-463f-9523-26fdd5b960d4",
+    "summary": {
+      "checkedCards": 100,
+      "emptyCards": 0,
+      "brokenImages": 0,
+      "pendingImages": 0,
+      "horizontalOverflowCards": 0,
+      "unnamedControlsDetected": 0,
+      "nonKitVerticalOverflowCards": 0
+    },
+    "preservation": {
+      "sourceSVGsAndIconsDataByteIdentical": true,
+      "canonicalTokenFilesByteIdentical": true,
+      "all100CardPathsRetained": true,
+      "componentFamilies": 50,
+      "uiKitPages": 22,
+      "nativeCheckerReportedIssues": 0
+    },
+    "interactionChecks": [
+      "Icon catalogue: 34 results at default; extension + home search + duotone gives 1 home result.",
+      "Extension + navigation + menu + solid gives 1 menu result, visibly marked outline fallback."
+    ],
+    "limitations": [
+      "DOM audit is not exhaustive state, keyboard, screen-reader, visual/pixel or accessibility certification.",
+      "Accessible-name detector checks aria-label/title/text/associated labels; not a full accessibility-name algorithm.",
+      "22 UI kit screens intentionally retain vertical scrolling; iframe scrollbars reduce content width below nominal1920/390.",
+      "Figma has 666 preserved raw-paint nodes and 34 unavailable brand-font nodes. They are not fully migrated to semantic tokens.",
+      "Full component replacement and all legacy prototypes remain outside completed scope."
+    ],
+    "details": "full-card-qa-2026-09-27.json"
   }
 }

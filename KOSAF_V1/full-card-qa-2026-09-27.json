@@ -1,0 +1,1549 @@
+{
+  "date": "2026-09-27",
+  "version": "1.5.2",
+  "scope": "All 100 native-export card DOMs at declared manifest viewport; final patch rechecks only the 3 modified cards",
+  "nativeProject": "https://claude.ai/design/p/f8c97b66-58c3-463f-9523-26fdd5b960d4",
+  "summary": {
+    "checkedCards": 100,
+    "emptyCards": 0,
+    "brokenImages": 0,
+    "pendingImages": 0,
+    "horizontalOverflowCards": 0,
+    "unnamedControlsDetected": 0,
+    "nonKitVerticalOverflowCards": 0
+  },
+  "before": {
+    "emptyCards": [
+      "components/icon/icon.card.html"
+    ],
+    "cardsWithUnnamedControls": [
+      "components/file-upload/file-upload.card.html",
+      "components/form-field/form-field.card.html",
+      "components/input/input.card.html",
+      "ui_kits/core-components/index.html",
+      "ui_kits/seller-signup/index.html",
+      "ui_kits/seller-signup/mobile.html"
+    ]
+  },
+  "preservation": {
+    "sourceSVGsAndIconsDataByteIdentical": true,
+    "canonicalTokenFilesByteIdentical": true,
+    "all100CardPathsRetained": true,
+    "componentFamilies": 50,
+    "uiKitPages": 22,
+    "nativeCheckerReportedIssues": 0
+  },
+  "interactionChecks": [
+    "Icon catalogue: 34 results at default; extension + home search + duotone gives 1 home result.",
+    "Extension + navigation + menu + solid gives 1 menu result, visibly marked outline fallback."
+  ],
+  "limitations": [
+    "DOM audit is not exhaustive state, keyboard, screen-reader, visual/pixel or accessibility certification.",
+    "Accessible-name detector checks aria-label/title/text/associated labels; not a full accessibility-name algorithm.",
+    "22 UI kit screens intentionally retain vertical scrolling; iframe scrollbars reduce content width below nominal1920/390.",
+    "Figma has 666 preserved raw-paint nodes and 34 unavailable brand-font nodes. They are not fully migrated to semantic tokens.",
+    "Full component replacement and all legacy prototypes remain outside completed scope."
+  ],
+  "cards": [
+    {
+      "path": "guidelines/brand-imagery.html",
+      "bodyChars": 219,
+      "brokenImages": [],
+      "content": [
+        700,
+        250
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        700,
+        250
+      ]
+    },
+    {
+      "path": "guidelines/brand-wordmark.html",
+      "bodyChars": 136,
+      "brokenImages": [],
+      "content": [
+        700,
+        200
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        700,
+        200
+      ]
+    },
+    {
+      "path": "guidelines/preservation.html",
+      "bodyChars": 313,
+      "brokenImages": [],
+      "content": [
+        700,
+        300
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        700,
+        300
+      ]
+    },
+    {
+      "path": "guidelines/colors-brand.html",
+      "bodyChars": 235,
+      "brokenImages": [],
+      "content": [
+        700,
+        350
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        700,
+        350
+      ]
+    },
+    {
+      "path": "guidelines/colors-gray.html",
+      "bodyChars": 167,
+      "brokenImages": [],
+      "content": [
+        700,
+        140
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        700,
+        140
+      ]
+    },
+    {
+      "path": "guidelines/colors-state.html",
+      "bodyChars": 229,
+      "brokenImages": [],
+      "content": [
+        700,
+        370
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        700,
+        370
+      ]
+    },
+    {
+      "path": "guidelines/colors-surface-border.html",
+      "bodyChars": 248,
+      "brokenImages": [],
+      "content": [
+        700,
+        320
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        700,
+        320
+      ]
+    },
+    {
+      "path": "guidelines/colors-text.html",
+      "bodyChars": 115,
+      "brokenImages": [],
+      "content": [
+        700,
+        180
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        700,
+        180
+      ]
+    },
+    {
+      "path": "components/badge/badge.card.html",
+      "bodyChars": 180,
+      "brokenImages": [],
+      "content": [
+        700,
+        290
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        700,
+        290
+      ]
+    },
+    {
+      "path": "components/bottom-action-bar/bottom-action-bar.card.html",
+      "bodyChars": 185,
+      "brokenImages": [],
+      "content": [
+        700,
+        370
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        700,
+        370
+      ]
+    },
+    {
+      "path": "components/button/button.card.html",
+      "bodyChars": 292,
+      "brokenImages": [],
+      "content": [
+        700,
+        550
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        700,
+        550
+      ]
+    },
+    {
+      "path": "components/filter-chip/filter-chip.card.html",
+      "bodyChars": 172,
+      "brokenImages": [],
+      "content": [
+        700,
+        300
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        700,
+        300
+      ]
+    },
+    {
+      "path": "components/icon-button/icon-button.card.html",
+      "bodyChars": 460,
+      "brokenImages": [],
+      "content": [
+        700,
+        720
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        700,
+        720
+      ]
+    },
+    {
+      "path": "components/icon/icon.card.html",
+      "bodyChars": 1628,
+      "brokenImages": [],
+      "content": [
+        700,
+        2100
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        700,
+        2100
+      ]
+    },
+    {
+      "path": "components/cart-item/cart-item.card.html",
+      "bodyChars": 324,
+      "brokenImages": [],
+      "content": [
+        700,
+        500
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        700,
+        500
+      ]
+    },
+    {
+      "path": "components/filter-panel/filter-panel.card.html",
+      "bodyChars": 657,
+      "brokenImages": [],
+      "content": [
+        700,
+        1350
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        700,
+        1350
+      ]
+    },
+    {
+      "path": "components/order-summary/order-summary.card.html",
+      "bodyChars": 279,
+      "brokenImages": [],
+      "content": [
+        700,
+        500
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        700,
+        500
+      ]
+    },
+    {
+      "path": "components/product-card/product-card.card.html",
+      "bodyChars": 577,
+      "brokenImages": [],
+      "content": [
+        700,
+        1000
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        700,
+        1000
+      ]
+    },
+    {
+      "path": "components/product-list-item/product-list-item.card.html",
+      "bodyChars": 295,
+      "brokenImages": [],
+      "content": [
+        700,
+        700
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        700,
+        700
+      ]
+    },
+    {
+      "path": "components/review-item/review-item.card.html",
+      "bodyChars": 285,
+      "brokenImages": [],
+      "content": [
+        700,
+        680
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        700,
+        680
+      ]
+    },
+    {
+      "path": "components/accordion/accordion.card.html",
+      "bodyChars": 335,
+      "brokenImages": [],
+      "content": [
+        700,
+        710
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        700,
+        710
+      ]
+    },
+    {
+      "path": "components/compare-table/compare-table.card.html",
+      "bodyChars": 218,
+      "brokenImages": [],
+      "content": [
+        700,
+        620
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        700,
+        620
+      ]
+    },
+    {
+      "path": "components/description-list/description-list.card.html",
+      "bodyChars": 233,
+      "brokenImages": [],
+      "content": [
+        700,
+        550
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        700,
+        550
+      ]
+    },
+    {
+      "path": "components/metric-card/metric-card.card.html",
+      "bodyChars": 214,
+      "brokenImages": [],
+      "content": [
+        700,
+        650
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        700,
+        650
+      ]
+    },
+    {
+      "path": "components/price-trend/price-trend.card.html",
+      "bodyChars": 207,
+      "brokenImages": [],
+      "content": [
+        700,
+        480
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        700,
+        480
+      ]
+    },
+    {
+      "path": "components/product-table/product-table.card.html",
+      "bodyChars": 1968,
+      "brokenImages": [],
+      "content": [
+        700,
+        2300
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        700,
+        2300
+      ]
+    },
+    {
+      "path": "components/rating/rating.card.html",
+      "bodyChars": 187,
+      "brokenImages": [],
+      "content": [
+        700,
+        310
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        700,
+        310
+      ]
+    },
+    {
+      "path": "components/table-row/table-row.card.html",
+      "bodyChars": 218,
+      "brokenImages": [],
+      "content": [
+        700,
+        420
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        700,
+        420
+      ]
+    },
+    {
+      "path": "components/alert-dialog/alert-dialog.card.html",
+      "bodyChars": 279,
+      "brokenImages": [],
+      "content": [
+        700,
+        560
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        700,
+        560
+      ]
+    },
+    {
+      "path": "components/empty-state/empty-state.card.html",
+      "bodyChars": 364,
+      "brokenImages": [],
+      "content": [
+        700,
+        800
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        700,
+        800
+      ]
+    },
+    {
+      "path": "components/modal/modal.card.html",
+      "bodyChars": 172,
+      "brokenImages": [],
+      "content": [
+        700,
+        590
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        700,
+        590
+      ]
+    },
+    {
+      "path": "components/notification-list/notification-list.card.html",
+      "bodyChars": 349,
+      "brokenImages": [],
+      "content": [
+        700,
+        560
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        700,
+        560
+      ]
+    },
+    {
+      "path": "components/checkbox/checkbox.card.html",
+      "bodyChars": 194,
+      "brokenImages": [],
+      "content": [
+        700,
+        270
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        700,
+        270
+      ]
+    },
+    {
+      "path": "components/date-field/date-field.card.html",
+      "bodyChars": 199,
+      "brokenImages": [],
+      "content": [
+        700,
+        320
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        700,
+        320
+      ]
+    },
+    {
+      "path": "components/date-range/date-range.card.html",
+      "bodyChars": 132,
+      "brokenImages": [],
+      "content": [
+        700,
+        320
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        700,
+        320
+      ]
+    },
+    {
+      "path": "components/file-upload/file-upload.card.html",
+      "bodyChars": 189,
+      "brokenImages": [],
+      "content": [
+        700,
+        350
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        700,
+        350
+      ]
+    },
+    {
+      "path": "components/form-error-summary/form-error-summary.card.html",
+      "bodyChars": 453,
+      "brokenImages": [],
+      "content": [
+        700,
+        690
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        700,
+        690
+      ]
+    },
+    {
+      "path": "components/form-field/form-field.card.html",
+      "bodyChars": 221,
+      "brokenImages": [],
+      "content": [
+        700,
+        570
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        700,
+        570
+      ]
+    },
+    {
+      "path": "components/input/input.card.html",
+      "bodyChars": 142,
+      "brokenImages": [],
+      "content": [
+        700,
+        400
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        700,
+        400
+      ]
+    },
+    {
+      "path": "components/quantity-stepper/quantity-stepper.card.html",
+      "bodyChars": 176,
+      "brokenImages": [],
+      "content": [
+        700,
+        300
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        700,
+        300
+      ]
+    },
+    {
+      "path": "components/radio/radio.card.html",
+      "bodyChars": 197,
+      "brokenImages": [],
+      "content": [
+        700,
+        270
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        700,
+        270
+      ]
+    },
+    {
+      "path": "components/search/search.card.html",
+      "bodyChars": 196,
+      "brokenImages": [],
+      "content": [
+        700,
+        420
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        700,
+        420
+      ]
+    },
+    {
+      "path": "components/segmented-control/segmented-control.card.html",
+      "bodyChars": 192,
+      "brokenImages": [],
+      "content": [
+        700,
+        310
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        700,
+        310
+      ]
+    },
+    {
+      "path": "components/select/select.card.html",
+      "bodyChars": 205,
+      "brokenImages": [],
+      "content": [
+        700,
+        520
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        700,
+        520
+      ]
+    },
+    {
+      "path": "components/textarea/textarea.card.html",
+      "bodyChars": 162,
+      "brokenImages": [],
+      "content": [
+        700,
+        570
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        700,
+        570
+      ]
+    },
+    {
+      "path": "components/breadcrumb/breadcrumb.card.html",
+      "bodyChars": 165,
+      "brokenImages": [],
+      "content": [
+        700,
+        270
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        700,
+        270
+      ]
+    },
+    {
+      "path": "components/footer/footer.card.html",
+      "bodyChars": 812,
+      "brokenImages": [],
+      "content": [
+        700,
+        800
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        700,
+        800
+      ]
+    },
+    {
+      "path": "components/header/header.card.html",
+      "bodyChars": 435,
+      "brokenImages": [],
+      "content": [
+        700,
+        570
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        700,
+        570
+      ]
+    },
+    {
+      "path": "components/mobile-filter-sheet/mobile-filter-sheet.card.html",
+      "bodyChars": 397,
+      "brokenImages": [],
+      "content": [
+        700,
+        810
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        700,
+        810
+      ]
+    },
+    {
+      "path": "components/mobile-header/mobile-header.card.html",
+      "bodyChars": 166,
+      "brokenImages": [],
+      "content": [
+        700,
+        350
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        700,
+        350
+      ]
+    },
+    {
+      "path": "components/mobile-menu/mobile-menu.card.html",
+      "bodyChars": 358,
+      "brokenImages": [],
+      "content": [
+        700,
+        810
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        700,
+        810
+      ]
+    },
+    {
+      "path": "components/pagination-item/pagination-item.card.html",
+      "bodyChars": 201,
+      "brokenImages": [],
+      "content": [
+        700,
+        290
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        700,
+        290
+      ]
+    },
+    {
+      "path": "components/pagination/pagination.card.html",
+      "bodyChars": 234,
+      "brokenImages": [],
+      "content": [
+        700,
+        400
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        700,
+        400
+      ]
+    },
+    {
+      "path": "components/progress-steps/progress-steps.card.html",
+      "bodyChars": 189,
+      "brokenImages": [],
+      "content": [
+        700,
+        340
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        700,
+        340
+      ]
+    },
+    {
+      "path": "components/side-nav/side-nav.card.html",
+      "bodyChars": 377,
+      "brokenImages": [],
+      "content": [
+        700,
+        1000
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        700,
+        1000
+      ]
+    },
+    {
+      "path": "components/stepper/stepper.card.html",
+      "bodyChars": 205,
+      "brokenImages": [],
+      "content": [
+        700,
+        330
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        700,
+        330
+      ]
+    },
+    {
+      "path": "components/tab/tab.card.html",
+      "bodyChars": 132,
+      "brokenImages": [],
+      "content": [
+        700,
+        230
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        700,
+        230
+      ]
+    },
+    {
+      "path": "components/page-header/page-header.card.html",
+      "bodyChars": 332,
+      "brokenImages": [],
+      "content": [
+        700,
+        610
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        700,
+        610
+      ]
+    },
+    {
+      "path": "ui_kits/core-components/index.html",
+      "bodyChars": 234,
+      "brokenImages": [],
+      "content": [
+        1640,
+        1940
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        1640,
+        1940
+      ]
+    },
+    {
+      "path": "guidelines/icon-states.html",
+      "bodyChars": 685,
+      "brokenImages": [],
+      "content": [
+        700,
+        700
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        700,
+        700
+      ]
+    },
+    {
+      "path": "guidelines/icon-usage.html",
+      "bodyChars": 510,
+      "brokenImages": [],
+      "content": [
+        700,
+        400
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        700,
+        400
+      ]
+    },
+    {
+      "path": "guidelines/controls.html",
+      "bodyChars": 77,
+      "brokenImages": [],
+      "content": [
+        700,
+        170
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        700,
+        170
+      ]
+    },
+    {
+      "path": "guidelines/layout.html",
+      "bodyChars": 78,
+      "brokenImages": [],
+      "content": [
+        700,
+        170
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        700,
+        170
+      ]
+    },
+    {
+      "path": "guidelines/radius.html",
+      "bodyChars": 28,
+      "brokenImages": [],
+      "content": [
+        700,
+        260
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        700,
+        260
+      ]
+    },
+    {
+      "path": "guidelines/spacing.html",
+      "bodyChars": 33,
+      "brokenImages": [],
+      "content": [
+        700,
+        150
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        700,
+        150
+      ]
+    },
+    {
+      "path": "guidelines/docs/01-getting-started.html",
+      "bodyChars": 827,
+      "brokenImages": [],
+      "content": [
+        700,
+        430
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        700,
+        430
+      ]
+    },
+    {
+      "path": "guidelines/docs/02-category-index.html",
+      "bodyChars": 1075,
+      "brokenImages": [],
+      "content": [
+        700,
+        680
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        700,
+        680
+      ]
+    },
+    {
+      "path": "guidelines/docs/03-state-matrix.html",
+      "bodyChars": 1006,
+      "brokenImages": [],
+      "content": [
+        700,
+        620
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        700,
+        620
+      ]
+    },
+    {
+      "path": "guidelines/docs/04-layout-guide.html",
+      "bodyChars": 553,
+      "brokenImages": [],
+      "content": [
+        700,
+        330
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        700,
+        330
+      ]
+    },
+    {
+      "path": "guidelines/docs/05-qa.html",
+      "bodyChars": 2598,
+      "brokenImages": [],
+      "content": [
+        700,
+        1400
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        700,
+        1400
+      ]
+    },
+    {
+      "path": "guidelines/docs/06-ai-guide.html",
+      "bodyChars": 719,
+      "brokenImages": [],
+      "content": [
+        700,
+        330
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        700,
+        330
+      ]
+    },
+    {
+      "path": "guidelines/docs/07-changelog.html",
+      "bodyChars": 2084,
+      "brokenImages": [],
+      "content": [
+        685,
+        861
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        685,
+        860
+      ]
+    },
+    {
+      "path": "guidelines/contrast.html",
+      "bodyChars": 66,
+      "brokenImages": [],
+      "content": [
+        700,
+        130
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        700,
+        130
+      ]
+    },
+    {
+      "path": "guidelines/states.html",
+      "bodyChars": 68,
+      "brokenImages": [],
+      "content": [
+        700,
+        200
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        700,
+        200
+      ]
+    },
+    {
+      "path": "guidelines/type-body.html",
+      "bodyChars": 181,
+      "brokenImages": [],
+      "content": [
+        700,
+        230
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        700,
+        230
+      ]
+    },
+    {
+      "path": "guidelines/type-headings.html",
+      "bodyChars": 139,
+      "brokenImages": [],
+      "content": [
+        700,
+        330
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        700,
+        330
+      ]
+    },
+    {
+      "path": "guidelines/type-source.html",
+      "bodyChars": 1449,
+      "brokenImages": [],
+      "content": [
+        700,
+        400
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        700,
+        400
+      ]
+    },
+    {
+      "path": "guidelines/type-weights.html",
+      "bodyChars": 85,
+      "brokenImages": [],
+      "content": [
+        700,
+        140
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        700,
+        140
+      ]
+    },
+    {
+      "path": "ui_kits/search-results/index.html",
+      "bodyChars": 1104,
+      "brokenImages": [],
+      "content": [
+        1905,
+        2266
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        1905,
+        1080
+      ]
+    },
+    {
+      "path": "ui_kits/search-results/mobile.html",
+      "bodyChars": 325,
+      "brokenImages": [],
+      "content": [
+        375,
+        939
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        375,
+        844
+      ]
+    },
+    {
+      "path": "ui_kits/buyer-mypage/index.html",
+      "bodyChars": 883,
+      "brokenImages": [],
+      "content": [
+        1905,
+        1696
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        1905,
+        1080
+      ]
+    },
+    {
+      "path": "ui_kits/buyer-mypage/mobile.html",
+      "bodyChars": 619,
+      "brokenImages": [],
+      "content": [
+        375,
+        2156
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        375,
+        844
+      ]
+    },
+    {
+      "path": "ui_kits/login/index.html",
+      "bodyChars": 228,
+      "brokenImages": [],
+      "content": [
+        1920,
+        1080
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "path": "ui_kits/login/mobile.html",
+      "bodyChars": 326,
+      "brokenImages": [],
+      "content": [
+        375,
+        1062
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        375,
+        844
+      ]
+    },
+    {
+      "path": "ui_kits/product-detail/index.html",
+      "bodyChars": 608,
+      "brokenImages": [],
+      "content": [
+        1905,
+        2063
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        1905,
+        1080
+      ]
+    },
+    {
+      "path": "ui_kits/product-detail/mobile.html",
+      "bodyChars": 470,
+      "brokenImages": [],
+      "content": [
+        375,
+        1775
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        375,
+        844
+      ]
+    },
+    {
+      "path": "ui_kits/cart/index-empty.html",
+      "bodyChars": 378,
+      "brokenImages": [],
+      "content": [
+        1905,
+        1224
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        1905,
+        1080
+      ]
+    },
+    {
+      "path": "ui_kits/cart/index.html",
+      "bodyChars": 788,
+      "brokenImages": [],
+      "content": [
+        1905,
+        1987
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        1905,
+        1080
+      ]
+    },
+    {
+      "path": "ui_kits/cart/mobile-empty.html",
+      "bodyChars": 261,
+      "brokenImages": [],
+      "content": [
+        390,
+        844
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        390,
+        844
+      ]
+    },
+    {
+      "path": "ui_kits/cart/mobile.html",
+      "bodyChars": 661,
+      "brokenImages": [],
+      "content": [
+        375,
+        1885
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        375,
+        844
+      ]
+    },
+    {
+      "path": "ui_kits/order-complete/index.html",
+      "bodyChars": 464,
+      "brokenImages": [],
+      "content": [
+        1905,
+        1563
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        1905,
+        1080
+      ]
+    },
+    {
+      "path": "ui_kits/order-complete/mobile.html",
+      "bodyChars": 380,
+      "brokenImages": [],
+      "content": [
+        375,
+        1085
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        375,
+        844
+      ]
+    },
+    {
+      "path": "ui_kits/checkout/index.html",
+      "bodyChars": 708,
+      "brokenImages": [],
+      "content": [
+        1905,
+        1685
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        1905,
+        1080
+      ]
+    },
+    {
+      "path": "ui_kits/checkout/mobile.html",
+      "bodyChars": 528,
+      "brokenImages": [],
+      "content": [
+        375,
+        1544
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        375,
+        844
+      ]
+    },
+    {
+      "path": "ui_kits/seller-myshop/index.html",
+      "bodyChars": 858,
+      "brokenImages": [],
+      "content": [
+        1905,
+        1951
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        1905,
+        1080
+      ]
+    },
+    {
+      "path": "ui_kits/seller-myshop/mobile.html",
+      "bodyChars": 358,
+      "brokenImages": [],
+      "content": [
+        375,
+        1059
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        375,
+        844
+      ]
+    },
+    {
+      "path": "ui_kits/seller-signup/index.html",
+      "bodyChars": 712,
+      "brokenImages": [],
+      "content": [
+        1905,
+        2145
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        1905,
+        1080
+      ]
+    },
+    {
+      "path": "ui_kits/seller-signup/mobile.html",
+      "bodyChars": 700,
+      "brokenImages": [],
+      "content": [
+        375,
+        2585
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        375,
+        844
+      ]
+    },
+    {
+      "path": "ui_kits/support/index.html",
+      "bodyChars": 563,
+      "brokenImages": [],
+      "content": [
+        1905,
+        1414
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        1905,
+        1080
+      ]
+    },
+    {
+      "path": "ui_kits/support/mobile.html",
+      "bodyChars": 437,
+      "brokenImages": [],
+      "content": [
+        375,
+        1112
+      ],
+      "pendingImages": 0,
+      "unnamedControls": [],
+      "viewport": [
+        375,
+        844
+      ]
+    }
+  ]
+}

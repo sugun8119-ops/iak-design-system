@@ -1,0 +1,1591 @@
+{
+  "date": "2026-09-27",
+  "scope": [
+    "1:69548",
+    "1:69947",
+    "1:70749"
+  ],
+  "additionalModifiedNodes": 166,
+  "remainingRawPaintNodes": 666,
+  "classificationCounts": {
+    "legacy-palette-preserved": 15,
+    "source-palette-preserved": 60,
+    "brand-font-preserved": 3
+  },
+  "groups": [
+    {
+      "root": "1:69548",
+      "color": "#D9D1E0",
+      "property": "strokes",
+      "nodeType": "RECTANGLE",
+      "nodeIds": [
+        "1:69754"
+      ],
+      "classification": "legacy-palette-preserved",
+      "sourcePaletteCount": 0,
+      "policy": "Keep original value; palette match alone is not proof of semantic role. No mass recoloring or component replacement."
+    },
+    {
+      "root": "1:69548",
+      "color": "#A0A0A0",
+      "property": "strokes",
+      "nodeType": "RECTANGLE",
+      "nodeIds": [
+        "1:69762",
+        "1:69763",
+        "1:69765"
+      ],
+      "classification": "source-palette-preserved",
+      "sourcePaletteCount": 322,
+      "policy": "Keep original value; palette match alone is not proof of semantic role. No mass recoloring or component replacement."
+    },
+    {
+      "root": "1:69548",
+      "color": "#F2F2F2",
+      "property": "fills",
+      "nodeType": "RECTANGLE",
+      "nodeIds": [
+        "1:69798"
+      ],
+      "classification": "legacy-palette-preserved",
+      "sourcePaletteCount": 0,
+      "policy": "Keep original value; palette match alone is not proof of semantic role. No mass recoloring or component replacement."
+    },
+    {
+      "root": "1:69548",
+      "color": "#E2F0E4",
+      "property": "fills",
+      "nodeType": "RECTANGLE",
+      "nodeIds": [
+        "1:69811"
+      ],
+      "classification": "source-palette-preserved",
+      "sourcePaletteCount": 20,
+      "policy": "Keep original value; palette match alone is not proof of semantic role. No mass recoloring or component replacement."
+    },
+    {
+      "root": "1:69548",
+      "color": "#F5F5F5",
+      "property": "fills",
+      "nodeType": "RECTANGLE",
+      "nodeIds": [
+        "1:69827"
+      ],
+      "classification": "source-palette-preserved",
+      "sourcePaletteCount": 29,
+      "policy": "Keep original value; palette match alone is not proof of semantic role. No mass recoloring or component replacement."
+    },
+    {
+      "root": "1:69548",
+      "color": "#000000",
+      "property": "fills",
+      "nodeType": "ELLIPSE",
+      "nodeIds": [
+        "1:69839",
+        "1:69840",
+        "1:69841",
+        "1:69843",
+        "1:69844"
+      ],
+      "classification": "source-palette-preserved",
+      "sourcePaletteCount": 2750,
+      "policy": "Keep original value; palette match alone is not proof of semantic role. No mass recoloring or component replacement."
+    },
+    {
+      "root": "1:69548",
+      "color": "#A0A0A0",
+      "property": "fills",
+      "nodeType": "RECTANGLE",
+      "nodeIds": [
+        "1:69940"
+      ],
+      "classification": "source-palette-preserved",
+      "sourcePaletteCount": 322,
+      "policy": "Keep original value; palette match alone is not proof of semantic role. No mass recoloring or component replacement."
+    },
+    {
+      "root": "1:69947",
+      "color": "#A0A0A0",
+      "property": "fills",
+      "nodeType": "RECTANGLE",
+      "nodeIds": [
+        "1:70032"
+      ],
+      "classification": "source-palette-preserved",
+      "sourcePaletteCount": 322,
+      "policy": "Keep original value; palette match alone is not proof of semantic role. No mass recoloring or component replacement."
+    },
+    {
+      "root": "1:69947",
+      "color": "#FF5858",
+      "property": "strokes",
+      "nodeType": "RECTANGLE",
+      "nodeIds": [
+        "1:70162",
+        "1:70168",
+        "1:70172"
+      ],
+      "classification": "source-palette-preserved",
+      "sourcePaletteCount": 91,
+      "policy": "Keep original value; palette match alone is not proof of semantic role. No mass recoloring or component replacement."
+    },
+    {
+      "root": "1:69947",
+      "color": "#FF5858",
+      "property": "fills",
+      "nodeType": "TEXT",
+      "nodeIds": [
+        "1:70163",
+        "1:70169",
+        "1:70173"
+      ],
+      "classification": "source-palette-preserved",
+      "sourcePaletteCount": 91,
+      "policy": "Keep original value; palette match alone is not proof of semantic role. No mass recoloring or component replacement."
+    },
+    {
+      "root": "1:69947",
+      "color": "#E2F0E4",
+      "property": "fills",
+      "nodeType": "RECTANGLE",
+      "nodeIds": [
+        "1:70284",
+        "1:70333",
+        "1:70342"
+      ],
+      "classification": "source-palette-preserved",
+      "sourcePaletteCount": 20,
+      "policy": "Keep original value; palette match alone is not proof of semantic role. No mass recoloring or component replacement."
+    },
+    {
+      "root": "1:69947",
+      "color": "#515151",
+      "property": "fills",
+      "nodeType": "RECTANGLE",
+      "nodeIds": [
+        "1:70291"
+      ],
+      "classification": "source-palette-preserved",
+      "sourcePaletteCount": 18,
+      "policy": "Keep original value; palette match alone is not proof of semantic role. No mass recoloring or component replacement."
+    },
+    {
+      "root": "1:69947",
+      "color": "#F9F9F9",
+      "property": "fills",
+      "nodeType": "RECTANGLE",
+      "nodeIds": [
+        "1:70323",
+        "1:70324"
+      ],
+      "classification": "source-palette-preserved",
+      "sourcePaletteCount": 3,
+      "policy": "Keep original value; palette match alone is not proof of semantic role. No mass recoloring or component replacement."
+    },
+    {
+      "root": "1:69947",
+      "color": "#F8F8F8",
+      "property": "fills",
+      "nodeType": "RECTANGLE",
+      "nodeIds": [
+        "1:70454"
+      ],
+      "classification": "source-palette-preserved",
+      "sourcePaletteCount": 42,
+      "policy": "Keep original value; palette match alone is not proof of semantic role. No mass recoloring or component replacement."
+    },
+    {
+      "root": "1:69947",
+      "color": "#000000",
+      "property": "strokes",
+      "nodeType": "ELLIPSE",
+      "nodeIds": [
+        "1:70638",
+        "1:70641",
+        "1:70651",
+        "1:70654",
+        "1:70700",
+        "1:70703",
+        "1:70740",
+        "1:70743"
+      ],
+      "classification": "source-palette-preserved",
+      "sourcePaletteCount": 2750,
+      "policy": "Keep original value; palette match alone is not proof of semantic role. No mass recoloring or component replacement."
+    },
+    {
+      "root": "1:70749",
+      "color": "#181818",
+      "property": "fills",
+      "nodeType": "RECTANGLE",
+      "nodeIds": [
+        "1:70780"
+      ],
+      "classification": "legacy-palette-preserved",
+      "sourcePaletteCount": 0,
+      "policy": "Keep original value; palette match alone is not proof of semantic role. No mass recoloring or component replacement."
+    },
+    {
+      "root": "1:70749",
+      "color": "#F1F3F8",
+      "property": "fills",
+      "nodeType": "RECTANGLE",
+      "nodeIds": [
+        "1:70787",
+        "1:71430",
+        "1:71432",
+        "1:72266",
+        "1:72271",
+        "1:73919",
+        "1:73921",
+        "1:74690",
+        "1:74692",
+        "1:84159"
+      ],
+      "classification": "source-palette-preserved",
+      "sourcePaletteCount": 16,
+      "policy": "Keep original value; palette match alone is not proof of semantic role. No mass recoloring or component replacement."
+    },
+    {
+      "root": "1:70749",
+      "color": "#E2F0E4",
+      "property": "fills",
+      "nodeType": "RECTANGLE",
+      "nodeIds": [
+        "1:70789",
+        "1:71546",
+        "1:72390",
+        "1:74033",
+        "1:74804"
+      ],
+      "classification": "source-palette-preserved",
+      "sourcePaletteCount": 20,
+      "policy": "Keep original value; palette match alone is not proof of semantic role. No mass recoloring or component replacement."
+    },
+    {
+      "root": "1:70749",
+      "color": "#F3F5F6",
+      "property": "fills",
+      "nodeType": "RECTANGLE",
+      "nodeIds": [
+        "1:70794",
+        "1:70795",
+        "1:70796",
+        "1:70797"
+      ],
+      "classification": "legacy-palette-preserved",
+      "sourcePaletteCount": 0,
+      "policy": "Keep original value; palette match alone is not proof of semantic role. No mass recoloring or component replacement."
+    },
+    {
+      "root": "1:70749",
+      "color": "#E32C2C",
+      "property": "fills",
+      "nodeType": "TEXT",
+      "nodeIds": [
+        "1:70807",
+        "1:70810",
+        "1:70813",
+        "1:70816",
+        "1:70819",
+        "1:70822",
+        "1:70825",
+        "1:70828",
+        "1:70858",
+        "1:70910",
+        "1:71537",
+        "1:71770",
+        "1:71771",
+        "1:71772",
+        "1:71786",
+        "1:71804",
+        "1:71810",
+        "1:71895",
+        "1:71897",
+        "1:71899",
+        "1:71913",
+        "1:71915",
+        "1:71929",
+        "1:71931",
+        "1:71933",
+        "1:72319",
+        "1:72673",
+        "1:72675",
+        "1:72677",
+        "1:72685",
+        "1:72691",
+        "1:72693",
+        "1:72710",
+        "1:72712",
+        "1:73814",
+        "1:73835",
+        "1:73842",
+        "1:73864",
+        "1:73866",
+        "1:73868",
+        "1:74026",
+        "1:74239",
+        "1:74241",
+        "1:74243",
+        "1:74257",
+        "1:74259",
+        "1:74273",
+        "1:74275",
+        "1:74277",
+        "1:74454",
+        "1:74455",
+        "1:74476",
+        "1:74477",
+        "1:74516",
+        "1:74517",
+        "1:74518",
+        "1:74519",
+        "1:74797",
+        "1:75006",
+        "1:75008",
+        "1:75010",
+        "1:75024",
+        "1:75026",
+        "1:75040",
+        "1:75042",
+        "1:75044",
+        "1:84107",
+        "1:84108",
+        "1:84109",
+        "1:84130",
+        "1:84133",
+        "1:84139"
+      ],
+      "classification": "source-palette-preserved",
+      "sourcePaletteCount": 76,
+      "policy": "Keep original value; palette match alone is not proof of semantic role. No mass recoloring or component replacement."
+    },
+    {
+      "root": "1:70749",
+      "color": "#E2F1E4",
+      "property": "fills",
+      "nodeType": "RECTANGLE",
+      "nodeIds": [
+        "1:70920",
+        "1:70924",
+        "1:70928",
+        "1:70932",
+        "1:70936",
+        "1:70940",
+        "1:70944",
+        "1:70948"
+      ],
+      "classification": "legacy-palette-preserved",
+      "sourcePaletteCount": 0,
+      "policy": "Keep original value; palette match alone is not proof of semantic role. No mass recoloring or component replacement."
+    },
+    {
+      "root": "1:70749",
+      "color": "#F7F8F9",
+      "property": "fills",
+      "nodeType": "RECTANGLE",
+      "nodeIds": [
+        "1:70953",
+        "1:71002",
+        "1:71049",
+        "1:71106",
+        "1:71203",
+        "1:71265",
+        "1:83095",
+        "1:83097",
+        "1:83098",
+        "1:83099",
+        "1:83100",
+        "1:83101",
+        "1:83102",
+        "1:83103",
+        "1:83104",
+        "1:83105",
+        "1:83106",
+        "1:83107",
+        "1:83108",
+        "1:83109",
+        "1:83110",
+        "1:83111",
+        "1:83112",
+        "1:83113",
+        "1:83134",
+        "1:84965"
+      ],
+      "classification": "legacy-palette-preserved",
+      "sourcePaletteCount": 0,
+      "policy": "Keep original value; palette match alone is not proof of semantic role. No mass recoloring or component replacement."
+    },
+    {
+      "root": "1:70749",
+      "color": "#000000",
+      "property": "fills",
+      "nodeType": "RECTANGLE",
+      "nodeIds": [
+        "1:71298",
+        "1:71304",
+        "1:71340",
+        "1:71341",
+        "1:71344",
+        "1:71345",
+        "1:75546",
+        "1:75547",
+        "1:75548",
+        "1:76893",
+        "1:76894",
+        "1:76895",
+        "1:81273",
+        "1:81274",
+        "1:81275",
+        "1:82173",
+        "1:82174",
+        "1:82175",
+        "1:83506",
+        "1:83522",
+        "1:83524",
+        "1:83538",
+        "1:83622",
+        "1:83623",
+        "1:83624",
+        "1:83625",
+        "1:83626",
+        "1:83782",
+        "1:83787"
+      ],
+      "classification": "source-palette-preserved",
+      "sourcePaletteCount": 2750,
+      "policy": "Keep original value; palette match alone is not proof of semantic role. No mass recoloring or component replacement."
+    },
+    {
+      "root": "1:70749",
+      "color": "#000000",
+      "property": "strokes",
+      "nodeType": "RECTANGLE",
+      "nodeIds": [
+        "1:71339",
+        "1:71343",
+        "1:71759",
+        "1:71760",
+        "1:71761",
+        "1:71762",
+        "1:71763",
+        "1:71764",
+        "1:71765",
+        "1:71766",
+        "1:71784",
+        "1:71790",
+        "1:71796",
+        "1:71802",
+        "1:71808",
+        "1:73811",
+        "1:73818",
+        "1:73825",
+        "1:73832",
+        "1:73839",
+        "1:73854",
+        "1:73855",
+        "1:73856",
+        "1:73857",
+        "1:73858",
+        "1:73859",
+        "1:73860",
+        "1:73861",
+        "1:74445",
+        "1:74446",
+        "1:74447",
+        "1:74448",
+        "1:74449",
+        "1:74450",
+        "1:74451",
+        "1:74467",
+        "1:74468",
+        "1:74469",
+        "1:74470",
+        "1:74471",
+        "1:74472",
+        "1:74473",
+        "1:83809",
+        "1:83834",
+        "1:83886",
+        "1:83914",
+        "1:83940",
+        "1:83965",
+        "1:84017",
+        "1:84084",
+        "1:84085",
+        "1:84086",
+        "1:84087",
+        "1:84093",
+        "1:84094",
+        "1:84095",
+        "1:84096",
+        "1:84097",
+        "1:84098",
+        "1:84099",
+        "1:84100",
+        "1:84137",
+        "1:85262"
+      ],
+      "classification": "source-palette-preserved",
+      "sourcePaletteCount": 2750,
+      "policy": "Keep original value; palette match alone is not proof of semantic role. No mass recoloring or component replacement."
+    },
+    {
+      "root": "1:70749",
+      "color": "#1BE96A",
+      "property": "fills",
+      "nodeType": "RECTANGLE",
+      "nodeIds": [
+        "1:71412",
+        "1:72019",
+        "1:72250",
+        "1:73901",
+        "1:74363",
+        "1:74672",
+        "1:75130"
+      ],
+      "classification": "source-palette-preserved",
+      "sourcePaletteCount": 7,
+      "policy": "Keep original value; palette match alone is not proof of semantic role. No mass recoloring or component replacement."
+    },
+    {
+      "root": "1:70749",
+      "color": "#1AD963",
+      "property": "fills",
+      "nodeType": "RECTANGLE",
+      "nodeIds": [
+        "1:71413",
+        "1:72020",
+        "1:73902",
+        "1:74364",
+        "1:74673",
+        "1:75131"
+      ],
+      "classification": "source-palette-preserved",
+      "sourcePaletteCount": 4,
+      "policy": "Keep original value; palette match alone is not proof of semantic role. No mass recoloring or component replacement."
+    },
+    {
+      "root": "1:70749",
+      "color": "#17C459",
+      "property": "fills",
+      "nodeType": "RECTANGLE",
+      "nodeIds": [
+        "1:71414",
+        "1:72021",
+        "1:72251",
+        "1:73903",
+        "1:74365",
+        "1:74674",
+        "1:75132"
+      ],
+      "classification": "source-palette-preserved",
+      "sourcePaletteCount": 5,
+      "policy": "Keep original value; palette match alone is not proof of semantic role. No mass recoloring or component replacement."
+    },
+    {
+      "root": "1:70749",
+      "color": "#139E48",
+      "property": "fills",
+      "nodeType": "RECTANGLE",
+      "nodeIds": [
+        "1:71416",
+        "1:72023",
+        "1:72253",
+        "1:73905",
+        "1:74367",
+        "1:74676",
+        "1:75134"
+      ],
+      "classification": "source-palette-preserved",
+      "sourcePaletteCount": 9,
+      "policy": "Keep original value; palette match alone is not proof of semantic role. No mass recoloring or component replacement."
+    },
+    {
+      "root": "1:70749",
+      "color": "#118E41",
+      "property": "fills",
+      "nodeType": "RECTANGLE",
+      "nodeIds": [
+        "1:71417",
+        "1:71585",
+        "1:72024",
+        "1:72254",
+        "1:72637",
+        "1:73906",
+        "1:74072",
+        "1:74368",
+        "1:74677",
+        "1:74843",
+        "1:75135"
+      ],
+      "classification": "source-palette-preserved",
+      "sourcePaletteCount": 9,
+      "policy": "Keep original value; palette match alone is not proof of semantic role. No mass recoloring or component replacement."
+    },
+    {
+      "root": "1:70749",
+      "color": "#0E7837",
+      "property": "fills",
+      "nodeType": "RECTANGLE",
+      "nodeIds": [
+        "1:71418",
+        "1:72025",
+        "1:72255",
+        "1:73907",
+        "1:74369",
+        "1:74678",
+        "1:75136",
+        "1:83587"
+      ],
+      "classification": "source-palette-preserved",
+      "sourcePaletteCount": 9,
+      "policy": "Keep original value; palette match alone is not proof of semantic role. No mass recoloring or component replacement."
+    },
+    {
+      "root": "1:70749",
+      "color": "#202020",
+      "property": "fills",
+      "nodeType": "RECTANGLE",
+      "nodeIds": [
+        "1:71549",
+        "1:73881",
+        "1:74036",
+        "1:74807",
+        "1:83470",
+        "1:85240"
+      ],
+      "classification": "source-palette-preserved",
+      "sourcePaletteCount": 44,
+      "policy": "Keep original value; palette match alone is not proof of semantic role. No mass recoloring or component replacement."
+    },
+    {
+      "root": "1:70749",
+      "color": "#888888",
+      "property": "fills",
+      "nodeType": "TEXT",
+      "nodeIds": [
+        "1:71560",
+        "1:73894",
+        "1:74047",
+        "1:74818",
+        "1:83483",
+        "1:85253"
+      ],
+      "classification": "brand-font-preserved",
+      "sourcePaletteCount": 471,
+      "policy": "Keep original value; palette match alone is not proof of semantic role. No mass recoloring or component replacement."
+    },
+    {
+      "root": "1:70749",
+      "color": "#F8F8F8",
+      "property": "fills",
+      "nodeType": "RECTANGLE",
+      "nodeIds": [
+        "1:71564",
+        "1:71759",
+        "1:71760",
+        "1:71761",
+        "1:71762",
+        "1:71763",
+        "1:71764",
+        "1:71765",
+        "1:71766",
+        "1:73854",
+        "1:73855",
+        "1:73856",
+        "1:73857",
+        "1:73858",
+        "1:73859",
+        "1:73860",
+        "1:73861",
+        "1:74051",
+        "1:74445",
+        "1:74446",
+        "1:74447",
+        "1:74448",
+        "1:74449",
+        "1:74450",
+        "1:74451",
+        "1:74467",
+        "1:74468",
+        "1:74469",
+        "1:74470",
+        "1:74471",
+        "1:74472",
+        "1:74473",
+        "1:74822",
+        "1:77712",
+        "1:81213",
+        "1:81216",
+        "1:82996",
+        "1:83072",
+        "1:83093",
+        "1:84093",
+        "1:84094",
+        "1:84095",
+        "1:84096",
+        "1:84097",
+        "1:84098",
+        "1:84099",
+        "1:84100"
+      ],
+      "classification": "source-palette-preserved",
+      "sourcePaletteCount": 42,
+      "policy": "Keep original value; palette match alone is not proof of semantic role. No mass recoloring or component replacement."
+    },
+    {
+      "root": "1:70749",
+      "color": "#19D461",
+      "property": "fills",
+      "nodeType": "RECTANGLE",
+      "nodeIds": [
+        "1:71587",
+        "1:72629",
+        "1:74074",
+        "1:74845"
+      ],
+      "classification": "source-palette-preserved",
+      "sourcePaletteCount": 4,
+      "policy": "Keep original value; palette match alone is not proof of semantic role. No mass recoloring or component replacement."
+    },
+    {
+      "root": "1:70749",
+      "color": "#0D6E32",
+      "property": "fills",
+      "nodeType": "RECTANGLE",
+      "nodeIds": [
+        "1:71589",
+        "1:72643",
+        "1:74076",
+        "1:74847"
+      ],
+      "classification": "source-palette-preserved",
+      "sourcePaletteCount": 4,
+      "policy": "Keep original value; palette match alone is not proof of semantic role. No mass recoloring or component replacement."
+    },
+    {
+      "root": "1:70749",
+      "color": "#2B5F33",
+      "property": "fills",
+      "nodeType": "ELLIPSE",
+      "nodeIds": [
+        "1:71863",
+        "1:73588",
+        "1:74207",
+        "1:74974",
+        "1:75530",
+        "1:76323",
+        "1:76326",
+        "1:76565",
+        "1:76794",
+        "1:76877",
+        "1:77670",
+        "1:77673",
+        "1:78542",
+        "1:79389",
+        "1:80213",
+        "1:81034",
+        "1:81257",
+        "1:82050",
+        "1:82053",
+        "1:82157",
+        "1:82951",
+        "1:82954",
+        "1:83039",
+        "1:83331",
+        "1:84898",
+        "1:84960"
+      ],
+      "classification": "source-palette-preserved",
+      "sourcePaletteCount": 12,
+      "policy": "Keep original value; palette match alone is not proof of semantic role. No mass recoloring or component replacement."
+    },
+    {
+      "root": "1:70749",
+      "color": "#CCCCCC",
+      "property": "fills",
+      "nodeType": "RECTANGLE",
+      "nodeIds": [
+        "1:71955",
+        "1:71963",
+        "1:73773",
+        "1:73780",
+        "1:74299",
+        "1:74307",
+        "1:74490",
+        "1:74491",
+        "1:74492",
+        "1:74493",
+        "1:74494",
+        "1:74495",
+        "1:74496",
+        "1:74497",
+        "1:74498",
+        "1:74499",
+        "1:74500",
+        "1:74501",
+        "1:74502",
+        "1:75066",
+        "1:75074",
+        "1:76403",
+        "1:76411",
+        "1:76485",
+        "1:76631",
+        "1:76639",
+        "1:76713",
+        "1:77710",
+        "1:83165",
+        "1:83173",
+        "1:83247",
+        "1:83603"
+      ],
+      "classification": "source-palette-preserved",
+      "sourcePaletteCount": 194,
+      "policy": "Keep original value; palette match alone is not proof of semantic role. No mass recoloring or component replacement."
+    },
+    {
+      "root": "1:70749",
+      "color": "#6CAAF9",
+      "property": "fills",
+      "nodeType": "ELLIPSE",
+      "nodeIds": [
+        "1:71971",
+        "1:73665",
+        "1:74315",
+        "1:75082"
+      ],
+      "classification": "source-palette-preserved",
+      "sourcePaletteCount": 12,
+      "policy": "Keep original value; palette match alone is not proof of semantic role. No mass recoloring or component replacement."
+    },
+    {
+      "root": "1:70749",
+      "color": "#59DEBD",
+      "property": "fills",
+      "nodeType": "ELLIPSE",
+      "nodeIds": [
+        "1:71975",
+        "1:73669",
+        "1:74319",
+        "1:75086"
+      ],
+      "classification": "source-palette-preserved",
+      "sourcePaletteCount": 8,
+      "policy": "Keep original value; palette match alone is not proof of semantic role. No mass recoloring or component replacement."
+    },
+    {
+      "root": "1:70749",
+      "color": "#48D468",
+      "property": "fills",
+      "nodeType": "ELLIPSE",
+      "nodeIds": [
+        "1:71980",
+        "1:73673",
+        "1:74324",
+        "1:75091"
+      ],
+      "classification": "source-palette-preserved",
+      "sourcePaletteCount": 8,
+      "policy": "Keep original value; palette match alone is not proof of semantic role. No mass recoloring or component replacement."
+    },
+    {
+      "root": "1:70749",
+      "color": "#FFDD68",
+      "property": "fills",
+      "nodeType": "ELLIPSE",
+      "nodeIds": [
+        "1:71984",
+        "1:73677",
+        "1:74328",
+        "1:75095"
+      ],
+      "classification": "source-palette-preserved",
+      "sourcePaletteCount": 8,
+      "policy": "Keep original value; palette match alone is not proof of semantic role. No mass recoloring or component replacement."
+    },
+    {
+      "root": "1:70749",
+      "color": "#935AE7",
+      "property": "fills",
+      "nodeType": "ELLIPSE",
+      "nodeIds": [
+        "1:71989",
+        "1:73681",
+        "1:74333",
+        "1:75100"
+      ],
+      "classification": "source-palette-preserved",
+      "sourcePaletteCount": 8,
+      "policy": "Keep original value; palette match alone is not proof of semantic role. No mass recoloring or component replacement."
+    },
+    {
+      "root": "1:70749",
+      "color": "#FF8165",
+      "property": "fills",
+      "nodeType": "ELLIPSE",
+      "nodeIds": [
+        "1:71993",
+        "1:73685",
+        "1:74337",
+        "1:75104"
+      ],
+      "classification": "source-palette-preserved",
+      "sourcePaletteCount": 8,
+      "policy": "Keep original value; palette match alone is not proof of semantic role. No mass recoloring or component replacement."
+    },
+    {
+      "root": "1:70749",
+      "color": "#15B452",
+      "property": "fills",
+      "nodeType": "RECTANGLE",
+      "nodeIds": [
+        "1:72044",
+        "1:73763",
+        "1:74388",
+        "1:75155"
+      ],
+      "classification": "source-palette-preserved",
+      "sourcePaletteCount": 4,
+      "policy": "Keep original value; palette match alone is not proof of semantic role. No mass recoloring or component replacement."
+    },
+    {
+      "root": "1:70749",
+      "color": "#F33F5E",
+      "property": "strokes",
+      "nodeType": "ELLIPSE",
+      "nodeIds": [
+        "1:72045",
+        "1:73764",
+        "1:74389",
+        "1:75156",
+        "1:76486",
+        "1:76714",
+        "1:83248"
+      ],
+      "classification": "source-palette-preserved",
+      "sourcePaletteCount": 56,
+      "policy": "Keep original value; palette match alone is not proof of semantic role. No mass recoloring or component replacement."
+    },
+    {
+      "root": "1:70749",
+      "color": "#22C45E",
+      "property": "fills",
+      "nodeType": "ELLIPSE",
+      "nodeIds": [
+        "1:72048",
+        "1:72060",
+        "1:73742",
+        "1:73760",
+        "1:74392",
+        "1:74404",
+        "1:75159",
+        "1:75171",
+        "1:76489",
+        "1:76501",
+        "1:76717",
+        "1:76729",
+        "1:83251"
+      ],
+      "classification": "source-palette-preserved",
+      "sourcePaletteCount": 21,
+      "policy": "Keep original value; palette match alone is not proof of semantic role. No mass recoloring or component replacement."
+    },
+    {
+      "root": "1:70749",
+      "color": "#F33F5E",
+      "property": "fills",
+      "nodeType": "ELLIPSE",
+      "nodeIds": [
+        "1:72049",
+        "1:72061",
+        "1:73745",
+        "1:73761",
+        "1:74393",
+        "1:74405",
+        "1:75160",
+        "1:75172",
+        "1:76490",
+        "1:76502",
+        "1:76718",
+        "1:76730",
+        "1:83252"
+      ],
+      "classification": "source-palette-preserved",
+      "sourcePaletteCount": 56,
+      "policy": "Keep original value; palette match alone is not proof of semantic role. No mass recoloring or component replacement."
+    },
+    {
+      "root": "1:70749",
+      "color": "#CCCCCC",
+      "property": "strokes",
+      "nodeType": "RECTANGLE",
+      "nodeIds": [
+        "1:72052",
+        "1:72053",
+        "1:73751",
+        "1:73752",
+        "1:74396",
+        "1:74397",
+        "1:75163",
+        "1:75164",
+        "1:76493",
+        "1:76494",
+        "1:76721",
+        "1:76722",
+        "1:77723",
+        "1:77726",
+        "1:77729",
+        "1:78577",
+        "1:78580",
+        "1:78583",
+        "1:78586",
+        "1:78589",
+        "1:78595",
+        "1:78604",
+        "1:79423",
+        "1:79425",
+        "1:79426",
+        "1:80248",
+        "1:80250",
+        "1:81069",
+        "1:81070",
+        "1:81071",
+        "1:81072",
+        "1:81073",
+        "1:81075",
+        "1:81076",
+        "1:81077",
+        "1:81078",
+        "1:81079",
+        "1:81080",
+        "1:81081",
+        "1:81082",
+        "1:81083",
+        "1:81084",
+        "1:81085",
+        "1:81086",
+        "1:81087",
+        "1:81088",
+        "1:81089",
+        "1:81090",
+        "1:81091",
+        "1:81092",
+        "1:81122",
+        "1:81204",
+        "1:81207",
+        "1:81210",
+        "1:83432",
+        "1:83435",
+        "1:83438",
+        "1:83746",
+        "1:83749",
+        "1:83752",
+        "1:83755",
+        "1:83758",
+        "1:83761",
+        "1:83764",
+        "1:83767",
+        "1:83770",
+        "1:83813",
+        "1:83838",
+        "1:83891",
+        "1:83918",
+        "1:83944",
+        "1:83969",
+        "1:84022"
+      ],
+      "classification": "source-palette-preserved",
+      "sourcePaletteCount": 194,
+      "policy": "Keep original value; palette match alone is not proof of semantic role. No mass recoloring or component replacement."
+    },
+    {
+      "root": "1:70749",
+      "color": "#F6F8FA",
+      "property": "fills",
+      "nodeType": "RECTANGLE",
+      "nodeIds": [
+        "1:72053",
+        "1:73752",
+        "1:74397",
+        "1:75164",
+        "1:76494",
+        "1:76722"
+      ],
+      "classification": "source-palette-preserved",
+      "sourcePaletteCount": 10,
+      "policy": "Keep original value; palette match alone is not proof of semantic role. No mass recoloring or component replacement."
+    },
+    {
+      "root": "1:70749",
+      "color": "#E9FAFF",
+      "property": "fills",
+      "nodeType": "RECTANGLE",
+      "nodeIds": [
+        "1:72098",
+        "1:74542",
+        "1:75204"
+      ],
+      "classification": "source-palette-preserved",
+      "sourcePaletteCount": 10,
+      "policy": "Keep original value; palette match alone is not proof of semantic role. No mass recoloring or component replacement."
+    },
+    {
+      "root": "1:70749",
+      "color": "#E9FAFF",
+      "property": "fills",
+      "nodeType": "TEXT",
+      "nodeIds": [
+        "1:72101",
+        "1:74545",
+        "1:75207"
+      ],
+      "classification": "source-palette-preserved",
+      "sourcePaletteCount": 10,
+      "policy": "Keep original value; palette match alone is not proof of semantic role. No mass recoloring or component replacement."
+    },
+    {
+      "root": "1:70749",
+      "color": "#333333",
+      "property": "fills",
+      "nodeType": "TEXT",
+      "nodeIds": [
+        "1:72204",
+        "1:73615",
+        "1:74625",
+        "1:75300",
+        "1:83697",
+        "1:85375"
+      ],
+      "classification": "brand-font-preserved",
+      "sourcePaletteCount": 2641,
+      "policy": "Keep original value; palette match alone is not proof of semantic role. No mass recoloring or component replacement."
+    },
+    {
+      "root": "1:70749",
+      "color": "#DEDEDE",
+      "property": "fills",
+      "nodeType": "RECTANGLE",
+      "nodeIds": [
+        "1:72210",
+        "1:74631",
+        "1:75306",
+        "1:75526",
+        "1:76561",
+        "1:76789",
+        "1:76873",
+        "1:77803",
+        "1:78650",
+        "1:79474",
+        "1:80295",
+        "1:81253",
+        "1:82153",
+        "1:83326",
+        "1:84079"
+      ],
+      "classification": "source-palette-preserved",
+      "sourcePaletteCount": 5,
+      "policy": "Keep original value; palette match alone is not proof of semantic role. No mass recoloring or component replacement."
+    },
+    {
+      "root": "1:70749",
+      "color": "#CCCCCC",
+      "property": "strokes",
+      "nodeType": "LINE",
+      "nodeIds": [
+        "1:72212",
+        "1:73604",
+        "1:74633",
+        "1:75308",
+        "1:75528",
+        "1:76563",
+        "1:76791",
+        "1:76875",
+        "1:77805",
+        "1:78652",
+        "1:79476",
+        "1:80297",
+        "1:81255",
+        "1:82155",
+        "1:83328",
+        "1:83686",
+        "1:84081",
+        "1:85363"
+      ],
+      "classification": "source-palette-preserved",
+      "sourcePaletteCount": 194,
+      "policy": "Keep original value; palette match alone is not proof of semantic role. No mass recoloring or component replacement."
+    },
+    {
+      "root": "1:70749",
+      "color": "#555555",
+      "property": "fills",
+      "nodeType": "RECTANGLE",
+      "nodeIds": [
+        "1:74489"
+      ],
+      "classification": "source-palette-preserved",
+      "sourcePaletteCount": 1,
+      "policy": "Keep original value; palette match alone is not proof of semantic role. No mass recoloring or component replacement."
+    },
+    {
+      "root": "1:70749",
+      "color": "#000000",
+      "property": "fills",
+      "nodeType": "TEXT",
+      "nodeIds": [
+        "1:75520",
+        "1:76555",
+        "1:76783",
+        "1:76867",
+        "1:77797",
+        "1:78644",
+        "1:79468",
+        "1:80289",
+        "1:81247",
+        "1:82147",
+        "1:83320",
+        "1:83794",
+        "1:83819",
+        "1:83873",
+        "1:83906",
+        "1:83925",
+        "1:83950",
+        "1:84004",
+        "1:84037",
+        "1:84073",
+        "1:85273"
+      ],
+      "classification": "brand-font-preserved",
+      "sourcePaletteCount": 2750,
+      "policy": "Keep original value; palette match alone is not proof of semantic role. No mass recoloring or component replacement."
+    },
+    {
+      "root": "1:70749",
+      "color": "#EAEEF2",
+      "property": "fills",
+      "nodeType": "RECTANGLE",
+      "nodeIds": [
+        "1:76346",
+        "1:82077",
+        "1:82979"
+      ],
+      "classification": "legacy-palette-preserved",
+      "sourcePaletteCount": 0,
+      "policy": "Keep original value; palette match alone is not proof of semantic role. No mass recoloring or component replacement."
+    },
+    {
+      "root": "1:70749",
+      "color": "#E9B208",
+      "property": "fills",
+      "nodeType": "ELLIPSE",
+      "nodeIds": [
+        "1:76419",
+        "1:76647",
+        "1:83181"
+      ],
+      "classification": "legacy-palette-preserved",
+      "sourcePaletteCount": 0,
+      "policy": "Keep original value; palette match alone is not proof of semantic role. No mass recoloring or component replacement."
+    },
+    {
+      "root": "1:70749",
+      "color": "#F87316",
+      "property": "fills",
+      "nodeType": "ELLIPSE",
+      "nodeIds": [
+        "1:76423",
+        "1:76651",
+        "1:83185"
+      ],
+      "classification": "source-palette-preserved",
+      "sourcePaletteCount": 4,
+      "policy": "Keep original value; palette match alone is not proof of semantic role. No mass recoloring or component replacement."
+    },
+    {
+      "root": "1:70749",
+      "color": "#08A141",
+      "property": "fills",
+      "nodeType": "ELLIPSE",
+      "nodeIds": [
+        "1:76428",
+        "1:76656",
+        "1:83190"
+      ],
+      "classification": "legacy-palette-preserved",
+      "sourcePaletteCount": 0,
+      "policy": "Keep original value; palette match alone is not proof of semantic role. No mass recoloring or component replacement."
+    },
+    {
+      "root": "1:70749",
+      "color": "#7628C1",
+      "property": "fills",
+      "nodeType": "ELLIPSE",
+      "nodeIds": [
+        "1:76432",
+        "1:76660",
+        "1:83194"
+      ],
+      "classification": "legacy-palette-preserved",
+      "sourcePaletteCount": 0,
+      "policy": "Keep original value; palette match alone is not proof of semantic role. No mass recoloring or component replacement."
+    },
+    {
+      "root": "1:70749",
+      "color": "#EE4444",
+      "property": "fills",
+      "nodeType": "ELLIPSE",
+      "nodeIds": [
+        "1:76441",
+        "1:76669",
+        "1:83203"
+      ],
+      "classification": "legacy-palette-preserved",
+      "sourcePaletteCount": 0,
+      "policy": "Keep original value; palette match alone is not proof of semantic role. No mass recoloring or component replacement."
+    },
+    {
+      "root": "1:70749",
+      "color": "#EEEEEE",
+      "property": "fills",
+      "nodeType": "RECTANGLE",
+      "nodeIds": [
+        "1:76610",
+        "1:76611",
+        "1:76612"
+      ],
+      "classification": "source-palette-preserved",
+      "sourcePaletteCount": 15,
+      "policy": "Keep original value; palette match alone is not proof of semantic role. No mass recoloring or component replacement."
+    },
+    {
+      "root": "1:70749",
+      "color": "#000000",
+      "property": "fills",
+      "nodeType": "POLYGON",
+      "nodeIds": [
+        "1:76820",
+        "1:80244",
+        "1:81065",
+        "1:81067"
+      ],
+      "classification": "source-palette-preserved",
+      "sourcePaletteCount": 2750,
+      "policy": "Keep original value; palette match alone is not proof of semantic role. No mass recoloring or component replacement."
+    },
+    {
+      "root": "1:70749",
+      "color": "#E7ECF1",
+      "property": "fills",
+      "nodeType": "RECTANGLE",
+      "nodeIds": [
+        "1:77696"
+      ],
+      "classification": "legacy-palette-preserved",
+      "sourcePaletteCount": 0,
+      "policy": "Keep original value; palette match alone is not proof of semantic role. No mass recoloring or component replacement."
+    },
+    {
+      "root": "1:70749",
+      "color": "#F5F5F5",
+      "property": "fills",
+      "nodeType": "RECTANGLE",
+      "nodeIds": [
+        "1:77697",
+        "1:85069",
+        "1:85276"
+      ],
+      "classification": "source-palette-preserved",
+      "sourcePaletteCount": 29,
+      "policy": "Keep original value; palette match alone is not proof of semantic role. No mass recoloring or component replacement."
+    },
+    {
+      "root": "1:70749",
+      "color": "#F0F0F0",
+      "property": "fills",
+      "nodeType": "RECTANGLE",
+      "nodeIds": [
+        "1:78605",
+        "1:78606",
+        "1:78607",
+        "1:81170",
+        "1:81171",
+        "1:81172",
+        "1:81173",
+        "1:81174",
+        "1:81175",
+        "1:81176",
+        "1:81177",
+        "1:81178",
+        "1:81179",
+        "1:81180",
+        "1:83359",
+        "1:83361",
+        "1:83362",
+        "1:83363",
+        "1:83364",
+        "1:83365",
+        "1:83366",
+        "1:83367",
+        "1:83368",
+        "1:83424",
+        "1:83425",
+        "1:83426",
+        "1:83427",
+        "1:84976"
+      ],
+      "classification": "legacy-palette-preserved",
+      "sourcePaletteCount": 0,
+      "policy": "Keep original value; palette match alone is not proof of semantic role. No mass recoloring or component replacement."
+    },
+    {
+      "root": "1:70749",
+      "color": "#515151",
+      "property": "fills",
+      "nodeType": "RECTANGLE",
+      "nodeIds": [
+        "1:81095"
+      ],
+      "classification": "source-palette-preserved",
+      "sourcePaletteCount": 18,
+      "policy": "Keep original value; palette match alone is not proof of semantic role. No mass recoloring or component replacement."
+    },
+    {
+      "root": "1:70749",
+      "color": "#EEF2F6",
+      "property": "fills",
+      "nodeType": "RECTANGLE",
+      "nodeIds": [
+        "1:81181"
+      ],
+      "classification": "legacy-palette-preserved",
+      "sourcePaletteCount": 0,
+      "policy": "Keep original value; palette match alone is not proof of semantic role. No mass recoloring or component replacement."
+    },
+    {
+      "root": "1:70749",
+      "color": "#22C45E",
+      "property": "fills",
+      "nodeType": "TEXT",
+      "nodeIds": [
+        "1:83282"
+      ],
+      "classification": "source-palette-preserved",
+      "sourcePaletteCount": 21,
+      "policy": "Keep original value; palette match alone is not proof of semantic role. No mass recoloring or component replacement."
+    },
+    {
+      "root": "1:70749",
+      "color": "#F2F3F6",
+      "property": "fills",
+      "nodeType": "RECTANGLE",
+      "nodeIds": [
+        "1:83510"
+      ],
+      "classification": "source-palette-preserved",
+      "sourcePaletteCount": 3,
+      "policy": "Keep original value; palette match alone is not proof of semantic role. No mass recoloring or component replacement."
+    },
+    {
+      "root": "1:70749",
+      "color": "#E7E7E7",
+      "property": "strokes",
+      "nodeType": "RECTANGLE",
+      "nodeIds": [
+        "1:83512"
+      ],
+      "classification": "source-palette-preserved",
+      "sourcePaletteCount": 12,
+      "policy": "Keep original value; palette match alone is not proof of semantic role. No mass recoloring or component replacement."
+    },
+    {
+      "root": "1:70749",
+      "color": "#E7E7E7",
+      "property": "fills",
+      "nodeType": "RECTANGLE",
+      "nodeIds": [
+        "1:83513",
+        "1:83514",
+        "1:83515"
+      ],
+      "classification": "source-palette-preserved",
+      "sourcePaletteCount": 12,
+      "policy": "Keep original value; palette match alone is not proof of semantic role. No mass recoloring or component replacement."
+    },
+    {
+      "root": "1:70749",
+      "color": "#000000",
+      "property": "strokes",
+      "nodeType": "ELLIPSE",
+      "nodeIds": [
+        "1:83657"
+      ],
+      "classification": "source-palette-preserved",
+      "sourcePaletteCount": 2750,
+      "policy": "Keep original value; palette match alone is not proof of semantic role. No mass recoloring or component replacement."
+    },
+    {
+      "root": "1:70749",
+      "color": "#D9D9D9",
+      "property": "fills",
+      "nodeType": "TEXT",
+      "nodeIds": [
+        "1:83849",
+        "1:83851",
+        "1:83980",
+        "1:83982"
+      ],
+      "classification": "source-palette-preserved",
+      "sourcePaletteCount": 999,
+      "policy": "Keep original value; palette match alone is not proof of semantic role. No mass recoloring or component replacement."
+    },
+    {
+      "root": "1:70749",
+      "color": "#F2F2F2",
+      "property": "fills",
+      "nodeType": "RECTANGLE",
+      "nodeIds": [
+        "1:85137"
+      ],
+      "classification": "legacy-palette-preserved",
+      "sourcePaletteCount": 0,
+      "policy": "Keep original value; palette match alone is not proof of semantic role. No mass recoloring or component replacement."
+    },
+    {
+      "root": "1:70749",
+      "color": "#F9F9F9",
+      "property": "fills",
+      "nodeType": "RECTANGLE",
+      "nodeIds": [
+        "1:85154",
+        "1:85155",
+        "1:85546",
+        "1:85547"
+      ],
+      "classification": "source-palette-preserved",
+      "sourcePaletteCount": 3,
+      "policy": "Keep original value; palette match alone is not proof of semantic role. No mass recoloring or component replacement."
+    },
+    {
+      "root": "1:70749",
+      "color": "#A0A0A0",
+      "property": "strokes",
+      "nodeType": "RECTANGLE",
+      "nodeIds": [
+        "1:85611",
+        "1:85636",
+        "1:85659",
+        "1:85682"
+      ],
+      "classification": "source-palette-preserved",
+      "sourcePaletteCount": 322,
+      "policy": "Keep original value; palette match alone is not proof of semantic role. No mass recoloring or component replacement."
+    }
+  ],
+  "limitations": [
+    "Classification is a preservation decision, not full semantic token migration.",
+    "Source palette presence does not prove node-level correspondence.",
+    "34 S-Core Dream logo nodes retained because font is unavailable.",
+    "Six Poppins nodes were annotation text, not brand assets; now Noto Sans KR Bold."
+  ]
+}
