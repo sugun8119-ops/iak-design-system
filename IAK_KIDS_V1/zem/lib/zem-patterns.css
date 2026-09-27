@@ -1,6 +1,13 @@
+:root {
+/* Exact composition spacing shared with the Figma pattern library. */
+--iak-kids-space-0:0px;--iak-kids-space-half:2px;--iak-kids-space-1-5:6px;--iak-kids-space-2-5:10px;--iak-kids-space-3-5:14px;
+--iak-kids-radius-checkbox:6px;
+}
 /* IAK KIDS_V1 · Little Everyday v2.3 — composition patterns (ChildSwitcher · DailyTimeline · FocusSession · GoalComposer · MissionFeedback).
    Colours ONLY via existing --iak-kids-* roles. No new colour tokens. Status = colour + text, never colour alone. */
 .zp-sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap;margin:-1px;padding:0;border:0}
+/* Match the 48px Figma action target, including compact feedback/retry buttons. */
+.zp-mf .zem-button,.zp-empty .zem-button,.zp-alert .zem-button{min-height:48px}
 .zp-stack{display:flex;flex-direction:column;gap:12px;min-width:0}
 .zp-h{font:var(--zem-text-title);color:var(--iak-kids-text-primary);margin:0;overflow-wrap:anywhere}
 .zp-cap{font:var(--zem-text-caption);font-size:14px;color:var(--iak-kids-text-secondary);overflow-wrap:anywhere}

@@ -1,0 +1,62 @@
+[
+  {
+    "fg": "primary-on",
+    "bg": "primary-default",
+    "ratio": 5.42,
+    "passAA": true
+  },
+  {
+    "fg": "secondary-on",
+    "bg": "secondary-default",
+    "ratio": 6.52,
+    "passAA": true
+  },
+  {
+    "fg": "accent-on",
+    "bg": "accent-default",
+    "ratio": 5.7,
+    "passAA": true
+  },
+  {
+    "fg": "text-primary",
+    "bg": "background-canvas",
+    "ratio": 10.83,
+    "passAA": true
+  },
+  {
+    "fg": "text-secondary",
+    "bg": "surface-default",
+    "ratio": 6.5,
+    "passAA": true
+  },
+  {
+    "fg": "text-muted",
+    "bg": "surface-subtle",
+    "ratio": 4.89,
+    "passAA": true
+  },
+  {
+    "fg": "status-success-foreground",
+    "bg": "status-success-background",
+    "ratio": 5.57,
+    "passAA": true
+  },
+  {
+    "fg": "status-warning-foreground",
+    "bg": "status-warning-background",
+    "ratio": 5.5,
+    "passAA": true
+  },
+  {
+    "fg": "status-error-foreground",
+    "bg": "status-error-background",
+    "ratio": 4.6,
+    "passAA": true
+  },
+  {
+    "fg": "status-info-foreground",
+    "bg": "status-info-background",
+    "ratio": 6.09,
+    "passAA": true
+  }
+]

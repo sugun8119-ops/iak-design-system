@@ -1,3 +1,13 @@
+# 2026-09-27 v2.3.2 — current status
+
+Figma now includes five composition families and 26 state variants, plus a private multiline field. All five pages passed real-editor visual review and final width/binding audits. Targeted keyboard QA found and fixed lost focus after completing the current activity. Compact pattern buttons now have a 48px minimum height. Ten normal-text contrast pairs pass >=4.5:1. Full evidence and limits: FIGMA-PATTERNS-QA.md.
+
+The v2.3.1 source cleanup and actual regenerated bundle were downloaded and verified in the previous step: SHA-256 55ed8ad1ec8cce75c783aa41cba40a5888106aae122cbd3833d00d781dc10929. It contains no legacy loader self-injection. Timeline badge screenshots and 45 fresh generated-bundle cases passed then. The v2.3.2 changes do not modify component JavaScript or that bundle.
+
+Claude Design synchronization of the v2.3.2 CSS and template changes is pending verification. Historical entries below describe earlier checkpoints and do not override this current status.
+
+---
+
 # 2026-09-27 runtime recovery and browser QA
 
 The exported bundle contained three legacy `iak-kids-v2.2-templates/templates/*/ds-base.js` entrypoints. Each injected `_ds_bundle.js` again, causing recursive loading and unresponsive tabs. Removed those entrypoints from the local handoff. Also made explicit `?state=` overrides win over template default props; the QA harness now checks the actual rendered state and waits for the font styles.
