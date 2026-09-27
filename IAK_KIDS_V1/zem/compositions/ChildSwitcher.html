@@ -1,0 +1,12 @@
+<!-- @dsCard group="IAK KIDS · Patterns v2.3" viewport="1200x760" name="ChildSwitcher" subtitle="자녀 선택 · 자녀 없음 · loading · error · 긴 이름" -->
+<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>IAK KIDS_V1 · ChildSwitcher</title>
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script><script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script><script src="../lib/icons.js"></script><script src="../lib/zem-ui.js"></script><script src="../lib/card.js"></script><script src="../../_ds_bundle.js"></script><script src="../lib/zem-patterns.js"></script></head><body><div id="root"></div><script>
+const h=React.createElement,NS=window.RAISDesignSystem_019e07;const W=(el,w)=>h('div',{style:{width:w||'100%',maxWidth:'100%'}},el);
+const {ChildSwitcher}=NS;const K=[{id:'a',name:'민서',meta:'초등 3학년'},{id:'b',name:'도윤',meta:'7세'},{id:'c',name:'하윤',meta:'중학교 1학년'}];
+function Live(){const [v,setV]=React.useState('a');return h('div',{className:'zp-stack'},h(ChildSwitcher,{kids:K,value:v,onChange:setV}),h('span',{className:'zp-cap'},'선택: '+K.find(k=>k.id===v).name+' — ←/→ 키로 이동하면 바로 선택'))}
+ZEMCard.mount({name:'ChildSwitcher',group:'IAK KIDS · Pattern v2.3',description:'부모 화면 상단의 자녀 전환. role=radiogroup, 로빙 tabindex, ←/→/↑/↓/Home/End. 선택 = selected 배경 + primary 표시선 + "보는 중" 텍스트(색만으로 구분하지 않음). 기본 Button/Icon/Skeleton 조합.',meta:['kids: {id,name,initial?,meta?}[]','value / defaultValue / onChange(id)','state: ready|loading|error · onRetry','onAdd → 자녀 없음 CTA'],
+sections:[{title:'State',cases:[{id:'live',label:'interactive · 3명',w2:true,col:true,el:h(Live)},{id:'two',label:'2명 · 두 번째 선택',w2:true,el:h(ChildSwitcher,{kids:K.slice(0,2),defaultValue:'b'})},
+{id:'empty',label:'자녀 없음 + onAdd',w2:true,col:true,el:h(ChildSwitcher,{kids:[],onAdd:()=>{}})},{id:'loading',label:'loading',w2:true,el:h(ChildSwitcher,{kids:[],state:'loading'})},
+{id:'error',label:'error + 다시 시도',w2:true,col:true,el:h(ChildSwitcher,{kids:[],state:'error',onRetry:()=>{}})},{id:'long',label:'긴 한글 이름 · 말줄임 + title, 좁은 폭 가로 스크롤',w2:true,col:true,el:W(h(ChildSwitcher,{kids:[{id:1,name:'김민서아름다운별',meta:'초등학교 3학년 2반 방과후'},{id:2,name:'이도윤',meta:'유치원 햇살반'}]}),320)}]}]});
+</script></body></html>

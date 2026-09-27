@@ -1,0 +1,45 @@
+{
+  "version": "2.3.1",
+  "source": "Claude Design handoff",
+  "counts": {
+    "cards": 69,
+    "components": 22,
+    "templates": 3,
+    "startingPoints": 0
+  },
+  "zipIntegrity": true,
+  "paletteUnchanged": true,
+  "registeredFilesPresent": true,
+  "httpStatus": 200,
+  "visualVerification": "Chrome: initial 63 state/viewport cases passed horizontal overflow and 36px-height checks at 375/834/1440. Post-fix 12 timeline cases (activity/schedule × default/long-text × 3 widths) passed. At 375px all four activity status badges are nowrap and 26px tall; screenshot reviewed. This is not full accessibility certification.",
+  "interactionVerification": "Chrome: child switch click and arrow key, parent request approval, required goal form validation and save, empty schedule validation and save, focus start/pause/resume/complete, mission undo/recomplete passed.",
+  "figmaSynced": false,
+  "githubSynced": false,
+  "githubReviewCandidate": true,
+  "knownPriorIssue": "Safari Select long-option width warning remains unverified; earlier flex fix did not prove resolution",
+  "independentSourceChecks": {
+    "command": "node IAK_KIDS_V1/tests/v23-source-checks.cjs",
+    "passed": true,
+    "states": 21,
+    "browserValidated": false,
+    "scenarios": [
+      "child switch",
+      "request approval",
+      "goal assigned only to selected child",
+      "empty and long schedule validation",
+      "schedule creation and day selection",
+      "duplicate completion",
+      "undo and recompletion"
+    ]
+  },
+  "githubStatus": "draft PR #1; not merged",
+  "fontLicense": "Preserved previously verified official NAVER notice from repository",
+  "runtimeFix": "Claude source archived legacy v2.2 templates outside JS scan as ZIP. Current regenerated bundle contains no ds-base.js, iak-kids-v2.2 or recursive bundle reference. URL state precedence and badge nowrap fixed.",
+  "claudeSourcePatched": true,
+  "browserCases": 63,
+  "postFixBrowserCases": 12,
+  "claudeSourceStatus": "Original source fixed. Downloaded v2.3.1 source handoff and separate current generated bundle/manifest/OFL; independently verified no legacy loader references and exact official OFL bytes. Claude also confirmed final QA-only error-readiness correction.",
+  "generatedBundleSha256": "55ed8ad1ec8cce75c783aa41cba40a5888106aae122cbd3833d00d781dc10929",
+  "generatedBundleBrowserCases": 45,
+  "generatedBundleVerification": "3 templates × default/empty/loading/error/long-text × 375/834/1440: 45 cases, state match, no horizontal overflow, no targets below harness 36px height threshold."
+}

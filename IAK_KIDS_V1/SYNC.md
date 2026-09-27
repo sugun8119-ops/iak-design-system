@@ -1,3 +1,40 @@
+# 2026-09-27 v2.3.2 — current status
+
+Figma now includes five composition families and 26 state variants, plus a private multiline field. All five pages passed real-editor visual review and final width/binding audits. Targeted keyboard QA found and fixed lost focus after completing the current activity. Compact pattern buttons now have a 48px minimum height. Ten normal-text contrast pairs pass >=4.5:1. Full evidence and limits: FIGMA-PATTERNS-QA.md.
+
+The v2.3.1 source cleanup and actual regenerated bundle were downloaded and verified in the previous step: SHA-256 55ed8ad1ec8cce75c783aa41cba40a5888106aae122cbd3833d00d781dc10929. It contains no legacy loader self-injection. Timeline badge screenshots and 45 fresh generated-bundle cases passed then. The v2.3.2 changes do not modify component JavaScript or that bundle.
+
+Claude Design v2.3.2 synchronization is verified from the newly downloaded v2.3.2-sync-proof.zip: all six runtime files are byte-identical to commit 1f5708d. The QA document differs only in its final newline from that commit; the existing Claude QA harness uses equivalent readiness checks (state, loaded Nanum font, no placeholder) and was left untouched. See tests/browser-2026-09-27/v232-claude-source-verification.json. Historical entries below describe earlier checkpoints and do not override this current status.
+
+---
+
+# 2026-09-27 runtime recovery and browser QA
+
+The exported bundle contained three legacy `iak-kids-v2.2-templates/templates/*/ds-base.js` entrypoints. Each injected `_ds_bundle.js` again, causing recursive loading and unresponsive tabs. Removed those entrypoints from the local handoff. Also made explicit `?state=` overrides win over template default props; the QA harness now checks the actual rendered state and waits for the font styles.
+
+Chrome browser verification: 63 template state/viewport cases (375, 834, 1440) without horizontal overflow or targets below the harness's 36px height threshold. This is not a 44px target audit. Real click checks passed child switching (including arrow keys), request approval, goal validation/save, schedule validation/save, timer start/pause/resume/completion and mission undo/recompletion.
+
+Visual review found a wrapping status badge at 375px. Added `flex-shrink:0;white-space:nowrap` to timeline badges. Post-fix screenshot confirmation remains pending because browser control detached. Figma is still the previous native library. Claude project sources must exclude the legacy entrypoint copies on regeneration; this local bundle patch alone does not change Claude's generator inputs.
+
+Earlier blocked status below is historical and superseded by the checks above. Screen-reader, real-device, Safari and complete keyboard-flow testing remain unperformed.
+
+---
+
+# IAK KIDS_V1 · v2.3 review handoff
+
+Downloaded from the existing Claude Design project on 2026-09-26. This is a review candidate, not a visually verified release.
+
+- Added ChildSwitcher, DailyTimeline, FocusSession, GoalComposer and MissionFeedback.
+- Updated parent dashboard, weekly schedule and child activity templates.
+- Manifest: 69 cards, 22 exported components, 3 templates; startingPoints remains empty.
+- Palette is byte-identical to v2.2; existing fonts and compatibility namespaces are retained.
+- Browser visual and interaction verification is blocked by repeated browser-control timeouts, including a single template. The cause is undetermined; this does not establish a source-code defect.
+- Figma remains at its previous native library version. No v2.3 patterns were written to Figma.
+- Safari long-option Select warning remains unresolved by evidence. Do not interpret the prior flex change as a verified fix.
+- See `IAK-KIDS-v2.3-verification.json` and `zem/docs/qa-v2.3.md` for the verification boundary. Earlier results below apply to v2.2 only.
+
+---
+
 # IAK KIDS_V1 · v2.2 synchronization
 
 Synced on 2026-09-26 from the latest Claude Design handoff.
