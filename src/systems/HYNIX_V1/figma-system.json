@@ -1,7 +1,7 @@
 {
   "id": "HYNIX_V1",
   "name": "Relay Control",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "category": "Industrial / Device Control / Monitoring",
   "provenance": {
     "referenceUrl": "https://www.behance.net/gallery/107517297/SK-hynix-system-ic-Device-Control-GUI-Design",
@@ -834,5 +834,18 @@
       "Detail": "53:454"
     },
     "legacyTemplates": "Page 20 retained as earlier revision; page 24 is current."
+  },
+  "eventReviewExtension": {
+    "entry": "preview/detail.html?device=05",
+    "tab": "Events",
+    "figma": "https://www.figma.com/design/Nh9NILHBye8VS0jGtph3UB?node-id=60-441",
+    "behavior": [
+      "Device and workspace event scopes",
+      "Explicit empty state",
+      "Local note validation, review and reset",
+      "Editing invalidates prior review"
+    ],
+    "persistence": "Current document only; no requests or storage",
+    "coverage": "Original extension; existing 30 cases unchanged"
   }
 }

@@ -1,4 +1,4 @@
-# HYNIX_V1 · Relay Control 1.5
+# HYNIX_V1 · Relay Control 1.6
 
 ## STYLE DNA
 Industrial / Device Control / Monitoring. IAK shares its 30 case categories only; visual identity remains specific to this project. Pale cool-gray canvas #E9EDF3, raised equipment tiles, flat analytical panels. Orange #A94408 means action; blue #235DD2 means selection/focus. Navy #162337 is for charts and device viewports. Never copy customer branding, photos, icons, copy or operational data.
@@ -33,3 +33,9 @@ Current browser implementation: industrial.css + industrial.js. Legacy styles.cs
 
 ## Reference normalization
 Siemens iX Badge, Tabs, Card and KPI informed status semantics and component organization; Grafana examples informed time-series and state-history structure. Their branded palette, icons, layouts and data are not bundled. These are newly authored interpretations, not extracted source tokens.
+
+## 1.6 · 장비 이벤트와 조치 검토
+
+상세 Events 탭은 선택 장비 기록을 기본으로 표시한다. All equipment로 전체 고정 시점 이벤트를 확인할 수 있다. 기록 없음은 정상 보증이 아니다. 검토 메모는 500자 이내이며 빈 값이면 입력으로 초점을 이동한다. 메모 수정은 이전 검토 표시를 무효화한다. 검토 표시는 실제 경보 해제나 장비 복구가 아니다. 메모는 현재 페이지 안에서만 유지되며 저장·서버 전송하지 않는다.
+
+기존 30개 사례, 색상·폰트·토큰·17개 기본 컴포넌트는 유지한다. Figma의 Event review / 1.6은 기존 24 Monitoring Templates 1.5 페이지에 추가한 정적 구성 참고다. https://www.figma.com/design/Nh9NILHBye8VS0jGtph3UB?node-id=60-441

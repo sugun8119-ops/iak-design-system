@@ -14,7 +14,9 @@
       "claudeDesignStatus": "published",
       "caseLibrary": "HYNIX_V1/preview/cases.html",
       "caseCoverage": "HYNIX_V1/case-coverage.json",
-      "caseCount": 30
+      "caseCount": 30,
+      "version": "1.6.0",
+      "eventReview": "HYNIX_V1/preview/detail.html?device=05"
     },
     {
       "id": "KPOP_V1",
