@@ -4,7 +4,7 @@ Figma now includes five composition families and 26 state variants, plus a priva
 
 The v2.3.1 source cleanup and actual regenerated bundle were downloaded and verified in the previous step: SHA-256 55ed8ad1ec8cce75c783aa41cba40a5888106aae122cbd3833d00d781dc10929. It contains no legacy loader self-injection. Timeline badge screenshots and 45 fresh generated-bundle cases passed then. The v2.3.2 changes do not modify component JavaScript or that bundle.
 
-Claude Design synchronization of the v2.3.2 CSS and template changes is pending verification. Historical entries below describe earlier checkpoints and do not override this current status.
+Claude Design v2.3.2 synchronization is verified from the newly downloaded v2.3.2-sync-proof.zip: all six runtime files are byte-identical to commit 1f5708d. The QA document differs only in its final newline from that commit; the existing Claude QA harness uses equivalent readiness checks (state, loaded Nanum font, no placeholder) and was left untouched. See tests/browser-2026-09-27/v232-claude-source-verification.json. Historical entries below describe earlier checkpoints and do not override this current status.
 
 ---
 

@@ -34,7 +34,8 @@ Chrome on macOS, actual local templates and existing generated bundle, fresh ori
 - Found and fixed a template integration defect: completing the current mission replaced the focused control and left focus on BODY. The template now waits for the new idle session and focuses Start, or focuses the final completion heading after all missions are done. Pending retries are cancelled on unmount and bounded to 10.
 - Three consecutive timer completions verified progression to each next Start and final completion heading. Points reached 200P.
 - Mission Space-key undo/recomplete preserved focus and changed 200P -> 100P -> 200P. The repeat-completion message explicitly says points count once.
-- Compact pattern buttons increased from 36px to minimum 48px, matching Figma. Final main-content button measurement found zero targets below 48px.
+- Compact pattern buttons increased from 36px to minimum 48px, matching Figma. Final KidActivity main-content button measurement found zero targets below 48px.
+- Four embedded 375px mobile cases (all three default templates plus long-text activity) passed without document overflow or pattern buttons below 48px. Scrollbar gutters reduce content width to 360px in two frames. See v232-mobile-regression.json.
 - Ten primary text/background pairs pass normal-text contrast >=4.5:1 (minimum 4.60:1). See v232-contrast.json.
 - Existing source regression checks pass 21 states, assignment, validation, duplicate completion, undo/recompletion, and unchanged palette hash.
 

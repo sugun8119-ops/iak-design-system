@@ -1,6 +1,6 @@
 {
   "runId": "iak-v231-patterns",
-  "phase": "phase4",
+  "phase": "complete",
   "entities": {
     "pages": {
       "00 Cover": "0:1",
@@ -85,7 +85,8 @@
     "phase0",
     "phase1",
     "phase2",
-    "phase3"
+    "phase3",
+    "phase4"
   ],
   "scope": {
     "ChildSwitcher": [
@@ -266,7 +267,7 @@
       "content": [
         {
           "type": "text",
-          "text": "{\"name\":\"ChildSwitcher\",\"mutatedNodeIds\":[\"47:8\"],\"variantCount\":6,\"properties\":[\"Child 1#47:0\",\"Child 2#47:7\",\"Long child 1#49:0\",\"Long child 2#49:7\",\"State\"],\"hardcodedPaints\":[],\"zeroText\":[],\"overflow\":[{\"id\":\"I47:38;4:6\",\"name\":\"시작하기\",\"parent\":\"Action / 자녀 추가\",\"right\":178,\"parentWidth\":150},{\"id\":\"I47:46;4:16\",\"name\":\"시작하기\",\"parent\":\"Action / 다시 시도\",\"right\":178,\"parentWidth\":150}],\"actionTargets\":[{\"id\":\"47:38\",\"width\":150,\"height\":48},{\"id\":\"47:46\",\"width\":150,\"height\":48}]}"
+          "text": "{\"name\":\"ChildSwitcher\",\"mutatedNodeIds\":[\"47:8\"],\"variantCount\":6,\"properties\":[\"Child 1#47:0\",\"Child 2#47:7\",\"Long child 1#49:0\",\"Long child 2#49:7\",\"State\"],\"hardcodedPaints\":[],\"zeroText\":[],\"overflow\":[{\"id\":\"I47:38;4:6\",\"name\":\"\uc2dc\uc791\ud558\uae30\",\"parent\":\"Action / \uc790\ub140 \ucd94\uac00\",\"right\":178,\"parentWidth\":150},{\"id\":\"I47:46;4:16\",\"name\":\"\uc2dc\uc791\ud558\uae30\",\"parent\":\"Action / \ub2e4\uc2dc \uc2dc\ub3c4\",\"right\":178,\"parentWidth\":150}],\"actionTargets\":[{\"id\":\"47:38\",\"width\":150,\"height\":48},{\"id\":\"47:46\",\"width\":150,\"height\":48}]}"
         }
       ],
       "isError": false
@@ -275,7 +276,7 @@
       "content": [
         {
           "type": "text",
-          "text": "{\"name\":\"DailyTimeline\",\"mutatedNodeIds\":[\"49:115\"],\"variantCount\":5,\"properties\":[\"Time 1#49:14\",\"Activity 1#49:20\",\"Time 2#49:26\",\"Activity 2#49:32\",\"Time 3#49:38\",\"Activity 3#49:44\",\"Show Steps#49:50\",\"Long Activity 1#49:56\",\"Long Activity 2#49:62\",\"Long Activity 3#49:68\",\"State\"],\"hardcodedPaints\":[],\"zeroText\":[],\"overflow\":[{\"id\":\"I49:158;4:16\",\"name\":\"시작하기\",\"parent\":\"Action / 다시 시도\",\"right\":178,\"parentWidth\":150}],\"actionTargets\":[{\"id\":\"49:158\",\"width\":150,\"height\":48}]}"
+          "text": "{\"name\":\"DailyTimeline\",\"mutatedNodeIds\":[\"49:115\"],\"variantCount\":5,\"properties\":[\"Time 1#49:14\",\"Activity 1#49:20\",\"Time 2#49:26\",\"Activity 2#49:32\",\"Time 3#49:38\",\"Activity 3#49:44\",\"Show Steps#49:50\",\"Long Activity 1#49:56\",\"Long Activity 2#49:62\",\"Long Activity 3#49:68\",\"State\"],\"hardcodedPaints\":[],\"zeroText\":[],\"overflow\":[{\"id\":\"I49:158;4:16\",\"name\":\"\uc2dc\uc791\ud558\uae30\",\"parent\":\"Action / \ub2e4\uc2dc \uc2dc\ub3c4\",\"right\":178,\"parentWidth\":150}],\"actionTargets\":[{\"id\":\"49:158\",\"width\":150,\"height\":48}]}"
         }
       ],
       "isError": false
@@ -284,7 +285,7 @@
       "content": [
         {
           "type": "text",
-          "text": "{\"name\":\"FocusSession\",\"mutatedNodeIds\":[\"49:205\"],\"variantCount\":5,\"properties\":[\"Task title#49:74\",\"Show Steps#49:80\",\"State\"],\"hardcodedPaints\":[],\"zeroText\":[],\"overflow\":[{\"id\":\"49:210\",\"name\":\"Editable/Task title\",\"parent\":\"Session title\",\"right\":344,\"parentWidth\":240},{\"id\":\"49:224\",\"name\":\"Editable/Task title\",\"parent\":\"Session title\",\"right\":344,\"parentWidth\":240},{\"id\":\"I49:233;4:16\",\"name\":\"시작하기\",\"parent\":\"Action / 일시정지\",\"right\":178,\"parentWidth\":168},{\"id\":\"I49:235;4:6\",\"name\":\"시작하기\",\"parent\":\"Action / 완료\",\"right\":178,\"parentWidth\":168},{\"id\":\"49:243\",\"name\":\"Editable/Task title\",\"parent\":\"Session title\",\"right\":344,\"parentWidth\":240},{\"id\":\"I49:252;4:6\",\"name\":\"시작하기\",\"parent\":\"Action / 재개\",\"right\":178,\"parentWidth\":168},{\"id\":\"I49:254;4:16\",\"name\":\"시작하기\",\"parent\":\"Action / 완료\",\"right\":178,\"parentWidth\":168},{\"id\":\"49:262\",\"name\":\"Editable/Task title\",\"parent\":\"Session title\",\"right\":344,\"parentWidth\":240},{\"id\":\"I49:271;4:6\",\"name\":\"시작하기\",\"parent\":\"Action / 완료\",\"right\":178,\"parentWidth\":168},{\"id\":\"I49:273;4:16\",\"name\":\"시작하기\",\"parent\":\"Action / 초기화\",\"right\":178,\"parentWidth\":168},{\"id\":\"49:279\",\"name\":\"Editable/Task title\",\"parent\":\"Session title\",\"right\":344,\"parentWidth\":240}],\"actionTargets\":[{\"id\":\"49:218\",\"width\":344,\"height\":48},{\"id\":\"49:233\",\"width\":168,\"height\":48},{\"id\":\"49:235\",\"width\":168,\"height\":48},{\"id\":\"49:237\",\"width\":344,\"height\":48},{\"id\":\"49:252\",\"width\":168,\"height\":48},{\"id\":\"49:254\",\"width\":168,\"height\":48},{\"id\":\"49:256\",\"width\":344,\"height\":48},{\"id\":\"49:271\",\"width\":168,\"height\":48},{\"id\":\"49:273\",\"width\":168,\"height\":48},{\"id\":\"49:288\",\"width\":344,\"height\":48}]}"
+          "text": "{\"name\":\"FocusSession\",\"mutatedNodeIds\":[\"49:205\"],\"variantCount\":5,\"properties\":[\"Task title#49:74\",\"Show Steps#49:80\",\"State\"],\"hardcodedPaints\":[],\"zeroText\":[],\"overflow\":[{\"id\":\"49:210\",\"name\":\"Editable/Task title\",\"parent\":\"Session title\",\"right\":344,\"parentWidth\":240},{\"id\":\"49:224\",\"name\":\"Editable/Task title\",\"parent\":\"Session title\",\"right\":344,\"parentWidth\":240},{\"id\":\"I49:233;4:16\",\"name\":\"\uc2dc\uc791\ud558\uae30\",\"parent\":\"Action / \uc77c\uc2dc\uc815\uc9c0\",\"right\":178,\"parentWidth\":168},{\"id\":\"I49:235;4:6\",\"name\":\"\uc2dc\uc791\ud558\uae30\",\"parent\":\"Action / \uc644\ub8cc\",\"right\":178,\"parentWidth\":168},{\"id\":\"49:243\",\"name\":\"Editable/Task title\",\"parent\":\"Session title\",\"right\":344,\"parentWidth\":240},{\"id\":\"I49:252;4:6\",\"name\":\"\uc2dc\uc791\ud558\uae30\",\"parent\":\"Action / \uc7ac\uac1c\",\"right\":178,\"parentWidth\":168},{\"id\":\"I49:254;4:16\",\"name\":\"\uc2dc\uc791\ud558\uae30\",\"parent\":\"Action / \uc644\ub8cc\",\"right\":178,\"parentWidth\":168},{\"id\":\"49:262\",\"name\":\"Editable/Task title\",\"parent\":\"Session title\",\"right\":344,\"parentWidth\":240},{\"id\":\"I49:271;4:6\",\"name\":\"\uc2dc\uc791\ud558\uae30\",\"parent\":\"Action / \uc644\ub8cc\",\"right\":178,\"parentWidth\":168},{\"id\":\"I49:273;4:16\",\"name\":\"\uc2dc\uc791\ud558\uae30\",\"parent\":\"Action / \ucd08\uae30\ud654\",\"right\":178,\"parentWidth\":168},{\"id\":\"49:279\",\"name\":\"Editable/Task title\",\"parent\":\"Session title\",\"right\":344,\"parentWidth\":240}],\"actionTargets\":[{\"id\":\"49:218\",\"width\":344,\"height\":48},{\"id\":\"49:233\",\"width\":168,\"height\":48},{\"id\":\"49:235\",\"width\":168,\"height\":48},{\"id\":\"49:237\",\"width\":344,\"height\":48},{\"id\":\"49:252\",\"width\":168,\"height\":48},{\"id\":\"49:254\",\"width\":168,\"height\":48},{\"id\":\"49:256\",\"width\":344,\"height\":48},{\"id\":\"49:271\",\"width\":168,\"height\":48},{\"id\":\"49:273\",\"width\":168,\"height\":48},{\"id\":\"49:288\",\"width\":344,\"height\":48}]}"
         }
       ],
       "isError": false
@@ -293,7 +294,7 @@
       "content": [
         {
           "type": "text",
-          "text": "{\"name\":\"GoalComposer\",\"mutatedNodeIds\":[\"50:6\"],\"variantCount\":3,\"properties\":[\"Show Details#50:0\",\"State\"],\"hardcodedPaints\":[],\"zeroText\":[],\"overflow\":[{\"id\":\"I50:26;4:16\",\"name\":\"시작하기\",\"parent\":\"Action / 취소\",\"right\":178,\"parentWidth\":120},{\"id\":\"I50:66;4:16\",\"name\":\"시작하기\",\"parent\":\"Action / 취소\",\"right\":178,\"parentWidth\":120},{\"id\":\"I50:91;4:16\",\"name\":\"시작하기\",\"parent\":\"Action / 취소\",\"right\":178,\"parentWidth\":120}],\"actionTargets\":[{\"id\":\"50:26\",\"width\":120,\"height\":48},{\"id\":\"50:28\",\"width\":216,\"height\":48},{\"id\":\"50:66\",\"width\":120,\"height\":48},{\"id\":\"50:68\",\"width\":216,\"height\":48},{\"id\":\"50:91\",\"width\":120,\"height\":48},{\"id\":\"50:93\",\"width\":216,\"height\":48}]}"
+          "text": "{\"name\":\"GoalComposer\",\"mutatedNodeIds\":[\"50:6\"],\"variantCount\":3,\"properties\":[\"Show Details#50:0\",\"State\"],\"hardcodedPaints\":[],\"zeroText\":[],\"overflow\":[{\"id\":\"I50:26;4:16\",\"name\":\"\uc2dc\uc791\ud558\uae30\",\"parent\":\"Action / \ucde8\uc18c\",\"right\":178,\"parentWidth\":120},{\"id\":\"I50:66;4:16\",\"name\":\"\uc2dc\uc791\ud558\uae30\",\"parent\":\"Action / \ucde8\uc18c\",\"right\":178,\"parentWidth\":120},{\"id\":\"I50:91;4:16\",\"name\":\"\uc2dc\uc791\ud558\uae30\",\"parent\":\"Action / \ucde8\uc18c\",\"right\":178,\"parentWidth\":120}],\"actionTargets\":[{\"id\":\"50:26\",\"width\":120,\"height\":48},{\"id\":\"50:28\",\"width\":216,\"height\":48},{\"id\":\"50:66\",\"width\":120,\"height\":48},{\"id\":\"50:68\",\"width\":216,\"height\":48},{\"id\":\"50:91\",\"width\":120,\"height\":48},{\"id\":\"50:93\",\"width\":216,\"height\":48}]}"
         }
       ],
       "isError": false
@@ -302,7 +303,7 @@
       "content": [
         {
           "type": "text",
-          "text": "{\"name\":\"MissionFeedback\",\"mutatedNodeIds\":[\"50:105\"],\"variantCount\":7,\"properties\":[\"Title#50:4\",\"Mission 1#50:12\",\"Mission 2#50:20\",\"Long mission 1#50:28\",\"Long mission 2#50:36\",\"Show Feedback#50:44\",\"State\"],\"hardcodedPaints\":[],\"zeroText\":[],\"overflow\":[{\"id\":\"I50:119;4:16\",\"name\":\"시작하기\",\"parent\":\"Action / 완료 취소\",\"right\":178,\"parentWidth\":132},{\"id\":\"I50:126;4:6\",\"name\":\"시작하기\",\"parent\":\"Action / 완료하기\",\"right\":178,\"parentWidth\":132},{\"id\":\"I50:137;4:16\",\"name\":\"시작하기\",\"parent\":\"Action / 되돌리기\",\"right\":178,\"parentWidth\":140},{\"id\":\"I50:145;4:16\",\"name\":\"시작하기\",\"parent\":\"Action / 완료 취소\",\"right\":178,\"parentWidth\":132},{\"id\":\"I50:153;4:16\",\"name\":\"시작하기\",\"parent\":\"Action / 완료 취소\",\"right\":178,\"parentWidth\":132},{\"id\":\"I50:168;4:6\",\"name\":\"시작하기\",\"parent\":\"Action / 완료하기\",\"right\":178,\"parentWidth\":132},{\"id\":\"I50:175;4:6\",\"name\":\"시작하기\",\"parent\":\"Action / 완료하기\",\"right\":178,\"parentWidth\":132},{\"id\":\"I50:186;4:16\",\"name\":\"시작하기\",\"parent\":\"Action / 다시 시도\",\"right\":178,\"parentWidth\":150},{\"id\":\"I50:201;4:16\",\"name\":\"시작하기\",\"parent\":\"Action / 완료 취소\",\"right\":178,\"parentWidth\":132},{\"id\":\"I50:208;4:6\",\"name\":\"시작하기\",\"parent\":\"Action / 완료하기\",\"right\":178,\"parentWidth\":132}],\"actionTargets\":[{\"id\":\"50:119\",\"width\":132,\"height\":48},{\"id\":\"50:126\",\"width\":132,\"height\":48},{\"id\":\"50:137\",\"width\":140,\"height\":48},{\"id\":\"50:145\",\"width\":132,\"height\":48},{\"id\":\"50:153\",\"width\":132,\"height\":48},{\"id\":\"50:168\",\"width\":132,\"height\":48},{\"id\":\"50:175\",\"width\":132,\"height\":48},{\"id\":\"50:186\",\"width\":150,\"height\":48},{\"id\":\"50:201\",\"width\":132,\"height\":48},{\"id\":\"50:208\",\"width\":132,\"height\":48}]}"
+          "text": "{\"name\":\"MissionFeedback\",\"mutatedNodeIds\":[\"50:105\"],\"variantCount\":7,\"properties\":[\"Title#50:4\",\"Mission 1#50:12\",\"Mission 2#50:20\",\"Long mission 1#50:28\",\"Long mission 2#50:36\",\"Show Feedback#50:44\",\"State\"],\"hardcodedPaints\":[],\"zeroText\":[],\"overflow\":[{\"id\":\"I50:119;4:16\",\"name\":\"\uc2dc\uc791\ud558\uae30\",\"parent\":\"Action / \uc644\ub8cc \ucde8\uc18c\",\"right\":178,\"parentWidth\":132},{\"id\":\"I50:126;4:6\",\"name\":\"\uc2dc\uc791\ud558\uae30\",\"parent\":\"Action / \uc644\ub8cc\ud558\uae30\",\"right\":178,\"parentWidth\":132},{\"id\":\"I50:137;4:16\",\"name\":\"\uc2dc\uc791\ud558\uae30\",\"parent\":\"Action / \ub418\ub3cc\ub9ac\uae30\",\"right\":178,\"parentWidth\":140},{\"id\":\"I50:145;4:16\",\"name\":\"\uc2dc\uc791\ud558\uae30\",\"parent\":\"Action / \uc644\ub8cc \ucde8\uc18c\",\"right\":178,\"parentWidth\":132},{\"id\":\"I50:153;4:16\",\"name\":\"\uc2dc\uc791\ud558\uae30\",\"parent\":\"Action / \uc644\ub8cc \ucde8\uc18c\",\"right\":178,\"parentWidth\":132},{\"id\":\"I50:168;4:6\",\"name\":\"\uc2dc\uc791\ud558\uae30\",\"parent\":\"Action / \uc644\ub8cc\ud558\uae30\",\"right\":178,\"parentWidth\":132},{\"id\":\"I50:175;4:6\",\"name\":\"\uc2dc\uc791\ud558\uae30\",\"parent\":\"Action / \uc644\ub8cc\ud558\uae30\",\"right\":178,\"parentWidth\":132},{\"id\":\"I50:186;4:16\",\"name\":\"\uc2dc\uc791\ud558\uae30\",\"parent\":\"Action / \ub2e4\uc2dc \uc2dc\ub3c4\",\"right\":178,\"parentWidth\":150},{\"id\":\"I50:201;4:16\",\"name\":\"\uc2dc\uc791\ud558\uae30\",\"parent\":\"Action / \uc644\ub8cc \ucde8\uc18c\",\"right\":178,\"parentWidth\":132},{\"id\":\"I50:208;4:6\",\"name\":\"\uc2dc\uc791\ud558\uae30\",\"parent\":\"Action / \uc644\ub8cc\ud558\uae30\",\"right\":178,\"parentWidth\":132}],\"actionTargets\":[{\"id\":\"50:119\",\"width\":132,\"height\":48},{\"id\":\"50:126\",\"width\":132,\"height\":48},{\"id\":\"50:137\",\"width\":140,\"height\":48},{\"id\":\"50:145\",\"width\":132,\"height\":48},{\"id\":\"50:153\",\"width\":132,\"height\":48},{\"id\":\"50:168\",\"width\":132,\"height\":48},{\"id\":\"50:175\",\"width\":132,\"height\":48},{\"id\":\"50:186\",\"width\":150,\"height\":48},{\"id\":\"50:201\",\"width\":132,\"height\":48},{\"id\":\"50:208\",\"width\":132,\"height\":48}]}"
         }
       ],
       "isError": false
@@ -354,5 +355,14 @@
       ],
       "isError": false
     }
-  ]
+  ],
+  "finalStatus": {
+    "publicFamilies": 5,
+    "publicVariants": 26,
+    "privateComponents": 1,
+    "unboundSolidPaints": 0,
+    "horizontalChildOverflow": 0,
+    "screenshotsReviewed": 5,
+    "sourceSync": "six runtime files byte-identical to downloaded Claude original"
+  }
 }

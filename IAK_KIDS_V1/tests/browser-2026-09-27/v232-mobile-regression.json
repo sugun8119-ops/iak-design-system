@@ -1,0 +1,30 @@
+[
+  {
+    "title": "ParentDashboard default",
+    "overflow": false,
+    "smallPatternButtons": [],
+    "state": "default",
+    "viewport": 360
+  },
+  {
+    "title": "WeeklySchedule default",
+    "overflow": false,
+    "smallPatternButtons": [],
+    "state": "default",
+    "viewport": 375
+  },
+  {
+    "title": "KidActivity default",
+    "overflow": false,
+    "smallPatternButtons": [],
+    "state": "default",
+    "viewport": 360
+  },
+  {
+    "title": "KidActivity long-text",
+    "overflow": false,
+    "smallPatternButtons": [],
+    "state": "long-text",
+    "viewport": 375
+  }
+]

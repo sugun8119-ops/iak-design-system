@@ -1,6 +1,6 @@
 # IAK KIDS_V1 · Little Everyday
 
-> v2.3 review candidate: source checks and 63 Chrome state/viewport cases passed; final badge visual confirmation, full keyboard/assistive-technology checks, Claude source repair and Figma v2.3 sync remain incomplete. See SYNC.md.
+> v2.3.2: Figma patterns (5 families / 26 states) synchronized; targeted keyboard, focus, contrast and touch-target QA completed. See FIGMA-PATTERNS-QA.md for evidence and remaining assistive-technology checks.
 Light-only Kids/Friendly mobile design system, v2.3. Original accessible palette — Leaf green #487538 (primary), Sky blue #9DDCED (secondary, dark-blue #184957 text), Playful purple #7954AD (accent, focus), Sand cream #FFF9E8 canvas, deep-leaf #293F2D text. 62 semantic colour roles + 32 raw palette values from `zem/figma-system.json`. No logos, characters, images or third-party screens; Pokopia was a colour-mood reference only.
 
 - Hub / Overview: `zem/index.html` (palette + button states, screen × state × 375/834/1440) · QA: `zem/qa.html` (live measurement)

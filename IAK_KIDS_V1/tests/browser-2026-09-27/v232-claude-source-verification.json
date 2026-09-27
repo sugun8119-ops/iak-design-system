@@ -1,0 +1,50 @@
+[
+  {
+    "path": "zem/lib/zem-patterns.css",
+    "sha256": "31cf9c94cca491ea3a5fea6b81b1ffc7b16efc13c99274c56225e25c6d15f9f8",
+    "exact": true,
+    "sameIgnoringFinalNewline": true
+  },
+  {
+    "path": "styles.css",
+    "sha256": "fcee5658cf88281ddea2a597973bd2cfbde819a0440cbfd6e2a8b39b44daca3c",
+    "exact": true,
+    "sameIgnoringFinalNewline": true
+  },
+  {
+    "path": "templates/kid-activity/KidActivity.dc.html",
+    "sha256": "1cdedcd898c53f832a2027050ec365824ae4d38473570c187c3c556cf17c5ff4",
+    "exact": true,
+    "sameIgnoringFinalNewline": true
+  },
+  {
+    "path": "templates/kid-activity/ds-base.js",
+    "sha256": "9a1d1f9991b4bd5f5d1d4e08bcb2aa3e08d5bacb3306ff5a569f37d49bf6eb23",
+    "exact": true,
+    "sameIgnoringFinalNewline": true
+  },
+  {
+    "path": "templates/parent-dashboard/ds-base.js",
+    "sha256": "9a1d1f9991b4bd5f5d1d4e08bcb2aa3e08d5bacb3306ff5a569f37d49bf6eb23",
+    "exact": true,
+    "sameIgnoringFinalNewline": true
+  },
+  {
+    "path": "templates/weekly-schedule/ds-base.js",
+    "sha256": "9a1d1f9991b4bd5f5d1d4e08bcb2aa3e08d5bacb3306ff5a569f37d49bf6eb23",
+    "exact": true,
+    "sameIgnoringFinalNewline": true
+  },
+  {
+    "path": "FIGMA-PATTERNS-QA.md",
+    "sha256": "75ea385a7d435a902b0ce81166e72a5403e8ebd33d6b25174bbd33b68439d4d2",
+    "exact": false,
+    "sameIgnoringFinalNewline": true
+  },
+  {
+    "path": "zem/qa-v23.html",
+    "sha256": "1ce0c266459adddec0821eeb8abd0a23e16dc8d7456ebfc7f91215748a9ec2ff",
+    "exact": false,
+    "sameIgnoringFinalNewline": false
+  }
+]

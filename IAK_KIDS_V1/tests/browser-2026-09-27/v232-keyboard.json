@@ -1,0 +1,33 @@
+{
+  "version": "2.3.2",
+  "date": "2026-09-27",
+  "browser": "Chrome / macOS",
+  "origin": "http://127.0.0.1:4290",
+  "checks": {
+    "childArrowSelection": true,
+    "childHomeSelection": true,
+    "radioRovingTabindex": true,
+    "visibleFocus3px": true,
+    "dialogTabWrap": true,
+    "firstInvalidFocus": true,
+    "errorDescribedby": true,
+    "escapeRestoresOpener": true,
+    "timerStartPauseResumeFocus": true,
+    "timerAriaLiveOff": true,
+    "nextMissionStartFocus": true,
+    "allDoneHeadingFocus": true,
+    "missionSpaceUndoRedoFocus": true,
+    "noDuplicatePoints": [
+      200,
+      100,
+      200
+    ],
+    "patternActionMinimumHeight": 48
+  },
+  "unverified": [
+    "screen-reader speech",
+    "physical devices",
+    "Safari keyboard flow",
+    "runtime reduced-motion emulation"
+  ]
+}
