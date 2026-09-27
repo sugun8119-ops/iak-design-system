@@ -113,3 +113,8 @@ Claude Design의 Published 시스템을 49개 family / 97개 카드로 확장했
 ## 아이콘 관리 — Claude Design 1.5.0 / 2026-09-27
 
 원본11개 SVG를 그대로 보존하고 KOSAF UI 확장23개를 추가했다. 이름·한국어label·분류·출처·크기·색상정책·별칭·사용처를 manifest로 관리한다. 검색 가능한 Icon 카탈로그, IconButton, 크기/상태 가이드를 등록했다. 닫기·메뉴·별점·수량 등 임시 표현과 원본 SVG 재색칠 CSS filter를 정리했다. 기존97카드와22kit는 유지하며 현재100카드50family이다. 변경 파일은 `icon-changes-2026-09-27.json`, 검사 범위는 `icon-management-qa.json`을 참조한다. 이번 작업에서 Figma는 수정하지 않았다.
+
+
+## 아이콘 채움·명암 — 1.5.1 / 2026-09-27
+
+공통UI10종에 outline/duotone/solid 변형을 추가하고 열린획13종은 outline으로 보존했다. IconButton 선택 배경·테두리·두톤 채움과 비활성 색상을 구분했다. MobileMenu 바로가기 및 상품/하단바 관심 상태에 연결했다. 원본11SVG·토큰·100카드·50family·22kit를 보존했다. 변경 파일은 `icon-tone-changes-2026-09-27.json`, 검수는 `icon-tone-qa.json`에 기록한다. Figma는 수정하지 않았다.

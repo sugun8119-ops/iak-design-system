@@ -18,7 +18,12 @@ export interface IconProps {
   size?: number;
   /** UI icons only. Semantic role colour or a CSS colour; default currentColor. */
   tone?: KosafIconTone | string;
-  /** UI icons with a fillable shape (star, heart-outline). */
+  /** Extension icons only. outline (default) · duotone (soft secondary face + sharp stroke) · solid (filled face, inner details knocked out).
+   *  Only closed geometries support duotone/solid (star, heart-outline, filter, calendar, user, store, home, help, grid, wallet); others fall back to outline + console.warn. Source icons ignore it. */
+  variant?: 'outline' | 'duotone' | 'solid';
+  /** Duotone soft face colour: a tone key (uses IconSoftTones) or CSS colour. Default derives from `tone` (primary→#EAEAEA, brand→#EBFFE9, danger→#E23736@14%, inverse→white@30%). */
+  secondaryTone?: KosafIconTone | string;
+  /** Legacy (1.5.0): same as variant="solid" for star / heart-outline. */
   filled?: boolean;
   /** UI icons only, 1.75–2. Default 2. */
   strokeWidth?: number;
@@ -34,3 +39,5 @@ export declare const IconRegistry: { name: string; id: string; source: string; w
 export declare const UIIconRegistry: { name: string; label: string; category: string; fill?: boolean; d: string[] }[];
 export declare const IconAliases: Record<string, string>;
 export declare const IconTones: Record<KosafIconTone, string>;
+export declare const IconSoftTones: Record<KosafIconTone, [string, number]>;
+export declare function iconVariants(name: string): string[];

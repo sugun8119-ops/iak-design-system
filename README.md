@@ -170,6 +170,8 @@ UI/MCP 0.9.1, 사이트/스킬 0.12.0입니다. React 19 소비자에서 발견�
 
 2026-09-27 · 1.5.0: 아이콘 관리 보강으로 현재 **50개 family · 100개 카드 · 22개 화면 예제**입니다. 원본 SVG11개를 보존하고 UI 확장23개, 별칭33개, 검색/분류 카탈로그, IconButton, 크기·상태 가이드를 추가했습니다. [아이콘 관리](KOSAF_V1/claude-design/docs/icon-management.md) · [아이콘 manifest](KOSAF_V1/claude-design/components/icon/icons.manifest.json) · [검수 결과](KOSAF_V1/icon-management-qa.json).
 
+2026-09-27 · 1.5.1: 아이콘10종의 두톤/채움 변형, 선택 배경·테두리, 비활성 명암을 실제 컴포넌트와 모바일 메뉴에 반영했습니다. [아이콘 채움·명암 변경](KOSAF_V1/claude-design/docs/icon-tone-refinement.md) · [검수](KOSAF_V1/icon-tone-qa.json).
+
 ## HYNIX_V1 · KPOP_V1 독립 디자인 시스템
 
 [시스템 선택](src/systems/README.md) · [공개 미리보기](https://sugun8119-ops.github.io/iak-design-system/systems/)

@@ -149,7 +149,7 @@
     "nativeExportDirectory": "claude-design",
     "qa": "claude-design-qa.json",
     "sourceCoverage": "claude-design/docs/source-coverage.md",
-    "expansionVersion": "1.5.0",
+    "expansionVersion": "1.5.1",
     "sourceInventory": "kosaf-source-patterns.json",
     "expandedGeometry": "kosaf-expanded-geometry.json",
     "sourceIcons": "kosaf-source-icons.json",
@@ -163,6 +163,8 @@
     "iconManagement": "claude-design/docs/icon-management.md",
     "iconQA": "icon-management-qa.json",
     "iconSourceCount": 11,
-    "iconExtensionCount": 23
+    "iconExtensionCount": 23,
+    "iconToneReport": "claude-design/docs/icon-tone-refinement.md",
+    "iconToneQA": "icon-tone-qa.json"
   }
 }

@@ -20,6 +20,9 @@ Catalogue: `components/icon/icons.manifest.json` (name, 한국어 label, categor
 ## IconButton (new family, KOSAF extension)
 Required `label`; hit area desktop ≥36 / mobile ≥44; icon 16/20/24; states default · hover #F7F7F7 · focus 2px #0047ED · pressed #EAEAEA · selected brand green · disabled (#A0A0A0, click blocked, native disabled); `toggle` → `aria-pressed`.
 
+## 1.5.1 variants & selected state
+See `docs/icon-tone-refinement.md`. Extension icons: `variant` outline/duotone/solid (10 closed glyphs), open strokes outline-only. IconButton selected = #EBFFE9 + 1px inset #059B00 + brand duotone icon; disabled wins over forced state.
+
 ## Rules
 1. Never edit, recolour or CSS-`filter` a source SVG. White source glyphs (check, shopping-bag, purchase, document-edit) only on green/filled grounds.
 2. No text glyphs (× − ★ ▾) or CSS-drawn bars as icons.

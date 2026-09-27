@@ -258,16 +258,20 @@
         "message": "<Header> doesn't accept that prop. Declared props: logoSrc, menu, topLeft, topRight, activeMenu, onMenu, onTopLink, onSearch, searchPlaceholder, cartCount, alarmCount, onCart, onAlarm, onMall, onShop, style."
       },
       {
-        "selector": "JSXOpeningElement[name.name='Icon'] > JSXAttribute > JSXIdentifier[name!=/^(?:name|mode|size|tone|filled|strokeWidth|title|rotate|style|key|ref|className|style|children)$/]",
-        "message": "<Icon> doesn't accept that prop. Declared props: name, mode, size, tone, filled, strokeWidth, title, rotate, style."
+        "selector": "JSXOpeningElement[name.name='Icon'] > JSXAttribute > JSXIdentifier[name!=/^(?:name|mode|size|tone|variant|secondaryTone|filled|strokeWidth|title|rotate|style|key|ref|className|style|children)$/]",
+        "message": "<Icon> doesn't accept that prop. Declared props: name, mode, size, tone, variant, secondaryTone, filled, strokeWidth, title, rotate, style."
       },
       {
         "selector": "JSXOpeningElement[name.name='Icon'] > JSXAttribute[name.name='mode'] > Literal[value!=/^(?:source|ui)$/]",
         "message": "<Icon> mode must be one of 'source' | 'ui'."
       },
       {
-        "selector": "JSXOpeningElement[name.name='IconButton'] > JSXAttribute > JSXIdentifier[name!=/^(?:icon|label|iconSize|mode|tone|device|size|toggle|selected|pressed|disabled|state|onClick|type|style|key|ref|className|style|children)$/]",
-        "message": "<IconButton> doesn't accept that prop. Declared props: icon, label, iconSize, mode, tone, device, size, toggle, selected, pressed, disabled, state, onClick, type, style."
+        "selector": "JSXOpeningElement[name.name='Icon'] > JSXAttribute[name.name='variant'] > Literal[value!=/^(?:outline|duotone|solid)$/]",
+        "message": "<Icon> variant must be one of 'outline' | 'duotone' | 'solid'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='IconButton'] > JSXAttribute > JSXIdentifier[name!=/^(?:icon|label|iconSize|mode|tone|device|size|toggle|selected|pressed|disabled|state|selectedVariant|onClick|type|style|key|ref|className|style|children)$/]",
+        "message": "<IconButton> doesn't accept that prop. Declared props: icon, label, iconSize, mode, tone, device, size, toggle, selected, pressed, disabled, state, selectedVariant, onClick, type, style."
       },
       {
         "selector": "JSXOpeningElement[name.name='IconButton'] > JSXAttribute[name.name='mode'] > Literal[value!=/^(?:source|ui)$/]",
@@ -278,8 +282,12 @@
         "message": "<IconButton> device must be one of 'desktop' | 'mobile'."
       },
       {
-        "selector": "JSXOpeningElement[name.name='IconButton'] > JSXAttribute[name.name='state'] > Literal[value!=/^(?:default|hover|focus|pressed|disabled)$/]",
-        "message": "<IconButton> state must be one of 'default' | 'hover' | 'focus' | 'pressed' | 'disabled'."
+        "selector": "JSXOpeningElement[name.name='IconButton'] > JSXAttribute[name.name='state'] > Literal[value!=/^(?:default|hover|focus|pressed|selected|disabled)$/]",
+        "message": "<IconButton> state must be one of 'default' | 'hover' | 'focus' | 'pressed' | 'selected' | 'disabled'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='IconButton'] > JSXAttribute[name.name='selectedVariant'] > Literal[value!=/^(?:duotone|solid)$/]",
+        "message": "<IconButton> selectedVariant must be one of 'duotone' | 'solid'."
       },
       {
         "selector": "JSXOpeningElement[name.name='IconButton'] > JSXAttribute[name.name='type'] > Literal[value!=/^(?:button|submit)$/]",

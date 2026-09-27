@@ -51,7 +51,7 @@ export function MobileMenu({ sections = SECTIONS, quick = QUICK, defaultOpen = 1
           const q = quick[i];
           return q ? (
             <button key={i} onClick={() => onSelect && onSelect(q.label)} style={{ height: 79, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 8, background: '#fff', border: 0, borderRight: i % 4 < 3 ? '1px solid var(--kosaf-gray-100)' : 0, borderBottom: '1px solid var(--kosaf-gray-100)', cursor: 'pointer', fontFamily: F, fontSize: 13, color: 'var(--kosaf-src-text-strong)' }}>
-              {q.icon ? <Icon name={q.icon} mode="ui" size={32} strokeWidth={1.75} tone="primary" /> : <span aria-hidden="true" style={{ width: 32, height: 32, border: '1px dashed var(--kosaf-color-border-strong)', borderRadius: 3 }} title="icon slot"></span>}
+              {q.icon ? <Icon name={q.icon} mode="ui" variant="duotone" size={32} strokeWidth={1.75} tone="primary" /> : <span aria-hidden="true" style={{ width: 32, height: 32, border: '1px dashed var(--kosaf-color-border-strong)', borderRadius: 3 }} title="icon slot"></span>}
               {q.label}
             </button>
           ) : <span key={i} style={{ borderRight: i % 4 < 3 ? '1px solid var(--kosaf-gray-100)' : 0, borderBottom: '1px solid var(--kosaf-gray-100)' }}></span>;

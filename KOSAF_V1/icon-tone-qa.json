@@ -1,0 +1,39 @@
+{
+  "version": "1.5.1",
+  "date": "2026-09-27",
+  "scope": "Icon fill, tone and selected state in native Claude Design",
+  "componentFamilies": 50,
+  "cards": 100,
+  "uiKitPages": 22,
+  "staticChecks": {
+    "sourceSVGsAndDataByteIdentical": true,
+    "canonicalTokenFilesChanged": [],
+    "all100PreviousCardsPreserved": true,
+    "missingCardFiles": [],
+    "nativeCheckerReportedIssues": 0
+  },
+  "browserChecks": [
+    {
+      "area": "Final exported IconButton state matrix",
+      "result": "Selected background rgb(235,255,233), foreground rgb(5,155,0). Disabled background rgb(247,247,247), foreground rgb(160,160,160), disabled=true and data-state=disabled."
+    },
+    {
+      "area": "Toggle before final disabled-background-only patch",
+      "result": "Like click set aria-pressed=true, selected soft-green background, green inset border and duotone SVG."
+    },
+    {
+      "area": "MobileMenu exported component",
+      "result": "Closed home/store/heart/help/user glyphs use duotone neutral fill rgb(234,234,234); close/list remain outline."
+    },
+    {
+      "area": "Visual comparison",
+      "result": "Outline, duotone, selected and disabled rows inspected at 16/20/24 desktop icon sizes and mobile24; final screenshot saved."
+    }
+  ],
+  "limitations": [
+    "Representative browser checks; not exhaustive 100-card regression or accessibility certification.",
+    "Latest final-export toggle repeat was interrupted by browser control timeouts; earlier interaction check passed before disabled-background-only patch.",
+    "13 open-stroke UI glyphs remain outline; 11 source icons preserve baked colors and use opacity for disabled.",
+    "Figma masters were not edited in this Claude Design refinement; prior Figma/source-coverage gaps remain."
+  ]
+}

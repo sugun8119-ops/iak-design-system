@@ -2,7 +2,7 @@ import * as React from 'react';
 
 /**
  * IconButton — KOSAF extension (no Figma master). Icon-only button: required `label` (aria-label + tooltip), decorative inner icon.
- * Hit area desktop ≥36 / mobile ≥44. States: Default · Hover (#F7F7F7) · Focus (2px #0047ED) · Pressed (#EAEAEA) · Selected (brand) · Disabled.
+ * Hit area desktop ≥36 / mobile ≥44. States: Default · Hover (#F7F7F7) · Pressed/active (#EAEAEA) · Focus-visible (2px #0047ED outline, combinable) · Selected (#EBFFE9 bg + 1px inset #059B00 + brand icon, duotone for closed UI glyphs) · Disabled (wins over any forced state; neutral bg, #A0A0A0, events blocked).
  */
 export interface IconButtonProps {
   /** Icon name or alias (see Icon). */
@@ -23,8 +23,10 @@ export interface IconButtonProps {
   pressed?: boolean;
   /** Disabled: native disabled + onClick not called. */
   disabled?: boolean;
-  /** Force a visual state (catalogs). */
-  state?: 'default' | 'hover' | 'focus' | 'pressed' | 'disabled';
+  /** Force a visual state (catalogs). `disabled` prop always wins. */
+  state?: 'default' | 'hover' | 'focus' | 'pressed' | 'selected' | 'disabled';
+  /** Icon variant when selected (closed UI glyphs only). Default duotone. */
+  selectedVariant?: 'duotone' | 'solid';
   onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
   type?: 'button' | 'submit';
   style?: React.CSSProperties;

@@ -275,7 +275,7 @@
     ]
   },
   "claudeDesignExpansion": {
-    "version": "1.5.0",
+    "version": "1.5.1",
     "nativeProject": "https://claude.ai/design/p/f8c97b66-58c3-463f-9523-26fdd5b960d4",
     "componentFamilies": 50,
     "families": [
@@ -345,6 +345,8 @@
     "iconManagement": "claude-design/docs/icon-management.md",
     "iconQA": "icon-management-qa.json",
     "iconSourceCount": 11,
-    "iconExtensionCount": 23
+    "iconExtensionCount": 23,
+    "iconToneReport": "claude-design/docs/icon-tone-refinement.md",
+    "iconToneQA": "icon-tone-qa.json"
   }
 }

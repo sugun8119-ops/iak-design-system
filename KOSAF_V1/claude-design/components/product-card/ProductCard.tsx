@@ -48,7 +48,7 @@ export function ProductCard({ device = 'desktop', imageSrc, title = '사과/부�
         <ImageSlot src={imageSrc} alt={title} width={IMG} height={IMG} dim={soldOut} />
         {compare !== undefined && !m ? <div style={{ position: 'absolute', left: 8, top: 8, padding: '3px 8px', background: '#fff', border: '1px solid var(--kosaf-color-border-default)', borderRadius: 3 }}><Checkbox checked={!!compare} onChange={onCompare} disabled={soldOut} style={{ fontSize: 13 }}>상품비교</Checkbox></div> : null}
         {m ? <div style={{ position: 'absolute', left: 19, top: 19 }}><DealBadge type={deal} size="sm" muted={soldOut} /></div> : null}
-        {m ? <button style={{ ...iconBtn, position: 'absolute', right: 15, bottom: 15, background: 'rgba(255,255,255,.85)', borderRadius: 18 }} aria-pressed={!!liked} aria-label="관심상품" onClick={onLike} disabled={soldOut}>{heart}</button> : null}
+        {m ? <button style={{ ...iconBtn, position: 'absolute', right: 15, bottom: 15, background: liked && !soldOut ? 'var(--kosaf-color-surface-brand-soft)' : 'rgba(255,255,255,.85)', borderRadius: 18 }} aria-pressed={!!liked} aria-label="관심상품" onClick={onLike} disabled={soldOut}>{heart}</button> : null}
         {soldOut ? <span style={{ position: 'absolute', left: '50%', top: '50%', transform: 'translate(-50%,-50%)', padding: '4px 12px', background: 'var(--kosaf-color-text-secondary)', color: '#fff', borderRadius: 3, fontSize: m ? 12 : 14, fontWeight: 500 }}>판매종료</span> : null}
         {deadline && !m ? <div style={{ position: 'absolute', left: 0, right: 0, bottom: 0, height: 34, borderRadius: '0 0 10px 10px', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 6, background: 'rgba(255,255,255,.92)', fontSize: 14, fontWeight: 500 }}>입찰 마감시간<span style={{ ...NUM, color: 'var(--kosaf-color-action-danger)' }}>{deadline}</span></div> : null}
       </div>
@@ -57,7 +57,7 @@ export function ProductCard({ device = 'desktop', imageSrc, title = '사과/부�
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 8 }}>
             <DealBadge type={deal} muted={soldOut} />
             <span style={{ display: 'flex', marginRight: -6 }}>
-              <button style={iconBtn} aria-pressed={!!liked} aria-label="관심상품" onClick={onLike} disabled={soldOut}>{heart}</button>
+              <button style={{ ...iconBtn, background: liked && !soldOut ? 'var(--kosaf-color-surface-brand-soft)' : iconBtn.background }} aria-pressed={!!liked} aria-label="관심상품" onClick={onLike} disabled={soldOut}>{heart}</button>
               <button style={iconBtn} aria-label="장바구니 담기" onClick={onCart} disabled={soldOut}><Icon name="cart" size={22} /></button>
             </span>
           </div>

@@ -1,11 +1,12 @@
 {
  "system": "KOSAF_V1 · Project Design System",
- "version": "1.5.0",
+ "version": "1.5.1",
  "generated": "2026-09-27",
  "counts": {
   "source": 11,
   "extension": 23,
-  "aliases": 33
+  "aliases": 33,
+  "variantCapable": 10
  },
  "api": {
   "component": "Icon",
@@ -32,7 +33,17 @@
    "inverse"
   ],
   "missing": "dashed red \"?\" box + console.warn once per name",
-  "a11y": "aria-hidden by default; title → role=img + aria-label; icon-only controls use IconButton(label required)"
+  "a11y": "aria-hidden by default; title → role=img + aria-label; icon-only controls use IconButton(label required)",
+  "variants": {
+   "values": [
+    "outline (default)",
+    "duotone",
+    "solid"
+   ],
+   "appliesTo": "KOSAF extension only; source icons always verbatim",
+   "fallback": "unsupported variant → outline + console.warn",
+   "legacy": "filled=true ≡ solid for star/heart-outline"
+  }
  },
  "policy": {
   "add": "Extension icons: 24 grid, 2px round stroke, single path set, currentColor; add to icons.ui.js + this manifest + docs/icon-management.md changelog. No brand/social icons without a supplied source.",
@@ -101,7 +112,10 @@
     "chart"
    ],
    "status": "active",
-   "usage": []
+   "usage": [],
+   "variants": [
+    "source"
+   ]
   },
   {
    "name": "search",
@@ -130,6 +144,9 @@
     "Header",
     "MobileHeader",
     "Search trailing"
+   ],
+   "variants": [
+    "source"
    ]
   },
   {
@@ -156,7 +173,10 @@
    "aliases": [],
    "status": "active",
    "onDark": "white glyph — use on green/filled backgrounds only",
-   "usage": []
+   "usage": [],
+   "variants": [
+    "source"
+   ]
   },
   {
    "name": "shopping-bag",
@@ -184,7 +204,10 @@
     "bag"
    ],
    "status": "active",
-   "usage": []
+   "usage": [],
+   "variants": [
+    "source"
+   ]
   },
   {
    "name": "heart",
@@ -214,6 +237,9 @@
    "status": "active",
    "usage": [
     "ProductCard/ProductTable/BottomActionBar (liked)"
+   ],
+   "variants": [
+    "source"
    ]
   },
   {
@@ -247,6 +273,9 @@
     "MobileMenu",
     "FilterPanel",
     "MobileHeader back"
+   ],
+   "variants": [
+    "source"
    ]
   },
   {
@@ -273,7 +302,10 @@
    "allowedSizes": "native or longest-side scaling; prefer native",
    "aliases": [],
    "status": "active",
-   "usage": []
+   "usage": [],
+   "variants": [
+    "source"
+   ]
   },
   {
    "name": "bell",
@@ -303,6 +335,9 @@
    "status": "active",
    "usage": [
     "Header"
+   ],
+   "variants": [
+    "source"
    ]
   },
   {
@@ -330,7 +365,10 @@
     "history"
    ],
    "status": "active",
-   "usage": []
+   "usage": [],
+   "variants": [
+    "source"
+   ]
   },
   {
    "name": "document-edit",
@@ -358,7 +396,10 @@
     "edit"
    ],
    "status": "active",
-   "usage": []
+   "usage": [],
+   "variants": [
+    "source"
+   ]
   },
   {
    "name": "cart",
@@ -389,6 +430,9 @@
     "ProductCard",
     "ProductTable",
     "BottomActionBar"
+   ],
+   "variants": [
+    "source"
    ]
   },
   {
@@ -418,7 +462,11 @@
     "close-x"
    ],
    "status": "active",
-   "usage": []
+   "usage": [],
+   "variants": [
+    "outline"
+   ],
+   "geometry": "open-stroke"
   },
   {
    "name": "menu",
@@ -446,7 +494,11 @@
     "hamburger"
    ],
    "status": "active",
-   "usage": []
+   "usage": [],
+   "variants": [
+    "outline"
+   ],
+   "geometry": "open-stroke"
   },
   {
    "name": "plus",
@@ -475,7 +527,11 @@
     "increase"
    ],
    "status": "active",
-   "usage": []
+   "usage": [],
+   "variants": [
+    "outline"
+   ],
+   "geometry": "open-stroke"
   },
   {
    "name": "minus",
@@ -503,7 +559,11 @@
     "decrease"
    ],
    "status": "active",
-   "usage": []
+   "usage": [],
+   "variants": [
+    "outline"
+   ],
+   "geometry": "open-stroke"
   },
   {
    "name": "chevron-left",
@@ -531,7 +591,11 @@
     "prev"
    ],
    "status": "active",
-   "usage": []
+   "usage": [],
+   "variants": [
+    "outline"
+   ],
+   "geometry": "open-stroke"
   },
   {
    "name": "chevron-right",
@@ -559,7 +623,11 @@
     "next"
    ],
    "status": "active",
-   "usage": []
+   "usage": [],
+   "variants": [
+    "outline"
+   ],
+   "geometry": "open-stroke"
   },
   {
    "name": "chevron-up",
@@ -588,7 +656,11 @@
     "collapse"
    ],
    "status": "active",
-   "usage": []
+   "usage": [],
+   "variants": [
+    "outline"
+   ],
+   "geometry": "open-stroke"
   },
   {
    "name": "chevron-down",
@@ -617,7 +689,11 @@
     "expand"
    ],
    "status": "active",
-   "usage": []
+   "usage": [],
+   "variants": [
+    "outline"
+   ],
+   "geometry": "open-stroke"
   },
   {
    "name": "star",
@@ -645,7 +721,17 @@
     "rating"
    ],
    "status": "active",
-   "usage": []
+   "usage": [],
+   "variants": [
+    "outline",
+    "duotone",
+    "solid"
+   ],
+   "geometry": "closed",
+   "closedPaths": [
+    0
+   ],
+   "innerPaths": []
   },
   {
    "name": "heart-outline",
@@ -673,7 +759,19 @@
     "like-outline"
    ],
    "status": "active",
-   "usage": []
+   "usage": [
+    "MobileMenu quick (duotone)"
+   ],
+   "variants": [
+    "outline",
+    "duotone",
+    "solid"
+   ],
+   "geometry": "closed",
+   "closedPaths": [
+    0
+   ],
+   "innerPaths": []
   },
   {
    "name": "filter",
@@ -699,7 +797,17 @@
    "stroke": "2px (1.75 allowed) round cap/join",
    "aliases": [],
    "status": "active",
-   "usage": []
+   "usage": [],
+   "variants": [
+    "outline",
+    "duotone",
+    "solid"
+   ],
+   "geometry": "closed",
+   "closedPaths": [
+    0
+   ],
+   "innerPaths": []
   },
   {
    "name": "sort",
@@ -725,7 +833,11 @@
    "stroke": "2px (1.75 allowed) round cap/join",
    "aliases": [],
    "status": "active",
-   "usage": []
+   "usage": [],
+   "variants": [
+    "outline"
+   ],
+   "geometry": "open-stroke"
   },
   {
    "name": "check-mark",
@@ -753,7 +865,11 @@
     "done"
    ],
    "status": "active",
-   "usage": []
+   "usage": [],
+   "variants": [
+    "outline"
+   ],
+   "geometry": "open-stroke"
   },
   {
    "name": "calendar",
@@ -781,7 +897,19 @@
     "date"
    ],
    "status": "active",
-   "usage": []
+   "usage": [],
+   "variants": [
+    "outline",
+    "duotone",
+    "solid"
+   ],
+   "geometry": "closed",
+   "closedPaths": [
+    0
+   ],
+   "innerPaths": [
+    1
+   ]
   },
   {
    "name": "user",
@@ -809,7 +937,20 @@
     "member"
    ],
    "status": "active",
-   "usage": []
+   "usage": [
+    "MobileMenu quick (duotone)"
+   ],
+   "variants": [
+    "outline",
+    "duotone",
+    "solid"
+   ],
+   "geometry": "closed",
+   "closedPaths": [
+    0,
+    1
+   ],
+   "innerPaths": []
   },
   {
    "name": "store",
@@ -837,7 +978,22 @@
     "shop"
    ],
    "status": "active",
-   "usage": []
+   "usage": [
+    "MobileMenu quick (duotone)"
+   ],
+   "variants": [
+    "outline",
+    "duotone",
+    "solid"
+   ],
+   "geometry": "closed",
+   "closedPaths": [
+    0,
+    2
+   ],
+   "innerPaths": [
+    3
+   ]
   },
   {
    "name": "home",
@@ -863,7 +1019,19 @@
    "stroke": "2px (1.75 allowed) round cap/join",
    "aliases": [],
    "status": "active",
-   "usage": []
+   "usage": [
+    "MobileMenu quick (duotone)"
+   ],
+   "variants": [
+    "outline",
+    "duotone",
+    "solid"
+   ],
+   "geometry": "closed",
+   "closedPaths": [
+    0
+   ],
+   "innerPaths": []
   },
   {
    "name": "help",
@@ -891,7 +1059,22 @@
     "qna"
    ],
    "status": "active",
-   "usage": []
+   "usage": [
+    "MobileMenu quick (duotone)"
+   ],
+   "variants": [
+    "outline",
+    "duotone",
+    "solid"
+   ],
+   "geometry": "closed",
+   "closedPaths": [
+    0
+   ],
+   "innerPaths": [
+    1,
+    2
+   ]
   },
   {
    "name": "grid",
@@ -919,7 +1102,20 @@
     "view-grid"
    ],
    "status": "active",
-   "usage": []
+   "usage": [],
+   "variants": [
+    "outline",
+    "duotone",
+    "solid"
+   ],
+   "geometry": "closed",
+   "closedPaths": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "innerPaths": []
   },
   {
    "name": "list",
@@ -947,7 +1143,13 @@
     "view-list"
    ],
    "status": "active",
-   "usage": []
+   "usage": [
+    "MobileMenu quick (duotone)"
+   ],
+   "variants": [
+    "outline"
+   ],
+   "geometry": "open-stroke"
   },
   {
    "name": "chart-line",
@@ -975,7 +1177,11 @@
     "trend"
    ],
    "status": "active",
-   "usage": []
+   "usage": [],
+   "variants": [
+    "outline"
+   ],
+   "geometry": "open-stroke"
   },
   {
    "name": "wallet",
@@ -1003,7 +1209,20 @@
     "money"
    ],
    "status": "active",
-   "usage": []
+   "usage": [],
+   "variants": [
+    "outline",
+    "duotone",
+    "solid"
+   ],
+   "geometry": "closed",
+   "closedPaths": [
+    0,
+    1
+   ],
+   "innerPaths": [
+    2
+   ]
   },
   {
    "name": "refresh",
@@ -1031,7 +1250,34 @@
     "reset"
    ],
    "status": "active",
-   "usage": []
+   "usage": [],
+   "variants": [
+    "outline"
+   ],
+   "geometry": "open-stroke"
   }
- ]
+ ],
+ "toneRules": {
+  "foreground": "tone (default primary #333 via --kosaf-color-icon-default)",
+  "duotoneSoft": {
+   "current": "currentColor @ 0.16",
+   "primary": "var(--kosaf-gray-100)",
+   "secondary": "var(--kosaf-gray-100)",
+   "muted": "var(--kosaf-gray-100)",
+   "disabled": "var(--kosaf-color-bg-subtle)",
+   "brand": "var(--kosaf-color-surface-brand-soft)",
+   "positive": "var(--kosaf-color-surface-brand-soft)",
+   "danger": "var(--kosaf-color-action-danger) @ 0.14",
+   "focus": "var(--kosaf-color-state-focus) @ 0.12",
+   "inverse": "var(--kosaf-color-text-inverse) @ 0.3"
+  },
+  "solidKnockout": "inner details in --kosaf-color-text-inverse (white); on tone=inverse → --kosaf-color-action-primary",
+  "selected": "IconButton: #EBFFE9 bg + 1px inset #059B00 + brand icon, duotone for closed glyphs",
+  "forbidden": [
+   "gradient",
+   "drop-shadow",
+   "3D",
+   "recolouring source SVG"
+  ]
+ }
 }

@@ -79,6 +79,7 @@ Helper exports (not separate families): `IconRegistry`, `UIIconRegistry`, `IconA
 - **KOSAF extension (23)** — authored for 1.5.0, *not extracted from Figma*: close, menu, plus, minus, chevron-left/right/up/down, star, heart-outline, filter, sort, check-mark, calendar, user, store, home, help, grid, list, refresh, chart-line, wallet. 24 grid, 2px round cap/join (1.75 allowed), currentColor; sizes 16/20/24/32; tones current/primary/secondary/muted/disabled/brand/positive/danger/focus/inverse.
 - **Aliases** resolve duplicates (x→close, hamburger→menu, prev/next→chevron-*, like→heart, back→navigate …). Unknown names render a dashed red "?" + one `console.warn` — never a silent null.
 - **Rules**: no text glyphs (× − ★ ▾) or CSS-drawn shapes as icons; icon-only buttons use IconButton with a required Korean label; hit area desktop ≥36 / mobile ≥44 where layout allows. No emoji. No brand/social icons without a supplied source.
+- **Variants (1.5.1)**: extension icons support `variant` outline (default) / duotone / solid on 10 closed glyphs; open strokes are outline-only (fallback). Soft faces use existing tokens (#EAEAEA neutral, #EBFFE9 brand). IconButton selected = #EBFFE9 + 1px inset #059B00 + brand duotone icon. Details: `docs/icon-tone-refinement.md`.
 - **Legacy**: `CloseX` kept as a deprecated wrapper → `<Icon name="close">`.
 
 ## Brand & logo

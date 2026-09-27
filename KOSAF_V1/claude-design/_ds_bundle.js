@@ -1,4 +1,4 @@
-/* @ds-bundle: {"format":4,"namespace":"KOSAFV1ProjectDesignSystem_f8c97b","components":[{"name":"Accordion","sourcePath":"components/accordion/Accordion.tsx"},{"name":"AlertDialog","sourcePath":"components/alert-dialog/AlertDialog.tsx"},{"name":"Badge","sourcePath":"components/badge/Badge.jsx"},{"name":"BottomActionBar","sourcePath":"components/bottom-action-bar/BottomActionBar.tsx"},{"name":"Breadcrumb","sourcePath":"components/breadcrumb/Breadcrumb.tsx"},{"name":"Button","sourcePath":"components/button/Button.jsx"},{"name":"CartItem","sourcePath":"components/cart-item/CartItem.tsx"},{"name":"Checkbox","sourcePath":"components/checkbox/Checkbox.jsx"},{"name":"CompareTable","sourcePath":"components/compare-table/CompareTable.tsx"},{"name":"DateField","sourcePath":"components/date-field/DateField.tsx"},{"name":"DateRange","sourcePath":"components/date-range/DateRange.tsx"},{"name":"DescriptionList","sourcePath":"components/description-list/DescriptionList.tsx"},{"name":"EMPTY_STATE_PRESETS","sourcePath":"components/empty-state/EmptyState.tsx"},{"name":"EmptyState","sourcePath":"components/empty-state/EmptyState.tsx"},{"name":"FileUpload","sourcePath":"components/file-upload/FileUpload.tsx"},{"name":"FilterChip","sourcePath":"components/filter-chip/FilterChip.tsx"},{"name":"DEFAULT_FILTER_GROUPS","sourcePath":"components/filter-panel/FilterPanel.tsx"},{"name":"FilterPanel","sourcePath":"components/filter-panel/FilterPanel.tsx"},{"name":"Footer","sourcePath":"components/footer/Footer.tsx"},{"name":"FormErrorSummary","sourcePath":"components/form-error-summary/FormErrorSummary.tsx"},{"name":"FormField","sourcePath":"components/form-field/FormField.tsx"},{"name":"Header","sourcePath":"components/header/Header.tsx"},{"name":"IconButton","sourcePath":"components/icon-button/IconButton.tsx"},{"name":"IconRegistry","sourcePath":"components/icon/Icon.tsx"},{"name":"UIIconRegistry","sourcePath":"components/icon/Icon.tsx"},{"name":"IconAliases","sourcePath":"components/icon/Icon.tsx"},{"name":"IconTones","sourcePath":"components/icon/Icon.tsx"},{"name":"Icon","sourcePath":"components/icon/Icon.tsx"},{"name":"KOSAF_ICONS","sourcePath":"components/icon/icons.data.js"},{"name":"KOSAF_UI_ICONS","sourcePath":"components/icon/icons.ui.js"},{"name":"KOSAF_ICON_ALIASES","sourcePath":"components/icon/icons.ui.js"},{"name":"KOSAF_ICON_TONES","sourcePath":"components/icon/icons.ui.js"},{"name":"Input","sourcePath":"components/input/Input.jsx"},{"name":"MetricCard","sourcePath":"components/metric-card/MetricCard.tsx"},{"name":"MobileFilterSheet","sourcePath":"components/mobile-filter-sheet/MobileFilterSheet.tsx"},{"name":"MobileHeader","sourcePath":"components/mobile-header/MobileHeader.tsx"},{"name":"CloseX","sourcePath":"components/mobile-menu/MobileMenu.tsx"},{"name":"MobileMenu","sourcePath":"components/mobile-menu/MobileMenu.tsx"},{"name":"Modal","sourcePath":"components/modal/Modal.jsx"},{"name":"SAMPLE_NOTIFICATIONS","sourcePath":"components/notification-list/NotificationList.tsx"},{"name":"NotificationList","sourcePath":"components/notification-list/NotificationList.tsx"},{"name":"OrderSummary","sourcePath":"components/order-summary/OrderSummary.tsx"},{"name":"PageHeader","sourcePath":"components/page-header/PageHeader.tsx"},{"name":"PaginationItem","sourcePath":"components/pagination-item/PaginationItem.jsx"},{"name":"Pagination","sourcePath":"components/pagination/Pagination.tsx"},{"name":"EXAMPLE_PRICE_SERIES","sourcePath":"components/price-trend/PriceTrend.tsx"},{"name":"PriceTrend","sourcePath":"components/price-trend/PriceTrend.tsx"},{"name":"ImageSlot","sourcePath":"components/product-card/ProductCard.tsx"},{"name":"DealBadge","sourcePath":"components/product-card/ProductCard.tsx"},{"name":"ProductCard","sourcePath":"components/product-card/ProductCard.tsx"},{"name":"ProductListItem","sourcePath":"components/product-list-item/ProductListItem.tsx"},{"name":"PRODUCT_TABLE_COLUMNS","sourcePath":"components/product-table/ProductTable.tsx"},{"name":"ProductTable","sourcePath":"components/product-table/ProductTable.tsx"},{"name":"ProgressSteps","sourcePath":"components/progress-steps/ProgressSteps.tsx"},{"name":"QuantityStepper","sourcePath":"components/quantity-stepper/QuantityStepper.tsx"},{"name":"Radio","sourcePath":"components/radio/Radio.jsx"},{"name":"Rating","sourcePath":"components/rating/Rating.tsx"},{"name":"ReviewItem","sourcePath":"components/review-item/ReviewItem.tsx"},{"name":"Search","sourcePath":"components/search/Search.jsx"},{"name":"SegmentedControl","sourcePath":"components/segmented-control/SegmentedControl.tsx"},{"name":"Select","sourcePath":"components/select/Select.tsx"},{"name":"BUYER_NAV","sourcePath":"components/side-nav/SideNav.tsx"},{"name":"SideNav","sourcePath":"components/side-nav/SideNav.tsx"},{"name":"Stepper","sourcePath":"components/stepper/Stepper.jsx"},{"name":"Tab","sourcePath":"components/tab/Tab.jsx"},{"name":"TableRow","sourcePath":"components/table-row/TableRow.jsx"},{"name":"Textarea","sourcePath":"components/textarea/Textarea.tsx"}],"sourceHashes":{"components/accordion/Accordion.tsx":"8560aa05e22e","components/alert-dialog/AlertDialog.tsx":"44425b4ef882","components/badge/Badge.jsx":"edfca979276b","components/bottom-action-bar/BottomActionBar.tsx":"a298e835f84e","components/breadcrumb/Breadcrumb.tsx":"3546712a7b5d","components/button/Button.jsx":"77ef0cb16c7c","components/cart-item/CartItem.tsx":"d5fec14da426","components/checkbox/Checkbox.jsx":"748aefc9df7d","components/compare-table/CompareTable.tsx":"02479305a67a","components/date-field/DateField.tsx":"fcf7f48512e1","components/date-range/DateRange.tsx":"5566407845f5","components/description-list/DescriptionList.tsx":"621ef105b820","components/empty-state/EmptyState.tsx":"a63d32ea38b7","components/file-upload/FileUpload.tsx":"66e23b27d4e2","components/filter-chip/FilterChip.tsx":"aa5e5287c250","components/filter-panel/FilterPanel.tsx":"da923a09457f","components/footer/Footer.tsx":"c7ab7c05ec89","components/form-error-summary/FormErrorSummary.tsx":"bce1ff2efb82","components/form-field/FormField.tsx":"cad7366fcafd","components/header/Header.tsx":"96af1d64202e","components/icon-button/IconButton.tsx":"25685b26664c","components/icon/Icon.tsx":"97ad4e2debe9","components/icon/icons.data.js":"1f82893c6d66","components/icon/icons.ui.js":"518bbffb4e5a","components/input/Input.jsx":"3532a15127cf","components/metric-card/MetricCard.tsx":"5201fb65d364","components/mobile-filter-sheet/MobileFilterSheet.tsx":"f08792bd3bf1","components/mobile-header/MobileHeader.tsx":"c94a8cdd76a2","components/mobile-menu/MobileMenu.tsx":"27bcc775cdb6","components/modal/Modal.jsx":"629455cea605","components/notification-list/NotificationList.tsx":"fa2ea74ddb1f","components/order-summary/OrderSummary.tsx":"dbfb64437d95","components/page-header/PageHeader.tsx":"7dd72be9108f","components/pagination-item/PaginationItem.jsx":"7e2ef2fb0efa","components/pagination/Pagination.tsx":"d620ccc9c1b0","components/price-trend/PriceTrend.tsx":"70e1b798e407","components/product-card/ProductCard.tsx":"40acfdd44ffb","components/product-list-item/ProductListItem.tsx":"048cdc35efd6","components/product-table/ProductTable.tsx":"66ecbda84884","components/progress-steps/ProgressSteps.tsx":"52c10c6d4b2a","components/quantity-stepper/QuantityStepper.tsx":"0645edf3f5a5","components/radio/Radio.jsx":"611574d2b25b","components/rating/Rating.tsx":"e749a99476ac","components/review-item/ReviewItem.tsx":"0566eacd93b3","components/search/Search.jsx":"99eb34ed21a7","components/segmented-control/SegmentedControl.tsx":"886ff4520da5","components/select/Select.tsx":"00d4d10ece26","components/side-nav/SideNav.tsx":"058b075d3562","components/stepper/Stepper.jsx":"dc152d73de22","components/tab/Tab.jsx":"72cfb7408f43","components/table-row/TableRow.jsx":"63a4c3cdf9de","components/textarea/Textarea.tsx":"7d0862d8af5a","guidelines/card-kit.js":"18b3cd771d81","guidelines/source-styles.js":"ce6425475665","ui_kits/_shared/shell.jsx":"961381b5fb22","ui_kits/buyer-mypage/screens.jsx":"5008dff37dbe","ui_kits/cart/screens.jsx":"80e203746f97","ui_kits/checkout/screens.jsx":"1487e307e6f9","ui_kits/login/screens.jsx":"afc82333cec1","ui_kits/product-detail/screens.jsx":"f0545c564b1d","ui_kits/search-results/screens.jsx":"6367151f6252","ui_kits/seller-myshop/screens.jsx":"39783e95b283","ui_kits/seller-signup/screens.jsx":"a18ac484e316","ui_kits/support/screens.jsx":"f798557c7192"},"inlinedExternals":[],"unexposedExports":[{"name":"resolveIcon","sourcePath":"components/icon/Icon.tsx"}]} */
+/* @ds-bundle: {"format":4,"namespace":"KOSAFV1ProjectDesignSystem_f8c97b","components":[{"name":"Accordion","sourcePath":"components/accordion/Accordion.tsx"},{"name":"AlertDialog","sourcePath":"components/alert-dialog/AlertDialog.tsx"},{"name":"Badge","sourcePath":"components/badge/Badge.jsx"},{"name":"BottomActionBar","sourcePath":"components/bottom-action-bar/BottomActionBar.tsx"},{"name":"Breadcrumb","sourcePath":"components/breadcrumb/Breadcrumb.tsx"},{"name":"Button","sourcePath":"components/button/Button.jsx"},{"name":"CartItem","sourcePath":"components/cart-item/CartItem.tsx"},{"name":"Checkbox","sourcePath":"components/checkbox/Checkbox.jsx"},{"name":"CompareTable","sourcePath":"components/compare-table/CompareTable.tsx"},{"name":"DateField","sourcePath":"components/date-field/DateField.tsx"},{"name":"DateRange","sourcePath":"components/date-range/DateRange.tsx"},{"name":"DescriptionList","sourcePath":"components/description-list/DescriptionList.tsx"},{"name":"EMPTY_STATE_PRESETS","sourcePath":"components/empty-state/EmptyState.tsx"},{"name":"EmptyState","sourcePath":"components/empty-state/EmptyState.tsx"},{"name":"FileUpload","sourcePath":"components/file-upload/FileUpload.tsx"},{"name":"FilterChip","sourcePath":"components/filter-chip/FilterChip.tsx"},{"name":"DEFAULT_FILTER_GROUPS","sourcePath":"components/filter-panel/FilterPanel.tsx"},{"name":"FilterPanel","sourcePath":"components/filter-panel/FilterPanel.tsx"},{"name":"Footer","sourcePath":"components/footer/Footer.tsx"},{"name":"FormErrorSummary","sourcePath":"components/form-error-summary/FormErrorSummary.tsx"},{"name":"FormField","sourcePath":"components/form-field/FormField.tsx"},{"name":"Header","sourcePath":"components/header/Header.tsx"},{"name":"IconButton","sourcePath":"components/icon-button/IconButton.tsx"},{"name":"IconRegistry","sourcePath":"components/icon/Icon.tsx"},{"name":"UIIconRegistry","sourcePath":"components/icon/Icon.tsx"},{"name":"IconAliases","sourcePath":"components/icon/Icon.tsx"},{"name":"IconTones","sourcePath":"components/icon/Icon.tsx"},{"name":"IconSoftTones","sourcePath":"components/icon/Icon.tsx"},{"name":"Icon","sourcePath":"components/icon/Icon.tsx"},{"name":"KOSAF_ICONS","sourcePath":"components/icon/icons.data.js"},{"name":"KOSAF_UI_ICONS","sourcePath":"components/icon/icons.ui.js"},{"name":"KOSAF_ICON_ALIASES","sourcePath":"components/icon/icons.ui.js"},{"name":"KOSAF_ICON_TONES","sourcePath":"components/icon/icons.ui.js"},{"name":"KOSAF_ICON_SOFT","sourcePath":"components/icon/icons.ui.js"},{"name":"Input","sourcePath":"components/input/Input.jsx"},{"name":"MetricCard","sourcePath":"components/metric-card/MetricCard.tsx"},{"name":"MobileFilterSheet","sourcePath":"components/mobile-filter-sheet/MobileFilterSheet.tsx"},{"name":"MobileHeader","sourcePath":"components/mobile-header/MobileHeader.tsx"},{"name":"CloseX","sourcePath":"components/mobile-menu/MobileMenu.tsx"},{"name":"MobileMenu","sourcePath":"components/mobile-menu/MobileMenu.tsx"},{"name":"Modal","sourcePath":"components/modal/Modal.jsx"},{"name":"SAMPLE_NOTIFICATIONS","sourcePath":"components/notification-list/NotificationList.tsx"},{"name":"NotificationList","sourcePath":"components/notification-list/NotificationList.tsx"},{"name":"OrderSummary","sourcePath":"components/order-summary/OrderSummary.tsx"},{"name":"PageHeader","sourcePath":"components/page-header/PageHeader.tsx"},{"name":"PaginationItem","sourcePath":"components/pagination-item/PaginationItem.jsx"},{"name":"Pagination","sourcePath":"components/pagination/Pagination.tsx"},{"name":"EXAMPLE_PRICE_SERIES","sourcePath":"components/price-trend/PriceTrend.tsx"},{"name":"PriceTrend","sourcePath":"components/price-trend/PriceTrend.tsx"},{"name":"ImageSlot","sourcePath":"components/product-card/ProductCard.tsx"},{"name":"DealBadge","sourcePath":"components/product-card/ProductCard.tsx"},{"name":"ProductCard","sourcePath":"components/product-card/ProductCard.tsx"},{"name":"ProductListItem","sourcePath":"components/product-list-item/ProductListItem.tsx"},{"name":"PRODUCT_TABLE_COLUMNS","sourcePath":"components/product-table/ProductTable.tsx"},{"name":"ProductTable","sourcePath":"components/product-table/ProductTable.tsx"},{"name":"ProgressSteps","sourcePath":"components/progress-steps/ProgressSteps.tsx"},{"name":"QuantityStepper","sourcePath":"components/quantity-stepper/QuantityStepper.tsx"},{"name":"Radio","sourcePath":"components/radio/Radio.jsx"},{"name":"Rating","sourcePath":"components/rating/Rating.tsx"},{"name":"ReviewItem","sourcePath":"components/review-item/ReviewItem.tsx"},{"name":"Search","sourcePath":"components/search/Search.jsx"},{"name":"SegmentedControl","sourcePath":"components/segmented-control/SegmentedControl.tsx"},{"name":"Select","sourcePath":"components/select/Select.tsx"},{"name":"BUYER_NAV","sourcePath":"components/side-nav/SideNav.tsx"},{"name":"SideNav","sourcePath":"components/side-nav/SideNav.tsx"},{"name":"Stepper","sourcePath":"components/stepper/Stepper.jsx"},{"name":"Tab","sourcePath":"components/tab/Tab.jsx"},{"name":"TableRow","sourcePath":"components/table-row/TableRow.jsx"},{"name":"Textarea","sourcePath":"components/textarea/Textarea.tsx"}],"sourceHashes":{"components/accordion/Accordion.tsx":"8560aa05e22e","components/alert-dialog/AlertDialog.tsx":"44425b4ef882","components/badge/Badge.jsx":"edfca979276b","components/bottom-action-bar/BottomActionBar.tsx":"98b63d44c645","components/breadcrumb/Breadcrumb.tsx":"3546712a7b5d","components/button/Button.jsx":"77ef0cb16c7c","components/cart-item/CartItem.tsx":"d5fec14da426","components/checkbox/Checkbox.jsx":"748aefc9df7d","components/compare-table/CompareTable.tsx":"02479305a67a","components/date-field/DateField.tsx":"fcf7f48512e1","components/date-range/DateRange.tsx":"5566407845f5","components/description-list/DescriptionList.tsx":"621ef105b820","components/empty-state/EmptyState.tsx":"a63d32ea38b7","components/file-upload/FileUpload.tsx":"66e23b27d4e2","components/filter-chip/FilterChip.tsx":"aa5e5287c250","components/filter-panel/FilterPanel.tsx":"da923a09457f","components/footer/Footer.tsx":"c7ab7c05ec89","components/form-error-summary/FormErrorSummary.tsx":"bce1ff2efb82","components/form-field/FormField.tsx":"cad7366fcafd","components/header/Header.tsx":"96af1d64202e","components/icon-button/IconButton.tsx":"ad3e3d9b834c","components/icon/Icon.tsx":"0117ca89007c","components/icon/icons.data.js":"1f82893c6d66","components/icon/icons.ui.js":"ff2cb0127c27","components/input/Input.jsx":"3532a15127cf","components/metric-card/MetricCard.tsx":"5201fb65d364","components/mobile-filter-sheet/MobileFilterSheet.tsx":"f08792bd3bf1","components/mobile-header/MobileHeader.tsx":"c94a8cdd76a2","components/mobile-menu/MobileMenu.tsx":"652768b413a5","components/modal/Modal.jsx":"629455cea605","components/notification-list/NotificationList.tsx":"fa2ea74ddb1f","components/order-summary/OrderSummary.tsx":"dbfb64437d95","components/page-header/PageHeader.tsx":"7dd72be9108f","components/pagination-item/PaginationItem.jsx":"7e2ef2fb0efa","components/pagination/Pagination.tsx":"d620ccc9c1b0","components/price-trend/PriceTrend.tsx":"70e1b798e407","components/product-card/ProductCard.tsx":"58ffad0dd954","components/product-list-item/ProductListItem.tsx":"048cdc35efd6","components/product-table/ProductTable.tsx":"c545302e0f59","components/progress-steps/ProgressSteps.tsx":"52c10c6d4b2a","components/quantity-stepper/QuantityStepper.tsx":"0645edf3f5a5","components/radio/Radio.jsx":"611574d2b25b","components/rating/Rating.tsx":"e749a99476ac","components/review-item/ReviewItem.tsx":"0566eacd93b3","components/search/Search.jsx":"99eb34ed21a7","components/segmented-control/SegmentedControl.tsx":"886ff4520da5","components/select/Select.tsx":"00d4d10ece26","components/side-nav/SideNav.tsx":"058b075d3562","components/stepper/Stepper.jsx":"dc152d73de22","components/tab/Tab.jsx":"72cfb7408f43","components/table-row/TableRow.jsx":"63a4c3cdf9de","components/textarea/Textarea.tsx":"7d0862d8af5a","guidelines/card-kit.js":"18b3cd771d81","guidelines/source-styles.js":"ce6425475665","ui_kits/_shared/shell.jsx":"961381b5fb22","ui_kits/buyer-mypage/screens.jsx":"5008dff37dbe","ui_kits/cart/screens.jsx":"80e203746f97","ui_kits/checkout/screens.jsx":"1487e307e6f9","ui_kits/login/screens.jsx":"afc82333cec1","ui_kits/product-detail/screens.jsx":"f0545c564b1d","ui_kits/search-results/screens.jsx":"6367151f6252","ui_kits/seller-myshop/screens.jsx":"39783e95b283","ui_kits/seller-signup/screens.jsx":"a18ac484e316","ui_kits/support/screens.jsx":"f798557c7192"},"inlinedExternals":[],"unexposedExports":[{"name":"iconVariants","sourcePath":"components/icon/Icon.tsx"},{"name":"resolveIcon","sourcePath":"components/icon/Icon.tsx"}]} */
 
 (() => {
 
@@ -1195,6 +1195,9 @@ Object.assign(__ds_scope, { KOSAF_ICONS });
 try { (() => {
 // KOSAF extension UI icons — authored for KOSAF_V1 1.5.0 (NOT extracted from Figma).
 // 24×24 grid, 2px stroke, round cap/join, stroke = currentColor. `fill: true` shapes may be filled (Rating star, liked heart).
+// 1.5.1 variants: entries with `variants` support outline | duotone | solid. `closed` = path indexes that form closed faces (soft fill in duotone,
+// solid fill in solid); `inner` = detail paths drawn on top of a solid face in the knock-out colour. Open-stroke glyphs (close, plus, chevrons…)
+// have no variants and always fall back to outline.
 const KOSAF_UI_ICONS = [{
   name: 'close',
   label: '닫기',
@@ -1237,18 +1240,27 @@ const KOSAF_UI_ICONS = [{
   d: ['M5 9L12 16L19 9']
 }, {
   name: 'star',
+  variants: ['outline', 'duotone', 'solid'],
+  closed: [0],
+  inner: [],
   label: '별점',
   category: 'status',
   fill: true,
   d: ['M12 3.5L14.6 8.8L20.4 9.6L16.2 13.7L17.2 19.5L12 16.8L6.8 19.5L7.8 13.7L3.6 9.6L9.4 8.8Z']
 }, {
   name: 'heart-outline',
+  variants: ['outline', 'duotone', 'solid'],
+  closed: [0],
+  inner: [],
   label: '관심상품(해제)',
   category: 'status',
   fill: true,
   d: ['M12 19.5C12 19.5 3.5 14.6 3.5 9C3.5 6.5 5.5 4.5 8 4.5C9.7 4.5 11.1 5.4 12 6.8C12.9 5.4 14.3 4.5 16 4.5C18.5 4.5 20.5 6.5 20.5 9C20.5 14.6 12 19.5 12 19.5Z']
 }, {
   name: 'filter',
+  variants: ['outline', 'duotone', 'solid'],
+  closed: [0],
+  inner: [],
   label: '필터',
   category: 'action',
   d: ['M4 5H20L14 12.5V19L10 17V12.5Z']
@@ -1264,31 +1276,49 @@ const KOSAF_UI_ICONS = [{
   d: ['M5 12.5L10 17.5L19 7']
 }, {
   name: 'calendar',
+  variants: ['outline', 'duotone', 'solid'],
+  closed: [0],
+  inner: [1],
   label: '날짜',
   category: 'form',
   d: ['M5.5 5H18.5A2 2 0 0 1 20.5 7V18A2 2 0 0 1 18.5 20H5.5A2 2 0 0 1 3.5 18V7A2 2 0 0 1 5.5 5Z', 'M3.5 10H20.5', 'M8 3V7', 'M16 3V7']
 }, {
   name: 'user',
+  variants: ['outline', 'duotone', 'solid'],
+  closed: [0, 1],
+  inner: [],
   label: '회원',
   category: 'navigation',
   d: ['M12 12A4 4 0 1 0 12 4A4 4 0 1 0 12 12Z', 'M4.5 20C5.5 16.5 8.5 14.5 12 14.5C15.5 14.5 18.5 16.5 19.5 20']
 }, {
   name: 'store',
+  variants: ['outline', 'duotone', 'solid'],
+  closed: [0, 2],
+  inner: [3],
   label: '판매샵',
   category: 'navigation',
   d: ['M4 9L5.5 4H18.5L20 9', 'M4 9H20', 'M5 9V20H19V9', 'M9.5 20V14H14.5V20']
 }, {
   name: 'home',
+  variants: ['outline', 'duotone', 'solid'],
+  closed: [0],
+  inner: [],
   label: '홈',
   category: 'navigation',
   d: ['M4 10.5L12 4L20 10.5V20H14.5V14.5H9.5V20H4Z']
 }, {
   name: 'help',
+  variants: ['outline', 'duotone', 'solid'],
+  closed: [0],
+  inner: [1, 2],
   label: '문의·Q&A',
   category: 'navigation',
   d: ['M12 20.5A8.5 8.5 0 1 0 12 3.5A8.5 8.5 0 1 0 12 20.5Z', 'M9.6 9.5A2.4 2.4 0 1 1 12 12V13.5', 'M12 16.8V17']
 }, {
   name: 'grid',
+  variants: ['outline', 'duotone', 'solid'],
+  closed: [0, 1, 2, 3],
+  inner: [],
   label: '카드 보기',
   category: 'view',
   d: ['M4 4H10.5V10.5H4Z', 'M13.5 4H20V10.5H13.5Z', 'M4 13.5H10.5V20H4Z', 'M13.5 13.5H20V20H13.5Z']
@@ -1304,6 +1334,9 @@ const KOSAF_UI_ICONS = [{
   d: ['M4 4V20H20', 'M7.5 15L11.5 11L14.5 14L20 8.5']
 }, {
   name: 'wallet',
+  variants: ['outline', 'duotone', 'solid'],
+  closed: [0, 1],
+  inner: [2],
   label: '금액·여신',
   category: 'data',
   d: ['M4 7H18A2 2 0 0 1 20 9V18A2 2 0 0 1 18 20H6A2 2 0 0 1 4 18V7Z', 'M4 7L15.5 4V7', 'M16 13.5H16.5']
@@ -1362,7 +1395,21 @@ const KOSAF_ICON_TONES = {
   focus: 'var(--kosaf-color-state-focus)',
   inverse: 'var(--kosaf-color-text-inverse)'
 };
-Object.assign(__ds_scope, { KOSAF_UI_ICONS, KOSAF_ICON_ALIASES, KOSAF_ICON_TONES });
+
+// Secondary (soft) fill per tone for duotone, and knock-out colour for solid. Existing semantic tokens only; no gradients/shadows.
+const KOSAF_ICON_SOFT = {
+  current: ['currentColor', 0.16],
+  primary: ['var(--kosaf-gray-100)', 1],
+  secondary: ['var(--kosaf-gray-100)', 1],
+  muted: ['var(--kosaf-gray-100)', 1],
+  disabled: ['var(--kosaf-color-bg-subtle)', 1],
+  brand: ['var(--kosaf-color-surface-brand-soft)', 1],
+  positive: ['var(--kosaf-color-surface-brand-soft)', 1],
+  danger: ['var(--kosaf-color-action-danger)', 0.14],
+  focus: ['var(--kosaf-color-state-focus)', 0.12],
+  inverse: ['var(--kosaf-color-text-inverse)', 0.3]
+};
+Object.assign(__ds_scope, { KOSAF_UI_ICONS, KOSAF_ICON_ALIASES, KOSAF_ICON_TONES, KOSAF_ICON_SOFT });
 })(); } catch (e) { __ds_ns.__errors.push({ path: "components/icon/icons.ui.js", error: String((e && e.message) || e) }); }
 
 // components/icon/Icon.tsx
@@ -1374,6 +1421,12 @@ const IconRegistry = __ds_scope.KOSAF_ICONS;
 const UIIconRegistry = __ds_scope.KOSAF_UI_ICONS;
 const IconAliases = __ds_scope.KOSAF_ICON_ALIASES;
 const IconTones = __ds_scope.KOSAF_ICON_TONES;
+const IconSoftTones = __ds_scope.KOSAF_ICON_SOFT;
+/** Variants an icon supports: source → ['source']; open-stroke ui → ['outline']; closed ui → outline/duotone/solid. */
+function iconVariants(name) {
+  const r = resolveIcon(name, 'ui');
+  return r.kind === 'ui' ? r.def.variants || ['outline'] : r.kind === 'source' ? ['source'] : [];
+}
 const warned = {};
 function warn(msg) {
   if (!warned[msg] && typeof console !== 'undefined') {
@@ -1418,6 +1471,8 @@ function Icon({
   rotate = 0,
   mode = 'source',
   tone,
+  secondaryTone,
+  variant = 'outline',
   filled,
   strokeWidth = 2,
   style,
@@ -1460,10 +1515,20 @@ function Icon({
     const s = size || 24;
     if (![16, 20, 24, 32].includes(s)) warn('"' + r.canonical + '" size ' + s + ' is outside 16/20/24/32');
     const color = tone ? __ds_scope.KOSAF_ICON_TONES[tone] || tone : 'currentColor';
-    const fillOn = filled && r.def.fill;
+    const sup = r.def.variants || ['outline'];
+    let v = filled && r.def.fill ? 'solid' : variant;
+    if (!sup.includes(v)) {
+      if (v !== 'outline') warn('"' + r.canonical + '" has no ' + v + ' variant — outline fallback');
+      v = 'outline';
+    }
+    const closed = r.def.closed || [],
+      inner = r.def.inner || [];
+    const soft = secondaryTone ? __ds_scope.KOSAF_ICON_SOFT[secondaryTone] || [secondaryTone, 1] : __ds_scope.KOSAF_ICON_SOFT[tone] || __ds_scope.KOSAF_ICON_SOFT.current;
+    const knock = tone === 'inverse' ? 'var(--kosaf-color-action-primary)' : 'var(--kosaf-color-text-inverse)';
     return /*#__PURE__*/React.createElement("span", _extends({
       "data-icon": r.canonical,
-      "data-icon-kind": "extension"
+      "data-icon-kind": "extension",
+      "data-icon-variant": v
     }, a11y, {
       style: {
         display: 'inline-flex',
@@ -1479,17 +1544,35 @@ function Icon({
       width: s,
       height: s,
       viewBox: "0 0 24 24",
-      fill: fillOn ? 'currentColor' : 'none',
+      fill: "none",
       stroke: "currentColor",
       strokeWidth: strokeWidth,
       strokeLinecap: "round",
       strokeLinejoin: "round",
       "aria-hidden": "true",
       focusable: "false"
-    }, r.def.d.map((d, i) => /*#__PURE__*/React.createElement("path", {
-      key: i,
-      d: d
-    }))));
+    }, v === 'duotone' ? closed.map(i => /*#__PURE__*/React.createElement("path", {
+      key: 's' + i,
+      d: r.def.d[i],
+      fill: soft[0],
+      fillOpacity: soft[1],
+      stroke: "none"
+    })) : null, r.def.d.map((d, i) => {
+      if (v === 'solid' && closed.includes(i)) return /*#__PURE__*/React.createElement("path", {
+        key: i,
+        d: d,
+        fill: "currentColor"
+      });
+      if (v === 'solid' && inner.includes(i)) return /*#__PURE__*/React.createElement("path", {
+        key: i,
+        d: d,
+        stroke: knock
+      });
+      return /*#__PURE__*/React.createElement("path", {
+        key: i,
+        d: d
+      });
+    })));
   }
   if (tone) warn('tone ignored for source icon "' + r.canonical + '" (colours are preserved from Figma)');
   const def = r.def;
@@ -1518,7 +1601,7 @@ function Icon({
     }
   }, rest));
 }
-Object.assign(__ds_scope, { IconRegistry, UIIconRegistry, IconAliases, IconTones, resolveIcon, Icon });
+Object.assign(__ds_scope, { IconRegistry, UIIconRegistry, IconAliases, IconTones, IconSoftTones, iconVariants, resolveIcon, Icon });
 })(); } catch (e) { __ds_ns.__errors.push({ path: "components/icon/Icon.tsx", error: String((e && e.message) || e) }); }
 
 // components/accordion/Accordion.tsx
@@ -1706,7 +1789,11 @@ function BottomActionBar({
     size: 24
   })), /*#__PURE__*/React.createElement("button", {
     type: "button",
-    style: ib,
+    style: {
+      ...ib,
+      borderRadius: 3,
+      background: liked ? 'var(--kosaf-color-surface-brand-soft)' : 'none'
+    },
     "aria-label": "\uAD00\uC2EC\uC0C1\uD488",
     "aria-pressed": !!liked,
     onClick: onLike
@@ -2401,7 +2488,9 @@ const ICON = {
 };
 
 /** KOSAF IconButton — KOSAF extension. Icon-only control with a required accessible label.
- *  Hit area: desktop 36, mobile 44 (min). Hover #F7F7F7 · pressed #EAEAEA · selected brand tone · focus 2px #0047ED · disabled blocks events. */
+ *  Hit area desktop 36 / mobile 44 (min). States (priority): disabled > selected/pressed(toggle) > active press > focus-visible > hover > default.
+ *  default transparent · hover #F7F7F7 · active press #EAEAEA · selected #EBFFE9 bg + 1px inset #059B00 + brand icon (duotone/solid for closed UI glyphs)
+ *  · focus 2px #0047ED outline (combines with any state) · disabled neutral, #A0A0A0 icon, events blocked. Geometry unchanged. */
 function IconButton({
   icon,
   label,
@@ -2415,6 +2504,7 @@ function IconButton({
   pressed,
   disabled,
   state,
+  selectedVariant = 'duotone',
   onClick,
   type = 'button',
   style,
@@ -2425,19 +2515,25 @@ function IconButton({
   const [f, setF] = React.useState(false);
   if (!label && typeof console !== 'undefined') console.warn('[KOSAF IconButton] label is required');
   const box = Math.max(size || 0, device === 'mobile' ? 44 : 36);
-  const st = state || (disabled ? 'disabled' : down ? 'pressed' : f ? 'focus' : h ? 'hover' : 'default');
-  const isSel = selected || pressed;
-  const bg = st === 'disabled' ? 'transparent' : st === 'pressed' ? 'var(--kosaf-gray-100)' : st === 'hover' ? 'var(--kosaf-color-bg-subtle)' : 'transparent';
-  const color = st === 'disabled' ? 'var(--kosaf-color-text-disabled)' : isSel ? 'var(--kosaf-color-action-primary)' : tone ? undefined : 'var(--kosaf-color-icon-default)';
-  const isSourceOnly = ['search', 'cart', 'bell', 'heart', 'navigate', 'analytics', 'purchase', 'shopping-bag', 'document-edit', 'time-history', 'check'].includes(icon) && mode !== 'ui';
+  const isDis = !!disabled || state === 'disabled';
+  const isSel = !isDis && (!!selected || !!pressed || state === 'selected');
+  const isDown = !isDis && (state === 'pressed' || down);
+  const isFocus = !isDis && (state === 'focus' || f);
+  const isHover = !isDis && (state === 'hover' || h);
+  const bg = isDis ? 'var(--kosaf-color-bg-subtle)' : isSel ? 'var(--kosaf-color-surface-brand-soft)' : isDown ? 'var(--kosaf-gray-100)' : isHover ? 'var(--kosaf-color-bg-subtle)' : 'transparent';
+  const inset = isSel ? 'inset 0 0 0 1px var(--kosaf-color-action-primary)' : 'none';
+  const isSource = __ds_scope.resolveIcon(icon, mode || 'source').kind === 'source';
+  const vars = __ds_scope.iconVariants(icon);
+  const iconTone = isSource ? undefined : isDis ? 'disabled' : isSel ? 'brand' : tone || 'primary';
+  const iconVariant = isSource ? undefined : isSel && vars.includes(selectedVariant) ? selectedVariant : 'outline';
   return /*#__PURE__*/React.createElement("button", _extends({
     type: type,
     "aria-label": label,
     title: label,
-    "aria-pressed": toggle ? !!isSel : undefined,
-    "aria-disabled": disabled || undefined,
-    disabled: disabled,
-    onClick: disabled ? undefined : onClick,
+    "aria-pressed": toggle ? isSel : undefined,
+    disabled: isDis,
+    "data-state": isDis ? 'disabled' : isSel ? 'selected' : isDown ? 'pressed' : isFocus ? 'focus' : isHover ? 'hover' : 'default',
+    onClick: isDis ? undefined : onClick,
     onMouseEnter: () => setH(true),
     onMouseLeave: () => {
       setH(false);
@@ -2445,8 +2541,15 @@ function IconButton({
     },
     onMouseDown: () => setDown(true),
     onMouseUp: () => setDown(false),
+    onKeyDown: e => {
+      if (e.key === ' ' || e.key === 'Enter') setDown(true);
+    },
+    onKeyUp: () => setDown(false),
     onFocus: e => setF(e.target.matches ? e.target.matches(':focus-visible') : true),
-    onBlur: () => setF(false),
+    onBlur: () => {
+      setF(false);
+      setDown(false);
+    },
     style: {
       boxSizing: 'border-box',
       width: box,
@@ -2459,20 +2562,22 @@ function IconButton({
       border: 0,
       borderRadius: 3,
       background: bg,
-      color,
-      cursor: st === 'disabled' ? 'not-allowed' : 'pointer',
-      outline: st === 'focus' ? '2px solid var(--kosaf-color-state-focus)' : 'none',
-      outlineOffset: st === 'focus' ? -2 : 0,
-      opacity: st === 'disabled' && isSourceOnly ? 0.4 : 1,
-      transition: 'background-color .12s',
+      boxShadow: inset,
+      color: isDis ? 'var(--kosaf-color-text-disabled)' : isSel ? 'var(--kosaf-color-action-primary)' : 'var(--kosaf-color-icon-default)',
+      cursor: isDis ? 'not-allowed' : 'pointer',
+      outline: isFocus ? '2px solid var(--kosaf-color-state-focus)' : 'none',
+      outlineOffset: isFocus ? 1 : 0,
+      opacity: isDis && isSource ? 0.4 : 1,
+      transform: isDown && !isSel ? 'translateY(0.5px)' : 'none',
+      transition: 'background-color .12s, box-shadow .12s',
       ...style
     }
   }, rest), /*#__PURE__*/React.createElement(__ds_scope.Icon, {
     name: icon,
     mode: mode,
     size: ICON[iconSize] || 20,
-    tone: isSourceOnly ? undefined : tone,
-    filled: isSel && (icon === 'heart-outline' || icon === 'star')
+    tone: iconTone,
+    variant: iconVariant
   }));
 }
 Object.assign(__ds_scope, { IconButton });
@@ -3098,6 +3203,7 @@ function MobileMenu({
     }, q.icon ? /*#__PURE__*/React.createElement(__ds_scope.Icon, {
       name: q.icon,
       mode: "ui",
+      variant: "duotone",
       size: 32,
       strokeWidth: 1.75,
       tone: "primary"
@@ -3903,7 +4009,7 @@ function ProductCard({
       position: 'absolute',
       right: 15,
       bottom: 15,
-      background: 'rgba(255,255,255,.85)',
+      background: liked && !soldOut ? 'var(--kosaf-color-surface-brand-soft)' : 'rgba(255,255,255,.85)',
       borderRadius: 18
     },
     "aria-pressed": !!liked,
@@ -3967,7 +4073,10 @@ function ProductCard({
       marginRight: -6
     }
   }, /*#__PURE__*/React.createElement("button", {
-    style: iconBtn,
+    style: {
+      ...iconBtn,
+      background: liked && !soldOut ? 'var(--kosaf-color-surface-brand-soft)' : iconBtn.background
+    },
     "aria-pressed": !!liked,
     "aria-label": "\uAD00\uC2EC\uC0C1\uD488",
     onClick: onLike,
@@ -4685,7 +4794,8 @@ function ProductTable({
         style: {
           width: 32,
           height: 32,
-          background: 'none',
+          borderRadius: 3,
+          background: r.liked && !r.disabled ? 'var(--kosaf-color-surface-brand-soft)' : 'none',
           border: 0,
           padding: 0,
           cursor: 'pointer',
@@ -10670,6 +10780,8 @@ __ds_ns.IconAliases = __ds_scope.IconAliases;
 
 __ds_ns.IconTones = __ds_scope.IconTones;
 
+__ds_ns.IconSoftTones = __ds_scope.IconSoftTones;
+
 __ds_ns.Icon = __ds_scope.Icon;
 
 __ds_ns.KOSAF_ICONS = __ds_scope.KOSAF_ICONS;
@@ -10679,6 +10791,8 @@ __ds_ns.KOSAF_UI_ICONS = __ds_scope.KOSAF_UI_ICONS;
 __ds_ns.KOSAF_ICON_ALIASES = __ds_scope.KOSAF_ICON_ALIASES;
 
 __ds_ns.KOSAF_ICON_TONES = __ds_scope.KOSAF_ICON_TONES;
+
+__ds_ns.KOSAF_ICON_SOFT = __ds_scope.KOSAF_ICON_SOFT;
 
 __ds_ns.Input = __ds_scope.Input;
 

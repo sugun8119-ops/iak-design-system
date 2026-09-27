@@ -1,0 +1,31 @@
+{
+  "version": "1.5.1",
+  "date": "2026-09-27",
+  "changedFiles": [
+    "_ds_bundle.js",
+    "_ds_manifest.json",
+    "_adherence.oxlintrc.json",
+    "readme.md",
+    "docs/icon-tone-refinement.md",
+    "docs/icon-checksums.json",
+    "docs/icon-management.md",
+    "components/bottom-action-bar/BottomActionBar.tsx",
+    "components/mobile-menu/MobileMenu.tsx",
+    "components/product-card/ProductCard.tsx",
+    "components/product-table/ProductTable.tsx",
+    "components/icon/Icon.prompt.md",
+    "components/icon/icon.card.html",
+    "components/icon/Icon.tsx",
+    "components/icon/icons.manifest.json",
+    "components/icon/Icon.d.ts",
+    "components/icon/icons.ui.js",
+    "components/icon-button/icon-button.card.html",
+    "components/icon-button/IconButton.prompt.md",
+    "components/icon-button/IconButton.tsx",
+    "components/icon-button/IconButton.d.ts",
+    "guidelines/icon-states.html",
+    "guidelines/docs/05-qa.html",
+    "guidelines/docs/07-changelog.html"
+  ],
+  "deletedFiles": []
+}
